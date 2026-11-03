@@ -1643,4 +1643,12 @@ main {
   max-width: 210px;
   overflow: hidden;
   text-overflow: ellipsis;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.label3d:hover {
+  border-color: rgba(103, 232, 249, 0.65);
+  background: rgba(14, 45, 60, 0.92);
+  color: #ffffff;
 }

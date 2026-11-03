@@ -127,6 +127,36 @@ async function main() {
       value: labelSpread,
     });
 
+    // 标签本身必须可点击：找到没有被其他标签遮住的一个，按真实指针事件点击
+    const clickableLabel = await page.evaluate(() => {
+      for (const el of document.querySelectorAll('.label3d')) {
+        const rect = el.getBoundingClientRect();
+        const x = rect.left + rect.width / 2;
+        const y = rect.top + rect.height / 2;
+        if (x < 0 || y < 0 || x > window.innerWidth || y > window.innerHeight) continue;
+        if (document.elementFromPoint(x, y) === el) {
+          return { id: el.dataset.nodeId, x, y, text: el.textContent };
+        }
+      }
+      return null;
+    });
+    let labelClickOk = false;
+    if (clickableLabel?.id) {
+      await page.mouse.click(clickableLabel.x, clickableLabel.y);
+      await page.waitForTimeout(800);
+      const clickedDetail = await page.textContent('#details-body');
+      labelClickOk = Boolean(clickedDetail?.includes(clickableLabel.id));
+      await page.evaluate(() => window.__viewer.clear());
+      await page.waitForTimeout(300);
+      await page.evaluate(() => window.__viewer.fit());
+      await page.waitForTimeout(500);
+    }
+    checks.push({
+      name: '标签可点击',
+      ok: labelClickOk,
+      value: clickableLabel,
+    });
+
     const canvasInfo = await page.evaluate(() => {
       const canvas = document.querySelector('#graph canvas');
       if (!(canvas instanceof HTMLCanvasElement)) return null;

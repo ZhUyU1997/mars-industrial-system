@@ -692,6 +692,17 @@ export class Scene3D {
       }`;
       element.textContent = text;
       element.title = `${text}\n${node.id}`;
+      element.dataset.nodeId = node.id;
+      element.setAttribute('role', 'button');
+      element.setAttribute('aria-label', text);
+      element.addEventListener('pointerdown', (event) => {
+        event.stopPropagation();
+      });
+      element.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        this.onNodeClick(node.id);
+      });
       const label = new CSS2DObject(element);
       label.position.set(node.x ?? 0, node.y ?? 0, node.z ?? 0);
       label.center.set(align, centerY);
