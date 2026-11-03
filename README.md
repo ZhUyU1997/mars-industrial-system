@@ -10,9 +10,11 @@ This is the English translation of [README.zh.md](README.zh.md). The Chinese ver
 
 ![Mars industrial model view](docs/images/viewer-overview.png)
 
-*Browser view (`pnpm viewer`): filter nodes and links on the left; inspect items, specs, and composition on the right.*
+*Browser view (`pnpm viewer`, English by default): filter nodes and links on the left; inspect items, specs, and composition on the right. Chinese names are kept as subtitles.*
 
 **Live viewer:** https://zhuyu1997.github.io/mars-industrial-system/
+
+The viewer is bilingual: use the EN / 中文 switch in the header, or append `?lang=zh` to the URL.
 
 ## 1. Project Definition
 
@@ -60,7 +62,7 @@ Use these terms according to the evidence level. Writing "closed" requires the c
 pnpm typecheck                 # type check
 pnpm stats                     # data statistics: scale, items, routes, props, reference density, orphans
 pnpm test                      # tests
-pnpm viewer                    # browser view: 3D graph, Chinese names, search and filters
+pnpm viewer                    # browser view: 3D graph, English/Chinese names, search and filters
 
 node tools/audit.ts            # gate
 node tools/audit.ts --json     # gate, structured output
@@ -86,7 +88,7 @@ Queries are read-only: state, strict delivery windows, and `kept` come from the 
 
 ![Item detail](docs/images/viewer-item-detail.png)
 
-*Item detail: Chinese name, declared specs, composition, and upstream/downstream routes.*
+*Item detail: English name with Chinese subtitle, declared specs, composition, and upstream/downstream routes.*
 
 ## 5. Audit Criteria
 

@@ -6,11 +6,13 @@
 
 **关键词：** 火星工业 · 原位资源利用（ISRU） · 自复制机器 · 工业生态 · 制造 BOM · 物料配平 · 工艺链 · TypeScript
 
-![火星工业体系模型视图](docs/images/viewer-overview.png)
+![火星工业体系模型视图](docs/images/viewer-overview-zh.png)
 
-*浏览器视图（`pnpm viewer`）：左侧按类别与连线过滤，右侧查看条目、规格与组成。*
+*浏览器视图（`pnpm viewer`）：左侧按类别与连线过滤，右侧查看条目、规格与组成；默认英文，可切到中文。*
 
 **在线视图：** https://zhuyu1997.github.io/mars-industrial-system/
+
+视图支持中英文：用页头的 EN / 中文 切换，或在 URL 后加 `?lang=en` / `?lang=zh`。
 
 ## 一、项目定义
 
@@ -67,7 +69,7 @@
 pnpm typecheck                 # 类型检查
 pnpm stats                     # 数据统计：规模、条目、路线、属性、引用密度、孤儿
 pnpm test                      # 测试文件
-pnpm viewer                    # 浏览器视图：3D 网、中文名、搜索与过滤
+pnpm viewer                    # 浏览器视图：3D 网、中英文名、搜索与过滤
 
 node tools/audit.ts            # 闸门
 node tools/audit.ts --json     # 闸门，结构化输出
@@ -94,9 +96,9 @@ node tools/query.ts items 'plant/robot/*' --ids    # 通配 + 只输出 id
 共用同一份快照；机器格式为 `--json`、`--ndjson`、`--ids`、`--count`，`--out` 写 UTF-8 文件。
 退出码：0 = 执行成功（含 0 条）；1 = `--fail-if-empty` 且 0 条；2 = 用法错、id 不存在或模型校验失败。
 
-![条目详情](docs/images/viewer-item-detail.png)
+![条目详情](docs/images/viewer-item-detail-zh.png)
 
-*条目详情：中文名、规格声明、组成清单与上下游路线。*
+*条目详情：中文名、英文名副标题、规格声明、组成清单与上下游路线。*
 
 ## 五、审计口径
 

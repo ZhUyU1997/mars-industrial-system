@@ -30,7 +30,8 @@ Qty         = { num, den }
 | Description | `routes` | `Route[]` | Route table |
 | Description | `ambient` | `Condition[]` | On-site environmental conditions; equipment is not needed while inside the interval |
 | Item | `id` | `string` | Unique identifier |
-| Item | `name` | `string` | Display name (Chinese); for humans only, not used in decisions; duplicates allowed |
+| Item | `name` | `string` | Display name (English); for humans only, not used in decisions; duplicates allowed; must not contain Chinese characters |
+| Item | `name_zh` | `string` | Display name (Chinese); retained for the Chinese UI and search |
 | Item | `category` | `ItemCategory` | `material` / `part` / `consumable` / `carrier` / `machine`; defaults to `material` |
 | Item | `unit` | `string` | Unit of measure: piece, unit, set, etc. |
 | Item | `mass` | `Qty` | Mass per piece, in kg |
@@ -52,7 +53,8 @@ Qty         = { num, den }
 | Consumption | `qty` | `Qty` | Amount used per `per` hours |
 | Consumption | `per` | `Qty` | Operating hours |
 | Route | `id` | `string` | Unique identifier |
-| Route | `name` | `string` | Display name (Chinese); for humans only, not used in decisions; duplicates allowed |
+| Route | `name` | `string` | Display name (English); for humans only, not used in decisions; duplicates allowed; must not contain Chinese characters |
+| Route | `name_zh` | `string` | Display name (Chinese); retained for the Chinese UI and search |
 | Route | `produces` | `Term[]` | Output terms; `produces[0].qty` defines the batch output |
 | Route | `uses` | `Clause[]` | Consumption per batch; clauses are AND, options within a clause are OR |
 | Route | `needs` | `Need[]` | Prerequisites that must exist but are not consumed |
@@ -83,8 +85,8 @@ Qty         = { num, den }
 `Need` is `string | Option`: a string means "at least one present"; `Option` may additionally carry a quantity and a spec window.
 `Option.qty` means consumption in `uses` and a minimum on-hand quantity in `needs`.
 
-`name` is the display name and `id` is identity: renaming does not affect references, and the id must not change when the name changes.
-`validate` rejects only empty names; it does not require names to be unique.
+`name` is the English display name, `name_zh` is the Chinese display name, and `id` is identity: renaming does not affect references, and the id must not change when the name changes.
+`validate` rejects empty `name` / `name_zh` and `name` values containing Chinese characters; it does not require names to be unique.
 
 `PropDecl` `range` uses `min` / `max` / `unit` / `dir`; `enum` / `set` use `values`.
 The corresponding `PropReq` window uses `min` / `max` / `dir`, `oneOf`, `atLeast`, and may carry `record` / `design`.
