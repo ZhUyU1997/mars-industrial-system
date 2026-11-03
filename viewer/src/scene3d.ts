@@ -121,6 +121,7 @@ export class Scene3D {
   private lineGeometry: THREE.BufferGeometry | null = null;
   private lineMaterial: THREE.LineBasicMaterial | null = null;
   private baseLinkColors: Float32Array | null = null;
+  private baseLinkPositions: Float32Array | null = null;
   private labels: CSS2DObject[] = [];
   private screenCache: { node: ViewerNode; x: number; y: number }[] = [];
   private screenDirty = true;
@@ -355,10 +356,29 @@ export class Scene3D {
     return current > 0 ? this.fitDistance / current : 1;
   }
 
-  getStats(): { nodes: number; links: number; calls: number; triangles: number; frame: number } {
+  getStats(): {
+    nodes: number;
+    links: number;
+    activeLinks: number;
+    calls: number;
+    triangles: number;
+    frame: number;
+  } {
+    const selectedId = this.renderState.selectedId;
+    const selectionMode = selectedId !== null && this.renderState.selectedSet !== null;
+    let activeLinks = this.visibleLinks.length;
+    if (selectionMode) {
+      activeLinks = 0;
+      for (const link of this.visibleLinks) {
+        if (endpointId(link.source) === selectedId || endpointId(link.target) === selectedId) {
+          activeLinks++;
+        }
+      }
+    }
     return {
       nodes: this.visibleNodes.length,
       links: this.visibleLinks.length,
+      activeLinks,
       calls: this.renderer.info.render.calls,
       triangles: this.renderer.info.render.triangles,
       frame: this.renderer.info.render.frame,
@@ -545,6 +565,7 @@ export class Scene3D {
       this.lineGeometry = geometry;
       this.lineMaterial = material;
       this.baseLinkColors = colors;
+      this.baseLinkPositions = positions.slice();
     }
 
     this.updateStyle();
@@ -579,22 +600,50 @@ export class Scene3D {
 
     if (this.lineGeometry !== null && this.baseLinkColors !== null) {
       const color = this.lineGeometry.getAttribute('color') as THREE.BufferAttribute;
+      const position = this.lineGeometry.getAttribute('position') as THREE.BufferAttribute;
       const target = color.array as Float32Array;
-      const selected = selectedSet;
+      const vertices = position.array as Float32Array;
+      const basePositions = this.baseLinkPositions;
+      // 点选某个节点时只留它的直连边；聚焦模式（selectedSet 为 null）保留子图内部所有边。
+      const selectionMode = selectedId !== null && selectedSet !== null;
       for (let index = 0; index < this.visibleLinks.length; index++) {
         const link = this.visibleLinks[index]!;
+        const sourceId = endpointId(link.source);
+        const targetId = endpointId(link.target);
         const active =
-          selected === null ||
-          (selected.has(endpointId(link.source)) && selected.has(endpointId(link.target)));
-        const factor = active ? 1 : 0.1;
+          !selectionMode || sourceId === selectedId || targetId === selectedId;
+        const factor = active ? 1 : 0;
         target[index * 6] = this.baseLinkColors[index * 6]! * factor;
         target[index * 6 + 1] = this.baseLinkColors[index * 6 + 1]! * factor;
         target[index * 6 + 2] = this.baseLinkColors[index * 6 + 2]! * factor;
         target[index * 6 + 3] = this.baseLinkColors[index * 6 + 3]! * factor;
         target[index * 6 + 4] = this.baseLinkColors[index * 6 + 4]! * factor;
         target[index * 6 + 5] = this.baseLinkColors[index * 6 + 5]! * factor;
+
+        if (basePositions !== null) {
+          if (active) {
+            vertices[index * 6] = basePositions[index * 6]!;
+            vertices[index * 6 + 1] = basePositions[index * 6 + 1]!;
+            vertices[index * 6 + 2] = basePositions[index * 6 + 2]!;
+            vertices[index * 6 + 3] = basePositions[index * 6 + 3]!;
+            vertices[index * 6 + 4] = basePositions[index * 6 + 4]!;
+            vertices[index * 6 + 5] = basePositions[index * 6 + 5]!;
+          } else {
+            // 未关联的边退化成零长度线段，不再绘制；清除选择时从 basePositions 还原。
+            const x = basePositions[index * 6]!;
+            const y = basePositions[index * 6 + 1]!;
+            const z = basePositions[index * 6 + 2]!;
+            vertices[index * 6] = x;
+            vertices[index * 6 + 1] = y;
+            vertices[index * 6 + 2] = z;
+            vertices[index * 6 + 3] = x;
+            vertices[index * 6 + 4] = y;
+            vertices[index * 6 + 5] = z;
+          }
+        }
       }
       color.needsUpdate = true;
+      position.needsUpdate = true;
     }
 
     this.updateLabels();
@@ -843,6 +892,7 @@ export class Scene3D {
     this.lineGeometry = null;
     this.lineMaterial = null;
     this.baseLinkColors = null;
+    this.baseLinkPositions = null;
     for (const label of this.labels) {
       this.scene.remove(label);
       label.element.remove();

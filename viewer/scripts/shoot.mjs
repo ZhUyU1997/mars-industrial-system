@@ -141,20 +141,27 @@ async function main() {
       return null;
     });
     let labelClickOk = false;
+    let selectedRender = null;
     if (clickableLabel?.id) {
       await page.mouse.click(clickableLabel.x, clickableLabel.y);
       await page.waitForTimeout(800);
       const clickedDetail = await page.textContent('#details-body');
-      labelClickOk = Boolean(clickedDetail?.includes(clickableLabel.id));
+      selectedRender = await page.evaluate(() => window.__viewer.render());
+      labelClickOk = Boolean(
+        clickedDetail?.includes(clickableLabel.id) &&
+          selectedRender.activeLinks > 0 &&
+          selectedRender.activeLinks < selectedRender.links,
+      );
+      await page.screenshot({ path: join(SHOT_DIR, '09-label-selection.png') });
       await page.evaluate(() => window.__viewer.clear());
       await page.waitForTimeout(300);
       await page.evaluate(() => window.__viewer.fit());
       await page.waitForTimeout(500);
     }
     checks.push({
-      name: '标签可点击',
+      name: '标签可点击且只显示关联线',
       ok: labelClickOk,
-      value: clickableLabel,
+      value: { ...clickableLabel, render: selectedRender },
     });
 
     const canvasInfo = await page.evaluate(() => {
@@ -323,6 +330,7 @@ async function main() {
         '06-small-viewport.png',
         '07-chinese.png',
         '08-chinese-overview.png',
+        '09-label-selection.png',
       ],
       checks,
       errors,

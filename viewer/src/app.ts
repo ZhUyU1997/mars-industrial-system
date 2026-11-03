@@ -53,7 +53,14 @@ interface ViewerDebug {
   tick: () => number;
   settled: () => boolean;
   stats: () => { visibleNodes: number; visibleLinks: number; focus: number | null };
-  render: () => { nodes: number; links: number; calls: number; triangles: number; frame: number };
+  render: () => {
+    nodes: number;
+    links: number;
+    activeLinks: number;
+    calls: number;
+    triangles: number;
+    frame: number;
+  };
   zoom: () => number;
   level: (threshold: number) => void;
   ego: (id: string, depth: number) => boolean;
