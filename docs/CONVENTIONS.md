@@ -1,114 +1,113 @@
-# 项目规范
+# Project Conventions
 
-## 一、适用范围
+## 1. Scope
 
-**1.1 适用对象**
-本规范适用于本项目的文档写作、数据组织与变更流程。
-agent 行为规范见 [AGENTS.md](../AGENTS.md)；项目目标与 R 规则见 [README.zh.md](../README.zh.md)；
-字段、结构与错误码见 [模型.md](模型.md)。
+**1.1 Applicability**
+These conventions apply to document writing, data organization, and change process in this project.
+Agent behavior is specified in [AGENTS.md](../AGENTS.md); project goals and R rules are in [README.zh.md](../README.zh.md);
+fields, structure, and error codes are in [model.md](model.md).
 
-**1.2 文档分工**
-字段、结构与校验写入模型文档；写作、流程与原则写入本文件。
-完整分工见 [README.zh.md](../README.zh.md) 的“文档与目录”一节。
+**1.2 Division of Documents**
+Fields, structure, and validation belong in the model document; writing, process, and principles belong in this file.
+The complete division is in the "Documents and Directories" section of [README.zh.md](../README.zh.md).
 
-## 二、模型与数据边界
+## 2. Model and Data Boundaries
 
-**2.1 核心模型变更**
-`src/core/describe.ts` 的字段增删、类型变更、校验变更与错误码增删，均属模型变更。
-模型变更须按“提议、用户同意、实施”的顺序进行。模型一经变更，全部数据与断言的语义随之变化。
+**2.1 Core Model Changes**
+Adding or removing fields, changing types, changing validation, and adding or removing error codes in `src/core/describe.ts` are all model changes.
+Model changes follow the order "proposal, user consent, implementation". Once the model changes, the meaning of all data and assertions changes with it.
 
-**2.2 数据、测试与规则分离**
+**2.2 Separation of Data, Tests, and Rules**
 
 ```
-test/*.test.ts         断言与最小测试数据
-src/core/describe.ts   规则
+test/*.test.ts         assertions and minimal test data
+src/core/describe.ts   rules
 ```
 
-数据文件只放数据；测试文件不得内联大段数据。
+Data files contain only data; test files must not inline large blocks of data.
 
-**2.3 `unblock-*.ts` 文件**
-“blocked”指严格算术下无法生成的条目；“unblock”指补充一条替代路线。
-此类文件只写替代路线，产出指向既有 id；注释应说明原路线不通的原因与代价。
-文件名前缀不承载语义。
+**2.3 `unblock-*.ts` Files**
+"blocked" means an item that cannot be produced under strict arithmetic; "unblock" means adding an alternative route.
+Such files contain only the alternative route, producing an existing id; comments should explain why the original route does not work and what it costs.
+The filename prefix carries no semantics.
 
-**2.4 种子判据**
-种子判据只有一条：该条目是否存在产出路线。能复制的条目退出种子清单；
-不得因“重要”“是基准”或“是初始资产”而保留。判据落在条目上，不落在零件上。
-第一套仍须运入。
+**2.4 Seed Criterion**
+There is only one seed criterion: whether the item has a producing route. An item that can be replicated leaves the seed list;
+it is not kept because it is "important", "a reference", or "an initial asset". The criterion applies to items, not parts.
+The first set must still be shipped in.
 
-**2.5 前提范围**
-前提提供的是“手”与“算”，不是“料”与“工艺”。
+**2.5 Scope of Premises**
+Premises provide "hands" and "compute", not "materials" and "process".
 
-可旁路：计算机、存储、控制器、插补。
-不可旁路：器件、传感器、功率电子、材料与工艺。
+Can be bypassed: computers, storage, controllers, interpolation.
+Cannot be bypassed: devices, sensors, power electronics, materials, and processes.
 
-判据：前提自带且不接入被控对象者，可旁路；须安装到其他位置或被消耗者，须自造。
+Criterion: what the premise brings and does not connect to the controlled object may be bypassed; what must be installed elsewhere or consumed must be made locally.
 
-## 三、文档写作
+## 3. Document Writing
 
-**3.1 条目注释**
-id 采用英文，注释采用中文；id 不承载语义。设备、零件与路线均应以注释说明其含义。
+**3.1 Item Comments**
+ids are in English, comments are in Chinese; ids carry no semantics. Machines, parts, and routes should all have comments explaining their meaning.
 
-注释不得包含下列内容：
+Comments must not contain:
 
-| 类别 | 示例 |
+| Category | Example |
 |---|---|
-| 状态与进度 | 已建、已闭、待办、这一轮、上一版、`20xx-xx-xx` |
-| 规则与文献 | `R9`、`§五`、`#23`、README 与 CONVENTIONS 的条号 |
-| 工具与装配 | `tools/*` 路径、import、注册、导出 |
-| 跨文件台账 | 全局缺口、下一步、待统一 |
-| 重复表述 | 同一语句在多个文件重复出现（模板、章节套话） |
-| 装饰性排版 | `═══`、`───` 等纯横线；以竖线或 `┌─┬─┐` 绘制的表格；表情符号 |
-| 行号引用 | `文件名:行号`（行号随修改漂移） |
+| Status and progress | built, closed, to-do, this round, previous version, `20xx-xx-xx` |
+| Rules and literature | `R9`, `§5`, `#23`, README and CONVENTIONS article numbers |
+| Tools and assembly | `tools/*` paths, imports, registration, exports |
+| Cross-file ledgers | global gaps, next steps, to be unified |
+| Repeated statements | the same sentence repeated across files (templates, chapter boilerplate) |
+| Decorative formatting | pure horizontal rules such as `═══`, `───`; tables drawn with vertical bars or `┌─┬─┐`; emoji |
+| Line references | `filename:line` (line numbers drift with edits) |
 
-**3.2 数字可核验**
-每个数值应可交叉验算，或标注来源。编造数据与无基准数据不得写入。
+**3.2 Verifiable Numbers**
+Every value should be cross-checkable or have a source. Fabricated data and data without a basis must not be written.
 
-**3.3 时态区分**
-“现在没有”与“当时没有”不得混用。判据为：以当前代码运行报告时，该项是否仍然缺失。
-若已补齐，应使用过去时并指出对应路线。
+**3.3 Tense Distinction**
+"Not now" and "not then" must not be mixed. Criterion: when the current code produces a report, is the item still missing?
+If it has been filled in, use the past tense and point to the corresponding route.
 
-**3.4 中文文本编辑**
-Windows PowerShell 5.1 下，`Get-Content -Raw` 解析 UTF-8 时可能静默损坏内容。
-修改中文文本应使用编辑工具，或在读写两端显式指定 UTF-8 编码。
-验收条件为：U+FFFD 与 BOM 均为 False，行数一致。`pnpm check` 无法检查注释乱码。
+**3.4 Chinese Text Editing**
+Under Windows PowerShell 5.1, `Get-Content -Raw` may silently corrupt content when parsing UTF-8.
+Use an editing tool for Chinese text, or explicitly specify UTF-8 on both read and write.
+Acceptance condition: both U+FFFD and BOM are False, and the line count is unchanged. `pnpm check` cannot detect garbled comments.
 
-**3.5 表述诚实**
-无法实现时应明确写“无法实现”，不得写“暂未实现”；越界字段应标注；
-被数据推翻的规则应予修正并说明依据。
+**3.5 Honest Wording**
+When something cannot be done, write "cannot be done", not "not yet done"; mark out-of-scope fields; correct rules refuted by data and state the basis.
 
-## 四、验证与证据
+## 4. Verification and Evidence
 
-**4.1 校验须配反例**
-每项校验均须有测试证明其在错误输入下会报错；仅写正例不构成校验证明。
+**4.1 Validation Needs Counterexamples**
+Every validation must have a test proving that it reports an error on invalid input; positive cases alone do not prove validation.
 
-**4.2 量具覆盖范围**
-只使用已建立的量具。量具无法覆盖的量按未测处理，并照实记录降级；不得写成“已测”。
+**4.2 Instrument Coverage**
+Use only instruments that have been established. What an instrument cannot cover is treated as unmeasured, and the degradation is recorded honestly; do not write "measured".
 
-**4.3 机制须有数据支撑**
-新增能力须有真实数据或可成立用例；否则属于纸面能力。
+**4.3 Mechanisms Need Data Support**
+A new capability needs real data or a valid use case; otherwise it is a paper capability.
 
-## 五、变更与提交
+## 5. Changes and Commits
 
-**5.1 删除优先**
-应先评估删除，再评估新增；机制数量应保持最少。
+**5.1 Deletion First**
+Evaluate deletion before addition; keep the number of mechanisms minimal.
 
-**5.2 提交粒度**
-一次提交只处理一件事。提交信息应说明模型或数据的当前结论、边界与验证结果，不叙述修正过程。
+**5.2 Commit Granularity**
+One commit handles one thing. The commit message should state the current conclusion, boundary, and verification result of the model or data, not narrate the correction process.
 
-## 六、协作
+## 6. Collaboration
 
-**6.1 子 agent 使用边界**
-用户未明确要求时，子 agent 仅用于与主线无关、可独立完成的任务，例如在 `data/` 下新建数据文件。
-不得用于：
+**6.1 Sub-agent Boundaries**
+Unless the user explicitly requests it, sub-agents are used only for tasks unrelated to the main line that can be completed independently, such as creating a new data file under `data/`.
+They must not be used for:
 
-- 只读分析、审计报告、方案对比——由主 agent 直接完成；
-- 修改既有文件、同一模块的连续改动、需要本会话上下文的作业；
-- 并发写同一文件或 `test/id-snapshot.json` 的作业。
+- read-only analysis, audit reports, or option comparison—the main agent does these directly;
+- modifying existing files, continuous changes in the same module, or work requiring this session's context;
+- concurrent writes to the same file or `test/id-snapshot.json`.
 
-原因在于：子 agent 不共享本会话上下文，且与主 agent 共用工作区；
-将串行作业或需要判断的作业外包，只会增加交接环节与半成品。
-用户明确要求使用子 agent 时，按用户指定的范围执行。
+Reason: sub-agents do not share this session's context and share the workspace with the main agent;
+outsourcing serial work or work requiring judgment only adds handoffs and half-finished work.
+When the user explicitly requests sub-agents, follow the scope the user specifies.
 
-新开子 agent 前，仍须按 AGENTS 第十条查询 `list_agents`，并按第十一条判断任务是否确实独立；
-不存在独立并行任务时，不得新开。
+Before opening a new sub-agent, still query `list_agents` under AGENTS Article 10, and judge under Article 11 whether the task is truly independent;
+if no independent parallel task exists, do not open one.

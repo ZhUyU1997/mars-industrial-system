@@ -20,7 +20,7 @@
 规格与测量链要求，不证明组成关系、工艺或数量正确。
 
 判定“闭合”须同时满足：审计通过、L0–L3 证据支持、关键条目可追溯至设计与工艺来源。
-任一条件不满足，不得判定闭合。字段级要求见 [模型.md](docs/模型.md)。
+任一条件不满足，不得判定闭合。字段级要求见 [model.md](docs/model.md)。
 
 ## 二、前提与研究对象
 
@@ -169,7 +169,7 @@ equipmentRequire / composedOf
 若种子只能外购，数量就由进口决定 —— 与前提冲突。因此“种子自给率”不是进度指标，
 而是 R9 的判据。
 
-**降级类型**：判定归 `functional-*` 字段（[模型.md](docs/模型.md) 第十节）。
+**降级类型**：判定归 `functional-*` 字段（[model.md](docs/model.md) 第十节）。
 `functional-kept` 以较低规格承担同一功能，**是降级**，须给升级路线；
 `functional-lost` 换成了另一个东西，不是降级，是另一个问题（R3）。
 
@@ -184,10 +184,10 @@ equipmentRequire / composedOf
 | [README.md](README.md) | 英文版 README：与中文版同内容 | 状态、进度、具体数据 |
 | [AGENTS.md](AGENTS.md) | agent 行为规范：角色、回复、子 agent、纪律 | 项目事实、R 规则 |
 | [LOOP.md](LOOP.md) | agent 工作循环：轮次、步骤、顺序、中止 | 项目目标、字段定义、具体数据 |
-| [问题台账.md](docs/问题台账.md) | 未闭合问题记录：位置、原因、判据与判定方式 | 任务计划、规范、已闭合项 |
+| [issues.md](docs/issues.md) | 未闭合问题记录：位置、原因、判据与判定方式 | 任务计划、规范、已闭合项 |
 | [CONVENTIONS.md](docs/CONVENTIONS.md) | 项目级约定：写作、流程、原则 | 字段定义、错误码、具体数据 |
-| [模型.md](docs/模型.md) | 模型：Item / Route 结构、字段语义、校验 | 具体链、数据条目 |
-| [事实.md](docs/事实.md) | 项目级事实与判据：环境、基底、瓶颈、节点 | 状态、进度 |
+| [model.md](docs/model.md) | 模型：Item / Route 结构、字段语义、校验 | 具体链、数据条目 |
+| [facts.md](docs/facts.md) | 项目级事实与判据：环境、基底、瓶颈、节点 | 状态、进度 |
 | `data/**` | 数据：Item / Route | 规则、注册表 |
 | `data/measure/**` | 测量路线与记录 | 机器 / 材料定义 |
 

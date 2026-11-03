@@ -1,113 +1,113 @@
 # AGENTS.md
 
-## 第一章 总则
+## Chapter 1 General Provisions
 
-第一条 【用语】本规范下列用语的含义为：
+**Article 1 [Terms]** The following terms have the meanings given below:
 
-（一）任务：一次用户指令要求完成的全部改动及验证。
+(1) Task: all changes and verification required by one user instruction.
 
-（二）候选：供用户选择的下一动作。
+(2) Candidate: the next action offered to the user for selection.
 
-（三）放行：用户以“完成”“可以”“提交”等明示方式同意收口。
+(3) Release: the user explicitly agrees to close the task by saying "done", "ok", "commit", or similar.
 
-（四）agent：执行本规范的行为主体。
+(4) agent: the actor executing this specification.
 
-（五）文档：项目中的规范、说明、台账与报告。
+(5) Document: specifications, explanations, ledgers, and reports in the project.
 
-（六）评审：用户或用户指定方对拟提交差异的确认过程。
+(6) Review: the process by which the user or a user-designated party confirms the proposed diff.
 
-（七）差异：拟提交内容与当前版本的对比。
+(7) Diff: comparison between the proposed content and the current version.
 
-（八）数据：`data/` 目录下的条目与路线。
+(8) Data: items and routes under `data/`.
 
-（九）条目：描述一个对象的记录。
+(9) Item: a record describing an object.
 
-（十）路线：描述一种做法的记录。
+(10) Route: a record describing a method.
 
-（十一）读数：`data/measure/` 产出的记录。
+(11) Reading: a record produced by `data/measure/`.
 
-第二条 【范围】本规范规定 agent 的行为、文档编写与变更纪律；项目目标、数据字段与工艺事实不在本规范范围内。本规范为 agent 行为的最高效力规范；其他文档与本规范冲突时，以本规范为准。
+**Article 2 [Scope]** This specification governs agent behavior, document writing, and change discipline. Project goals, data fields, and process facts are outside its scope. This specification has the highest authority over agent behavior; where another document conflicts with it, this specification prevails.
 
-## 第二章 文档
+## Chapter 2 Documents
 
-第三条 【职责】每份文档应当承担单一职责；单一职责可以是一个上位职责，其下可按章划分子域，但不得混入无关职责。
+**Article 3 [Responsibility]** Each document shall have a single responsibility. A single responsibility may be a higher-level responsibility divided into subdomains by chapter, but unrelated responsibilities shall not be mixed in.
 
-第四条 【结构】文档应当符合下列结构要求：
+**Article 4 [Structure]** Documents shall meet the following structural requirements:
 
-（一）先声明适用范围，再按主题分类。
+(1) State the scope of application first, then classify by topic.
 
-（二）同一主题的规则应当归并，不得拆成零碎小节。
+(2) Rules on the same topic shall be consolidated; they shall not be split into fragmentary subsections.
 
-（三）标题层级应当一致；不得出现空标题、重复标题或与正文无关的标题。
+(3) Heading levels shall be consistent; empty headings, duplicate headings, and headings unrelated to the body shall not appear.
 
-（四）叙述性文档使用段落与条款；数据、清单与台账使用表格。不得将台账改写成散文，也不得将规范条文改写成表格。
+(4) Narrative documents use paragraphs and clauses; data, lists, and ledgers use tables. A ledger shall not be rewritten as prose, and specification clauses shall not be rewritten as tables.
 
-第五条 【表述】文档应当符合下列表述要求：
+**Article 5 [Expression]** Documents shall meet the following expression requirements:
 
-（一）使用规范书面语；定义、判据、要求与示例分开表述。
+(1) Use formal written language; definitions, criteria, requirements, and examples shall be stated separately.
 
-（二）不得使用口语、修辞问句、表情符号或装饰性横线。
+(2) Colloquialisms, rhetorical questions, emoji, and decorative horizontal rules shall not be used.
 
-（三）同一术语在全文中保持同一含义；首次出现的术语应当给出定义。
+(3) The same term shall keep the same meaning throughout; a term shall be defined when it first appears.
 
-第六条 【事实】文档中的事实、数值、路线与结论应当有来源或可核验依据。
+**Article 6 [Facts]** Facts, values, routes, and conclusions in documents shall have sources or verifiable grounds.
 
-（一）不得将推测、审计通过或形式化通过当作事实。
+(1) Speculation, an audit pass, or a formal pass shall not be treated as fact.
 
-（二）无法确认的内容应当标注为假设或未决，不得写成确定结论。
+(2) Content that cannot be confirmed shall be marked as an assumption or unresolved; it shall not be written as a definite conclusion.
 
-第七条 【去重】同一内容只写一处；可由其他内容推出的，不重复写。
+**Article 7 [Deduplication]** Each piece of content shall be written in only one place; content derivable from other content shall not be repeated.
 
-（一）发现重复时，删除旧表述，保留新表述。
+(1) When duplication is found, delete the old wording and keep the new wording.
 
-（二）不得以重复描述替代定义、判据或引用。
+(2) Repetition shall not replace a definition, criterion, or reference.
 
-第八条 【引用】文档引用其他文档或数据时，应当给出可解析的路径。
+**Article 8 [References]** When a document references another document or data, it shall give a resolvable path.
 
-（一）不得引用不存在的文件、章节或条目。
+(1) Do not reference files, sections, or items that do not exist.
 
-（二）不得使用行号引用。
+(2) Do not use line-number references.
 
-（三）状态、进度与临时结论不得写入规范文档。
+(3) Status, progress, and temporary conclusions shall not be written into specification documents.
 
-第九条 【修改与评审】文档修改应当与代码、数据修改分开提交；新增文档或章节前，应当确认其职责与放置位置，先给出差异并取得用户确认。不得自动提交。
+**Article 9 [Modification and Review]** Document changes shall be committed separately from code and data changes. Before adding a document or section, confirm its responsibility and placement, present the diff first, and obtain user confirmation. Do not auto-commit.
 
-## 第三章 子 agent
+## Chapter 3 Sub-agents
 
-第十条 【查重】新开子 agent 前，应当先调用 list_agents；同一文件或模块的连续改动，应当以 send_message 复用既有 agent。
+**Article 10 [Duplicate Check]** Before opening a new sub-agent, call `list_agents` first. For continuous changes to the same file or module, reuse the existing agent via `send_message`.
 
-第十一条 【新开】仅在任务并行且相互独立时，方得新开子 agent；串行重构及同一模块的后续修复，应当复用。
+**Article 11 [New Agent]** A new sub-agent may be opened only when tasks are parallel and independent of each other. Serial refactoring and follow-up fixes in the same module shall reuse an existing agent.
 
-第十二条 【沿用】下一轮涉及既有子 agent 时，应当先查 list_agents，不得凭记忆。
+**Article 12 [Reuse]** When the next round involves an existing sub-agent, check `list_agents` first; do not rely on memory.
 
-第十三条 【说明】新开子 agent 时，应当说明不能复用的理由。
+**Article 13 [Explanation]** When opening a new sub-agent, explain why reuse is not possible.
 
-## 第四章 禁止
+## Chapter 4 Prohibitions
 
-第十四条 不得未读即删；删除前应当先提炼其中的规则或事实，不得按行数或文件名批量删除。
+**Article 14** Do not delete without reading. Before deleting, extract the rules or facts it contains; do not delete in batches by line count or filename.
 
-第十五条 不得编造路线或规范；没有数据支撑的命名、路线、清单不得写入，总结不得作为项目事实。
+**Article 15** Do not fabricate routes or specifications. Naming, routes, and lists unsupported by data shall not be written; summaries shall not be treated as project facts.
 
-第十六条 不得以设计代替实测；没有 `data/measure/` 读数，不得写“闭合”。
+**Article 16** Do not substitute design for measurement. Without readings in `data/measure/`, do not write "closed".
 
-（一）数据须有来源；无法确认的标为估算或假设，不得写成读数。
+(1) Data must have provenance; what cannot be confirmed shall be marked as an estimate or assumption, not written as a reading.
 
-（二）不得为改变审计四组而写数据；审计通过不是数据真实的证据。
+(2) Do not write data in order to change the four audit groups; an audit pass is not evidence that the data is true.
 
-（三）工作方法见 [LOOP.md](LOOP.md) 第五节。
+(3) For the working method, see [LOOP.md](LOOP.md), Section 5.
 
-第十七条 规范改动未经评审不得提交；应当先给出差异，不得自动提交。
+**Article 17** Specification changes shall not be committed without review; present the diff first; do not auto-commit.
 
-第十八条 data 不得引用文档；文档可以引用 data。
+**Article 18** Data shall not reference documents; documents may reference data.
 
-## 第五章 附则
+## Chapter 5 Supplementary Provisions
 
-第十九条 【修订】本规范的修订权属用户；agent 依用户指令改动本规范时，适用第十七条。
+**Article 19 [Revision]** The right to revise this specification belongs to the user. When an agent changes this specification under a user instruction, Article 17 applies.
 
-第二十条 【数据提交】data/ 校验通过直接提交；文档/规范仍须评审。
+**Article 20 [Data Commits]** Data under `data/` may be committed directly once validation passes; documents and specifications still require review.
 
-（一）数据纠正提交：可达性审计必须变差。纠正针对原先被数据掩盖的缺口；改完审计不变差，说明没有缺口显形。变差是纠正生效的证据，不是目的。
+(1) Data correction commit: the reachability audit must get worse. A correction targets a gap previously hidden by the data; if the audit does not get worse after the change, no gap has surfaced. Getting worse is evidence that the correction took effect, not the goal.
 
-（二）数据补充提交：可达性审计必须变好。补充针对已暴露的缺口；改完审计不变好，说明没有缺口闭合。
+(2) Data supplement commit: the reachability audit must get better. A supplement targets an exposed gap; if the audit does not get better after the change, no gap has been closed.
 
-（三）变差与变好，以 `node tools/audit.ts` 的 blocked、degraded、design、不可达四组的增减为准。
+(3) Getting worse or better is measured by the increase or decrease in the four groups reported by `node tools/audit.ts`: blocked, degraded, design, and unreachable.

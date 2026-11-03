@@ -1,61 +1,61 @@
-# 工作循环
+# Work Loop
 
-本文件从属于 [AGENTS.md](AGENTS.md)；项目目标、字段语义与写作规则见 [README.zh.md](README.zh.md)、[模型.md](docs/模型.md)、[CONVENTIONS.md](docs/CONVENTIONS.md)。
+This file is subordinate to [AGENTS.md](AGENTS.md); project goals, field semantics, and writing rules are in [README.zh.md](README.zh.md), [model.md](docs/model.md), and [CONVENTIONS.md](docs/CONVENTIONS.md).
 
-## 一、任务类别与优先级
+## 1. Task Categories and Priority
 
-| 优先级 | 类别 | 性质 | 判据 | 处置 |
+| Priority | Category | Nature | Criterion | Action |
 |---|---|---|---|---|
-| 1 | 不实 | 纠正 | 数据与现实或来源矛盾、单位或数量错 | 改数据事实 |
-| 2 | 缺失 | 补充 | 目标未落数据，条目、参数或下游缺失 | 补链或补数据 |
-| 3 | 未测 | 补充 | `design` 窗口、S7 记录 | 补测量路线与量具 |
-| 4 | 未配平 | 纠正/补充 | 质量账、联产或副产物 | 假账纠正；缺副产物补充 |
-| — | 单点/冗余 | 监控 | 单点、冗余 | 仅监控 |
-| — | 权限边界 | 停 | 模型、种子、R10 豁免、受保护设计 | 用户决定 |
+| 1 | Inaccurate | Correction | Data contradicts reality or its source; unit or quantity is wrong | Fix the data fact |
+| 2 | Missing | Supplement | The goal is not in the data; item, parameter, or downstream is missing | Add the chain or data |
+| 3 | Untested | Supplement | `design` window, S7 record | Add measurement route and instruments |
+| 4 | Unbalanced | Correction / supplement | Mass account, co-product, or by-product | Correct a false account; add a missing by-product |
+| — | Single point / redundancy | Monitor | Single point, redundancy | Monitor only |
+| — | Permission boundary | Stop | Model, seeds, R10 exemption, protected design | The user decides |
 
-类别判据见 [问题台账.md](docs/问题台账.md)。
+Category criteria are in [issues.md](docs/issues.md).
 
-规模 = 重要性 × 影响范围。重要性：3 = seed、机器人、受保护设计、种子复制链；2 = 关键工艺；1 = 一般。影响范围：3 = 受影响路线 ≥10 条；2 = 3–9 条；1 = 1–2 条。规模取值 1–9。
+Scale = importance × impact. Importance: 3 = seed, robot, protected design, seed replication chain; 2 = key process; 1 = general. Impact: 3 = affected routes ≥ 10; 2 = 3–9; 1 = 1–2. Scale ranges from 1 to 9.
 
-## 二、任务顺序
+## 2. Task Order
 
-1. 按优先级 1 → 4。
-2. 同优先级按规模降序；同规模先 seed、机器人、受保护设计、种子复制链，再关键工艺，再一般。
-3. 不可补的缺口记停点，跳过；权限边界停。
-4. 一轮只做一条；只改数据事实，注释随数据改动，不单独成轮。
+1. By priority 1 → 4.
+2. Within the same priority, by scale descending. At the same scale: seed, robot, protected design, seed replication chain first; then key process; then general.
+3. Record an unfillable gap as a stop point and skip it. Stop at permission boundaries.
+4. Do one task per round. Only change data facts; comments change with the data and do not form a separate round.
 
-## 三、推进判据
+## 3. Progress Criteria
 
-- 纠正轮：推进量 = 新暴露缺口的规模；审计不变差，本轮推进量为 0。变差是缺口显形的证据，红着提交，不记收口。
-- 补充轮：推进量 = 被闭合缺口的规模；审计不变好，本轮推进量为 0。审计变好后提交，提交按 [AGENTS.md](AGENTS.md) 第二十条。
-- 只计事实约束；引用错误、拼写错误、校验器误报不计。
-- 不得删 `need`、删 `design`、放宽窗口或编造读数。
-- 成对结算：只暴露未闭合的记债；全局最大化已闭合缺口的规模。
-- 台账：每轮结束前更新 [问题台账.md](docs/问题台账.md) 的审计问题表。纠正轮把新暴露的缺口逐项写入（`id`、`问题`、`判据`、`审计结果`、`说明`）；补充轮把已闭合的项删除。有新增或闭合项而台账未更新，本轮不算完成。
-- 每轮改前、改后跑 typecheck、audit、测试，比较 `blocked`、`degraded`、`design`、不可达的增减。
+- Correction round: progress = the scale of newly exposed gaps. If the audit does not get worse, progress for the round is 0. Getting worse is evidence that gaps have surfaced; commit while red, and do not record the round as closed.
+- Supplement round: progress = the scale of gaps closed. If the audit does not get better, progress for the round is 0. Commit after the audit improves, under [AGENTS.md](AGENTS.md) Article 20.
+- Count only factual constraints; reference errors, spelling errors, and validator false positives do not count.
+- Do not delete `need`, delete `design`, widen windows, or fabricate readings.
+- Settle in pairs: expose unclosed debt; maximize the scale of closed gaps globally.
+- Ledger: before each round ends, update the audit problem table in [issues.md](docs/issues.md). In a correction round, add each newly exposed gap (`id`, `problem`, `criterion`, `audit result`, `note`); in a supplement round, delete closed items. If items are added or closed without updating the ledger, the round is not complete.
+- Run typecheck, audit, and tests before and after each round; compare the increase and decrease of `blocked`, `degraded`, `design`, and unreachable.
 
-## 四、中止
+## 4. Stopping
 
-1. 改动越过用户权限（模型、种子、R10 豁免、机器人受保护设计）。
-2. 现实约束下存在互斥做法，且选择会改变项目目标、种子策略或受保护设计。
-3. 连续两轮没有缺口规模变化。
+1. The change exceeds user authority (model, seeds, R10 exemption, robot protected design).
+2. Under real-world constraints, mutually exclusive approaches exist, and the choice would change project goals, seed strategy, or protected design.
+3. Two consecutive rounds show no change in gap scale.
 
-缺量具、缺读数、审计待补、存在不确定、审计放行，均不构成中止理由。
+Missing instruments, missing readings, pending audit, uncertainty, and an audit pass are not reasons to stop.
 
-## 五、拼图方法
+## 5. Puzzle Method
 
-1. 每轮补一个真实设备或工艺环节：先查地球上该设备/工艺的实际做法，再写从火星表面物质到它的路径。
-2. 不要求一次写全；不知道的标假设或未决，不得写成确定事实。
-3. 循环依赖按历史拆：先用降级或早期工艺打破循环，再写升级路线与缺口量级；不得以“循环”为由判不可行。
-4. 审计只是联通检查；不得为改变 `blocked`、`degraded`、`design`、不可达四组而写数据。
-5. 测量记录只在有实测或可推导区间时写 `record`；否则保留 `design`，禁止用 `record` 冒充读数。
-6. 优先复杂设备：分析一台高精密设备，胜过铺一百台简单设备。简单件只作为这台设备的材料/零件补齐，不单独成轮、不按“能造的小件”凑数。
-7. 设备分析先答四问：① 这台设备做什么产品/工艺；② 它自身最难制造的是什么（精度、材料、装配、环境）；③ 测量/校准这台设备用什么设备；④ 这些测量设备又缺什么。四问答不全，先不写产品。
-8. 产品是设备的输出，不是分析终点。先写设备本体与它的量测链，再写产品；不得用“产品已可达”代替“设备已能造/已能量”。
-9. 高精密设备优先：光刻、量测、镀膜、刻蚀、离子束、超精密台。每轮选一台做深，补它的 BOM、工艺与校准链；复杂设备的难点通常在测量/校准，不在装配。
-10. 复制/可达必须闭合到材料、零件、执行者；零输入、自执行、零件未验证都不算。
-11. `design` 沿 BOM 传播；关键零件只有 design，父项不通过。
-12. 局部计数不替代证据；指标须能被零输入/自指反例推翻。
-13. 报计数、可达或放行前，先查依赖链反例；下游 blocked/degraded/design 能推翻，就不报通过。
+1. Each round, add one real device or process step: first research how that device/process is actually done on Earth, then write the path from Martian surface materials to it.
+2. Do not require everything at once; mark what is unknown as an assumption or unresolved, and do not write it as established fact.
+3. Cut circular dependencies historically: first break the cycle with a degraded or earlier process, then write the upgrade route and the gap magnitude; do not declare the chain infeasible because of a "cycle".
+4. The audit is only a connectivity check; do not write data to change the four groups `blocked`, `degraded`, `design`, and unreachable.
+5. Write `record` only when there is a measured or derivable interval; otherwise keep `design`, and never use `record` to pass off a design value as a reading.
+6. Prioritize complex equipment: analyzing one high-precision device is better than laying out one hundred simple devices. Simple parts only fill in the material/parts of that device; they do not form a separate round and are not counted as "small parts we can make".
+7. For equipment analysis, answer four questions first: (1) what product/process does this device make; (2) what is hardest to manufacture about it (precision, material, assembly, environment); (3) what equipment measures/calibrates this device; (4) what are those measurement devices missing. If the four answers are incomplete, do not write the product yet.
+8. The product is the output of the equipment, not the end of the analysis. Write the equipment itself and its measurement chain first, then the product; do not use "the product is reachable" in place of "the equipment can be built/measured".
+9. Prioritize high-precision equipment: lithography, metrology, coating, etching, ion beam, ultra-precision stages. Each round, take one device deep and fill in its BOM, process, and calibration chain; the hard part of complex equipment is usually measurement/calibration, not assembly.
+10. Replication/reachability must close on materials, parts, and performers; zero-input, self-executing, and unverified parts do not count.
+11. `design` propagates along the BOM; if a key part has only design, the parent does not pass.
+12. Local counts do not replace evidence; a metric must be falsifiable by zero-input/self-reference counterexamples.
+13. Before reporting a count, reachability, or pass, check the dependency chain for counterexamples; if a downstream blocked/degraded/design state can refute it, do not report a pass.
 
-案例：7/7 曾把零输入 `make/robot` 算作复制；NPU 的 8 nm 链未通过，7/7 错；按组成件验证后为 3/7。
+Case: 7/7 once counted the zero-input `make/robot` as replication; the NPU's 8 nm chain did not pass, so 7/7 was wrong; after verifying by components it was 3/7.

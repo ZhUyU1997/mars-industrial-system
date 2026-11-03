@@ -18,7 +18,7 @@ This project is the **description layer** of the problem: it answers only "what 
 
 The primary criterion for the description layer is **truthful, verifiable, and further derivable**, not a formal model that merely satisfies an audit procedure. `node tools/audit.ts` is a necessary audit gate, not an objective function; passing the audit only means that closure, reachability, specs, and the measurement chain are satisfied. It does not prove that composition, process, or quantities are correct.
 
-Judging a chain "closed" requires all three: the audit passes, L0–L3 evidence supports it, and key items are traceable to design and process sources. If any condition fails, the chain is not closed. Field-level requirements are in [model.md](docs/模型.md).
+Judging a chain "closed" requires all three: the audit passes, L0–L3 evidence supports it, and key items are traceable to design and process sources. If any condition fails, the chain is not closed. Field-level requirements are in [model.md](docs/model.md).
 
 ## 2. Premises and Scope
 
@@ -145,7 +145,7 @@ Co-products are reported but do not enter the gate: in a multi-product route, co
 
 **Basis for R9**: the premise is unlimited robots and energy from a reproducible fusion device; seed equipment wears out. If seeds could only be purchased, quantity would be determined by imports—which contradicts the premise. Therefore "seed self-sufficiency" is not a progress metric but the R9 criterion.
 
-**Degradation types**: the decision belongs to the `functional-*` fields ([model.md](docs/模型.md), Section 10). `functional-kept` performs the same function at a lower spec and **is degradation**; an upgrade path is required. `functional-lost` replaces it with something else; that is not degradation but another problem (R3).
+**Degradation types**: the decision belongs to the `functional-*` fields ([model.md](docs/model.md), Section 10). `functional-kept` performs the same function at a lower spec and **is degradation**; an upgrade path is required. `functional-lost` replaces it with something else; that is not degradation but another problem (R3).
 
 **Mass-production criterion**: a chain can be mass-produced if and only if every link can be carried by **parallel replication** of equipment of the same spec. If parallelism is limited by factors other than the number of robots, that link is recorded as unresolved.
 
@@ -157,10 +157,10 @@ Co-products are reported but do not enter the gate: in a multi-product route, co
 | [README.zh.md](README.zh.md) | Chinese README: same content as the English version | Status, progress, concrete data |
 | [AGENTS.md](AGENTS.md) | Agent behavior: roles, replies, sub-agents, discipline | Project facts, R rules |
 | [LOOP.md](LOOP.md) | Agent work loop: rounds, steps, order, stopping | Project goals, field definitions, concrete data |
-| [问题台账.md](docs/问题台账.md) | Unclosed issues: location, reason, criterion, decision method | Task plans, specs, closed items |
+| [issues.md](docs/issues.md) | Unclosed issues: location, reason, criterion, decision method | Task plans, specs, closed items |
 | [CONVENTIONS.md](docs/CONVENTIONS.md) | Project conventions: writing, process, principles | Field definitions, error codes, concrete data |
-| [模型.md](docs/模型.md) | Model: Item / Route structure, field semantics, validation | Concrete chains, data items |
-| [事实.md](docs/事实.md) | Project facts and criteria: environment, substrate, bottlenecks, nodes | Status, progress |
+| [model.md](docs/model.md) | Model: Item / Route structure, field semantics, validation | Concrete chains, data items |
+| [facts.md](docs/facts.md) | Project facts and criteria: environment, substrate, bottlenecks, nodes | Status, progress |
 | `data/**` | Data: Item / Route | Rules, registries |
 | `data/measure/**` | Measurement routes and records | Machine / material definitions |
 
