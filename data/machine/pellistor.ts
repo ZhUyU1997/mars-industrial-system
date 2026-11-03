@@ -86,7 +86,7 @@ export const PELLISTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pellistor',
-    name: 'Pellistor 检测头',
+    name: 'Pellistor Detection Head', name_zh: 'Pellistor 检测头',
     unit: '件',
     category: 'part',
     props: [
@@ -116,7 +116,7 @@ export const PELLISTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pellistor/oven',
-    name: 'Pellistor 珠温炉',
+    name: 'Pellistor Bead Temperature Furnace', name_zh: 'Pellistor 珠温炉',
     unit: '件',
     category: 'part',
     props: [
@@ -137,7 +137,7 @@ export const PELLISTOR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pellistor',
-    name: 'Pellistor 检测头制造',
+    name: 'Pellistor Detection Head Manufacturing', name_zh: 'Pellistor 检测头制造',
     produces: [
       {
         item: 'plant/pellistor',
@@ -191,7 +191,7 @@ export const PELLISTOR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pellistor-oven',
-    name: 'Pellistor 珠温炉制造',
+    name: 'Pellistor Bead Temperature Furnace Manufacturing', name_zh: 'Pellistor 珠温炉制造',
     produces: [
       {
         item: 'plant/pellistor/oven',
@@ -229,7 +229,7 @@ export const PELLISTOR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pellistor-h2-sensor',
-    name: '氢气传感器（pellistor 版）制造',
+    name: 'Hydrogen Sensor (Pellistor Version) Manufacturing', name_zh: '氢气传感器（pellistor 版）制造',
     produces: [
       {
         item: 'plant/h2-sensor',

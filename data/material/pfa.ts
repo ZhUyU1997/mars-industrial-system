@@ -65,7 +65,7 @@ export const PFA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/hfp',
-    name: '六氟丙烯',
+    name: 'Hexafluoropropylene', name_zh: '六氟丙烯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -82,7 +82,7 @@ export const PFA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ppve',
-    name: '全氟',
+    name: 'Perfluoro', name_zh: '全氟',
     unit: 'kg',
     category: 'material',
     props: [
@@ -102,7 +102,7 @@ export const PFA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pfa',
-    name: 'PFA 树脂',
+    name: 'PFA Resin', name_zh: 'PFA 树脂',
     unit: 'kg',
     category: 'material',
     props: [
@@ -123,7 +123,7 @@ export const PFA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-free-lab/pfa-beaker',
-    name: 'PFA 烧杯',
+    name: 'PFA Beaker', name_zh: 'PFA 烧杯',
     unit: '件',
     category: 'part',
     props: [
@@ -142,7 +142,7 @@ export const PFA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-free-lab/pfa-bottle',
-    name: 'PFA 瓶',
+    name: 'PFA Bottle', name_zh: 'PFA 瓶',
     unit: '件',
     category: 'part',
     props: [
@@ -161,7 +161,7 @@ export const PFA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-free-lab/pfa-pipette',
-    name: 'PFA 移液管',
+    name: 'PFA Pipette', name_zh: 'PFA 移液管',
     unit: '件',
     category: 'part',
     props: [
@@ -180,7 +180,7 @@ export const PFA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-free-lab',
-    name: '无硼实验室',
+    name: 'Boron-Free Laboratory', name_zh: '无硼实验室',
     unit: '间',
     category: 'machine',
     holds: [{ param: 'temperature', min: 19, max: 21 }],
@@ -202,7 +202,7 @@ export const PFA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-free-lab/pfa-filter',
-    name: 'PFA 膜滤器',
+    name: 'PFA Membrane Filter', name_zh: 'PFA 膜滤器',
     unit: '件',
     category: 'part',
     props: [
@@ -223,7 +223,7 @@ export const PFA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-free-lab/pfa-volumetric-flask',
-    name: 'PFA 容量瓶',
+    name: 'PFA Volumetric Flask', name_zh: 'PFA 容量瓶',
     unit: '件',
     category: 'part',
     props: [
@@ -243,7 +243,7 @@ export const PFA_ROUTES: readonly Route[] = [
      *   3 TFE → 2 HFP（0.3–0.6 s、750–850 °C、选择性 60–75 %）
      */
     id: 'make/hfp',
-    name: '六氟丙烯制备',
+    name: 'Hexafluoropropylene Production', name_zh: '六氟丙烯制备',
     produces: [
       {
         item: 'mat/hfp',
@@ -274,7 +274,7 @@ export const PFA_ROUTES: readonly Route[] = [
      *   250–350 °C 脱氟酰 → PPVE（60–75 %）
      */
     id: 'make/ppve',
-    name: '全氟制备',
+    name: 'Perfluoro Production', name_zh: '全氟制备',
     produces: [
       {
         item: 'mat/ppve',
@@ -311,7 +311,7 @@ export const PFA_ROUTES: readonly Route[] = [
      *   TFE 1000 + PPVE 25 + 引发剂 3 → PFA 1000（PPVE 2.5 mol%）
      */
     id: 'make/pfa',
-    name: 'PFA 树脂制备',
+    name: 'PFA Resin Production', name_zh: 'PFA 树脂制备',
     produces: [
       {
         item: 'mat/pfa',
@@ -348,7 +348,7 @@ export const PFA_ROUTES: readonly Route[] = [
      *   PFA 0.05 kg → 烧杯 1 件（50–250 mL）。
      */
     id: 'make/pfa-beaker',
-    name: 'PFA 烧杯制造',
+    name: 'PFA Beaker Manufacturing', name_zh: 'PFA 烧杯制造',
     produces: [
       {
         item: 'plant/boron-free-lab/pfa-beaker',
@@ -379,7 +379,7 @@ export const PFA_ROUTES: readonly Route[] = [
      *   PFA 0.08 kg → 瓶 1 只（100–1000 mL）。
      */
     id: 'make/pfa-bottle',
-    name: 'PFA 瓶制造',
+    name: 'PFA Bottle Manufacturing', name_zh: 'PFA 瓶制造',
     produces: [
       {
         item: 'plant/boron-free-lab/pfa-bottle',
@@ -413,7 +413,7 @@ export const PFA_ROUTES: readonly Route[] = [
      *   PFA 0.02 kg → 移液管 1 支（1–10 mL，±0.5–1 %）。
      */
     id: 'make/pfa-pipette',
-    name: 'PFA 移液管制造',
+    name: 'PFA Pipette Manufacturing', name_zh: 'PFA 移液管制造',
     produces: [
       {
         item: 'plant/boron-free-lab/pfa-pipette',
@@ -447,7 +447,7 @@ export const PFA_ROUTES: readonly Route[] = [
      * `condition_cycle`。
      */
     id: 'make/boron-free-lab',
-    name: '无硼实验室制造',
+    name: 'Boron-Free Laboratory Manufacturing', name_zh: '无硼实验室制造',
     produces: [
       {
         item: 'plant/boron-free-lab',
@@ -492,7 +492,7 @@ export const PFA_ROUTES: readonly Route[] = [
      * → 热定型；孔 0.2 µm 的泡点 0.15–0.25 MPa。
      */
     id: 'make/pfa-filter',
-    name: 'PFA 膜滤器制造',
+    name: 'PFA Membrane Filter Manufacturing', name_zh: 'PFA 膜滤器制造',
     produces: [
       {
         item: 'plant/boron-free-lab/pfa-filter',
@@ -526,7 +526,7 @@ export const PFA_ROUTES: readonly Route[] = [
      *   PFA 0.1 → 容量瓶 1 只（10–100 mL，A 级）
      */
     id: 'make/pfa-volumetric-flask',
-    name: 'PFA 容量瓶制造',
+    name: 'PFA Volumetric Flask Manufacturing', name_zh: 'PFA 容量瓶制造',
     produces: [
       {
         item: 'plant/boron-free-lab/pfa-volumetric-flask',

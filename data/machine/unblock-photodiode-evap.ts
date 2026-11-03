@@ -318,7 +318,7 @@ export const UNBLOCK_PHOTODIODE_ROUTES: readonly Route[] = [
   {
     /** 清洗 → 磷扩散 → 干氧 94 nm → 磨背面 → 蒸铝（背整面 / 正挡蒸）→ 合金化 → 划片 → 封装测光。 */
     id: 'make/photodiode-evap',
-    name: '清洗',
+    name: 'Cleaning', name_zh: '清洗',
     produces: [{ item: 'std/photodiode-general', qty: q(20) }],
     uses: [
       // 一片 φ100 × 0.7，单面抛光：划 40 小片、出 20 只（第八节）。

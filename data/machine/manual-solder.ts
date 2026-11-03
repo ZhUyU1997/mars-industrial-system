@@ -71,7 +71,7 @@ export const MANUAL_SOLDER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/manual-solder-station',
-    name: '手工焊工位',
+    name: 'Manual Soldering Station', name_zh: '手工焊工位',
     unit: '台',
     category: 'machine',
     holds: [
@@ -90,7 +90,7 @@ export const MANUAL_SOLDER_ITEMS: readonly Item[] = [
   /** 烙铁：φ0.5–1.0 头、30–60 W、350–400 °C；镍丝发热芯 + 铜头。 */
   {
     id: 'plant/manual-solder-station/iron',
-    name: '手工焊工位烙铁',
+    name: 'Manual Soldering Station Iron', name_zh: '手工焊工位烙铁',
     unit: '件',
     category: 'part',
     props: [
@@ -102,7 +102,7 @@ export const MANUAL_SOLDER_ITEMS: readonly Item[] = [
   /** 夹具：0.5–1.27 mm 间距的板夹 + 放大镜支架；铝/45 钢。 */
   {
     id: 'plant/manual-solder-station/fixture',
-    name: '手工焊工位夹具',
+    name: 'Manual Soldering Station Fixture', name_zh: '手工焊工位夹具',
     unit: '件',
     category: 'part',
     props: [
@@ -117,7 +117,7 @@ export const MANUAL_SOLDER_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/control-board-simple-manual-general',
-    name: '手工焊简版控制板',
+    name: 'Manual Soldering Simplified Control Board', name_zh: '手工焊简版控制板',
     unit: '件',
     category: 'part',
     props: [
@@ -134,7 +134,7 @@ export const MANUAL_SOLDER_ROUTES: readonly Route[] = [
   {
     /** 烙铁：绕镍丝发热芯、车铜头、装手柄；350–400 °C 老炼。 */
     id: 'make/manual-solder-iron',
-    name: '手工焊工位烙铁制造',
+    name: 'Manual Soldering Station Iron Manufacturing', name_zh: '手工焊工位烙铁制造',
     produces: [
       {
         item: 'plant/manual-solder-station/iron',
@@ -164,7 +164,7 @@ export const MANUAL_SOLDER_ROUTES: readonly Route[] = [
   {
     /** 夹具：铝底板 + 45 钢压条 + PTFE 垫，0.5–1.27 mm 间距。 */
     id: 'make/manual-solder-fixture',
-    name: '手工焊工位夹具制造',
+    name: 'Manual Soldering Station Fixture Manufacturing', name_zh: '手工焊工位夹具制造',
     produces: [
       {
         item: 'plant/manual-solder-station/fixture',
@@ -198,7 +198,7 @@ export const MANUAL_SOLDER_ROUTES: readonly Route[] = [
      * 只新增烙铁与夹具。不是另造一台贴片机。
      */
     id: 'make/manual-solder-station',
-    name: '手工焊工位装配',
+    name: 'Manual Soldering Station Assembly', name_zh: '手工焊工位装配',
     produces: [
       {
         item: 'plant/manual-solder-station',
@@ -241,7 +241,7 @@ export const MANUAL_SOLDER_ROUTES: readonly Route[] = [
      * BGA/细间距 QFP 不做；0402/0.5 mm 以下不做。
      */
     id: 'make/manual-solder-assembly',
-    name: '手工焊简版控制板制造',
+    name: 'Manual Soldering Simplified Control Board Manufacturing', name_zh: '手工焊简版控制板制造',
     produces: [
       {
         item: 'std/control-board-simple-manual-general',

@@ -172,7 +172,7 @@ export const UNBLOCK_CRUSHER_ROUTES: readonly Route[] = [
      *   渗碳  900–950    土窑（400–1100）—— 土窑烧得到，但**待不住**，见降级②
      */
     id: 'make/crusher-cast',
-    name: '选矿厂破碎机制造',
+    name: 'Ore Beneficiation Plant Crusher Manufacturing', name_zh: '选矿厂破碎机制造',
     produces: [{ item: 'plant/ore-beneficiary/crusher', qty: q(1) }],
     uses: [
       {

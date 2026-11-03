@@ -12,7 +12,7 @@ import { q } from '../../src/index.ts';
 export const LASER_BEAM_PROFILER_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/laser-beam-profiler-measure-record',
-    name: '扫描狭缝法记录',
+    name: 'Scanning Slit Method Record', name_zh: '扫描狭缝法记录',
     unit: '份',
     category: 'part',
     props: [
@@ -29,7 +29,7 @@ export const LASER_BEAM_PROFILER_MEASURE_ROUTES: readonly Route[] = [
      * **扫描狭缝法：位移台扫 10 点，量热器读透过功率，拟合焦斑与指向。**
      */
     id: 'measure/laser-beam-profiler-slit-scan',
-    name: '扫描狭缝法测量',
+    name: 'Scanning Slit Method Measurement', name_zh: '扫描狭缝法测量',
     produces: [{
       item: 'mat/laser-beam-profiler-measure-record',
       qty: q(1),

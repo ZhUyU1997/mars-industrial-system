@@ -321,7 +321,7 @@ export const UNBLOCK_ROLL_ROUTES: readonly Route[] = [
      * `uses`；五台干活的设备全在 `steps` 里，不在这里重写（写了就是 `redundant_need`）。
      */
     id: 'make/rolling-rolls-cast',
-    name: '轧机轧辊制造',
+    name: 'Rolling Mill Rolls Manufacturing', name_zh: '轧机轧辊制造',
     produces: [{ item: 'plant/rolling-mill/rolls', qty: q(1) }],
     uses: [
       {

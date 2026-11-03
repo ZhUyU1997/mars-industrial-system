@@ -20,7 +20,7 @@ export const STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/angle-standard',
-    name: '角度标准',
+    name: 'Angle Standard', name_zh: '角度标准',
     unit: '台',
     category: 'machine',
     props: [
@@ -39,7 +39,7 @@ export const STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/thickness-standard',
-    name: '厚度标准',
+    name: 'Thickness Standard', name_zh: '厚度标准',
     unit: '台',
     category: 'machine',
     props: [
@@ -60,7 +60,7 @@ export const STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/leak-rate-standard',
-    name: '漏率标准',
+    name: 'Leak Rate Standard', name_zh: '漏率标准',
     unit: '台',
     category: 'machine',
     // 单件夹具：毛细漏孔、密封、比对接口按整台装配，不再拆独立零件，标 monolithic。
@@ -78,7 +78,7 @@ export const STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/power-standard-100w',
-    name: '电气功率标准',
+    name: 'Electrical Power Standard', name_zh: '电气功率标准',
     unit: '台',
     category: 'machine',
     props: [
@@ -99,7 +99,7 @@ export const STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/velocity-standard',
-    name: '速度标准',
+    name: 'Velocity Standard', name_zh: '速度标准',
     unit: '台',
     category: 'machine',
     // 单件夹具：转盘、驱动、测速按整台装配，不再拆独立零件，标 monolithic。
@@ -118,7 +118,7 @@ export const STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/length-standard-300mm',
-    name: '长度标准',
+    name: 'Length Standard', name_zh: '长度标准',
     unit: '台',
     category: 'machine',
     props: [
@@ -141,7 +141,7 @@ export const STANDARD_ROUTES: readonly Route[] = [
      * 0–360° 与 0.1–1″ 是设计量程，不是读数。
      */
     id: 'make/fusion-angle-standard',
-    name: '角度标准制造',
+    name: 'Angle Standard Manufacturing', name_zh: '角度标准制造',
     produces: [
       {
         item: 'plant/angle-standard',
@@ -163,7 +163,7 @@ export const STANDARD_ROUTES: readonly Route[] = [
      * 千分尺只到 25 mm、校准尺只到 100 mm；0–300 mm 是设计量程。
      */
     id: 'make/thickness-standard',
-    name: '厚度标准制造',
+    name: 'Thickness Standard Manufacturing', name_zh: '厚度标准制造',
     produces: [
       {
         item: 'plant/thickness-standard',
@@ -186,7 +186,7 @@ export const STANDARD_ROUTES: readonly Route[] = [
      * 没有 1e-9 级校准漏孔，0.001 量程是设计。
      */
     id: 'make/leak-rate-standard',
-    name: '漏率标准制造',
+    name: 'Leak Rate Standard Manufacturing', name_zh: '漏率标准制造',
     produces: [
       {
         item: 'plant/leak-rate-standard',
@@ -217,7 +217,7 @@ export const STANDARD_ROUTES: readonly Route[] = [
      * 电气功率标准，不是光功率；0–100 W 是设计。
      */
     id: 'make/power-standard-100w',
-    name: '电气功率标准制造',
+    name: 'Electrical Power Standard Manufacturing', name_zh: '电气功率标准制造',
     produces: [
       {
         item: 'plant/power-standard-100w',
@@ -243,7 +243,7 @@ export const STANDARD_ROUTES: readonly Route[] = [
      * 300 m/s 是设计；高速段没有标准源。
      */
     id: 'make/velocity-standard',
-    name: '速度标准制造',
+    name: 'Velocity Standard Manufacturing', name_zh: '速度标准制造',
     produces: [
       {
         item: 'plant/velocity-standard',
@@ -274,7 +274,7 @@ export const STANDARD_ROUTES: readonly Route[] = [
      * 校准尺与量块只覆盖 0–100 mm 段；0–300 mm 是设计量程。
      */
     id: 'make/length-standard-300mm',
-    name: '长度标准制造',
+    name: 'Length Standard Manufacturing', name_zh: '长度标准制造',
     produces: [
       {
         item: 'plant/length-standard-300mm',

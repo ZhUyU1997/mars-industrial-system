@@ -126,7 +126,7 @@ export const CAR_DEVICE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/car-line-test-structure',
-    name: 'CAR 线电阻测试结构',
+    name: 'CAR Line Resistance Test Structure', name_zh: 'CAR 线电阻测试结构',
     unit: '片',
     category: 'part',
     props: [
@@ -155,7 +155,7 @@ export const CAR_DEVICE_ROUTES: readonly Route[] = [
      * 为什么 rate 是 3 h：光刻 0.5 h + 蒸铝/剥离 1 h + 合金 1 h + 测量 0.5 h。
      */
     id: 'make/car-line-test-structure',
-    name: 'CAR 线电阻测试结构制造',
+    name: 'CAR Line Resistance Test Structure Manufacturing', name_zh: 'CAR 线电阻测试结构制造',
     produces: [
       {
         item: 'mat/car-line-test-structure',

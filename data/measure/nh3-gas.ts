@@ -63,7 +63,7 @@ export const NH3_GAS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nh3-h2o-record',
-    name: '氨中水分记录',
+    name: 'Ammonia Moisture Record', name_zh: '氨中水分记录',
     unit: '份',
     category: 'part',
     props: [
@@ -89,7 +89,7 @@ export const NH3_GAS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nh3-o2-co-co2-n2-h2-record',
-    name: '氨中 O₂/N₂/CO/CO₂/H₂ 记录',
+    name: 'Ammonia O₂/N₂/CO/CO₂/H₂ Record', name_zh: '氨中 O₂/N₂/CO/CO₂/H₂ 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -127,7 +127,7 @@ export const NH3_GAS_MEASURE_ROUTES: readonly Route[] = [
      * NH₃ 残余偏移 0.02–0.05 ppm。
      */
     id: 'measure/nh3-moisture',
-    name: '氨中水分测量',
+    name: 'Ammonia Moisture Measurement', name_zh: '氨中水分测量',
     produces: [
       {
         item: 'mat/nh3-h2o-record',
@@ -188,7 +188,7 @@ export const NH3_GAS_MEASURE_ROUTES: readonly Route[] = [
      * 交付窗口：O₂ 0.2–5、N₂ 0.2–5、CO 0.5–10、CO₂ 1–10、H₂ 0.1–5 ppm、5 项。
      */
     id: 'measure/nh3-gas-impurities',
-    name: '氨中 O₂/N₂/CO/CO₂/H₂测量',
+    name: 'Ammonia O₂/N₂/CO/CO₂/H₂ Measurement', name_zh: '氨中 O₂/N₂/CO/CO₂/H₂测量',
     produces: [
       {
         item: 'mat/nh3-o2-co-co2-n2-h2-record',

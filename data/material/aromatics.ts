@@ -55,7 +55,7 @@ export const AROMATIC_ITEMS: readonly Item[] = [
    * **它是火星上唯一的 C2 入口。** 没有乙醇、没有乙烯、没有石油，
    * 二碳以上的有机骨架只能从乙炔起 —— 它是"第二个碳"的出生证明。
    */
-  { id: 'mat/acetylene', name: '乙炔', unit: 'kg', category: 'material' },
+  { id: 'mat/acetylene', name: 'Acetylene', name_zh: '乙炔', unit: 'kg', category: 'material' },
 
   /**
    * 苯（C₆H₆）。三个乙炔分子环化而成，放热，要控温。
@@ -63,10 +63,10 @@ export const AROMATIC_ITEMS: readonly Item[] = [
    * **它是唯一的芳烃入口。** 没有油，苯只能从
    * 乙炔环化来 —— 这是全表最短的一条芳烃路线，也是唯一的一条。
    */
-  { id: 'mat/benzene', name: '苯', unit: 'kg', category: 'material' },
+  { id: 'mat/benzene', name: 'Benzene', name_zh: '苯', unit: 'kg', category: 'material' },
 
   /** 氯苯（C₆H₅Cl）。苯上一个氢被氯换掉。苯酚的中间体，也是氯的第三个落点。 */
-  { id: 'mat/chlorobenzene', name: '氯苯', unit: 'kg', category: 'material' },
+  { id: 'mat/chlorobenzene', name: 'Chlorobenzene', name_zh: '氯苯', unit: 'kg', category: 'material' },
 
   /**
    * 苯酚（C₆H₅OH）。氯苯加石灰水解，300–400 °C、高压。
@@ -74,7 +74,7 @@ export const AROMATIC_ITEMS: readonly Item[] = [
    * 它是酚醛树脂的一半，也是这条链走到这里的全部理由 —— 苯酚在火星上
    * 不是"化工原料"，是**粘结剂的原料**。
    */
-  { id: 'mat/phenol', name: '苯酚', unit: 'kg', category: 'material' },
+  { id: 'mat/phenol', name: 'Phenol', name_zh: '苯酚', unit: 'kg', category: 'material' },
 
   /**
    * 酚醛树脂。苯酚与甲醛缩聚，90–100 °C，酸或碱催化。
@@ -82,7 +82,7 @@ export const AROMATIC_ITEMS: readonly Item[] = [
    * 它是碳素粘结剂：混进碳粉里压成电极，焙烧时树脂碳化，把碳粉焊成一体。
    * 碳化收率约 50%，所以 20% 的树脂在成品里只剩 10% 的碳。
    */
-  { id: 'mat/phenolic-resin', name: '酚醛树脂', unit: 'kg', category: 'material' },
+  { id: 'mat/phenolic-resin', name: 'Phenolic Resin', name_zh: '酚醛树脂', unit: 'kg', category: 'material' },
 ];
 
 export const AROMATIC_ROUTES: readonly Route[] = [
@@ -97,7 +97,7 @@ export const AROMATIC_ROUTES: readonly Route[] = [
      * 停留时间必须在毫秒级：慢一点乙炔自己就分解成碳和氢了。
      */
     id: 'make/acetylene',
-    name: '甲烷裂解制乙炔',
+    name: 'Acetylene from Methane Cracking', name_zh: '甲烷裂解制乙炔',
     produces: [
       { item: 'mat/acetylene', qty: q(1000) },
       { item: 'mat/hydrogen', qty: q(232), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5, dir: 'atLeast' }] },
@@ -116,7 +116,7 @@ export const AROMATIC_ROUTES: readonly Route[] = [
      * 质量一比一，热却是强放热 —— 反应器要能把热带走，否则结焦。
      */
     id: 'make/benzene',
-    name: '乙炔环化成苯制备',
+    name: 'Acetylene Cyclization to Benzene Production', name_zh: '乙炔环化成苯制备',
     produces: [{ item: 'mat/benzene', qty: q(1000) }],
     uses: [{ anyOf: [{ item: 'mat/acetylene', qty: q(1000) }] }],
     needs: [],
@@ -132,7 +132,7 @@ export const AROMATIC_ROUTES: readonly Route[] = [
      * 氯在这里是第三个落点，出口仍然是盐酸 —— 回到 Deacon 法那条环路里。
      */
     id: 'make/chlorobenzene',
-    name: '苯氯化制备',
+    name: 'Chlorobenzene Production', name_zh: '苯氯化制备',
     produces: [
       { item: 'mat/chlorobenzene', qty: q(1000) },
       { item: 'mat/hcl', qty: q(324), gives: [{ param: 'concentration', kind: 'range', min: 30, max: 33 }] },
@@ -155,7 +155,7 @@ export const AROMATIC_ROUTES: readonly Route[] = [
      * 氯以氯化钙的形式出去，不再回收：这一处是氯环的**唯一净损失**。
      */
     id: 'make/phenol',
-    name: '氯苯水解',
+    name: 'Chlorobenzene Hydrolysis', name_zh: '氯苯水解',
     produces: [
       { item: 'mat/phenol', qty: q(1000) },
       // 副产 590 kg 氯化钙 —— 以前只写在 unbalanced_zh 里。它是唯一的钙盐出口，
@@ -184,7 +184,7 @@ export const AROMATIC_ROUTES: readonly Route[] = [
      * 分子量到几千就够用了：粘结剂不需要高分子量，需要的是**碳化后还剩多少碳**。
      */
     id: 'make/phenolic-resin',
-    name: '酚醛缩聚制备',
+    name: 'Phenolic Polycondensation Production', name_zh: '酚醛缩聚制备',
     produces: [
       { item: 'mat/phenolic-resin', qty: q(1000) },
       { item: 'mat/water', qty: q(170), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },

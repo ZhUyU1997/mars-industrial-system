@@ -16,7 +16,7 @@ export const FUSION_MAGNET_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-tf-field-record',
-    name: 'TF 峰值场记录',
+    name: 'TF Peak Field Record', name_zh: 'TF 峰值场记录',
     unit: '份',
     category: 'part',
     props: [
@@ -32,7 +32,7 @@ export const FUSION_MAGNET_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-pf-field-record',
-    name: 'PF 峰值场记录',
+    name: 'PF Peak Field Record', name_zh: 'PF 峰值场记录',
     unit: '份',
     category: 'part',
     props: [
@@ -48,7 +48,7 @@ export const FUSION_MAGNET_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-cs-flux-record',
-    name: 'CS 磁通记录',
+    name: 'CS Flux Record', name_zh: 'CS 磁通记录',
     unit: '份',
     category: 'part',
     props: [
@@ -66,7 +66,7 @@ export const FUSION_MAGNET_RECORD_ROUTES: readonly Route[] = [
      * public-spec：ITER 11.8 T 公开值，不是本线圈实测。
      */
     id: 'measure/fusion-tf-field',
-    name: 'TF 峰值场测量',
+    name: 'TF Peak Field Measurement', name_zh: 'TF 峰值场测量',
     produces: [
       {
         item: 'mat/fusion-tf-field-record',
@@ -89,7 +89,7 @@ export const FUSION_MAGNET_RECORD_ROUTES: readonly Route[] = [
      * assumed：低场探头未标定，不是实测。
      */
     id: 'measure/fusion-pf-field',
-    name: 'PF 峰值场测量',
+    name: 'PF Peak Field Measurement', name_zh: 'PF 峰值场测量',
     produces: [
       {
         item: 'mat/fusion-pf-field-record',
@@ -112,7 +112,7 @@ export const FUSION_MAGNET_RECORD_ROUTES: readonly Route[] = [
      * assumed：磁通计未标定，不是实测。
      */
     id: 'measure/fusion-cs-flux',
-    name: 'CS 磁通测量',
+    name: 'CS Flux Measurement', name_zh: 'CS 磁通测量',
     produces: [
       {
         item: 'mat/fusion-cs-flux-record',

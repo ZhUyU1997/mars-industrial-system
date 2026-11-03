@@ -345,7 +345,7 @@ export const UNBLOCK_BUSBAR_ROUTES: readonly Route[] = [
      *   两者不重叠；加起来 84 kg/槽，是本层铜最集中的一处。
      */
     id: 'make/electrorefining-busbar-cast',
-    name: '电解精炼槽母线制造',
+    name: 'Electrorefining Cell Busbar Manufacturing', name_zh: '电解精炼槽母线制造',
     produces: [{ item: 'plant/electrorefining/busbar', qty: q(1) }],
     uses: [
       /**
@@ -633,7 +633,7 @@ export const UNBLOCK_BUSBAR_ROUTES: readonly Route[] = [
      *     346 kg、0.027 V）。十年后有人看见 3.3 t 铁母线，要能查到这句话。
      */
     id: 'make/aluminium-cell-busbar-cast',
-    name: '铝电解槽母线制造',
+    name: 'Aluminium Electrolysis Cell Busbar Manufacturing', name_zh: '铝电解槽母线制造',
     produces: [{ item: 'plant/aluminium-cell/busbar', qty: q(1) }],
     uses: [
       /**

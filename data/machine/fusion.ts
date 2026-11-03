@@ -38,7 +38,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor',
-    name: '聚变装置',
+    name: 'Fusion Plant', name_zh: '聚变装置',
     unit: '台',
     category: 'machine',
     props: [
@@ -82,7 +82,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/diagnostics',
-    name: '聚变装置 commissioning 诊断',
+    name: 'Fusion Plant Commissioning Diagnostics', name_zh: '聚变装置 commissioning 诊断',
     unit: '台',
     category: 'machine',
     // 单件诊断设备：机柜、传感器、采集按整台装配，不再拆独立零件，标 monolithic。
@@ -111,7 +111,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/tf-coil',
-    name: '聚变装置环向场线圈',
+    name: 'Fusion Plant Toroidal Field Coil', name_zh: '聚变装置环向场线圈',
     unit: '件',
     category: 'part',
     props: [
@@ -129,7 +129,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/pf-coil',
-    name: '聚变装置极向场线圈',
+    name: 'Fusion Plant Poloidal Field Coil', name_zh: '聚变装置极向场线圈',
     unit: '件',
     category: 'part',
     props: [
@@ -149,7 +149,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/central-solenoid',
-    name: '聚变装置中心螺线管',
+    name: 'Fusion Plant Central Solenoid', name_zh: '聚变装置中心螺线管',
     unit: '件',
     category: 'part',
     props: [
@@ -169,7 +169,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/vacuum-vessel',
-    name: '聚变装置真空室',
+    name: 'Fusion Plant Vacuum Vessel', name_zh: '聚变装置真空室',
     unit: '件',
     category: 'part',
     props: [
@@ -189,7 +189,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/blanket',
-    name: '聚变装置包层',
+    name: 'Fusion Plant Blanket', name_zh: '聚变装置包层',
     unit: '件',
     category: 'part',
     props: [
@@ -207,7 +207,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/divertor',
-    name: '聚变装置偏滤器',
+    name: 'Fusion Plant Divertor', name_zh: '聚变装置偏滤器',
     unit: '件',
     mass: q(10000),
     category: 'part',
@@ -227,7 +227,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/cryostat',
-    name: '聚变装置低温恒温器',
+    name: 'Fusion Plant Cryostat', name_zh: '聚变装置低温恒温器',
     unit: '件',
     mass: q(3850000),
     category: 'part',
@@ -247,7 +247,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/thermal-shield',
-    name: '聚变装置冷屏',
+    name: 'Fusion Plant Cold Shield', name_zh: '聚变装置冷屏',
     unit: '套',
     category: 'part',
     props: [
@@ -266,7 +266,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/cryoplant',
-    name: '聚变装置低温厂',
+    name: 'Fusion Plant Cryogenic Plant', name_zh: '聚变装置低温厂',
     unit: '套',
     category: 'part',
     props: [
@@ -286,7 +286,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/heating',
-    name: '聚变装置辅助加热',
+    name: 'Fusion Plant Auxiliary Heating', name_zh: '聚变装置辅助加热',
     unit: '套',
     category: 'part',
     props: [
@@ -304,7 +304,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/heating/rf-module',
-    name: '聚变装置射频模块',
+    name: 'Fusion Plant RF Module', name_zh: '聚变装置射频模块',
     unit: '件',
     category: 'part',
   },
@@ -321,7 +321,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/fuel-cycle',
-    name: '聚变装置燃料循环',
+    name: 'Fusion Plant Fuel Cycle', name_zh: '聚变装置燃料循环',
     unit: '套',
     category: 'part',
     props: [
@@ -347,7 +347,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/power-block',
-    name: '聚变装置发电模块',
+    name: 'Fusion Plant Power Generation Module', name_zh: '聚变装置发电模块',
     unit: '套',
     category: 'part',
     props: [
@@ -367,7 +367,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/control',
-    name: '聚变装置控制系统',
+    name: 'Fusion Plant Control System', name_zh: '聚变装置控制系统',
     unit: '套',
     category: 'part',
     props: [
@@ -393,7 +393,7 @@ export const FUSION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fusion-reactor/shield',
-    name: '聚变装置屏蔽',
+    name: 'Fusion Plant Shielding', name_zh: '聚变装置屏蔽',
     unit: '套',
     category: 'part',
     props: [
@@ -412,7 +412,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * tritiumInventory 与 burnRate 已转 calculated 记录，不是读数。
      */
     id: 'make/fusion-fuel-cycle',
-    name: '燃料循环装配',
+    name: 'Fuel Cycle Assembly', name_zh: '燃料循环装配',
     produces: [
       {
         item: 'plant/fusion-reactor/fuel-cycle',
@@ -434,7 +434,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * availability 已转 assumed 记录；cycleTime 已是记录（不是实测）。
      */
     id: 'make/fusion-control',
-    name: '控制系统装配',
+    name: 'Control System Assembly', name_zh: '控制系统装配',
     produces: [
       {
         item: 'plant/fusion-reactor/control',
@@ -463,7 +463,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * leakRate 已转 assumed 记录、sectorMass 已转 calculated 记录，不是读数。
      */
     id: 'make/fusion-vacuum-vessel-sector',
-    name: '聚变装置真空室制造',
+    name: 'Fusion Plant Vacuum Vessel Manufacturing', name_zh: '聚变装置真空室制造',
     produces: [
       {
         item: 'plant/fusion-reactor/vacuum-vessel',
@@ -500,7 +500,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * volume 已转 calculated 记录；vacuum 已是记录（assumed，不是实测）。
      */
     id: 'make/fusion-cryostat',
-    name: '聚变装置低温恒温器制造',
+    name: 'Fusion Plant Cryostat Manufacturing', name_zh: '聚变装置低温恒温器制造',
     produces: [
       {
         item: 'plant/fusion-reactor/cryostat',
@@ -535,7 +535,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * 换料与检修时间未建模。
      */
     id: 'make/fusion-reactor',
-    name: '聚变装置装配',
+    name: 'Fusion Plant Assembly', name_zh: '聚变装置装配',
     produces: [
       {
         item: 'plant/fusion-reactor',
@@ -578,7 +578,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * 10 个 measure/* 窗口是设计值，不是产品实测。
      */
     id: 'make/fusion-diagnostics',
-    name: '聚变装置 commissioning 诊断制造',
+    name: 'Fusion Plant Commissioning Diagnostics Manufacturing', name_zh: '聚变装置 commissioning 诊断制造',
     produces: [
       {
         item: 'plant/fusion-reactor/diagnostics',
@@ -619,7 +619,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * 配筋、模板、养护与现场施工设备未建模；养护温度未建模，因此不写 under。
      */
     id: 'make/fusion-shield',
-    name: '聚变装置屏蔽制造',
+    name: 'Fusion Plant Shielding Manufacturing', name_zh: '聚变装置屏蔽制造',
     produces: [
       {
         item: 'plant/fusion-reactor/shield',
@@ -648,7 +648,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * 大面积钎焊设备与低温测试未建模，因此不写 under。
      */
     id: 'make/fusion-thermal-shield',
-    name: '聚变装置冷屏制造',
+    name: 'Fusion Plant Cold Shield Manufacturing', name_zh: '聚变装置冷屏制造',
     produces: [
       {
         item: 'plant/fusion-reactor/thermal-shield',
@@ -680,7 +680,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * peakField 已转 public-spec 记录；storedEnergy 已转 calculated 记录，不是读数。
      */
     id: 'make/fusion-tf-coil',
-    name: '聚变装置环向场线圈制造',
+    name: 'Fusion Plant Toroidal Field Coil Manufacturing', name_zh: '聚变装置环向场线圈制造',
     produces: [
       {
         item: 'plant/fusion-reactor/tf-coil',
@@ -728,7 +728,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * peakField 已是记录；current 已转 assumed 记录，不是读数。
      */
     id: 'make/fusion-pf-coil',
-    name: '聚变装置极向场线圈制造',
+    name: 'Fusion Plant Poloidal Field Coil Manufacturing', name_zh: '聚变装置极向场线圈制造',
     produces: [
       {
         item: 'plant/fusion-reactor/pf-coil',
@@ -769,7 +769,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * 单模块分摊未建模；flux 与 peakField 都已转记录。
      */
     id: 'make/fusion-central-solenoid',
-    name: '聚变装置中心螺线管制造',
+    name: 'Fusion Plant Central Solenoid Manufacturing', name_zh: '聚变装置中心螺线管制造',
     produces: [
       {
         item: 'plant/fusion-reactor/central-solenoid',
@@ -818,7 +818,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * heatFlux 已转 calculated 记录，不是读数。
      */
     id: 'make/fusion-blanket-module',
-    name: '聚变装置包层制造',
+    name: 'Fusion Plant Blanket Manufacturing', name_zh: '聚变装置包层制造',
     produces: [
       {
         item: 'plant/fusion-reactor/blanket',
@@ -862,7 +862,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * steady/transient 已转 public-spec 记录，不是读数。
      */
     id: 'make/fusion-divertor-cassette',
-    name: '聚变装置偏滤器制造',
+    name: 'Fusion Plant Divertor Manufacturing', name_zh: '聚变装置偏滤器制造',
     produces: [
       {
         item: 'plant/fusion-reactor/divertor',
@@ -915,7 +915,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * 70–75 kW 与 20–30 t 已转记录，不是读数。
      */
     id: 'make/fusion-cryoplant',
-    name: '聚变装置低温厂制造',
+    name: 'Fusion Plant Cryogenic Plant Manufacturing', name_zh: '聚变装置低温厂制造',
     produces: [
       {
         item: 'plant/fusion-reactor/cryoplant',
@@ -950,7 +950,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * 模块自身只做汇流与冷却结构。质量按量级估，不是实测。
      */
     id: 'make/fusion-heating-module',
-    name: '聚变装置射频模块制造',
+    name: 'Fusion Plant RF Module Manufacturing', name_zh: '聚变装置射频模块制造',
     produces: [{ item: 'plant/fusion-reactor/heating/rf-module', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(2) }] },
@@ -970,7 +970,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * injectedPower 与 installedPower 已转 public-spec 记录，不是读数。
      */
     id: 'make/fusion-heating',
-    name: '聚变装置辅助加热制造',
+    name: 'Fusion Plant Auxiliary Heating Manufacturing', name_zh: '聚变装置辅助加热制造',
     produces: [
       {
         item: 'plant/fusion-reactor/heating',
@@ -998,7 +998,7 @@ export const FUSION_ROUTES: readonly Route[] = [
      * electricPower 与 efficiency 已转 assumed 记录，不是读数。
      */
     id: 'make/fusion-power-block',
-    name: '聚变装置发电模块制造',
+    name: 'Fusion Plant Power Generation Module Manufacturing', name_zh: '聚变装置发电模块制造',
     produces: [
       {
         item: 'plant/fusion-reactor/power-block',

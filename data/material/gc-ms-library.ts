@@ -179,7 +179,7 @@ export const GC_LIBRARY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gc-ms-library',
-    name: '自建 GC-MS 谱库',
+    name: 'In-House GC-MS Spectral Library', name_zh: '自建 GC-MS 谱库',
     unit: '份',
     category: 'part',
     props: [
@@ -213,7 +213,7 @@ export const GC_LIBRARY_ROUTES: readonly Route[] = [
      * 标样，§六①）；本库是「5 锚点分段」，误差 ±10–20 指数单位写进 props。
      */
     id: 'make/gc-ms-library',
-    name: '自建 GC-MS 谱库制造',
+    name: 'In-House GC-MS Spectral Library Manufacturing', name_zh: '自建 GC-MS 谱库制造',
     produces: [
       {
         item: 'mat/gc-ms-library',

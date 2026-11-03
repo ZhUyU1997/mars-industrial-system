@@ -47,7 +47,7 @@ export const ANALOG_ITEMS: readonly Item[] = [
    *
    * 它是本层第一块**模拟**集成电路 —— 前面全在回答"是/不是"，这一块回答"差多少"。
    */
-  { id: 'std/opamp-chip-general', name: '运算放大器芯片', unit: '片', category: 'part',
+  { id: 'std/opamp-chip-general', name: 'Operational Amplifier Chip', name_zh: '运算放大器芯片', unit: '片', category: 'part',
     // 3 µm 双极线（与 std/photomask-general 同一档），门数 10–30。
     props: [{ param: 'node', kind: 'range', min: 3000, max: 3000, unit: 'nm', dir: 'atMost' }, { param: 'gates', kind: 'range', min: 10, max: 30, unit: '门' }], },
 
@@ -58,7 +58,7 @@ export const ANALOG_ITEMS: readonly Item[] = [
    * 石英参考支架、陶壳与刻度盘等件装配；零件与零件路线见
    * `data/machine/mech-temp-controller.ts`。
    */
-  { id: 'std/temp-controller-general', name: '双金属式温控器', unit: '台', category: 'part',
+  { id: 'std/temp-controller-general', name: 'Bimetallic Thermostat', name_zh: '双金属式温控器', unit: '台', category: 'part',
     composedOf: [
       { item: 'std/temp-controller-general/base', qty: q(1) },
       { item: 'std/temp-controller-general/case-frame', qty: q(1) },
@@ -95,7 +95,7 @@ export const ANALOG_ITEMS: readonly Item[] = [
    *
    * 元件为焊接/贴装装配，属于不可逆加工；零件输入写在路线 uses，不写 composedOf。
    */
-  { id: 'std/temp-controller-electronic', name: '电子式模拟 PID 温控器', unit: '台', category: 'part' },
+  { id: 'std/temp-controller-electronic', name: 'Electronic Analog PID Temperature Controller', name_zh: '电子式模拟 PID 温控器', unit: '台', category: 'part' },
 ];
 
 export const ANALOG_ROUTES: readonly Route[] = [
@@ -109,7 +109,7 @@ export const ANALOG_ROUTES: readonly Route[] = [
      * 输入对要远离输出级（防热反馈）。**这是本层第一次"图形决定性能"而不只是连通。**
      */
     id: 'make/opamp-chip',
-    name: '运算放大器芯片制造',
+    name: 'Operational Amplifier Chip Manufacturing', name_zh: '运算放大器芯片制造',
     produces: [{ item: 'std/opamp-chip-general', qty: q(60), gives: [{ param: 'node', kind: 'range', min: 3000, max: 3000 }, { param: 'gates', kind: 'range', min: 10, max: 30 }] }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },
@@ -146,7 +146,7 @@ export const ANALOG_ROUTES: readonly Route[] = [
      * 工业上多数温控器默认关掉 D —— 这一版直接不做，是诚实，不是省事。
      */
     id: 'make/temp-controller',
-    name: '电子式模拟 PID 温控器制造',
+    name: 'Electronic Analog PID Temperature Controller Manufacturing', name_zh: '电子式模拟 PID 温控器制造',
     produces: [{ item: 'std/temp-controller-electronic', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/opamp-chip-general', qty: q(2) }] },

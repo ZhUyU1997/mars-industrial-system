@@ -411,7 +411,7 @@ export const UNBLOCK_HTF_LINING_ROUTES: readonly Route[] = [
      *     —— 与"壳出座、door 出本体"同一种切法
      */
     id: 'make/htf-lining-brick',
-    name: '高温炉炉衬制造',
+    name: 'High-Temperature Furnace Lining Manufacturing', name_zh: '高温炉炉衬制造',
     produces: [{ item: 'plant/high-temp-furnace/lining', qty: q(1) }],
     uses: [
       /**

@@ -113,7 +113,7 @@ export const UNBLOCK_SHEET_FRAME_ROUTES: readonly Route[] = [
   {
     /** HT250 浇 → 打箱落砂 → 露天时效 → 花盘铣结合面 → 磨 → 配刮。 */
     id: 'make/sheet-frame-cast',
-    name: '钣金与焊接工位机身制造',
+    name: 'Sheet Metal and Welding Workstation Frame Manufacturing', name_zh: '钣金与焊接工位机身制造',
     produces: [{ item: 'plant/sheet-shop/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     needs: [],

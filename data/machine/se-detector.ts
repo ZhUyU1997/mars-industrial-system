@@ -205,7 +205,7 @@ export const SE_DETECTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/zns-ag-phosphor',
-    name: 'ZnS:Ag 荧光粉',
+    name: 'ZnS:Ag Phosphor', name_zh: 'ZnS:Ag 荧光粉',
     unit: 'kg',
     category: 'material',
     props: [
@@ -232,7 +232,7 @@ export const SE_DETECTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/se-detector/scintillator',
-    name: '二次电子探测器荧光屏',
+    name: 'Secondary Electron Detector Scintillator', name_zh: '二次电子探测器荧光屏',
     unit: '件',
     category: 'part',
     props: [
@@ -251,7 +251,7 @@ export const SE_DETECTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/se-detector/collector',
-    name: '二次电子探测器收集极',
+    name: 'Secondary Electron Detector Collector', name_zh: '二次电子探测器收集极',
     unit: '件',
     category: 'part',
     props: [
@@ -270,7 +270,7 @@ export const SE_DETECTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/se-detector/light-guide',
-    name: '二次电子探测器光导',
+    name: 'Secondary Electron Detector Light Guide', name_zh: '二次电子探测器光导',
     unit: '件',
     category: 'part',
     props: [
@@ -292,7 +292,7 @@ export const SE_DETECTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/se-detector/photocell',
-    name: '二次电子探测器光电管',
+    name: 'Secondary Electron Detector Photocell', name_zh: '二次电子探测器光电管',
     unit: '件',
     category: 'part',
     props: [
@@ -312,7 +312,7 @@ export const SE_DETECTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/se-detector/preamplifier',
-    name: '二次电子探测器前置放大',
+    name: 'Secondary Electron Detector Preamplifier', name_zh: '二次电子探测器前置放大',
     unit: '件',
     category: 'part',
     props: [
@@ -331,7 +331,7 @@ export const SE_DETECTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/se-detector/housing',
-    name: '二次电子探测器壳体',
+    name: 'Secondary Electron Detector Housing', name_zh: '二次电子探测器壳体',
     unit: '件',
     category: 'part',
     props: [
@@ -357,7 +357,7 @@ export const SE_DETECTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/se-detector',
-    name: '二次电子探测器',
+    name: 'Secondary Electron Detector', name_zh: '二次电子探测器',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'pressure', min: 1e-5, max: 1e-3 }],
@@ -411,7 +411,7 @@ export const SE_DETECTOR_ROUTES: readonly Route[] = [
      * （降级⑥）。这是本路线最贵的一处手艺损失。
      */
     id: 'make/zns-ag-phosphor',
-    name: 'ZnS:Ag 荧光粉制备',
+    name: 'ZnS:Ag Phosphor Production', name_zh: 'ZnS:Ag 荧光粉制备',
     produces: [
       {
         item: 'mat/zns-ag-phosphor',
@@ -455,7 +455,7 @@ export const SE_DETECTOR_ROUTES: readonly Route[] = [
      * 对 450 nm 光不透明（趋肤深度 6 nm）。
      */
     id: 'make/se-scintillator',
-    name: '二次电子探测器荧光屏制造',
+    name: 'Secondary Electron Detector Scintillator Manufacturing', name_zh: '二次电子探测器荧光屏制造',
     produces: [
       {
         item: 'plant/se-detector/scintillator',
@@ -516,7 +516,7 @@ export const SE_DETECTOR_ROUTES: readonly Route[] = [
      * 而这条损失在文件头那张账里是乘进 47 个光子的，所以不能省。
      */
     id: 'make/se-light-guide',
-    name: '二次电子探测器光导制造',
+    name: 'Secondary Electron Detector Light Guide Manufacturing', name_zh: '二次电子探测器光导制造',
     produces: [
       {
         item: 'plant/se-detector/light-guide',
@@ -559,7 +559,7 @@ export const SE_DETECTOR_ROUTES: readonly Route[] = [
      * 450 nm 的量子效率从 55 % 抬到 69 %（= 0.25 A/W）。
      */
     id: 'make/se-photocell',
-    name: '二次电子探测器光电管制造',
+    name: 'Secondary Electron Detector Photocell Manufacturing', name_zh: '二次电子探测器光电管制造',
     produces: [
       {
         item: 'plant/se-detector/photocell',
@@ -622,7 +622,7 @@ export const SE_DETECTOR_ROUTES: readonly Route[] = [
      * 运放的电流噪声反而被它盖住了**（这是本层第一次因为"器件差"而受益）。
      */
     id: 'make/se-preamplifier',
-    name: '二次电子探测器前置放大制造',
+    name: 'Secondary Electron Detector Preamplifier Manufacturing', name_zh: '二次电子探测器前置放大制造',
     produces: [
       {
         item: 'plant/se-detector/preamplifier',
@@ -677,7 +677,7 @@ export const SE_DETECTOR_ROUTES: readonly Route[] = [
      * 这里只是**同一台仪器的另一根线**）。
      */
     id: 'make/se-collector',
-    name: '二次电子探测器收集极制造',
+    name: 'Secondary Electron Detector Collector Manufacturing', name_zh: '二次电子探测器收集极制造',
     produces: [
       {
         item: 'plant/se-detector/collector',
@@ -717,7 +717,7 @@ export const SE_DETECTOR_ROUTES: readonly Route[] = [
      * 中间抽气**，内壁氧化发黑（反射率 2 %）。
      */
     id: 'make/se-housing',
-    name: '二次电子探测器壳体制造',
+    name: 'Secondary Electron Detector Housing Manufacturing', name_zh: '二次电子探测器壳体制造',
     produces: [
       {
         item: 'plant/se-detector/housing',
@@ -777,7 +777,7 @@ export const SE_DETECTOR_ROUTES: readonly Route[] = [
      * 压力那一条**探测器自己也 hold**（壳体是独立密封罐）—— 两个承担者都合法。
      */
     id: 'make/wafer-inspect-se',
-    name: '检验后晶圆制造',
+    name: 'Inspected Wafer Manufacturing', name_zh: '检验后晶圆制造',
     produces: [
       {
         item: 'mat/wafer-inspected',
@@ -816,7 +816,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/se-detector',
-    name: '二次电子探测器装配',
+    name: 'Secondary Electron Detector Assembly', name_zh: '二次电子探测器装配',
     produces: [{
       item: 'plant/se-detector',
       qty: q(1),

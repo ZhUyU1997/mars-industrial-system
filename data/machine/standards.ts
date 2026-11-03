@@ -66,7 +66,7 @@ export const STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/attenuator-standard',
-    name: 'UHF 标准衰减器',
+    name: 'UHF Standard Attenuator', name_zh: 'UHF 标准衰减器',
     unit: '件',
     category: 'part',
     props: [
@@ -96,7 +96,7 @@ export const STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/angle-standard',
-    name: '角度原器',
+    name: 'Angle Primary Standard', name_zh: '角度原器',
     unit: '件',
     category: 'part',
     props: [
@@ -120,7 +120,7 @@ export const STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/overlay-standard-005',
-    name: '高等级套刻标准片',
+    name: 'High-Grade Overlay Standard Wafer', name_zh: '高等级套刻标准片',
     unit: '片',
     category: 'part',
     props: [
@@ -140,7 +140,7 @@ export const STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/capacitance-standard-1pf',
-    name: '1 pF 传递标准',
+    name: '1 pF Transfer Standard', name_zh: '1 pF 传递标准',
     unit: '件',
     category: 'part',
     props: [
@@ -161,7 +161,7 @@ export const STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/straightness-standard-1m',
-    name: '1 m 直线度原器',
+    name: '1 m Primary Straightness Standard', name_zh: '1 m 直线度原器',
     unit: '件',
     category: 'part',
     props: [
@@ -191,7 +191,7 @@ export const STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/hollow-cathode-ar',
-    name: 'Ar 填充空心阴极灯',
+    name: 'Ar-Filled Hollow Cathode Lamp', name_zh: 'Ar 填充空心阴极灯',
     unit: '件',
     category: 'part',
     props: [
@@ -227,7 +227,7 @@ export const STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/autocollimator-precision',
-    name: '精密电子自准直仪',
+    name: 'Precision Electronic Autocollimator', name_zh: '精密电子自准直仪',
     unit: '件',
     category: 'part',
     props: [
@@ -257,7 +257,7 @@ export const STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/charge-standard-1pc',
-    name: '1 pC 电荷标准',
+    name: '1 pC Charge Standard', name_zh: '1 pC 电荷标准',
     unit: '件',
     category: 'part',
     props: [
@@ -282,7 +282,7 @@ export const STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/si-isotope-working-standard',
-    name: '²⁸Si 工作标样',
+    name: '²⁸Si Working Standard', name_zh: '²⁸Si 工作标样',
     unit: '件',
     category: 'part',
     props: [
@@ -302,7 +302,7 @@ export const STD_ROUTES: readonly Route[] = [
      *   片阻 6 + 氧化铝基片 1 + 金 0.1 g + 铜 1 g + 酚醛 0.01 kg → 衰减器 1 件
      */
     id: 'make/attenuator-standard',
-    name: 'UHF 标准衰减器制造',
+    name: 'UHF Standard Attenuator Manufacturing', name_zh: 'UHF 标准衰减器制造',
     produces: [
       {
         item: 'std/attenuator-standard',
@@ -360,7 +360,7 @@ export const STD_ROUTES: readonly Route[] = [
      *   石英 0.5 kg + 氧化铝 0.05 kg + 氧化铈 0.01 kg → 24 面棱镜 1 件
      */
     id: 'make/angle-standard',
-    name: '角度原器制造',
+    name: 'Angle Primary Standard Manufacturing', name_zh: '角度原器制造',
     produces: [
       {
         item: 'std/angle-standard',
@@ -405,7 +405,7 @@ export const STD_ROUTES: readonly Route[] = [
      *   套刻片 1 + 0.1 nm 台阶标准 1 + 硅片 1 → 高等级套刻片 1
      */
     id: 'make/overlay-standard-005',
-    name: '高等级套刻标准片制造',
+    name: 'High-Grade Overlay Standard Wafer Manufacturing', name_zh: '高等级套刻标准片制造',
     produces: [
       {
         item: 'std/overlay-standard-005',
@@ -440,7 +440,7 @@ export const STD_ROUTES: readonly Route[] = [
      *   铜 0.2 kg + 氧化铝 2 + 石英 0.01 kg + 金 0.1 g → 1 pF 标准 1 件
      */
     id: 'make/capacitance-standard-1pf',
-    name: '1 pF 传递标准制造',
+    name: '1 pF Transfer Standard Manufacturing', name_zh: '1 pF 传递标准制造',
     produces: [
       {
         item: 'std/capacitance-standard-1pf',
@@ -478,7 +478,7 @@ export const STD_ROUTES: readonly Route[] = [
      *   石英 8 kg + 45 钢 5 kg → 1 m 原器 1 件
      */
     id: 'make/straightness-standard-1m',
-    name: '1 m 直线度原器制造',
+    name: '1 m Primary Straightness Standard Manufacturing', name_zh: '1 m 直线度原器制造',
     produces: [
       {
         item: 'std/straightness-standard-1m',
@@ -516,7 +516,7 @@ export const STD_ROUTES: readonly Route[] = [
      * 所以标准件的定值误差只剩谱仪读数与内插几何（见 measure/oes-wavelength-hcl）。
      */
     id: 'make/hollow-cathode-ar',
-    name: 'Ar 填充空心阴极灯制造',
+    name: 'Ar-Filled Hollow Cathode Lamp Manufacturing', name_zh: 'Ar 填充空心阴极灯制造',
     produces: [
       {
         item: 'std/hollow-cathode-ar',
@@ -568,7 +568,7 @@ export const STD_ROUTES: readonly Route[] = [
      * （测角仪 72–180″ 只校线性，不校零点）。
      */
     id: 'make/autocollimator-precision',
-    name: '精密电子自准直仪制造',
+    name: 'Precision Electronic Autocollimator Manufacturing', name_zh: '精密电子自准直仪制造',
     produces: [
       {
         item: 'std/autocollimator-precision',
@@ -611,7 +611,7 @@ export const STD_ROUTES: readonly Route[] = [
      *   100 pF 标准 1 + 齐纳 1 + Hamon 1 + 接触器 1 + 铜 0.05 + PTFE 0.01 → 1 pC 标准 1 件
      */
     id: 'make/charge-standard-1pc',
-    name: '1 pC 电荷标准制造',
+    name: '1 pC Charge Standard Manufacturing', name_zh: '1 pC 电荷标准制造',
     produces: [
       {
         item: 'std/charge-standard-1pc',
@@ -652,7 +652,7 @@ export const STD_ROUTES: readonly Route[] = [
      *   富集粉 0.1 g + 天然片 1 + HF/HNO₃ + 水 → 工作标样 4 瓶
      */
     id: 'make/si-isotope-working-standard',
-    name: '²⁸Si 工作标样制造',
+    name: '²⁸Si Working Standard Manufacturing', name_zh: '²⁸Si 工作标样制造',
     produces: [
       {
         item: 'std/si-isotope-working-standard',

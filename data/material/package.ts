@@ -54,7 +54,7 @@ export const PACKAGE_ITEMS: readonly Item[] = [
    * 它是"晶圆工艺"与"封装工艺"之间的那个中间物 —— 以前这两段挤在一条路线里，
    * 于是"换个封装"就得改整条路线。分开之后，封装才成为可选的两条路。
    */
-  { id: 'mat/ic-die', name: '裸片', unit: '片', category: 'part' },
+  { id: 'mat/ic-die', name: 'Bare Die', name_zh: '裸片', unit: '片', category: 'part' },
 
   /**
    * 铝键合丝。φ25 µm 的纯铝丝，一卷几百米。
@@ -63,7 +63,7 @@ export const PACKAGE_ITEMS: readonly Item[] = [
    *   拉丝模的孔要磨到 1 µm 级（碳化硅只能到 5 µm 级 ——
  * **所以 φ25 µm 这一档的丝，本层的表面光洁度还差一档**），中途要退火三次。
    */
-  { id: 'mat/bonding-wire', name: '铝键合丝', unit: 'm', category: 'material' },
+  { id: 'mat/bonding-wire', name: 'Aluminium Bonding Wire', name_zh: '铝键合丝', unit: 'm', category: 'material' },
 
   /**
    * 金属帽外壳（钢帽 + 玻璃封接引线 + 引线框）。
@@ -72,7 +72,7 @@ export const PACKAGE_ITEMS: readonly Item[] = [
    *   引线   三根钢针穿过帽底的三个孔，孔里填玻璃粉，烧到软化、冷却后收紧
    *   框     铜引线框，与针焊接
    */
-  { id: 'std/metal-can-general', name: '金属帽外壳', unit: '套', category: 'part' },
+  { id: 'std/metal-can-general', name: 'Metal Can Housing', name_zh: '金属帽外壳', unit: '套', category: 'part' },
 
   /**
    * 冲压引线框（lead frame）。0.15 mm 的铜带，连续冲压出几十个引脚 + 一个芯片岛。
@@ -82,7 +82,7 @@ export const PACKAGE_ITEMS: readonly Item[] = [
    * 引脚的悬臂要平、镀银层要薄而匀（键合面）。所以它是一件**独立的冲压件**，
    * 不是一块铜。见 `make/lead-frame`。
    */
-  { id: 'std/lead-frame-general', name: '冲压引线框', unit: '套', category: 'part' },
+  { id: 'std/lead-frame-general', name: 'Stamped Lead Frame', name_zh: '冲压引线框', unit: '套', category: 'part' },
 
   /**
    * 金键合丝。φ25 µm 的纯金丝，一卷几百米。
@@ -92,7 +92,7 @@ export const PACKAGE_ITEMS: readonly Item[] = [
    *   ② 金的加工硬化比铝快 ⇒ 中间退火要 **5 次**而不是 3 次，且道次压缩量要小
    * 本层从 `mat/gold`（贵金属链，阳极泥 → 金粉）拉起来 —— 见 `make/gold-bonding-wire`。
    */
-  { id: 'mat/gold-bonding-wire', name: '金键合丝', unit: 'm', category: 'material' },
+  { id: 'mat/gold-bonding-wire', name: 'Gold Bonding Wire', name_zh: '金键合丝', unit: 'm', category: 'material' },
 ];
 
 export const PACKAGE_ROUTES: readonly Route[] = [
@@ -103,7 +103,7 @@ export const PACKAGE_ROUTES: readonly Route[] = [
      * 这条路线不存在"封装"这一步 —— 那正是把它拆出来的理由。
      */
     id: 'make/ic-die',
-    name: '裸片制造',
+    name: 'Bare Die Manufacturing', name_zh: '裸片制造',
     produces: [{ item: 'mat/ic-die', qty: q(100) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },
@@ -140,7 +140,7 @@ export const PACKAGE_ROUTES: readonly Route[] = [
      * 用超纯水洗片也是同一件事：普通水里的离子干在片子上，就是一层掺杂。
      */
     id: 'make/ic-die-clean',
-    name: '裸片制造',
+    name: 'Bare Die Manufacturing', name_zh: '裸片制造',
     produces: [{ item: 'mat/ic-die', qty: q(140) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },
@@ -169,7 +169,7 @@ export const PACKAGE_ROUTES: readonly Route[] = [
   {
     /** 铝丝：粗拉 → 中间退火 → 细拉到 φ25 µm → 清洗绕卷。 */
     id: 'make/bonding-wire',
-    name: '铝丝制备',
+    name: 'Aluminium Wire Production', name_zh: '铝丝制备',
     produces: [{ item: 'mat/bonding-wire', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/aluminium', qty: q(1) }] },
@@ -187,7 +187,7 @@ export const PACKAGE_ROUTES: readonly Route[] = [
   {
     /** 金属帽：钢板旋压成帽 → 钻三孔 → 填玻璃粉烧结（压缩封接）→ 焊引线框。 */
     id: 'make/metal-can',
-    name: '金属帽外壳制造',
+    name: 'Metal Can Housing Manufacturing', name_zh: '金属帽外壳制造',
     produces: [{ item: 'std/metal-can-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -211,7 +211,7 @@ export const PACKAGE_ROUTES: readonly Route[] = [
      * 不气密 —— 潮气几年后会走到结面。便宜、小、够用于干燥环境。
      */
     id: 'make/logic-chip',
-    name: '集成逻辑芯片制造',
+    name: 'Integrated Logic Chip Manufacturing', name_zh: '集成逻辑芯片制造',
     produces: [{ item: 'std/logic-chip-general', qty: q(1), gives: [{ param: 'node', kind: 'range', min: 5000, max: 5000 }, { param: 'gates', kind: 'range', min: 10, max: 50 }] }],
     uses: [
       { anyOf: [{ item: 'mat/ic-die', qty: q(1) }] },
@@ -237,7 +237,7 @@ export const PACKAGE_ROUTES: readonly Route[] = [
      * 气密的好处很具体：潮气进不来，结面不会在几年里慢慢漏电。
      */
     id: 'make/logic-chip-hermetic',
-    name: '集成逻辑芯片制造',
+    name: 'Integrated Logic Chip Manufacturing', name_zh: '集成逻辑芯片制造',
     produces: [{ item: 'std/logic-chip-general', qty: q(1), gives: [{ param: 'node', kind: 'range', min: 5000, max: 5000 }, { param: 'gates', kind: 'range', min: 10, max: 50 }] }],
     uses: [
       { anyOf: [{ item: 'mat/ic-die', qty: q(1) }] },
@@ -265,7 +265,7 @@ export const PACKAGE_ROUTES: readonly Route[] = [
      * 瓶颈在**连续送料的步距**（每冲一次送 2.54 mm，重复性要 ±0.02 mm）。
      */
     id: 'make/lead-frame',
-    name: '冲压引线框制造',
+    name: 'Stamped Lead Frame Manufacturing', name_zh: '冲压引线框制造',
     produces: [{ item: 'std/lead-frame-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1, 200) }] },
@@ -297,7 +297,7 @@ export const PACKAGE_ROUTES: readonly Route[] = [
      * 与 `make/robot-controller-*` 的接触电阻都靠它）。
      */
     id: 'make/gold-bonding-wire',
-    name: '金键合丝制备',
+    name: 'Gold Bonding Wire Production', name_zh: '金键合丝制备',
     produces: [{ item: 'mat/gold-bonding-wire', qty: q(100) }],
     uses: [
       { anyOf: [{ item: 'mat/gold', qty: q(1) }] },

@@ -15,7 +15,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cu-bts-record',
-    name: 'Cu 离位 BTS 记录',
+    name: 'Cu Off-Line BTS Record', name_zh: 'Cu 离位 BTS 记录',
     unit: '份',
     category: 'part',
     props: [

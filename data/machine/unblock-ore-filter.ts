@@ -356,7 +356,7 @@ export const UNBLOCK_FILTER_ROUTES: readonly Route[] = [
      * 保护气氛、没有炉门，氧化皮 2–3%、脱碳层 0.3–0.5 mm，余量因此留 5 mm。
      */
     id: 'make/ore-filter-cast',
-    name: '选矿厂过滤机制造',
+    name: 'Ore Beneficiation Plant Filter Manufacturing', name_zh: '选矿厂过滤机制造',
     produces: [{ item: 'plant/ore-beneficiary/filter', qty: q(1) }],
     uses: [
       {

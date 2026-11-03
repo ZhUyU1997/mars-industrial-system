@@ -43,7 +43,7 @@ export const HCL_LINEWIDTH_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/hcl-linewidth-record',
-    name: 'HCL 线宽记录',
+    name: 'HCL Linewidth Record', name_zh: 'HCL 线宽记录',
     unit: '份',
     category: 'part',
     props: [
@@ -59,7 +59,7 @@ export const HCL_LINEWIDTH_ROUTES: readonly Route[] = [
   {
     /** 线宽：起辉预热 → OES 谱仪扫两条线 → 测 FWHM → 去卷积 → 判读。 */
     id: 'measure/hollow-cathode-linewidth',
-    name: 'HCL 线宽测量',
+    name: 'HCL Linewidth Measurement', name_zh: 'HCL 线宽测量',
     produces: [
       {
         item: 'mat/hcl-linewidth-record',

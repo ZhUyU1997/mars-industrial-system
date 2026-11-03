@@ -44,7 +44,7 @@ export const TEM_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tem-image-record',
-    name: 'TEM 成像记录',
+    name: 'TEM Imaging Record', name_zh: 'TEM 成像记录',
     unit: '份',
     category: 'part',
     props: [
@@ -70,7 +70,7 @@ export const TEM_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tem-edx-record',
-    name: 'TEM EDX 记录',
+    name: 'TEM EDX Record', name_zh: 'TEM EDX 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -97,7 +97,7 @@ export const TEM_MEASURE_ROUTES: readonly Route[] = [
      * need 30–60 nm；记录容器的 20–100 nm 是留给他日更薄/更厚样品的。
      */
     id: 'measure/tem-imaging',
-    name: 'TEM 成像测量',
+    name: 'TEM Imaging Measurement', name_zh: 'TEM 成像测量',
     produces: [
       {
         item: 'mat/tem-image-record',
@@ -165,7 +165,7 @@ export const TEM_MEASURE_ROUTES: readonly Route[] = [
      * 检出 0.1–1 wt%（SDD 0.1–0.5 sr、100–300 s）。轻元素靠近 1 wt%。
      */
     id: 'measure/tem-edx',
-    name: 'TEM EDX 测量',
+    name: 'TEM EDX Measurement', name_zh: 'TEM EDX 测量',
     produces: [
       {
         item: 'mat/tem-edx-record',

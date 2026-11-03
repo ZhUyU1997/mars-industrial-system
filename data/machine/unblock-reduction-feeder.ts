@@ -351,7 +351,7 @@ export const UNBLOCK_RED_FEEDER_ROUTES: readonly Route[] = [
      *    这是"金属对金属、没有垫片"的代价，也是这条路线唯一必须写在零件上的规矩。
      */
     id: 'make/reduction-feeder-cast',
-    name: '还原炉布料器制造',
+    name: 'Reduction Furnace Charging Distributor Manufacturing', name_zh: '还原炉布料器制造',
     produces: [{ item: 'plant/reduction-furnace/feeder', qty: q(1) }],
     uses: [
       // 八项铸铁件：上下钟罩、两副座圈、中间仓、砂封槽环、均压旋塞体、杠杆与配重。

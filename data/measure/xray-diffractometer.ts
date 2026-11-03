@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const XRAY_DIFFRACTOMETER_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/xray-diffractometer-measure-record',
-    name: 'X 射线衍射仪分辨率记录',
+    name: 'X-Ray Diffractometer Resolution Record', name_zh: 'X 射线衍射仪分辨率记录',
     unit: '份',
     category: 'part',
     props: [
@@ -27,7 +27,7 @@ export const XRAY_DIFFRACTOMETER_MEASURE_ROUTES: readonly Route[] = [
      * **X 射线衍射仪分辨率：FZ-Si 标准晶体摇摆曲线 + 角度标准。**
      */
     id: 'measure/xray-diffractometer-resolution',
-    name: 'X 射线衍射仪分辨率测量',
+    name: 'X-Ray Diffractometer Resolution Measurement', name_zh: 'X 射线衍射仪分辨率测量',
     produces: [
       {
         item: 'mat/xray-diffractometer-measure-record',

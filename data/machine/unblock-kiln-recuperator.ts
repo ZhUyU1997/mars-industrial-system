@@ -411,7 +411,7 @@ export const UNBLOCK_KILN_RECUP_ROUTES: readonly Route[] = [
      *  ② 35 kg → 1 207 kg（34 倍）：一台一吨二换 1.47 kW，工业上没人这么干
      */
     id: 'make/kiln-recuperator-cast',
-    name: '窑炉换热器制造',
+    name: 'Kiln Heat Exchanger Manufacturing', name_zh: '窑炉换热器制造',
     produces: [{ item: 'plant/kiln/recuperator', qty: q(1) }],
     uses: [
       /**

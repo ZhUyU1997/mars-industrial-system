@@ -558,7 +558,7 @@ export const UNBLOCK_DIFF_HEATER_ROUTES: readonly Route[] = [
      *     `uses` 里只有碳骨料 16 kg。这与 htf 把碳棒记成"碳骨料 41"是同一个记法
      */
     id: 'make/diffusion-heater-carbon',
-    name: '扩散炉加热体与炉膛制造',
+    name: 'Diffusion Furnace Heating Element and Chamber Manufacturing', name_zh: '扩散炉加热体与炉膛制造',
     produces: [{ item: 'plant/diffusion-furnace/heater', qty: q(1) }],
     uses: [
       /**

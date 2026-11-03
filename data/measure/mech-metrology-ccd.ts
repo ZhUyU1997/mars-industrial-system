@@ -11,13 +11,13 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const METROLOGY_CCD_PARTS: readonly Item[] = [
-  { id: 'plant/metrology-ccd/camera-head', name: '相机头', unit: '件', category: 'part' },
+  { id: 'plant/metrology-ccd/camera-head', name: 'Camera Head', name_zh: '相机头', unit: '件', category: 'part' },
 ];
 
 export const METROLOGY_CCD_PART_ROUTES: readonly Route[] = [
   {
     id: 'make/metrology-ccd-camera-head',
-    name: '相机头制造',
+    name: 'Camera Head Manufacturing', name_zh: '相机头制造',
     produces: [{ item: 'plant/metrology-ccd/camera-head', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'plant/robot/camera', qty: q(1) }] }],
     needs: ['plant/clean-room'],

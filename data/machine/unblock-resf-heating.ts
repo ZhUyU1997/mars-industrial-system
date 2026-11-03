@@ -471,7 +471,7 @@ export const UNBLOCK_RESF_HEAT_ROUTES: readonly Route[] = [
      *     锻、磨、线锯、车、机器人都不 hold 温度 —— 给它们写 `under` 就是 `no_machine`
      */
     id: 'make/resf-heating-steel-band',
-    name: '电阻炉加热元件制造',
+    name: 'Resistance Furnace Heating Element Manufacturing', name_zh: '电阻炉加热元件制造',
     produces: [{ item: 'plant/resistance-furnace/heating', qty: q(1) }],
     uses: [
       /**

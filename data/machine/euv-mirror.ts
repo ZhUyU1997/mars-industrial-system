@@ -217,7 +217,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-substrate-300',
-    name: 'EUV 基板',
+    name: 'EUV Substrate', name_zh: 'EUV 基板',
     unit: '件',
     category: 'part',
     props: [
@@ -243,7 +243,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-mirror-300',
-    name: 'EUV 多层膜反射镜',
+    name: 'EUV Multilayer Mirror', name_zh: 'EUV 多层膜反射镜',
     unit: '件',
     category: 'part',
     props: [
@@ -274,7 +274,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-coater/chamber',
-    name: 'EUV 镀膜机真空腔',
+    name: 'EUV Coater Vacuum Chamber', name_zh: 'EUV 镀膜机真空腔',
     unit: '件',
     category: 'part',
     props: [{ param: 'leakRate', kind: 'range', min: 0, max: 1, unit: 'Pa·L/s', dir: 'atMost' }],
@@ -289,7 +289,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-coater/pump',
-    name: 'EUV 抽气机组',
+    name: 'EUV Pumping Unit', name_zh: 'EUV 抽气机组',
     unit: '件',
     category: 'part',
     props: [{ param: 'basePressure', kind: 'range', min: 0, max: 10, unit: 'Pa', dir: 'atMost' }],
@@ -312,7 +312,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-coater/magnetron',
-    name: 'EUV 磁控靶座',
+    name: 'EUV Magnetron Target Holder', name_zh: 'EUV 磁控靶座',
     unit: '件',
     category: 'part',
     props: [{ param: 'magneticField', kind: 'range', min: 0.02, max: 0.2, unit: 'T', dir: 'atLeast' }],
@@ -332,7 +332,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-coater/target-mo',
-    name: 'EUV 钼靶',
+    name: 'EUV Molybdenum Target', name_zh: 'EUV 钼靶',
     unit: '件',
     category: 'part',
     props: [{ param: 'purity', kind: 'range', min: 98, max: 99.5, unit: '%', dir: 'atLeast' }],
@@ -351,7 +351,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-coater/target-si',
-    name: 'EUV 硅靶',
+    name: 'EUV Silicon Target', name_zh: 'EUV 硅靶',
     unit: '件',
     category: 'part',
     props: [{ param: 'purity', kind: 'range', min: 98, max: 99.9999, unit: '%', dir: 'atLeast' }],
@@ -370,7 +370,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-coater/stage',
-    name: 'EUV 基底台',
+    name: 'EUV Substrate Stage', name_zh: 'EUV 基底台',
     unit: '件',
     category: 'part',
     props: [{ param: 'positionError', kind: 'range', min: 0, max: 100, unit: 'µm', dir: 'atMost' }],
@@ -387,7 +387,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-coater/shutter',
-    name: 'EUV 快门',
+    name: 'EUV Shutter', name_zh: 'EUV 快门',
     unit: '件',
     category: 'part',
     props: [{ param: 'responseTime', kind: 'range', min: 0, max: 2, unit: 's', dir: 'atMost' }],
@@ -406,7 +406,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-coater',
-    name: 'EUV 多层膜磁控溅射镀膜机',
+    name: 'EUV Multilayer Magnetron Sputter Coater', name_zh: 'EUV 多层膜磁控溅射镀膜机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -436,7 +436,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-beam-figuring/source',
-    name: '离子束修形机离子源',
+    name: 'Ion Beam Figuring Machine Ion Source', name_zh: '离子束修形机离子源',
     unit: '件',
     category: 'part',
     props: [{ param: 'beamEnergy', kind: 'range', min: 300, max: 1500, unit: 'eV' }],
@@ -450,7 +450,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-beam-figuring/chamber',
-    name: '离子束修形机修形真空腔',
+    name: 'Ion Beam Figuring Machine Vacuum Chamber', name_zh: '离子束修形机修形真空腔',
     unit: '件',
     category: 'part',
     props: [{ param: 'leakRate', kind: 'range', min: 0, max: 1, unit: 'Pa·L/s', dir: 'atMost' }],
@@ -465,7 +465,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-beam-figuring/stage',
-    name: '离子束修形机三轴扫描台',
+    name: 'Ion Beam Figuring Machine 3-Axis Scanning Stage', name_zh: '离子束修形机三轴扫描台',
     unit: '件',
     category: 'part',
     props: [{ param: 'positionError', kind: 'range', min: 0, max: 100, unit: 'µm', dir: 'atMost' }],
@@ -485,7 +485,7 @@ export const EUV_MIRROR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-beam-figuring',
-    name: '离子束修形机',
+    name: 'Ion Beam Figuring Machine', name_zh: '离子束修形机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'pressure', min: 0.05, max: 0.5 }],
@@ -519,7 +519,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 而机床是按位置定的。这一层没有能控 0.1 nm 的进给，但有一双手 + 一块盘。
      */
     id: 'make/euv-substrate-300',
-    name: 'EUV 基板制造',
+    name: 'EUV Substrate Manufacturing', name_zh: 'EUV 基板制造',
     produces: [
       {
         item: 'std/euv-substrate-300',
@@ -580,7 +580,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 省了就等于假装这一层有 0.1 nm 的尺子。
      */
     id: 'make/euv-substrate-figure',
-    name: 'EUV 基板制造',
+    name: 'EUV Substrate Manufacturing', name_zh: 'EUV 基板制造',
     produces: [
       {
         item: 'std/euv-substrate-300',
@@ -656,7 +656,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 反射率掉到单界面水平 —— 所以放宽是 `functional-lost`（换了一个东西）。
      */
     id: 'make/euv-mirror-300',
-    name: 'EUV 多层膜反射镜制造',
+    name: 'EUV Multilayer Mirror Manufacturing', name_zh: 'EUV 多层膜反射镜制造',
     produces: [
       {
         item: 'std/euv-mirror-300',
@@ -749,7 +749,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * `need period 6.8–7.0` 就会把它筛掉。这一行是 `props` 这一层机制的全部价值。
      */
     id: 'make/euv-mirror-evap',
-    name: 'EUV 多层膜反射镜制造',
+    name: 'EUV Multilayer Mirror Manufacturing', name_zh: 'EUV 多层膜反射镜制造',
     produces: [
       {
         item: 'std/euv-mirror-300',
@@ -811,7 +811,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 把它做到 10⁻⁸ 也没有意义，那只会是白花的工。
      */
     id: 'make/euv-coater-chamber',
-    name: 'EUV 镀膜机真空腔制造',
+    name: 'EUV Coater Vacuum Chamber Manufacturing', name_zh: 'EUV 镀膜机真空腔制造',
     produces: [
       {
         item: 'plant/euv-coater/chamber',
@@ -847,7 +847,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 阀门开大了立不住压力，开小了氩气冲不干净靶面。
      */
     id: 'make/euv-coater-pump',
-    name: 'EUV 抽气机组制造',
+    name: 'EUV Pumping Unit Manufacturing', name_zh: 'EUV 抽气机组制造',
     produces: [
       {
         item: 'plant/euv-coater/pump',
@@ -886,7 +886,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 用电磁铁的另一层好处：磁场可调 = 速率可调，标定时它是一个旋钮。
      */
     id: 'make/euv-coater-magnetron',
-    name: 'EUV 磁控靶座制造',
+    name: 'EUV Magnetron Target Holder Manufacturing', name_zh: 'EUV 磁控靶座制造',
     produces: [
       {
         item: 'plant/euv-coater/magnetron',
@@ -924,7 +924,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 界面的折射率差就没了。这一条是本路线唯一"必须"的条件。
      */
     id: 'make/euv-coater-target-mo',
-    name: 'EUV 钼靶制造',
+    name: 'EUV Molybdenum Target Manufacturing', name_zh: 'EUV 钼靶制造',
     produces: [
       {
         item: 'plant/euv-coater/target-mo',
@@ -967,7 +967,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 电极本来就是高纯石墨，锯下来就是模子 —— 这是它在本文件里的唯一用处。
      */
     id: 'make/euv-coater-target-si',
-    name: 'EUV 硅靶制造',
+    name: 'EUV Silicon Target Manufacturing', name_zh: 'EUV 硅靶制造',
     produces: [
       {
         item: 'plant/euv-coater/target-si',
@@ -1010,7 +1010,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 离 1 µm 的闭环差两个量级，所以这一步没有反馈，只有刻度盘。
      */
     id: 'make/euv-coater-stage',
-    name: 'EUV 基底台制造',
+    name: 'EUV Substrate Stage Manufacturing', name_zh: 'EUV 基底台制造',
     produces: [
       {
         item: 'plant/euv-coater/stage',
@@ -1055,7 +1055,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 用干涉仪量厚度（1.5 %）反推有效开启时间 —— 记在降级点第 6 条。
      */
     id: 'make/euv-coater-shutter',
-    name: 'EUV 快门制造',
+    name: 'EUV Shutter Manufacturing', name_zh: 'EUV 快门制造',
     produces: [
       {
         item: 'plant/euv-coater/shutter',
@@ -1094,7 +1094,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 产额与时间的关系写在问题一②：0.3 mA × 600 eV × Y≈1 → 20 nm/min。
      */
     id: 'make/ion-source',
-    name: '离子束修形机离子源制造',
+    name: 'Ion Beam Figuring Machine Ion Source Manufacturing', name_zh: '离子束修形机离子源制造',
     produces: [
       {
         item: 'plant/ion-beam-figuring/source',
@@ -1126,7 +1126,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 同样的漏率占的比例大六倍。
      */
     id: 'make/ibf-chamber',
-    name: '离子束修形机修形真空腔制造',
+    name: 'Ion Beam Figuring Machine Vacuum Chamber Manufacturing', name_zh: '离子束修形机修形真空腔制造',
     produces: [
       {
         item: 'plant/ion-beam-figuring/chamber',
@@ -1159,7 +1159,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 这就是为什么 1 µm 刚好够、10 µm 差十倍。
      */
     id: 'make/ibf-stage',
-    name: '离子束修形机三轴扫描台制造',
+    name: 'Ion Beam Figuring Machine 3-Axis Scanning Stage Manufacturing', name_zh: '离子束修形机三轴扫描台制造',
     produces: [
       {
         item: 'plant/ion-beam-figuring/stage',
@@ -1200,7 +1200,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 真空由 `plant/euv-vacuum` 提供；先抽到 1 Pa，靶/法兰做酒精气泡检漏。
      */
     id: 'make/euv-coater',
-    name: 'EUV 镀膜机装配',
+    name: 'EUV Coater Assembly', name_zh: 'EUV 镀膜机装配',
     produces: [{ item: 'plant/euv-coater', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'plant/euv-coater/chamber', qty: q(1) }] },
@@ -1250,7 +1250,7 @@ export const EUV_MIRROR_ROUTES: readonly Route[] = [
      * 真空由 `plant/euv-vacuum` 提供，工作点 0.05–0.5 Pa 是降级后的宽束斑。
      */
     id: 'make/ion-beam-figuring',
-    name: '离子束修形机装配',
+    name: 'Ion Beam Figuring Machine Assembly', name_zh: '离子束修形机装配',
     produces: [{ item: 'plant/ion-beam-figuring', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'plant/ion-beam-figuring/source', qty: q(1) }] },

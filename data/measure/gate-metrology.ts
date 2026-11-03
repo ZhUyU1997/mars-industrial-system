@@ -25,7 +25,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-ccp-polisher-record',
-    name: 'CCP 抛光机验收记录',
+    name: 'CCP Polisher Acceptance Record', name_zh: 'CCP 抛光机验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'position', kind: 'range', min: 0.5, max: 1, unit: 'µm', dir: 'atMost' }],
@@ -38,7 +38,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-hydrostatic-table-record',
-    name: '静压转台验收记录',
+    name: 'Hydrostatic Rotary Table Acceptance Record', name_zh: '静压转台验收记录',
     unit: '份',
     category: 'part',
     props: [
@@ -55,7 +55,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-precision-spindle-record',
-    name: '精密主轴验收记录',
+    name: 'Precision Spindle Acceptance Record', name_zh: '精密主轴验收记录',
     unit: '份',
     category: 'part',
     props: [
@@ -71,7 +71,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-xray-goniometer-record',
-    name: 'X 射线测角仪验收记录',
+    name: 'X-Ray Goniometer Acceptance Record', name_zh: 'X 射线测角仪验收记录',
     unit: '份',
     category: 'part',
     props: [
@@ -87,7 +87,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-xray-diffractometer-record',
-    name: 'X 射线衍射仪验收记录',
+    name: 'X-Ray Diffractometer Acceptance Record', name_zh: 'X 射线衍射仪验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'resolution', kind: 'range', min: 0.001, max: 0.002, unit: '°', dir: 'atMost' }],
@@ -100,7 +100,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-water-flow-meter-record',
-    name: '水流量计验收记录',
+    name: 'Water Flowmeter Acceptance Record', name_zh: '水流量计验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'accuracy', kind: 'range', min: 1, max: 2, unit: '%', dir: 'atMost' }],
@@ -113,7 +113,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-ion-beam-profiler-record',
-    name: '离子束剖面仪验收记录',
+    name: 'Ion Beam Profiler Acceptance Record', name_zh: '离子束剖面仪验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'uniformity', kind: 'range', min: 1, max: 5, unit: '%', dir: 'atMost' }],
@@ -126,7 +126,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-null-lens-record',
-    name: '零位镜验收记录',
+    name: 'Null Lens Acceptance Record', name_zh: '零位镜验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'figure', kind: 'range', min: 0, max: 130, unit: 'nm', dir: 'atMost' }],
@@ -139,7 +139,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-precision-resistor-oil-record',
-    name: '油浸精密电阻验收记录',
+    name: 'Oil-Immersed Precision Resistor Acceptance Record', name_zh: '油浸精密电阻验收记录',
     unit: '份',
     category: 'part',
     props: [
@@ -155,7 +155,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-float-zone-puller-record',
-    name: '区熔炉验收记录',
+    name: 'Float-Zone Furnace Acceptance Record', name_zh: '区熔炉验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'rfPower', kind: 'range', min: 18000, max: 22000, unit: 'W', dir: 'atMost' }],
@@ -168,7 +168,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-fz-silicon-record',
-    name: 'FZ 硅验收记录',
+    name: 'FZ Silicon Acceptance Record', name_zh: 'FZ 硅验收记录',
     unit: '份',
     category: 'part',
     props: [
@@ -184,7 +184,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-rta-record',
-    name: 'RTA 验收记录',
+    name: 'RTA Acceptance Record', name_zh: 'RTA 验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'waferUniformity', kind: 'range', min: 1, max: 5, unit: 'K', dir: 'atMost' }],
@@ -197,7 +197,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-rta-zone-control-record',
-    name: 'RTA 分区控制验收记录',
+    name: 'RTA Zone Control Acceptance Record', name_zh: 'RTA 分区控制验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'uniformity', kind: 'range', min: 0, max: 5, unit: 'K', dir: 'atMost' }],
@@ -209,7 +209,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-rta-zone-control-local-record',
-    name: '本地 RTA 分区控制验收记录',
+    name: 'Local RTA Zone Control Acceptance Record', name_zh: '本地 RTA 分区控制验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'uniformity', kind: 'range', min: 0, max: 8, unit: 'K', dir: 'atMost' }],
@@ -222,7 +222,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-rta-zone-lamp-record',
-    name: 'RTA 灯区验收记录',
+    name: 'RTA Lamp Zone Acceptance Record', name_zh: 'RTA 灯区验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'relativeAccuracy', kind: 'range', min: 1, max: 1.5, unit: 'K', dir: 'atMost' }],
@@ -235,7 +235,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-rta-zoned-record',
-    name: '分区 RTA 验收记录',
+    name: 'Zoned RTA Acceptance Record', name_zh: '分区 RTA 验收记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'waferUniformity', kind: 'range', min: 2, max: 3, unit: 'K', dir: 'atMost' }],
@@ -245,7 +245,7 @@ export const GATE_METROLOGY_ITEMS: readonly Item[] = [
 export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   {
     id: 'qual/gate-ccp-polisher',
-    name: 'CCP 抛光机验收',
+    name: 'CCP Polisher Acceptance', name_zh: 'CCP 抛光机验收',
     produces: [{ item: 'mat/gate-ccp-polisher-record', qty: q(1), gives: [{ param: 'position', kind: 'range', min: 0.5, max: 1 }] }],
     uses: [{ anyOf: [{ item: 'mat/water', qty: q(1) }] }],
     needs: ['plant/ccp-polisher', 'plant/metrology-room', 'std/gauge-block-working'],
@@ -259,7 +259,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-hydrostatic-table',
-    name: '静压转台验收',
+    name: 'Hydrostatic Rotary Table Acceptance', name_zh: '静压转台验收',
     produces: [{
       item: 'mat/gate-hydrostatic-table-record',
       qty: q(1),
@@ -281,7 +281,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-precision-spindle',
-    name: '精密主轴验收',
+    name: 'Precision Spindle Acceptance', name_zh: '精密主轴验收',
     produces: [{
       item: 'mat/gate-precision-spindle-record',
       qty: q(1),
@@ -302,7 +302,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/gate-xray-goniometer',
-    name: 'X 射线测角仪验收测量',
+    name: 'X-Ray Goniometer Acceptance Measurement', name_zh: 'X 射线测角仪验收测量',
     produces: [{
       item: 'mat/gate-xray-goniometer-record',
       qty: q(1),
@@ -335,7 +335,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-xray-diffractometer',
-    name: 'X 射线衍射仪验收',
+    name: 'X-Ray Diffractometer Acceptance', name_zh: 'X 射线衍射仪验收',
     produces: [{ item: 'mat/gate-xray-diffractometer-record', qty: q(1), gives: [{ param: 'resolution', kind: 'range', min: 0.001, max: 0.002 }] }],
     uses: [{ anyOf: [{ item: 'mat/water', qty: q(1) }] }],
     needs: ['plant/xray-diffractometer', 'std/fz-silicon', 'plant/metrology-room'],
@@ -348,7 +348,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/gate-water-flow-meter',
-    name: '水流量计验收测量',
+    name: 'Water Flowmeter Acceptance Measurement', name_zh: '水流量计验收测量',
     produces: [{ item: 'mat/gate-water-flow-meter-record', qty: q(1), gives: [{ param: 'accuracy', kind: 'range', min: 1, max: 2 }] }],
     uses: [
       { anyOf: [{ item: 'std/water-flow-meter', qty: q(1) }] },
@@ -373,7 +373,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-ion-beam-profiler',
-    name: '离子束剖面仪验收',
+    name: 'Ion Beam Profiler Acceptance', name_zh: '离子束剖面仪验收',
     produces: [{ item: 'mat/gate-ion-beam-profiler-record', qty: q(1), gives: [{ param: 'uniformity', kind: 'range', min: 1, max: 5 }] }],
     uses: [{ anyOf: [{ item: 'mat/water', qty: q(10) }] }],
     needs: ['plant/ion-beam-profiler', 'std/faraday-cup', 'plant/metrology-room'],
@@ -386,7 +386,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-null-lens',
-    name: '零位镜验收',
+    name: 'Null Lens Acceptance', name_zh: '零位镜验收',
     produces: [{ item: 'mat/gate-null-lens-record', qty: q(1), gives: [{ param: 'figure', kind: 'range', min: 0, max: 130 }] }],
     uses: [{ anyOf: [{ item: 'plant/null-test/null-lens', qty: q(1) }] }],
     needs: ['plant/phase-shifter', 'plant/metrology-room'],
@@ -400,7 +400,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-precision-resistor-oil',
-    name: '油浸精密电阻验收',
+    name: 'Oil-Immersed Precision Resistor Acceptance', name_zh: '油浸精密电阻验收',
     produces: [{
       item: 'mat/gate-precision-resistor-oil-record',
       qty: q(1),
@@ -421,7 +421,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-float-zone-puller',
-    name: '区熔炉验收',
+    name: 'Float-Zone Furnace Acceptance', name_zh: '区熔炉验收',
     produces: [{ item: 'mat/gate-float-zone-puller-record', qty: q(1), gives: [{ param: 'rfPower', kind: 'range', min: 18000, max: 22000 }] }],
     uses: [{ anyOf: [{ item: 'mat/water', qty: q(20) }] }],
     needs: ['plant/float-zone-puller', 'plant/metrology-room'],
@@ -434,7 +434,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-fz-silicon',
-    name: 'FZ 硅验收',
+    name: 'FZ Silicon Acceptance', name_zh: 'FZ 硅验收',
     produces: [{
       item: 'mat/gate-fz-silicon-record',
       qty: q(1),
@@ -455,7 +455,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-rta',
-    name: 'RTA 验收',
+    name: 'RTA Acceptance', name_zh: 'RTA 验收',
     produces: [{ item: 'mat/gate-rta-record', qty: q(1), gives: [{ param: 'waferUniformity', kind: 'range', min: 1, max: 5 }] }],
     uses: [{ anyOf: [{ item: 'std/thermocouple-nicr-nial-general', qty: q(9) }] }],
     needs: ['std/millivoltmeter-general', 'plant/metrology-room'],
@@ -469,7 +469,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-rta-zone-control',
-    name: 'RTA 分区控制验收',
+    name: 'RTA Zone Control Acceptance', name_zh: 'RTA 分区控制验收',
     produces: [{ item: 'mat/gate-rta-zone-control-record', qty: q(1), gives: [{ param: 'uniformity', kind: 'range', min: 0, max: 5 }] }],
     uses: [{ anyOf: [{ item: 'plant/rta/zone-control', qty: q(1) }] }],
     needs: ['std/thermocouple-nicr-nial-general', 'std/millivoltmeter-general', 'plant/metrology-room'],
@@ -483,7 +483,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-rta-zone-control-local',
-    name: '本地 RTA 分区控制验收',
+    name: 'Local RTA Zone Control Acceptance', name_zh: '本地 RTA 分区控制验收',
     produces: [{ item: 'mat/gate-rta-zone-control-local-record', qty: q(1), gives: [{ param: 'uniformity', kind: 'range', min: 0, max: 8 }] }],
     uses: [{ anyOf: [{ item: 'plant/rta/zone-control', qty: q(1) }] }],
     needs: ['std/thermocouple-nicr-nial-general', 'std/millivoltmeter-general', 'plant/metrology-room'],
@@ -497,7 +497,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-rta-zone-lamp',
-    name: 'RTA 灯区验收',
+    name: 'RTA Lamp Zone Acceptance', name_zh: 'RTA 灯区验收',
     produces: [{ item: 'mat/gate-rta-zone-lamp-record', qty: q(1), gives: [{ param: 'relativeAccuracy', kind: 'range', min: 1, max: 1.5 }] }],
     uses: [
       { anyOf: [{ item: 'plant/rta/zone-lamp', qty: q(1) }] },
@@ -513,7 +513,7 @@ export const GATE_METROLOGY_ROUTES: readonly Route[] = [
   },
   {
     id: 'qual/gate-rta-zoned',
-    name: '分区 RTA 验收',
+    name: 'Zoned RTA Acceptance', name_zh: '分区 RTA 验收',
     produces: [{ item: 'mat/gate-rta-zoned-record', qty: q(1), gives: [{ param: 'waferUniformity', kind: 'range', min: 2, max: 3 }] }],
     uses: [{ anyOf: [{ item: 'std/thermocouple-nicr-nial-general', qty: q(9) }] }],
     needs: ['std/millivoltmeter-general', 'plant/metrology-room'],

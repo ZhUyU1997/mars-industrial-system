@@ -35,7 +35,7 @@ export const LATHE_SPINDLE_MEASURE_ROUTES: readonly Route[] = [
      * 产出仍是 `lathe/spindle`，窗口收窄到 **2–5 µm**（量出来的那一档）。
      */
     id: 'measure/lathe-spindle-runout',
-    name: '主轴径向跳动测量',
+    name: 'Spindle Radial Runout Measurement', name_zh: '主轴径向跳动测量',
     produces: [
       {
         item: 'lathe/spindle',

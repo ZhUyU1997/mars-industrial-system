@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const FZ_SILICON_OXYGEN_FTIR_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/fz-silicon-oxygen-ftir-measure-record',
-    name: 'FZ 硅氧含量 FTIR 测量记录',
+    name: 'FZ Silicon Oxygen Content FTIR Measurement Record', name_zh: 'FZ 硅氧含量 FTIR 测量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -28,7 +28,7 @@ export const FZ_SILICON_OXYGEN_FTIR_MEASURE_ROUTES: readonly Route[] = [
      * **FZ 硅：FTIR 1107 cm⁻¹ 读间隙氧；无氧标样，窗口按最接近/假设。**
      */
     id: 'measure/fz-silicon-oxygen-ftir',
-    name: 'FZ 硅氧含量 FTIR 测量',
+    name: 'FZ Silicon Oxygen Content FTIR Measurement', name_zh: 'FZ 硅氧含量 FTIR 测量',
     produces: [{
       item: 'mat/fz-silicon-oxygen-ftir-measure-record',
       qty: q(1),

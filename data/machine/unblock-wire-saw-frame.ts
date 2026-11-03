@@ -479,7 +479,7 @@ export const UNBLOCK_WS_FRAME_ITEMS: readonly Item[] = [];
 export const UNBLOCK_WS_FRAME_ROUTES: readonly Route[] = [
   {
     id: 'make/wire-saw-frame-cast',
-    name: '线锯机架与导轮制造',
+    name: 'Wire Saw Frame and Guide Wheels Manufacturing', name_zh: '线锯机架与导轮制造',
     produces: [{ item: 'plant/wire-saw/frame', qty: q(1) }],
     uses: [
       // 466 kg：床身、立柱、顶梁、四只轴承座、张力支座、四只导轮、工作台、

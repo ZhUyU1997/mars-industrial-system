@@ -364,7 +364,7 @@ export const UNBLOCK_POLY_DRYER_ROUTES: readonly Route[] = [
      *    而电气级的上限是 50 —— 那一笔是**降级**，不是做法。冻融才是这一层的路。
      */
     id: 'make/polymer-dryer-cast',
-    name: '聚合物凝聚与干燥制造',
+    name: 'Polymer Coagulation and Drying Manufacturing', name_zh: '聚合物凝聚与干燥制造',
     // 13.8 MJ ÷ 900 W = 4.3 h 干燥 + 2 h 装卸 = 6.3 h/批。
     rate: { hours: q(63, 10) },
     produces: [{ item: 'plant/polymer-plant/dryer', qty: q(1) }],

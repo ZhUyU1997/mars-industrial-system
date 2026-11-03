@@ -1,6 +1,7 @@
 import type { LinkKind } from './theme.ts';
-import { CATEGORIES, EDGES } from './theme.ts';
+import { EDGES } from './theme.ts';
 import type { ViewerLink, ViewerNode } from './model.ts';
+import { catLabel, n as fmtN, t, unitLabel } from './i18n.ts';
 
 export interface RenderCtx {
   selectedId: string | null;
@@ -315,17 +316,19 @@ export function drawLinks(
 
 
 export function nodeTooltip(node: ViewerNode): string {
-  const cat = CATEGORIES[node.cat]?.label ?? node.cat;
-  const kind = node.kind === 'route' ? (node.route?.kind === 'measure' ? '测量路线' : '制造路线') : cat;
-  const rows = [`连接度 ${node.degree}`];
+  const kind =
+    node.kind === 'route'
+      ? t(node.route?.kind === 'measure' ? 'details.route.measure' : 'details.route.make')
+      : catLabel(node.cat);
+  const rows = [t('tooltip.degree', { n: fmtN(node.degree) })];
   if (node.kind === 'item' && node.item) {
-    if (node.item.unit) rows.push(`单位 ${node.item.unit}`);
-    if (node.item.mass !== undefined) rows.push(`质量 ${node.item.mass} kg`);
-    if (node.item.seed) rows.push('种子 · 第一台从地球来');
-    if (node.item.mars) rows.push('火星地板 · 现场可取');
+    if (node.item.unit) rows.push(t('tooltip.unit', { unit: unitLabel(node.item.unit) }));
+    if (node.item.mass !== undefined) rows.push(t('tooltip.mass', { mass: fmtN(node.item.mass) }));
+    if (node.item.seed) rows.push(t('tooltip.seed'));
+    if (node.item.mars) rows.push(t('tooltip.mars'));
   }
   if (node.kind === 'route' && node.route) {
-    rows.push(`投料 ${node.route.u.length} 项 · 产物 ${node.route.p.length} 项`);
+    rows.push(t('tooltip.route', { inputs: fmtN(node.route.u.length), outputs: fmtN(node.route.p.length) }));
   }
   return `<div class="tip"><div class="tip-head"><span class="tip-dot" style="background:${node.color}"></span><span class="tip-id">${escapeHtml(node.id)}</span></div><div class="tip-kind">${escapeHtml(kind)}</div><div class="tip-meta">${rows.map(escapeHtml).join(' · ')}</div></div>`;
 }

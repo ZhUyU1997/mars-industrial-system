@@ -431,7 +431,7 @@ export const UNBLOCK_ATMOS_GAS_ROUTES: readonly Route[] = [
      *    这一步同时是铜床的第一次泄漏检查（水汽从法兰上冒出来就说明漏）
      */
     id: 'make/atmos-gas-cast',
-    name: '气氛炉氢气与氩气系统制造',
+    name: 'Atmosphere Furnace Hydrogen and Argon System Manufacturing', name_zh: '气氛炉氢气与氩气系统制造',
     produces: [{ item: 'plant/atmosphere-furnace/gas', qty: q(1) }],
     uses: [
       /**

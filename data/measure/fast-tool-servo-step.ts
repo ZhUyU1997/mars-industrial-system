@@ -13,7 +13,7 @@ import { q } from '../../src/index.ts';
 export const FAST_TOOL_SERVO_STEP_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/fast-tool-servo-step-measure-record',
-    name: '快速刀具伺服台阶测量记录',
+    name: 'Fast Tool Servo Step Height Record', name_zh: '快速刀具伺服台阶测量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -31,7 +31,7 @@ export const FAST_TOOL_SERVO_STEP_MEASURE_ROUTES: readonly Route[] = [
      * **FTS minStep 1 nm：1 nm 端台阶 + 探头读出，单点。**
      */
     id: 'measure/fast-tool-servo-step',
-    name: '快速刀具伺服台阶测量',
+    name: 'Fast Tool Servo Step Height Measurement', name_zh: '快速刀具伺服台阶测量',
     produces: [{
       item: 'mat/fast-tool-servo-step-measure-record',
       qty: q(1),

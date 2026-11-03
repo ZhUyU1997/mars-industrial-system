@@ -387,7 +387,7 @@ export const UNBLOCK_AL_ANODE_ROUTES: readonly Route[] = [
      * 同一个后缀含义，不是砖窑 —— 这条路线**不用** plant/brick-kiln。
      */
     id: 'make/aluminium-anode-brick',
-    name: '铝电解槽阳极碳块制造',
+    name: 'Aluminium Electrolysis Cell Anode Carbon Block Manufacturing', name_zh: '铝电解槽阳极碳块制造',
     produces: [{ item: 'plant/aluminium-cell/anode', qty: q(1) }],
     uses: [
       /**

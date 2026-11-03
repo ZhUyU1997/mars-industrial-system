@@ -285,7 +285,7 @@ export const UNBLOCK_DIAPHRAGM_ROUTES: readonly Route[] = [
      * "拿它核止口深不深、板厚不厚"。
      */
     id: 'make/electrolyzer-diaphragm-ceramic',
-    name: '电解槽隔膜制造',
+    name: 'Electrolyser Diaphragm Manufacturing', name_zh: '电解槽隔膜制造',
     produces: [{ item: 'plant/electrolyzer/diaphragm', qty: q(1) }],
     uses: [
       /**

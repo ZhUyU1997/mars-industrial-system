@@ -73,7 +73,7 @@ export const DMM_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/dmm-6half-cal-record',
-    name: '6½ 位 DMM 准确度校准记录',
+    name: '6½-Digit DMM Accuracy Calibration Record', name_zh: '6½ 位 DMM 准确度校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -103,7 +103,7 @@ export const DMM_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/dmm-7half-cal-record',
-    name: '7½ 位 DMM 准确度校准记录',
+    name: '7½-Digit DMM Accuracy Calibration Record', name_zh: '7½ 位 DMM 准确度校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -132,7 +132,7 @@ export const DMM_CAL_ROUTES: readonly Route[] = [
      * + 读数噪声（0.5–2 ppm）。
      */
     id: 'measure/dmm-6half-accuracy',
-    name: '6½ 位校准',
+    name: '6½-Digit Calibration', name_zh: '6½ 位校准',
     rate: { hours: q(8) },
     produces: [
       {
@@ -207,7 +207,7 @@ export const DMM_CAL_ROUTES: readonly Route[] = [
      * 是传递，不是绝对**。
      */
     id: 'measure/dmm-7half-accuracy',
-    name: '7½ 位校准',
+    name: '7½-Digit Calibration', name_zh: '7½ 位校准',
     rate: { hours: q(12) },
     produces: [
       {

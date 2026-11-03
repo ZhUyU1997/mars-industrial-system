@@ -56,7 +56,7 @@ export const TUNGSTEN_ITEMS: readonly Item[] = [
    * 白钨矿（CaWO₄）比重 6.1，比重大，重选与磁选都吃得住 —— 这与铬铁矿
    * 同一种富集方式，只是比例更极端（51.5 万比 1）。
    */
-  { id: 'mat/tungsten-concentrate', name: '钨精矿', unit: 'kg', category: 'material' },
+  { id: 'mat/tungsten-concentrate', name: 'Tungsten Concentrate', name_zh: '钨精矿', unit: 'kg', category: 'material' },
 
   /**
    * 三氧化钨（WO₃）。黄色粉末，钨的一切化合物的中间体。
@@ -64,17 +64,17 @@ export const TUNGSTEN_ITEMS: readonly Item[] = [
    * 钨含量 79.3%，所以后面每一步的收缩都很厉害 —— 从 1000 kg WO₃
    * 只出 793 kg 钨。
    */
-  { id: 'mat/tungstic-oxide', name: '三氧化钨', unit: 'kg', category: 'material' },
+  { id: 'mat/tungstic-oxide', name: 'Tungsten Trioxide', name_zh: '三氧化钨', unit: 'kg', category: 'material' },
 
   /** 钨粉。氢气还原出来的灰色金属粉，粒度决定后面碳化的快慢。 */
-  { id: 'mat/tungsten-powder', name: '钨粉', unit: 'kg', category: 'material' },
+  { id: 'mat/tungsten-powder', name: 'Tungsten Powder', name_zh: '钨粉', unit: 'kg', category: 'material' },
 
   /**
    * 碳化钨（WC）。钨与碳在 1400–2000 °C 化合，硬度仅次于金刚石（莫氏 9+）。
    *
    * 它就是刀片"硬"的来源 —— 而硬的东西磨不动，这是后面刃磨卡住的根。
    */
-  { id: 'mat/tungsten-carbide', name: '碳化钨', unit: 'kg', category: 'material' },
+  { id: 'mat/tungsten-carbide', name: 'Tungsten Carbide', name_zh: '碳化钨', unit: 'kg', category: 'material' },
 ];
 
 export const TUNGSTEN_ROUTES: readonly Route[] = [
@@ -89,7 +89,7 @@ export const TUNGSTEN_ROUTES: readonly Route[] = [
      * 余下 514,999,000 kg 是重选尾砂，回到尾矿那一类。
      */
     id: 'make/tungsten-concentrate',
-    name: '钨精矿制备',
+    name: 'Tungsten Concentrate Production', name_zh: '钨精矿制备',
     produces: [
       { item: 'mat/tungsten-concentrate', qty: q(1000) },
       { item: 'mat/tailings', qty: q(514999000) },
@@ -113,7 +113,7 @@ export const TUNGSTEN_ROUTES: readonly Route[] = [
      * 这一步的反应在 150–200 °C、几个大气压下进行，酸吸收装置够用。
      */
     id: 'make/tungstic-oxide',
-    name: '三氧化钨制备',
+    name: 'Tungsten Trioxide Production', name_zh: '三氧化钨制备',
     produces: [
       { item: 'mat/tungstic-oxide', qty: q(650) },
       {
@@ -146,7 +146,7 @@ export const TUNGSTEN_ROUTES: readonly Route[] = [
      * 与刀片的韧性 —— 这一层调不了，因为没有测温。
      */
     id: 'make/tungsten-powder',
-    name: '氢气还原',
+    name: 'Hydrogen Gas Reduction', name_zh: '氢气还原',
     produces: [
       { item: 'mat/tungsten-powder', qty: q(1000) },
       { item: 'mat/water', qty: q(294), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -173,7 +173,7 @@ export const TUNGSTEN_ROUTES: readonly Route[] = [
      * 所以本层做得到。
      */
     id: 'make/tungsten-carbide',
-    name: '碳化制备',
+    name: 'Carbonization', name_zh: '碳化制备',
     produces: [{ item: 'mat/tungsten-carbide', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/tungsten-powder', qty: q(939) }] },
@@ -200,7 +200,7 @@ export const TUNGSTEN_ROUTES: readonly Route[] = [
      * 真正的解决要碳化硅或金刚石。
      */
     id: 'make/carbide-insert',
-    name: '硬质合金刀片制造',
+    name: 'Cemented Carbide Insert Manufacturing', name_zh: '硬质合金刀片制造',
     produces: [
       { item: 'mat/carbide-insert', qty: q(950), gives: [{ param: 'grade', kind: 'enum', oneOf: ['P', 'M', 'K'] }, { param: 'hardness', kind: 'range', min: 1300, max: 2000 }] },
       {
@@ -229,7 +229,7 @@ export const TUNGSTEN_ROUTES: readonly Route[] = [
 
 export const TUNGSTEN_INSERT_ITEM: Item = {
   id: 'mat/carbide-insert',
-  name: '硬质合金刀片',
+  name: 'Cemented Carbide Insert', name_zh: '硬质合金刀片',
   unit: 'kg',
   category: 'consumable',
   props: [{ param: 'grade', kind: 'enum', values: ['P', 'M', 'K'] }, { param: 'hardness', kind: 'range', min: 1300, max: 2000, unit: 'HV' }],

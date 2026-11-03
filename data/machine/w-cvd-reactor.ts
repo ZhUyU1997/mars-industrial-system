@@ -24,7 +24,7 @@ export const WCVD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/w-cvd-reactor',
-    name: 'W CVD 反应器',
+    name: 'W CVD Reactor', name_zh: 'W CVD 反应器',
     unit: '台',
     category: 'machine',
     holds: [
@@ -39,19 +39,19 @@ export const WCVD_ITEMS: readonly Item[] = [
     ],
   },
 
-  { id: 'plant/w-cvd-reactor/chamber', name: 'W CVD 真空腔', unit: '件', category: 'part' },
-  { id: 'plant/w-cvd-reactor/flange', name: 'W CVD 法兰', unit: '件', category: 'part' },
-  { id: 'plant/w-cvd-reactor/gas-panel', name: 'W CVD 气路板', unit: '件', category: 'part' },
-  { id: 'plant/w-cvd-reactor/valve', name: 'W CVD 阀', unit: '件', category: 'part' },
-  { id: 'plant/w-cvd-reactor/heater', name: 'W CVD 加热器', unit: '件', category: 'part' },
-  { id: 'plant/w-cvd-reactor/thermocouple', name: 'W CVD 热电偶', unit: '件', category: 'part' },
-  { id: 'plant/w-cvd-reactor/pump', name: 'W CVD 泵', unit: '件', category: 'part' },
+  { id: 'plant/w-cvd-reactor/chamber', name: 'W CVD Vacuum Chamber', name_zh: 'W CVD 真空腔', unit: '件', category: 'part' },
+  { id: 'plant/w-cvd-reactor/flange', name: 'W CVD Flange', name_zh: 'W CVD 法兰', unit: '件', category: 'part' },
+  { id: 'plant/w-cvd-reactor/gas-panel', name: 'W CVD Gas Panel', name_zh: 'W CVD 气路板', unit: '件', category: 'part' },
+  { id: 'plant/w-cvd-reactor/valve', name: 'W CVD Valve', name_zh: 'W CVD 阀', unit: '件', category: 'part' },
+  { id: 'plant/w-cvd-reactor/heater', name: 'W CVD Heater', name_zh: 'W CVD 加热器', unit: '件', category: 'part' },
+  { id: 'plant/w-cvd-reactor/thermocouple', name: 'W CVD Thermocouple', name_zh: 'W CVD 热电偶', unit: '件', category: 'part' },
+  { id: 'plant/w-cvd-reactor/pump', name: 'W CVD Pump', name_zh: 'W CVD 泵', unit: '件', category: 'part' },
 ];
 
 export const WCVD_ROUTES: readonly Route[] = [
   {
     id: 'make/w-cvd-chamber',
-    name: 'W CVD 真空腔制造',
+    name: 'W CVD Vacuum Chamber Manufacturing', name_zh: 'W CVD 真空腔制造',
     produces: [{ item: 'plant/w-cvd-reactor/chamber', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(10) }] }],
     needs: ['plant/clean-room'],
@@ -61,7 +61,7 @@ export const WCVD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/w-cvd-flange',
-    name: 'W CVD 法兰制造',
+    name: 'W CVD Flange Manufacturing', name_zh: 'W CVD 法兰制造',
     produces: [{ item: 'plant/w-cvd-reactor/flange', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(2) }] }],
     needs: ['plant/clean-room'],
@@ -71,7 +71,7 @@ export const WCVD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/w-cvd-gas-panel',
-    name: 'W CVD 气路板制造',
+    name: 'W CVD Gas Panel Manufacturing', name_zh: 'W CVD 气路板制造',
     produces: [{ item: 'plant/w-cvd-reactor/gas-panel', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(3) }] },
@@ -84,7 +84,7 @@ export const WCVD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/w-cvd-valve',
-    name: 'W CVD 阀制造',
+    name: 'W CVD Valve Manufacturing', name_zh: 'W CVD 阀制造',
     produces: [{ item: 'plant/w-cvd-reactor/valve', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1, 2) }] }],
     needs: ['lathe', 'plant/clean-room'],
@@ -94,7 +94,7 @@ export const WCVD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/w-cvd-heater',
-    name: 'W CVD 加热器制造',
+    name: 'W CVD Heater Manufacturing', name_zh: 'W CVD 加热器制造',
     produces: [{ item: 'plant/w-cvd-reactor/heater', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/resistance-wire', qty: q(1, 2) }] },
@@ -107,7 +107,7 @@ export const WCVD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/w-cvd-thermocouple',
-    name: 'W CVD 热电偶制造',
+    name: 'W CVD Thermocouple Manufacturing', name_zh: 'W CVD 热电偶制造',
     produces: [{ item: 'plant/w-cvd-reactor/thermocouple', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/thermocouple-t-general', qty: q(1) }] },
@@ -120,7 +120,7 @@ export const WCVD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/w-cvd-pump',
-    name: 'W CVD 泵制造',
+    name: 'W CVD Pump Manufacturing', name_zh: 'W CVD 泵制造',
     produces: [{ item: 'plant/w-cvd-reactor/pump', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'plant/evaporator/pump', qty: q(1) }] }],
     needs: ['plant/clean-room'],
@@ -130,7 +130,7 @@ export const WCVD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/w-cvd-reactor',
-    name: 'W CVD 反应器制造',
+    name: 'W CVD Reactor Manufacturing', name_zh: 'W CVD 反应器制造',
     produces: [
       {
         item: 'plant/w-cvd-reactor',

@@ -22,7 +22,7 @@ import { q } from '../../src/index.ts';
 export const GAUGE_BLOCK_RA_ITEMS: readonly Item[] = [
   {
     id: 'mat/gauge-block-ra-record',
-    name: '光切法读磨痕三角截面记录',
+    name: 'Light-Section Wear Scar Triangular Cross-Section Record', name_zh: '光切法读磨痕三角截面记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'raResolved', kind: 'range', min: 0, max: 10, unit: 'µm', dir: 'atMost' }],
@@ -33,7 +33,7 @@ export const GAUGE_BLOCK_RA_ROUTES: readonly Route[] = [
   {
     /** 光切法读磨痕三角截面。判据是“能分辨到哪一档”，不是“Ra 是多少”。 */
     id: 'measure/gauge-block-ra',
-    name: '光切法读磨痕三角截面测量',
+    name: 'Light-Section Wear Scar Triangular Cross-Section Measurement', name_zh: '光切法读磨痕三角截面测量',
     produces: [
       {
         item: 'mat/gauge-block-ra-record',

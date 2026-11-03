@@ -297,7 +297,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    * 那要磁选 + 摇床 + 浮选三段；本层只写重选 + 磁选，取 30 % 的中间档。
    * 富集比翻倍只改土方量，不改路线。
    */
-  { id: 'mat/niobium-concentrate', name: '铌精矿', unit: 'kg', category: 'material' },
+  { id: 'mat/niobium-concentrate', name: 'Niobium Concentrate', name_zh: '铌精矿', unit: 'kg', category: 'material' },
 
   /**
    * **五氧化二铌 Nb₂O₅：HF 溶解 → 氨沉淀 → 500–600 °C 煅烧。**
@@ -305,7 +305,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    * 它是 Nb 粉与 Nb 靶的中间体。1000 kg 精矿（300 kg Nb₂O₅）→ 280 kg，
    * 93 % 回收；余是脉石、氟铌酸铵母液与洗水。
    */
-  { id: 'mat/niobium-oxide', name: '五氧化二铌 Nb₂O₅', unit: 'kg', category: 'material' },
+  { id: 'mat/niobium-oxide', name: 'Niobium Pentoxide Nb₂O₅', name_zh: '五氧化二铌 Nb₂O₅', unit: 'kg', category: 'material' },
 
   /**
    * **铌粉：K₂NbF₇ 钠热还原，750–850 °C、氩保护。**
@@ -313,7 +313,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    * 1000 kg Nb₂O₅ → 660 kg Nb 粉（95 % 收率；理论 699 kg）。
    * 粉的粒度 1–10 µm，直接给粉末冶金靶；不是铌铁，不需要二次熔炼。
    */
-  { id: 'mat/niobium-powder', name: '铌粉', unit: 'kg', category: 'material' },
+  { id: 'mat/niobium-powder', name: 'Niobium Powder', name_zh: '铌粉', unit: 'kg', category: 'material' },
 
   /**
    * **阳极氧化电解液：5 % 五硼酸铵 + 乙二醇。**
@@ -322,7 +322,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    * 20–40 °C、20–50 V，生成 50–100 nm 的 Nb₂O₅。它只用于结的侧壁绝缘
    * 与结面积修整，不参与 AlOₓ 势垒（势垒是干氧氧化）。
    */
-  { id: 'mat/anodizing-electrolyte', name: '阳极氧化电解液', unit: 'kg', category: 'material' },
+  { id: 'mat/anodizing-electrolyte', name: 'Anodizing Electrolyte', name_zh: '阳极氧化电解液', unit: 'kg', category: 'material' },
 
   // ═══════════════════════════════════════════════════════════════════════════
   // B. 4 K JT 级：四件 + 整机
@@ -337,7 +337,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/jt-cooler/compressor',
-    name: 'JT 压缩机头',
+    name: 'JT Compressor Head', name_zh: 'JT 压缩机头',
     unit: '件',
     category: 'part',
     props: [
@@ -360,7 +360,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/jt-cooler/jt-valve',
-    name: 'JT 节流阀',
+    name: 'JT Throttle Valve', name_zh: 'JT 节流阀',
     unit: '件',
     category: 'part',
     props: [
@@ -382,7 +382,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/jt-cooler/hx',
-    name: '4 K JT 制冷级逆流换热器',
+    name: '4 K JT Cooling Stage Counterflow Heat Exchanger', name_zh: '4 K JT 制冷级逆流换热器',
     unit: '件',
     category: 'part',
     props: [
@@ -403,7 +403,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/jt-cooler/vacuum-jacket',
-    name: '4 K JT 制冷级真空罩与辐射屏',
+    name: '4 K JT Cooling Stage Vacuum Jacket and Radiation Shield', name_zh: '4 K JT 制冷级真空罩与辐射屏',
     unit: '件',
     category: 'part',
     props: [
@@ -430,7 +430,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/jt-cooler',
-    name: '4 K JT 制冷级',
+    name: '4 K JT Cooling Stage', name_zh: '4 K JT 制冷级',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 3.8, max: 4.5 }],
@@ -465,7 +465,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sputter-system/chamber',
-    name: '溅射腔',
+    name: 'Sputtering Chamber', name_zh: '溅射腔',
     unit: '件',
     category: 'part',
     props: [
@@ -486,7 +486,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sputter-system/magnetron',
-    name: '磁控靶座 ×3',
+    name: 'Magnetron Target ×3', name_zh: '磁控靶座 ×3',
     unit: '件',
     category: 'part',
     props: [
@@ -506,7 +506,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sputter-system/heater',
-    name: '基片加热台',
+    name: 'Substrate Heating Stage', name_zh: '基片加热台',
     unit: '件',
     category: 'part',
     props: [
@@ -527,7 +527,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sputter-system/target-nb',
-    name: 'Nb 靶',
+    name: 'Nb Target', name_zh: 'Nb 靶',
     unit: '件',
     category: 'part',
     props: [
@@ -547,7 +547,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sputter-system/target-al',
-    name: 'Al 靶',
+    name: 'Al Target', name_zh: 'Al 靶',
     unit: '件',
     category: 'part',
     props: [
@@ -569,7 +569,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sputter-system',
-    name: 'Nb/Al 双靶磁控溅射台',
+    name: 'Nb/Al Dual-Target Magnetron Sputtering System', name_zh: 'Nb/Al 双靶磁控溅射台',
     unit: '台',
     category: 'machine',
     holds: [
@@ -602,7 +602,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/josephson-junction-general',
-    name: 'Nb/AlOₓ/Nb 隧道结',
+    name: 'Nb/AlOₓ/Nb Tunnel Junction', name_zh: 'Nb/AlOₓ/Nb 隧道结',
     unit: '件',
     category: 'part',
     props: [
@@ -634,7 +634,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mmwave-source/gunn-oscillator',
-    name: '25 GHz Gunn 振荡器',
+    name: '25 GHz Gunn Oscillator', name_zh: '25 GHz Gunn 振荡器',
     unit: '件',
     category: 'part',
     props: [
@@ -657,7 +657,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mmwave-source/varactor-tripler',
-    name: '肖特基变容管三倍频器',
+    name: 'Schottky Varactor Tripler', name_zh: '肖特基变容管三倍频器',
     unit: '件',
     category: 'part',
     props: [
@@ -678,7 +678,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mmwave-source/waveguide',
-    name: '毫米波源波导段',
+    name: 'Millimeter-Wave Source Waveguide Section', name_zh: '毫米波源波导段',
     unit: '件',
     category: 'part',
     props: [
@@ -706,7 +706,7 @@ export const QUANTUM_VOLTAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mmwave-source',
-    name: '70–100 GHz 毫米波源',
+    name: '70–100 GHz Millimeter-Wave Source', name_zh: '70–100 GHz 毫米波源',
     unit: '台',
     category: 'machine',
     props: [
@@ -737,7 +737,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 重选把石英/长石留在尾砂。余 10 499 000 kg 是尾砂。
      */
     id: 'make/niobium-concentrate',
-    name: '铌精矿制备',
+    name: 'Niobium Concentrate Production', name_zh: '铌精矿制备',
     produces: [{ item: 'mat/niobium-concentrate', qty: q(1000) }],
     uses: [{ anyOf: [{ item: 'mars/regolith', qty: q(10500000) }] }],
     needs: ['plant/magnetic-separator'],
@@ -761,7 +761,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 10 HF/Nb₂O₅ 的 0.8 倍（其余靠母液循环）；氨 170 kg 是沉淀当量。
      */
     id: 'make/niobium-oxide',
-    name: '五氧化二铌 Nb₂O₅制备',
+    name: 'Niobium Pentoxide Nb₂O₅ Production', name_zh: '五氧化二铌 Nb₂O₅制备',
     produces: [{ item: 'mat/niobium-oxide', qty: q(280) }],
     uses: [
       { anyOf: [{ item: 'mat/niobium-concentrate', qty: q(1000) }] },
@@ -824,7 +824,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * Ar 50 kg 是保护气，绝大多数抽走；KF 50 kg 是循环补加，不消耗。
      */
     id: 'make/niobium-powder',
-    name: 'Nb 粉制备',
+    name: 'Nb Powder Production', name_zh: 'Nb 粉制备',
     produces: [{ item: 'mat/niobium-powder', qty: q(660) }],
     uses: [
       { anyOf: [{ item: 'mat/niobium-oxide', qty: q(1000) }] },
@@ -888,7 +888,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 用 316L/PTFE 槽，不能用铝（铝会自身阳极氧化）。
      */
     id: 'make/anodizing-electrolyte',
-    name: '阳极氧化电解液制备',
+    name: 'Anodizing Electrolyte Production', name_zh: '阳极氧化电解液制备',
     produces: [{ item: 'mat/anodizing-electrolyte', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/boric-acid', qty: q(50) }] },
@@ -921,7 +921,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 把油雾压到 ≤1 ppm；氦侧漏率 ≤1×10⁻⁶ Pa·L/s。
      */
     id: 'make/jt-cooler-compressor',
-    name: 'JT 压缩机头制造',
+    name: 'JT Compressor Head Manufacturing', name_zh: 'JT 压缩机头制造',
     produces: [
       {
         item: 'plant/jt-cooler/compressor',
@@ -962,7 +962,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 阀杆薄壁 0.5 mm，导热漏 20–50 mW。
      */
     id: 'make/jt-cooler-valve',
-    name: 'JT 节流阀制造',
+    name: 'JT Throttle Valve Manufacturing', name_zh: 'JT 节流阀制造',
     produces: [
       {
         item: 'plant/jt-cooler/jt-valve',
@@ -999,7 +999,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 有效度 0.95、0.5–2 W/K、漏率 ≤5×10⁻⁸ Pa·L/s。
      */
     id: 'make/jt-cooler-hx',
-    name: '4 K JT 制冷级逆流换热器制造',
+    name: '4 K JT Cooling Stage Counterflow Heat Exchanger Manufacturing', name_zh: '4 K JT 制冷级逆流换热器制造',
     produces: [
       {
         item: 'plant/jt-cooler/hx',
@@ -1037,7 +1037,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 压到 0.2–0.5 W。
      */
     id: 'make/jt-cooler-vacuum-jacket',
-    name: '4 K JT 制冷级真空罩与辐射屏制造',
+    name: '4 K JT Cooling Stage Vacuum Jacket and Radiation Shield Manufacturing', name_zh: '4 K JT 制冷级真空罩与辐射屏制造',
     produces: [
       {
         item: 'plant/jt-cooler/vacuum-jacket',
@@ -1076,7 +1076,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 的 4.2 K 运行条件里。
      */
     id: 'make/jt-cooler',
-    name: '4 K JT 级总装',
+    name: '4 K JT Stage Final Assembly', name_zh: '4 K JT 级总装',
     produces: [
       {
         item: 'plant/jt-cooler',
@@ -1152,7 +1152,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 负载锁是原位氧化的前提。
      */
     id: 'make/sputter-chamber',
-    name: '溅射腔制造',
+    name: 'Sputtering Chamber Manufacturing', name_zh: '溅射腔制造',
     produces: [
       {
         item: 'plant/sputter-system/chamber',
@@ -1188,7 +1188,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 0.05–0.1 T、0.5–2 W/cm²；三只靶座（Nb/Al/备用），挡板随靶换。
      */
     id: 'make/sputter-magnetron',
-    name: '磁控靶座 ×3 制造',
+    name: 'Magnetron Target ×3 Manufacturing', name_zh: '磁控靶座 ×3 制造',
     produces: [
       {
         item: 'plant/sputter-system/magnetron',
@@ -1225,7 +1225,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 20–700 °C、±5 °C、0.5–2 kW。石墨从碳电极上锯，本层没有石墨件成形。
      */
     id: 'make/sputter-heater',
-    name: '基片加热台制造',
+    name: 'Substrate Heating Stage Manufacturing', name_zh: '基片加热台制造',
     produces: [
       {
         item: 'plant/sputter-system/heater',
@@ -1262,7 +1262,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 90–95 % 密度、99.9 % 纯度。没有 HIP，孔隙是溅射颗粒的来源。
      */
     id: 'make/sputter-target-nb',
-    name: 'Nb 靶制造',
+    name: 'Nb Target Manufacturing', name_zh: 'Nb 靶制造',
     produces: [
       {
         item: 'plant/sputter-system/target-nb',
@@ -1299,7 +1299,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 99.9–99.99 %；氧化铝坩埚不参与反应，按件计。
      */
     id: 'make/sputter-target-al',
-    name: 'Al 靶制造',
+    name: 'Al Target Manufacturing', name_zh: 'Al 靶制造',
     produces: [
       {
         item: 'plant/sputter-system/target-al',
@@ -1336,7 +1336,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 基压、均匀性、靶面功率在 `gives` 里。
      */
     id: 'make/sputter-system',
-    name: '溅射台总装',
+    name: 'Sputtering System Final Assembly', name_zh: '溅射台总装',
     produces: [
       {
         item: 'plant/sputter-system',
@@ -1398,7 +1398,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 因为 `make/jt-cooler` 没有 under 4 K。
      */
     id: 'make/josephson-junction-general',
-    name: 'Nb/AlOₓ/Nb 隧道结制造',
+    name: 'Nb/AlOₓ/Nb Tunnel Junction Manufacturing', name_zh: 'Nb/AlOₓ/Nb 隧道结制造',
     produces: [
       {
         item: 'std/josephson-junction-general',
@@ -1518,7 +1518,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 装腔：25 GHz 波导腔 + 偏流，80–150 mW。
      */
     id: 'make/gunn-oscillator',
-    name: '25 GHz Gunn 振荡器制造',
+    name: '25 GHz Gunn Oscillator Manufacturing', name_zh: '25 GHz Gunn 振荡器制造',
     produces: [
       {
         item: 'plant/mmwave-source/gunn-oscillator',
@@ -1598,7 +1598,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * 输入 80–150 mW → 输出 1–10 mW。
      */
     id: 'make/varactor-tripler',
-    name: '肖特基变容管三倍频器制造',
+    name: 'Schottky Varactor Tripler Manufacturing', name_zh: '肖特基变容管三倍频器制造',
     produces: [
       {
         item: 'plant/mmwave-source/varactor-tripler',
@@ -1638,7 +1638,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * （本层铣床 ±0.05 mm，不是 ±0.02 mm）。
      */
     id: 'make/mmwave-waveguide',
-    name: '毫米波源波导段制造',
+    name: 'Millimeter-Wave Source Waveguide Section Manufacturing', name_zh: '毫米波源波导段制造',
     produces: [
       {
         item: 'plant/mmwave-source/waveguide',
@@ -1680,7 +1680,7 @@ export const QUANTUM_VOLTAGE_ROUTES: readonly Route[] = [
      * （本层 2–5 GHz 计数器，再经谐波混频下变频）。
      */
     id: 'make/mmwave-source',
-    name: '70–100 GHz 源总装',
+    name: '70–100 GHz Source Final Assembly', name_zh: '70–100 GHz 源总装',
     produces: [
       {
         item: 'plant/mmwave-source',

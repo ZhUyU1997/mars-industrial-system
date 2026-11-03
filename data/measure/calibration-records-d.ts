@@ -10,7 +10,7 @@ import { q } from '../../src/index.ts';
 export const CALIBRATION_D_ITEMS: readonly Item[] = [
   {
     id: 'mat/cal-emissometer-80k-record',
-    name: '80 K 发射率计自校准记录',
+    name: '80 K Emissometer Self-Calibration Record', name_zh: '80 K 发射率计自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -22,7 +22,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-transient-heat-source-record',
-    name: '瞬态热源自校准记录',
+    name: 'Transient Heat Source Self-Calibration Record', name_zh: '瞬态热源自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -35,7 +35,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-he-inventory-meter-record',
-    name: '氦存量计自校准记录',
+    name: 'Helium Inventory Meter Self-Calibration Record', name_zh: '氦存量计自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -48,7 +48,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-angle-standard-record',
-    name: '角度标准器自校准记录',
+    name: 'Angle Standard Self-Calibration Record', name_zh: '角度标准器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -59,7 +59,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-thickness-standard-record',
-    name: '厚度标准器自校准记录',
+    name: 'Thickness Standard Self-Calibration Record', name_zh: '厚度标准器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -70,7 +70,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-leak-rate-standard-record',
-    name: '漏率标准器自校准记录',
+    name: 'Leak Rate Standard Self-Calibration Record', name_zh: '漏率标准器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -81,7 +81,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-power-standard-100w-record',
-    name: '100 W 功率标准器自校准记录',
+    name: '100 W Power Standard Self-Calibration Record', name_zh: '100 W 功率标准器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -92,7 +92,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-velocity-standard-record',
-    name: '速度标准器自校准记录',
+    name: 'Velocity Standard Self-Calibration Record', name_zh: '速度标准器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -103,7 +103,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-length-standard-300mm-record',
-    name: '300 mm 长度标准器自校准记录',
+    name: '300 mm Length Standard Self-Calibration Record', name_zh: '300 mm 长度标准器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -114,7 +114,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-efficiency-standard-record',
-    name: '效率标准器自校准记录',
+    name: 'Efficiency Standard Self-Calibration Record', name_zh: '效率标准器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -125,7 +125,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-temperature-standard-record',
-    name: '温度标准器自校准记录',
+    name: 'Temperature Standard Self-Calibration Record', name_zh: '温度标准器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -139,7 +139,7 @@ export const CALIBRATION_D_ITEMS: readonly Item[] = [
 export const CALIBRATION_D_ROUTES: readonly Route[] = [
   {
     id: 'measure/cal-emissometer-80k',
-    name: '80 K 发射率计自校准',
+    name: '80 K Emissometer Self-Calibration', name_zh: '80 K 发射率计自校准',
     produces: [{
       item: 'mat/cal-emissometer-80k-record',
       qty: q(1),
@@ -160,7 +160,7 @@ export const CALIBRATION_D_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-transient-heat-source',
-    name: '瞬态热源自校准',
+    name: 'Transient Heat Source Self-Calibration', name_zh: '瞬态热源自校准',
     produces: [{
       item: 'mat/cal-transient-heat-source-record',
       qty: q(1),
@@ -182,7 +182,7 @@ export const CALIBRATION_D_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-he-inventory-meter',
-    name: '氦存量计自校准',
+    name: 'Helium Inventory Meter Self-Calibration', name_zh: '氦存量计自校准',
     produces: [{
       item: 'mat/cal-he-inventory-meter-record',
       qty: q(1),
@@ -204,7 +204,7 @@ export const CALIBRATION_D_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-angle-standard',
-    name: '角度标准器自校准',
+    name: 'Angle Standard Self-Calibration', name_zh: '角度标准器自校准',
     produces: [{
       item: 'mat/cal-angle-standard-record',
       qty: q(1),
@@ -224,7 +224,7 @@ export const CALIBRATION_D_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-thickness-standard',
-    name: '厚度标准器自校准',
+    name: 'Thickness Standard Self-Calibration', name_zh: '厚度标准器自校准',
     produces: [{
       item: 'mat/cal-thickness-standard-record',
       qty: q(1),
@@ -244,7 +244,7 @@ export const CALIBRATION_D_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-leak-rate-standard',
-    name: '漏率标准器自校准',
+    name: 'Leak Rate Standard Self-Calibration', name_zh: '漏率标准器自校准',
     produces: [{
       item: 'mat/cal-leak-rate-standard-record',
       qty: q(1),
@@ -264,7 +264,7 @@ export const CALIBRATION_D_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-power-standard-100w',
-    name: '100 W 功率标准器自校准',
+    name: '100 W Power Standard Self-Calibration', name_zh: '100 W 功率标准器自校准',
     produces: [{
       item: 'mat/cal-power-standard-100w-record',
       qty: q(1),
@@ -284,7 +284,7 @@ export const CALIBRATION_D_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-velocity-standard',
-    name: '速度标准器自校准',
+    name: 'Velocity Standard Self-Calibration', name_zh: '速度标准器自校准',
     produces: [{
       item: 'mat/cal-velocity-standard-record',
       qty: q(1),
@@ -304,7 +304,7 @@ export const CALIBRATION_D_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-length-standard-300mm',
-    name: '300 mm 长度标准器自校准',
+    name: '300 mm Length Standard Self-Calibration', name_zh: '300 mm 长度标准器自校准',
     produces: [{
       item: 'mat/cal-length-standard-300mm-record',
       qty: q(1),
@@ -324,7 +324,7 @@ export const CALIBRATION_D_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-efficiency-standard',
-    name: '效率标准器自校准',
+    name: 'Efficiency Standard Self-Calibration', name_zh: '效率标准器自校准',
     produces: [{
       item: 'mat/cal-efficiency-standard-record',
       qty: q(1),
@@ -344,7 +344,7 @@ export const CALIBRATION_D_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-temperature-standard',
-    name: '温度标准器自校准',
+    name: 'Temperature Standard Self-Calibration', name_zh: '温度标准器自校准',
     produces: [{
       item: 'mat/cal-temperature-standard-record',
       qty: q(1),

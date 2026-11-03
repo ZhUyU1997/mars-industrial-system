@@ -104,7 +104,7 @@ export const CRYO_TRAP_MEASURE_ROUTES: readonly Route[] = [
      * 不是「某个工艺气的含水量」；工艺气的取样在 `measure/nh3-gas` 等路线里。
      */
     id: 'measure/dew-point-80k',
-    name: '80 K 阱露点测量',
+    name: '80 K Trap Dew Point Measurement', name_zh: '80 K 阱露点测量',
     produces: [
       {
         item: 'mat/dew-point-80k-record',

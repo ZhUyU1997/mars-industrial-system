@@ -83,7 +83,7 @@ export const CMOS_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmos-test/parameter-analyzer',
-    name: '参数分析仪',
+    name: 'Parameter Analyzer', name_zh: '参数分析仪',
     unit: '台',
     category: 'machine',
     // ⚠️ **它不维持温度。** 19–21 °C 是计量间 `plant/metrology-room` 的条件
@@ -131,7 +131,7 @@ export const CMOS_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmos-test/optical-profiler',
-    name: '白光干涉光学轮廓仪',
+    name: 'White-Light Interferometric Optical Profiler', name_zh: '白光干涉光学轮廓仪',
     unit: '台',
     category: 'machine',
     // ⚠️ **它不维持温度。** 19–21 °C 是计量间 `plant/metrology-room` 的条件。
@@ -190,7 +190,7 @@ export const CMOS_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmos-test/lcr-meter',
-    name: 'LCR 表',
+    name: 'LCR Meter', name_zh: 'LCR 表',
     unit: '台',
     category: 'machine',
     props: [
@@ -229,7 +229,7 @@ export const CMOS_TEST_ROUTES: readonly Route[] = [
      * 10:1 比率臂传递；1–10 pF 段 3 % 是杂散（开短路补偿扣 1.5 pF，漂扣不掉）。
      */
     id: 'make/cmos-test-lcr-meter',
-    name: 'LCR 表制造',
+    name: 'LCR Meter Manufacturing', name_zh: 'LCR 表制造',
     produces: [
       {
         item: 'plant/cmos-test/lcr-meter',

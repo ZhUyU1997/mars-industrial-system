@@ -55,7 +55,7 @@ export const GAS_STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/gas-cylinder-10l-general',
-    name: '10 L 气体钢瓶',
+    name: '10 L Gas Cylinder', name_zh: '10 L 气体钢瓶',
     unit: '件',
     category: 'part',
     props: [
@@ -77,7 +77,7 @@ export const GAS_STD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nh3-standard-gas',
-    name: 'NH₃ 标气',
+    name: 'NH₃ Standard Gas', name_zh: 'NH₃ 标气',
     unit: 'kg',
     category: 'material',
     props: [
@@ -98,7 +98,7 @@ export const GAS_STD_ROUTES: readonly Route[] = [
      *   45 钢 12 kg + 铜 0.2 kg + PTFE 0.05 kg → 钢瓶 1 只
      */
     id: 'make/gas-cylinder-10l',
-    name: '10 L 气体钢瓶制造',
+    name: '10 L Gas Cylinder Manufacturing', name_zh: '10 L 气体钢瓶制造',
     produces: [
       {
         item: 'std/gas-cylinder-10l-general',
@@ -134,7 +134,7 @@ export const GAS_STD_ROUTES: readonly Route[] = [
      *   钢瓶 1 + 电子级 NH₃ 0.1 g + N₂ 2 kg → 标气 1 瓶（100 ppm 主瓶 / 10 ppm 副瓶）
      */
     id: 'make/nh3-standard-gas',
-    name: 'NH₃ 标气制备',
+    name: 'NH₃ Standard Gas Production', name_zh: 'NH₃ 标气制备',
     produces: [
       {
         item: 'mat/nh3-standard-gas',

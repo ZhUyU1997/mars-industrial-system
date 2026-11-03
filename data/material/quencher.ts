@@ -44,7 +44,7 @@ export const QUENCHER_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/triethylamine',
-    name: '三乙胺',
+    name: 'Triethylamine', name_zh: '三乙胺',
     unit: 'kg',
     category: 'material',
     props: [
@@ -69,7 +69,7 @@ export const QUENCHER_ROUTES: readonly Route[] = [
      * 过量与循环不进 `uses`。这是本文件唯一一处“按净式记账”的地方。
      */
     id: 'make/triethylamine',
-    name: '三乙胺制备',
+    name: 'Triethylamine Production', name_zh: '三乙胺制备',
     produces: [
       {
         item: 'mat/triethylamine',

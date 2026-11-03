@@ -100,7 +100,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/drie-etcher',
-    name: '深硅刻蚀机',
+    name: 'Deep Silicon Etcher', name_zh: '深硅刻蚀机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -137,7 +137,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/anodic-bonder',
-    name: '阳极键合机',
+    name: 'Anodic Bonder', name_zh: '阳极键合机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -171,7 +171,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vacuum-sealer',
-    name: '真空封装台',
+    name: 'Vacuum Sealing Station', name_zh: '真空封装台',
     unit: '台',
     category: 'machine',
     holds: [
@@ -206,7 +206,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/drie-etcher/chamber',
-    name: 'DRIE 腔',
+    name: 'DRIE Chamber', name_zh: 'DRIE 腔',
     unit: '件',
     category: 'part',
     props: [
@@ -228,7 +228,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/drie-etcher/icp-source',
-    name: 'ICP 源',
+    name: 'ICP Source', name_zh: 'ICP 源',
     unit: '件',
     category: 'part',
     props: [
@@ -248,7 +248,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/drie-etcher/chuck',
-    name: '深硅刻蚀机下电极/卡盘',
+    name: 'Deep Silicon Etcher Lower Electrode/Chuck', name_zh: '深硅刻蚀机下电极/卡盘',
     unit: '件',
     category: 'part',
     props: [
@@ -269,7 +269,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/drie-etcher/gas-panel',
-    name: '深硅刻蚀机四路气路',
+    name: 'Deep Silicon Etcher 4-Channel Gas Line', name_zh: '深硅刻蚀机四路气路',
     unit: '件',
     category: 'part',
     props: [
@@ -287,7 +287,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/drie-etcher/throttle',
-    name: '深硅刻蚀机挡板阀/节流阀',
+    name: 'Deep Silicon Etcher Flap Valve/Throttle Valve', name_zh: '深硅刻蚀机挡板阀/节流阀',
     unit: '件',
     category: 'part',
     props: [
@@ -309,7 +309,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/anodic-bonder/chamber',
-    name: '阳极键合机键合腔',
+    name: 'Anodic Bonder Bonding Chamber', name_zh: '阳极键合机键合腔',
     unit: '件',
     category: 'part',
     props: [
@@ -327,7 +327,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/anodic-bonder/heater',
-    name: '阳极键合机加热板',
+    name: 'Anodic Bonder Heater Plate', name_zh: '阳极键合机加热板',
     unit: '件',
     category: 'part',
     props: [
@@ -345,7 +345,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/anodic-bonder/hv-feedthrough',
-    name: '阳极键合机高压馈通',
+    name: 'Anodic Bonder High-Voltage Feedthrough', name_zh: '阳极键合机高压馈通',
     unit: '件',
     category: 'part',
     props: [
@@ -363,7 +363,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/anodic-bonder/press',
-    name: '阳极键合机加压机构',
+    name: 'Anodic Bonder Press Mechanism', name_zh: '阳极键合机加压机构',
     unit: '件',
     category: 'part',
     props: [
@@ -385,7 +385,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vacuum-sealer/bell',
-    name: '真空封装台封装钟罩',
+    name: 'Vacuum Sealing Station Sealing Bell Jar', name_zh: '真空封装台封装钟罩',
     unit: '件',
     category: 'part',
     props: [
@@ -402,7 +402,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vacuum-sealer/heater',
-    name: '真空封装台封装加热台',
+    name: 'Vacuum Sealing Station Sealing Heater Stage', name_zh: '真空封装台封装加热台',
     unit: '件',
     category: 'part',
     props: [
@@ -420,7 +420,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vacuum-sealer/seal-head',
-    name: '真空封装台封口头',
+    name: 'Vacuum Sealing Station Seal Head', name_zh: '真空封装台封口头',
     unit: '件',
     category: 'part',
     props: [
@@ -449,7 +449,7 @@ export const MEMS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/robot/imu-mems-die',
-    name: '六轴 IMU 的 MEMS 裸片',
+    name: '6-Axis IMU MEMS Die', name_zh: '六轴 IMU 的 MEMS 裸片',
     unit: '件',
     category: 'part',
     props: [
@@ -478,7 +478,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      * 检漏只能到 1e-3 Pa·L/s（铜垫刀口 + 石墨绳），没有氦检。
      */
     id: 'make/drie-chamber',
-    name: 'DRIE 腔制造',
+    name: 'DRIE Chamber Manufacturing', name_zh: 'DRIE 腔制造',
     produces: [
       {
         item: 'plant/drie-etcher/chamber',
@@ -529,7 +529,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      * （氢氧焰 1900–2200 °C），它本来是为玻璃仪器造的，正好干这件事。
      */
     id: 'make/drie-icp-source',
-    name: 'ICP 源制造',
+    name: 'ICP Source Manufacturing', name_zh: 'ICP 源制造',
     produces: [
       {
         item: 'plant/drie-etcher/icp-source',
@@ -582,7 +582,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      * 边缘要绝缘（不然 RF 会沿腔壁对地打弧）。
      */
     id: 'make/drie-chuck',
-    name: '深硅刻蚀机下电极/卡盘制造',
+    name: 'Deep Silicon Etcher Lower Electrode/Chuck Manufacturing', name_zh: '深硅刻蚀机下电极/卡盘制造',
     produces: [
       {
         item: 'plant/drie-etcher/chuck',
@@ -631,7 +631,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      * Δp = 8µLQ/(πr⁴) = 61 Pa = 6.2 mm 水柱。
      */
     id: 'make/drie-gas-panel',
-    name: '深硅刻蚀机四路气路制造',
+    name: 'Deep Silicon Etcher 4-Channel Gas Line Manufacturing', name_zh: '深硅刻蚀机四路气路制造',
     produces: [
       {
         item: 'plant/drie-etcher/gas-panel',
@@ -674,7 +674,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      *   出   节流阀 1 件（φ60、10–70 : 1）
      */
     id: 'make/drie-throttle',
-    name: '深硅刻蚀机挡板阀/节流阀制造',
+    name: 'Deep Silicon Etcher Flap Valve/Throttle Valve Manufacturing', name_zh: '深硅刻蚀机挡板阀/节流阀制造',
     produces: [
       {
         item: 'plant/drie-etcher/throttle',
@@ -720,7 +720,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      * 高压极与腔壁隔 20 mm：1.5 kV 在 1 Pa 下沿面爬电的距离。
      */
     id: 'make/anodic-chamber',
-    name: '阳极键合机键合腔制造',
+    name: 'Anodic Bonder Bonding Chamber Manufacturing', name_zh: '阳极键合机键合腔制造',
     produces: [
       {
         item: 'plant/anodic-bonder/chamber',
@@ -765,7 +765,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      * （`mat/alumina`）做绝缘与均温板，钢壳承力。
      */
     id: 'make/anodic-heater',
-    name: '阳极键合机加热板制造',
+    name: 'Anodic Bonder Heater Plate Manufacturing', name_zh: '阳极键合机加热板制造',
     produces: [
       {
         item: 'plant/anodic-bonder/heater',
@@ -810,7 +810,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      * （0.1–0.2 mm）并且慢冷（2 °C/min）。
      */
     id: 'make/anodic-feedthrough',
-    name: '阳极键合机高压馈通制造',
+    name: 'Anodic Bonder High-Voltage Feedthrough Manufacturing', name_zh: '阳极键合机高压馈通制造',
     produces: [
       {
         item: 'plant/anodic-bonder/hv-feedthrough',
@@ -855,7 +855,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      *   出   压机 1 件（20 kN、行程 60 mm）
      */
     id: 'make/anodic-press',
-    name: '阳极键合机加压机构制造',
+    name: 'Anodic Bonder Press Mechanism Manufacturing', name_zh: '阳极键合机加压机构制造',
     produces: [
       {
         item: 'plant/anodic-bonder/press',
@@ -898,7 +898,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      *   出   钟罩 1 件（设计净重 22 kg）
      */
     id: 'make/sealer-bell',
-    name: '真空封装台封装钟罩制造',
+    name: 'Vacuum Sealing Station Sealing Bell Jar Manufacturing', name_zh: '真空封装台封装钟罩制造',
     produces: [
       {
         item: 'plant/vacuum-sealer/bell',
@@ -940,7 +940,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      *   出   加热台 1 件（1–2 kW、450 °C）
      */
     id: 'make/sealer-heater',
-    name: '真空封装台封装加热台制造',
+    name: 'Vacuum Sealing Station Sealing Heater Stage Manufacturing', name_zh: '真空封装台封装加热台制造',
     produces: [
       {
         item: 'plant/vacuum-sealer/heater',
@@ -980,7 +980,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      *   出   封口头 1 件（3 kN、450 °C）
      */
     id: 'make/sealer-head',
-    name: '真空封装台封口头制造',
+    name: 'Vacuum Sealing Station Seal Head Manufacturing', name_zh: '真空封装台封口头制造',
     produces: [
       {
         item: 'plant/vacuum-sealer/seal-head',
@@ -1041,7 +1041,7 @@ export const MEMS_ROUTES: readonly Route[] = [
      *   边缘排除区与清洗损耗。**不折 kg**：输出按件计，输入按片计。
      */
     id: 'make/robot-imu-mems-die',
-    name: '六轴 IMU 的 MEMS 裸片制造',
+    name: '6-Axis IMU MEMS Die Manufacturing', name_zh: '六轴 IMU 的 MEMS 裸片制造',
     produces: [
       {
         item: 'plant/robot/imu-mems-die',
@@ -1142,7 +1142,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/drie-etcher',
-    name: '深硅刻蚀机装配',
+    name: 'Deep Silicon Etcher Assembly', name_zh: '深硅刻蚀机装配',
     produces: [{
       item: 'plant/drie-etcher',
       qty: q(1),
@@ -1162,7 +1162,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/anodic-bonder',
-    name: '阳极键合机装配',
+    name: 'Anodic Bonder Assembly', name_zh: '阳极键合机装配',
     produces: [{
       item: 'plant/anodic-bonder',
       qty: q(1),
@@ -1179,7 +1179,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/vacuum-sealer',
-    name: '真空封装台装配',
+    name: 'Vacuum Sealing Station Assembly', name_zh: '真空封装台装配',
     produces: [{
       item: 'plant/vacuum-sealer',
       qty: q(1),

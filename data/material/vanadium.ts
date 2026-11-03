@@ -63,7 +63,7 @@ export const VANADIUM_ITEMS: readonly Item[] = [
    * 钒不像铜那样有独立的矿，它跟着磁铁矿走 —— 所以这里的"选矿"其实是
    * **选磁铁矿**，钒是搭车的。副产品：这条线也给磁选机找到了正经用途。
    */
-  { id: 'mat/vanadium-concentrate', name: '钒精矿', unit: 'kg', category: 'material' },
+  { id: 'mat/vanadium-concentrate', name: 'Vanadium Concentrate', name_zh: '钒精矿', unit: 'kg', category: 'material' },
 
   /**
    * 五氧化二钒（V₂O₅）。橙黄色粉末，接触法制酸的催化剂，
@@ -73,7 +73,7 @@ export const VANADIUM_ITEMS: readonly Item[] = [
    * 只有钒系催化剂能在 420–450 °C 稳定工作。没有它，硫酸只能靠铅室法 ——
    * 而那要硝石与铅。
    */
-  { id: 'mat/vanadium-oxide', name: '五氧化二钒', unit: 'kg', category: 'material' },
+  { id: 'mat/vanadium-oxide', name: 'Vanadium Pentoxide', name_zh: '五氧化二钒', unit: 'kg', category: 'material' },
 ];
 
 export const VANADIUM_ROUTES: readonly Route[] = [
@@ -88,7 +88,7 @@ export const VANADIUM_ROUTES: readonly Route[] = [
      * 钒跟着磁铁矿走，所以选铁的时候钒就在富集。
      */
     id: 'make/vanadium-concentrate',
-    name: '钒精矿制备',
+    name: 'Vanadium Concentrate Production', name_zh: '钒精矿制备',
     produces: [
       { item: 'mat/vanadium-concentrate', qty: q(1000) },
       { item: 'mat/tailings', qty: q(559000) },
@@ -111,7 +111,7 @@ export const VANADIUM_ROUTES: readonly Route[] = [
      * 其余三步写在注释里。
      */
     id: 'make/vanadium-oxide',
-    name: '五氧化二钒制备',
+    name: 'Vanadium Pentoxide Production', name_zh: '五氧化二钒制备',
     produces: [{ item: 'mat/vanadium-oxide', qty: q(90) }],
     uses: [
       { anyOf: [{ item: 'mat/vanadium-concentrate', qty: q(1000) }] },

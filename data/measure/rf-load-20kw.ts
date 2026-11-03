@@ -12,7 +12,7 @@ import { q } from '../../src/index.ts';
 export const RF_LOAD_20KW_ITEMS: readonly Item[] = [
   {
     id: 'std/rf-load-20kw-50ohm/element',
-    name: '射频负载电阻元件',
+    name: 'RF Load Resistor Element', name_zh: '射频负载电阻元件',
     unit: '件',
     category: 'part',
     props: [
@@ -23,7 +23,7 @@ export const RF_LOAD_20KW_ITEMS: readonly Item[] = [
   },
   {
     id: 'std/rf-load-20kw-50ohm',
-    name: '20 kW / 50 Ω 射频负载',
+    name: '20 kW / 50 Ω RF Load', name_zh: '20 kW / 50 Ω 射频负载',
     unit: '台',
     category: 'machine',
     props: [
@@ -42,7 +42,7 @@ export const RF_LOAD_20KW_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/rf-generator-20kw-load-stability-record',
-    name: '20 kW 发生器负载稳定度记录',
+    name: '20 kW Generator Load Stability Record', name_zh: '20 kW 发生器负载稳定度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -55,7 +55,7 @@ export const RF_LOAD_20KW_ITEMS: readonly Item[] = [
 export const RF_LOAD_20KW_ROUTES: readonly Route[] = [
   {
     id: 'make/rf-load-20kw-element',
-    name: '射频负载电阻元件制造',
+    name: 'RF Load Resistor Element Manufacturing', name_zh: '射频负载电阻元件制造',
     produces: [{
       item: 'std/rf-load-20kw-50ohm/element',
       qty: q(1),
@@ -82,7 +82,7 @@ export const RF_LOAD_20KW_ROUTES: readonly Route[] = [
      * **装配：50 Ω 元件 + 流量计 + 热电偶水套，水冷 20–40 L/min。**
      */
     id: 'make/rf-load-20kw-50ohm',
-    name: '20 kW / 50 Ω 射频负载装配',
+    name: '20 kW / 50 Ω RF Load Assembly', name_zh: '20 kW / 50 Ω 射频负载装配',
     produces: [{
       item: 'std/rf-load-20kw-50ohm',
       qty: q(1),
@@ -115,7 +115,7 @@ export const RF_LOAD_20KW_ROUTES: readonly Route[] = [
      * **20 kW 发生器 stability：单只负载吸收，流量/温差 60 s 10 点。**
      */
     id: 'measure/rf-generator-20kw-load-stability',
-    name: '20 kW 发生器负载稳定度测量',
+    name: '20 kW Generator Load Stability Measurement', name_zh: '20 kW 发生器负载稳定度测量',
     produces: [{
       item: 'mat/rf-generator-20kw-load-stability-record',
       qty: q(1),

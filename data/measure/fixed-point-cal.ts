@@ -20,7 +20,7 @@ export const FIXED_POINT_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fixed-point-intercomparison-record',
-    name: '固定点互检记录',
+    name: 'Fixed-Point Intercomparison Record', name_zh: '固定点互检记录',
     unit: '份',
     category: 'part',
     props: [
@@ -32,7 +32,7 @@ export const FIXED_POINT_CAL_ITEMS: readonly Item[] = [
     ],
   },  {
     id: 'std/fixed-point-cell-set',
-    name: '固定点容器套件',
+    name: 'Fixed-Point Cell Set', name_zh: '固定点容器套件',
     unit: '套',
     category: 'part',
     props: [
@@ -43,7 +43,7 @@ export const FIXED_POINT_CAL_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/thermocouple-cal-record',
-    name: '标定记录',
+    name: 'Standardization Record', name_zh: '标定记录',
     unit: '份',
     category: 'part',
     props: [
@@ -63,7 +63,7 @@ export const FIXED_POINT_CAL_ROUTES: readonly Route[] = [
      * 不判绝对温度（绝对温度是 ITS-90 赋值）。
      */
     id: 'measure/fixed-point-intercomparison',
-    name: '固定点互检测量',
+    name: 'Fixed-Point Intercomparison Measurement', name_zh: '固定点互检测量',
     rate: { hours: q(24) },
     produces: [{
       item: 'mat/fixed-point-intercomparison-record',
@@ -93,7 +93,7 @@ export const FIXED_POINT_CAL_ROUTES: readonly Route[] = [
      * 池子用氧化铝坩埚，熔炼炉熔/凝；一套池对应一支热电偶的标定。
      */
     id: 'make/fixed-point-cell-set',
-    name: '固定点容器套件制造',
+    name: 'Fixed-Point Cell Set Manufacturing', name_zh: '固定点容器套件制造',
     produces: [
       {
         item: 'std/fixed-point-cell-set',
@@ -128,7 +128,7 @@ export const FIXED_POINT_CAL_ROUTES: readonly Route[] = [
      * 外推；三个平台上的读数就是这支偶的标定。
      */
     id: 'measure/thermocouple-cal',
-    name: '标定',
+    name: 'Standardization', name_zh: '标定',
     produces: [
       {
         item: 'mat/thermocouple-cal-record',

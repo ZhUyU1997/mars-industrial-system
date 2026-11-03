@@ -427,7 +427,7 @@ export const UNBLOCK_RAD_PUMP_ROUTES: readonly Route[] = [
      *     试压后抽回 8 kg —— 在火星上水是按 kg 计的，所以 `uses` 只记走掉的那 2 kg
      */
     id: 'make/radiator-pump-cast',
-    name: '散热器循环泵制造',
+    name: 'Radiator Circulation Pump Manufacturing', name_zh: '散热器循环泵制造',
     produces: [{ item: 'plant/radiator/pump', qty: q(1) }],
     /**
      * 进 115.25 kg，出 1 件（96.5 kg）。每一笔的用途与算式写在各条下面。

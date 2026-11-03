@@ -448,7 +448,7 @@ export const UNBLOCK_CLEANROOM_FFU_ROUTES: readonly Route[] = [
      *      而均流板会被尘糊住（出风侧带尘）—— 这个顺序是这一件唯一不能改的装配顺序。
      */
     id: 'make/cleanroom-ffu-cast',
-    name: '洁净室风机过滤单元制造',
+    name: 'Cleanroom Fan Filter Unit Manufacturing', name_zh: '洁净室风机过滤单元制造',
     produces: [{ item: 'plant/clean-room/ffu', qty: q(1) }],
     uses: [
       /**

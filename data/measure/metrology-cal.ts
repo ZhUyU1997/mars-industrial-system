@@ -86,7 +86,7 @@ export const METROLOGY_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tip-radius-record',
-    name: '压头针尖半径记录',
+    name: 'Indenter Tip Radius Record', name_zh: '压头针尖半径记录',
     unit: '份',
     category: 'part',
     props: [
@@ -109,7 +109,7 @@ export const METROLOGY_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pa-current-floor-record',
-    name: '参数分析仪电流底噪记录',
+    name: 'Parameter Analyzer Current Noise Floor Record', name_zh: '参数分析仪电流底噪记录',
     unit: '份',
     category: 'part',
     props: [
@@ -135,7 +135,7 @@ export const METROLOGY_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/profiler-vertical-cal-record',
-    name: '轮廓仪垂直标定记录',
+    name: 'Profilometer Vertical Calibration Record', name_zh: '轮廓仪垂直标定记录',
     unit: '份',
     category: 'part',
     props: [
@@ -166,7 +166,7 @@ export const METROLOGY_CAL_ROUTES: readonly Route[] = [
      * 它是历史路线，也是 AFM 的粗交叉检查（两条差 >3 倍 ⇒ 重装/重扫）。
      */
     id: 'measure/tip-radius',
-    name: '压头针尖半径测量',
+    name: 'Indenter Tip Radius Measurement', name_zh: '压头针尖半径测量',
     produces: [
       {
         item: 'mat/tip-radius-record',
@@ -221,7 +221,7 @@ export const METROLOGY_CAL_ROUTES: readonly Route[] = [
      * 1 TΩ 支路是升级项。
      */
     id: 'measure/pa-current-floor',
-    name: '参数分析仪电流底噪测量',
+    name: 'Parameter Analyzer Current Noise Floor Measurement', name_zh: '参数分析仪电流底噪测量',
     produces: [
       {
         item: 'mat/pa-current-floor-record',
@@ -279,7 +279,7 @@ export const METROLOGY_CAL_ROUTES: readonly Route[] = [
      * `std/step-standard-0.1nm`。旧写法保留为历史降级，不删。
      */
     id: 'measure/profiler-vertical-cal',
-    name: '轮廓仪垂直标定',
+    name: 'Profilometer Vertical Calibration', name_zh: '轮廓仪垂直标定',
     produces: [
       {
         item: 'mat/profiler-vertical-cal-record',

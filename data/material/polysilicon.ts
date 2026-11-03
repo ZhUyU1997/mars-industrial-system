@@ -47,7 +47,7 @@ export const POLYSILICON_ITEMS: readonly Item[] = [
    * 它做不了器件，但它是三氯氢硅的原料 —— 后面靠分馏提纯，所以起点不必很纯。
    * **这是整个半导体链能自举的关键：第一步只要 98%。**
    */
-  { id: 'mat/silicon-mg', name: '冶金级硅', unit: 'kg', category: 'material' },
+  { id: 'mat/silicon-mg', name: 'Metallurgical-Grade Silicon', name_zh: '冶金级硅', unit: 'kg', category: 'material' },
 
   /**
    * 三氯氢硅（SiHCl₃）。常温是液体，沸点 31.8 °C，遇潮气剧烈水解。
@@ -55,13 +55,13 @@ export const POLYSILICON_ITEMS: readonly Item[] = [
    * 它是"可蒸馏的硅"：一个硅原子带三个氯一个氢，68% 的重量是氯。
    * 纯度靠分馏，而分馏的代价是能量 —— 每吨多晶硅要几十吨蒸汽当量。
    */
-  { id: 'mat/trichlorosilane', name: '三氯氢硅', unit: 'kg', category: 'material' },
+  { id: 'mat/trichlorosilane', name: 'Trichlorosilane', name_zh: '三氯氢硅', unit: 'kg', category: 'material' },
 
   /**
    * 精馏后的三氯氢硅。硼、磷的氯化物沸点与它只差几度，要靠塔板数硬分 ——
    * 而这正是"半导体级"与"冶金级"之间真正的距离。
    */
-  { id: 'mat/trichlorosilane-pure', name: '精馏后的三氯氢硅', unit: 'kg', category: 'material' },
+  { id: 'mat/trichlorosilane-pure', name: 'Rectified Trichlorosilane', name_zh: '精馏后的三氯氢硅', unit: 'kg', category: 'material' },
 
   /**
    * 多晶硅（99.9999% 级，硅棒碎块）。
@@ -69,7 +69,7 @@ export const POLYSILICON_ITEMS: readonly Item[] = [
    * 它是这条链的前沿：造得出，但还没有下游（单晶那一门过不去）。
    * 报告会把它列进"死产" —— 这不是废物，是"下一步的入口"。
    */
-  { id: 'mat/polysilicon', name: '多晶硅', unit: 'kg', category: 'material' },
+  { id: 'mat/polysilicon', name: 'Polysilicon', name_zh: '多晶硅', unit: 'kg', category: 'material' },
 ];
 
 export const POLYSILICON_ROUTES: readonly Route[] = [
@@ -83,7 +83,7 @@ export const POLYSILICON_ROUTES: readonly Route[] = [
      * 出炉的硅水浇成锭，含铁铝钙 2% —— 对下一步足够。
      */
     id: 'make/silicon-mg',
-    name: '冶金级硅制备',
+    name: 'Metallurgical-Grade Silicon Production', name_zh: '冶金级硅制备',
     produces: [
       { item: 'mat/silicon-mg', qty: q(420) },
       // 副产 840 kg 一氧化碳：还原剂里多出来的碳。
@@ -109,7 +109,7 @@ export const POLYSILICON_ROUTES: readonly Route[] = [
      * 就多出四氯化硅（SiCl₄），那一份硅就白跑了。
      */
     id: 'make/trichlorosilane',
-    name: '三氯氢硅制备',
+    name: 'Trichlorosilane Production', name_zh: '三氯氢硅制备',
     produces: [
       { item: 'mat/trichlorosilane', qty: q(968) },
       { item: 'mat/hydrogen', qty: q(14), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5, dir: 'atLeast' }] },
@@ -137,7 +137,7 @@ export const POLYSILICON_ROUTES: readonly Route[] = [
      * 不然就要配一条 −70 °C 的深冷链。
      */
     id: 'make/trichlorosilane-pure',
-    name: '精馏',
+    name: 'Rectification', name_zh: '精馏',
     produces: [
       { item: 'mat/trichlorosilane-pure', qty: q(900) },
       // 塔底 SiCl₄ 单列（以前只写在声明里；补条目后 1000 → 900 + 100 真平）
@@ -167,7 +167,7 @@ export const POLYSILICON_ROUTES: readonly Route[] = [
      * 沉积速度很慢（几小时长几毫米），这是它产能低的原因，也是模型说不出的部分。
      */
     id: 'make/polysilicon',
-    name: '还原',
+    name: 'Reduction', name_zh: '还原',
     produces: [
       { item: 'mat/polysilicon', qty: q(207) },
       { item: 'mat/hcl', qty: q(808), gives: [{ param: 'concentration', kind: 'range', min: 30, max: 33 }] },

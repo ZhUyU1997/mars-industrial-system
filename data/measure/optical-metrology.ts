@@ -113,7 +113,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/lead',
-    name: '铅',
+    name: 'Lead', name_zh: '铅',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 99, max: 99.9, unit: '%', dir: 'atLeast' }],
@@ -136,7 +136,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pzt-stage/pzt-ceramic',
-    name: 'PZT 陶瓷片',
+    name: 'PZT Ceramic Plate', name_zh: 'PZT 陶瓷片',
     unit: '件',
     category: 'part',
     props: [
@@ -158,7 +158,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pzt-stage/flexure',
-    name: 'PZT 台的柔性杠杆与导向',
+    name: 'PZT Stage Flexure Lever and Guide', name_zh: 'PZT 台的柔性杠杆与导向',
     unit: '件',
     category: 'part',
     props: [
@@ -183,7 +183,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pzt-stage/capacitive-sensor',
-    name: 'PZT 电容位移传感器',
+    name: 'PZT Capacitive Displacement Sensor', name_zh: 'PZT 电容位移传感器',
     unit: '件',
     category: 'part',
     props: [
@@ -205,7 +205,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pzt-stage/driver',
-    name: 'PZT 闭环驱动',
+    name: 'PZT Closed-Loop Driver', name_zh: 'PZT 闭环驱动',
     unit: '件',
     category: 'part',
     props: [
@@ -230,7 +230,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pzt-stage',
-    name: 'PZT 移相/扫描台',
+    name: 'PZT Phase Shift/Scan Stage', name_zh: 'PZT 移相/扫描台',
     unit: '件',
     category: 'part',
     props: [
@@ -254,7 +254,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mirau-objective/lens-group',
-    name: 'Mirau 物镜的镜组',
+    name: 'Mirau Objective Lens Group', name_zh: 'Mirau 物镜的镜组',
     unit: '件',
     category: 'part',
     props: [
@@ -274,7 +274,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mirau-objective/barrel',
-    name: 'Mirau 物镜筒',
+    name: 'Mirau Objective Barrel', name_zh: 'Mirau 物镜筒',
     unit: '件',
     category: 'part',
     props: [
@@ -297,7 +297,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mirau-objective',
-    name: 'Mirau 干涉物镜',
+    name: 'Mirau Interference Objective', name_zh: 'Mirau 干涉物镜',
     unit: '件',
     category: 'part',
     props: [
@@ -321,7 +321,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/white-light-source/halogen-lamp',
-    name: '白光光源卤素灯',
+    name: 'White-Light Source Halogen Lamp', name_zh: '白光光源卤素灯',
     unit: '件',
     category: 'part',
     props: [
@@ -340,7 +340,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/white-light-source/condenser',
-    name: '白光光源白光聚光镜',
+    name: 'White-Light Source Condenser', name_zh: '白光光源白光聚光镜',
     unit: '件',
     category: 'part',
     props: [
@@ -361,7 +361,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/white-light-source',
-    name: '白光光源',
+    name: 'White-Light Source', name_zh: '白光光源',
     unit: '件',
     category: 'part',
     props: [
@@ -382,7 +382,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/metrology-ccd/frame-integrator',
-    name: '计量 CCD 的帧积分器',
+    name: 'Metrology CCD Frame Integrator', name_zh: '计量 CCD 的帧积分器',
     unit: '件',
     category: 'part',
     props: [
@@ -405,7 +405,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/metrology-ccd',
-    name: '计量 CCD',
+    name: 'Metrology CCD', name_zh: '计量 CCD',
     unit: '件',
     category: 'part',
     props: [
@@ -434,7 +434,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/overlay-metrology/objective',
-    name: '套刻量具的成像物镜',
+    name: 'Overlay Metrology Imaging Objective', name_zh: '套刻量具的成像物镜',
     unit: '件',
     category: 'part',
     props: [
@@ -459,7 +459,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/overlay-metrology',
-    name: '成像式 DBO 套刻量具',
+    name: 'Imaging-Based DBO Overlay Metrology Tool', name_zh: '成像式 DBO 套刻量具',
     unit: '台',
     category: 'machine',
     props: [
@@ -491,7 +491,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/step-standard-0.1nm',
-    name: '0.1 nm 台阶标准件',
+    name: '0.1 nm Step Height Standard', name_zh: '0.1 nm 台阶标准件',
     unit: '片',
     category: 'part',
     props: [
@@ -517,7 +517,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/overlay-standard',
-    name: '套刻标准片',
+    name: 'Overlay Standard Wafer', name_zh: '套刻标准片',
     unit: '片',
     category: 'part',
     props: [
@@ -536,7 +536,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/step-height-record',
-    name: '台阶高度记录',
+    name: 'Step Height Record', name_zh: '台阶高度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -557,7 +557,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/overlay-record-traceable',
-    name: '可溯源套刻记录',
+    name: 'Traceable Overlay Record', name_zh: '可溯源套刻记录',
     unit: '份',
     category: 'part',
     props: [
@@ -581,7 +581,7 @@ export const OPTICAL_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/null-lens-wavefront-record',
-    name: '大口径 null lens 的整机波前记录',
+    name: 'Large-Aperture Null Lens System Wavefront Record', name_zh: '大口径 null lens 的整机波前记录',
     unit: '份',
     category: 'part',
     props: [
@@ -612,7 +612,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * PbSO₄ + 2C 的化学计量。PZT 只需要 99–99.9 % 的铅，所以不再精炼。
      */
     id: 'make/lead',
-    name: '铅制备',
+    name: 'Lead Production', name_zh: '铅制备',
     produces: [
       {
         item: 'mat/lead',
@@ -653,7 +653,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * PZT 粉）实现，损失按 2–5 % 记，不另列条目。
      */
     id: 'make/pzt-ceramic',
-    name: 'PZT 陶瓷片制造',
+    name: 'PZT Ceramic Plate Manufacturing', name_zh: 'PZT 陶瓷片制造',
     produces: [
       {
         item: 'plant/pzt-stage/pzt-ceramic',
@@ -699,7 +699,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 缺口臂的长度比，不靠装配。
      */
     id: 'make/pzt-flexure',
-    name: 'PZT 台的柔性杠杆与导向制造',
+    name: 'PZT Stage Flexure Lever and Guide Manufacturing', name_zh: 'PZT 台的柔性杠杆与导向制造',
     produces: [
       {
         item: 'plant/pzt-stage/flexure',
@@ -737,7 +737,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 差分两只传感器抵消共模热漂。0.05–0.1 nm 是设计分辨。
      */
     id: 'make/pzt-capacitive-sensor',
-    name: 'PZT 电容位移传感器制造',
+    name: 'PZT Capacitive Displacement Sensor Manufacturing', name_zh: 'PZT 电容位移传感器制造',
     produces: [
       {
         item: 'plant/pzt-stage/capacitive-sensor',
@@ -783,7 +783,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * kV 级源。比较环把电容传感器读数与设定值相减，控制励磁/串联微调。
      */
     id: 'make/pzt-driver',
-    name: 'PZT 闭环驱动制造',
+    name: 'PZT Closed-Loop Driver Manufacturing', name_zh: 'PZT 闭环驱动制造',
     produces: [
       {
         item: 'plant/pzt-stage/driver',
@@ -827,7 +827,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 八帧相位 11° ⇒ 0.008 nm，给台的 0.1 nm 分辨一个独立尺。
      */
     id: 'make/pzt-stage',
-    name: 'PZT 移相/扫描台制造',
+    name: 'PZT Phase Shift/Scan Stage Manufacturing', name_zh: 'PZT 移相/扫描台制造',
     produces: [
       {
         item: 'plant/pzt-stage',
@@ -874,7 +874,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 把非球面修到 1 nm 级。面形 0.8–1.2 nm 是设计值。
      */
     id: 'make/mirau-lens-group',
-    name: 'Mirau 物镜的镜组制造',
+    name: 'Mirau Objective Lens Group Manufacturing', name_zh: 'Mirau 物镜的镜组制造',
     produces: [
       {
         item: 'plant/mirau-objective/lens-group',
@@ -913,7 +913,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 1.15 µm 好一倍，正好卡在 1–2 µm 的同轴公差里。
      */
     id: 'make/mirau-barrel',
-    name: 'Mirau 物镜筒制造',
+    name: 'Mirau Objective Barrel Manufacturing', name_zh: 'Mirau 物镜筒制造',
     produces: [
       {
         item: 'plant/mirau-objective/barrel',
@@ -952,7 +952,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 参考臂与测试臂的波前；NA 0.4–0.55、工作距 1.5–3 mm。
      */
     id: 'make/mirau-objective',
-    name: 'Mirau 干涉物镜制造',
+    name: 'Mirau Interference Objective Manufacturing', name_zh: 'Mirau 干涉物镜制造',
     produces: [
       {
         item: 'plant/mirau-objective',
@@ -996,7 +996,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * （φ20 µm 钨丝断丝率 50 %）。
      */
     id: 'make/halogen-lamp',
-    name: '白光光源卤素灯制造',
+    name: 'White-Light Source Halogen Lamp Manufacturing', name_zh: '白光光源卤素灯制造',
     produces: [
       {
         item: 'plant/white-light-source/halogen-lamp',
@@ -1035,7 +1035,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 是两片裸石英的菲涅耳 + 吸收（每面 4 %，四面前后 85 %，加吸收 3 %）。
      */
     id: 'make/white-light-condenser',
-    name: '白光光源白光聚光镜制造',
+    name: 'White-Light Source Condenser Manufacturing', name_zh: '白光光源白光聚光镜制造',
     produces: [
       {
         item: 'plant/white-light-source/condenser',
@@ -1073,7 +1073,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * + 空位）。它不是单色器；VSI 要宽谱，滤光只是切掉带外杂散光。
      */
     id: 'make/white-light-source',
-    name: '白光光源制造',
+    name: 'White-Light Source Manufacturing', name_zh: '白光光源制造',
     produces: [
       {
         item: 'plant/white-light-source',
@@ -1115,7 +1115,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 固定图形噪声不降，靠平场校正扣。
      */
     id: 'make/metrology-ccd-frame-integrator',
-    name: '计量 CCD 的帧积分器制造',
+    name: 'Metrology CCD Frame Integrator Manufacturing', name_zh: '计量 CCD 的帧积分器制造',
     produces: [
       {
         item: 'plant/metrology-ccd/frame-integrator',
@@ -1154,7 +1154,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 不冷却：10 ms 曝光的暗电荷 <1 e-；长曝光要另加制冷（缺口）。
      */
     id: 'make/metrology-ccd',
-    name: '计量 CCD 制造',
+    name: 'Metrology CCD Manufacturing', name_zh: '计量 CCD 制造',
     produces: [
       {
         item: 'plant/metrology-ccd',
@@ -1193,7 +1193,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * λ 450–650 nm）。视场 0.08–0.15 mm，装 8–75 个靶周期。
      */
     id: 'make/overlay-objective',
-    name: '套刻量具的成像物镜制造',
+    name: 'Overlay Metrology Imaging Objective Manufacturing', name_zh: '套刻量具的成像物镜制造',
     produces: [
       {
         item: 'plant/overlay-metrology/objective',
@@ -1236,7 +1236,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 0.5 nm 不确定度是设计目标，标准片标定后扣系统项。
      */
     id: 'make/overlay-metrology',
-    name: '成像式 DBO 套刻量具制造',
+    name: 'Imaging-Based DBO Overlay Metrology Tool Manufacturing', name_zh: '成像式 DBO 套刻量具制造',
     produces: [
       {
         item: 'plant/overlay-metrology',
@@ -1290,7 +1290,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * ④ 椭偏仪只判“膜在不在/均匀不均匀”，0.08 nm 低于它的 1 nm 下限。
      */
     id: 'make/step-standard-0.1nm',
-    name: '0.1 nm 台阶标准件制造',
+    name: '0.1 nm Step Height Standard Manufacturing', name_zh: '0.1 nm 台阶标准件制造',
     produces: [
       {
         item: 'std/step-standard-0.1nm',
@@ -1334,7 +1334,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 靶周期 2–10 µm；NA 0.9、视场 0.08–0.15 mm 装 8–75 个周期。
      */
     id: 'make/overlay-standard',
-    name: '套刻标准片制造',
+    name: 'Overlay Standard Wafer Manufacturing', name_zh: '套刻标准片制造',
     produces: [
       {
         item: 'std/overlay-standard',
@@ -1377,7 +1377,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 余量只有 1–2 倍，写成设计值。
      */
     id: 'make/optical-profiler',
-    name: '白光干涉光学轮廓仪装配',
+    name: 'White-Light Interferometric Optical Profiler Assembly', name_zh: '白光干涉光学轮廓仪装配',
     produces: [
       {
         item: 'plant/cmos-test/optical-profiler',
@@ -1428,7 +1428,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 记录的是读数，不是设计值；`uncertainty` 0–0.2 nm 是记录元数据。
      */
     id: 'measure/optical-profiler-step',
-    name: '台阶高度测量',
+    name: 'Step Height Measurement', name_zh: '台阶高度测量',
     produces: [
       {
         item: 'mat/step-height-record',
@@ -1477,7 +1477,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 标准片的 0/2/5/10 nm 四点给线性与零点。
      */
     id: 'measure/overlay-dbo',
-    name: '可溯源套刻测量',
+    name: 'Traceable Overlay Measurement', name_zh: '可溯源套刻测量',
     produces: [
       {
         item: 'mat/overlay-record-traceable',
@@ -1529,7 +1529,7 @@ export const OPTICAL_METROLOGY_ROUTES: readonly Route[] = [
      * 仍是 design。
      */
     id: 'measure/null-lens-wavefront',
-    name: '大口径 null lens 的整机波前测量',
+    name: 'Large-Aperture Null Lens System Wavefront Measurement', name_zh: '大口径 null lens 的整机波前测量',
     produces: [
       {
         item: 'mat/null-lens-wavefront-record',

@@ -25,7 +25,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/wheel-balance-record',
-    name: '砂轮动平衡记录',
+    name: 'Grinding Wheel Dynamic Balance Record', name_zh: '砂轮动平衡记录',
     unit: '份',
     category: 'part',
     props: [
@@ -55,7 +55,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/axis-sync-record',
-    name: '24 轴同步性记录',
+    name: '24-Axis Synchronism Record', name_zh: '24 轴同步性记录',
     unit: '份',
     category: 'part',
     props: [
@@ -80,7 +80,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/grinding-wheel-balance',
-    name: '砂轮动平衡测量',
+    name: 'Grinding Wheel Dynamic Balance Measurement', name_zh: '砂轮动平衡测量',
     produces: [
       {
         item: 'mat/wheel-balance-record',
@@ -141,7 +141,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/24axis-synchronism',
-    name: '24 轴同步性测量',
+    name: '24-Axis Synchronism Measurement', name_zh: '24 轴同步性测量',
     produces: [
       {
         item: 'mat/axis-sync-record',

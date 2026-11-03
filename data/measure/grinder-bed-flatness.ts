@@ -19,7 +19,7 @@ export const GRINDER_BED_FLATNESS_ROUTES: readonly Route[] = [
   {
     /** 床身导轨面平面度：钠光干涉 + φ300 平晶。 */
     id: 'measure/grinder-bed-flatness',
-    name: '磨床床身测量',
+    name: 'Grinder Bed Measurement', name_zh: '磨床床身测量',
     produces: [
       {
         item: 'plant/grinder/bed',

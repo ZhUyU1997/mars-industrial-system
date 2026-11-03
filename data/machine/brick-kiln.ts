@@ -39,10 +39,10 @@ export const BRICK_ITEMS: readonly Item[] = [
    * 它是第一件**用窑烧出来的东西** —— 而它烧出来又是为了砌下一座更大的窑。
    * 这个循环在人类史上跑了五千年。
    */
-  { id: 'std/firebrick-clay-general', name: '黏土砖', unit: '块', category: 'part' },
+  { id: 'std/firebrick-clay-general', name: 'Clay Brick', name_zh: '黏土砖', unit: '块', category: 'part' },
 
   /** 砖窑窑体。黏土砖砌筑的拱顶窑，只有砖与泥，没有一根金属件。 */
-  { id: 'plant/brick-kiln/body', name: '砖窑窑体', unit: '件', category: 'part' },
+  { id: 'plant/brick-kiln/body', name: 'Brick Kiln Body', name_zh: '砖窑窑体', unit: '件', category: 'part' },
 ];
 
 export const BRICK_ROUTES: readonly Route[] = [
@@ -56,7 +56,7 @@ export const BRICK_ROUTES: readonly Route[] = [
      * 用陶瓷模（砖窑烧出的第一批瓷件之一）。
      */
     id: 'make/firebrick-clay',
-    name: '黏土砖制造',
+    name: 'Clay Brick Manufacturing', name_zh: '黏土砖制造',
     produces: [{ item: 'std/firebrick-clay-general', qty: q(800) }],
     uses: [
       { anyOf: [{ item: 'mars/regolith', qty: q(1000) }] },
@@ -77,7 +77,7 @@ export const BRICK_ROUTES: readonly Route[] = [
      * 与土窑的区别是它的砖是烧过的 —— 烧过的土能装住更高的火。
      */
     id: 'make/brick-kiln-body',
-    name: '砖窑窑体制造',
+    name: 'Brick Kiln Body Manufacturing', name_zh: '砖窑窑体制造',
     produces: [{ item: 'plant/brick-kiln/body', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/firebrick-clay-general', qty: q(5000) }] },
@@ -100,7 +100,7 @@ export const BRICK_ROUTES: readonly Route[] = [
  */
 export const BRICK_KILN: Item = {
   id: 'plant/brick-kiln',
-  name: '砖窑',
+  name: 'Brick Kiln', name_zh: '砖窑',
   unit: '座',
   category: 'machine',
   holds: [{ param: 'temperature', min: 1300, max: 1500 }],
@@ -125,7 +125,7 @@ export const BRICK_KILN: Item = {
  */
 export const GLASS_BY_BRICK_KILN: Route = {
   id: 'make/glass-brick-kiln',
-  name: '玻璃制备',
+  name: 'Glass Production', name_zh: '玻璃制备',
   produces: [
     { item: 'mat/glass', qty: q(1000), gives: [
       { param: 'type', kind: 'enum', oneOf: ['soda-lime'] },
@@ -155,7 +155,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/brick-kiln',
-    name: '砖窑装配',
+    name: 'Brick Kiln Assembly', name_zh: '砖窑装配',
     produces: [{
       item: 'plant/brick-kiln',
       qty: q(1),

@@ -15,7 +15,7 @@ export const FUSION_ENERGY_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-tf-energy-record',
-    name: 'TF 储能记录',
+    name: 'TF Energy Storage Record', name_zh: 'TF 储能记录',
     unit: '份',
     category: 'part',
     props: [
@@ -31,7 +31,7 @@ export const FUSION_ENERGY_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-blanket-heat-record',
-    name: '包层热流记录',
+    name: 'Blanket Heat Flux Record', name_zh: '包层热流记录',
     unit: '份',
     category: 'part',
     props: [
@@ -47,7 +47,7 @@ export const FUSION_ENERGY_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-divertor-steady-record',
-    name: '偏滤器稳态热流记录',
+    name: 'Divertor Steady-State Heat Flux Record', name_zh: '偏滤器稳态热流记录',
     unit: '份',
     category: 'part',
     props: [
@@ -63,7 +63,7 @@ export const FUSION_ENERGY_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-divertor-transient-record',
-    name: '偏滤器瞬态热流记录',
+    name: 'Divertor Transient Heat Flux Record', name_zh: '偏滤器瞬态热流记录',
     unit: '份',
     category: 'part',
     props: [
@@ -81,7 +81,7 @@ export const FUSION_ENERGY_RECORD_ROUTES: readonly Route[] = [
      * calculated：41 GJ 公开储能，不是本线圈实测。
      */
     id: 'measure/fusion-tf-energy',
-    name: 'TF 储能测量',
+    name: 'TF Energy Storage Measurement', name_zh: 'TF 储能测量',
     produces: [
       {
         item: 'mat/fusion-tf-energy-record',
@@ -104,7 +104,7 @@ export const FUSION_ENERGY_RECORD_ROUTES: readonly Route[] = [
      * calculated：0.3–0.5 设计窗内取中，不是实测。
      */
     id: 'measure/fusion-blanket-heat',
-    name: '包层热流测量',
+    name: 'Blanket Heat Flux Measurement', name_zh: '包层热流测量',
     produces: [
       {
         item: 'mat/fusion-blanket-heat-record',
@@ -127,7 +127,7 @@ export const FUSION_ENERGY_RECORD_ROUTES: readonly Route[] = [
      * public-spec：ITER 稳态 10 MW/m²，不是本盒实测。
      */
     id: 'measure/fusion-divertor-steady',
-    name: '偏滤器稳态热流测量',
+    name: 'Divertor Steady-State Heat Flux Measurement', name_zh: '偏滤器稳态热流测量',
     produces: [
       {
         item: 'mat/fusion-divertor-steady-record',
@@ -150,7 +150,7 @@ export const FUSION_ENERGY_RECORD_ROUTES: readonly Route[] = [
      * public-spec：ITER 慢瞬态 20 MW/m²，不是实测。
      */
     id: 'measure/fusion-divertor-transient',
-    name: '偏滤器瞬态热流测量',
+    name: 'Divertor Transient Heat Flux Measurement', name_zh: '偏滤器瞬态热流测量',
     produces: [
       {
         item: 'mat/fusion-divertor-transient-record',

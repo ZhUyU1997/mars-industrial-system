@@ -72,7 +72,7 @@ async function main() {
       viewport: { width: 1600, height: 1000 },
       deviceScaleFactor: 1,
       colorScheme: 'dark',
-      locale: 'zh-CN',
+      locale: 'en-US',
     });
     const page = await context.newPage();
     page.on('console', (message) => {
@@ -83,7 +83,9 @@ async function main() {
       if (!request.url().includes('favicon')) errors.push(`requestfailed: ${request.url()} ${request.failure()?.errorText}`);
     });
 
-    await page.goto(url, { waitUntil: 'load', timeout: 60000 });
+    const target = new URL(url);
+    target.searchParams.set('lang', 'en');
+    await page.goto(target.toString(), { waitUntil: 'load', timeout: 60000 });
     await page.waitForFunction(() => Boolean(window.__viewer?.ready), null, { timeout: 60000 });
 
     const counts = await page.evaluate(() => window.__viewer.counts);
@@ -157,7 +159,7 @@ async function main() {
     const hoverText = (await hoverTooltip.textContent())?.trim().slice(0, 60);
     checks.push({
       name: '3D 悬停提示',
-      ok: Boolean(hoverVisible && hoverText && hoverText.includes('连接度')),
+      ok: Boolean(hoverVisible && hoverText && hoverText.includes('Degree')),
       value: { hoverVisible, hoverText },
     });
     await page.mouse.move(100, 400);
@@ -186,12 +188,34 @@ async function main() {
         selected &&
           detail &&
           detail.includes('lathe') &&
+          detail.includes('Precision Lathe') &&
           detail.includes('精密车床') &&
-          detail.includes('产出它的路线'),
+          detail.includes('Produced by'),
       ),
       value: detail?.slice(0, 80),
     });
     await page.screenshot({ path: join(SHOT_DIR, '02-item-lathe.png') });
+
+    // 语言切换：英文界面下保留中文名副标题，切到中文后界面与标签同步
+    await page.click('[data-lang="zh"]');
+    await page.waitForTimeout(700);
+    const zhBrand = (await page.textContent('.brand-text h1'))?.trim();
+    const zhDetail = await page.textContent('#details-body');
+    checks.push({
+      name: '中文界面切换',
+      ok: Boolean(
+        zhBrand === '火星工业体系' &&
+          zhDetail?.includes('精密车床') &&
+          zhDetail?.includes('产出它的路线'),
+      ),
+      value: { brand: zhBrand, detail: zhDetail?.slice(0, 50) },
+    });
+    await page.screenshot({ path: join(SHOT_DIR, '07-chinese.png') });
+    await page.evaluate(() => window.__viewer.clear());
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: join(SHOT_DIR, '08-chinese-overview.png') });
+    await page.click('[data-lang="en"]');
+    await page.waitForTimeout(600);
 
     // 过滤：关掉“执行”连线，可见连线应减少
     const beforeFilter = await page.evaluate(() => window.__viewer.stats());
@@ -267,6 +291,8 @@ async function main() {
         '04-focus-gauge.png',
         '05-overview-restored.png',
         '06-small-viewport.png',
+        '07-chinese.png',
+        '08-chinese-overview.png',
       ],
       checks,
       errors,

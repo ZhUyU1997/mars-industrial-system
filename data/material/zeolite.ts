@@ -44,7 +44,7 @@ export const GAS_PURIFY_ITEMS: readonly Item[] = [
    * 它吸水、也吸二氧化碳与极性分子 —— 所以它同时是"干燥剂"与"脱碳剂"。
    * 再生：250–300 °C 烘干。
    */
-  { id: 'mat/zeolite-4a', name: '4A 分子筛', unit: 'kg', category: 'material' },
+  { id: 'mat/zeolite-4a', name: '4A Molecular Sieve', name_zh: '4A 分子筛', unit: 'kg', category: 'material' },
 
   /**
    * 气体纯化单元。分子筛柱 + 冷阱 + 切换阀，装在扩散炉的气路上。
@@ -52,7 +52,7 @@ export const GAS_PURIFY_ITEMS: readonly Item[] = [
    * 它是扩散炉的一个零件，不单独占一台机器 —— 理由与真空机组相同：
    * 本层只有这一处要"干气"。
    */
-  { id: 'plant/diffusion-furnace/gas-purifier', name: '扩散炉气体纯化单元', unit: '件', category: 'part' },
+  { id: 'plant/diffusion-furnace/gas-purifier', name: 'Diffusion Furnace Gas Purification Unit', name_zh: '扩散炉气体纯化单元', unit: '件', category: 'part' },
 ];
 
 export const GAS_PURIFY_ROUTES: readonly Route[] = [
@@ -65,7 +65,7 @@ export const GAS_PURIFY_ROUTES: readonly Route[] = [
      * 收率只有一半：晶化后要洗掉多余的碱与未晶化的胶，洗水带走的都是料。
      */
     id: 'make/zeolite',
-    name: '分子筛制备',
+    name: 'Molecular Sieve Production', name_zh: '分子筛制备',
     produces: [{ item: 'mat/zeolite-4a', qty: q(400) }],
     uses: [
       { anyOf: [{ item: 'mat/sodium-silicate', qty: q(400) }] },
@@ -91,7 +91,7 @@ export const GAS_PURIFY_ROUTES: readonly Route[] = [
      * 一路加热再生，靠阀切换 —— 这层的第一套"连续运行"的吸附装置。
      */
     id: 'make/gas-purifier',
-    name: '扩散炉气体纯化单元制造',
+    name: 'Diffusion Furnace Gas Purification Unit Manufacturing', name_zh: '扩散炉气体纯化单元制造',
     produces: [{ item: 'plant/diffusion-furnace/gas-purifier', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/zeolite-4a', qty: q(20) }] },

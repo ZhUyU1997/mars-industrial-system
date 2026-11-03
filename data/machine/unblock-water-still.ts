@@ -382,7 +382,7 @@ export const UNBLOCK_STILL_ROUTES: readonly Route[] = [
      * 要拿它核（与 unblock-diffusion-tube 把量块放进 needs 同一条理由）。
      */
     id: 'make/water-still-cast',
-    name: '水抛光机石英蒸馏器制造',
+    name: 'Water Polisher Quartz Still Manufacturing', name_zh: '水抛光机石英蒸馏器制造',
     produces: [{ item: 'plant/water-polisher/still', qty: q(1) }],
     uses: [
       /**

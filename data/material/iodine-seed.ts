@@ -83,7 +83,7 @@ export const IODINE_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/iodine',
-    name: '碘',
+    name: 'Iodine', name_zh: '碘',
     unit: 'kg',
     category: 'material',
     props: [

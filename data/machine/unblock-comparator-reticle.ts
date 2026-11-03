@@ -297,7 +297,7 @@ export const UNBLOCK_COMPARATOR_RETICLE_ROUTES: readonly Route[] = [
      *  · **去刺只许沿沟向**：横向拖会把线磨宽 —— 线宽是这一件的判据之一（第四节①）
      */
     id: 'make/comparator-reticle-engraved',
-    name: '量块比较仪刻度尺与目镜制造',
+    name: 'Gauge Block Comparator Scale and Eyepiece Manufacturing', name_zh: '量块比较仪刻度尺与目镜制造',
     produces: [{ item: 'plant/comparator/reticle', qty: q(1) }],
     /**
      * 进 0.5 kg，出 1 件（净 0.07 kg）。明细在文件头第六节与下面的注释里。

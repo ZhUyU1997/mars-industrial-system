@@ -477,7 +477,7 @@ export const UNBLOCK_SUBLIM_CT_ROUTES: readonly Route[] = [
      *    压条的贴合面 0.05，都是**判据**，量块不加工。
      */
     id: 'make/sublimator-coldtrap-cast',
-    name: '升华器冷阱制造',
+    name: 'Sublimator Cold Trap Manufacturing', name_zh: '升华器冷阱制造',
     produces: [{ item: 'plant/sublimator/cold-trap', qty: q(1) }],
     uses: [
       /**

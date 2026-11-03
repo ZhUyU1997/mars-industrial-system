@@ -34,7 +34,7 @@ export const INGAAS_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/photodiode-ingaas',
-    name: 'InGaAs 光电二极管',
+    name: 'InGaAs Photodiode', name_zh: 'InGaAs 光电二极管',
     unit: '件',
     category: 'part',
     props: [

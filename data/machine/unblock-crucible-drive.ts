@@ -532,7 +532,7 @@ export const UNBLOCK_CRUCIBLE_DRIVE_ROUTES: readonly Route[] = [
      *    ±0.15–0.20（2000 h 后）；工业 ±0.01
      */
     id: 'make/crucible-drive-cast',
-    name: '坩埚托与升降旋转机构制造',
+    name: 'Crucible Support and Lift-Rotation Mechanism Manufacturing', name_zh: '坩埚托与升降旋转机构制造',
     produces: [{ item: 'plant/cz-puller/crucible-drive', qty: q(1) }],
     uses: [
       /**

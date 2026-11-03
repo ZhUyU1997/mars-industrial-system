@@ -32,7 +32,7 @@ export const UHF_SPARK_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/uhf-spark-source',
-    name: '高压测试台同轴火花隙源',
+    name: 'High-Voltage Test Bench Coaxial Spark Gap Source', name_zh: '高压测试台同轴火花隙源',
     unit: '件',
     category: 'part',
     props: [
@@ -53,7 +53,7 @@ export const UHF_SPARK_ROUTES: readonly Route[] = [
      *   → 火花隙源 1
      */
     id: 'make/uhf-spark-source',
-    name: '高压测试台同轴火花隙源制造',
+    name: 'High-Voltage Test Bench Coaxial Spark Gap Source Manufacturing', name_zh: '高压测试台同轴火花隙源制造',
     produces: [
       {
         item: 'plant/hv-test-bench/uhf-spark-source',

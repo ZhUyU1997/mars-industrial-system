@@ -99,26 +99,26 @@ export const XYLENE_ITEMS: readonly Item[] = [
    * 本层它只有一个去处：再上一个甲基变二甲苯。工业上甲苯的大头是调汽油
    * 与做 TNT —— 这两样本层都不做（没有内燃机汽油、不做炸药）。
    */
-  { id: 'mat/toluene', name: '甲苯', unit: 'kg', category: 'material' },
+  { id: 'mat/toluene', name: 'Toluene', name_zh: '甲苯', unit: 'kg', category: 'material' },
 
   /**
    * 混合二甲苯（邻 22 / 间 43 / 对 35 %）。邻二甲苯的进料。
    *
    * 它往下走一步就是真空精馏（plant/vacuum-column），见文件头第二节。
    */
-  { id: 'mat/xylene', name: '混合二甲苯', unit: 'kg', category: 'material' },
+  { id: 'mat/xylene', name: 'Mixed Xylene', name_zh: '混合二甲苯', unit: 'kg', category: 'material' },
 
   /**
    * 邻二甲苯。沸点 144.4 °C，三个异构体里唯一能用精馏分出来的。做苯酐的料。
    */
-  { id: 'mat/o-xylene', name: '邻二甲苯', unit: 'kg', category: 'material' },
+  { id: 'mat/o-xylene', name: 'o-Xylene', name_zh: '邻二甲苯', unit: 'kg', category: 'material' },
   /**
    * 间/对混二甲苯。真空精馏的塔底产物。
    *
    * 它分不开（差 0.7 °C），但混着也是好东西：油漆稀释剂、清洗剂、萃取剂。
    * 本层把它当溶剂副产 —— 不是废料。
    */
-  { id: 'mat/mp-xylene', name: '间/对混二甲苯', unit: 'kg', category: 'material' },
+  { id: 'mat/mp-xylene', name: 'Meta/Para Mixed Xylene', name_zh: '间/对混二甲苯', unit: 'kg', category: 'material' },
 
   /**
    * 苯酐（邻苯二甲酸酐）。白色片状固体，熔点 131 °C。
@@ -128,7 +128,7 @@ export const XYLENE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/phthalic-anhydride',
-    name: '苯酐',
+    name: 'Phthalic Anhydride', name_zh: '苯酐',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 98, max: 99.9, unit: '%', dir: 'atLeast' }],
@@ -145,7 +145,7 @@ export const XYLENE_ROUTES: readonly Route[] = [
      * 耐压壳的理由，不新增设备。
      */
     id: 'make/toluene',
-    name: '甲苯制备',
+    name: 'Toluene Production', name_zh: '甲苯制备',
     produces: [
       { item: 'mat/toluene', qty: q(1000) },
       {
@@ -175,7 +175,7 @@ export const XYLENE_ROUTES: readonly Route[] = [
      * 这条路线只记总量 —— 切异构体是下一台设备的事，而那台设备还没有。
      */
     id: 'make/xylene',
-    name: '混合二甲苯制备',
+    name: 'Mixed Xylene Production', name_zh: '混合二甲苯制备',
     produces: [
       { item: 'mat/xylene', qty: q(1000) },
       {
@@ -207,7 +207,7 @@ export const XYLENE_ROUTES: readonly Route[] = [
      * 会慢慢结焦，100 块板的持液量足够把塔釜糊住。
      */
     id: 'make/o-xylene',
-    name: '真空精馏切邻二甲苯制备',
+    name: 'o-Xylene Production by Vacuum Rectification', name_zh: '真空精馏切邻二甲苯制备',
     produces: [
       { item: 'mat/o-xylene', qty: q(220) },
       { item: 'mat/mp-xylene', qty: q(780) },
@@ -231,7 +231,7 @@ export const XYLENE_ROUTES: readonly Route[] = [
      * 1:60 以上防爆，空气里的氮会把苯酐分压冲低、冷凝不下来。
      */
     id: 'make/phthalic-anhydride',
-    name: '邻二甲苯气相氧化到苯酐制备',
+    name: 'Phthalic Anhydride Production from o-Xylene Gas-Phase Oxidation', name_zh: '邻二甲苯气相氧化到苯酐制备',
     produces: [
       {
         item: 'mat/phthalic-anhydride',

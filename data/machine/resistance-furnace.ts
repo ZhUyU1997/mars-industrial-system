@@ -68,7 +68,7 @@ import { q } from '../../src/index.ts';
 
 export const RESISTANCE_FURNACE_PARTS: readonly Item[] = [
   /** 炉壳。薄钢板卷焊成箱，开炉门、接线孔与排气口；外壳温度靠衬层压下来。 */
-  { id: 'plant/resistance-furnace/shell', name: '电阻炉炉壳', unit: '件', category: 'part' },
+  { id: 'plant/resistance-furnace/shell', name: 'Resistance Furnace Shell', name_zh: '电阻炉炉壳', unit: '件', category: 'part' },
 
   /**
    * 耐火衬。高铝砖砌内层，矿棉填外层，中间夹一层铝箔反射。
@@ -77,7 +77,7 @@ export const RESISTANCE_FURNACE_PARTS: readonly Item[] = [
    * 砌筑与熔炼炉的炉衬同一手艺（机器人捣实/砌筑），但不需要烧结 ——
    * 电阻炉的衬不受熔渣侵蚀，只要耐温与保温。
    */
-  { id: 'plant/resistance-furnace/lining', name: '电阻炉耐火衬', unit: '件', category: 'part' },
+  { id: 'plant/resistance-furnace/lining', name: 'Resistance Furnace Refractory Lining', name_zh: '电阻炉耐火衬', unit: '件', category: 'part' },
 
   /**
    * 加热元件。镍铬丝绕在陶瓷管上，分三组挂在炉膛两侧与炉底。
@@ -85,7 +85,7 @@ export const RESISTANCE_FURNACE_PARTS: readonly Item[] = [
    * 分组是为了**调功率**：一组、两组、三组串并联，配上抽头就是几档功率。
    * 它是炉子里唯一会烧断的零件，也是唯一可以现场换的 —— 拔出来换一根。
    */
-  { id: 'plant/resistance-furnace/heating', name: '电阻炉加热元件', unit: '件', category: 'part' },
+  { id: 'plant/resistance-furnace/heating', name: 'Resistance Furnace Heating Element', name_zh: '电阻炉加热元件', unit: '件', category: 'part' },
 
   /**
    * 密封罐（氮化用）。不锈钢筒 + 法兰盖 + 氨入口 + 排气口。
@@ -93,17 +93,17 @@ export const RESISTANCE_FURNACE_PARTS: readonly Item[] = [
    * 平时不装；要氮化时放进炉膛，工件封在罐里通氨。**它是这台炉子从
    * "能加热"变成"能做表面强化"的那一件** —— 氮化、渗碳、光亮退火都靠它。
    */
-  { id: 'plant/resistance-furnace/retort', name: '电阻炉密封罐', unit: '件', category: 'part' },
+  { id: 'plant/resistance-furnace/retort', name: 'Resistance Furnace Retort', name_zh: '电阻炉密封罐', unit: '件', category: 'part' },
 
   /** 炉门与料筐。炉门带配重与压紧手轮；料筐用耐热钢盘条焊成，工件装筐进出。 */
-  { id: 'plant/resistance-furnace/door', name: '电阻炉炉门与料筐', unit: '件', category: 'part' },
+  { id: 'plant/resistance-furnace/door', name: 'Resistance Furnace Door and Charge Basket', name_zh: '电阻炉炉门与料筐', unit: '件', category: 'part' },
 ];
 
 export const RESISTANCE_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 炉壳。薄板剪折 → 焊接 → 开孔 → 与炉门框配作。 */
     id: 'make/resistance-shell',
-    name: '电阻炉炉壳制造',
+    name: 'Resistance Furnace Shell Manufacturing', name_zh: '电阻炉炉壳制造',
     produces: [{ item: 'plant/resistance-furnace/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -112,7 +112,7 @@ export const RESISTANCE_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 耐火衬。高铝砖砌内层，矿棉填外层 —— 砌是装配，执行者是机器人。 */
     id: 'make/resistance-lining',
-    name: '电阻炉耐火衬制造',
+    name: 'Resistance Furnace Refractory Lining Manufacturing', name_zh: '电阻炉耐火衬制造',
     produces: [{ item: 'plant/resistance-furnace/lining', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/refractory', qty: q(1) }] },
@@ -129,7 +129,7 @@ export const RESISTANCE_FURNACE_ROUTES: readonly Route[] = [
      * 模型只能写"绕"：没有设备，执行者是机器人。
      */
     id: 'make/resistance-heating',
-    name: '电阻炉加热元件制造',
+    name: 'Resistance Furnace Heating Element Manufacturing', name_zh: '电阻炉加热元件制造',
     produces: [{ item: 'plant/resistance-furnace/heating', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/resistance-wire', qty: q(1) }] },
@@ -141,7 +141,7 @@ export const RESISTANCE_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 密封罐。不锈钢筒卷焊 → 法兰盖车配 → 氨入口与排气管焊 → 试压。 */
     id: 'make/resistance-retort',
-    name: '电阻炉密封罐制造',
+    name: 'Resistance Furnace Retort Manufacturing', name_zh: '电阻炉密封罐制造',
     produces: [{ item: 'plant/resistance-furnace/retort', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -153,7 +153,7 @@ export const RESISTANCE_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 炉门与料筐。炉门钢板焊 + 配重；料筐用 40Cr 盘条焊成，耐热靠氧化皮。 */
     id: 'make/resistance-door',
-    name: '电阻炉炉门与料筐制造',
+    name: 'Resistance Furnace Door and Charge Basket Manufacturing', name_zh: '电阻炉炉门与料筐制造',
     produces: [{ item: 'plant/resistance-furnace/door', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -172,7 +172,7 @@ export const RESISTANCE_FURNACE_ROUTES: readonly Route[] = [
  */
 export const RESISTANCE_FURNACE: Item = {
   id: 'plant/resistance-furnace',
-  name: '电阻炉',
+  name: 'Resistance Furnace', name_zh: '电阻炉',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 100, max: 1100 }],
@@ -217,7 +217,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/resistance-furnace',
-    name: '电阻炉装配',
+    name: 'Resistance Furnace Assembly', name_zh: '电阻炉装配',
     produces: [{
       item: 'plant/resistance-furnace',
       qty: q(1),

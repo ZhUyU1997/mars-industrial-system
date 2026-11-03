@@ -24,13 +24,13 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const SIMS_COLUMN_PARTS: readonly Item[] = [
-  { id: 'plant/sims/primary-column/lens-tube', name: '二次离子质谱仪透镜筒', unit: '件', category: 'part' },
-  { id: 'plant/sims/primary-column/aperture', name: '二次离子质谱仪光阑', unit: '件', category: 'part' },
-  { id: 'plant/sims/primary-column/wien-electrode', name: 'Wien 极板', unit: '件', category: 'part' },
-  { id: 'plant/sims/primary-column/wien-yoke', name: 'Wien 磁轭', unit: '件', category: 'part' },
-  { id: 'plant/sims/primary-column/wien-coil', name: 'Wien 线圈', unit: '件', category: 'part' },
-  { id: 'plant/sims/primary-column/scan-electrode', name: '二次离子质谱仪八极扫描电极', unit: '件', category: 'part' },
-  { id: 'plant/sims/primary-column/quartz-insulator', name: '二次离子质谱仪石英绝缘子', unit: '组', category: 'part' },
+  { id: 'plant/sims/primary-column/lens-tube', name: 'Secondary Ion Mass Spectrometer Lens Tube', name_zh: '二次离子质谱仪透镜筒', unit: '件', category: 'part' },
+  { id: 'plant/sims/primary-column/aperture', name: 'Secondary Ion Mass Spectrometer Aperture', name_zh: '二次离子质谱仪光阑', unit: '件', category: 'part' },
+  { id: 'plant/sims/primary-column/wien-electrode', name: 'Wien Electrode', name_zh: 'Wien 极板', unit: '件', category: 'part' },
+  { id: 'plant/sims/primary-column/wien-yoke', name: 'Wien Yoke', name_zh: 'Wien 磁轭', unit: '件', category: 'part' },
+  { id: 'plant/sims/primary-column/wien-coil', name: 'Wien Coil', name_zh: 'Wien 线圈', unit: '件', category: 'part' },
+  { id: 'plant/sims/primary-column/scan-electrode', name: 'Secondary Ion Mass Spectrometer Octupole Scan Electrode', name_zh: '二次离子质谱仪八极扫描电极', unit: '件', category: 'part' },
+  { id: 'plant/sims/primary-column/quartz-insulator', name: 'Secondary Ion Mass Spectrometer Quartz Insulator', name_zh: '二次离子质谱仪石英绝缘子', unit: '组', category: 'part' },
 ];
 
 const SIMS_COLUMN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -39,7 +39,7 @@ const SIMS_COLUMN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 透镜筒 2 节：45 钢 4 kg，车孔径 φ2 / φ1，同心 0.02。 */
     id: 'make/sims-column-lens-tube',
-    name: '二次离子质谱仪透镜筒制造',
+    name: 'Secondary Ion Mass Spectrometer Lens Tube Manufacturing', name_zh: '二次离子质谱仪透镜筒制造',
     produces: [{ item: 'plant/sims/primary-column/lens-tube', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(4) }] }],
     performedBy: 'lathe',
@@ -47,7 +47,7 @@ const SIMS_COLUMN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 光阑：钼 0.1 kg，轧 0.05 mm 片，冲 φ2/φ1，研穿 φ0.5。 */
     id: 'make/sims-column-aperture',
-    name: '二次离子质谱仪光阑制造',
+    name: 'Secondary Ion Mass Spectrometer Aperture Manufacturing', name_zh: '二次离子质谱仪光阑制造',
     produces: [{ item: 'plant/sims/primary-column/aperture', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/molybdenum-powder', qty: q(1, 10) }] }],
     needs: ['std/wire-die-general'],
@@ -59,7 +59,7 @@ const SIMS_COLUMN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** Wien 极板 2 片：铜 0.15 kg，正交电场的一对极板。 */
     id: 'make/sims-wien-electrode',
-    name: 'Wien 极板制造',
+    name: 'Wien Electrode Manufacturing', name_zh: 'Wien 极板制造',
     produces: [{ item: 'plant/sims/primary-column/wien-electrode', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(3, 20) }] }],
     performedBy: 'lathe',
@@ -67,7 +67,7 @@ const SIMS_COLUMN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** Wien 磁轭 1 件：45 钢 1 kg，0.2 T 电磁铁的磁路。 */
     id: 'make/sims-wien-yoke',
-    name: 'Wien 磁轭制造',
+    name: 'Wien Yoke Manufacturing', name_zh: 'Wien 磁轭制造',
     produces: [{ item: 'plant/sims/primary-column/wien-yoke', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     steps: [
@@ -78,7 +78,7 @@ const SIMS_COLUMN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** Wien 线圈 1 只：铜 0.10 kg，绕在磁轭上。 */
     id: 'make/sims-wien-coil',
-    name: 'Wien 线圈制造',
+    name: 'Wien Coil Manufacturing', name_zh: 'Wien 线圈制造',
     produces: [{ item: 'plant/sims/primary-column/wien-coil', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(1, 10) }] }],
     performedBy: 'plant/winder',
@@ -86,7 +86,7 @@ const SIMS_COLUMN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 八极扫描电极 8 片：铜 0.35 kg，±0.8 V / 200 µm。 */
     id: 'make/sims-column-scan-electrode',
-    name: '二次离子质谱仪八极扫描电极制造',
+    name: 'Secondary Ion Mass Spectrometer Octupole Scan Electrode Manufacturing', name_zh: '二次离子质谱仪八极扫描电极制造',
     produces: [{ item: 'plant/sims/primary-column/scan-electrode', qty: q(8) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(7, 20) }] }],
     performedBy: 'plant/milling-machine',
@@ -94,7 +94,7 @@ const SIMS_COLUMN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 石英绝缘子：熔融石英 0.8 kg，非磁区绝缘。 */
     id: 'make/sims-column-quartz-insulator',
-    name: '二次离子质谱仪石英绝缘子制造',
+    name: 'Secondary Ion Mass Spectrometer Quartz Insulator Manufacturing', name_zh: '二次离子质谱仪石英绝缘子制造',
     produces: [{ item: 'plant/sims/primary-column/quartz-insulator', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/quartz-pure', qty: q(4, 5) }] }],
     performedBy: 'plant/grinder',

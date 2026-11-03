@@ -544,7 +544,7 @@ export const OES_GRATING_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/refractometer/oes-grating',
-    name: '1200 线/mm 平面反射光栅',
+    name: '1200 Lines/mm Plane Reflection Grating', name_zh: '1200 线/mm 平面反射光栅',
     unit: '件',
     category: 'part',
     props: [
@@ -570,7 +570,7 @@ export const OES_GRATING_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/refractometer/oes-mirror',
-    name: '折射仪光谱仪的球面镜',
+    name: 'Refractometer Spectrometer Spherical Mirror', name_zh: '折射仪光谱仪的球面镜',
     unit: '件',
     category: 'part',
     props: [
@@ -593,7 +593,7 @@ export const OES_GRATING_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/refractometer/oes-body',
-    name: '光谱仪的镜体/遮光罩',
+    name: 'Spectrometer Mirror Body / Light Shield', name_zh: '光谱仪的镜体/遮光罩',
     unit: '件',
     category: 'part',
   },
@@ -631,7 +631,7 @@ export const OES_GRATING_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/refractometer/oes-grating-spectrograph',
-    name: '折射仪光栅光谱仪模块',
+    name: 'Refractometer Grating Spectrometer Module', name_zh: '折射仪光栅光谱仪模块',
     unit: '件',
     category: 'part',
     props: [
@@ -675,7 +675,7 @@ export const OES_GRATING_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/refractometer-oes-grating',
-    name: '1200 线/mm 平面反射光栅制造',
+    name: '1200 Lines/mm Plane Reflection Grating Manufacturing', name_zh: '1200 线/mm 平面反射光栅制造',
     produces: [
       {
         item: 'plant/refractometer/oes-grating',
@@ -787,7 +787,7 @@ export const OES_GRATING_ROUTES: readonly Route[] = [
      * 钠 D + 铜弧标定，870 nm 外推 ±0.2 nm（自校）；R8-1 不变。
      */
     id: 'make/refractometer-oes-grating-blazed',
-    name: '1200 线/mm 平面反射光栅制造',
+    name: '1200 Lines/mm Plane Reflection Grating Manufacturing', name_zh: '1200 线/mm 平面反射光栅制造',
     produces: [
       {
         item: 'plant/refractometer/oes-grating',
@@ -879,7 +879,7 @@ export const OES_GRATING_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/refractometer-oes-mirror',
-    name: '折射仪光谱仪的球面镜制造',
+    name: 'Refractometer Spectrometer Spherical Mirror Manufacturing', name_zh: '折射仪光谱仪的球面镜制造',
     produces: [
       {
         item: 'plant/refractometer/oes-mirror',
@@ -933,7 +933,7 @@ export const OES_GRATING_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/refractometer-oes-body',
-    name: '光谱仪的镜体/遮光罩制造',
+    name: 'Spectrometer Mirror Body / Light Shield Manufacturing', name_zh: '光谱仪的镜体/遮光罩制造',
     produces: [{ item: 'plant/refractometer/oes-body', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/aluminium', qty: q(1, 2) }] },
@@ -986,7 +986,7 @@ export const OES_GRATING_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/refractometer-oes-grating-spectrograph',
-    name: '折射仪光栅光谱仪模块制造',
+    name: 'Refractometer Grating Spectrometer Module Manufacturing', name_zh: '折射仪光栅光谱仪模块制造',
     produces: [
       {
         item: 'plant/refractometer/oes-grating-spectrograph',

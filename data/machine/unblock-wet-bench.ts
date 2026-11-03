@@ -324,7 +324,7 @@ export const UNBLOCK_WET_BENCH_ROUTES: readonly Route[] = [
      *    砂眼、缩孔在压力边界上**没有"补一道焊"这条退路**（铸铁补焊要热焊，本层没有）。
      */
     id: 'make/wet-bench-vessel-cast',
-    name: '湿法台槽体与衬里制造',
+    name: 'Wet Bench Tank and Liner Manufacturing', name_zh: '湿法台槽体与衬里制造',
     produces: [{ item: 'plant/wet-bench/vessel', qty: q(1) }],
     uses: [
       {
@@ -699,7 +699,7 @@ export const UNBLOCK_WET_BENCH_ROUTES: readonly Route[] = [
      *    本层没有吊车，全靠机器人臂 —— 而机器人是要磨损的物，这件事算在它的工时里。
      */
     id: 'make/wet-bench-agitator-cast',
-    name: '湿法台搅拌与密封盖制造',
+    name: 'Wet Bench Agitation and Sealing Lid Manufacturing', name_zh: '湿法台搅拌与密封盖制造',
     produces: [{ item: 'plant/wet-bench/agitator', qty: q(1) }],
     uses: [
       {
@@ -981,7 +981,7 @@ export const UNBLOCK_WET_BENCH_ROUTES: readonly Route[] = [
      *    这一条写在装配那一段里，是这一件最容易出事故的地方。
      */
     id: 'make/wet-bench-jacket-cast',
-    name: '湿法台加热夹套制造',
+    name: 'Wet Bench Heating Jacket Manufacturing', name_zh: '湿法台加热夹套制造',
     produces: [{ item: 'plant/wet-bench/jacket', qty: q(1) }],
     uses: [
       {

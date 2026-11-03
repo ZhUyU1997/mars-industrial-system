@@ -284,7 +284,7 @@ export const UNBLOCK_DVM_ROUTES: readonly Route[] = [
      *  ③ 共模抑制 0 dB 对 120 dB（差一百万倍）：1 V 共模 / 1 kΩ = 满度 1400% 的假电压
      */
     id: 'make/dvm-mechanical',
-    name: '补偿式数字毫伏表制造',
+    name: 'Compensated Digital Millivoltmeter Manufacturing', name_zh: '补偿式数字毫伏表制造',
     produces: [{ item: 'std/dvm-general', qty: q(1) }],
     uses: [
       /**

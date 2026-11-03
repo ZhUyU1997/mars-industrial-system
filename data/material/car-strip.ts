@@ -32,7 +32,7 @@ export const CAR_STRIP_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/car-stripped-wafer',
-    name: 'CAR 刻蚀并去胶后的硅片',
+    name: 'Silicon Wafer after CAR Etch and Resist Strip', name_zh: 'CAR 刻蚀并去胶后的硅片',
     unit: '片',
     category: 'part',
     props: [
@@ -56,7 +56,7 @@ export const CAR_STRIP_ROUTES: readonly Route[] = [
      * ③ CD-SEM 读 80–200 nm。
      */
     id: 'make/car-stripped-wafer',
-    name: 'CAR 刻蚀并去胶后的硅片制造',
+    name: 'Silicon Wafer after CAR Etch and Resist Strip Manufacturing', name_zh: 'CAR 刻蚀并去胶后的硅片制造',
     produces: [
       {
         item: 'mat/car-stripped-wafer',

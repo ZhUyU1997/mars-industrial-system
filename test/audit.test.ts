@@ -197,12 +197,12 @@ describe('严格扩散审计', () => {
   it('design 扫描覆盖 give / under / need / composedOf', () => {
     const fixture: Description = {
       items: [
-        { id: 'mat/a', name: 'mat/a' },
-        { id: 'mat/b', name: 'mat/b' },
-        { id: 'part/c', name: 'part/c', category: 'part' },
+        { id: 'mat/a', name: 'mat/a', name_zh: 'mat/a' },
+        { id: 'mat/b', name: 'mat/b', name_zh: 'mat/b' },
+        { id: 'part/c', name: 'part/c', name_zh: 'part/c', category: 'part' },
         {
           id: 'part/p',
-          name: 'part/p',
+          name: 'part/p', name_zh: 'part/p',
           category: 'part',
           composedOf: [
             {
@@ -214,7 +214,7 @@ describe('严格扩散审计', () => {
         },
         {
           id: 'plant/m',
-          name: 'plant/m',
+          name: 'plant/m', name_zh: 'plant/m',
           category: 'machine',
           holds: [{ param: 'z', min: 0, max: 1, design: true }],
         },
@@ -223,7 +223,7 @@ describe('严格扩散审计', () => {
       routes: [
         {
           id: 'make/b',
-          name: 'make/b',
+          name: 'make/b', name_zh: 'make/b',
           produces: [
             {
               item: 'mat/b',
@@ -252,7 +252,7 @@ describe('严格扩散审计', () => {
         },
         {
           id: 'make/p',
-          name: 'make/p',
+          name: 'make/p', name_zh: 'make/p',
           produces: [{ item: 'part/p', qty: q(1) }],
           uses: [],
           needs: [],
@@ -271,28 +271,28 @@ describe('严格扩散审计', () => {
   it('record 出处：只有 measure/*、可达、窗口落在引用窗口内才算读数', () => {
     const fixture: Description = {
       items: [
-        { id: 'mat/a', name: 'mat/a' },
+        { id: 'mat/a', name: 'mat/a', name_zh: 'mat/a' },
         {
           id: 'mat/good-record',
-          name: 'mat/good-record',
+          name: 'mat/good-record', name_zh: 'mat/good-record',
           category: 'part',
           props: [{ param: 'x', kind: 'range', min: 1.5, max: 1.8, unit: '1' }],
         },
         {
           id: 'mat/qual-record',
-          name: 'mat/qual-record',
+          name: 'mat/qual-record', name_zh: 'mat/qual-record',
           category: 'part',
           props: [{ param: 'x', kind: 'range', min: 1.5, max: 1.8, unit: '1' }],
         },
-        { id: 'part/good', name: 'part/good', category: 'part' },
-        { id: 'part/qual', name: 'part/qual', category: 'part' },
-        { id: 'part/missing', name: 'part/missing', category: 'part' },
-        { id: 'part/wide', name: 'part/wide', category: 'part' },
+        { id: 'part/good', name: 'part/good', name_zh: 'part/good', category: 'part' },
+        { id: 'part/qual', name: 'part/qual', name_zh: 'part/qual', category: 'part' },
+        { id: 'part/missing', name: 'part/missing', name_zh: 'part/missing', category: 'part' },
+        { id: 'part/wide', name: 'part/wide', name_zh: 'part/wide', category: 'part' },
       ],
       routes: [
         {
           id: 'measure/good',
-          name: 'measure/good',
+          name: 'measure/good', name_zh: 'measure/good',
           produces: [
             {
               item: 'mat/good-record',
@@ -305,7 +305,7 @@ describe('严格扩散审计', () => {
         },
         {
           id: 'qual/qual',
-          name: 'qual/qual',
+          name: 'qual/qual', name_zh: 'qual/qual',
           produces: [
             {
               item: 'mat/qual-record',
@@ -318,7 +318,7 @@ describe('严格扩散审计', () => {
         },
         {
           id: 'make/good',
-          name: 'make/good',
+          name: 'make/good', name_zh: 'make/good',
           produces: [
             {
               item: 'part/good',
@@ -331,7 +331,7 @@ describe('严格扩散审计', () => {
         },
         {
           id: 'make/qual',
-          name: 'make/qual',
+          name: 'make/qual', name_zh: 'make/qual',
           produces: [
             {
               item: 'part/qual',
@@ -344,7 +344,7 @@ describe('严格扩散审计', () => {
         },
         {
           id: 'make/missing',
-          name: 'make/missing',
+          name: 'make/missing', name_zh: 'make/missing',
           produces: [
             {
               item: 'part/missing',
@@ -357,7 +357,7 @@ describe('严格扩散审计', () => {
         },
         {
           id: 'make/wide',
-          name: 'make/wide',
+          name: 'make/wide', name_zh: 'make/wide',
           produces: [
             {
               item: 'part/wide',
@@ -409,23 +409,23 @@ describe('严格扩散审计', () => {
       items: [
         {
           id: 'mat/record',
-          name: 'mat/record',
+          name: 'mat/record', name_zh: 'mat/record',
           category: 'part',
           props: [{ param: 'x', kind: 'range', min: 1.5, max: 1.8, unit: '1' }],
         },
-        { id: 'part/x', name: 'part/x', category: 'part' },
+        { id: 'part/x', name: 'part/x', name_zh: 'part/x', category: 'part' },
       ],
       routes: [
         {
           id: 'measure/record',
-          name: 'measure/record',
+          name: 'measure/record', name_zh: 'measure/record',
           produces: [{ item: 'mat/record', qty: q(1) }],
           uses: [],
           needs: [],
         },
         {
           id: 'make/x',
-          name: 'make/x',
+          name: 'make/x', name_zh: 'make/x',
           produces: [
             {
               item: 'part/x',

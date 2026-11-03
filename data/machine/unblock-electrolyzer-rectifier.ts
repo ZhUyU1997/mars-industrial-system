@@ -354,7 +354,7 @@ export const UNBLOCK_RECT_ITEMS: readonly Item[] = [];
 export const UNBLOCK_RECT_ROUTES: readonly Route[] = [
   {
     id: 'make/electrolyzer-rectifier-mg',
-    name: '电解槽整流电源制造',
+    name: 'Electrolyser Rectifier Power Supply Manufacturing', name_zh: '电解槽整流电源制造',
     produces: [{ item: 'plant/electrolyzer/rectifier', qty: q(1) }],
     uses: [
       /**

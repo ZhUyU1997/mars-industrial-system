@@ -19,9 +19,9 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const FARADAY_CUP_PARTS: readonly Item[] = [
-  { id: 'plant/e-beam-column/faraday-cup/graphite-cup', name: '电子束柱石墨杯', unit: '件', category: 'part' },
-  { id: 'plant/e-beam-column/faraday-cup/copper-ring', name: '电子束柱铜抑制环', unit: '件', category: 'part' },
-  { id: 'plant/e-beam-column/faraday-cup/quartz-insulator', name: '电子束柱石英绝缘垫', unit: '件', category: 'part' },
+  { id: 'plant/e-beam-column/faraday-cup/graphite-cup', name: 'Electron Beam Column Graphite Cup', name_zh: '电子束柱石墨杯', unit: '件', category: 'part' },
+  { id: 'plant/e-beam-column/faraday-cup/copper-ring', name: 'Electron Beam Column Copper Suppression Ring', name_zh: '电子束柱铜抑制环', unit: '件', category: 'part' },
+  { id: 'plant/e-beam-column/faraday-cup/quartz-insulator', name: 'Electron Beam Column Quartz Insulator Pad', name_zh: '电子束柱石英绝缘垫', unit: '件', category: 'part' },
 ];
 
 const FARADAY_CUP_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -30,7 +30,7 @@ const FARADAY_CUP_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 石墨杯：碳 0.2 kg，车 45° 内锥，口 φ8、深 15。 */
     id: 'make/faraday-graphite-cup',
-    name: '电子束柱石墨杯制造',
+    name: 'Electron Beam Column Graphite Cup Manufacturing', name_zh: '电子束柱石墨杯制造',
     produces: [{ item: 'plant/e-beam-column/faraday-cup/graphite-cup', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/carbon', qty: q(1, 5) }] }],
     performedBy: 'lathe',
@@ -38,7 +38,7 @@ const FARADAY_CUP_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 铜抑制环：铜 1 kg，车环与引线孔。 */
     id: 'make/faraday-copper-ring',
-    name: '电子束柱铜抑制环制造',
+    name: 'Electron Beam Column Copper Suppression Ring Manufacturing', name_zh: '电子束柱铜抑制环制造',
     produces: [{ item: 'plant/e-beam-column/faraday-cup/copper-ring', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(1) }] }],
     performedBy: 'lathe',
@@ -46,7 +46,7 @@ const FARADAY_CUP_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 石英绝缘垫：高纯石英 0.1 kg，磨到厚 3 mm、两端平行 0.01。 */
     id: 'make/faraday-quartz-insulator',
-    name: '电子束柱石英绝缘垫制造',
+    name: 'Electron Beam Column Quartz Insulator Pad Manufacturing', name_zh: '电子束柱石英绝缘垫制造',
     produces: [{ item: 'plant/e-beam-column/faraday-cup/quartz-insulator', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/quartz-pure', qty: q(1, 10) }] }],
     performedBy: 'plant/grinder',

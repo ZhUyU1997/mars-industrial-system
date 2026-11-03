@@ -269,7 +269,7 @@ export const UNBLOCK_ELECTRODE_ROUTES: readonly Route[] = [
      * "拿它核平不平"。
      */
     id: 'make/electrolyzer-electrode-castiron',
-    name: '电解槽电极制造',
+    name: 'Electrolyser Electrode Manufacturing', name_zh: '电解槽电极制造',
     produces: [{ item: 'plant/electrolyzer/electrode', qty: q(1) }],
     uses: [
       /**

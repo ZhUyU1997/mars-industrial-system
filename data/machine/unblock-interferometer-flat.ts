@@ -277,7 +277,7 @@ export const UNBLOCK_INTERF_FLAT_ROUTES: readonly Route[] = [
      *  ③ 工时 360 h 对 20 h（18 倍）：三块互研靠的是几百小时的随机性
      */
     id: 'make/interferometer-flat-lap',
-    name: '干涉仪平晶制造',
+    name: 'Interferometer Optical Flat Manufacturing', name_zh: '干涉仪平晶制造',
     // 三块互研 360 h ≈ 45 个工作日（含 18 次换位看条纹）。
     rate: { hours: q(360) },
     produces: [{ item: 'plant/interferometer/flat', qty: q(1) }],

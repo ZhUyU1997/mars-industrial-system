@@ -84,7 +84,7 @@ export const HBR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/bromine',
-    name: '溴',
+    name: 'Bromine', name_zh: '溴',
     unit: 'kg',
     category: 'material',
     props: [
@@ -104,7 +104,7 @@ export const HBR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/hbr',
-    name: '无水溴化氢',
+    name: 'Anhydrous Hydrogen Bromide', name_zh: '无水溴化氢',
     unit: 'kg',
     category: 'material',
     props: [
@@ -123,7 +123,7 @@ export const HBR_ROUTES: readonly Route[] = [
      *   卤水 18 t（Br 65 ppm）+ 氯 0.57 + 硫酸 5 + 水 20 → Br₂ 1 kg（85 % 收率）
      */
     id: 'make/bromine',
-    name: '提溴制备',
+    name: 'Bromine Extraction', name_zh: '提溴制备',
     produces: [
       {
         item: 'mat/bromine',
@@ -161,7 +161,7 @@ export const HBR_ROUTES: readonly Route[] = [
      *   Br₂ 1.04 + H₂ 0.013 + Pt 0.0005 + 硫酸 0.5 → HBr 1 kg（95 % 收率）
      */
     id: 'make/hbr',
-    name: 'HBr 合成',
+    name: 'HBr Synthesis', name_zh: 'HBr 合成',
     produces: [
       {
         item: 'mat/hbr',
@@ -214,7 +214,7 @@ export const HBR_ROUTES: readonly Route[] = [
      * 注册同生同灭 —— 分开放会在注册前留一条 unknown_item。
      */
     id: 'make/car-sti-trench-hbr-gas',
-    name: 'HBr/Cl₂ 刻蚀',
+    name: 'HBr/Cl₂ Etch', name_zh: 'HBr/Cl₂ 刻蚀',
     produces: [
       {
         item: 'mat/car-stripped-wafer',

@@ -141,7 +141,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/base',
-    name: '机器人底座',
+    name: 'Robot Base', name_zh: '机器人底座',
     unit: '件',
     category: 'part',
     // 安装面平面度。底座是整机的基准件：四个安装孔与第一轴法兰都从这一面装起，
@@ -162,7 +162,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/arm',
-    name: '机器人臂体',
+    name: 'Robot Arm Body', name_zh: '机器人臂体',
     unit: '件',
     category: 'part',
     // 两端轴承位圆度。臂体是铸铝 + 两端车轴承位 + 镶 45 钢套，磨完压进去再一起镗；
@@ -184,7 +184,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/thigh',
-    name: '机器人大腿',
+    name: 'Robot Thigh', name_zh: '机器人大腿',
     unit: '件',
     category: 'part',
     // 髋/膝关节轴承位圆度；工艺同臂体（铸铝 + 车 + 磨 + 镶套镗）。0–0.01 mm 过程能力推算。
@@ -192,7 +192,7 @@ export const ROBOT_PARTS: readonly Item[] = [
   },
   {
     id: 'plant/robot/shin',
-    name: '机器人小腿',
+    name: 'Robot Lower Leg', name_zh: '机器人小腿',
     unit: '件',
     category: 'part',
     // 膝/踝关节轴承位圆度；工艺同大腿。0–0.01 mm 过程能力推算。
@@ -200,7 +200,7 @@ export const ROBOT_PARTS: readonly Item[] = [
   },
   {
     id: 'plant/robot/torso',
-    name: '机器人躯干',
+    name: 'Robot Torso', name_zh: '机器人躯干',
     unit: '件',
     category: 'part',
     // 躯干与髋部/颈部的安装面平面度。0–0.05 mm 是铸造 + 铣削的过程能力推算。
@@ -208,7 +208,7 @@ export const ROBOT_PARTS: readonly Item[] = [
   },
   {
     id: 'plant/robot/foot',
-    name: '机器人足部',
+    name: 'Robot Foot', name_zh: '机器人足部',
     unit: '件',
     category: 'part',
     // 踝部安装面平面度与着地面贴合。0–0.05 mm 过程能力推算。
@@ -216,7 +216,7 @@ export const ROBOT_PARTS: readonly Item[] = [
   },
   {
     id: 'plant/robot/forearm',
-    name: '机器人前臂',
+    name: 'Robot Forearm', name_zh: '机器人前臂',
     unit: '件',
     category: 'part',
     // 腕/肘关节轴承位圆度；工艺同臂体。0–0.01 mm 过程能力推算。
@@ -224,7 +224,7 @@ export const ROBOT_PARTS: readonly Item[] = [
   },
   {
     id: 'plant/robot/neck',
-    name: '机器人颈部',
+    name: 'Robot Neck', name_zh: '机器人颈部',
     unit: '件',
     category: 'part',
     // 颈部回转轴承位圆度。0–0.01 mm 过程能力推算。
@@ -232,7 +232,7 @@ export const ROBOT_PARTS: readonly Item[] = [
   },
   {
     id: 'plant/robot/hand',
-    name: '机器人手部',
+    name: 'Robot Hand', name_zh: '机器人手部',
     unit: '件',
     category: 'part',
     // 手指驱动销孔/腕部接口圆度。0–0.01 mm 过程能力推算。
@@ -240,7 +240,7 @@ export const ROBOT_PARTS: readonly Item[] = [
   },
   {
     id: 'plant/robot/finger',
-    name: '机器人手指',
+    name: 'Robot Finger', name_zh: '机器人手指',
     unit: '件',
     category: 'part',
     // 指面平面度。指面是夹持接触面，0–0.02 mm 是铣 + 磨的过程能力推算。
@@ -322,7 +322,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/imu',
-    name: '机器人六轴惯性测量',
+    name: 'Robot 6-Axis Inertial Measurement', name_zh: '机器人六轴惯性测量',
     unit: '件',
     category: 'part',
     props: [
@@ -368,7 +368,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/force-sensor',
-    name: '六轴力/力矩传感器',
+    name: '6-Axis Force/Torque Sensor', name_zh: '六轴力/力矩传感器',
     unit: '件',
     category: 'part',
     props: [
@@ -441,7 +441,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/npu',
-    name: '机器人端侧 NPU',
+    name: 'Robot On-Device NPU', name_zh: '机器人端侧 NPU',
     unit: '件',
     category: 'part',
     props: [
@@ -511,7 +511,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/ethercat-slave',
-    name: 'EtherCAT 从站控制器',
+    name: 'EtherCAT Slave Controller', name_zh: 'EtherCAT 从站控制器',
     unit: '件',
     category: 'part',
     props: [
@@ -580,7 +580,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/battery',
-    name: '机器人动力电池',
+    name: 'Robot Power Battery', name_zh: '机器人动力电池',
     unit: '件',
     category: 'part',
     props: [
@@ -611,7 +611,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/camera',
-    name: '机器人的相机',
+    name: 'Robot Camera', name_zh: '机器人的相机',
     unit: '件',
     category: 'part',
     // 2 MP、0.35 µm（本层）到 40 nm（2026 堆叠 BSI）两档、全局快门、深度 0.2–3 m。
@@ -633,7 +633,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/servo',
-    name: '机器人伺服电机',
+    name: 'Robot Servo Motor', name_zh: '机器人伺服电机',
     unit: '件',
     category: 'part',
     // 绕组电阻与空载电流：伺服能用/不能用的现场判据（同标准电机一台一台检）。
@@ -653,7 +653,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/gripper',
-    name: '机器人末端夹爪',
+    name: 'Robot End Effector Gripper', name_zh: '机器人末端夹爪',
     unit: '件',
     category: 'part',
     // 指爪导轨面平面度。0–0.02 mm 是淬硬后磨导轨面的过程能力推算；
@@ -672,7 +672,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/harness',
-    name: '机器人线缆与拖链',
+    name: 'Robot Cables and Drag Chain', name_zh: '机器人线缆与拖链',
     unit: '件',
     category: 'part',
     // 成缆后的通路电阻。0–0.1 Ω 是压接 + 绞合的过程能力上限；
@@ -689,7 +689,7 @@ export const ROBOT_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/robot/controller',
-    name: '机器人控制柜',
+    name: 'Robot Control Cabinet', name_zh: '机器人控制柜',
     unit: '件',
     category: 'part',
     // 控制柜能带几根轴。**这是整机规格第一次有交付者**：七条控制柜路线里，
@@ -715,7 +715,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   {
     /** 底座。HT250 浇铸 → 铣底面 → 钻四个安装孔 → 车第一轴法兰止口。 */
     id: 'make/robot-base',
-    name: '机器人底座制造',
+    name: 'Robot Base Manufacturing', name_zh: '机器人底座制造',
     produces: [{
       item: 'plant/robot/base',
       qty: q(1),
@@ -730,7 +730,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   {
     /** 臂体。铸铝 → 车两端轴承位 → 镶 45 钢套 → 一起镗 → 钻减重孔。 */
     id: 'make/robot-arm',
-    name: '机器人臂体制造',
+    name: 'Robot Arm Body Manufacturing', name_zh: '机器人臂体制造',
     produces: [{
       item: 'plant/robot/arm',
       qty: q(1),
@@ -747,7 +747,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   {
     /** 大腿。与臂体同一套手艺：铸铝 → 车两端轴承位 → 镶 45 钢套 → 一起镗。 */
     id: 'make/robot-thigh',
-    name: '机器人大腿制造',
+    name: 'Robot Thigh Manufacturing', name_zh: '机器人大腿制造',
     produces: [{
       item: 'plant/robot/thigh',
       qty: q(1),
@@ -763,7 +763,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   {
     /** 小腿。同上，轴承位小一档。 */
     id: 'make/robot-shin',
-    name: '机器人小腿制造',
+    name: 'Robot Lower Leg Manufacturing', name_zh: '机器人小腿制造',
     produces: [{
       item: 'plant/robot/shin',
       qty: q(1),
@@ -784,7 +784,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
      * 绕线机、磨床、铣床都是现成的。差别只在那一只编码器上。
      */
     id: 'make/robot-servo',
-    name: '机器人伺服电机制造',
+    name: 'Robot Servo Motor Manufacturing', name_zh: '机器人伺服电机制造',
     produces: [{
       item: 'plant/robot/servo',
       qty: q(1),
@@ -844,7 +844,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   {
     /** 夹爪。指爪淬硬后磨导轨面；蜗杆车制，蜗轮滚齿 —— 自锁，断电不掉件。 */
     id: 'make/robot-gripper',
-    name: '机器人末端夹爪制造',
+    name: 'Robot End Effector Gripper Manufacturing', name_zh: '机器人末端夹爪制造',
     produces: [{
       item: 'plant/robot/gripper',
       qty: q(1),
@@ -883,7 +883,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
      * 0.2 以上，钢链节每弯一次就要刮掉一层衬套，几百万次的弯曲寿命直接归零。
      */
     id: 'make/robot-harness',
-    name: '机器人线缆与拖链制造',
+    name: 'Robot Cables and Drag Chain Manufacturing', name_zh: '机器人线缆与拖链制造',
     produces: [{
       item: 'plant/robot/harness',
       qty: q(1),
@@ -920,7 +920,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
      * DFS 选 `std/control-board-general`，它不进证明树属预期（PLAN 监控项，不删不塞）。
      */
     id: 'make/robot-controller',
-    name: '机器人控制柜制造',
+    name: 'Robot Control Cabinet Manufacturing', name_zh: '机器人控制柜制造',
     produces: [{ item: 'plant/robot/controller', qty: q(1), gives: [{ param: 'dof', kind: 'range', min: 6, max: 6 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -950,7 +950,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
      * 占地方（一只柜子变一排柜子）。
      */
     id: 'make/robot-controller-relay',
-    name: '机器人控制柜制造',
+    name: 'Robot Control Cabinet Manufacturing', name_zh: '机器人控制柜制造',
     produces: [
       {
         item: 'plant/robot/controller',
@@ -973,7 +973,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   // 铸铝 + 车轴承位 + 镶 45 钢套，设备还是熔炼炉、车床、铣床、磨床。
   {
     id: 'make/robot-torso',
-    name: '机器人躯干制造',
+    name: 'Robot Torso Manufacturing', name_zh: '机器人躯干制造',
     produces: [{
       item: 'plant/robot/torso',
       qty: q(1),
@@ -988,7 +988,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/robot-neck',
-    name: '机器人颈部制造',
+    name: 'Robot Neck Manufacturing', name_zh: '机器人颈部制造',
     produces: [{
       item: 'plant/robot/neck',
       qty: q(1),
@@ -1003,7 +1003,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/robot-foot',
-    name: '机器人足部制造',
+    name: 'Robot Foot Manufacturing', name_zh: '机器人足部制造',
     produces: [{
       item: 'plant/robot/foot',
       qty: q(1),
@@ -1018,7 +1018,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/robot-forearm',
-    name: '机器人前臂制造',
+    name: 'Robot Forearm Manufacturing', name_zh: '机器人前臂制造',
     produces: [{
       item: 'plant/robot/forearm',
       qty: q(1),
@@ -1033,7 +1033,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/robot-hand',
-    name: '机器人手部制造',
+    name: 'Robot Hand Manufacturing', name_zh: '机器人手部制造',
     produces: [{
       item: 'plant/robot/hand',
       qty: q(1),
@@ -1048,7 +1048,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/robot-finger',
-    name: '机器人手指制造',
+    name: 'Robot Finger Manufacturing', name_zh: '机器人手指制造',
     produces: [{
       item: 'plant/robot/finger',
       qty: q(1),
@@ -1092,7 +1092,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
      * 力矩放大到 20 N·m。砝码是工装，不进 uses。
      */
     id: 'make/robot-force-sensor',
-    name: '六轴力/力矩传感器制造',
+    name: '6-Axis Force/Torque Sensor Manufacturing', name_zh: '六轴力/力矩传感器制造',
     produces: [
       {
         item: 'plant/robot/force-sensor',
@@ -1262,7 +1262,7 @@ export const ROBOT_ROUTES: readonly Route[] = [
 export const ROBOT_SUB_ITEMS: readonly Item[] = [
   {
     id: 'plant/robot/brake',
-    name: '机器人制动器',
+    name: 'Robot Brake', name_zh: '机器人制动器',
     unit: '件',
     mass: q(6, 5),
     category: 'part',
@@ -1285,7 +1285,7 @@ export const ROBOT_SUB_ROUTES: readonly Route[] = [
      * 这一格不写 `need`，写在这里当缺口。
      */
     id: 'make/robot-brake',
-    name: '机器人制动器制造',
+    name: 'Robot Brake Manufacturing', name_zh: '机器人制动器制造',
     produces: [
       {
         item: 'plant/robot/brake',
@@ -1313,7 +1313,7 @@ export const ROBOT_SUB_ROUTES: readonly Route[] = [
      * 本层没有 assembly-bench，装配/检查/标定/跑合都在 metrology-room（19–21 °C）。
      */
     id: 'make/plant-robot',
-    name: '机器人整机制造',
+    name: 'Robot System Manufacturing', name_zh: '机器人整机制造',
     produces: [{
       item: 'plant/robot-assembled',
       qty: q(1),
@@ -1380,7 +1380,7 @@ export const ROBOT_SUB_ROUTES: readonly Route[] = [
 // ── 规范出口（由 tools/normalize-exports.mjs 生成；新文件照这两行写，勿手改） ──
 const ROBOT_ASSEMBLED: Item = {
   id: 'plant/robot-assembled',
-  name: '机器人整机',
+  name: 'Robot System', name_zh: '机器人整机',
   unit: '台',
   category: 'machine',
   // 与 plant/robot 同规格；无 composedOf，只由 make/plant-robot 装配。
@@ -1399,7 +1399,7 @@ export const SEED_ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/robot',
-    name: '机器人装配',
+    name: 'Robot Assembly', name_zh: '机器人装配',
     produces: [{
       item: 'plant/robot',
       qty: q(1),

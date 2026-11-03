@@ -26,7 +26,7 @@ import { q } from '../../src/index.ts';
 export const PRECIOUS_ITEMS: readonly Item[] = [
   {
     id: 'mat/silver',
-    name: '银',
+    name: 'Silver', name_zh: '银',
     unit: 'kg',
     category: 'material',
     // 银在电学上是本层最好的导体（比铜高 6%），也是唯一能"半透膜"做分光镜的金属
@@ -35,7 +35,7 @@ export const PRECIOUS_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/gold',
-    name: '金',
+    name: 'Gold', name_zh: '金',
     unit: 'kg',
     category: 'material',
     // 本层没有真用途（不氧化、不催化、太软）—— 但金是"电接触"的最后手段：
@@ -44,7 +44,7 @@ export const PRECIOUS_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/selenium',
-    name: '硒',
+    name: 'Selenium', name_zh: '硒',
     unit: 'kg',
     category: 'material',
     // 硒：整流片、光电池、玻璃脱色。本层没有光电池，但整流片用得上。
@@ -52,7 +52,7 @@ export const PRECIOUS_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/copper-sulfate',
-    name: '硫酸铜',
+    name: 'Copper Sulfate', name_zh: '硫酸铜',
     unit: 'kg',
     category: 'material',
     // 硫酸铜：电镀、浮选活化剂、杀菌。以前只能从"铜 + 硫酸"硬做，现在阳极泥是它的第二条来路。
@@ -72,7 +72,7 @@ export const PRECIOUS_ROUTES: readonly Route[] = [
      * 铜回来了（硫酸铜），贵金属富集了（渣），硒挥发了（单独收）。
      */
     id: 'make/anode-sludge-roast',
-    name: '硫酸铜制备',
+    name: 'Copper Sulfate Production', name_zh: '硫酸铜制备',
     produces: [
       { item: 'mat/copper-sulfate', qty: q(1200), gives: [{ param: 'purity', kind: 'range', min: 92 }] },
       { item: 'mat/selenium', qty: q(60), gives: [{ param: 'purity', kind: 'range', min: 92 }] },
@@ -112,7 +112,7 @@ export const PRECIOUS_ROUTES: readonly Route[] = [
      * 而铜置换只要铜片和搅拌 —— 这是本层的水平。代价是银里带 0.5–2 % 铜。
      */
     id: 'make/silver-from-sludge',
-    name: '银制备',
+    name: 'Silver Production', name_zh: '银制备',
     produces: [
       { item: 'mat/silver', qty: q(210), gives: [{ param: 'purity', kind: 'range', min: 95 }] },
       {
@@ -151,7 +151,7 @@ export const PRECIOUS_ROUTES: readonly Route[] = [
      * 这条记在降级里。
      */
     id: 'make/gold-from-sludge',
-    name: '金制备',
+    name: 'Gold Production', name_zh: '金制备',
     produces: [{ item: 'mat/gold', qty: q(12), gives: [{ param: 'purity', kind: 'range', min: 98 }] }],
     uses: [
       { anyOf: [{ item: 'mat/hcl', qty: q(400) }] },

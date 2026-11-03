@@ -502,7 +502,7 @@ export const UNBLOCK_THROTTLE_ROUTES: readonly Route[] = [
      * 28 µm 的 2.7 倍。**这只阀在设计点是一个节流孔，在现工况是一个开关。**
      */
     id: 'make/airsep-throttle-cast',
-    name: '空分节流阀制造',
+    name: 'Air Separation Throttle Valve Manufacturing', name_zh: '空分节流阀制造',
     produces: [{ item: 'plant/air-separator/throttle-valve', qty: q(1) }],
     uses: [
       {

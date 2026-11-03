@@ -51,7 +51,7 @@ export const ROTARY_CONVERTER_ITEMS: readonly Item[] = [
    *
    * 计量按台：它是一整台机器，重量与功率都依赖型号（与电机同理，不写质量）。
    */
-  { id: 'std/rectifier-rotary-general', name: '旋转变流机', unit: '台', category: 'part' },
+  { id: 'std/rectifier-rotary-general', name: 'Rotary Converter', name_zh: '旋转变流机', unit: '台', category: 'part' },
 
   /**
    * 中频发电机组。同一族机器，换一种发电机：转子冲片槽数多、极对数多，
@@ -63,7 +63,7 @@ export const ROTARY_CONVERTER_ITEMS: readonly Item[] = [
    * 与旋转变流机的差别：高频发电机做成**感应子式**（转子只是一圈凸极，无绕组、
    * 无换向器、无电刷），所以它比直流发电机省掉了电刷那处磨损 —— 只剩轴承。
    */
-  { id: 'std/frequency-converter-general', name: '中频发电机组', unit: '台', category: 'part',
+  { id: 'std/frequency-converter-general', name: 'Medium-Frequency Generator Set', name_zh: '中频发电机组', unit: '台', category: 'part',
     composedOf: [
       { item: 'std/frequency-converter-general/frame', qty: q(1) },
       { item: 'std/frequency-converter-general/stator', qty: q(1) },
@@ -86,7 +86,7 @@ export const ROTARY_CONVERTER_ROUTES: readonly Route[] = [
      * 用酚醛垫片代：耐温差、电弧一烧就碳化，换向器寿命因此更短。
      */
     id: 'make/rectifier-rotary',
-    name: '旋转变流机制造',
+    name: 'Rotary Converter Manufacturing', name_zh: '旋转变流机制造',
     produces: [{ item: 'std/rectifier-rotary-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(1) }] },
@@ -118,7 +118,7 @@ export const ROTARY_CONVERTER_ROUTES: readonly Route[] = [
      * 代价是效率与噪声：机组 80% 级，而半导体中频电源 92% 级。
      */
     id: 'make/frequency-converter',
-    name: '中频发电机组制造',
+    name: 'Medium-Frequency Generator Set Manufacturing', name_zh: '中频发电机组制造',
     produces: [{ item: 'std/frequency-converter-general', qty: q(1) }],
     // 机座、定子、转子、轴承在条目 composedOf 上；铜 1 kg 是端子与引线。
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(1) }] }],

@@ -56,7 +56,7 @@ export const CONTACTOR_ITEMS: readonly Item[] = [
    * 规格写"一档"而不是具体安数：与电机只造 7.5 kW 一种同理 —— 本层真正要的
    * 是**备件统一**，而不是每一台负载都精确匹配。
    */
-  { id: 'std/contactor-general', name: '交流接触器', unit: '件', category: 'part',
+  { id: 'std/contactor-general', name: 'AC Contactor', name_zh: '交流接触器', unit: '件', category: 'part',
     props: [{ param: 'ratedCurrent', kind: 'range', min: 6, max: 400, unit: 'A' }] },
 ];
 
@@ -73,7 +73,7 @@ export const CONTACTOR_ROUTES: readonly Route[] = [
      *   装配与调试  机器人手工：调极面间隙（0.1–0.3 mm）、测吸合电压、试通断
      */
     id: 'make/contactor',
-    name: '交流接触器制造',
+    name: 'AC Contactor Manufacturing', name_zh: '交流接触器制造',
     produces: [{ item: 'std/contactor-general', qty: q(1), gives: [{ param: 'ratedCurrent', kind: 'range', min: 10, max: 60, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(1) }] },

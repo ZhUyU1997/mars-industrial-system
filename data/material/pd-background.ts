@@ -38,7 +38,7 @@ export const PD_BACKGROUND_ITEMS: readonly Item[] = [
    * 均压环。φ400 主环、φ50 管，铝；100 kV 下表面场 <10 kV/mm。
    */
   {
-    id: 'plant/hv-test-bench/corona-ring', name: '高压测试台均压环',
+    id: 'plant/hv-test-bench/corona-ring', name: 'High-Voltage Test Bench Corona Ring', name_zh: '高压测试台均压环',
     unit: '件',
     category: 'part',
     props: [
@@ -57,7 +57,7 @@ export const PD_BACKGROUND_ROUTES: readonly Route[] = [
      *
      *   铝 2 → 均压环 1
      */
-    id: 'make/corona-ring', name: '高压测试台均压环制造',
+    id: 'make/corona-ring', name: 'High-Voltage Test Bench Corona Ring Manufacturing', name_zh: '高压测试台均压环制造',
     produces: [
       {
         item: 'plant/hv-test-bench/corona-ring',

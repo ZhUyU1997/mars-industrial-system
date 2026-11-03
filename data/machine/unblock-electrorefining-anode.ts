@@ -361,7 +361,7 @@ export const UNBLOCK_EREF_ANODE_ROUTES: readonly Route[] = [
      *    本条取 1200–1250，也就是过热度最小的那一档
      */
     id: 'make/electrorefining-anode-cast',
-    name: '电解精炼槽阳极板制造',
+    name: 'Electrorefining Cell Anode Plate Manufacturing', name_zh: '电解精炼槽阳极板制造',
     produces: [{ item: 'plant/electrorefining/anode', qty: q(1) }],
     uses: [
       /**

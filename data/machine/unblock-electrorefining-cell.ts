@@ -312,7 +312,7 @@ export const UNBLOCK_EREF_CELL_ROUTES: readonly Route[] = [
      * 砖怕撞。最容易漏掉的是第三条与第六条，它们不写在任何数字里，写在维护动作里。
      */
     id: 'make/electrorefining-cell-cast',
-    name: '电解精炼槽槽体制造',
+    name: 'Electrorefining Cell Tank Manufacturing', name_zh: '电解精炼槽槽体制造',
     produces: [{ item: 'plant/electrorefining/cell', qty: q(1) }],
     uses: [
       /**

@@ -394,7 +394,7 @@ export const UNBLOCK_DIST_SHELL_ROUTES: readonly Route[] = [
      *                     384 片碟簧才把它压回 71 MPa
      */
     id: 'make/distillation-shell-cast',
-    name: '精馏塔体与塔盘制造',
+    name: 'Rectification Column Body and Trays Manufacturing', name_zh: '精馏塔体与塔盘制造',
     produces: [{ item: 'plant/distillation-tower/shell', qty: q(1) }],
     uses: [
       {

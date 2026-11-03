@@ -209,7 +209,7 @@ export const UNBLOCK_DIFF_TUBE_ROUTES: readonly Route[] = [
      * 要拿它核（与 make/gauge-block-working 同一种写法）。
      */
     id: 'make/diffusion-tube-glass',
-    name: '扩散炉石英炉管与法兰制造',
+    name: 'Diffusion Furnace Quartz Tube and Flange Manufacturing', name_zh: '扩散炉石英炉管与法兰制造',
     produces: [{ item: 'plant/diffusion-furnace/tube', qty: q(1) }],
     uses: [
       /**

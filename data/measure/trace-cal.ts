@@ -91,7 +91,7 @@ export const TRACE_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/iodine-purity-record',
-    name: '碘纯度记录',
+    name: 'Iodine Purity Record', name_zh: '碘纯度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -111,7 +111,7 @@ export const TRACE_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/bf3-yield-record',
-    name: 'BF₃ 收率记录',
+    name: 'BF₃ Yield Record', name_zh: 'BF₃ 收率记录',
     unit: '份',
     category: 'part',
     props: [
@@ -135,7 +135,7 @@ export const TRACE_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ked-dl-record',
-    name: 'KED 八元素检出限记录',
+    name: 'KED Eight-Element Detection Limit Record', name_zh: 'KED 八元素检出限记录',
     unit: '份',
     category: 'part',
     props: [
@@ -157,7 +157,7 @@ export const TRACE_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/si28-enrichment-record',
-    name: '²⁸Si 富集度记录',
+    name: '²⁸Si Enrichment Record', name_zh: '²⁸Si 富集度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -179,7 +179,7 @@ export const TRACE_CAL_ROUTES: readonly Route[] = [
      *   1 g 碘 + 亚沸硝酸 + Ar → 记录 1 份
      */
     id: 'measure/iodine-purity',
-    name: '碘纯度测量',
+    name: 'Iodine Purity Measurement', name_zh: '碘纯度测量',
     produces: [
       {
         item: 'mat/iodine-purity-record',
@@ -231,7 +231,7 @@ export const TRACE_CAL_ROUTES: readonly Route[] = [
      *   0.1 kg 硼酸 + 0.1 kg HF + 0.1 kg 硫酸 → 记录 1 份
      */
     id: 'measure/bf3-yield',
-    name: 'BF₃ 收率测量',
+    name: 'BF₃ Yield Measurement', name_zh: 'BF₃ 收率测量',
     produces: [
       {
         item: 'mat/bf3-yield-record',
@@ -285,7 +285,7 @@ export const TRACE_CAL_ROUTES: readonly Route[] = [
      *   8 支单元素标液 + 亚沸硝酸 + Ar → 记录 1 份
      */
     id: 'measure/ked-dl',
-    name: 'KED 八元素检出限测量',
+    name: 'KED Eight-Element Detection Limit Measurement', name_zh: 'KED 八元素检出限测量',
     produces: [
       {
         item: 'mat/ked-dl-record',
@@ -338,7 +338,7 @@ export const TRACE_CAL_ROUTES: readonly Route[] = [
      *   0.1 g ²⁸Si + HF/HNO₃ + Ar → 记录 1 份
      */
     id: 'measure/si28-enrichment',
-    name: '²⁸Si 富集度测量',
+    name: '²⁸Si Enrichment Measurement', name_zh: '²⁸Si 富集度测量',
     produces: [
       {
         item: 'mat/si28-enrichment-record',

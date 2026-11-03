@@ -23,11 +23,11 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const STYLUS_TRAVERSE_PARTS: readonly Item[] = [
-  { id: 'plant/stylus-profilometer/traverse/frame', name: '触针式轮廓仪机座', unit: '件', category: 'part' },
-  { id: 'plant/stylus-profilometer/traverse/worm', name: '触针式轮廓仪蜗杆', unit: '件', category: 'part' },
-  { id: 'plant/stylus-profilometer/traverse/worm-wheel', name: '触针式轮廓仪蜗轮', unit: '件', category: 'part' },
-  { id: 'plant/stylus-profilometer/traverse/lead-screw', name: 'T2 丝杠', unit: '件', category: 'part' },
-  { id: 'plant/stylus-profilometer/traverse/anti-backlash-nut', name: '触针式轮廓仪消隙螺母', unit: '件', category: 'part' },
+  { id: 'plant/stylus-profilometer/traverse/frame', name: 'Stylus Profilometer Frame', name_zh: '触针式轮廓仪机座', unit: '件', category: 'part' },
+  { id: 'plant/stylus-profilometer/traverse/worm', name: 'Stylus Profilometer Worm', name_zh: '触针式轮廓仪蜗杆', unit: '件', category: 'part' },
+  { id: 'plant/stylus-profilometer/traverse/worm-wheel', name: 'Stylus Profilometer Worm Wheel', name_zh: '触针式轮廓仪蜗轮', unit: '件', category: 'part' },
+  { id: 'plant/stylus-profilometer/traverse/lead-screw', name: 'T2 Lead Screw', name_zh: 'T2 丝杠', unit: '件', category: 'part' },
+  { id: 'plant/stylus-profilometer/traverse/anti-backlash-nut', name: 'Stylus Profilometer Anti-Backlash Nut', name_zh: '触针式轮廓仪消隙螺母', unit: '件', category: 'part' },
 ];
 
 const STYLUS_TRAVERSE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -36,7 +36,7 @@ const STYLUS_TRAVERSE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 机座：HT250 3 kg，浇成后加工导轨与轴承座。 */
     id: 'make/stylus-traverse-frame',
-    name: '触针式轮廓仪机座制造',
+    name: 'Stylus Profilometer Frame Manufacturing', name_zh: '触针式轮廓仪机座制造',
     produces: [{ item: 'plant/stylus-profilometer/traverse/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(3) }] }],
     steps: [
@@ -47,7 +47,7 @@ const STYLUS_TRAVERSE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 蜗杆：45 钢 0.6 kg，m=1、1:48，齿面留 0.1 mm 磨量。 */
     id: 'make/stylus-traverse-worm',
-    name: '触针式轮廓仪蜗杆制造',
+    name: 'Stylus Profilometer Worm Manufacturing', name_zh: '触针式轮廓仪蜗杆制造',
     produces: [{ item: 'plant/stylus-profilometer/traverse/worm', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 5) }] }],
     steps: [
@@ -58,7 +58,7 @@ const STYLUS_TRAVERSE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 蜗轮：轴承钢 0.5 kg，48 齿，与蜗杆对研。 */
     id: 'make/stylus-traverse-worm-wheel',
-    name: '触针式轮廓仪蜗轮制造',
+    name: 'Stylus Profilometer Worm Wheel Manufacturing', name_zh: '触针式轮廓仪蜗轮制造',
     produces: [{ item: 'plant/stylus-profilometer/traverse/worm-wheel', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/bearing-steel', qty: q(1, 2) }] }],
     steps: [
@@ -69,7 +69,7 @@ const STYLUS_TRAVERSE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** T2 丝杠：45 钢 0.9 kg，导程 2 mm，中径 ±5 µm/300 mm。 */
     id: 'make/stylus-traverse-lead-screw',
-    name: 'T2 丝杠制造',
+    name: 'T2 Lead Screw Manufacturing', name_zh: 'T2 丝杠制造',
     produces: [{ item: 'plant/stylus-profilometer/traverse/lead-screw', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(9, 10) }] }],
     steps: [
@@ -80,7 +80,7 @@ const STYLUS_TRAVERSE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 消隙螺母：45 钢 0.5 kg，与丝杠配作，空回 ≤2 µm。 */
     id: 'make/stylus-traverse-anti-backlash-nut',
-    name: '触针式轮廓仪消隙螺母制造',
+    name: 'Stylus Profilometer Anti-Backlash Nut Manufacturing', name_zh: '触针式轮廓仪消隙螺母制造',
     produces: [{ item: 'plant/stylus-profilometer/traverse/anti-backlash-nut', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 2) }] }],
     steps: [

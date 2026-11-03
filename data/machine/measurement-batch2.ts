@@ -23,7 +23,7 @@ export const BATCH2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/weighbridge-500t',
-    name: '500 t 级称重台',
+    name: '500 t Class Weighing Platform', name_zh: '500 t 级称重台',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：台面、传感器、仪表按整台装配，不再拆独立零件，标 monolithic。
@@ -44,7 +44,7 @@ export const BATCH2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/laser-tracker-30m',
-    name: '30 m 激光跟踪仪',
+    name: '30 m Laser Tracker', name_zh: '30 m 激光跟踪仪',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：光学头、转台、跟踪控制按整台装配，不再拆独立零件，标 monolithic。
@@ -65,7 +65,7 @@ export const BATCH2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cryo-load-75kw',
-    name: '75 kW@4.5 K 冷量负载',
+    name: '75 kW@4.5 K Cooling Load', name_zh: '75 kW@4.5 K 冷量负载',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：加热器、冷屏、测量接口按整台装配，不再拆独立零件，标 monolithic。
@@ -89,7 +89,7 @@ export const BATCH2_ROUTES: readonly Route[] = [
      * 大质量校准砝码与液压测力机未建。
      */
     id: 'make/weighbridge-500t',
-    name: '500 t 级称重台制造',
+    name: '500 t Class Weighing Platform Manufacturing', name_zh: '500 t 级称重台制造',
     produces: [
       {
         item: 'plant/weighbridge-500t',
@@ -127,7 +127,7 @@ export const BATCH2_ROUTES: readonly Route[] = [
      * 短基线参考借用 plant/laser-straightness：travel 1–3 m、µm/m 级。
      */
     id: 'make/laser-tracker-30m',
-    name: '30 m 激光跟踪仪制造',
+    name: '30 m Laser Tracker Manufacturing', name_zh: '30 m 激光跟踪仪制造',
     produces: [
       {
         item: 'plant/laser-tracker-30m',
@@ -164,7 +164,7 @@ export const BATCH2_ROUTES: readonly Route[] = [
      * 满功率量热未做。
      */
     id: 'make/cryo-load-75kw',
-    name: '75 kW@4.5 K 冷量负载制造',
+    name: '75 kW@4.5 K Cooling Load Manufacturing', name_zh: '75 kW@4.5 K 冷量负载制造',
     produces: [
       {
         item: 'plant/cryo-load-75kw',

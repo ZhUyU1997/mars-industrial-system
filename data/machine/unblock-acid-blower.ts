@@ -556,7 +556,7 @@ export const UNBLOCK_ACID_BLOWER_ROUTES: readonly Route[] = [
      *     试压介质就是火星大气：霜点 −73 °C，比任何干燥机出来的气都干。
      */
     id: 'make/acid-blower-cast',
-    name: '制酸鼓风机制造',
+    name: 'Acid Plant Blower Manufacturing', name_zh: '制酸鼓风机制造',
     produces: [{ item: 'plant/acid-plant/blower', qty: q(1) }],
     uses: [
       /**

@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const RTA_ZONE_CONTROL_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/rta-zone-control-measure-record',
-    name: '16 区 RTA记录',
+    name: '16-Zone RTA Record', name_zh: '16 区 RTA记录',
     unit: '份',
     category: 'part',
     props: [
@@ -27,7 +27,7 @@ export const RTA_ZONE_CONTROL_MEASURE_ROUTES: readonly Route[] = [
      * **16 区 RTA：49 点热电偶片读分区均匀性。**
      */
     id: 'measure/rta-zone-control-uniformity',
-    name: '16 区 RTA 测量',
+    name: '16-Zone RTA Measurement', name_zh: '16 区 RTA 测量',
     produces: [
       {
         item: 'mat/rta-zone-control-measure-record',

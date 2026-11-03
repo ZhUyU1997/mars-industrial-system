@@ -208,7 +208,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/nh3-absorber',
-    name: '氨阱',
+    name: 'Ammonia Trap', name_zh: '氨阱',
     unit: '件',
     category: 'part',
     props: [
@@ -238,7 +238,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/nh3-moisture-analyzer/sample-panel',
-    name: '电解式水分仪无铜取样板',
+    name: 'Electrolytic Moisture Analyzer Copper-Free Sampling Panel', name_zh: '电解式水分仪无铜取样板',
     unit: '件',
     category: 'part',
     props: [
@@ -262,7 +262,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/nh3-moisture-analyzer/dry-zero',
-    name: '同批干燥 NH₃ 零气发生器',
+    name: 'Same-Batch Dry NH₃ Zero Gas Generator', name_zh: '同批干燥 NH₃ 零气发生器',
     unit: '件',
     category: 'part',
     props: [
@@ -283,7 +283,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/nh3-moisture-analyzer',
-    name: '电解式水分仪',
+    name: 'Electrolytic Moisture Analyzer', name_zh: '电解式水分仪',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 20, max: 45 }],
@@ -307,7 +307,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/zeolite-5a',
-    name: '5A 分子筛',
+    name: '5A Molecular Sieve', name_zh: '5A 分子筛',
     unit: 'kg',
     category: 'material',
     props: [
@@ -329,7 +329,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-tcd/sample-valve',
-    name: '六通进样阀',
+    name: '6-Port Injection Valve', name_zh: '六通进样阀',
     unit: '件',
     category: 'part',
     props: [
@@ -351,7 +351,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-tcd/mol-sieve-column',
-    name: '5A 分子筛柱',
+    name: '5A Molecular Sieve Column', name_zh: '5A 分子筛柱',
     unit: '件',
     category: 'part',
     props: [
@@ -373,7 +373,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-tcd/silica-column',
-    name: 'GC-TCD 硅胶柱',
+    name: 'GC-TCD Silica Gel Column', name_zh: 'GC-TCD 硅胶柱',
     unit: '件',
     category: 'part',
     props: [
@@ -396,7 +396,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-tcd/tcd-cell',
-    name: 'GC-TCD 四丝热导池',
+    name: 'GC-TCD Four-Wire Thermal Conductivity Cell', name_zh: 'GC-TCD 四丝热导池',
     unit: '件',
     category: 'part',
     props: [
@@ -415,7 +415,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-tcd/oven',
-    name: 'GC-TCD 柱温箱',
+    name: 'GC-TCD Column Oven', name_zh: 'GC-TCD 柱温箱',
     unit: '件',
     category: 'part',
     composedOf: [
@@ -432,9 +432,9 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
     ],
   },
 
-  { id: 'plant/gc-tcd/oven/shell', name: '炉壳', unit: '件', category: 'part' },
-  { id: 'plant/gc-tcd/oven/insulation', name: '炉体保温', unit: '件', category: 'part' },
-  { id: 'plant/gc-tcd/oven/heater', name: '炉丝', unit: '件', category: 'part' },
+  { id: 'plant/gc-tcd/oven/shell', name: 'Oven Shell', name_zh: '炉壳', unit: '件', category: 'part' },
+  { id: 'plant/gc-tcd/oven/insulation', name: 'Oven Insulation', name_zh: '炉体保温', unit: '件', category: 'part' },
+  { id: 'plant/gc-tcd/oven/heater', name: 'Oven Heating Element', name_zh: '炉丝', unit: '件', category: 'part' },
 
   /**
    * **载气板：Ar/H₂ 两路切换 + 三级净化床（4A / 200 °C 铜屑 / 500 °C 镁屑）。**
@@ -449,7 +449,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-tcd/carrier-panel',
-    name: 'GC-TCD 载气板',
+    name: 'GC-TCD Carrier Gas Panel', name_zh: 'GC-TCD 载气板',
     unit: '件',
     category: 'part',
     props: [
@@ -473,7 +473,7 @@ export const NH3_GAS_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-tcd',
-    name: 'GC-TCD 整机',
+    name: 'GC-TCD System', name_zh: 'GC-TCD 整机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -506,7 +506,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      * 酸床 100 mm + 指示床 20 mm + PTFE 端塞。装完称重，记装酸量（决定容量）。
      */
     id: 'make/nh3-absorber',
-    name: '氨阱制造',
+    name: 'Ammonia Trap Manufacturing', name_zh: '氨阱制造',
     produces: [
       {
         item: 'plant/nh3-absorber',
@@ -556,7 +556,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      *   80–150 mL/min、45–55 °C 伴热、死体积 4–6 cm³。
      */
     id: 'make/nh3-moisture-sample-panel',
-    name: '电解式水分仪无铜取样板制造',
+    name: 'Electrolytic Moisture Analyzer Copper-Free Sampling Panel Manufacturing', name_zh: '电解式水分仪无铜取样板制造',
     produces: [
       {
         item: 'plant/nh3-moisture-analyzer/sample-panel',
@@ -596,7 +596,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      * 用同批 NH₃ 通 10 h 到出口 NH₃ 与进口一致，再开始用。
      */
     id: 'make/nh3-moisture-dry-zero',
-    name: '同批干燥 NH₃ 零气发生器制造',
+    name: 'Same-Batch Dry NH₃ Zero Gas Generator Manufacturing', name_zh: '同批干燥 NH₃ 零气发生器制造',
     produces: [
       {
         item: 'plant/nh3-moisture-analyzer/dry-zero',
@@ -636,7 +636,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      * 三点标定（0.1/1/10 ppm，用零气 + 加湿法配）。
      */
     id: 'make/nh3-moisture-analyzer',
-    name: '水分仪装配',
+    name: 'Moisture Analyzer Assembly', name_zh: '水分仪装配',
     produces: [
       {
         item: 'plant/nh3-moisture-analyzer',
@@ -677,7 +677,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      * 110 °C 干燥 4 h、350 °C 活化 4 h。
      */
     id: 'make/zeolite-5a',
-    name: '5A 分子筛制备',
+    name: '5A Molecular Sieve Production', name_zh: '5A 分子筛制备',
     produces: [
       {
         item: 'mat/zeolite-5a',
@@ -712,7 +712,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      *   环 3–5 mL、漏率 1e-4–5e-4、伴热 40–60 °C。
      */
     id: 'make/gc-tcd-sample-valve',
-    name: '六通进样阀制造',
+    name: '6-Port Injection Valve Manufacturing', name_zh: '六通进样阀制造',
     produces: [
       {
         item: 'plant/gc-tcd/sample-valve',
@@ -746,7 +746,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      *   2–2.5 m、60–80 目、活化 330–370 °C。
      */
     id: 'make/gc-tcd-mol-sieve-column',
-    name: '5A 分子筛柱制造',
+    name: '5A Molecular Sieve Column Manufacturing', name_zh: '5A 分子筛柱制造',
     produces: [
       {
         item: 'plant/gc-tcd/mol-sieve-column',
@@ -780,7 +780,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      *   1–1.2 m、60–80 目、60–100 °C（CO₂ 6.8 min 出峰）。
      */
     id: 'make/gc-tcd-silica-column',
-    name: 'GC-TCD 硅胶柱制造',
+    name: 'GC-TCD Silica Gel Column Manufacturing', name_zh: 'GC-TCD 硅胶柱制造',
     produces: [
       {
         item: 'plant/gc-tcd/silica-column',
@@ -814,7 +814,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      *   4 丝、10–20 mV·mL/µg、池体 80–150 µL、100–140 °C。
      */
     id: 'make/gc-tcd-tcd-cell',
-    name: 'GC-TCD 四丝热导池制造',
+    name: 'GC-TCD Four-Wire Thermal Conductivity Cell Manufacturing', name_zh: 'GC-TCD 四丝热导池制造',
     produces: [
       {
         item: 'plant/gc-tcd/tcd-cell',
@@ -848,7 +848,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      * 柱温箱炉体：钢板箱体，8 kg 薄板剪折焊。
      */
     id: 'make/gc-tcd-oven-shell',
-    name: '炉壳制造',
+    name: 'Oven Shell Manufacturing', name_zh: '炉壳制造',
     produces: [{ item: 'plant/gc-tcd/oven/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(8) }] }],
     needs: [],
@@ -862,7 +862,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      * 柱温箱保温层：矿棉 1 kg，填在炉体与内胆之间。
      */
     id: 'make/gc-tcd-oven-insulation',
-    name: '炉体保温制造',
+    name: 'Oven Insulation Manufacturing', name_zh: '炉体保温制造',
     produces: [{ item: 'plant/gc-tcd/oven/insulation', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/mineral-wool', qty: q(1) }] }],
     needs: [],
@@ -876,7 +876,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      * 柱温箱加热器：铜线 0.3 kg 绕在炉体内壁。
      */
     id: 'make/gc-tcd-oven-heater',
-    name: '炉丝制造',
+    name: 'Oven Heating Element Manufacturing', name_zh: '炉丝制造',
     produces: [{ item: 'plant/gc-tcd/oven/heater', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper-wire', qty: q(3, 10) }] }],
     needs: [],
@@ -893,7 +893,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      * 子件路线见 make/gc-tcd-oven-shell / -insulation / -heater。
      */
     id: 'make/gc-tcd-oven',
-    name: 'GC-TCD 柱温箱制造',
+    name: 'GC-TCD Column Oven Manufacturing', name_zh: 'GC-TCD 柱温箱制造',
     produces: [
       {
         item: 'plant/gc-tcd/oven',
@@ -921,7 +921,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      * ⚠️ 镁床 500 °C 吸 N₂；铜床 200 °C 吸 O₂；4A 吸 H₂O/CO₂。三级串联后才到 99.9999 %。
      */
     id: 'make/gc-tcd-carrier-panel',
-    name: 'GC-TCD 载气板制造',
+    name: 'GC-TCD Carrier Gas Panel Manufacturing', name_zh: 'GC-TCD 载气板制造',
     produces: [
       {
         item: 'plant/gc-tcd/carrier-panel',
@@ -962,7 +962,7 @@ export const NH3_GAS_HW_ROUTES: readonly Route[] = [
      * 四道工序：装柱与阀 → 装池与桥路 → 装炉与控温 → 检漏与标定（1/10/100 ppm 动态配气）。
      */
     id: 'make/gc-tcd',
-    name: 'GC-TCD 装配',
+    name: 'GC-TCD Assembly', name_zh: 'GC-TCD 装配',
     produces: [
       {
         item: 'plant/gc-tcd',

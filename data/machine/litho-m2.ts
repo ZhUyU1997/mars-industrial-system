@@ -167,7 +167,7 @@ export const M2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-lamp/envelope',
-    name: '氙灯石英泡',
+    name: 'Xenon Lamp Quartz Envelope', name_zh: '氙灯石英泡',
     unit: '件',
     category: 'part',
     props: [{ param: 'pressure', kind: 'range', min: 0, max: 1000, unit: 'kPa', dir: 'atLeast' }],
@@ -185,7 +185,7 @@ export const M2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-lamp/electrode',
-    name: '氙灯钨电极',
+    name: 'Xenon Lamp Tungsten Electrode', name_zh: '氙灯钨电极',
     unit: '件',
     category: 'part',
     props: [{ param: 'temperature', kind: 'range', min: 0, max: 3400, unit: '°C', dir: 'atLeast' }],
@@ -204,7 +204,7 @@ export const M2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-lamp/condenser',
-    name: '氙灯石英聚光镜',
+    name: 'Xenon Lamp Quartz Condenser', name_zh: '氙灯石英聚光镜',
     unit: '件',
     category: 'part',
     props: [{ param: 'wavelength', kind: 'range', min: 150, max: 2500, unit: 'nm' }],
@@ -224,7 +224,7 @@ export const M2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-lamp/starter',
-    name: '氙灯高压启动器',
+    name: 'Xenon Lamp High-Voltage Starter', name_zh: '氙灯高压启动器',
     unit: '件',
     category: 'part',
     props: [{ param: 'voltage', kind: 'range', min: 0, max: 20000, unit: 'V', dir: 'atLeast' }],
@@ -245,7 +245,7 @@ export const M2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-lamp',
-    name: '氙灯',
+    name: 'Xenon Lamp', name_zh: '氙灯',
     unit: '台',
     category: 'machine',
     props: [
@@ -278,7 +278,7 @@ export const M2_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/cpu-16bit-general',
-    name: '10 000 门 16 位 CPU 芯片',
+    name: '10 000 Gate 16-Bit CPU Chip', name_zh: '10 000 门 16 位 CPU 芯片',
     unit: '片',
     category: 'part',
     props: [
@@ -332,7 +332,7 @@ export const M2_ROUTES: readonly Route[] = [
      *    只能靠"冲洗三遍、每遍 5 倍体积"的规程顶住。
      */
     id: 'make/xenon-lamp-envelope',
-    name: '氙灯石英泡制造',
+    name: 'Xenon Lamp Quartz Envelope Manufacturing', name_zh: '氙灯石英泡制造',
     produces: [
       {
         item: 'plant/xenon-lamp/envelope',
@@ -411,7 +411,7 @@ export const M2_ROUTES: readonly Route[] = [
      * （没有粒度级配，压坯的孔隙填不满）。
      */
     id: 'make/xenon-lamp-electrode',
-    name: '氙灯钨电极制造',
+    name: 'Xenon Lamp Tungsten Electrode Manufacturing', name_zh: '氙灯钨电极制造',
     produces: [
       {
         item: 'plant/xenon-lamp/electrode',
@@ -489,7 +489,7 @@ export const M2_ROUTES: readonly Route[] = [
      * 所以装配与检验进计量间（`holds` 19–21）。
      */
     id: 'make/xenon-lamp-condenser',
-    name: '氙灯石英聚光镜制造',
+    name: 'Xenon Lamp Quartz Condenser Manufacturing', name_zh: '氙灯石英聚光镜制造',
     produces: [
       {
         item: 'plant/xenon-lamp/condenser',
@@ -564,7 +564,7 @@ export const M2_ROUTES: readonly Route[] = [
      * 相反。所以启动器是这台灯上唯一能出厂全检的零件。
      */
     id: 'make/xenon-lamp-starter',
-    name: '氙灯高压启动器制造',
+    name: 'Xenon Lamp High-Voltage Starter Manufacturing', name_zh: '氙灯高压启动器制造',
     produces: [
       {
         item: 'plant/xenon-lamp/starter',
@@ -638,7 +638,7 @@ export const M2_ROUTES: readonly Route[] = [
      * "模型分不出厚胶薄胶"的缺口，就是这条路线留下的。
      */
     id: 'make/photoresist-thin',
-    name: '薄胶制备',
+    name: 'Thin Photoresist Production', name_zh: '薄胶制备',
     produces: [{ item: 'mat/photoresist', qty: q(4) }],
     uses: [
       { anyOf: [{ item: 'mat/photoresist', qty: q(3) }] },
@@ -713,7 +713,7 @@ export const M2_ROUTES: readonly Route[] = [
      * 的一笔账，也是"为什么贵"的真正答案。
      */
     id: 'make/photomask-halfmicron',
-    name: '接触式掩模制造',
+    name: 'Contact Mask Manufacturing', name_zh: '接触式掩模制造',
     produces: [
       {
         item: 'std/photomask-general',
@@ -802,7 +802,7 @@ export const M2_ROUTES: readonly Route[] = [
      * **所以这一档真正该改进的是布线，不是更短的波长** —— 这句话是本文件的结论。
      */
     id: 'make/cpu-16bit',
-    name: '10 000 门 16 位 CPU 芯片制造',
+    name: '10 000 Gate 16-Bit CPU Chip Manufacturing', name_zh: '10 000 门 16 位 CPU 芯片制造',
     produces: [
       {
         item: 'std/cpu-16bit-general',
@@ -919,7 +919,7 @@ export const M2_ROUTES: readonly Route[] = [
      * 控制器同一道工序、同一台设备）。24 只芯片的插装与测试 6 h。
      */
     id: 'make/robot-controller-16bit',
-    name: '机器人控制柜制造',
+    name: 'Robot Control Cabinet Manufacturing', name_zh: '机器人控制柜制造',
     produces: [{ item: 'plant/robot/controller', qty: q(1), gives: [{ param: 'dof', kind: 'range', min: 6, max: 6 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(2) }] },
@@ -962,7 +962,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/xenon-lamp',
-    name: '氙灯装配',
+    name: 'Xenon Lamp Assembly', name_zh: '氙灯装配',
     produces: [{
       item: 'plant/xenon-lamp',
       qty: q(1),

@@ -22,7 +22,7 @@ export const GRINDER_SPINDLE_MEASURE_ROUTES: readonly Route[] = [
   {
     /** 主轴径向跳动测量：比较仪 + 量块，盘车 8 点 × 3 圈。 */
     id: 'measure/grinder-spindle-runout',
-    name: '主轴径向跳动测量',
+    name: 'Spindle Radial Runout Measurement', name_zh: '主轴径向跳动测量',
     produces: [
       {
         item: 'plant/grinder/spindle',

@@ -95,7 +95,7 @@ export const RTA_ZONED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/zone-lamp',
-    name: '9 区灯阵',
+    name: '9-Zone Lamp Array', name_zh: '9 区灯阵',
     unit: '件',
     category: 'part',
     props: [
@@ -118,7 +118,7 @@ export const RTA_ZONED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta-zoned',
-    name: '±3 K 分区 RTA 整机',
+    name: '±3 K Zoned RTA System', name_zh: '±3 K 分区 RTA 整机',
     unit: '台',
     category: 'machine',
     props: [
@@ -152,7 +152,7 @@ export const RTA_ZONED_ROUTES: readonly Route[] = [
      * 相互偏差，不是 49 点片均匀性；本层没有 49 点均匀性读数。
      */
     id: 'make/rta-zone-lamp',
-    name: '9 区灯阵制造',
+    name: '9-Zone Lamp Array Manufacturing', name_zh: '9 区灯阵制造',
     produces: [
       {
         item: 'plant/rta/zone-lamp',
@@ -215,7 +215,7 @@ export const RTA_ZONED_ROUTES: readonly Route[] = [
      * 读数、无 200 mm 热电偶片），不写"已测"。
      */
     id: 'make/rta-zoned',
-    name: '±3 K 分区 RTA 整机制造',
+    name: '±3 K Zoned RTA System Manufacturing', name_zh: '±3 K 分区 RTA 整机制造',
     produces: [
       {
         item: 'plant/rta-zoned',

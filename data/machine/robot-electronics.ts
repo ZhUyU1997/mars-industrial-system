@@ -48,7 +48,7 @@ export const ROBOT_ELECTRONICS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/imu-asic-general',
-    name: '六通道 IMU 读出 ASIC',
+    name: '6-Channel IMU Readout ASIC', name_zh: '六通道 IMU 读出 ASIC',
     unit: '片',
     category: 'part',
     props: [
@@ -89,7 +89,7 @@ export const ROBOT_ELECTRONICS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/npu-die-40nm',
-    name: 'NPU 加速器裸片',
+    name: 'NPU Accelerator Die', name_zh: 'NPU 加速器裸片',
     unit: '片',
     category: 'part',
     props: [
@@ -123,7 +123,7 @@ export const ROBOT_ELECTRONICS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/phy-100mbps-general',
-    name: '100 Mbps 以太网 PHY',
+    name: '100 Mbps Ethernet PHY', name_zh: '100 Mbps 以太网 PHY',
     unit: '片',
     category: 'part',
     props: [
@@ -151,7 +151,7 @@ export const ROBOT_ELECTRONICS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/terminal-block-8p-general',
-    name: '8 位端子排',
+    name: '8-Position Terminal Block', name_zh: '8 位端子排',
     unit: '件',
     category: 'part',
     props: [
@@ -183,7 +183,7 @@ export const ROBOT_ELECTRONICS_ROUTES: readonly Route[] = [
      *   （每片 2.5×2.5 mm）；余是划片道、装架损耗与测试报废 10–20 %。
      */
     id: 'make/imu-asic-3um',
-    name: '六通道 IMU 读出 ASIC 制造',
+    name: '6-Channel IMU Readout ASIC Manufacturing', name_zh: '六通道 IMU 读出 ASIC 制造',
     produces: [
       {
         item: 'std/imu-asic-general',
@@ -279,7 +279,7 @@ export const ROBOT_ELECTRONICS_ROUTES: readonly Route[] = [
      * 定在 2–5 TOPS，承认这是"能造档"。
      */
     id: 'make/npu-die-40nm',
-    name: 'NPU 加速器裸片制造',
+    name: 'NPU Accelerator Die Manufacturing', name_zh: 'NPU 加速器裸片制造',
     produces: [
       {
         item: 'std/npu-die-40nm',
@@ -379,7 +379,7 @@ export const ROBOT_ELECTRONICS_ROUTES: readonly Route[] = [
      * EtherCAT 的合法物理层，但 E-bus 只能 5–10 m、不能变压器隔离。
      */
     id: 'make/phy-100mbps',
-    name: '100 Mbps 以太网 PHY 制造',
+    name: '100 Mbps Ethernet PHY Manufacturing', name_zh: '100 Mbps 以太网 PHY 制造',
     produces: [
       {
         item: 'std/phy-100mbps-general',
@@ -450,7 +450,7 @@ export const ROBOT_ELECTRONICS_ROUTES: readonly Route[] = [
      * 本层原来只有 1 MHz 与 5 MHz 两档，现在有 25 MHz 档。
      */
     id: 'make/quartz-resonator-25mhz',
-    name: '石英谐振器制造',
+    name: 'Quartz Resonator Manufacturing', name_zh: '石英谐振器制造',
     produces: [
       {
         item: 'std/quartz-resonator-general',
@@ -493,7 +493,7 @@ export const ROBOT_ELECTRONICS_ROUTES: readonly Route[] = [
      * 做不了，所以没有 RJ45 的外形与热插拔。
      */
     id: 'make/terminal-block-8p',
-    name: '8 位端子排制造',
+    name: '8-Position Terminal Block Manufacturing', name_zh: '8 位端子排制造',
     produces: [
       {
         item: 'std/terminal-block-8p-general',
@@ -569,7 +569,7 @@ export const ROBOT_ELECTRONICS_ROUTES: readonly Route[] = [
      *   → IMU 1 件（设计净重 25 g）；余是盖片切边、键合环、封装损耗。
      */
     id: 'make/robot-imu',
-    name: '机器人六轴惯性测量制造',
+    name: 'Robot 6-Axis Inertial Measurement Manufacturing', name_zh: '机器人六轴惯性测量制造',
     produces: [
       {
         item: 'plant/robot/imu',
@@ -699,7 +699,7 @@ export const ROBOT_ELECTRONICS_ROUTES: readonly Route[] = [
      * 具体读数待本机跑分收窄（R12：记录窗口 ⊆ 设计窗口，不冒充已测）。
      */
     id: 'make/robot-npu',
-    name: '机器人端侧 NPU 制造',
+    name: 'Robot On-Device NPU Manufacturing', name_zh: '机器人端侧 NPU 制造',
     produces: [
       {
         item: 'plant/robot/npu',
@@ -802,7 +802,7 @@ export const ROBOT_ELECTRONICS_ROUTES: readonly Route[] = [
      * `make/quartz-resonator-25mhz` 补上（原缺 5 倍）。
      */
     id: 'make/robot-ethercat-slave',
-    name: 'EtherCAT 从站控制器制造',
+    name: 'EtherCAT Slave Controller Manufacturing', name_zh: 'EtherCAT 从站控制器制造',
     produces: [
       {
         item: 'plant/robot/ethercat-slave',

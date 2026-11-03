@@ -79,7 +79,7 @@ export const EUV_HINA_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ref-flat-cal-record',
-    name: 'λ/1000 绝对检验干涉仪的校准记录',
+    name: 'λ/1000 Absolute Testing Interferometer Calibration Record', name_zh: 'λ/1000 绝对检验干涉仪的校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -102,7 +102,7 @@ export const EUV_HINA_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/overlay-record-hina',
-    name: 'high-NA 套刻记录',
+    name: 'High-NA Overlay Record', name_zh: 'high-NA 套刻记录',
     unit: '份',
     category: 'part',
     props: [
@@ -127,7 +127,7 @@ export const EUV_HINA_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/overlay-qual-record',
-    name: '可溯源套刻的资格记录条目记录',
+    name: 'Traceable Overlay Qualification Record Entry Record', name_zh: '可溯源套刻的资格记录条目记录',
     unit: '份',
     category: 'part',
     props: [
@@ -153,7 +153,7 @@ export const EUV_HINA_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/overlay-product-record',
-    name: '8 nm 首片的产品套刻资格记录',
+    name: '8 nm First Article Product Overlay Qualification Record', name_zh: '8 nm 首片的产品套刻资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -190,7 +190,7 @@ export const EUV_HINA_MEASURE_ROUTES: readonly Route[] = [
      * 交付的是 0.52 nm —— **不是 0.1 nm**。差的 5.2 倍见文件头第一节。
      */
     id: 'measure/ref-flat-interferometer-cal',
-    name: '可见光绝对检验干涉仪的校准',
+    name: 'Visible-Light Absolute Test Interferometer Calibration', name_zh: '可见光绝对检验干涉仪的校准',
     produces: [
       {
         item: 'mat/ref-flat-cal-record',
@@ -286,7 +286,7 @@ export const EUV_HINA_MEASURE_ROUTES: readonly Route[] = [
      * 写清 figure 实际落在 0.10–0.25 nm、roughness 0.08–0.20 nm、口径 φ300–660。
      */
     id: 'measure/euv-hina-atw-figure',
-    name: '镀完 50 对 Mo/Si 的投影镜测量',
+    name: 'Projection Mirror with 50 Mo/Si Pairs Measurement', name_zh: '镀完 50 对 Mo/Si 的投影镜测量',
     produces: [
       {
         item: 'plant/euv-stepper-hina/mirror',
@@ -373,7 +373,7 @@ export const EUV_HINA_MEASURE_ROUTES: readonly Route[] = [
      * 亚纳米 CD-SEM，见文件头第三节。
      */
     id: 'measure/euv-hina-overlay',
-    name: 'high-NA 套刻测量',
+    name: 'High-NA Overlay Measurement', name_zh: 'high-NA 套刻测量',
     produces: [
       {
         item: 'mat/overlay-record-hina',
@@ -442,7 +442,7 @@ export const EUV_HINA_MEASURE_ROUTES: readonly Route[] = [
      * 一组 10 点，把记录条目的 props 改成那一组读数。程序写完不等于测完。
      */
     id: 'measure/euv-hina-overlay-qual',
-    name: '可溯源套刻的资格记录条目测量',
+    name: 'Traceable Overlay Qualification Record Entry Measurement', name_zh: '可溯源套刻的资格记录条目测量',
     produces: [
       {
         item: 'mat/overlay-qual-record',
@@ -525,7 +525,7 @@ export const EUV_HINA_MEASURE_ROUTES: readonly Route[] = [
      * 8 nm 产品片上真跑，不能拿测试片顶。
      */
     id: 'measure/euv-hina-product-overlay-qual',
-    name: '可溯源套刻的资格记录条目测量',
+    name: 'Traceable Overlay Qualification Record Entry Measurement', name_zh: '可溯源套刻的资格记录条目测量',
     produces: [
       {
         item: 'mat/overlay-qual-record',
@@ -600,7 +600,7 @@ export const EUV_HINA_MEASURE_ROUTES: readonly Route[] = [
      * 用产线 DBO 测产品片，不重复定值；两条记录一条量链、一条量片。
      */
     id: 'measure/euv-hina-product-overlay',
-    name: '8 nm 首片的产品套刻资格测量',
+    name: '8 nm First Article Product Overlay Qualification Measurement', name_zh: '8 nm 首片的产品套刻资格测量',
     produces: [
       {
         item: 'mat/overlay-product-record',

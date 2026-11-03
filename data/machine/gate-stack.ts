@@ -344,7 +344,7 @@ export const GATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-oxide-wafer',
-    name: '栅氧化片',
+    name: 'Gate Oxide Wafer', name_zh: '栅氧化片',
     unit: '片',
     category: 'part',
     props: [
@@ -374,7 +374,7 @@ export const GATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-electrode-wafer',
-    name: '栅电极片',
+    name: 'Gate Electrode Wafer', name_zh: '栅电极片',
     unit: '片',
     category: 'part',
     props: [
@@ -404,7 +404,7 @@ export const GATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ldd-wafer',
-    name: 'LDD 侧墙片',
+    name: 'LDD Spacer Wafer', name_zh: 'LDD 侧墙片',
     unit: '片',
     category: 'part',
     props: [
@@ -435,7 +435,7 @@ export const GATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/silicide-wafer',
-    name: '自对准硅化物片',
+    name: 'Self-Aligned Silicide Wafer', name_zh: '自对准硅化物片',
     unit: '片',
     category: 'part',
     props: [
@@ -462,7 +462,7 @@ export const GATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/highk-gate-wafer',
-    name: '高 k 金属栅片',
+    name: 'High-k Metal Gate Wafer', name_zh: '高 k 金属栅片',
     unit: '片',
     category: 'part',
     props: [
@@ -490,7 +490,7 @@ export const GATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/strain-sd-wafer',
-    name: '应变硅源漏片',
+    name: 'Strained Silicon Source/Drain Wafer', name_zh: '应变硅源漏片',
     unit: '片',
     category: 'part',
     props: [{ param: 'strain', kind: 'range', min: 0, max: 3, unit: '%', dir: 'atLeast' }],
@@ -543,7 +543,7 @@ export const GATE_ROUTES: readonly Route[] = [
      *   RTO（100–200 K/s、秒级控温）+ 椭偏仪。缺 2 件，差 2.7–3×。
      */
     id: 'make/gate-oxide-dry',
-    name: '栅氧化片制造',
+    name: 'Gate Oxide Wafer Manufacturing', name_zh: '栅氧化片制造',
     produces: [
       {
         item: 'mat/gate-oxide-wafer',
@@ -646,7 +646,7 @@ export const GATE_ROUTES: readonly Route[] = [
      *   缺 1 台设备 + 1 个投影台，差 5–10×。
      */
     id: 'make/gate-electrode-poly',
-    name: '栅电极片制造',
+    name: 'Gate Electrode Wafer Manufacturing', name_zh: '栅电极片制造',
     produces: [
       {
         item: 'mat/gate-electrode-wafer',
@@ -779,7 +779,7 @@ export const GATE_ROUTES: readonly Route[] = [
      *   所以本文件不把它记账成降级，记成缺口（§四·⑦）。
      */
     id: 'make/gate-electrode-aluminium',
-    name: '栅电极片制造',
+    name: 'Gate Electrode Wafer Manufacturing', name_zh: '栅电极片制造',
     produces: [
       {
         item: 'mat/gate-electrode-wafer',
@@ -906,7 +906,7 @@ export const GATE_ROUTES: readonly Route[] = [
      *   **不提供 LDD 的偏移** ⇒ LDD 的边界离栅 0 ± 250 nm（6 倍于 40 nm 的栅长）。
      */
     id: 'make/ldd-spacer-oxide',
-    name: 'LDD 侧墙片制造',
+    name: 'LDD Spacer Wafer Manufacturing', name_zh: 'LDD 侧墙片制造',
     produces: [
       {
         item: 'mat/ldd-wafer',
@@ -1033,7 +1033,7 @@ export const GATE_ROUTES: readonly Route[] = [
      * ⚠️ 与 2.3 的铝栅不相容：600 °C 会把 Al–Si（共晶 577 °C）熔穿（缺口⑧）。
      */
     id: 'make/silicide-tisi2-c49',
-    name: '自对准硅化物片制造',
+    name: 'Self-Aligned Silicide Wafer Manufacturing', name_zh: '自对准硅化物片制造',
     produces: [
       {
         item: 'mat/silicide-wafer',
@@ -1144,7 +1144,7 @@ export const GATE_ROUTES: readonly Route[] = [
      *   而且这 0.25 nm 要算进 EOT 的重复性里。
      */
     id: 'make/highk-metal-gate',
-    name: '高 k 金属栅片制造',
+    name: 'High-k Metal Gate Wafer Manufacturing', name_zh: '高 k 金属栅片制造',
     produces: [
       {
         item: 'mat/highk-gate-wafer',
@@ -1251,7 +1251,7 @@ export const GATE_ROUTES: readonly Route[] = [
      * 所以 HfO₂ 换来的不是"更薄的等效氧化层"，是**"薄了还不漏电"**。
      */
     id: 'make/highk-metal-gate-ald',
-    name: '高 k 金属栅片制造',
+    name: 'High-k Metal Gate Wafer Manufacturing', name_zh: '高 k 金属栅片制造',
     produces: [
       {
         item: 'mat/highk-gate-wafer',
@@ -1297,7 +1297,7 @@ export const GATE_ROUTES: readonly Route[] = [
      * 分开之后报告才能说清"走 SADP 这一支是 40 nm 档"。
      */
     id: 'make/device-wafer-sadp',
-    name: '前道完成片制造',
+    name: 'Front-End Completed Wafer Manufacturing', name_zh: '前道完成片制造',
     produces: [
       {
         item: 'mat/device-wafer',
@@ -1342,7 +1342,7 @@ export const GATE_ROUTES: readonly Route[] = [
      * 换来的代价是方阻升到 100–160 Ω/□（线宽收窄到 40 nm）。
      */
     id: 'make/gate-electrode-poly-sadp',
-    name: '栅电极片制造',
+    name: 'Gate Electrode Wafer Manufacturing', name_zh: '栅电极片制造',
     produces: [
       {
         item: 'mat/gate-electrode-wafer',
@@ -1385,7 +1385,7 @@ export const GATE_ROUTES: readonly Route[] = [
      * —— 大马士革每一道工序都消费它，而没有任何一处产出它。
      */
     id: 'make/device-wafer',
-    name: '前道完成片制造',
+    name: 'Front-End Completed Wafer Manufacturing', name_zh: '前道完成片制造',
     produces: [
       {
         item: 'mat/device-wafer',
@@ -1422,7 +1422,7 @@ export const GATE_ROUTES: readonly Route[] = [
      * 本路线只吃高 k 片；多晶硅支路走 `make/device-wafer`。
      */
     id: 'make/device-wafer-highk',
-    name: '前道完成片制造',
+    name: 'Front-End Completed Wafer Manufacturing', name_zh: '前道完成片制造',
     produces: [
       {
         item: 'mat/device-wafer',
@@ -1464,7 +1464,7 @@ export const GATE_ROUTES: readonly Route[] = [
      * 厚度，不是淀积/回刻。
      */
     id: 'make/p-ldd-spacer-oxide',
-    name: 'LDD 侧墙片制造',
+    name: 'LDD Spacer Wafer Manufacturing', name_zh: 'LDD 侧墙片制造',
     produces: [
       {
         item: 'mat/ldd-wafer',
@@ -1561,7 +1561,7 @@ export const GATE_ROUTES: readonly Route[] = [
      * 如果两块版重叠，p 会进 n-LDD 窗口，补偿 n-LDD。
      */
     id: 'make/dual-ldd-spacer',
-    name: 'LDD 侧墙片制造',
+    name: 'LDD Spacer Wafer Manufacturing', name_zh: 'LDD 侧墙片制造',
     produces: [
       {
         item: 'mat/ldd-wafer',
@@ -1711,7 +1711,7 @@ export const GATE_ROUTES: readonly Route[] = [
      *   · 本层没有应变/Ge 组分实测（Raman/XRD 都没有），0.8–1.2 % 是设计值。
      */
     id: 'make/strain-sd-wafer',
-    name: '应变硅源漏片制造',
+    name: 'Strained Silicon Source/Drain Wafer Manufacturing', name_zh: '应变硅源漏片制造',
     produces: [
       {
         item: 'mat/strain-sd-wafer',
@@ -1792,7 +1792,7 @@ export const GATE_ROUTES: readonly Route[] = [
      * → `mat/c54-silicide-wafer` → `make/device-wafer`。**不是新分支的终点。**
      */
     id: 'make/silicide-tisi2-c49-sige',
-    name: '自对准硅化物片制造',
+    name: 'Self-Aligned Silicide Wafer Manufacturing', name_zh: '自对准硅化物片制造',
     produces: [
       {
         item: 'mat/silicide-wafer',

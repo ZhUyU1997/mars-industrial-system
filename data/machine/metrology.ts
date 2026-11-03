@@ -54,7 +54,7 @@ export const METROLOGY_PARTS: readonly Item[] = [
    * 它要的不是强度，是**热惰性**：墙一厚，外面的昼夜波动进不来，
    * 里面的加热器就能用很小的功率维持温度。
    */
-  { id: 'plant/metrology-room/wall', name: '计量间保温墙板', unit: '件', category: 'part' },
+  { id: 'plant/metrology-room/wall', name: 'Metrology Room Insulated Wall Panel', name_zh: '计量间保温墙板', unit: '件', category: 'part' },
 
   /**
    * 恒温机组。风机 + 加热丝 + 氨蒸发器 + 风道。
@@ -62,7 +62,7 @@ export const METROLOGY_PARTS: readonly Item[] = [
    * 加热容易，制冷才是麻烦：**恒温间几乎总是在制冷**（人和设备都在发热），
    * 而制冷要氨回路与蒸发器。
    */
-  { id: 'plant/metrology-room/hvac', name: '计量间恒温机组', unit: '件', category: 'part' },
+  { id: 'plant/metrology-room/hvac', name: 'Metrology Room Temperature-Control Unit', name_zh: '计量间恒温机组', unit: '件', category: 'part' },
 
   /**
    * 双金属片温控器。黄铜片与钢片贴在一起，温度变了就弯。
@@ -70,7 +70,7 @@ export const METROLOGY_PARTS: readonly Item[] = [
    * 一台不用一个电子元件的恒温控制器。它的精度不高（± 0.5 °C 的死区），
    * 但正好够 —— 判定量块只要 ±1 °C。
    */
-  { id: 'plant/metrology-room/thermostat', name: '计量间双金属片温控器', unit: '件', category: 'part' },
+  { id: 'plant/metrology-room/thermostat', name: 'Metrology Room Bimetallic Thermostat', name_zh: '计量间双金属片温控器', unit: '件', category: 'part' },
 
   /**
    * 隔振基础。铸铁块垫在矿棉上，把仪器与地面振动隔开。
@@ -78,21 +78,21 @@ export const METROLOGY_PARTS: readonly Item[] = [
    * 亚微米比较怕两样：温度和振动。振动的影响更直接 —— 人走过去，
    * 读数就跳。
    */
-  { id: 'plant/metrology-room/isolation', name: '计量间隔振基础', unit: '件', category: 'part' },
+  { id: 'plant/metrology-room/isolation', name: 'Metrology Room Vibration-Isolation Foundation', name_zh: '计量间隔振基础', unit: '件', category: 'part' },
 
   /**
    * 门斗。双道门加一段缓冲，人进出时外面的气不直接灌进来。
    *
    * 它是最便宜也最有效的部件：一道门斗能让温度恢复时间短一个量级。
    */
-  { id: 'plant/metrology-room/airlock', name: '计量间门斗', unit: '件', category: 'part' },
+  { id: 'plant/metrology-room/airlock', name: 'Metrology Room Vestibule', name_zh: '计量间门斗', unit: '件', category: 'part' },
 ];
 
 export const METROLOGY_ROUTES: readonly Route[] = [
   {
     /** 保温墙板。钢板折边 → 填矿棉 → 双面复合 → 拼装。 */
     id: 'make/metrology-wall',
-    name: '计量间保温墙板制造',
+    name: 'Metrology Room Insulated Wall Panel Manufacturing', name_zh: '计量间保温墙板制造',
     produces: [{ item: 'plant/metrology-room/wall', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -109,7 +109,7 @@ export const METROLOGY_ROUTES: readonly Route[] = [
      * 镍铬丝是恒温间唯一的热源，也是这套设备里唯一会被烧断的零件。
      */
     id: 'make/metrology-hvac',
-    name: '计量间恒温机组制造',
+    name: 'Metrology Room Temperature-Control Unit Manufacturing', name_zh: '计量间恒温机组制造',
     produces: [{ item: 'plant/metrology-room/hvac', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -122,7 +122,7 @@ export const METROLOGY_ROUTES: readonly Route[] = [
   {
     /** 温控器。黄铜片与钢片铆合 → 卷成螺线 → 装触点。 */
     id: 'make/metrology-thermostat',
-    name: '计量间双金属片温控器制造',
+    name: 'Metrology Room Bimetallic Thermostat Manufacturing', name_zh: '计量间双金属片温控器制造',
     produces: [{ item: 'plant/metrology-room/thermostat', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -134,7 +134,7 @@ export const METROLOGY_ROUTES: readonly Route[] = [
   {
     /** 隔振基础。铸铁块浇成 → 磨平顶面 → 垫矿棉。 */
     id: 'make/metrology-isolation',
-    name: '计量间隔振基础制造',
+    name: 'Metrology Room Vibration-Isolation Foundation Manufacturing', name_zh: '计量间隔振基础制造',
     produces: [{ item: 'plant/metrology-room/isolation', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] },
@@ -147,7 +147,7 @@ export const METROLOGY_ROUTES: readonly Route[] = [
   {
     /** 门斗。两道保温门 + 门框，与墙板同一工艺。 */
     id: 'make/metrology-airlock',
-    name: '计量间门斗制造',
+    name: 'Metrology Room Vestibule Manufacturing', name_zh: '计量间门斗制造',
     produces: [{ item: 'plant/metrology-room/airlock', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -169,7 +169,7 @@ export const METROLOGY_ROUTES: readonly Route[] = [
  */
 export const METROLOGY_ROOM: Item = {
   id: 'plant/metrology-room',
-  name: '计量间',
+  name: 'Metrology Room', name_zh: '计量间',
   unit: '间',
   category: 'machine',
   holds: [{ param: 'temperature', min: 19, max: 21 }],
@@ -193,7 +193,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/metrology-room',
-    name: '计量间装配',
+    name: 'Metrology Room Assembly', name_zh: '计量间装配',
     produces: [{
       item: 'plant/metrology-room',
       qty: q(1),

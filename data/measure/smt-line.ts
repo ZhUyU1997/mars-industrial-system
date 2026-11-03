@@ -28,7 +28,7 @@ export const SMT_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/smt-thermal-profile-record',
-    name: 'SMT 线热参数记录',
+    name: 'SMT Line Thermal Profile Record', name_zh: 'SMT 线热参数记录',
     unit: '份',
     category: 'part',
     props: [
@@ -58,7 +58,7 @@ export const SMT_MEASURE_ROUTES: readonly Route[] = [
      * 这一步只证明"腔体与炉温落在窗口里"，不证明焊点质量。
      */
     id: 'measure/smt-thermal-profile',
-    name: 'SMT 线热参数测量',
+    name: 'SMT Line Thermal Profile Measurement', name_zh: 'SMT 线热参数测量',
     produces: [
       {
         item: 'mat/smt-thermal-profile-record',

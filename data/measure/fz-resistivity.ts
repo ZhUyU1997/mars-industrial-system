@@ -27,7 +27,7 @@ export const FZ_RESISTIVITY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fz-resistivity-record',
-    name: 'FZ 硅片电阻率记录',
+    name: 'FZ Wafer Resistivity Record', name_zh: 'FZ 硅片电阻率记录',
     unit: '份',
     category: 'part',
     props: [
@@ -51,7 +51,7 @@ export const FZ_RESISTIVITY_ROUTES: readonly Route[] = [
      *   ④ 写电阻率、径向偏差、合成不确定度与点数。
      */
     id: 'measure/fz-resistivity',
-    name: 'FZ 硅片电阻率测量',
+    name: 'FZ Wafer Resistivity Measurement', name_zh: 'FZ 硅片电阻率测量',
     rate: { hours: q(2) },
     produces: [
       {

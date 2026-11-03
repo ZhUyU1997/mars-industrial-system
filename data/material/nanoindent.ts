@@ -107,7 +107,7 @@ export const NANOINDENT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/nanoindenter/head',
-    name: '纳米压痕机纳米压痕压头',
+    name: 'Nanoindenter Indenter Head', name_zh: '纳米压痕机纳米压痕压头',
     unit: '件',
     category: 'part',
     props: [
@@ -126,7 +126,7 @@ export const NANOINDENT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/nanoindenter/tip',
-    name: '纳米压痕机纳米压痕备用针',
+    name: 'Nanoindenter Spare Indenter Tip', name_zh: '纳米压痕机纳米压痕备用针',
     unit: '件',
     category: 'part',
     props: [
@@ -144,7 +144,7 @@ export const NANOINDENT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/nanoindenter',
-    name: '纳米压痕机',
+    name: 'Nanoindenter', name_zh: '纳米压痕机',
     unit: '台',
     category: 'machine',
     props: [
@@ -193,7 +193,7 @@ export const NANOINDENT_ROUTES: readonly Route[] = [
      * （`make/carbide-insert` 那条），韧性会好一档 —— 那是升级，不是这一条。
      */
     id: 'make/nanoindenter-tip',
-    name: '纳米压痕机纳米压痕备用针制造',
+    name: 'Nanoindenter Spare Indenter Tip Manufacturing', name_zh: '纳米压痕机纳米压痕备用针制造',
     produces: [
       {
         item: 'plant/nanoindenter/tip',
@@ -271,7 +271,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/nanoindenter',
-    name: '纳米压痕机装配',
+    name: 'Nanoindenter Assembly', name_zh: '纳米压痕机装配',
     produces: [{
       item: 'plant/nanoindenter',
       qty: q(1),

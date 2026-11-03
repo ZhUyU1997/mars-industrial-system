@@ -36,17 +36,17 @@ import { q } from '../../src/index.ts';
 
 export const WIRE_SAW_PARTS: readonly Item[] = [
   /** 机架与导轮。铸铁机架 + 四个导轮（导轮槽距决定片厚）+ 张力机构。 */
-  { id: 'plant/wire-saw/frame', name: '线锯机架与导轮', unit: '件', category: 'part' },
+  { id: 'plant/wire-saw/frame', name: 'Wire Saw Frame and Guide Wheels', name_zh: '线锯机架与导轮', unit: '件', category: 'part' },
 
   /** 丝与浆料系统。钢丝卷 + 收放轮 + 浆料槽 + 搅拌泵（浆料沉底就不切了）。 */
-  { id: 'plant/wire-saw/slurry', name: '线锯丝与浆料系统', unit: '件', category: 'part' },
+  { id: 'plant/wire-saw/slurry', name: 'Wire Saw Wire and Slurry System', name_zh: '线锯丝与浆料系统', unit: '件', category: 'part' },
 ];
 
 export const WIRE_SAW_ROUTES: readonly Route[] = [
   {
     /** 机架与导轮。铸铁机架 → 导轮车槽（槽距 0.7 mm）→ 张力机构 → 装配。 */
     id: 'make/wire-saw-frame',
-    name: '线锯机架与导轮制造',
+    name: 'Wire Saw Frame and Guide Wheels Manufacturing', name_zh: '线锯机架与导轮制造',
     produces: [{ item: 'plant/wire-saw/frame', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht200', qty: q(1) }] },
@@ -63,7 +63,7 @@ export const WIRE_SAW_ROUTES: readonly Route[] = [
   {
     /** 丝与浆料系统。钢丝（拉丝）→ 收放轮 → 浆料槽与泵 → 管路。 */
     id: 'make/wire-saw-slurry',
-    name: '线锯丝与浆料系统制造',
+    name: 'Wire Saw Wire and Slurry System Manufacturing', name_zh: '线锯丝与浆料系统制造',
     produces: [{ item: 'plant/wire-saw/slurry', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -82,7 +82,7 @@ export const WIRE_SAW_ROUTES: readonly Route[] = [
  */
 export const WIRE_SAW: Item = {
   id: 'plant/wire-saw',
-  name: '线锯',
+  name: 'Wire Saw', name_zh: '线锯',
   unit: '台',
   category: 'machine',
   composedOf: [
@@ -104,7 +104,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/wire-saw',
-    name: '线锯装配',
+    name: 'Wire Saw Assembly', name_zh: '线锯装配',
     produces: [{
       item: 'plant/wire-saw',
       qty: q(1),

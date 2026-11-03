@@ -13,7 +13,7 @@ export const CALIBRATION_B_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-diagnostics-record',
-    name: '聚变诊断自校准记录',
+    name: 'Fusion Diagnostics Self-Calibration Record', name_zh: '聚变诊断自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -36,7 +36,7 @@ export const CALIBRATION_B_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-standard-field-magnet-record',
-    name: '12 T 标准场磁体自校准记录',
+    name: '12 T Standard-Field Magnet Self-Calibration Record', name_zh: '12 T 标准场磁体自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -52,7 +52,7 @@ export const CALIBRATION_B_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-dump-load-record',
-    name: '45 GJ 泄放负载自校准记录',
+    name: '45 GJ Dump Load Self-Calibration Record', name_zh: '45 GJ 泄放负载自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -68,7 +68,7 @@ export const CALIBRATION_B_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-high-field-nmr-record',
-    name: '高场 NMR 探头自校准记录',
+    name: 'High-Field NMR Probe Self-Calibration Record', name_zh: '高场 NMR 探头自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -85,7 +85,7 @@ export const CALIBRATION_B_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-coil-energy-stand-record',
-    name: '线圈储能测试台自校准记录',
+    name: 'Coil Energy Storage Test Stand Self-Calibration Record', name_zh: '线圈储能测试台自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -101,7 +101,7 @@ export const CALIBRATION_B_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-low-field-nmr-record',
-    name: '低场 NMR 探头自校准记录',
+    name: 'Low-Field NMR Probe Self-Calibration Record', name_zh: '低场 NMR 探头自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -118,7 +118,7 @@ export const CALIBRATION_B_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-fluxmeter-record',
-    name: '磁通计自校准记录',
+    name: 'Fluxmeter Self-Calibration Record', name_zh: '磁通计自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -134,7 +134,7 @@ export const CALIBRATION_B_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-field-mapping-record',
-    name: '场图标准自校准记录',
+    name: 'Field Map Standard Self-Calibration Record', name_zh: '场图标准自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -150,7 +150,7 @@ export const CALIBRATION_B_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-calorimeter-record',
-    name: '45 GJ 量热标准自校准记录',
+    name: '45 GJ Calorimetric Standard Self-Calibration Record', name_zh: '45 GJ 量热标准自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -170,7 +170,7 @@ export const CALIBRATION_B_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-diagnostics',
-    name: '聚变诊断自校准',
+    name: 'Fusion Diagnostics Self-Calibration', name_zh: '聚变诊断自校准',
     produces: [
       {
         item: 'mat/cal-diagnostics-record',
@@ -205,7 +205,7 @@ export const CALIBRATION_B_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-standard-field-magnet',
-    name: '12 T 标准场磁体自校准',
+    name: '12 T Standard-Field Magnet Self-Calibration', name_zh: '12 T 标准场磁体自校准',
     produces: [
       {
         item: 'mat/cal-standard-field-magnet-record',
@@ -233,7 +233,7 @@ export const CALIBRATION_B_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-dump-load',
-    name: '45 GJ 泄放负载自校准',
+    name: '45 GJ Dump Load Self-Calibration', name_zh: '45 GJ 泄放负载自校准',
     produces: [
       {
         item: 'mat/cal-dump-load-record',
@@ -261,7 +261,7 @@ export const CALIBRATION_B_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-high-field-nmr',
-    name: '高场 NMR 探头自校准',
+    name: 'High-Field NMR Probe Self-Calibration', name_zh: '高场 NMR 探头自校准',
     produces: [
       {
         item: 'mat/cal-high-field-nmr-record',
@@ -290,7 +290,7 @@ export const CALIBRATION_B_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-coil-energy-stand',
-    name: '线圈储能测试台自校准',
+    name: 'Coil Energy Storage Test Stand Self-Calibration', name_zh: '线圈储能测试台自校准',
     produces: [
       {
         item: 'mat/cal-coil-energy-stand-record',
@@ -318,7 +318,7 @@ export const CALIBRATION_B_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-low-field-nmr',
-    name: '低场 NMR 探头自校准',
+    name: 'Low-Field NMR Probe Self-Calibration', name_zh: '低场 NMR 探头自校准',
     produces: [
       {
         item: 'mat/cal-low-field-nmr-record',
@@ -347,7 +347,7 @@ export const CALIBRATION_B_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-fluxmeter',
-    name: '磁通计自校准',
+    name: 'Fluxmeter Self-Calibration', name_zh: '磁通计自校准',
     produces: [
       {
         item: 'mat/cal-fluxmeter-record',
@@ -375,7 +375,7 @@ export const CALIBRATION_B_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-field-mapping',
-    name: '场图标准自校准',
+    name: 'Field Map Standard Self-Calibration', name_zh: '场图标准自校准',
     produces: [
       {
         item: 'mat/cal-field-mapping-record',
@@ -403,7 +403,7 @@ export const CALIBRATION_B_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-calorimeter',
-    name: '45 GJ 量热标准自校准',
+    name: '45 GJ Calorimetric Standard Self-Calibration', name_zh: '45 GJ 量热标准自校准',
     produces: [
       {
         item: 'mat/cal-calorimeter-record',

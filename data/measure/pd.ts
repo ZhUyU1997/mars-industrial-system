@@ -13,7 +13,7 @@ export const PD_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pd-background-record',
-    name: '空载 PD 背景记录',
+    name: 'No-Load PD Background Record', name_zh: '空载 PD 背景记录',
     unit: '份',
     category: 'part',
     props: [
@@ -29,7 +29,7 @@ export const PD_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pd-calibration-record',
-    name: 'PD 校准记录',
+    name: 'PD Calibration Record', name_zh: 'PD 校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -44,7 +44,7 @@ export const PD_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pd-intercomparison-record',
-    name: 'A/B 互比记录',
+    name: 'A/B Intercomparison Record', name_zh: 'A/B 互比记录',
     unit: '份',
     category: 'part',
     props: [
@@ -67,7 +67,7 @@ export const PD_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pd-uncertainty-budget',
-    name: 'PD 绝对 pC 不确定度预算',
+    name: 'PD Absolute pC Uncertainty Budget', name_zh: 'PD 绝对 pC 不确定度预算',
     unit: '份',
     category: 'part',
     props: [
@@ -121,7 +121,7 @@ export const PD_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pd-self-calibration-certificate',
-    name: 'PD 检测器自校证书',
+    name: 'PD Detector Self-Calibration Certificate', name_zh: 'PD 检测器自校证书',
     unit: '份',
     category: 'part',
     props: [
@@ -170,7 +170,7 @@ export const PD_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pd-recalibration-plan',
-    name: 'PD 复校计划',
+    name: 'PD Recalibration Plan', name_zh: 'PD 复校计划',
     unit: '份',
     category: 'part',
     props: [
@@ -193,7 +193,7 @@ export const PD_MEASURE_ROUTES: readonly Route[] = [
      *   校准记录 + A/B 互比记录；产出一份背景记录。
      */
     id: 'measure/pd-source-background',
-    name: '空载 PD 背景测量',
+    name: 'No-Load PD Background Measurement', name_zh: '空载 PD 背景测量',
     produces: [
       {
         item: 'mat/pd-background-record',
@@ -232,7 +232,7 @@ export const PD_MEASURE_ROUTES: readonly Route[] = [
      *   数据层闭合用；实测仍走 measure/pd-source-background。
      */
     id: 'measure/pd-source-background-spec',
-    name: '空载 PD 背景测量',
+    name: 'No-Load PD Background Measurement', name_zh: '空载 PD 背景测量',
     produces: [
       {
         item: 'mat/pd-background-record',
@@ -270,7 +270,7 @@ export const PD_MEASURE_ROUTES: readonly Route[] = [
      *   量块 3 + 检测仪 1 → 记录 1
      */
     id: 'measure/calibrate-pd-detector',
-    name: 'PD 检测器校准',
+    name: 'PD Detector Calibration', name_zh: 'PD 检测器校准',
     produces: [
       {
         item: 'mat/pd-calibration-record',
@@ -315,7 +315,7 @@ export const PD_MEASURE_ROUTES: readonly Route[] = [
      *   量块 A/B + 检测仪 A/B → 互比记录 1
      */
     id: 'measure/pd-intercompare',
-    name: 'A/B 互比测量',
+    name: 'A/B Intercomparison Measurement', name_zh: 'A/B 互比测量',
     produces: [
       {
         item: 'mat/pd-intercomparison-record',
@@ -370,7 +370,7 @@ export const PD_MEASURE_ROUTES: readonly Route[] = [
      *    `needs` 只写在场的试验舱与计量间（redundant_need 的反面）。
      */
     id: 'measure/pd-uncertainty-budget',
-    name: 'PD 绝对 pC 不确定度预算测量',
+    name: 'PD Absolute pC Uncertainty Budget Measurement', name_zh: 'PD 绝对 pC 不确定度预算测量',
     produces: [
       {
         item: 'mat/pd-uncertainty-budget',
@@ -454,7 +454,7 @@ export const PD_MEASURE_ROUTES: readonly Route[] = [
      *    `needs` 写试验舱与计量间（都只在场，不被消耗）。
      */
     id: 'measure/pd-self-calibration-certificate',
-    name: 'PD 检测器自校证书测量',
+    name: 'PD Detector Self-Calibration Certificate Measurement', name_zh: 'PD 检测器自校证书测量',
     produces: [
       {
         item: 'mat/pd-self-calibration-certificate',
@@ -534,7 +534,7 @@ export const PD_MEASURE_ROUTES: readonly Route[] = [
      *    `needs` 写试验舱与计量间（都只在场，不被消耗）。
      */
     id: 'measure/pd-recalibration-plan',
-    name: 'PD 复校计划测量',
+    name: 'PD Recalibration Plan Measurement', name_zh: 'PD 复校计划测量',
     produces: [
       {
         item: 'mat/pd-recalibration-plan',

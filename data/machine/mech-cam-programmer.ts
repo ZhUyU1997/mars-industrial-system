@@ -24,10 +24,10 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const CAM_PROGRAMMER_PARTS: readonly Item[] = [
-  { id: 'std/cam-programmer-general/camshaft', name: '凸轮程序器凸轮轴', unit: '件', category: 'part' },
-  { id: 'std/cam-programmer-general/cam', name: '凸轮程序器可调凸轮', unit: '件', category: 'part' },
-  { id: 'std/cam-programmer-general/switch-block', name: '凸轮程序器行程开关组', unit: '套', category: 'part' },
-  { id: 'std/cam-programmer-general/gearbox', name: '凸轮程序器蜗轮蜗杆减速箱', unit: '件', category: 'part' },
+  { id: 'std/cam-programmer-general/camshaft', name: 'Cam Programmer Camshaft', name_zh: '凸轮程序器凸轮轴', unit: '件', category: 'part' },
+  { id: 'std/cam-programmer-general/cam', name: 'Cam Programmer Adjustable Cam', name_zh: '凸轮程序器可调凸轮', unit: '件', category: 'part' },
+  { id: 'std/cam-programmer-general/switch-block', name: 'Cam Programmer Limit Switch Set', name_zh: '凸轮程序器行程开关组', unit: '套', category: 'part' },
+  { id: 'std/cam-programmer-general/gearbox', name: 'Cam Programmer Worm Gear Reducer', name_zh: '凸轮程序器蜗轮蜗杆减速箱', unit: '件', category: 'part' },
 ];
 
 const CAM_PROGRAMMER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -36,7 +36,7 @@ const CAM_PROGRAMMER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 凸轮轴：45 钢 0.3 kg，车成，按 8 只凸轮的相位开键槽。 */
     id: 'make/cam-programmer-shaft',
-    name: '凸轮程序器凸轮轴制造',
+    name: 'Cam Programmer Camshaft Manufacturing', name_zh: '凸轮程序器凸轮轴制造',
     produces: [{ item: 'std/cam-programmer-general/camshaft', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 10) }] }],
     performedBy: 'lathe',
@@ -44,7 +44,7 @@ const CAM_PROGRAMMER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 可调凸轮 8 只：45 钢 0.5 kg，车盘铣凸块。 */
     id: 'make/cam-programmer-cam',
-    name: '凸轮程序器可调凸轮制造',
+    name: 'Cam Programmer Adjustable Cam Manufacturing', name_zh: '凸轮程序器可调凸轮制造',
     produces: [{ item: 'std/cam-programmer-general/cam', qty: q(8) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 2) }] }],
     steps: [
@@ -55,7 +55,7 @@ const CAM_PROGRAMMER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 行程开关组：钨铜触点、弹簧片、酚醛壳体；钨 1、酚醛 1、铜 1。 */
     id: 'make/cam-programmer-switch-block',
-    name: '凸轮程序器行程开关组制造',
+    name: 'Cam Programmer Limit Switch Set Manufacturing', name_zh: '凸轮程序器行程开关组制造',
     produces: [{ item: 'std/cam-programmer-general/switch-block', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/tungsten-powder', qty: q(1) }] },
@@ -70,7 +70,7 @@ const CAM_PROGRAMMER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 蜗轮蜗杆减速箱：45 钢 0.2 kg，速比按“每步几秒”。 */
     id: 'make/cam-programmer-gearbox',
-    name: '凸轮程序器蜗轮蜗杆减速箱制造',
+    name: 'Cam Programmer Worm Gear Reducer Manufacturing', name_zh: '凸轮程序器蜗轮蜗杆减速箱制造',
     produces: [{ item: 'std/cam-programmer-general/gearbox', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 5) }] }],
     performedBy: 'plant/gear-hobbing',

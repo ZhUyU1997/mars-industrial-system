@@ -81,7 +81,7 @@ export const TRACER_ITEMS: readonly Item[] = [
    *   与指针检流计同源，但输出不是指针而是**光点的偏转** ——
    * 因为镜子没有质量（相对指针），能跟上更快的信号。
    */
-  { id: 'std/mirror-galvanometer-general', name: '振镜', unit: '件', category: 'part',
+  { id: 'std/mirror-galvanometer-general', name: 'Galvanometer Mirror', name_zh: '振镜', unit: '件', category: 'part',
     composedOf: [
       { item: 'std/permanent-magnet-general', qty: q(2) },
       { item: 'std/mirror-galvanometer-general/pole-piece', qty: q(2) },
@@ -90,10 +90,10 @@ export const TRACER_ITEMS: readonly Item[] = [
       { item: 'std/mirror-galvanometer-general/suspension', qty: q(1) },
     ] },
 
-  { id: 'std/mirror-galvanometer-general/pole-piece', name: '磁极靴', unit: '件', category: 'part' },
-  { id: 'std/mirror-galvanometer-general/coil', name: '驱动线圈', unit: '件', category: 'part' },
-  { id: 'std/mirror-galvanometer-general/mirror', name: '反射镜', unit: '件', category: 'part' },
-  { id: 'std/mirror-galvanometer-general/suspension', name: '悬挂丝', unit: '件', category: 'part' },
+  { id: 'std/mirror-galvanometer-general/pole-piece', name: 'Pole Piece', name_zh: '磁极靴', unit: '件', category: 'part' },
+  { id: 'std/mirror-galvanometer-general/coil', name: 'Drive Coil', name_zh: '驱动线圈', unit: '件', category: 'part' },
+  { id: 'std/mirror-galvanometer-general/mirror', name: 'Mirror', name_zh: '反射镜', unit: '件', category: 'part' },
+  { id: 'std/mirror-galvanometer-general/suspension', name: 'Suspension Wire', name_zh: '悬挂丝', unit: '件', category: 'part' },
 
   /**
    * 图示仪。两只振镜 + 烟熏玻璃记录台 + 扫描电压源 + 阶梯基极电流源。
@@ -101,7 +101,7 @@ export const TRACER_ITEMS: readonly Item[] = [
    * 它是本层第一台**能看波形**的仪器 —— 在此之前只有"一个数"（数字表）
    * 与"一个指针位置"（毫伏表），没有"一段形状"。
    */
-  { id: 'std/curve-tracer-general', name: '曲线图示仪', unit: '台', category: 'machine' },
+  { id: 'std/curve-tracer-general', name: 'Curve Tracer', name_zh: '曲线图示仪', unit: '台', category: 'machine' },
 ];
 
 export const TRACER_ROUTES: readonly Route[] = [
@@ -110,7 +110,7 @@ export const TRACER_ROUTES: readonly Route[] = [
      * 极靴：40Cr 0.6 kg，铣出极面并磨到气隙 0.5 mm。
      */
     id: 'make/mirror-galvanometer-pole-piece',
-    name: '磁极靴制造',
+    name: 'Pole Piece Manufacturing', name_zh: '磁极靴制造',
     produces: [{ item: 'std/mirror-galvanometer-general/pole-piece', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(3, 5) }] }],
     needs: [],
@@ -121,7 +121,7 @@ export const TRACER_ROUTES: readonly Route[] = [
      * 动圈：漆包线 1 kg，绕在薄框上。
      */
     id: 'make/mirror-galvanometer-coil',
-    name: '驱动线圈制造',
+    name: 'Drive Coil Manufacturing', name_zh: '驱动线圈制造',
     produces: [{ item: 'std/mirror-galvanometer-general/coil', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/enamel-wire', qty: q(1) }] }],
     needs: [],
@@ -132,7 +132,7 @@ export const TRACER_ROUTES: readonly Route[] = [
      * 小镜：1 kg 玻璃，抛光到 1 mm 见方。
      */
     id: 'make/mirror-galvanometer-mirror',
-    name: '反射镜制造',
+    name: 'Mirror Manufacturing', name_zh: '反射镜制造',
     produces: [{ item: 'std/mirror-galvanometer-general/mirror', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/glass', qty: q(1) }] }],
     needs: [],
@@ -143,7 +143,7 @@ export const TRACER_ROUTES: readonly Route[] = [
      * 悬丝：40Cr 细丝 0.2 kg，拉丝并盘成悬丝。
      */
     id: 'make/mirror-galvanometer-suspension',
-    name: '悬挂丝制造',
+    name: 'Suspension Wire Manufacturing', name_zh: '悬挂丝制造',
     produces: [{ item: 'std/mirror-galvanometer-general/suspension', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1, 5) }] }],
     needs: [],
@@ -157,7 +157,7 @@ export const TRACER_ROUTES: readonly Route[] = [
      * 悬丝是整台仪器最脆的一处：粗了不灵敏，细了会断。
      */
     id: 'make/mirror-galvanometer',
-    name: '振镜总装',
+    name: 'Galvanometer Mirror Final Assembly', name_zh: '振镜总装',
     produces: [{ item: 'std/mirror-galvanometer-general', qty: q(1) }],
     uses: [],
     needs: ['plant/metrology-room'],
@@ -174,7 +174,7 @@ export const TRACER_ROUTES: readonly Route[] = [
      * 因为不需要成像，只需要一个点。
      */
     id: 'make/curve-tracer',
-    name: '曲线图示仪制造',
+    name: 'Curve Tracer Manufacturing', name_zh: '曲线图示仪制造',
     produces: [{ item: 'std/curve-tracer-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/mirror-galvanometer-general', qty: q(2) }] },

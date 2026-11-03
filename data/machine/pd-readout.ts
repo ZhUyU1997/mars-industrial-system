@@ -41,7 +41,7 @@ export const PD_READOUT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-peak-detector',
-    name: '高压测试台单次峰值保持头',
+    name: 'High-Voltage Test Bench Single-Shot Peak-Hold Head', name_zh: '高压测试台单次峰值保持头',
     unit: '件',
     category: 'part',
     props: [
@@ -62,7 +62,7 @@ export const PD_READOUT_ROUTES: readonly Route[] = [
      *   + 铝 0.2 + 铜线 0.05 → 峰值保持头 1
      */
     id: 'make/pd-peak-detector',
-    name: '高压测试台单次峰值保持头制造',
+    name: 'High-Voltage Test Bench Single-Shot Peak-Hold Head Manufacturing', name_zh: '高压测试台单次峰值保持头制造',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-peak-detector',

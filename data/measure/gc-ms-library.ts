@@ -95,7 +95,7 @@ export const GC_LIBRARY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gc-ms-library-record',
-    name: '谱库匹配记录',
+    name: 'Spectral Library Match Record', name_zh: '谱库匹配记录',
     unit: '份',
     category: 'part',
     props: [
@@ -131,7 +131,7 @@ export const GC_LIBRARY_MEASURE_ROUTES: readonly Route[] = [
      *      tentative 的另记（不进 compoundCount）
      */
     id: 'measure/gcms-library-match',
-    name: '谱库匹配测量',
+    name: 'Spectral Library Match Measurement', name_zh: '谱库匹配测量',
     produces: [
       {
         item: 'mat/gc-ms-library-record',

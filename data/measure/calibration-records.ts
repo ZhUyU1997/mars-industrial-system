@@ -14,7 +14,7 @@ export const CALIBRATION_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-dc-source-record',
-    name: '60 kA 直流源自校准记录',
+    name: '60 kA DC Source Self-Calibration Record', name_zh: '60 kA 直流源自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -31,7 +31,7 @@ export const CALIBRATION_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-rogowski-record',
-    name: '罗氏线圈自校准记录',
+    name: 'Rogowski Coil Self-Calibration Record', name_zh: '罗氏线圈自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -48,7 +48,7 @@ export const CALIBRATION_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cal-shunt-record',
-    name: '50 kA 分流器自校准记录',
+    name: '50 kA Shunt Self-Calibration Record', name_zh: '50 kA 分流器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -68,7 +68,7 @@ export const CALIBRATION_RECORD_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-dc-source',
-    name: '60 kA 直流源自校准',
+    name: '60 kA DC Source Self-Calibration', name_zh: '60 kA 直流源自校准',
     produces: [
       {
         item: 'mat/cal-dc-source-record',
@@ -96,7 +96,7 @@ export const CALIBRATION_RECORD_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-rogowski',
-    name: '罗氏线圈自校准',
+    name: 'Rogowski Coil Self-Calibration', name_zh: '罗氏线圈自校准',
     produces: [
       {
         item: 'mat/cal-rogowski-record',
@@ -124,7 +124,7 @@ export const CALIBRATION_RECORD_ROUTES: readonly Route[] = [
      * formal self-calibration：按设计/公开值填，不是实测。
      */
     id: 'measure/cal-shunt',
-    name: '50 kA 分流器自校准',
+    name: '50 kA Shunt Self-Calibration', name_zh: '50 kA 分流器自校准',
     produces: [
       {
         item: 'mat/cal-shunt-record',

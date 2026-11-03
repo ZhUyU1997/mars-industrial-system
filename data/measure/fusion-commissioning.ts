@@ -17,7 +17,7 @@ export const FUSION_COMMISSIONING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-plant-record',
-    name: '整机性能记录',
+    name: 'System Performance Record', name_zh: '整机性能记录',
     unit: '份',
     category: 'part',
     props: [
@@ -36,7 +36,7 @@ export const FUSION_COMMISSIONING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-heating-record',
-    name: '辅助加热 commissioning 记录',
+    name: 'Auxiliary Heating Commissioning Record', name_zh: '辅助加热 commissioning 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -53,7 +53,7 @@ export const FUSION_COMMISSIONING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-power-record',
-    name: '发电岛 commissioning 记录',
+    name: 'Power Island Commissioning Record', name_zh: '发电岛 commissioning 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -71,7 +71,7 @@ export const FUSION_COMMISSIONING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-fuel-record',
-    name: '燃料循环 commissioning 记录',
+    name: 'Fuel Cycle Commissioning Record', name_zh: '燃料循环 commissioning 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -90,7 +90,7 @@ export const FUSION_COMMISSIONING_ROUTES: readonly Route[] = [
      * public-spec：ITER 公开值，调试假设，不是本机实测。
      */
     id: 'measure/fusion-plant-performance',
-    name: '整机性能装配',
+    name: 'System Performance Assembly', name_zh: '整机性能装配',
     produces: [
       {
         item: 'mat/fusion-plant-record',
@@ -116,7 +116,7 @@ export const FUSION_COMMISSIONING_ROUTES: readonly Route[] = [
      * public-spec：首台装置调试值，不是实测。
      */
     id: 'measure/fusion-heating-performance',
-    name: '辅助加热 commissioning 测量',
+    name: 'Auxiliary Heating Commissioning Measurement', name_zh: '辅助加热 commissioning 测量',
     produces: [
       {
         item: 'mat/fusion-heating-record',
@@ -140,7 +140,7 @@ export const FUSION_COMMISSIONING_ROUTES: readonly Route[] = [
      * assumed：首台装置发电岛调试假设，ITER 本身不发电。
      */
     id: 'measure/fusion-power-performance',
-    name: '发电岛 commissioning 测量',
+    name: 'Power Island Commissioning Measurement', name_zh: '发电岛 commissioning 测量',
     produces: [
       {
         item: 'mat/fusion-power-record',
@@ -164,7 +164,7 @@ export const FUSION_COMMISSIONING_ROUTES: readonly Route[] = [
      * calculated：按 500 MW 燃耗算，不是实测。
      */
     id: 'measure/fusion-fuel-performance',
-    name: '燃料循环 commissioning 测量',
+    name: 'Fuel Cycle Commissioning Measurement', name_zh: '燃料循环 commissioning 测量',
     produces: [
       {
         item: 'mat/fusion-fuel-record',

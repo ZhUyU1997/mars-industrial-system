@@ -49,7 +49,7 @@ export const BORON_PLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-leach-tank',
-    name: '浸取槽',
+    name: 'Leaching Tank', name_zh: '浸取槽',
     unit: '台',
     category: 'machine',
     holds: [
@@ -67,7 +67,7 @@ export const BORON_PLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-crystallizer',
-    name: '蒸发结晶器',
+    name: 'Evaporative Crystallizer', name_zh: '蒸发结晶器',
     unit: '台',
     category: 'machine',
     holds: [
@@ -78,11 +78,11 @@ export const BORON_PLANT_ITEMS: readonly Item[] = [
   },
 
   // 浸取槽零件
-  { id: 'plant/boron-leach-tank/shell', name: '浸取槽壳体', unit: '件', category: 'part' },
-  { id: 'plant/boron-leach-tank/jacket', name: '浸取槽夹套', unit: '件', category: 'part' },
-  { id: 'plant/boron-leach-tank/agitator', name: '浸取槽搅拌器', unit: '件', category: 'part' },
-  { id: 'plant/boron-leach-tank/filter-plate', name: '浸取槽滤板', unit: '件', category: 'part' },
-  { id: 'plant/boron-leach-tank/valve', name: '浸取槽阀', unit: '件', category: 'part' },
+  { id: 'plant/boron-leach-tank/shell', name: 'Leaching Tank Shell', name_zh: '浸取槽壳体', unit: '件', category: 'part' },
+  { id: 'plant/boron-leach-tank/jacket', name: 'Leaching Tank Jacket', name_zh: '浸取槽夹套', unit: '件', category: 'part' },
+  { id: 'plant/boron-leach-tank/agitator', name: 'Leaching Tank Agitator', name_zh: '浸取槽搅拌器', unit: '件', category: 'part' },
+  { id: 'plant/boron-leach-tank/filter-plate', name: 'Leaching Tank Filter Plate', name_zh: '浸取槽滤板', unit: '件', category: 'part' },
+  { id: 'plant/boron-leach-tank/valve', name: 'Leaching Tank Valve', name_zh: '浸取槽阀', unit: '件', category: 'part' },
 
   /**
    * 镍内衬。**BF₃ 段的 HF 防护，不是浸取段的碱性硼砂。**
@@ -94,20 +94,20 @@ export const BORON_PLANT_ITEMS: readonly Item[] = [
    * 10 m³ 筒体的整体卷圆与封头成型做不到；折弯回弹、圆度、球面度、
    * 焊缝气密都未标定。不新增卷板机。
    */
-  { id: 'plant/boron-leach-tank/liner-ni', name: '浸取槽镍内衬', unit: '件', category: 'part' },
+  { id: 'plant/boron-leach-tank/liner-ni', name: 'Leaching Tank Nickel Liner', name_zh: '浸取槽镍内衬', unit: '件', category: 'part' },
 
   // 结晶器零件
-  { id: 'plant/boron-crystallizer/shell', name: '蒸发结晶器壳体', unit: '件', category: 'part' },
-  { id: 'plant/boron-crystallizer/jacket', name: '蒸发结晶器夹套', unit: '件', category: 'part' },
-  { id: 'plant/boron-crystallizer/agitator', name: '蒸发结晶器搅拌器', unit: '件', category: 'part' },
-  { id: 'plant/boron-crystallizer/vacuum-pump', name: '蒸发结晶器真空泵', unit: '件', category: 'part' },
-  { id: 'plant/boron-crystallizer/valve', name: '蒸发结晶器阀', unit: '件', category: 'part' },
+  { id: 'plant/boron-crystallizer/shell', name: 'Evaporative Crystallizer Shell', name_zh: '蒸发结晶器壳体', unit: '件', category: 'part' },
+  { id: 'plant/boron-crystallizer/jacket', name: 'Evaporative Crystallizer Jacket', name_zh: '蒸发结晶器夹套', unit: '件', category: 'part' },
+  { id: 'plant/boron-crystallizer/agitator', name: 'Evaporative Crystallizer Agitator', name_zh: '蒸发结晶器搅拌器', unit: '件', category: 'part' },
+  { id: 'plant/boron-crystallizer/vacuum-pump', name: 'Evaporative Crystallizer Vacuum Pump', name_zh: '蒸发结晶器真空泵', unit: '件', category: 'part' },
+  { id: 'plant/boron-crystallizer/valve', name: 'Evaporative Crystallizer Valve', name_zh: '蒸发结晶器阀', unit: '件', category: 'part' },
 ];
 
 export const BORON_PLANT_ROUTES: readonly Route[] = [
   {
     id: 'make/boron-leach-shell',
-    name: '浸取槽壳体制造',
+    name: 'Leaching Tank Shell Manufacturing', name_zh: '浸取槽壳体制造',
     produces: [{ item: 'plant/boron-leach-tank/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(200) }] }],
     needs: ['plant/clean-room'],
@@ -117,7 +117,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-leach-jacket',
-    name: '浸取槽夹套制造',
+    name: 'Leaching Tank Jacket Manufacturing', name_zh: '浸取槽夹套制造',
     produces: [{ item: 'plant/boron-leach-tank/jacket', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(50) }] }],
     needs: ['plant/clean-room'],
@@ -127,7 +127,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-leach-agitator',
-    name: '浸取槽搅拌器制造',
+    name: 'Leaching Tank Agitator Manufacturing', name_zh: '浸取槽搅拌器制造',
     produces: [{ item: 'plant/boron-leach-tank/agitator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(20) }] },
@@ -140,7 +140,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-leach-filter',
-    name: '浸取槽滤板制造',
+    name: 'Leaching Tank Filter Plate Manufacturing', name_zh: '浸取槽滤板制造',
     produces: [{ item: 'plant/boron-leach-tank/filter-plate', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(10) }] }],
     needs: ['lathe', 'plant/clean-room'],
@@ -150,7 +150,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-leach-valve',
-    name: '浸取槽阀制造',
+    name: 'Leaching Tank Valve Manufacturing', name_zh: '浸取槽阀制造',
     produces: [{ item: 'plant/boron-leach-tank/valve', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe', 'plant/clean-room'],
@@ -169,7 +169,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
      * ⚠️ B 类：折弯回弹、圆度、球面度、焊缝气密未标定；没有 RT/PT/氦检漏。
      */
     id: 'make/boron-leach-tank-liner-ni',
-    name: '浸取槽镍内衬制造',
+    name: 'Leaching Tank Nickel Liner Manufacturing', name_zh: '浸取槽镍内衬制造',
     produces: [{ item: 'plant/boron-leach-tank/liner-ni', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/nickel', qty: q(600) }] }],
     needs: ['lathe', 'plant/clean-room'],
@@ -180,7 +180,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-crystallizer-shell',
-    name: '蒸发结晶器壳体制造',
+    name: 'Evaporative Crystallizer Shell Manufacturing', name_zh: '蒸发结晶器壳体制造',
     produces: [{ item: 'plant/boron-crystallizer/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(150) }] }],
     needs: ['plant/clean-room'],
@@ -190,7 +190,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-crystallizer-jacket',
-    name: '蒸发结晶器夹套制造',
+    name: 'Evaporative Crystallizer Jacket Manufacturing', name_zh: '蒸发结晶器夹套制造',
     produces: [{ item: 'plant/boron-crystallizer/jacket', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(40) }] }],
     needs: ['plant/clean-room'],
@@ -200,7 +200,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-crystallizer-agitator',
-    name: '蒸发结晶器搅拌器制造',
+    name: 'Evaporative Crystallizer Agitator Manufacturing', name_zh: '蒸发结晶器搅拌器制造',
     produces: [{ item: 'plant/boron-crystallizer/agitator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(10) }] },
@@ -213,7 +213,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-crystallizer-pump',
-    name: '蒸发结晶器真空泵制造',
+    name: 'Evaporative Crystallizer Vacuum Pump Manufacturing', name_zh: '蒸发结晶器真空泵制造',
     produces: [{ item: 'plant/boron-crystallizer/vacuum-pump', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'plant/evaporator/pump', qty: q(1) }] }],
     needs: ['plant/clean-room'],
@@ -223,7 +223,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-crystallizer-valve',
-    name: '蒸发结晶器阀制造',
+    name: 'Evaporative Crystallizer Valve Manufacturing', name_zh: '蒸发结晶器阀制造',
     produces: [{ item: 'plant/boron-crystallizer/valve', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe', 'plant/clean-room'],
@@ -233,7 +233,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-leach-tank',
-    name: '浸取槽制造',
+    name: 'Leaching Tank Manufacturing', name_zh: '浸取槽制造',
     produces: [
       {
         item: 'plant/boron-leach-tank',
@@ -262,7 +262,7 @@ export const BORON_PLANT_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/boron-crystallizer',
-    name: '蒸发结晶器制造',
+    name: 'Evaporative Crystallizer Manufacturing', name_zh: '蒸发结晶器制造',
     produces: [
       {
         item: 'plant/boron-crystallizer',

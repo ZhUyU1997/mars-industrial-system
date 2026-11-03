@@ -274,7 +274,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/mass-standard-10g-si',
-    name: '10 g 单晶硅球',
+    name: '10 g Single-Crystal Silicon Sphere', name_zh: '10 g 单晶硅球',
     unit: '件',
     category: 'part',
     props: [
@@ -304,7 +304,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/mass-weight-set-mg',
-    name: '毫克级砝码组',
+    name: 'Milligram-Level Weight Set', name_zh: '毫克级砝码组',
     unit: '套',
     category: 'part',
     props: [
@@ -333,7 +333,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/micro-balance/beam',
-    name: '微量天平横梁',
+    name: 'Microbalance Beam', name_zh: '微量天平横梁',
     unit: '件',
     category: 'part',
     props: [
@@ -356,7 +356,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/micro-balance/knife-edge',
-    name: '微量天平刀口',
+    name: 'Microbalance Knife Edge', name_zh: '微量天平刀口',
     unit: '件',
     category: 'part',
     props: [
@@ -376,7 +376,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/micro-balance/column',
-    name: '微量天平立柱',
+    name: 'Microbalance Column', name_zh: '微量天平立柱',
     unit: '件',
     category: 'part',
     props: [
@@ -400,7 +400,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/micro-balance/drive',
-    name: '微量天平电磁补偿头',
+    name: 'Microbalance Electromagnetic Compensation Head', name_zh: '微量天平电磁补偿头',
     unit: '件',
     category: 'part',
     props: [
@@ -422,7 +422,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/micro-balance/readout',
-    name: '微量天平位置检测与伺服',
+    name: 'Microbalance Position Detection and Servo', name_zh: '微量天平位置检测与伺服',
     unit: '件',
     category: 'part',
     props: [
@@ -449,7 +449,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/micro-balance',
-    name: '微量天平',
+    name: 'Microbalance', name_zh: '微量天平',
     unit: '台',
     category: 'machine',
     props: [
@@ -485,7 +485,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/voltage-balance/guard-plate',
-    name: '绝对电压天平保护环固定电极',
+    name: 'Absolute Voltage Balance Guard Ring Fixed Electrode', name_zh: '绝对电压天平保护环固定电极',
     unit: '件',
     category: 'part',
     props: [
@@ -509,7 +509,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/voltage-balance/movable-plate',
-    name: '绝对电压天平可动电极',
+    name: 'Absolute Voltage Balance Movable Electrode', name_zh: '绝对电压天平可动电极',
     unit: '件',
     category: 'part',
     props: [
@@ -533,7 +533,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/voltage-balance/gap-drive',
-    name: '绝对电压天平间隙微调',
+    name: 'Absolute Voltage Balance Gap Fine Adjustment', name_zh: '绝对电压天平间隙微调',
     unit: '件',
     category: 'part',
     props: [
@@ -557,7 +557,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/voltage-balance/base-shield',
-    name: '绝对电压天平基座与屏蔽罩',
+    name: 'Absolute Voltage Balance Base and Shield Cover', name_zh: '绝对电压天平基座与屏蔽罩',
     unit: '件',
     category: 'part',
     props: [
@@ -583,7 +583,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/voltage-balance',
-    name: '绝对电压天平',
+    name: 'Absolute Voltage Balance', name_zh: '绝对电压天平',
     unit: '台',
     category: 'machine',
     props: [
@@ -612,7 +612,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gravity-pendulum/rod',
-    name: '可逆摆摆杆',
+    name: 'Reversible Pendulum Rod', name_zh: '可逆摆摆杆',
     unit: '件',
     category: 'part',
     props: [
@@ -633,7 +633,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gravity-pendulum/knife-edge',
-    name: '可逆摆摆的刀口',
+    name: 'Reversible Pendulum Knife Edge', name_zh: '可逆摆摆的刀口',
     unit: '件',
     category: 'part',
     props: [
@@ -655,7 +655,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gravity-pendulum/body',
-    name: '可逆摆摆锤与支架',
+    name: 'Reversible Pendulum Bob and Support', name_zh: '可逆摆摆锤与支架',
     unit: '件',
     category: 'part',
     props: [
@@ -678,7 +678,7 @@ export const VOLTAGE_ANCHOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gravity-pendulum',
-    name: '可逆摆',
+    name: 'Reversible Pendulum', name_zh: '可逆摆',
     unit: '台',
     category: 'machine',
     props: [
@@ -729,7 +729,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 若极差 >0.2 µm 就退回重抛。
      */
     id: 'make/mass-standard-10g-si',
-    name: '10 g 单晶硅球制造',
+    name: '10 g Single-Crystal Silicon Sphere Manufacturing', name_zh: '10 g 单晶硅球制造',
     rate: { hours: q(72) },
     produces: [
       {
@@ -805,7 +805,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 0.01 mm 就是 2 %，不定值不能用。定值后每只刻编号，证书逐只写。
      */
     id: 'make/mass-weight-set-mg',
-    name: '毫克级砝码组制造',
+    name: 'Milligram-Level Weight Set Manufacturing', name_zh: '毫克级砝码组制造',
     rate: { hours: q(120) },
     produces: [
       {
@@ -869,7 +869,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 否则装好后梁会慢慢弯，零点每天漂几个 µg。
      */
     id: 'make/micro-balance-beam',
-    name: '微量天平横梁制造',
+    name: 'Microbalance Beam Manufacturing', name_zh: '微量天平横梁制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -916,7 +916,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 有 8 倍余量。
      */
     id: 'make/micro-balance-knife-edge',
-    name: '微量天平刀口制造',
+    name: 'Microbalance Knife Edge Manufacturing', name_zh: '微量天平刀口制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -963,7 +963,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 是 3.75 mg 静电力的 7 倍 —— 不罩，测的不是静电力。
      */
     id: 'make/micro-balance-column',
-    name: '微量天平立柱制造',
+    name: 'Microbalance Column Manufacturing', name_zh: '微量天平立柱制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -1013,7 +1013,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 的初值（用 1 g 试重 + 梁），最终由 `make/micro-balance` 用砝码组标定。
      */
     id: 'make/micro-balance-drive',
-    name: '微量天平电磁补偿头制造',
+    name: 'Microbalance Electromagnetic Compensation Head Manufacturing', name_zh: '微量天平电磁补偿头制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -1065,7 +1065,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 光电对磁场不敏感（线圈就在旁边），直流耦合 + 低漂移运放更安静。
      */
     id: 'make/micro-balance-readout',
-    name: '微量天平位置检测与伺服制造',
+    name: 'Microbalance Position Detection and Servo Manufacturing', name_zh: '微量天平位置检测与伺服制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -1124,7 +1124,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 再用同一读数称静电力。顺序不能反。
      */
     id: 'make/micro-balance',
-    name: '微量天平总装',
+    name: 'Microbalance Final Assembly', name_zh: '微量天平总装',
     rate: { hours: q(48) },
     produces: [
       {
@@ -1199,7 +1199,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 级的面积误差；不锈钢（1.4301）硬度高、研磨边缘干净。
      */
     id: 'make/voltage-balance-guard-plate',
-    name: '绝对电压天平保护环固定电极制造',
+    name: 'Absolute Voltage Balance Guard Ring Fixed Electrode Manufacturing', name_zh: '绝对电压天平保护环固定电极制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1256,7 +1256,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 研完用比较仪在 5 点看平面度，边缘不许翘 >0.1 µm。
      */
     id: 'make/voltage-balance-movable-plate',
-    name: '绝对电压天平可动电极制造',
+    name: 'Absolute Voltage Balance Movable Electrode Manufacturing', name_zh: '绝对电压天平可动电极制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -1302,7 +1302,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 丝杠只负责「走到差不多」；间隙的绝对值由激光干涉仪在三个点上直接量。
      */
     id: 'make/voltage-balance-gap-drive',
-    name: '绝对电压天平间隙微调制造',
+    name: 'Absolute Voltage Balance Gap Fine Adjustment Manufacturing', name_zh: '绝对电压天平间隙微调制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1353,7 +1353,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 大 1.75×10⁵ 倍，不加载。
      */
     id: 'make/voltage-balance-base-shield',
-    name: '绝对电压天平基座与屏蔽罩制造',
+    name: 'Absolute Voltage Balance Base and Shield Cover Manufacturing', name_zh: '绝对电压天平基座与屏蔽罩制造',
     rate: { hours: q(32) },
     produces: [
       {
@@ -1417,7 +1417,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 用 10 g 标准 + 砝码组先标天平，再称静电力。
      */
     id: 'make/voltage-balance',
-    name: '绝对静电计总装',
+    name: 'Absolute Electrometer Final Assembly', name_zh: '绝对静电计总装',
     rate: { hours: q(80) },
     produces: [
       {
@@ -1492,7 +1492,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 0.05 ppm。这一项不是「更好」，是让温度退出 g 的误差预算。
      */
     id: 'make/gravity-pendulum-rod',
-    name: '可逆摆摆杆制造',
+    name: 'Reversible Pendulum Rod Manufacturing', name_zh: '可逆摆摆杆制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -1539,7 +1539,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 由比较仪 + 量块定，不在零件上定。
      */
     id: 'make/gravity-pendulum-knife-edge',
-    name: '可逆摆摆的刀口制造',
+    name: 'Reversible Pendulum Knife Edge Manufacturing', name_zh: '可逆摆摆的刀口制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -1583,7 +1583,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * 刀口压出印子（比压 >300 MPa），3 kg 是折中。
      */
     id: 'make/gravity-pendulum-body',
-    name: '可逆摆摆锤与支架制造',
+    name: 'Reversible Pendulum Bob and Support Manufacturing', name_zh: '可逆摆摆锤与支架制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1638,7 +1638,7 @@ export const VOLTAGE_ANCHOR_ROUTES: readonly Route[] = [
      * （时基 20 + 长度 1 + 振幅残差 0.1 + 浮力 2 + 摩擦 5，1.2 倍余量）。
      */
     id: 'make/gravity-pendulum',
-    name: '可逆摆总装',
+    name: 'Reversible Pendulum Final Assembly', name_zh: '可逆摆总装',
     rate: { hours: q(48) },
     produces: [
       {

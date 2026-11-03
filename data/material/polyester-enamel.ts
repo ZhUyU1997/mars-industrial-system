@@ -65,7 +65,7 @@ export const POLYESTER_ENAMEL_ITEMS: readonly Item[] = [
    * 它是"漆"的树脂部分；漆包线漆出厂时还要加 30–40 % 的甲酚/二甲苯稀释，
    * 本层省掉这一步（溶剂在烘炉里反正要挥发掉），所以按 100 % 固含记。
    */
-  { id: 'mat/polyester-resin', name: 'THEIC 改性聚酯树脂', unit: 'kg', category: 'material' },
+  { id: 'mat/polyester-resin', name: 'THEIC-Modified Polyester Resin', name_zh: 'THEIC 改性聚酯树脂', unit: 'kg', category: 'material' },
 ];
 
 export const POLYESTER_ENAMEL_ROUTES: readonly Route[] = [
@@ -76,7 +76,7 @@ export const POLYESTER_ENAMEL_ROUTES: readonly Route[] = [
      *   560 + 280 + 280 → 1000 + 120（羧基酯化 88 %，残余酸值约 15 mgKOH/g）
      */
     id: 'make/polyester-resin',
-    name: '缩聚制备',
+    name: 'Polycondensation', name_zh: '缩聚制备',
     produces: [
       { item: 'mat/polyester-resin', qty: q(1000) },
       {
@@ -110,7 +110,7 @@ export const POLYESTER_ENAMEL_ROUTES: readonly Route[] = [
      * 伺服电机挑得着 155 那一条，所以那句 `need ≥155` 从此覆盖。
      */
     id: 'make/enamel-wire-f',
-    name: '漆包线制备',
+    name: 'Enamelled Wire Production', name_zh: '漆包线制备',
     produces: [
       {
         item: 'mat/enamel-wire',

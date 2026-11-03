@@ -477,7 +477,7 @@ export const UNBLOCK_HTF_HEATING_ROUTES: readonly Route[] = [
      *     "碳 600 + 石灰 70 + 风化层 45"是同一个记法
      */
     id: 'make/htf-heating-carbon',
-    name: '高温炉硅碳棒与夹具制造',
+    name: 'High-Temperature Furnace Silicon Carbide Rods and Fixture Manufacturing', name_zh: '高温炉硅碳棒与夹具制造',
     produces: [{ item: 'plant/high-temp-furnace/heating', qty: q(1) }],
     uses: [
       /**

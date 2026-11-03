@@ -24,7 +24,7 @@ export const VOLTAGE_QUANTUM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/voltage-quantum-intercomparison-record',
-    name: '电压天平 vs 约瑟夫森互检记录',
+    name: 'Voltage Balance vs Josephson Intercomparison Record', name_zh: '电压天平 vs 约瑟夫森互检记录',
     unit: '份',
     category: 'part',
     props: [
@@ -46,7 +46,7 @@ export const VOLTAGE_QUANTUM_ROUTES: readonly Route[] = [
      *   ③ 正反向各 3 次，消热电势；差 ≤ 2·uDiff 判 consistent。
      */
     id: 'measure/voltage-quantum-intercomparison',
-    name: '电压天平 vs 约瑟夫森互检测量',
+    name: 'Voltage Balance vs Josephson Intercomparison Measurement', name_zh: '电压天平 vs 约瑟夫森互检测量',
     rate: { hours: q(8) },
     produces: [
       {

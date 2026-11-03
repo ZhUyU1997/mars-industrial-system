@@ -47,7 +47,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ree-concentrate',
-    name: '稀土精矿',
+    name: 'Rare Earth Concentrate', name_zh: '稀土精矿',
     unit: 'kg',
     category: 'material',
     props: [
@@ -65,7 +65,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/lanthanum-oxide',
-    name: '氧化镧',
+    name: 'Lanthanum Oxide', name_zh: '氧化镧',
     unit: 'kg',
     category: 'material',
     props: [
@@ -82,7 +82,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cerium-oxide',
-    name: '氧化铈',
+    name: 'Cerium Oxide', name_zh: '氧化铈',
     unit: 'kg',
     category: 'material',
     props: [
@@ -100,7 +100,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/barium-carbonate-optical',
-    name: '光学级 BaCO₃',
+    name: 'Optical-Grade BaCO₃', name_zh: '光学级 BaCO₃',
     unit: 'kg',
     category: 'material',
     props: [
@@ -125,7 +125,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/lasf-glass',
-    name: '镧火石玻璃',
+    name: 'Lanthanum Flint Glass', name_zh: '镧火石玻璃',
     unit: 'kg',
     category: 'material',
     props: [
@@ -145,7 +145,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/crucible-quartz-3l',
-    name: 'φ160×160 熔石英坩埚',
+    name: 'φ160×160 Fused Quartz Crucible', name_zh: 'φ160×160 熔石英坩埚',
     unit: '件',
     category: 'part',
     props: [
@@ -166,7 +166,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/bowl-lap-200',
-    name: 'φ200 碗形/球面抛光模',
+    name: 'φ200 Bowl/Spherical Polishing Lap', name_zh: 'φ200 碗形/球面抛光模',
     unit: '件',
     category: 'part',
     props: [
@@ -185,7 +185,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/small-tool-15',
-    name: 'φ15 小磨头',
+    name: 'φ15 Small Grinding Head', name_zh: 'φ15 小磨头',
     unit: '件',
     category: 'part',
     props: [
@@ -203,7 +203,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/glass-press',
-    name: '玻璃压型机',
+    name: 'Glass Press', name_zh: '玻璃压型机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -225,7 +225,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cnc-polisher-5axis',
-    name: '五轴小磨头数控抛光机',
+    name: '5-Axis Small Grinding Head CNC Polishing Machine', name_zh: '五轴小磨头数控抛光机',
     unit: '台',
     category: 'machine',
     props: [
@@ -247,7 +247,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/blank-lasf-175x120',
-    name: 'φ175×120 镧火石毛坯',
+    name: 'φ175×120 Lanthanum Flint Blank', name_zh: 'φ175×120 镧火石毛坯',
     unit: '件',
     category: 'part',
     props: [
@@ -269,7 +269,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/cgh-blank-160',
-    name: 'φ160×10 熔石英 CGH 基板',
+    name: 'φ160×10 Fused Quartz CGH Substrate', name_zh: 'φ160×10 熔石英 CGH 基板',
     unit: '件',
     category: 'part',
     props: [
@@ -293,7 +293,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/cgh-160',
-    name: 'φ160 会聚束 CGH',
+    name: 'φ160 Convergent Beam CGH', name_zh: 'φ160 会聚束 CGH',
     unit: '件',
     category: 'part',
     props: [
@@ -315,7 +315,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/ref-sphere-na086',
-    name: 'NA 0.86 参考球',
+    name: 'NA 0.86 Reference Sphere', name_zh: 'NA 0.86 参考球',
     unit: '件',
     category: 'part',
     props: [
@@ -335,7 +335,7 @@ export const ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/hindle-150',
-    name: 'Hindle 补偿球',
+    name: 'Hindle Compensating Sphere', name_zh: 'Hindle 补偿球',
     unit: '件',
     category: 'part',
     props: [
@@ -367,7 +367,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 48 h：500 kg 矿浆在 100–200 kPa 下粗选 + 扫选 + 精选三遍。
      */
     id: 'make/ree-concentrate',
-    name: '稀土精矿制备',
+    name: 'Rare Earth Concentrate Production', name_zh: '稀土精矿制备',
     rate: { hours: q(48) },
     produces: [
       {
@@ -406,7 +406,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 120 h（含焙烧 24 h、浸出 24 h、沉淀/过滤 24 h、灼烧 24 h、粉碎/分级 24 h）。
      */
     id: 'make/lanthanum-oxide',
-    name: '氧化镧制备',
+    name: 'Lanthanum Oxide Production', name_zh: '氧化镧制备',
     rate: { hours: q(120) },
     produces: [
       {
@@ -487,7 +487,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 24 h：90–100 °C 溶解 → 过滤 → 20–30 °C 重结晶 → 200–300 °C 干燥 → 粉碎。
      */
     id: 'make/barium-carbonate-optical',
-    name: 'BaCO₃ 重结晶',
+    name: 'BaCO₃ Recrystallization', name_zh: 'BaCO₃ 重结晶',
     rate: { hours: q(24) },
     produces: [
       {
@@ -569,7 +569,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 8 只各蚀薄 0.5 kg/批，共 4 kg，只动 SiO₂ 的 14 %。
      */
     id: 'make/lasf-glass',
-    name: 'LaSF 玻璃制备',
+    name: 'LaSF Glass Production', name_zh: 'LaSF 玻璃制备',
     rate: { hours: q(216) },
     produces: [
       {
@@ -709,7 +709,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 磨口 → 检验。12 h。每只 10–15 批，玻璃路线按 0.5 kg/批蚀薄。
      */
     id: 'make/crucible-quartz-3l',
-    name: 'φ160×160 熔石英坩埚制造',
+    name: 'φ160×160 Fused Quartz Crucible Manufacturing', name_zh: 'φ160×160 熔石英坩埚制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -774,7 +774,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 24 h。R 60–200 按工件车修：非球面 R130.5、参考球 R87、Hindle R60。
      */
     id: 'make/bowl-lap-200',
-    name: 'φ200 碗形/球面抛光模制造',
+    name: 'φ200 Bowl/Spherical Polishing Lap Manufacturing', name_zh: 'φ200 碗形/球面抛光模制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -830,7 +830,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 铝柄（0.2 kg）+ 酚醛抛光层（0.1 kg）+ CeO₂（0.05 kg）；8 h。
      */
     id: 'make/small-tool-15',
-    name: 'φ15 小磨头制造',
+    name: 'φ15 Small Grinding Head Manufacturing', name_zh: 'φ15 小磨头制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -885,7 +885,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 160 h：浇架 60 h + 加工 60 h + 装 24 h + 试 16 h。
      */
     id: 'make/glass-press',
-    name: '玻璃压型机制造',
+    name: 'Glass Press Manufacturing', name_zh: '玻璃压型机制造',
     rate: { hours: q(160) },
     produces: [
       {
@@ -956,7 +956,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 余 64 = 切屑/浇冒口 34 + 水 30。240 h。
      */
     id: 'make/cnc-polisher-5axis',
-    name: '五轴小磨头数控抛光机制造',
+    name: '5-Axis Small Grinding Head CNC Polishing Machine Manufacturing', name_zh: '五轴小磨头数控抛光机制造',
     rate: { hours: q(240) },
     produces: [
       {
@@ -1028,7 +1028,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 11.5 kg = π×8.75²×12 cm³ × 4.0 g/cm³ = 11.55 kg（设计密度 4.0）。
      */
     id: 'make/blank-lasf-175x120',
-    name: 'φ175×120 镧火石毛坯制造',
+    name: 'φ175×120 Lanthanum Flint Blank Manufacturing', name_zh: 'φ175×120 镧火石毛坯制造',
     rate: { hours: q(96) },
     produces: [
       {
@@ -1112,7 +1112,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 1,400 h = φ100 那块 550 h × (160/100)² = 1,408 取整；面积是 2.56 倍。
      */
     id: 'make/cgh-blank-160',
-    name: 'φ160×10 熔石英 CGH 基板制造',
+    name: 'φ160×10 Fused Quartz CGH Substrate Manufacturing', name_zh: 'φ160×10 熔石英 CGH 基板制造',
     rate: { hours: q(1400) },
     produces: [
       {
@@ -1201,7 +1201,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 不需要铬。铬版作为降级项留在缺口表里，不影响这条链。
      */
     id: 'make/null-test-cgh-160',
-    name: 'φ160 会聚束 CGH 制造',
+    name: 'φ160 Convergent Beam CGH Manufacturing', name_zh: 'φ160 会聚束 CGH 制造',
     rate: { hours: q(48) },
     produces: [
       {
@@ -1307,7 +1307,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * 碗形盘/小磨头 —— 它不是非球面，但陡边抛光是同一条工艺。
      */
     id: 'make/ref-sphere-na086',
-    name: 'NA 0.86 参考球制造',
+    name: 'NA 0.86 Reference Sphere Manufacturing', name_zh: 'NA 0.86 参考球制造',
     rate: { hours: q(220) },
     produces: [
       {
@@ -1386,7 +1386,7 @@ const ASPHERE_ROUTE_LIST: Route[] = [
      * R70 遮挡 65 %、R87 遮挡 100 %，所以 48 % 是这条设计能拿到的最低遮挡。
      */
     id: 'make/hindle-150',
-    name: 'Hindle 补偿球制造',
+    name: 'Hindle Compensating Sphere Manufacturing', name_zh: 'Hindle 补偿球制造',
     rate: { hours: q(180) },
     produces: [
       {
@@ -1477,9 +1477,11 @@ const ASPHERE_MASS_ZH =
  */
 function asphereRoute(id: string, hours: number, tool: string, toolNote: string): Route {
   const toolLabel = id.includes('cgh') ? 'CGH' : id.includes('refsphere') ? '参考球' : 'Hindle';
+  const toolLabelEn = id.includes('cgh') ? 'CGH' : id.includes('refsphere') ? 'Reference Sphere' : 'Hindle';
   return {
     id,
-    name: `非球面 φ150 ${toolLabel} 检验路线`,
+    name: `Aspheric φ150 ${toolLabelEn} Inspection Route`,
+    name_zh: `非球面 φ150 ${toolLabel} 检验路线`,
     rate: { hours: q(hours) },
     produces: [
       {

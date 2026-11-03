@@ -319,7 +319,7 @@ export const UNBLOCK_METRO_HVAC_ROUTES: readonly Route[] = [
      * （多工序 + 三种情形）。**没有一台要新设备。**
      */
     id: 'make/metrology-hvac-cast',
-    name: '计量间恒温机组制造',
+    name: 'Metrology Room Temperature-Control Unit Manufacturing', name_zh: '计量间恒温机组制造',
     produces: [{ item: 'plant/metrology-room/hvac', qty: q(1) }],
     uses: [
       // 火道 608 + 地坪辐射板 480 + 火箱壳 180 + 水盘/托架/3 只翻板阀/法兰 132。

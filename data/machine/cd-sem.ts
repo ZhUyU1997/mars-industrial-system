@@ -508,7 +508,7 @@ export const CDSEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/cd-sem/gun',
-    name: '临界尺寸扫描电镜枪',
+    name: 'CD-SEM Electron Gun', name_zh: '临界尺寸扫描电镜枪',
     unit: '件',
     category: 'part',
     props: [
@@ -541,7 +541,7 @@ export const CDSEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/cd-sem/condenser',
-    name: '临界尺寸扫描电镜聚光镜',
+    name: 'CD-SEM Condenser Lens', name_zh: '临界尺寸扫描电镜聚光镜',
     unit: '件',
     category: 'part',
     props: [
@@ -564,7 +564,7 @@ export const CDSEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/cd-sem/objective',
-    name: '临界尺寸扫描电镜物镜',
+    name: 'CD-SEM Objective Lens', name_zh: '临界尺寸扫描电镜物镜',
     unit: '件',
     category: 'part',
     props: [
@@ -589,7 +589,7 @@ export const CDSEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/cd-sem/aperture',
-    name: '临界尺寸扫描电镜光阑组',
+    name: 'CD-SEM Aperture Set', name_zh: '临界尺寸扫描电镜光阑组',
     unit: '件',
     category: 'part',
     props: [
@@ -615,7 +615,7 @@ export const CDSEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/cd-sem/column',
-    name: '临界尺寸扫描电镜镜筒与样品室',
+    name: 'CD-SEM Column and Sample Chamber', name_zh: '临界尺寸扫描电镜镜筒与样品室',
     unit: '件',
     category: 'part',
     props: [
@@ -642,7 +642,7 @@ export const CDSEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/cd-sem/tilt-stage',
-    name: '临界尺寸扫描电镜倾转台',
+    name: 'CD-SEM Tilt Stage', name_zh: '临界尺寸扫描电镜倾转台',
     unit: '件',
     category: 'part',
     props: [
@@ -681,7 +681,7 @@ export const CDSEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/cd-sem/inlens-detector',
-    name: '透镜内二次电子探测器',
+    name: 'In-Lens Secondary Electron Detector', name_zh: '透镜内二次电子探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -719,7 +719,7 @@ export const CDSEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/cd-sem/edge-unit',
-    name: '临界尺寸扫描电镜边缘判定单元',
+    name: 'CD-SEM Edge Determination Unit', name_zh: '临界尺寸扫描电镜边缘判定单元',
     unit: '件',
     category: 'part',
     props: [
@@ -744,7 +744,7 @@ export const CDSEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/cd-sem/cleaner',
-    name: '临界尺寸扫描电镜除碳腔',
+    name: 'CD-SEM Carbon Removal Chamber', name_zh: '临界尺寸扫描电镜除碳腔',
     unit: '件',
     category: 'part',
     props: [
@@ -770,7 +770,7 @@ export const CDSEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/cd-sem/cd-standard',
-    name: 'CD 标准片',
+    name: 'CD Standard Wafer', name_zh: 'CD 标准片',
     unit: '片',
     category: 'part',
     props: [
@@ -806,7 +806,7 @@ export const FIB_TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/fib-tem/column',
-    name: '30 kV 透射柱',
+    name: '30 kV Transmission Column', name_zh: '30 kV 透射柱',
     unit: '件',
     category: 'part',
     props: [
@@ -836,7 +836,7 @@ export const FIB_TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/fib-tem/stem-detector',
-    name: '聚焦离子束透射电镜下置透射探测器',
+    name: 'FIB-TEM Bottom-Mounted Transmission Detector', name_zh: '聚焦离子束透射电镜下置透射探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -865,7 +865,7 @@ export const FIB_TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/fib-tem/specimen-holder',
-    name: '聚焦离子束透射电镜低背景双倾样品架',
+    name: 'FIB-TEM Low-Background Double-Tilt Sample Holder', name_zh: '聚焦离子束透射电镜低背景双倾样品架',
     unit: '件',
     category: 'part',
     props: [
@@ -891,7 +891,7 @@ export const FIB_TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/fib-tem/micromanipulator',
-    name: '聚焦离子束透射电镜微操纵针',
+    name: 'FIB-TEM Micromanipulator Needle', name_zh: '聚焦离子束透射电镜微操纵针',
     unit: '件',
     category: 'part',
     props: [
@@ -917,7 +917,7 @@ export const FIB_TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/fib-tem/grid',
-    name: '聚焦离子束透射电镜碳膜载网',
+    name: 'FIB-TEM Carbon Film Support Grid', name_zh: '聚焦离子束透射电镜碳膜载网',
     unit: '件',
     category: 'part',
     props: [
@@ -942,7 +942,7 @@ export const FIB_TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/fib-tem/transfer-rod',
-    name: '聚焦离子束透射电镜真空转移杆',
+    name: 'FIB-TEM Vacuum Transfer Rod', name_zh: '聚焦离子束透射电镜真空转移杆',
     unit: '件',
     category: 'part',
     props: [
@@ -969,7 +969,7 @@ export const FIB_TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/fib-tem/carbon-welder',
-    name: '聚焦离子束透射电镜碳焊头',
+    name: 'FIB-TEM Carbon Welding Head', name_zh: '聚焦离子束透射电镜碳焊头',
     unit: '件',
     category: 'part',
     props: [
@@ -994,7 +994,7 @@ export const FIB_TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/fib-tem/lamella',
-    name: '聚焦离子束透射电镜透射试样',
+    name: 'FIB-TEM Transmission Specimen', name_zh: '聚焦离子束透射电镜透射试样',
     unit: '件',
     category: 'part',
     props: [
@@ -1025,7 +1025,7 @@ export const FIB_TEM_PARTS: readonly Item[] = [
  */
 export const CDSEM: Item = {
   id: 'plant/cd-sem',
-  name: '临界尺寸扫描电镜',
+  name: 'Critical Dimension Scanning Electron Microscope', name_zh: '临界尺寸扫描电镜',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'pressure', min: 1e-6, max: 1e-3 }],
@@ -1082,7 +1082,7 @@ export const CDSEM: Item = {
  */
 export const FIB_TEM: Item = {
   id: 'plant/fib-tem',
-  name: '聚焦离子束透射电镜',
+  name: 'Focused Ion Beam Transmission Electron Microscope', name_zh: '聚焦离子束透射电镜',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'pressure', min: 1e-5, max: 1e-3 }],
@@ -1138,7 +1138,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * （2700 K 下 1 nm/h 的蒸发，50 h 掉 4 % 截面就该换）。
      */
     id: 'make/cd-sem-gun',
-    name: '临界尺寸扫描电镜枪制造',
+    name: 'CD-SEM Electron Gun Manufacturing', name_zh: '临界尺寸扫描电镜枪制造',
     rate: { hours: q(56) },
     produces: [
       {
@@ -1215,7 +1215,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * 这是本文件里"零件路线交付的东西比整机少"的第一处。
      */
     id: 'make/cd-sem-condenser',
-    name: '临界尺寸扫描电镜聚光镜制造',
+    name: 'CD-SEM Condenser Lens Manufacturing', name_zh: '临界尺寸扫描电镜聚光镜制造',
     rate: { hours: q(30) },
     produces: [
       {
@@ -1270,7 +1270,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * 钉住的。这一句是这台机器最要紧的设计结论。
      */
     id: 'make/cd-sem-objective',
-    name: '临界尺寸扫描电镜物镜制造',
+    name: 'CD-SEM Objective Lens Manufacturing', name_zh: '临界尺寸扫描电镜物镜制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1325,7 +1325,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * —— 再小就是"孔壁厚 > 孔径"的隧道，电子会打在壁上。
      */
     id: 'make/cd-sem-aperture',
-    name: '临界尺寸扫描电镜光阑组制造',
+    name: 'CD-SEM Aperture Set Manufacturing', name_zh: '临界尺寸扫描电镜光阑组制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -1378,7 +1378,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * —— `e-beam-column` 缺口④ 那句话在这里第二次出现：**没有电离规**。
      */
     id: 'make/cd-sem-column',
-    name: '临界尺寸扫描电镜镜筒与样品室制造',
+    name: 'CD-SEM Column and Sample Chamber Manufacturing', name_zh: '临界尺寸扫描电镜镜筒与样品室制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -1447,7 +1447,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * 而重新对焦后 CD 变多少，本层量不出来**（缺口⑤）。
      */
     id: 'make/cd-sem-tilt-stage',
-    name: '临界尺寸扫描电镜倾转台制造',
+    name: 'CD-SEM Tilt Stage Manufacturing', name_zh: '临界尺寸扫描电镜倾转台制造',
     rate: { hours: q(50) },
     produces: [
       {
@@ -1510,7 +1510,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * （`gain ≥16`），但这个 16 是**正入射**的；倾 60° 时实际是 7–8。
      */
     id: 'make/cd-sem-inlens-detector',
-    name: '透镜内二次电子探测器制造',
+    name: 'In-Lens Secondary Electron Detector Manufacturing', name_zh: '透镜内二次电子探测器制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -1583,7 +1583,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      *   algorithms 2      阈值（比较器）+ 斜率（RC 微分 τ = 0.24 s + 峰值保持）
      */
     id: 'make/cd-sem-edge-unit',
-    name: '临界尺寸扫描电镜边缘判定单元制造',
+    name: 'CD-SEM Edge Determination Unit Manufacturing', name_zh: '临界尺寸扫描电镜边缘判定单元制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -1651,7 +1651,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * 反推的，±50 %（D7）。
      */
     id: 'make/cd-sem-cleaner',
-    name: '临界尺寸扫描电镜除碳腔制造',
+    name: 'CD-SEM Carbon Removal Chamber Manufacturing', name_zh: '临界尺寸扫描电镜除碳腔制造',
     rate: { hours: q(18) },
     produces: [
       {
@@ -1718,7 +1718,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * —— **所以标准片自己也在被量具改变**，这一句必须写在这里。
      */
     id: 'make/cd-sem-standard',
-    name: 'CD 标准片制造',
+    name: 'CD Standard Wafer Manufacturing', name_zh: 'CD 标准片制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -1795,7 +1795,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * —— 与 `plant/e-beam-column` 把阴极单列（那是耗材，50 h 一换）正好相反。
      */
     id: 'make/fib-tem-column',
-    name: '30 kV 透射柱制造',
+    name: '30 kV Transmission Column Manufacturing', name_zh: '30 kV 透射柱制造',
     rate: { hours: q(70) },
     produces: [
       {
@@ -1872,7 +1872,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * （没有示波器，`e-beam-column` 缺口③）。
      */
     id: 'make/fib-tem-stem-detector',
-    name: '聚焦离子束透射电镜下置透射探测器制造',
+    name: 'FIB-TEM Bottom-Mounted Transmission Detector Manufacturing', name_zh: '聚焦离子束透射电镜下置透射探测器制造',
     rate: { hours: q(18) },
     produces: [
       {
@@ -1926,7 +1926,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      *                   ⇒ 漂 1 nm/min 是恒温间给的，不是机械给的
      */
     id: 'make/fib-tem-specimen-holder',
-    name: '聚焦离子束透射电镜低背景双倾样品架制造',
+    name: 'FIB-TEM Low-Background Double-Tilt Sample Holder Manufacturing', name_zh: '聚焦离子束透射电镜低背景双倾样品架制造',
     rate: { hours: q(28) },
     produces: [
       {
@@ -1980,7 +1980,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * 12 µm —— 比薄片还大）。
      */
     id: 'make/fib-tem-micromanipulator',
-    name: '聚焦离子束透射电镜微操纵针制造',
+    name: 'FIB-TEM Micromanipulator Needle Manufacturing', name_zh: '聚焦离子束透射电镜微操纵针制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -2044,7 +2044,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * 网丝上，靠微操纵针的 1 µm 定位（20 % 的余量）。
      */
     id: 'make/fib-tem-grid',
-    name: '聚焦离子束透射电镜碳膜载网制造',
+    name: 'FIB-TEM Carbon Film Support Grid Manufacturing', name_zh: '聚焦离子束透射电镜碳膜载网制造',
     rate: { hours: q(6) },
     produces: [
       {
@@ -2094,7 +2094,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * **"一次也不破真空"这个设计本身带进来一个新的碳源**，这一句写在这里。
      */
     id: 'make/fib-tem-transfer-rod',
-    name: '聚焦离子束透射电镜真空转移杆制造',
+    name: 'FIB-TEM Vacuum Transfer Rod Manufacturing', name_zh: '聚焦离子束透射电镜真空转移杆制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -2148,7 +2148,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * （同一个视场前后两次像的位移）；接头的强度没有拉力计量，是估的（D12）。
      */
     id: 'make/fib-tem-carbon-welder',
-    name: '聚焦离子束透射电镜碳焊头制造',
+    name: 'FIB-TEM Carbon Welding Head Manufacturing', name_zh: '聚焦离子束透射电镜碳焊头制造',
     rate: { hours: q(14) },
     produces: [
       {
@@ -2219,7 +2219,7 @@ export const CDSEM_ROUTES: readonly Route[] = [
      * `needs`** —— 这台台子怎么接进这条路线，是 §十 的事。
      */
     id: 'make/fib-tem-lamella',
-    name: '聚焦离子束透射电镜透射试样制造',
+    name: 'FIB-TEM Transmission Specimen Manufacturing', name_zh: '聚焦离子束透射电镜透射试样制造',
     rate: { hours: q(5) },
     produces: [
       {
@@ -2312,7 +2312,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/cd-sem',
-    name: '临界尺寸扫描电镜装配',
+    name: 'Critical Dimension Scanning Electron Microscope Assembly', name_zh: '临界尺寸扫描电镜装配',
     produces: [{
       item: 'plant/cd-sem',
       qty: q(1),
@@ -2339,7 +2339,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/fib-tem',
-    name: '聚焦离子束透射电镜装配',
+    name: 'Focused Ion Beam Transmission Electron Microscope Assembly', name_zh: '聚焦离子束透射电镜装配',
     produces: [{
       item: 'plant/fib-tem',
       qty: q(1),

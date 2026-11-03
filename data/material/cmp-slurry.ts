@@ -445,7 +445,7 @@ export const SLURRY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/water-glass',
-    name: '硅酸钠水玻璃',
+    name: 'Sodium Silicate Water Glass', name_zh: '硅酸钠水玻璃',
     unit: 'kg',
     category: 'material',
     props: [
@@ -473,7 +473,7 @@ export const SLURRY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/colloidal-silica',
-    name: '0.05 µm 单分散胶体硅',
+    name: '0.05 µm Monodisperse Colloidal Silica', name_zh: '0.05 µm 单分散胶体硅',
     unit: 'kg',
     category: 'material',
     props: [
@@ -507,7 +507,7 @@ export const SLURRY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cmp-slurry',
-    name: '铜 CMP 抛光液',
+    name: 'Copper CMP Slurry', name_zh: '铜 CMP 抛光液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -528,7 +528,7 @@ export const SLURRY_ITEMS: readonly Item[] = [
      * 重铬酸钠是危废，废浆要石灰还原。
      */
     id: 'mat/w-cmp-slurry',
-    name: 'W CMP 浆',
+    name: 'W CMP Slurry', name_zh: 'W CMP 浆',
     unit: 'kg',
     category: 'material',
     props: [
@@ -568,7 +568,7 @@ export const SLURRY_ROUTES: readonly Route[] = [
      *      1100 °C 下全部蒸走 —— 这就是 §1.3 那 453 kg 里的第一份。
      */
     id: 'make/water-glass-sol-grade',
-    name: '水玻璃制备',
+    name: 'Water Glass Production', name_zh: '水玻璃制备',
     produces: [
       {
         item: 'mat/water-glass',
@@ -637,7 +637,7 @@ export const SLURRY_ROUTES: readonly Route[] = [
      * 那 35.9 kg 硫酸钠不是"损耗"，它在产品里 —— 这正是问五。
      */
     id: 'make/colloidal-silica-5wt',
-    name: '硅溶胶制备',
+    name: 'Silica Sol Production', name_zh: '硅溶胶制备',
     produces: [
       {
         item: 'mat/colloidal-silica',
@@ -769,7 +769,7 @@ export const SLURRY_ROUTES: readonly Route[] = [
      *      多 1 kg pH 冲 10.5 以上（硅溶解度 1 g/L、粒子被溶）。
      */
     id: 'make/cmp-slurry-cu-alkaline',
-    name: '配浆制备',
+    name: 'Slurry Production', name_zh: '配浆制备',
     produces: [
       {
         item: 'mat/cmp-slurry',
@@ -858,7 +858,7 @@ export const SLURRY_ROUTES: readonly Route[] = [
      * （hydrogen-peroxide.ts 缺口③）；从 5 % 稀释到 0.5 % 只要水。
      */
     id: 'make/cmp-slurry-cu-h2o2',
-    name: '过氧化氢版铜浆制备',
+    name: 'Hydrogen Peroxide-Based Copper Slurry Production', name_zh: '过氧化氢版铜浆制备',
     produces: [
       {
         item: 'mat/cmp-slurry',
@@ -963,7 +963,7 @@ export const SLURRY_ROUTES: readonly Route[] = [
      *       合计 2.6–5.1 ⇒ **报 3–5 nm**（中值 4；判据 5 nm 上界压线）
      */
     id: 'make/cmp-fine-damascene-slurry',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -1090,7 +1090,7 @@ export const SLURRY_ROUTES: readonly Route[] = [
      * Cr(VI) 废浆要石灰还原，不能直排。
      */
     id: 'make/w-cmp-slurry',
-    name: 'W CMP 浆制备',
+    name: 'W CMP Slurry Production', name_zh: 'W CMP 浆制备',
     produces: [
       {
         item: 'mat/w-cmp-slurry',

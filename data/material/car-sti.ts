@@ -60,7 +60,7 @@ export const CAR_STI_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/car-sti-trench-wafer',
-    name: 'STI 槽片',
+    name: 'STI Trench Wafer', name_zh: 'STI 槽片',
     unit: '片',
     category: 'part',
     props: [
@@ -89,7 +89,7 @@ export const CAR_STI_ROUTES: readonly Route[] = [
      * 为什么 1 h 够：HF 1–2 s、水冲 30 s、甩干 30 s、CD-SEM 10–20 min，加装片/传片/记录。
      */
     id: 'make/car-sti-trench',
-    name: 'STI 槽片制造',
+    name: 'STI Trench Wafer Manufacturing', name_zh: 'STI 槽片制造',
     produces: [
       {
         item: 'mat/car-sti-trench-wafer',

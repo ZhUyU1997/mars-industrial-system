@@ -78,7 +78,7 @@ export const REDUCER_PARTS: readonly Item[] = [
    * 本层用 40Cr 而不是 40CrNiMoA：后者要镍钼，镍有（见 data/material/bearing.ts
    * 的 GCr15），钼没有。40Cr 淬透性差一档，薄壁件反而好——变形小。
    */
-  { id: 'plant/robot/reducer/flexspline', name: '谐波减速器柔轮', unit: '件', category: 'part' },
+  { id: 'plant/robot/reducer/flexspline', name: 'Harmonic Reducer Flexspline', name_zh: '谐波减速器柔轮', unit: '件', category: 'part' },
 
   /**
    * 刚轮。45 钢内齿圈，齿数比柔轮多两个 —— 差这两个齿就是减速比。
@@ -86,7 +86,7 @@ export const REDUCER_PARTS: readonly Item[] = [
    * 它是减速器的固定端，也是整条扭矩路径的最后一站：柔轮的齿一个一个推它。
    * 内齿啮合比外齿难做，因为它不能用滚刀，只能用成形刀一齿一齿地啃。
    */
-  { id: 'plant/robot/reducer/circular', name: '机器人刚轮', unit: '件', category: 'part' },
+  { id: 'plant/robot/reducer/circular', name: 'Robot Circular Spline', name_zh: '机器人刚轮', unit: '件', category: 'part' },
 
   /**
    * 波发生器。**双滚轮式**：偏心轴 + 两个普通球轴承 + 摆杆。
@@ -99,7 +99,7 @@ export const REDUCER_PARTS: readonly Item[] = [
    * 承载与效率都低一档。**这是"能用但不是最好"的第六次**（碳电极、丁醇、
    * 45% 硅铁、单一规格电机、绕线转子转子在前）。
    */
-  { id: 'plant/robot/reducer/wave', name: '谐波减速器波发生器', unit: '件', category: 'part' },
+  { id: 'plant/robot/reducer/wave', name: 'Harmonic Reducer Wave Generator', name_zh: '谐波减速器波发生器', unit: '件', category: 'part' },
 
   /**
    * 壳体与输出法兰。HT250 浇成，一端装刚轮、一端连臂体。
@@ -107,7 +107,7 @@ export const REDUCER_PARTS: readonly Item[] = [
    * 它是减速器里唯一不需要精度的零件 —— 但它决定柔轮的支撑刚度，
    * 而柔轮一软，回差就跟着涨。所以它厚、它有筋、它一次装夹镗完两处轴承位。
    */
-  { id: 'plant/robot/reducer/housing', name: '机器人壳体与输出法兰', unit: '件', category: 'part' },
+  { id: 'plant/robot/reducer/housing', name: 'Robot Housing and Output Flange', name_zh: '机器人壳体与输出法兰', unit: '件', category: 'part' },
 ];
 
 export const REDUCER_ROUTES: readonly Route[] = [
@@ -128,7 +128,7 @@ export const REDUCER_ROUTES: readonly Route[] = [
      * （第二年的活），模型写不出来，也不该假装写得出。
      */
     id: 'make/reducer-flexspline',
-    name: '谐波减速器柔轮制造',
+    name: 'Harmonic Reducer Flexspline Manufacturing', name_zh: '谐波减速器柔轮制造',
     produces: [{ item: 'plant/robot/reducer/flexspline', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] },
@@ -159,7 +159,7 @@ export const REDUCER_ROUTES: readonly Route[] = [
      * 从这里来**。谐波的均载能吃掉一部分齿距误差，吃不掉齿厚误差。
      */
     id: 'make/reducer-circular',
-    name: '机器人刚轮制造',
+    name: 'Robot Circular Spline Manufacturing', name_zh: '机器人刚轮制造',
     produces: [{ item: 'plant/robot/reducer/circular', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: [],
@@ -179,7 +179,7 @@ export const REDUCER_ROUTES: readonly Route[] = [
      * 偏心大了卡死，小了带不动，公差带比轴承位紧一档，靠磨保证。
      */
     id: 'make/reducer-wave',
-    name: '谐波减速器波发生器制造',
+    name: 'Harmonic Reducer Wave Generator Manufacturing', name_zh: '谐波减速器波发生器制造',
     produces: [{ item: 'plant/robot/reducer/wave', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -199,7 +199,7 @@ export const REDUCER_ROUTES: readonly Route[] = [
   {
     /** 壳体与输出法兰。HT250 浇 → 一次装夹镗两处轴承位 → 钻安装孔。 */
     id: 'make/reducer-housing',
-    name: '机器人壳体与输出法兰制造',
+    name: 'Robot Housing and Output Flange Manufacturing', name_zh: '机器人壳体与输出法兰制造',
     produces: [{ item: 'plant/robot/reducer/housing', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     needs: [],
@@ -223,7 +223,7 @@ export const REDUCER_ROUTES: readonly Route[] = [
  */
 export const REDUCER: Item = {
   id: 'plant/robot/reducer',
-  name: '机器人减速器',
+  name: 'Robot Reducer', name_zh: '机器人减速器',
   unit: '件',
   category: 'part',
   // 回差。这一族减速器的判据是输出端空程：本层双滚轮波发生器 + 铆接柔轮，
@@ -248,7 +248,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/robot-reducer',
-    name: '机器人减速器装配',
+    name: 'Robot Reducer Assembly', name_zh: '机器人减速器装配',
     produces: [{
       item: 'plant/robot/reducer',
       qty: q(1),

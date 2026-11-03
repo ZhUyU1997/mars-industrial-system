@@ -76,7 +76,7 @@ export const TRACE_ANALYSIS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/icpms-trace-metals-record',
-    name: 'ICP-MS 痕量金属记录',
+    name: 'ICP-MS Trace Metal Record', name_zh: 'ICP-MS 痕量金属记录',
     unit: '份',
     category: 'part',
     props: [
@@ -105,7 +105,7 @@ export const TRACE_ANALYSIS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gcms-volatile-organic-record',
-    name: 'GC-MS 挥发性有机物记录',
+    name: 'GC-MS Volatile Organic Compound Record', name_zh: 'GC-MS 挥发性有机物记录',
     unit: '份',
     category: 'part',
     props: [
@@ -146,7 +146,7 @@ export const TRACE_ANALYSIS_MEASURE_ROUTES: readonly Route[] = [
      *   20–22 元素、2–260 u、0.7–1.0 u。
      */
     id: 'measure/trace-metals-icpms',
-    name: 'ICP-MS 痕量金属测量',
+    name: 'ICP-MS Trace Metal Measurement', name_zh: 'ICP-MS 痕量金属测量',
     produces: [
       {
         item: 'mat/icpms-trace-metals-record',
@@ -240,7 +240,7 @@ export const TRACE_ANALYSIS_MEASURE_ROUTES: readonly Route[] = [
      * 永久气体这一格要分子筛柱 + TCD，本层没有（§八 ⑤）。
      */
     id: 'measure/volatile-organic-gcms',
-    name: 'GC-MS 挥发性有机物测量',
+    name: 'GC-MS Volatile Organic Compound Measurement', name_zh: 'GC-MS 挥发性有机物测量',
     produces: [
       {
         item: 'mat/gcms-volatile-organic-record',

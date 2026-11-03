@@ -92,7 +92,7 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ammonia-electronic',
-    name: '电子级氨',
+    name: 'Electronic-Grade Ammonia', name_zh: '电子级氨',
     unit: 'kg',
     category: 'material',
     props: [
@@ -112,7 +112,7 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/trichlorosilane-electronic',
-    name: '电子级三氯氢硅',
+    name: 'Electronic-Grade Trichlorosilane', name_zh: '电子级三氯氢硅',
     unit: 'kg',
     category: 'material',
     props: [
@@ -133,7 +133,7 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/si3n4-lpcvd',
-    name: 'LPCVD 氮化硅钝化片',
+    name: 'LPCVD Silicon Nitride Passivation Wafer', name_zh: 'LPCVD 氮化硅钝化片',
     unit: '片',
     category: 'part',
     props: [
@@ -164,7 +164,7 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/glass-lathe',
-    name: '玻璃车床',
+    name: 'Glass Lathe', name_zh: '玻璃车床',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 1900, max: 2200 }],
@@ -180,19 +180,19 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
   },
 
   /** 玻璃车床床身。HT250 铸铁，浇后时效，铣导轨与顶尖座。 */
-  { id: 'plant/glass-lathe/bed', name: '玻璃车床床身', unit: '件', category: 'part' },
+  { id: 'plant/glass-lathe/bed', name: 'Glass Lathe Bed', name_zh: '玻璃车床床身', unit: '件', category: 'part' },
 
   /** 主轴箱。45 钢主轴 + 铜轴瓦 + 同步带轮；两头顶尖同步回转是它的全部意义。 */
-  { id: 'plant/glass-lathe/headstock', name: '玻璃车床主轴箱', unit: '件', category: 'part' },
+  { id: 'plant/glass-lathe/headstock', name: 'Glass Lathe Headstock', name_zh: '玻璃车床主轴箱', unit: '件', category: 'part' },
 
   /** 尾座。45 钢套筒 + 手轮 + 锁紧；与主轴箱同轴度 ≤0.05 mm。 */
-  { id: 'plant/glass-lathe/tailstock', name: '玻璃车床尾座', unit: '件', category: 'part' },
+  { id: 'plant/glass-lathe/tailstock', name: 'Glass Lathe Tailstock', name_zh: '玻璃车床尾座', unit: '件', category: 'part' },
 
   /** 氢氧焰燃烧器。铜喷嘴 φ6 + 不锈钢混合腔 + 针阀；H₂:O₂ ≈ 2:1。 */
-  { id: 'plant/glass-lathe/burner', name: '玻璃车床氢氧焰燃烧器', unit: '件', category: 'part' },
+  { id: 'plant/glass-lathe/burner', name: 'Glass Lathe Oxyhydrogen Burner', name_zh: '玻璃车床氢氧焰燃烧器', unit: '件', category: 'part' },
 
   /** 卡盘。45 钢三爪 + 石墨绳隔热；夹石英管不夹出应力。 */
-  { id: 'plant/glass-lathe/chuck', name: '玻璃车床卡盘', unit: '件', category: 'part' },
+  { id: 'plant/glass-lathe/chuck', name: 'Glass Lathe Chuck', name_zh: '玻璃车床卡盘', unit: '件', category: 'part' },
 
   // ═════════════════════════════════════════════════════════════════════════
   // 三、LPCVD 炉：热壁管式炉，700–780 °C / 13–40 Pa
@@ -215,7 +215,7 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/lpcvd-furnace',
-    name: '热壁 LPCVD 管式炉',
+    name: 'Hot-Wall LPCVD Tube Furnace', name_zh: '热壁 LPCVD 管式炉',
     unit: '台',
     category: 'machine',
     holds: [
@@ -252,7 +252,7 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/lpcvd-furnace/tube',
-    name: '热壁 LPCVD 管式炉镜筒',
+    name: 'Hot-Wall LPCVD Tube Furnace Process Tube', name_zh: '热壁 LPCVD 管式炉镜筒',
     unit: '件',
     category: 'part',
     props: [
@@ -265,7 +265,7 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
   /** 三温区加热体。SiC 棒三段，每段独立热电偶与调压；±5 °C 靠三段配平。 */
   {
     id: 'plant/lpcvd-furnace/heater',
-    name: '热壁 LPCVD 管式炉三温区加热体',
+    name: 'Hot-Wall LPCVD Tube Furnace 3-Zone Heating Element', name_zh: '热壁 LPCVD 管式炉三温区加热体',
     unit: '件',
     category: 'part',
     props: [
@@ -276,10 +276,10 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
   },
 
   /** 保温层。氧化铝空心球砖 + 耐火纤维；炉壳外壁 ≤60 °C。 */
-  { id: 'plant/lpcvd-furnace/insulation', name: '热壁 LPCVD 管式炉保温层', unit: '件', category: 'part' },
+  { id: 'plant/lpcvd-furnace/insulation', name: 'Hot-Wall LPCVD Tube Furnace Insulation', name_zh: '热壁 LPCVD 管式炉保温层', unit: '件', category: 'part' },
 
   /** 水冷不锈钢炉壳。承外压、带观察窗与电极引入。 */
-  { id: 'plant/lpcvd-furnace/shell', name: '热壁 LPCVD 管式炉水冷不锈钢炉壳', unit: '件', category: 'part' },
+  { id: 'plant/lpcvd-furnace/shell', name: 'Hot-Wall LPCVD Tube Furnace Water-Cooled Stainless Steel Shell', name_zh: '热壁 LPCVD 管式炉水冷不锈钢炉壳', unit: '件', category: 'part' },
 
   /**
    * 耐腐蚀真空机组。**罗茨 + 爪式干泵两级**，13–40 Pa 工作点。
@@ -287,13 +287,13 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
    * 为什么不用 `plant/evaporator/pump` 的水环：NH₃/TCS 遇水生成 NH₄Cl 与
    * 硅酸，水环泵几天就堵；干泵的转子与腔壁用不锈钢 + PTFE 密封。
    */
-  { id: 'plant/lpcvd-furnace/pump', name: '热壁 LPCVD 管式炉耐腐蚀真空机组', unit: '件', category: 'part' },
+  { id: 'plant/lpcvd-furnace/pump', name: 'Hot-Wall LPCVD Tube Furnace Corrosion-Resistant Vacuum Pumping System', name_zh: '热壁 LPCVD 管式炉耐腐蚀真空机组', unit: '件', category: 'part' },
 
   /** 爪式干泵转子。不锈钢型线，车后磨、动平衡。 */
-  { id: 'plant/lpcvd-furnace/claw-rotor', name: '热壁 LPCVD 管式炉爪式干泵转子', unit: '件', category: 'part' },
+  { id: 'plant/lpcvd-furnace/claw-rotor', name: 'Hot-Wall LPCVD Tube Furnace Claw Dry Pump Rotor', name_zh: '热壁 LPCVD 管式炉爪式干泵转子', unit: '件', category: 'part' },
 
   /** 手动节流阀。φ50 翻板 + 石墨绳填料，10–70:1；与 ALD/RIE 的节流阀同一副手艺。 */
-  { id: 'plant/lpcvd-furnace/throttle', name: '热壁 LPCVD 管式炉手动节流阀', unit: '件', category: 'part' },
+  { id: 'plant/lpcvd-furnace/throttle', name: 'Hot-Wall LPCVD Tube Furnace Manual Throttle Valve', name_zh: '热壁 LPCVD 管式炉手动节流阀', unit: '件', category: 'part' },
 
   /**
    * 电容薄膜规。**0.1–1000 Pa、±5 %**。
@@ -304,7 +304,7 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/lpcvd-furnace/manometer',
-    name: '热壁 LPCVD 管式炉电容薄膜规',
+    name: 'Hot-Wall LPCVD Tube Furnace Capacitance Diaphragm Gauge', name_zh: '热壁 LPCVD 管式炉电容薄膜规',
     unit: '件',
     category: 'part',
     props: [
@@ -314,18 +314,18 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
   },
 
   /** 小 load lock。φ150 × 80 mm，手动门 + 闸阀 + 传递臂；一次装 1 舟。 */
-  { id: 'plant/lpcvd-furnace/load-lock', name: '小 load lock', unit: '件', category: 'part' },
+  { id: 'plant/lpcvd-furnace/load-lock', name: 'Small Load Lock', name_zh: '小 load lock', unit: '件', category: 'part' },
 
   /** 闸阀。不锈钢阀体 + PTFE 阀座 + 手轮；漏率 ≤1e-6 Pa·L/s。 */
-  { id: 'plant/lpcvd-furnace/gate-valve', name: '热壁 LPCVD 管式炉闸阀', unit: '件', category: 'part' },
+  { id: 'plant/lpcvd-furnace/gate-valve', name: 'Hot-Wall LPCVD Tube Furnace Gate Valve', name_zh: '热壁 LPCVD 管式炉闸阀', unit: '件', category: 'part' },
 
   /** TCS/NH₃ 两路气 + 纯化器 + 阀组。MFC 是 `plant/mfc`，在路线 `needs` 里。 */
-  { id: 'plant/lpcvd-furnace/gas-panel', name: '热壁 LPCVD 管式炉气路板', unit: '件', category: 'part' },
+  { id: 'plant/lpcvd-furnace/gas-panel', name: 'Hot-Wall LPCVD Tube Furnace Gas Panel', name_zh: '热壁 LPCVD 管式炉气路板', unit: '件', category: 'part' },
 
   /** 气体纯化器。4A 分子筛 + 石灰 + 铜屑三级；出口设计 10–50 ppb。 */
   {
     id: 'plant/lpcvd-furnace/gas-purifier',
-    name: '热壁 LPCVD 管式炉气体纯化器',
+    name: 'Hot-Wall LPCVD Tube Furnace Gas Purifier', name_zh: '热壁 LPCVD 管式炉气体纯化器',
     unit: '件',
     category: 'part',
     props: [
@@ -335,7 +335,7 @@ export const SI3N4_LPCVD_ITEMS: readonly Item[] = [
   },
 
   /** 石英舟。50 片位、片距 20 mm、三点支撑；不刮片背。 */
-  { id: 'plant/lpcvd-furnace/wafer-boat', name: '热壁 LPCVD 管式炉石英舟', unit: '件', category: 'part' },
+  { id: 'plant/lpcvd-furnace/wafer-boat', name: 'Hot-Wall LPCVD Tube Furnace Quartz Boat', name_zh: '热壁 LPCVD 管式炉石英舟', unit: '件', category: 'part' },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -360,7 +360,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
      * 只能靠露点与铜片穿透做过程判据（unblock-gas-purifier.ts:144–177）。
      */
     id: 'make/ammonia-electronic',
-    name: '氨提纯',
+    name: 'Ammonia Purification', name_zh: '氨提纯',
     produces: [
       {
         item: 'mat/ammonia-electronic',
@@ -423,7 +423,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
      * 本层没有 ICP-MS/GC-MS；SIMS 只能测固体膜，检出限 0.6–10 ppm，差 2–4 个量级。
      */
     id: 'make/trichlorosilane-electronic',
-    name: 'TCS 二次精馏',
+    name: 'TCS Secondary Rectification', name_zh: 'TCS 二次精馏',
     produces: [
       {
         item: 'mat/trichlorosilane-electronic',
@@ -460,7 +460,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 床身：HT250 浇 500 kg → 时效 → 铣导轨与顶尖座。 */
     id: 'make/glass-lathe-bed',
-    name: '玻璃车床床身制造',
+    name: 'Glass Lathe Bed Manufacturing', name_zh: '玻璃车床床身制造',
     produces: [{ item: 'plant/glass-lathe/bed', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(500) }] }],
     needs: ['plant/milling-machine'],
@@ -473,7 +473,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 主轴箱：45 钢主轴 + 铜轴瓦 + 同步带轮 + 电机座。 */
     id: 'make/glass-lathe-headstock',
-    name: '玻璃车床主轴箱制造',
+    name: 'Glass Lathe Headstock Manufacturing', name_zh: '玻璃车床主轴箱制造',
     produces: [{ item: 'plant/glass-lathe/headstock', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(50) }] },
@@ -491,7 +491,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 尾座：45 钢套筒 + 手轮 + 锁紧。 */
     id: 'make/glass-lathe-tailstock',
-    name: '玻璃车床尾座制造',
+    name: 'Glass Lathe Tailstock Manufacturing', name_zh: '玻璃车床尾座制造',
     produces: [{ item: 'plant/glass-lathe/tailstock', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(30) }] }],
     needs: [],
@@ -502,7 +502,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 燃烧器：铜喷嘴 φ6 + 不锈钢混合腔 + 针阀。 */
     id: 'make/glass-lathe-burner',
-    name: '玻璃车床氢氧焰燃烧器制造',
+    name: 'Glass Lathe Oxyhydrogen Burner Manufacturing', name_zh: '玻璃车床氢氧焰燃烧器制造',
     produces: [{ item: 'plant/glass-lathe/burner', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(2) }] },
@@ -516,7 +516,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 卡盘：45 钢三爪 + 石墨绳隔热。 */
     id: 'make/glass-lathe-chuck',
-    name: '玻璃车床卡盘制造',
+    name: 'Glass Lathe Chuck Manufacturing', name_zh: '玻璃车床卡盘制造',
     produces: [{ item: 'plant/glass-lathe/chuck', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(10) }] }],
     needs: [],
@@ -539,7 +539,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
      * “玻璃车床”写进路线；原先 unblock-diffusion-tube.ts 说它不在闭包里。
      */
     id: 'make/lpcvd-tube',
-    name: '热壁 LPCVD 管式炉镜筒制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Process Tube Manufacturing', name_zh: '热壁 LPCVD 管式炉镜筒制造',
     produces: [
       {
         item: 'plant/lpcvd-furnace/tube',
@@ -590,7 +590,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 三温区加热体：SiC 棒 3 支 + 氧化铝砖 + 热电偶 3 支。 */
     id: 'make/lpcvd-heater',
-    name: '热壁 LPCVD 管式炉三温区加热体制造',
+    name: 'Hot-Wall LPCVD Tube Furnace 3-Zone Heating Element Manufacturing', name_zh: '热壁 LPCVD 管式炉三温区加热体制造',
     produces: [
       {
         item: 'plant/lpcvd-furnace/heater',
@@ -620,7 +620,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 保温层：氧化铝空心球砖 + 耐火纤维，1300–1500 °C 烧成。 */
     id: 'make/lpcvd-insulation',
-    name: '热壁 LPCVD 管式炉保温层制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Insulation Manufacturing', name_zh: '热壁 LPCVD 管式炉保温层制造',
     produces: [{ item: 'plant/lpcvd-furnace/insulation', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/fused-alumina', qty: q(10) }] },
@@ -636,7 +636,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 水冷炉壳：不锈钢卷焊 + 法兰 + 水套 + 试压。 */
     id: 'make/lpcvd-shell',
-    name: '热壁 LPCVD 管式炉水冷不锈钢炉壳制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Water-Cooled Stainless Steel Shell Manufacturing', name_zh: '热壁 LPCVD 管式炉水冷不锈钢炉壳制造',
     produces: [{ item: 'plant/lpcvd-furnace/shell', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(20) }] },
@@ -661,7 +661,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
      * 爪式转子自制；两级串联，13–40 Pa 工作点，极限 ≤0.1 Pa。
      */
     id: 'make/lpcvd-pump',
-    name: '热壁 LPCVD 管式炉耐腐蚀真空机组制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Corrosion-Resistant Vacuum Pumping System Manufacturing', name_zh: '热壁 LPCVD 管式炉耐腐蚀真空机组制造',
     produces: [{ item: 'plant/lpcvd-furnace/pump', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'plant/evaporator/pump/roots', qty: q(1) }] },
@@ -684,7 +684,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 爪式干泵转子：不锈钢型线，车后磨、动平衡。 */
     id: 'make/lpcvd-claw-rotor',
-    name: '热壁 LPCVD 管式炉爪式干泵转子制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Claw Dry Pump Rotor Manufacturing', name_zh: '热壁 LPCVD 管式炉爪式干泵转子制造',
     produces: [{ item: 'plant/lpcvd-furnace/claw-rotor', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(2) }] },
@@ -701,7 +701,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 手动节流阀：φ50 翻板 + 石墨绳填料 + 手轮。 */
     id: 'make/lpcvd-throttle',
-    name: '热壁 LPCVD 管式炉手动节流阀制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Manual Throttle Valve Manufacturing', name_zh: '热壁 LPCVD 管式炉手动节流阀制造',
     produces: [{ item: 'plant/lpcvd-furnace/throttle', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/aluminium', qty: q(1) }] },
@@ -729,7 +729,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
      * `plant/comparator` 的 1 µm 读柱高，U 型管 ±0.1 mm ⇒ ±2–7 %。
      */
     id: 'make/lpcvd-manometer',
-    name: '热壁 LPCVD 管式炉电容薄膜规制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Capacitance Diaphragm Gauge Manufacturing', name_zh: '热壁 LPCVD 管式炉电容薄膜规制造',
     produces: [
       {
         item: 'plant/lpcvd-furnace/manometer',
@@ -766,7 +766,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 小 load lock：腔体 + 闸阀 + 传递臂 + 手动门。 */
     id: 'make/lpcvd-load-lock',
-    name: '小 load lock 制造',
+    name: 'Small Load Lock Manufacturing', name_zh: '小 load lock 制造',
     produces: [{ item: 'plant/lpcvd-furnace/load-lock', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'plant/lpcvd-furnace/gate-valve', qty: q(1) }] },
@@ -790,7 +790,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 闸阀：不锈钢阀体 + PTFE 阀座 + 手轮。 */
     id: 'make/lpcvd-gate-valve',
-    name: '热壁 LPCVD 管式炉闸阀制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Gate Valve Manufacturing', name_zh: '热壁 LPCVD 管式炉闸阀制造',
     produces: [{ item: 'plant/lpcvd-furnace/gate-valve', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -809,7 +809,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** TCS/NH₃ 两路气 + 纯化器 + 阀组；MFC 由 `plant/mfc` 在路线 needs 里给。 */
     id: 'make/lpcvd-gas-panel',
-    name: '热壁 LPCVD 管式炉气路板制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Gas Panel Manufacturing', name_zh: '热壁 LPCVD 管式炉气路板制造',
     produces: [{ item: 'plant/lpcvd-furnace/gas-panel', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'plant/lpcvd-furnace/gas-purifier', qty: q(1) }] },
@@ -836,7 +836,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
      * 这个窗口只能靠露点与铜片穿透做过程判据（unblock-gas-purifier.ts:144–177）。
      */
     id: 'make/lpcvd-gas-purifier',
-    name: '热壁 LPCVD 管式炉气体纯化器制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Gas Purifier Manufacturing', name_zh: '热壁 LPCVD 管式炉气体纯化器制造',
     produces: [
       {
         item: 'plant/lpcvd-furnace/gas-purifier',
@@ -876,7 +876,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
   {
     /** 石英舟：石英棒切槽 + 玻璃车床焊 + 磨槽，50 片位。 */
     id: 'make/lpcvd-wafer-boat',
-    name: '热壁 LPCVD 管式炉石英舟制造',
+    name: 'Hot-Wall LPCVD Tube Furnace Quartz Boat Manufacturing', name_zh: '热壁 LPCVD 管式炉石英舟制造',
     produces: [{ item: 'plant/lpcvd-furnace/wafer-boat', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/quartz-pure', qty: q(1) }] },
@@ -931,7 +931,7 @@ export const SI3N4_LPCVD_ROUTES: readonly Route[] = [
      * 就是本条的 `mat/si3n4-lpcvd`。
      */
     id: 'make/lpcvd-si3n4',
-    name: 'LPCVD 氮化硅钝化片制造',
+    name: 'LPCVD Silicon Nitride Passivation Wafer Manufacturing', name_zh: 'LPCVD 氮化硅钝化片制造',
     produces: [
       {
         item: 'mat/si3n4-lpcvd',
@@ -1008,7 +1008,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/glass-lathe',
-    name: '玻璃车床装配',
+    name: 'Glass Lathe Assembly', name_zh: '玻璃车床装配',
     produces: [{
       item: 'plant/glass-lathe',
       qty: q(1),
@@ -1020,7 +1020,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/lpcvd-furnace',
-    name: '热壁 LPCVD 管式炉装配',
+    name: 'Hot-Wall LPCVD Tube Furnace Assembly', name_zh: '热壁 LPCVD 管式炉装配',
     produces: [{
       item: 'plant/lpcvd-furnace',
       qty: q(1),

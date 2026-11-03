@@ -24,7 +24,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/josephson-record',
-    name: '约瑟夫森电压记录',
+    name: 'Josephson Voltage Record', name_zh: '约瑟夫森电压记录',
     unit: '份',
     category: 'part',
     props: [
@@ -59,7 +59,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 本文件不写“闭合”。
      */
     id: 'measure/josephson-array',
-    name: '约瑟夫森电压测量',
+    name: 'Josephson Voltage Measurement', name_zh: '约瑟夫森电压测量',
     rate: { hours: q(160) },
     produces: [
       {

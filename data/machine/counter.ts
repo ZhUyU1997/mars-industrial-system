@@ -47,7 +47,7 @@ export const COUNTER_ITEMS: readonly Item[] = [
    * 都靠它数。**它是本层唯一能"记住一个数"的东西** —— 而记住一个数，
    * 是自动化与非自动化之间那条线。
    */
-  { id: 'std/counter-mechanical-general', name: '机械计数器', unit: '件', category: 'part',
+  { id: 'std/counter-mechanical-general', name: 'Mechanical Counter', name_zh: '机械计数器', unit: '件', category: 'part',
     composedOf: [
       { item: 'std/counter-mechanical-general/wheel', qty: q(10) },
       { item: 'std/counter-mechanical-general/ratchet', qty: q(1) },
@@ -56,11 +56,11 @@ export const COUNTER_ITEMS: readonly Item[] = [
       { item: 'std/counter-mechanical-general/frame', qty: q(1) },
     ] },
 
-  { id: 'std/counter-mechanical-general/wheel', name: '字轮', unit: '件', category: 'part' },
-  { id: 'std/counter-mechanical-general/ratchet', name: '棘轮', unit: '件', category: 'part' },
-  { id: 'std/counter-mechanical-general/pawl', name: '拨杆', unit: '件', category: 'part' },
-  { id: 'std/counter-mechanical-general/shaft', name: '轴', unit: '件', category: 'part' },
-  { id: 'std/counter-mechanical-general/frame', name: '框架', unit: '件', category: 'part' },
+  { id: 'std/counter-mechanical-general/wheel', name: 'Number Wheel', name_zh: '字轮', unit: '件', category: 'part' },
+  { id: 'std/counter-mechanical-general/ratchet', name: 'Ratchet', name_zh: '棘轮', unit: '件', category: 'part' },
+  { id: 'std/counter-mechanical-general/pawl', name: 'Pawl', name_zh: '拨杆', unit: '件', category: 'part' },
+  { id: 'std/counter-mechanical-general/shaft', name: 'Shaft', name_zh: '轴', unit: '件', category: 'part' },
+  { id: 'std/counter-mechanical-general/frame', name: 'Frame', name_zh: '框架', unit: '件', category: 'part' },
 ];
 
 export const COUNTER_ROUTES: readonly Route[] = [
@@ -69,7 +69,7 @@ export const COUNTER_ROUTES: readonly Route[] = [
      * 字轮：1 kg 薄板铣成十片，边上打数字。
      */
     id: 'make/counter-wheel',
-    name: '字轮制造',
+    name: 'Number Wheel Manufacturing', name_zh: '字轮制造',
     produces: [{ item: 'std/counter-mechanical-general/wheel', qty: q(10) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: [],
@@ -80,7 +80,7 @@ export const COUNTER_ROUTES: readonly Route[] = [
      * 棘轮：45 钢 0.2 kg，斜齿铣出来。
      */
     id: 'make/counter-ratchet',
-    name: '棘轮制造',
+    name: 'Ratchet Manufacturing', name_zh: '棘轮制造',
     produces: [{ item: 'std/counter-mechanical-general/ratchet', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 5) }] }],
     needs: [],
@@ -91,7 +91,7 @@ export const COUNTER_ROUTES: readonly Route[] = [
      * 拨杆：45 钢 0.1 kg，车成偏心销。
      */
     id: 'make/counter-pawl',
-    name: '拨杆制造',
+    name: 'Pawl Manufacturing', name_zh: '拨杆制造',
     produces: [{ item: 'std/counter-mechanical-general/pawl', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 10) }] }],
     needs: [],
@@ -102,7 +102,7 @@ export const COUNTER_ROUTES: readonly Route[] = [
      * 轴：45 钢 0.7 kg，串字轮与棘轮。
      */
     id: 'make/counter-shaft',
-    name: '轴制造',
+    name: 'Shaft Manufacturing', name_zh: '轴制造',
     produces: [{ item: 'std/counter-mechanical-general/shaft', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(7, 10) }] }],
     needs: [],
@@ -113,7 +113,7 @@ export const COUNTER_ROUTES: readonly Route[] = [
      * 框架：酚醛树脂 1 kg 压成，定字轮窗口与轴孔。
      */
     id: 'make/counter-frame',
-    name: '框架制造',
+    name: 'Frame Manufacturing', name_zh: '框架制造',
     produces: [{ item: 'std/counter-mechanical-general/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/phenolic-resin', qty: q(1) }] }],
     needs: [],
@@ -126,7 +126,7 @@ export const COUNTER_ROUTES: readonly Route[] = [
      * 装配与整定：串轴、装进位爪、试拨到 9999 归零。
      */
     id: 'make/counter',
-    name: '机械计数器总装',
+    name: 'Mechanical Counter Final Assembly', name_zh: '机械计数器总装',
     produces: [{ item: 'std/counter-mechanical-general', qty: q(1) }],
     uses: [],
     needs: [],

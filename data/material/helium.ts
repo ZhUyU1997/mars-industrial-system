@@ -15,7 +15,7 @@ import type { Item, Route } from '../../src/index.ts';
 export const HELIUM_ITEMS: readonly Item[] = [
   {
     id: 'mat/helium',
-    name: '氦',
+    name: 'Helium', name_zh: '氦',
     unit: 'kg',
     category: 'material',
     // 不声明 purity：没有本地交付，也没有写成 need；先只登记材料本身。

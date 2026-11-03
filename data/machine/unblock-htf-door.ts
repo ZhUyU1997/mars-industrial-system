@@ -471,7 +471,7 @@ export const UNBLOCK_HTF_DOOR_ROUTES: readonly Route[] = [
      *     把料台做出来（8 kg 铸铁 + 6 块砖 + 2 只砖墩），不然这件零件只做了一半
      */
     id: 'make/htf-door-cast',
-    name: '高温炉炉门与料台制造',
+    name: 'High-Temperature Furnace Door and Loading Table Manufacturing', name_zh: '高温炉炉门与料台制造',
     produces: [{ item: 'plant/high-temp-furnace/door', qty: q(1) }],
     uses: [
       /**

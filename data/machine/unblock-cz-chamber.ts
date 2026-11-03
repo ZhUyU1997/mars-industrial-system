@@ -362,7 +362,7 @@ export const UNBLOCK_CZ_CHAMBER_ROUTES: readonly Route[] = [
      *    砌到砖的热面一侧（950），它一个炉次就粉化。
      */
     id: 'make/cz-chamber-cast',
-    name: '直拉单晶炉炉体制造',
+    name: 'Czochralski Single-Crystal Furnace Body Manufacturing', name_zh: '直拉单晶炉炉体制造',
     produces: [{ item: 'plant/cz-puller/chamber', qty: q(1) }],
     uses: [
       /**

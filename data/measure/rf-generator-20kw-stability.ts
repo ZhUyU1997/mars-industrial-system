@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const RF_GENERATOR_20KW_STABILITY_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/rf-generator-20kw-stability-measure-record',
-    name: 'RF 发生器记录',
+    name: 'RF Generator Record', name_zh: 'RF 发生器记录',
     unit: '份',
     category: 'part',
     props: [
@@ -27,7 +27,7 @@ export const RF_GENERATOR_20KW_STABILITY_MEASURE_ROUTES: readonly Route[] = [
      * **RF 发生器：20 kW 水冷负载，量热器 60 s 读 10 点算稳定度。**
      */
     id: 'measure/rf-generator-20kw-stability',
-    name: 'RF 发生器测量',
+    name: 'RF Generator Measurement', name_zh: 'RF 发生器测量',
     produces: [{
       item: 'mat/rf-generator-20kw-stability-measure-record',
       qty: q(1),

@@ -43,7 +43,7 @@ export const MOTOR_GLASS_ROUTES: readonly Route[] = [
      * 与铁芯版（make/motor-stator-ironcore）的区别只在绝缘：那一版要酚醛，这一版不要。
      */
     id: 'make/motor-stator-glass',
-    name: '7.5 kW 四极电机定子制造',
+    name: '7.5 kW Four-Pole Motor Stator Manufacturing', name_zh: '7.5 kW 四极电机定子制造',
     produces: [{ item: 'std/motor-7.5kw-4p/stator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron', qty: q(1) }] },
@@ -68,7 +68,7 @@ export const MOTOR_GLASS_ROUTES: readonly Route[] = [
      * 只做烘干与端部绑扎 —— 这是 1900 年代电机的样子。
      */
     id: 'make/motor-windings-glass',
-    name: '7.5 kW 四极电机绕组制造',
+    name: '7.5 kW Four-Pole Motor Windings Manufacturing', name_zh: '7.5 kW 四极电机绕组制造',
     produces: [{ item: 'std/motor-7.5kw-4p/windings', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass-covered-wire', qty: q(1) }] },

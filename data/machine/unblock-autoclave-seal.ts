@@ -435,7 +435,7 @@ export const UNBLOCK_AUTOCLAVE_SEAL_ROUTES: readonly Route[] = [
      *    压力账全部写在注释里 —— 与壳体文件同一处理。
      */
     id: 'make/autoclave-seal-metal',
-    name: '高压釜密封制造',
+    name: 'Autoclave Seal Manufacturing', name_zh: '高压釜密封制造',
     produces: [{ item: 'plant/autoclave/seal', qty: q(1) }],
     uses: [
       /**

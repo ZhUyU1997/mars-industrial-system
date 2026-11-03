@@ -457,7 +457,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fluorine',
-    name: '单质氟',
+    name: 'Elemental Fluorine', name_zh: '单质氟',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99.5, unit: '%', dir: 'atLeast' }],
@@ -478,7 +478,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fluorite-pure',
-    name: '高纯氟化钙',
+    name: 'High-Purity Calcium Fluoride', name_zh: '高纯氟化钙',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'caf2', kind: 'range', min: 90, max: 99.99, unit: '%', dir: 'atLeast' }],
@@ -498,7 +498,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/arf-gas',
-    name: 'ArF 激光混合气',
+    name: 'ArF Laser Gas Mixture', name_zh: 'ArF 激光混合气',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'f2', kind: 'range', min: 0.05, max: 1, unit: 'mol%' }],
@@ -523,7 +523,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-laser/chamber',
-    name: 'ArF 放电腔',
+    name: 'ArF Discharge Chamber', name_zh: 'ArF 放电腔',
     unit: '件',
     category: 'part',
     props: [{ param: 'leakRate', kind: 'range', min: 0, max: 10, unit: 'Pa·L/s', dir: 'atMost' }],
@@ -540,7 +540,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-laser/electrode',
-    name: 'ArF 放电电极',
+    name: 'ArF Discharge Electrode', name_zh: 'ArF 放电电极',
     unit: '件',
     category: 'part',
     props: [{ param: 'life', kind: 'range', min: 0, max: 4000, unit: 'h', dir: 'atLeast' }],
@@ -560,7 +560,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-laser/pulser',
-    name: 'ArF 脉冲功率单元',
+    name: 'ArF Pulse Power Unit', name_zh: 'ArF 脉冲功率单元',
     unit: '件',
     category: 'part',
     props: [{ param: 'pulseVoltage', kind: 'range', min: 0, max: 40, unit: 'kV' }],
@@ -580,7 +580,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-laser/optics',
-    name: 'ArF 腔外光学',
+    name: 'ArF Out-of-Cavity Optics', name_zh: 'ArF 腔外光学',
     unit: '件',
     category: 'part',
     props: [{ param: 'bandwidth', kind: 'range', min: 0, max: 10, unit: 'pm', dir: 'atMost' }],
@@ -606,7 +606,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-laser',
-    name: 'ArF 准分子激光器',
+    name: 'ArF Excimer Laser', name_zh: 'ArF 准分子激光器',
     unit: '台',
     category: 'machine',
     props: [
@@ -638,7 +638,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-lens/blank',
-    name: '萤石投影/缩微物镜萤石单晶毛坯',
+    name: 'Fluorite Projection/Reduction Objective Fluorite Single-Crystal Blank', name_zh: '萤石投影/缩微物镜萤石单晶毛坯',
     unit: '件',
     category: 'part',
     props: [
@@ -656,7 +656,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-lens/element',
-    name: '抛光好的萤石透镜元件',
+    name: 'Polished Fluorite Lens Element', name_zh: '抛光好的萤石透镜元件',
     unit: '件',
     category: 'part',
     props: [
@@ -677,7 +677,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-lens/tube',
-    name: '萤石投影/缩微物镜镜筒',
+    name: 'Fluorite Projection/Reduction Objective Tube', name_zh: '萤石投影/缩微物镜镜筒',
     unit: '件',
     category: 'part',
     props: [{ param: 'positionError', kind: 'range', min: 0, max: 50, unit: 'µm', dir: 'atMost' }],
@@ -696,7 +696,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-lens',
-    name: '萤石投影/缩微物镜',
+    name: 'Fluorite Projection/Reduction Objective', name_zh: '萤石投影/缩微物镜',
     unit: '台',
     category: 'machine',
     props: [
@@ -725,7 +725,7 @@ export const M3_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/cpu-32bit-general',
-    name: '32 位 CPU',
+    name: '32-Bit CPU', name_zh: '32 位 CPU',
     unit: '片',
     category: 'part',
     props: [
@@ -801,7 +801,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 15 MPa、10 kg/瓶。**充装必须在室外下风口**（本文件第八节③：没有风机）。
      */
     id: 'make/fluorine',
-    name: '单质氟制备',
+    name: 'Elemental Fluorine Production', name_zh: '单质氟制备',
     produces: [
       {
         item: 'mat/fluorine',
@@ -955,7 +955,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 那一步会把 99.5 % 打回 98 %。**温度是这条路线唯一的工艺窗口，不是余量。**
      */
     id: 'make/fluorite-pure',
-    name: '高纯氟化钙制备',
+    name: 'High-Purity Calcium Fluoride Production', name_zh: '高纯氟化钙制备',
     produces: [
       {
         item: 'mat/fluorite-pure',
@@ -1082,7 +1082,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 有 —— `plant/autoclave` 一族的表能读到 1 %，配气够用）。
      */
     id: 'make/arf-gas',
-    name: 'ArF 混合气制备',
+    name: 'ArF Gas Mixture Production', name_zh: 'ArF 混合气制备',
     produces: [
       {
         item: 'mat/arf-gas',
@@ -1206,7 +1206,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 而紫是看得见的。所以这条路线靠**眼睛**兜底 —— 与 HF 那条靠"看馏出"同一种诚实。
      */
     id: 'make/caf2-blank',
-    name: '萤石投影/缩微物镜萤石单晶毛坯制造',
+    name: 'Fluorite Projection/Reduction Objective Fluorite Single-Crystal Blank Manufacturing', name_zh: '萤石投影/缩微物镜萤石单晶毛坯制造',
     produces: [
       {
         item: 'plant/arf-lens/blank',
@@ -1376,7 +1376,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 5 挑 1，收率 20 % —— 写进降级②。
      */
     id: 'make/arf-lens-element',
-    name: '抛光好的萤石透镜元件制造',
+    name: 'Polished Fluorite Lens Element Manufacturing', name_zh: '抛光好的萤石透镜元件制造',
     produces: [
       {
         item: 'plant/arf-lens/element',
@@ -1496,7 +1496,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 真正的解法是铟钢（1 ppm/K），本层没有（要 36 % 的镍 —— 而镍不通）。
      */
     id: 'make/arf-lens-tube',
-    name: '萤石投影/缩微物镜镜筒制造',
+    name: 'Fluorite Projection/Reduction Objective Tube Manufacturing', name_zh: '萤石投影/缩微物镜镜筒制造',
     produces: [
       {
         item: 'plant/arf-lens/tube',
@@ -1578,7 +1578,7 @@ export const M3_ROUTES: readonly Route[] = [
      * `uses: mat/arf-gas 3 kg` 的来源（文件头一·②）。
      */
     id: 'make/arf-chamber',
-    name: 'ArF 放电腔制造',
+    name: 'ArF Discharge Chamber Manufacturing', name_zh: 'ArF 放电腔制造',
     produces: [
       {
         item: 'plant/arf-laser/chamber',
@@ -1696,7 +1696,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 的前 1 000 个脉冲是在"吃掉电极"（每脉冲溅射 10⁻⁴ nm，1 000 个就是 0.1 µm 的坑）。
      */
     id: 'make/arf-electrode',
-    name: 'ArF 放电电极制造',
+    name: 'ArF Discharge Electrode Manufacturing', name_zh: 'ArF 放电电极制造',
     produces: [
       {
         item: 'plant/arf-laser/electrode',
@@ -1771,7 +1771,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 所以 `gives: life` 的下限写 200（保守）。
      */
     id: 'make/arf-electrode-gold',
-    name: 'ArF 放电电极制造',
+    name: 'ArF Discharge Electrode Manufacturing', name_zh: 'ArF 放电电极制造',
     produces: [
       {
         item: 'plant/arf-laser/electrode',
@@ -1871,7 +1871,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 所以变压器要按 5 kW 的体积做 3 kW 的输出，多出 15 kg 与 200 W 热）。
      */
     id: 'make/arf-pulser',
-    name: 'ArF 脉冲功率单元制造',
+    name: 'ArF Pulse Power Unit Manufacturing', name_zh: 'ArF 脉冲功率单元制造',
     produces: [
       {
         item: 'plant/arf-laser/pulser',
@@ -1978,7 +1978,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 本文件不为此加设备，只在这里把方法说清。
      */
     id: 'make/arf-optics',
-    name: 'ArF 腔外光学制造',
+    name: 'ArF Out-of-Cavity Optics Manufacturing', name_zh: 'ArF 腔外光学制造',
     produces: [
       {
         item: 'plant/arf-laser/optics',
@@ -2089,7 +2089,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 因为母图小了可以放大，大了不能缩小（放大是虚的，缩小才是衍射的敌人）。
      */
     id: 'make/photomask-deepsub',
-    name: '接触式掩模制造',
+    name: 'Contact Mask Manufacturing', name_zh: '接触式掩模制造',
     produces: [
       {
         item: 'std/photomask-general',
@@ -2281,7 +2281,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 这一条写在这里而不是 `gives` 里：`props` 没有"寿命"这个参数（也没有单位可用）。
      */
     id: 'make/cpu-32bit',
-    name: '32 位 CPU 制造',
+    name: '32-Bit CPU Manufacturing', name_zh: '32 位 CPU 制造',
     produces: [
       {
         item: 'std/cpu-32bit-general',
@@ -2447,7 +2447,7 @@ export const M3_ROUTES: readonly Route[] = [
      * 是 10 mm 的误差 —— 那正是 8 位控制器做不到"沿曲线走 0.02 mm"的原因。
      */
     id: 'make/robot-controller-32bit',
-    name: '机器人控制柜制造',
+    name: 'Robot Control Cabinet Manufacturing', name_zh: '机器人控制柜制造',
     produces: [{ item: 'plant/robot/controller', qty: q(1), gives: [{ param: 'dof', kind: 'range', min: 6, max: 6 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(2) }] },
@@ -2547,7 +2547,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/arf-laser',
-    name: 'ArF 准分子激光器装配',
+    name: 'ArF Excimer Laser Assembly', name_zh: 'ArF 准分子激光器装配',
     produces: [{
       item: 'plant/arf-laser',
       qty: q(1),
@@ -2565,7 +2565,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/arf-lens',
-    name: '萤石投影/缩微物镜装配',
+    name: 'Fluorite Projection/Reduction Objective Assembly', name_zh: '萤石投影/缩微物镜装配',
     produces: [{
       item: 'plant/arf-lens',
       qty: q(1),

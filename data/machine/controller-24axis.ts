@@ -45,7 +45,7 @@ export const CONTROLLER_24AXIS_ROUTES: readonly Route[] = [
      * 交出：`dof = 24`。
      */
     id: 'make/robot-controller-32bit-24axis',
-    name: '机器人控制柜制造',
+    name: 'Robot Control Cabinet Manufacturing', name_zh: '机器人控制柜制造',
     produces: [
       {
         item: 'plant/robot/controller',

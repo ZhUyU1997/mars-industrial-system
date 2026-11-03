@@ -50,7 +50,7 @@ export const CTFE_ITEMS: readonly Item[] = [
   /** 四氯乙烯（PCE，C₂Cl₄，M 165.83）。bp 121 °C，无色液体。 */
   {
     id: 'mat/perchloroethylene',
-    name: '四氯乙烯',
+    name: 'Perchloroethylene', name_zh: '四氯乙烯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -62,7 +62,7 @@ export const CTFE_ITEMS: readonly Item[] = [
   /** 六氯乙烷（HCE，C₂Cl₆，M 236.73）。白色晶体，升华 185 °C。 */
   {
     id: 'mat/hexachloroethane',
-    name: '六氯乙烷',
+    name: 'Hexachloroethane', name_zh: '六氯乙烷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -74,7 +74,7 @@ export const CTFE_ITEMS: readonly Item[] = [
   /** 三氟三氯乙烷（CFC-113，C₂Cl₃F₃，M 187.37）。bp 47.6 °C。 */
   {
     id: 'mat/cfc-113',
-    name: '三氟三氯乙烷',
+    name: 'Trichlorotrifluoroethane', name_zh: '三氟三氯乙烷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -86,7 +86,7 @@ export const CTFE_ITEMS: readonly Item[] = [
   /** 三氟氯乙烯（CTFE，C₂ClF₃，M 116.47）。bp −27.9 °C，气体。 */
   {
     id: 'mat/ctfe',
-    name: '三氟氯乙烯',
+    name: 'Chlorotrifluoroethylene', name_zh: '三氟氯乙烯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -107,7 +107,7 @@ export const CTFE_ROUTES: readonly Route[] = [
      * 高温氯化是自由基连串反应；四氯乙烯是过氯化产物，HCl 进碱洗塔。
      */
     id: 'make/perchloroethylene',
-    name: '四氯乙烯制备',
+    name: 'Perchloroethylene Production', name_zh: '四氯乙烯制备',
     produces: [
       {
         item: 'mat/perchloroethylene',
@@ -155,7 +155,7 @@ export const CTFE_ROUTES: readonly Route[] = [
      *   进 1 000 = 出 1 000 ✓
      */
     id: 'make/hexachloroethane',
-    name: '六氯乙烷制备',
+    name: 'Hexachloroethane Production', name_zh: '六氯乙烷制备',
     produces: [
       {
         item: 'mat/hexachloroethane',
@@ -202,7 +202,7 @@ export const CTFE_ROUTES: readonly Route[] = [
      * SbCl₅ 路线，所以用 FeCl₃ 替代。活性低、氟化度可能不足，收率**待查**（缺口①）。
      */
     id: 'make/cfc-113',
-    name: '三氟三氯乙烷制备',
+    name: 'Trichlorotrifluoroethane Production', name_zh: '三氟三氯乙烷制备',
     produces: [
       {
         item: 'mat/cfc-113',
@@ -254,7 +254,7 @@ export const CTFE_ROUTES: readonly Route[] = [
      * 产物是气体（bp −27.9 °C），要 −30 °C 冷凝或压缩；本层有 `mat/dry-ice` 冷阱。
      */
     id: 'make/ctfe',
-    name: '三氟氯乙烯制备',
+    name: 'Chlorotrifluoroethylene Production', name_zh: '三氟氯乙烯制备',
     produces: [
       {
         item: 'mat/ctfe',

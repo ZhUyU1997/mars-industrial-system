@@ -65,7 +65,7 @@ export const BOARD_LEAKAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/board-leakage-record',
-    name: '板级漏电/残余热电势记录',
+    name: 'Board-Level Leakage/Residual Thermal EMF Record', name_zh: '板级漏电/残余热电势记录',
     unit: '份',
     category: 'part',
     props: [
@@ -87,7 +87,7 @@ export const BOARD_LEAKAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/board-thermal-emf-record',
-    name: '结点热电势记录',
+    name: 'Junction Thermoelectric Potential Record', name_zh: '结点热电势记录',
     unit: '份',
     category: 'part',
     props: [
@@ -109,7 +109,7 @@ export const BOARD_LEAKAGE_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/board-leakage',
-    name: '板级漏电/残余热电势测量',
+    name: 'Board-Level Leakage/Residual Thermal EMF Measurement', name_zh: '板级漏电/残余热电势测量',
     produces: [
       {
         item: 'mat/board-leakage-record',
@@ -156,7 +156,7 @@ export const BOARD_LEAKAGE_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/board-thermal-emf',
-    name: '结点热电势测量',
+    name: 'Junction Thermoelectric Potential Measurement', name_zh: '结点热电势测量',
     produces: [
       {
         item: 'mat/board-thermal-emf-record',

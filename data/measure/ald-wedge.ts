@@ -14,7 +14,7 @@ import { q } from '../../src/index.ts';
 export const ALD_WEDGE_ITEMS: readonly Item[] = [
   {
     id: 'std/uhv-linear-stage',
-    name: '超高真空直线台',
+    name: 'Ultra-High Vacuum Linear Stage', name_zh: '超高真空直线台',
     unit: '件',
     category: 'part',
     props: [
@@ -26,7 +26,7 @@ export const ALD_WEDGE_ITEMS: readonly Item[] = [
   },
   {
     id: 'std/vacuum-feedthrough',
-    name: '真空馈通',
+    name: 'Vacuum Feedthrough', name_zh: '真空馈通',
     unit: '件',
     category: 'part',
     props: [
@@ -37,7 +37,7 @@ export const ALD_WEDGE_ITEMS: readonly Item[] = [
   },
   {
     id: 'std/ald-moving-shutter/stage',
-    name: '挡板移动台',
+    name: 'Moving Shutter Stage', name_zh: '挡板移动台',
     unit: '件',
     category: 'part',
     props: [
@@ -47,7 +47,7 @@ export const ALD_WEDGE_ITEMS: readonly Item[] = [
   },
   {
     id: 'std/ald-moving-shutter',
-    name: 'ALD 移动挡板',
+    name: 'ALD Moving Shutter', name_zh: 'ALD 移动挡板',
     unit: '套',
     category: 'machine',
     props: [
@@ -63,7 +63,7 @@ export const ALD_WEDGE_ITEMS: readonly Item[] = [
   },
   {
     id: 'std/step-standard-wedge-1-10nm',
-    name: '1–10 nm 楔形台阶标准件',
+    name: '1–10 nm Wedge Step Height Standard', name_zh: '1–10 nm 楔形台阶标准件',
     unit: '件',
     category: 'part',
     props: [
@@ -78,7 +78,7 @@ export const ALD_WEDGE_ITEMS: readonly Item[] = [
 export const ALD_WEDGE_ROUTES: readonly Route[] = [
   {
     id: 'make/uhv-linear-stage',
-    name: '超高真空直线台制造',
+    name: 'Ultra-High Vacuum Linear Stage Manufacturing', name_zh: '超高真空直线台制造',
     produces: [{
       item: 'std/uhv-linear-stage',
       qty: q(1),
@@ -106,7 +106,7 @@ export const ALD_WEDGE_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/vacuum-feedthrough',
-    name: '真空馈通制造',
+    name: 'Vacuum Feedthrough Manufacturing', name_zh: '真空馈通制造',
     produces: [{
       item: 'std/vacuum-feedthrough',
       qty: q(1),
@@ -131,7 +131,7 @@ export const ALD_WEDGE_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/ald-moving-shutter-stage',
-    name: '挡板移动台制造',
+    name: 'Moving Shutter Stage Manufacturing', name_zh: '挡板移动台制造',
     produces: [{
       item: 'std/ald-moving-shutter/stage',
       qty: q(1),
@@ -147,7 +147,7 @@ export const ALD_WEDGE_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/ald-moving-shutter',
-    name: 'ALD 移动挡板制造',
+    name: 'ALD Moving Shutter Manufacturing', name_zh: 'ALD 移动挡板制造',
     produces: [{
       item: 'std/ald-moving-shutter',
       qty: q(1),
@@ -174,7 +174,7 @@ export const ALD_WEDGE_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/step-standard-wedge-1-10nm',
-    name: '1–10 nm 楔形台阶标准件制造',
+    name: '1–10 nm Wedge Step Height Standard Manufacturing', name_zh: '1–10 nm 楔形台阶标准件制造',
     produces: [{
       item: 'std/step-standard-wedge-1-10nm',
       qty: q(1),

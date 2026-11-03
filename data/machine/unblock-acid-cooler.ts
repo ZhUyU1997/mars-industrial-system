@@ -368,7 +368,7 @@ export const UNBLOCK_ACID_COOLER_ROUTES: readonly Route[] = [
      *  ③ 620→200 的 56 kW 白扔（2.4 GJ/批，比吸收塔的吸收热还多 15%）
      */
     id: 'make/acid-cooler-cast',
-    name: '制酸冷却器制造',
+    name: 'Acid Plant Cooler Manufacturing', name_zh: '制酸冷却器制造',
     // 80 根铸铁管 + 160 对法兰，是酸厂工时最长的一段（约 60 h）。
     rate: { hours: q(60) },
     produces: [{ item: 'plant/acid-plant/cooler', qty: q(1) }],

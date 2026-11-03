@@ -1,4 +1,4 @@
-﻿import * as THREE from 'three';
+import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { CSS2DObject, CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
 
@@ -6,6 +6,7 @@ import type { ViewerLink, ViewerNode } from './model.ts';
 import { endpointId } from './model.ts';
 import { EDGES } from './theme.ts';
 import { nodeTooltip } from './render.ts';
+import { nodeLabel } from './i18n.ts';
 import type { RenderCtx } from './render.ts';
 
 export interface Scene3DOptions {
@@ -658,7 +659,9 @@ export class Scene3D {
       at: { x: number; y: number },
       avoidOverlap: boolean,
     ): boolean => {
-      const w = Math.min(220, Math.max(34, node.label.length * 9 + 16));
+      const text = nodeLabel(node);
+      const estimated = [...text].reduce((sum, ch) => sum + (ch.codePointAt(0)! > 255 ? 9 : 5.5), 0);
+      const w = Math.min(210, Math.max(34, estimated + 16));
       const h = 17;
       const half = w / 2;
       let align = 0.5;
@@ -687,8 +690,8 @@ export class Scene3D {
       element.className = `label3d${node.id === selectedId ? ' is-selected' : ''}${
         node.item?.seed === 1 ? ' is-seed' : ''
       }`;
-      element.textContent = node.label;
-      element.title = node.id;
+      element.textContent = text;
+      element.title = `${text}\n${node.id}`;
       const label = new CSS2DObject(element);
       label.position.set(node.x ?? 0, node.y ?? 0, node.z ?? 0);
       label.center.set(align, centerY);

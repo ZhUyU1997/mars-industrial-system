@@ -19,9 +19,9 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const ROOTS_PARTS: readonly Item[] = [
-  { id: 'plant/evaporator/pump/roots/rotor', name: '罗茨转子', unit: '件', category: 'part' },
-  { id: 'plant/evaporator/pump/roots/shaft', name: '罗茨转子轴', unit: '件', category: 'part' },
-  { id: 'plant/evaporator/pump/roots/timing-gear', name: '罗茨同步齿轮', unit: '件', category: 'part' },
+  { id: 'plant/evaporator/pump/roots/rotor', name: 'Roots Rotor', name_zh: '罗茨转子', unit: '件', category: 'part' },
+  { id: 'plant/evaporator/pump/roots/shaft', name: 'Roots Rotor Shaft', name_zh: '罗茨转子轴', unit: '件', category: 'part' },
+  { id: 'plant/evaporator/pump/roots/timing-gear', name: 'Roots Timing Gear', name_zh: '罗茨同步齿轮', unit: '件', category: 'part' },
 ];
 
 const ROOTS_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -30,7 +30,7 @@ const ROOTS_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 8 字形转子 2 只：HT250 铸坯，型线铣削，配对间隙 0.1 mm。 */
     id: 'make/roots-rotor-profile',
-    name: '罗茨转子制造',
+    name: 'Roots Rotor Manufacturing', name_zh: '罗茨转子制造',
     produces: [{ item: 'plant/evaporator/pump/roots/rotor', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     steps: [
@@ -42,7 +42,7 @@ const ROOTS_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 转子轴 2 根：40Cr，车轴承位与齿轮位。 */
     id: 'make/roots-shaft',
-    name: '罗茨转子轴制造',
+    name: 'Roots Rotor Shaft Manufacturing', name_zh: '罗茨转子轴制造',
     produces: [{ item: 'plant/evaporator/pump/roots/shaft', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1, 2) }] }],
     steps: [
@@ -53,7 +53,7 @@ const ROOTS_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 同步齿轮 2 只：40Cr，滚齿，齿数按 1:1 同步。 */
     id: 'make/roots-timing-gear',
-    name: '罗茨同步齿轮制造',
+    name: 'Roots Timing Gear Manufacturing', name_zh: '罗茨同步齿轮制造',
     produces: [{ item: 'plant/evaporator/pump/roots/timing-gear', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1, 2) }] }],
     performedBy: 'plant/gear-hobbing',

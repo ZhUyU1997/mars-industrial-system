@@ -202,7 +202,7 @@ export const OVERLAY_ATW_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/overlay-traceable-record',
-    name: '可溯源套刻的定值链记录',
+    name: 'Traceable Overlay Value-Assignment Chain Record', name_zh: '可溯源套刻的定值链记录',
     unit: '份',
     category: 'part',
     props: [
@@ -246,7 +246,7 @@ export const OVERLAY_ATW_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/atw-figure-record-hina',
-    name: 'EUV 光刻机 at-wavelength 面形记录',
+    name: 'EUV Stepper At-Wavelength Surface Figure Record', name_zh: 'EUV 光刻机 at-wavelength 面形记录',
     unit: '份',
     category: 'part',
     props: [
@@ -280,7 +280,7 @@ export const OVERLAY_ATW_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ref-flat-mutual-record',
-    name: '可见光参考面的三面互检记录',
+    name: 'Visible-Light Reference Surface Three-Flat Intercomparison Record', name_zh: '可见光参考面的三面互检记录',
     unit: '份',
     category: 'part',
     props: [
@@ -317,7 +317,7 @@ export const OVERLAY_ATW_ROUTES: readonly Route[] = [
      * `measure/overlay-dbo`（`plant/overlay-metrology`）。
      */
     id: 'measure/overlay-traceable',
-    name: '可溯源套刻的定值链测量',
+    name: 'Traceable Overlay Value-Assignment Chain Measurement', name_zh: '可溯源套刻的定值链测量',
     produces: [
       {
         item: 'mat/overlay-traceable-record',
@@ -410,7 +410,7 @@ export const OVERLAY_ATW_ROUTES: readonly Route[] = [
      * + 16 幅拼接 4 h + 合账 1 h。比放行档的 14 h 多 2 h（多 7 幅）。
      */
     id: 'measure/atw-figure-acceptance',
-    name: 'EUV 光刻机 at-wavelength 面形测量',
+    name: 'EUV Stepper At-Wavelength Surface Figure Measurement', name_zh: 'EUV 光刻机 at-wavelength 面形测量',
     produces: [
       {
         item: 'mat/atw-figure-record-hina',
@@ -526,7 +526,7 @@ export const OVERLAY_ATW_ROUTES: readonly Route[] = [
      * 它只是 B1（0.03 nm）的粗旁证，差 17 倍。见文件头第四节。
      */
     id: 'measure/ref-flat-three-flat',
-    name: '可见光参考面的三面互检测量',
+    name: 'Visible-Light Reference Surface Three-Flat Intercomparison Measurement', name_zh: '可见光参考面的三面互检测量',
     produces: [
       {
         item: 'mat/ref-flat-mutual-record',

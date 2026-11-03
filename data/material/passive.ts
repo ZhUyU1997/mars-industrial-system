@@ -68,7 +68,7 @@ export const PASSIVE_ITEMS: readonly Item[] = [
    * 三个身份：线绕电阻的电阻体、电炉的发热体、恒温机组的加热丝。
    * 三处要的是同一个性质 —— **电阻 + 耐热**，而这正是镍铬合金的定义。
    */
-  { id: 'mat/resistance-wire', name: '镍铬电阻丝', unit: 'kg', category: 'material' },
+  { id: 'mat/resistance-wire', name: 'Nickel-Chromium Resistance Wire', name_zh: '镍铬电阻丝', unit: 'kg', category: 'material' },
 ];
 
 export const PASSIVE_ROUTES: readonly Route[] = [
@@ -88,7 +88,7 @@ export const PASSIVE_ROUTES: readonly Route[] = [
  * 光洁度比金刚石抛光差一档）。
      */
     id: 'make/resistance-wire',
-    name: '镍铬丝制备',
+    name: 'Nickel-Chromium Wire Production', name_zh: '镍铬丝制备',
     produces: [{ item: 'mat/resistance-wire', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/nickel', qty: q(700) }] },

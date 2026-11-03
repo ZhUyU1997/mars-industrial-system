@@ -32,7 +32,7 @@ export const MANGANIN_FURNACE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/manganin-furnace-record',
-    name: '锰铜三区温度记录',
+    name: 'Manganin 3-Zone Temperature Record', name_zh: '锰铜三区温度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -55,7 +55,7 @@ export const MANGANIN_FURNACE_ROUTES: readonly Route[] = [
      *   ④ 记表号与三档读数。
      */
     id: 'measure/manganin-furnace-temperature',
-    name: '锰铜三区温度测量',
+    name: 'Manganin 3-Zone Temperature Measurement', name_zh: '锰铜三区温度测量',
     produces: [
       {
         item: 'mat/manganin-furnace-record',

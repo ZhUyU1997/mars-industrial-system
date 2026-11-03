@@ -64,7 +64,7 @@ import { q } from '../../src/index.ts';
 
 export const VACUUM_COLUMN: Item = {
   id: 'plant/vacuum-column',
-  name: '真空柱',
+  name: 'Vacuum Column', name_zh: '真空柱',
   unit: '台',
   category: 'machine',
   holds: [
@@ -90,7 +90,7 @@ export const VACUUM_COLUMN_PARTS: readonly Item[] = [
    * 商品塔也这么运。塔体上要开：进料口、回流口、塔顶蒸气口、塔釜液口、
    * 10 个测压点、3 个人孔。
    */
-  { id: 'plant/vacuum-column/shell', name: '真空柱塔体', unit: '件', category: 'part',
+  { id: 'plant/vacuum-column/shell', name: 'Vacuum Column Shell', name_zh: '真空柱塔体', unit: '件', category: 'part',
     props: [{ param: 'leakRate', kind: 'range', min: 0, max: 0.5, unit: 'kPa/h', dir: 'atMost' }] },
 
   /**
@@ -99,7 +99,7 @@ export const VACUUM_COLUMN_PARTS: readonly Item[] = [
    * 孔径 5 mm、开孔率 8 % —— 孔小了漏液、孔大了雾沫夹带。冲孔在
    * `plant/press` 上分 100 次冲，每块板 1 800 个孔。
    */
-  { id: 'plant/vacuum-column/trays', name: '真空柱塔板组', unit: '件', category: 'part' },
+  { id: 'plant/vacuum-column/trays', name: 'Vacuum Column Tray Assembly', name_zh: '真空柱塔板组', unit: '件', category: 'part' },
 
   /**
    * 列管换热器。再沸器与冷凝器是同一件，各一台（共 2 台）。
@@ -107,7 +107,7 @@ export const VACUUM_COLUMN_PARTS: readonly Item[] = [
    * φ400 壳体 + 60 根 φ19×2 × 3 000 的管，管板胀接。与
    * `plant/distillation-tower/heat-exchanger` 同一类，只是面积按 15 m² 算。
    */
-  { id: 'plant/vacuum-column/exchanger', name: '真空柱列管换热器', unit: '件', category: 'part' },
+  { id: 'plant/vacuum-column/exchanger', name: 'Vacuum Column Shell-and-Tube Heat Exchanger', name_zh: '真空柱列管换热器', unit: '件', category: 'part' },
 
   /**
    * 真空机组。水环泵打粗真空（到 10 kPa），罗茨泵接力（到 5 kPa）。
@@ -115,7 +115,7 @@ export const VACUUM_COLUMN_PARTS: readonly Item[] = [
    * 泵体铸铁、叶轮与分配板不锈钢、轴封 PTFE。与 `plant/evaporator` 的那套
    * 泵不是同一件：那是一级水环，这里是水环 + 罗茨两级，抽速要 100 m³/h。
    */
-  { id: 'plant/vacuum-column/pump', name: '真空柱真空机组', unit: '件', category: 'part' },
+  { id: 'plant/vacuum-column/pump', name: 'Vacuum Column Vacuum Pumping Unit', name_zh: '真空柱真空机组', unit: '件', category: 'part' },
 ];
 
 export const VACUUM_COLUMN_ROUTES: readonly Route[] = [
@@ -128,7 +128,7 @@ export const VACUUM_COLUMN_ROUTES: readonly Route[] = [
      * 6 mm × 17 m² × 7 900 = 806 kg，加法兰、人孔、接管与 10 % 余量 → 900 kg。
      */
     id: 'make/vacuum-column-shell',
-    name: '真空柱塔体制造',
+    name: 'Vacuum Column Shell Manufacturing', name_zh: '真空柱塔体制造',
     produces: [
       {
         item: 'plant/vacuum-column/shell',
@@ -154,7 +154,7 @@ export const VACUUM_COLUMN_ROUTES: readonly Route[] = [
      * 加降液管、受液盘、支撑圈 → 200 kg。
      */
     id: 'make/vacuum-column-trays',
-    name: '真空柱塔板组制造',
+    name: 'Vacuum Column Tray Assembly Manufacturing', name_zh: '真空柱塔板组制造',
     produces: [{ item: 'plant/vacuum-column/trays', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(200) }] }],
     needs: ['plant/press'],
@@ -170,7 +170,7 @@ export const VACUUM_COLUMN_ROUTES: readonly Route[] = [
      * 所以壳程加两根折流板、管数按 80 根算（余量在管板钻孔上，不在长度上）。
      */
     id: 'make/vacuum-column-exchanger',
-    name: '真空柱列管换热器制造',
+    name: 'Vacuum Column Shell-and-Tube Heat Exchanger Manufacturing', name_zh: '真空柱列管换热器制造',
     produces: [{ item: 'plant/vacuum-column/exchanger', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(300) }] },
@@ -190,7 +190,7 @@ export const VACUUM_COLUMN_ROUTES: readonly Route[] = [
      * 决定了极限真空 —— 间隙大了抽不到 5 kPa，小了会咬。
      */
     id: 'make/vacuum-column-pump',
-    name: '真空柱真空机组制造',
+    name: 'Vacuum Column Vacuum Pumping Unit Manufacturing', name_zh: '真空柱真空机组制造',
     produces: [{ item: 'plant/vacuum-column/pump', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(200) }] },
@@ -215,7 +215,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/vacuum-column',
-    name: '真空柱装配',
+    name: 'Vacuum Column Assembly', name_zh: '真空柱装配',
     produces: [{
       item: 'plant/vacuum-column',
       qty: q(1),

@@ -19,25 +19,25 @@ import { q } from '../../src/index.ts';
 export const LITHO_ITEMS: readonly Item[] = [
   {
     id: 'plant/photorepeater/lens',
-    name: '缩微重复曝光机缩微镜头组',
+    name: 'Photorepeater Reduction Lens Assembly', name_zh: '缩微重复曝光机缩微镜头组',
     unit: '件',
     category: 'part',
   },
   {
     id: 'plant/photorepeater/stage',
-    name: '缩微重复曝光机精密步进台',
+    name: 'Photorepeater Precision Stepping Stage', name_zh: '缩微重复曝光机精密步进台',
     unit: '件',
     category: 'part',
   },
   {
     id: 'plant/photorepeater/frame',
-    name: '缩微重复曝光机铸铁机身',
+    name: 'Photorepeater Cast Iron Frame', name_zh: '缩微重复曝光机铸铁机身',
     unit: '件',
     category: 'part',
   },
   {
     id: 'plant/photorepeater',
-    name: '缩微重复曝光机',
+    name: 'Photorepeater', name_zh: '缩微重复曝光机',
     unit: '台',
     category: 'machine',
     composedOf: [
@@ -56,7 +56,7 @@ export const LITHO_ITEMS: readonly Item[] = [
      * 同一套扩散/蒸铝/划片工艺，掩模从 5 µm 进到 1 µm，单片门数从 40 进到 1 000。
      */
     id: 'std/cpu-8bit-general',
-    name: '1 000 门 8 位 CPU 芯片',
+    name: '1 000 Gate 8-Bit CPU Chip', name_zh: '1 000 门 8 位 CPU 芯片',
     unit: '片',
     category: 'part',
     props: [
@@ -78,7 +78,7 @@ export const LITHO_ROUTES: readonly Route[] = [
      * 6 kg 的石英组，手抛 200 h —— 这是整台机器最贵的一件。
      */
     id: 'make/photorepeater-lens',
-    name: '缩微重复曝光机缩微镜头组制造',
+    name: 'Photorepeater Reduction Lens Assembly Manufacturing', name_zh: '缩微重复曝光机缩微镜头组制造',
     produces: [{ item: 'plant/photorepeater/lens', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/quartz-pure', qty: q(3) }] },
@@ -103,7 +103,7 @@ export const LITHO_ROUTES: readonly Route[] = [
      * 光栅尺是自制的（刻线那一族：车床挂轮 + 分度），闭环读数靠游标。
      */
     id: 'make/photorepeater-stage',
-    name: '缩微重复曝光机精密步进台制造',
+    name: 'Photorepeater Precision Stepping Stage Manufacturing', name_zh: '缩微重复曝光机精密步进台制造',
     produces: [{ item: 'plant/photorepeater/stage', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(160) }] },
@@ -124,7 +124,7 @@ export const LITHO_ROUTES: readonly Route[] = [
   {
     /** 铸铁机身：大质量、减振、能坐住 1 µm。 */
     id: 'make/photorepeater-frame',
-    name: '缩微重复曝光机铸铁机身制造',
+    name: 'Photorepeater Cast Iron Frame Manufacturing', name_zh: '缩微重复曝光机铸铁机身制造',
     produces: [{ item: 'plant/photorepeater/frame', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht200', qty: q(950) }] },
@@ -148,7 +148,7 @@ export const LITHO_ROUTES: readonly Route[] = [
      * 与原来的 `make/photomask`（手刻 + 一次缩微，3–5 µm）并存。
      */
     id: 'make/photomask-1um',
-    name: '接触式掩模制造',
+    name: 'Contact Mask Manufacturing', name_zh: '接触式掩模制造',
     produces: [
       {
         item: 'std/photomask-general',
@@ -184,7 +184,7 @@ export const LITHO_ROUTES: readonly Route[] = [
      * 一片 4 寸片出 320 只，挑出 25 只 —— **一台机器人的 CPU 一片硅片就够**。
      */
     id: 'make/cpu-8bit',
-    name: '1 000 门 8 位 CPU 芯片制造',
+    name: '1 000 Gate 8-Bit CPU Chip Manufacturing', name_zh: '1 000 门 8 位 CPU 芯片制造',
     produces: [
       {
         item: 'std/cpu-8bit-general',
@@ -238,7 +238,7 @@ export const LITHO_ROUTES: readonly Route[] = [
      * 于是这台机器人第一次能做**圆弧插补** —— 沿着曲线走，而不是走折线。
      */
     id: 'make/robot-controller-8bit',
-    name: '机器人控制柜制造',
+    name: 'Robot Control Cabinet Manufacturing', name_zh: '机器人控制柜制造',
     produces: [{ item: 'plant/robot/controller', qty: q(1), gives: [{ param: 'dof', kind: 'range', min: 6, max: 6 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -266,7 +266,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/photorepeater',
-    name: '缩微重复曝光机装配',
+    name: 'Photorepeater Assembly', name_zh: '缩微重复曝光机装配',
     produces: [{
       item: 'plant/photorepeater',
       qty: q(1),

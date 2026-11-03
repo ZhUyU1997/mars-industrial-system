@@ -52,7 +52,7 @@ export const MEASUREMENT_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/standard-capacitor-100pf',
-    name: '100 pF 标准电容 A',
+    name: '100 pF Standard Capacitor A', name_zh: '100 pF 标准电容 A',
     unit: '件',
     category: 'part',
     props: [
@@ -87,7 +87,7 @@ export const MEASUREMENT_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/standard-voltage-reference',
-    name: '标准电压基准 A',
+    name: 'Standard Voltage Reference A', name_zh: '标准电压基准 A',
     unit: '件',
     category: 'part',
     props: [
@@ -110,7 +110,7 @@ export const MEASUREMENT_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-calibrator-reference',
-    name: 'pC 校准器基准 A',
+    name: 'pC Calibrator Reference A', name_zh: 'pC 校准器基准 A',
     unit: '台',
     category: 'part',
     props: [
@@ -125,7 +125,7 @@ export const MEASUREMENT_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-detector-iec60270',
-    name: 'IEC 60270 PD 检测仪',
+    name: 'IEC 60270 PD Detector', name_zh: 'IEC 60270 PD 检测仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -146,7 +146,7 @@ export const MEASUREMENT_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/standard-capacitor-100pf-b',
-    name: '100 pF 标准电容 B',
+    name: '100 pF Standard Capacitor B', name_zh: '100 pF 标准电容 B',
     unit: '件',
     category: 'part',
     props: [
@@ -169,7 +169,7 @@ export const MEASUREMENT_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/standard-voltage-reference-b',
-    name: '标准电压基准 B',
+    name: 'Standard Voltage Reference B', name_zh: '标准电压基准 B',
     unit: '件',
     category: 'part',
     props: [
@@ -188,7 +188,7 @@ export const MEASUREMENT_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-calibrator-reference-b',
-    name: 'pC 校准器基准 B',
+    name: 'pC Calibrator Reference B', name_zh: 'pC 校准器基准 B',
     unit: '台',
     category: 'part',
     props: [
@@ -203,7 +203,7 @@ export const MEASUREMENT_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-detector-iec60270-b',
-    name: 'IEC 60270 局放检测仪 B',
+    name: 'IEC 60270 Partial Discharge Detector B', name_zh: 'IEC 60270 局放检测仪 B',
     unit: '台',
     category: 'machine',
     props: [
@@ -230,7 +230,7 @@ export const MEASUREMENT_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-free-source-100k',
-    name: 'PD-free 100 kV 源',
+    name: 'PD-Free 100 kV Source', name_zh: 'PD-free 100 kV 源',
     unit: '台',
     category: 'machine',
     props: [
@@ -260,7 +260,7 @@ export const MEASUREMENT_SEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/uhf-pd-analyzer',
-    name: 'UHF 快源',
+    name: 'UHF Fast Source', name_zh: 'UHF 快源',
     unit: '台',
     category: 'machine',
     props: [

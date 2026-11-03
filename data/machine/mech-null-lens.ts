@@ -15,7 +15,7 @@ import { q } from '../../src/index.ts';
 export const NULL_LENS_PARTS: readonly Item[] = [
   {
     id: 'plant/null-test/null-lens/asphere',
-    name: '非球面零位镜',
+    name: 'Aspheric Null Lens', name_zh: '非球面零位镜',
     unit: '件',
     category: 'part',
     props: [
@@ -26,7 +26,7 @@ export const NULL_LENS_PARTS: readonly Item[] = [
   },
   {
     id: 'plant/null-test/null-lens/sphere-pair',
-    name: '球面零位镜对',
+    name: 'Spherical Null Lens Pair', name_zh: '球面零位镜对',
     unit: '套',
     category: 'part',
     props: [
@@ -37,7 +37,7 @@ export const NULL_LENS_PARTS: readonly Item[] = [
   },
   {
     id: 'plant/null-test/null-lens/cell',
-    name: '零位镜镜座',
+    name: 'Null Lens Mount', name_zh: '零位镜镜座',
     unit: '件',
     category: 'part',
     props: [
@@ -52,7 +52,7 @@ const NULL_LENS_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
 })[] = [
   {
     id: 'make/null-lens-asphere',
-    name: '非球面零位镜制造',
+    name: 'Aspheric Null Lens Manufacturing', name_zh: '非球面零位镜制造',
     produces: [{
       item: 'plant/null-test/null-lens/asphere',
       qty: q(1),
@@ -68,7 +68,7 @@ const NULL_LENS_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/null-lens-sphere-pair',
-    name: '球面零位镜对制造',
+    name: 'Spherical Null Lens Pair Manufacturing', name_zh: '球面零位镜对制造',
     produces: [{
       item: 'plant/null-test/null-lens/sphere-pair',
       qty: q(1),
@@ -84,7 +84,7 @@ const NULL_LENS_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/null-lens-cell',
-    name: '零位镜镜座制造',
+    name: 'Null Lens Mount Manufacturing', name_zh: '零位镜镜座制造',
     produces: [{
       item: 'plant/null-test/null-lens/cell',
       qty: q(1),

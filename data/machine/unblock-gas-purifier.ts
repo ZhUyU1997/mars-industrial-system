@@ -338,7 +338,7 @@ export const UNBLOCK_GASPURE_ROUTES: readonly Route[] = [
      *    砂胎上敲 —— 砂胎一撤，板就弹回（冷作硬化的铜不会全弹回来，所以要一次敲到位）
      */
     id: 'make/gas-purifier-cast',
-    name: '扩散炉气体纯化单元制造',
+    name: 'Diffusion Furnace Gas Purification Unit Manufacturing', name_zh: '扩散炉气体纯化单元制造',
     produces: [{ item: 'plant/diffusion-furnace/gas-purifier', qty: q(1) }],
     uses: [
       /**

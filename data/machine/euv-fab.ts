@@ -374,7 +374,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper/mirror-blank',
-    name: 'EUV 光刻机投影镜坯',
+    name: 'EUV Stepper Projection Mirror Blank', name_zh: 'EUV 光刻机投影镜坯',
     unit: '件',
     category: 'part',
     props: [
@@ -397,7 +397,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper/mirror',
-    name: 'EUV 光刻机投影镜',
+    name: 'EUV Stepper Projection Mirror', name_zh: 'EUV 光刻机投影镜',
     unit: '件',
     category: 'part',
     props: [
@@ -424,7 +424,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper/chamber',
-    name: 'EUV 扫描机投影光学真空腔',
+    name: 'EUV Scanner Projection Optics Vacuum Chamber', name_zh: 'EUV 扫描机投影光学真空腔',
     unit: '件',
     category: 'part',
     props: [
@@ -446,7 +446,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper/stage',
-    name: 'EUV 扫描机双工件台',
+    name: 'EUV Scanner Dual Wafer Stage', name_zh: 'EUV 扫描机双工件台',
     unit: '件',
     category: 'part',
     props: [
@@ -466,7 +466,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper/frame',
-    name: 'EUV 扫描机整机框架',
+    name: 'EUV Scanner System Frame', name_zh: 'EUV 扫描机整机框架',
     unit: '件',
     category: 'part',
     props: [
@@ -489,7 +489,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper/optics-module',
-    name: 'EUV 光刻机光学模块',
+    name: 'EUV Stepper Optics Module', name_zh: 'EUV 光刻机光学模块',
     unit: '件',
     category: 'part',
     props: [
@@ -520,7 +520,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper/wafer',
-    name: '曝完 20 层的硅片',
+    name: '20-Layer Exposed Silicon Wafer', name_zh: '曝完 20 层的硅片',
     unit: '片',
     category: 'part',
     props: [
@@ -545,7 +545,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-fab/polish-station',
-    name: 'EUV 抛光站',
+    name: 'EUV Polishing Station', name_zh: 'EUV 抛光站',
     unit: '件',
     category: 'part',
     props: [
@@ -564,7 +564,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-fab/align-bay',
-    name: 'EUV 装调工位',
+    name: 'EUV Assembly and Alignment Station', name_zh: 'EUV 装调工位',
     unit: '件',
     category: 'part',
     props: [
@@ -601,7 +601,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper',
-    name: 'EUV 扫描机整机',
+    name: 'EUV Scanner System', name_zh: 'EUV 扫描机整机',
     unit: '台',
     category: 'machine',
     props: [
@@ -629,7 +629,7 @@ export const EUV_FAB_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-fab',
-    name: 'EUV 产线',
+    name: 'EUV Production Line', name_zh: 'EUV 产线',
     unit: '条',
     category: 'machine',
     props: [
@@ -685,7 +685,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * 2 批 = 6 面 = 一台机器的投影镜；30 台/年 = 60 批 = 256 200 h = 30 站。
      */
     id: 'make/euv-stepper-mirror-blank',
-    name: 'EUV 光刻机投影镜坯制造',
+    name: 'EUV Stepper Projection Mirror Blank Manufacturing', name_zh: 'EUV 光刻机投影镜坯制造',
     produces: [
       {
         item: 'plant/euv-stepper/mirror-blank',
@@ -779,7 +779,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * 的那一笔：276 nm × ±1 % = ±2.8 nm，而预补偿算不出来）。
      */
     id: 'make/euv-stepper-mirror',
-    name: 'EUV 光刻机投影镜制造',
+    name: 'EUV Stepper Projection Mirror Manufacturing', name_zh: 'EUV 光刻机投影镜制造',
     produces: [
       {
         item: 'plant/euv-stepper/mirror',
@@ -878,7 +878,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * 焊"的活，4 条焊缝、两道法兰、一次试压，没有任何一步卡在精度上。
      */
     id: 'make/euv-stepper-chamber',
-    name: 'EUV 扫描机投影光学真空腔制造',
+    name: 'EUV Scanner Projection Optics Vacuum Chamber Manufacturing', name_zh: 'EUV 扫描机投影光学真空腔制造',
     produces: [
       {
         item: 'plant/euv-stepper/chamber',
@@ -931,7 +931,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * 120 h/台 × 30 = 3 600 h = 0.4 站。不是瓶颈。
      */
     id: 'make/euv-stepper-stage',
-    name: 'EUV 扫描机双工件台制造',
+    name: 'EUV Scanner Dual Wafer Stage Manufacturing', name_zh: 'EUV 扫描机双工件台制造',
     produces: [
       {
         item: 'plant/euv-stepper/stage',
@@ -987,7 +987,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * 实测级判据"（判据本身只能是"两小时内星点不跳"，见那件条目的注释）。
      */
     id: 'make/euv-stepper-frame',
-    name: 'EUV 扫描机整机框架装配',
+    name: 'EUV Scanner System Frame Assembly', name_zh: 'EUV 扫描机整机框架装配',
     produces: [
       {
         item: 'plant/euv-stepper/frame',
@@ -1053,7 +1053,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * 这台机器能曝光，不能成像。
      */
     id: 'make/euv-stepper-optics-module',
-    name: 'EUV 光刻机光学模块制造',
+    name: 'EUV Stepper Optics Module Manufacturing', name_zh: 'EUV 光刻机光学模块制造',
     produces: [
       {
         item: 'plant/euv-stepper/optics-module',
@@ -1165,7 +1165,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * 30 站 × 40 h = 1 200 h 一次性投入 —— 与年产 30 台的 256 200 h 比，只占 0.5 %。
      */
     id: 'make/euv-fab-polish-station',
-    name: 'EUV 抛光站制造',
+    name: 'EUV Polishing Station Manufacturing', name_zh: 'EUV 抛光站制造',
     produces: [
       {
         item: 'plant/euv-fab/polish-station',
@@ -1216,7 +1216,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * 那条"两小时内温度不变"同一个判据）。
      */
     id: 'make/euv-fab-align-bay',
-    name: 'EUV 装调工位制造',
+    name: 'EUV Assembly and Alignment Station Manufacturing', name_zh: 'EUV 装调工位制造',
     produces: [
       {
         item: 'plant/euv-fab/align-bay',
@@ -1301,7 +1301,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * （换了对准器与台），不在这条的 gives 里 —— OR 的两端，不是同一个 560。
      */
     id: 'make/euv-exposed-wafer',
-    name: '曝完 20 层的硅片制造',
+    name: '20-Layer Exposed Silicon Wafer Manufacturing', name_zh: '曝完 20 层的硅片制造',
     // 这一层曝光的整机窗口是 560 nm（基础台：500 合同值 + 250 人眼 RSS 取整）。
     // 要求写在设备上，而不是只写在注释里 —— 这是 `needs` 规格窗口的第一处用例。
     produces: [
@@ -1393,7 +1393,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * 43 nm 还要再加 `plant/edge-aligner` 与零层光栅，见 `edge-aligner.ts`。
      */
     id: 'make/euv-stepper',
-    name: 'EUV 扫描机整机装配',
+    name: 'EUV Scanner System Assembly', name_zh: 'EUV 扫描机整机装配',
     produces: [
       {
         item: 'plant/euv-stepper',
@@ -1457,7 +1457,7 @@ export const EUV_FAB_ROUTES: readonly Route[] = [
      * 镀膜机/离子束修形机/真空机组是既有机器，放 `needs`，不进 uses。
      */
     id: 'make/euv-fab',
-    name: 'EUV 产线装配',
+    name: 'EUV Production Line Assembly', name_zh: 'EUV 产线装配',
     produces: [
       {
         item: 'plant/euv-fab',

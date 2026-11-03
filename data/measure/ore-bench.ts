@@ -27,7 +27,7 @@ export const ORE_BENCH_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ore-bench-pressure-record',
-    name: '选矿厂加压舱舱压记录',
+    name: 'Ore Beneficiation Plant Pressurized Cabin Pressure Record', name_zh: '选矿厂加压舱舱压记录',
     unit: '份',
     category: 'part',
     props: [
@@ -50,7 +50,7 @@ export const ORE_BENCH_MEASURE_ROUTES: readonly Route[] = [
      * ±3.2 kPa（满量程 300 kPa 档）。保压压降 ≤5 kPa 才算舱体密封。
      */
     id: 'measure/ore-bench-cabin-pressure',
-    name: '选矿厂加压舱舱压测量',
+    name: 'Ore Beneficiation Plant Pressurized Cabin Pressure Measurement', name_zh: '选矿厂加压舱舱压测量',
     produces: [
       {
         item: 'mat/ore-bench-pressure-record',

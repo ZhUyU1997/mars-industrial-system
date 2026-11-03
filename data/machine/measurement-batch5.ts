@@ -22,7 +22,7 @@ export const BATCH5_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/emissometer-80k',
-    name: '80–100 K 红外发射率计',
+    name: '80–100 K Infrared Emissometer', name_zh: '80–100 K 红外发射率计',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：黑体腔、探测器、温控按整台装配，不再拆独立零件，标 monolithic。
@@ -42,7 +42,7 @@ export const BATCH5_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/transient-heat-source',
-    name: '20–25 MW/m² 瞬态热流源',
+    name: '20–25 MW/m² Transient Heat Flux Source', name_zh: '20–25 MW/m² 瞬态热流源',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：光束整形、脉冲电源、量热按整台装配，不再拆独立零件，标 monolithic。
@@ -63,7 +63,7 @@ export const BATCH5_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/he-inventory-meter',
-    name: '25 t 氦库存计量台',
+    name: '25 t Helium Inventory Metering Bench', name_zh: '25 t 氦库存计量台',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：压力容器、计、记录按整台装配，不再拆独立零件，标 monolithic。
@@ -88,7 +88,7 @@ export const BATCH5_ROUTES: readonly Route[] = [
      * 发射率 0.05–0.1 是设计。
      */
     id: 'make/emissometer-80k',
-    name: '80–100 K 红外发射率计制造',
+    name: '80–100 K Infrared Emissometer Manufacturing', name_zh: '80–100 K 红外发射率计制造',
     produces: [
       {
         item: 'plant/emissometer-80k',
@@ -125,7 +125,7 @@ export const BATCH5_ROUTES: readonly Route[] = [
      * plant/slab-laser-20kw 不存在，前置件用其产出件 plant/euv-source/laser（18–22 kW）。
      */
     id: 'make/transient-heat-source',
-    name: '20–25 MW/m² 瞬态热流源制造',
+    name: '20–25 MW/m² Transient Heat Flux Source Manufacturing', name_zh: '20–25 MW/m² 瞬态热流源制造',
     produces: [
       {
         item: 'plant/transient-heat-source',
@@ -164,7 +164,7 @@ export const BATCH5_ROUTES: readonly Route[] = [
      * std/pressure-gauge 不存在，压力测量用 std/opamp-chip-general 20 件搭。
      */
     id: 'make/he-inventory-meter',
-    name: '25 t 氦库存计量台制造',
+    name: '25 t Helium Inventory Metering Bench Manufacturing', name_zh: '25 t 氦库存计量台制造',
     produces: [
       {
         item: 'plant/he-inventory-meter',

@@ -34,7 +34,7 @@ export const RTA_PYROMETER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/pyrometer',
-    name: '1.55 µm 单色高温计',
+    name: '1.55 µm Monochromatic Pyrometer', name_zh: '1.55 µm 单色高温计',
     unit: '件',
     category: 'part',
     props: [
@@ -54,7 +54,7 @@ export const RTA_PYROMETER_ROUTES: readonly Route[] = [
      *   二极管 1 + 玻璃 0.05 + 铝 0.2 + 运放 1 + 电容 1 + 铜线 0.01 → 高温计 1
      */
     id: 'make/rta-pyrometer',
-    name: '1.55 µm 单色高温计制造',
+    name: '1.55 µm Monochromatic Pyrometer Manufacturing', name_zh: '1.55 µm 单色高温计制造',
     produces: [
       {
         item: 'plant/rta/pyrometer',

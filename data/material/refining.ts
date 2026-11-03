@@ -46,7 +46,7 @@ export const BENEFICIARY_PARTS: readonly Item[] = [
    * 颚板是这台机器唯一的消耗件，真正的材质是高锰钢（水韧处理后越砸越硬）。
    * 高锰钢要锰 12%，而锰的富集与锰铁链没建 —— 这里用 40Cr 代用，寿命打折。
    */
-  { id: 'plant/ore-beneficiary/crusher', name: '选矿厂破碎机', unit: '件', category: 'part' },
+  { id: 'plant/ore-beneficiary/crusher', name: 'Ore Beneficiation Plant Crusher', name_zh: '选矿厂破碎机', unit: '件', category: 'part' },
 
   /**
    * 球磨机。筒体转，里面的钢球把矿砸细到 0.1 mm 以下。
@@ -54,7 +54,7 @@ export const BENEFICIARY_PARTS: readonly Item[] = [
    *   磨矿这一步是全厂最费电的地方（它列在第一档），因为富集比是
    * 140:1 的时候，要磨的是那 140 吨土，不是那 1 吨精矿。
    */
-  { id: 'plant/ore-beneficiary/mill', name: '选矿厂球磨机', unit: '件', category: 'part' },
+  { id: 'plant/ore-beneficiary/mill', name: 'Ore Beneficiation Plant Ball Mill', name_zh: '选矿厂球磨机', unit: '件', category: 'part' },
 
   /**
    * 浮选槽。矿浆里加药、充气，有用矿物随泡沫上浮，脉石留下。
@@ -62,24 +62,24 @@ export const BENEFICIARY_PARTS: readonly Item[] = [
    * ⚠️ **槽体造得出来，浮选开不了工**：整条工艺要有机物药剂，而火星的有机
    * 化学只有 PTFE 与 Bosch 碳。见 `mat/flotation-reagent`。
    */
-  { id: 'plant/ore-beneficiary/flotation-cells', name: '选矿厂浮选槽', unit: '件', category: 'part' },
+  { id: 'plant/ore-beneficiary/flotation-cells', name: 'Ore Beneficiation Plant Flotation Cells', name_zh: '选矿厂浮选槽', unit: '件', category: 'part' },
 
   /** 浓缩机。大直径浅槽加耙架，让矿浆里的固体沉下去，把水挤出来。 */
-  { id: 'plant/ore-beneficiary/thickener', name: '选矿厂浓缩机', unit: '件', category: 'part' },
+  { id: 'plant/ore-beneficiary/thickener', name: 'Ore Beneficiation Plant Thickener', name_zh: '选矿厂浓缩机', unit: '件', category: 'part' },
 
   /**
    * 过滤机。把浓缩后的矿浆压成滤饼，水分降到 10% 以下才进得了炉子。
    *
    * 滤布是高分子织物，火星只有 PTFE 能做纤维 —— 贵，但那是唯一一条路。
    */
-  { id: 'plant/ore-beneficiary/filter', name: '选矿厂过滤机', unit: '件', category: 'part' },
+  { id: 'plant/ore-beneficiary/filter', name: 'Ore Beneficiation Plant Filter', name_zh: '选矿厂过滤机', unit: '件', category: 'part' },
 ];
 
 export const BENEFICIARY_ROUTES: readonly Route[] = [
   {
     /** 破碎机。HT250 机架浇成，40Cr 颚板锻后淬硬、堆焊耐磨层。 */
     id: 'make/beneficiary-crusher',
-    name: '选矿厂破碎机制造',
+    name: 'Ore Beneficiation Plant Crusher Manufacturing', name_zh: '选矿厂破碎机制造',
     produces: [{ item: 'plant/ore-beneficiary/crusher', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] },
@@ -92,7 +92,7 @@ export const BENEFICIARY_ROUTES: readonly Route[] = [
   {
     /** 球磨机。薄板卷筒焊成；40Cr 衬板与钢球锻后淬硬 —— 钢球是消耗件。 */
     id: 'make/beneficiary-mill',
-    name: '选矿厂球磨机制造',
+    name: 'Ore Beneficiation Plant Ball Mill Manufacturing', name_zh: '选矿厂球磨机制造',
     produces: [{ item: 'plant/ore-beneficiary/mill', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -104,7 +104,7 @@ export const BENEFICIARY_ROUTES: readonly Route[] = [
   {
     /** 浮选槽。薄板焊槽体，40Cr 叶轮，不锈钢刮板 —— 槽能造，药剂不能。 */
     id: 'make/beneficiary-flotation',
-    name: '选矿厂浮选槽制造',
+    name: 'Ore Beneficiation Plant Flotation Cells Manufacturing', name_zh: '选矿厂浮选槽制造',
     produces: [{ item: 'plant/ore-beneficiary/flotation-cells', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -116,7 +116,7 @@ export const BENEFICIARY_ROUTES: readonly Route[] = [
   {
     /** 浓缩机。薄板大直径浅槽 + 45 钢耙架与中心传动。 */
     id: 'make/beneficiary-thickener',
-    name: '选矿厂浓缩机制造',
+    name: 'Ore Beneficiation Plant Thickener Manufacturing', name_zh: '选矿厂浓缩机制造',
     produces: [{ item: 'plant/ore-beneficiary/thickener', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -128,7 +128,7 @@ export const BENEFICIARY_ROUTES: readonly Route[] = [
   {
     /** 过滤机。不锈钢机架与滤板，PTFE 滤布。 */
     id: 'make/beneficiary-filter',
-    name: '选矿厂过滤机制造',
+    name: 'Ore Beneficiation Plant Filter Manufacturing', name_zh: '选矿厂过滤机制造',
     produces: [{ item: 'plant/ore-beneficiary/filter', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -159,17 +159,17 @@ export const BENEFICIARY_ROUTES: readonly Route[] = [
  */
 export const ARC_ELECTRODE: Item = {
   id: 'std/carbon-electrode-300',
-  name: 'φ300 碳电极',
+  name: 'φ300 Carbon Electrode', name_zh: 'φ300 碳电极',
   unit: '件',
   category: 'part',
 };
 
 export const SUBMERGED_ARC_PARTS: readonly Item[] = [
   /** 炉壳。钢板卷成圆筒再焊，外壁水冷 —— 1600 °C 下铜墙铁壁也得靠水带走热量。 */
-  { id: 'plant/submerged-arc-furnace/shell', name: '矿热炉炉壳', unit: '件', category: 'part' },
+  { id: 'plant/submerged-arc-furnace/shell', name: 'Submerged Arc Furnace Shell', name_zh: '矿热炉炉壳', unit: '件', category: 'part' },
 
   /** 炉衬。耐火砖砌在壳内。矿热炉的衬比熔炼炉厚一倍：它是连续 24 小时运行的。 */
-  { id: 'plant/submerged-arc-furnace/lining', name: '矿热炉炉衬', unit: '件', category: 'part' },
+  { id: 'plant/submerged-arc-furnace/lining', name: 'Submerged Arc Furnace Lining', name_zh: '矿热炉炉衬', unit: '件', category: 'part' },
 
   /**
    * 电极的**说明**在文件上方 `ARC_ELECTRODE` 那里 —— 它已经是标准件
@@ -183,10 +183,10 @@ export const SUBMERGED_ARC_PARTS: readonly Item[] = [
    */
 
   /** 出铁口与开堵眼机。1600 °C 的渣铁从这一孔出来，钻开再堵上，每炉一次。 */
-  { id: 'plant/submerged-arc-furnace/tapping', name: '矿热炉出铁口与开堵眼机', unit: '件', category: 'part' },
+  { id: 'plant/submerged-arc-furnace/tapping', name: 'Submerged Arc Furnace Taphole and Taphole Opener', name_zh: '矿热炉出铁口与开堵眼机', unit: '件', category: 'part' },
 
   /** 电极升降与压放机构。电极烧掉一点就往里送一点，深度决定炉温。 */
-  { id: 'plant/submerged-arc-furnace/hoist', name: '电极升降与压放机构', unit: '件', category: 'part' },
+  { id: 'plant/submerged-arc-furnace/hoist', name: 'Electrode Hoist and Clamping Mechanism', name_zh: '电极升降与压放机构', unit: '件', category: 'part' },
 ];
 
 export const SUBMERGED_ARC_ROUTES: readonly Route[] = [
@@ -206,7 +206,7 @@ export const SUBMERGED_ARC_ROUTES: readonly Route[] = [
      * 这是"能造但不好用"的那一类，不是不能用。
      */
     id: 'make/arc-electrode',
-    name: 'φ300 碳电极制造',
+    name: 'φ300 Carbon Electrode Manufacturing', name_zh: 'φ300 碳电极制造',
     produces: [{ item: 'std/carbon-electrode-300', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(870) }] },
@@ -219,7 +219,7 @@ export const SUBMERGED_ARC_ROUTES: readonly Route[] = [
   {
     /** 炉壳。薄板卷筒焊成，外部焊水套 —— 焊完要试压。 */
     id: 'make/arc-shell',
-    name: '矿热炉炉壳制造',
+    name: 'Submerged Arc Furnace Shell Manufacturing', name_zh: '矿热炉炉壳制造',
     produces: [{ item: 'plant/submerged-arc-furnace/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -228,7 +228,7 @@ export const SUBMERGED_ARC_ROUTES: readonly Route[] = [
   {
     /** 炉衬。耐火砖砌筑 —— 砌不是机械加工，是装配，执行者是机器人。 */
     id: 'make/arc-lining',
-    name: '矿热炉炉衬制造',
+    name: 'Submerged Arc Furnace Lining Manufacturing', name_zh: '矿热炉炉衬制造',
     produces: [{ item: 'plant/submerged-arc-furnace/lining', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(1) }] }],
     needs: [],
@@ -237,7 +237,7 @@ export const SUBMERGED_ARC_ROUTES: readonly Route[] = [
   {
     /** 出铁口。HT250 水冷壳体 + 45 钢钻杆，与炉壳配作。 */
     id: 'make/arc-tapping',
-    name: '矿热炉出铁口与开堵眼机制造',
+    name: 'Submerged Arc Furnace Taphole and Taphole Opener Manufacturing', name_zh: '矿热炉出铁口与开堵眼机制造',
     produces: [{ item: 'plant/submerged-arc-furnace/tapping', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] },
@@ -250,7 +250,7 @@ export const SUBMERGED_ARC_ROUTES: readonly Route[] = [
   {
     /** 升降机构。45 钢丝杠与夹持器，车螺纹后淬硬磨。 */
     id: 'make/arc-hoist',
-    name: '电极升降与压放机构制造',
+    name: 'Electrode Hoist and Clamping Mechanism Manufacturing', name_zh: '电极升降与压放机构制造',
     produces: [{ item: 'plant/submerged-arc-furnace/hoist', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/milling-machine', 'plant/grinder'],
@@ -268,29 +268,29 @@ export const ELECTROREFINING_PARTS: readonly Item[] = [
    *
    * 铅衬里是地球上的老办法，火星没有铅链；PTFE 衬里是唯一现成的选择。
    */
-  { id: 'plant/electrorefining/cell', name: '电解精炼槽槽体', unit: '件', category: 'part' },
+  { id: 'plant/electrorefining/cell', name: 'Electrorefining Cell Tank', name_zh: '电解精炼槽槽体', unit: '件', category: 'part' },
 
   /** 阳极板。泡铜铸成板，通电后它溶解，铜离子游向阴极。 */
-  { id: 'plant/electrorefining/anode', name: '电解精炼槽阳极板', unit: '件', category: 'part' },
+  { id: 'plant/electrorefining/anode', name: 'Electrorefining Cell Anode Plate', name_zh: '电解精炼槽阳极板', unit: '件', category: 'part' },
 
   /** 阴极板。不锈钢始极片，纯铜在上面一层层长出来。 */
-  { id: 'plant/electrorefining/cathode', name: '电解精炼槽阴极板', unit: '件', category: 'part' },
+  { id: 'plant/electrorefining/cathode', name: 'Electrorefining Cell Cathode Plate', name_zh: '电解精炼槽阴极板', unit: '件', category: 'part' },
 
   /**
    * 母线。铜排，几千安培的电流靠它进出。铸铜排比轧制铜排导电率低一点，
    * 但轧制要轧机 —— 先用铸的。
    */
-  { id: 'plant/electrorefining/busbar', name: '电解精炼槽母线', unit: '件', category: 'part' },
+  { id: 'plant/electrorefining/busbar', name: 'Electrorefining Cell Busbar', name_zh: '电解精炼槽母线', unit: '件', category: 'part' },
 
   /** 电解液循环。泵、管路、加热器：硫酸铜电解液要维持在 60 °C 左右。 */
-  { id: 'plant/electrorefining/circulation', name: '电解精炼槽电解液循环', unit: '件', category: 'part' },
+  { id: 'plant/electrorefining/circulation', name: 'Electrorefining Cell Electrolyte Circulation', name_zh: '电解精炼槽电解液循环', unit: '件', category: 'part' },
 ];
 
 export const ELECTROREFINING_ROUTES: readonly Route[] = [
   {
     /** 槽体。钢槽焊成 → 内壁衬 PTFE 板 → 翻边密封。 */
     id: 'make/refining-cell',
-    name: '电解精炼槽槽体制造',
+    name: 'Electrorefining Cell Tank Manufacturing', name_zh: '电解精炼槽槽体制造',
     produces: [{ item: 'plant/electrorefining/cell', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -302,7 +302,7 @@ export const ELECTROREFINING_ROUTES: readonly Route[] = [
   {
     /** 阳极板。泡铜重熔浇成板，挂耳一起铸出。 */
     id: 'make/refining-anode',
-    name: '电解精炼槽阳极板制造',
+    name: 'Electrorefining Cell Anode Plate Manufacturing', name_zh: '电解精炼槽阳极板制造',
     produces: [{ item: 'plant/electrorefining/anode', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/blister-copper', qty: q(1) }] }],
     needs: [],
@@ -312,7 +312,7 @@ export const ELECTROREFINING_ROUTES: readonly Route[] = [
   {
     /** 阴极板。不锈钢板剪切 → 折边 → 焊吊耳。 */
     id: 'make/refining-cathode',
-    name: '电解精炼槽阴极板制造',
+    name: 'Electrorefining Cell Cathode Plate Manufacturing', name_zh: '电解精炼槽阴极板制造',
     produces: [{ item: 'plant/electrorefining/cathode', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: [],
@@ -335,7 +335,7 @@ export const ELECTROREFINING_ROUTES: readonly Route[] = [
      * 能用，但不是化铝该用的炉子。
      */
     id: 'make/refining-busbar',
-    name: '电解精炼槽母线制造',
+    name: 'Electrorefining Cell Busbar Manufacturing', name_zh: '电解精炼槽母线制造',
     produces: [{ item: 'plant/electrorefining/busbar', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/aluminium', qty: q(1) }] }],
     needs: ['plant/milling-machine'],
@@ -345,7 +345,7 @@ export const ELECTROREFINING_ROUTES: readonly Route[] = [
   {
     /** 循环系统。45 钢泵体车磨，PTFE 密封，不锈钢管路。 */
     id: 'make/refining-circulation',
-    name: '电解精炼槽电解液循环制造',
+    name: 'Electrorefining Cell Electrolyte Circulation Manufacturing', name_zh: '电解精炼槽电解液循环制造',
     produces: [{ item: 'plant/electrorefining/circulation', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -362,10 +362,10 @@ export const ELECTROREFINING_ROUTES: readonly Route[] = [
 
 export const ROASTER_PARTS: readonly Item[] = [
   /** 炉壳。钢板卷焊，外壁有保温。 */
-  { id: 'plant/roaster/shell', name: '焙烧炉炉壳', unit: '件', category: 'part' },
+  { id: 'plant/roaster/shell', name: 'Roaster Shell', name_zh: '焙烧炉炉壳', unit: '件', category: 'part' },
 
   /** 炉衬。耐火浇注料，随壳体形状浇成。 */
-  { id: 'plant/roaster/lining', name: '焙烧炉炉衬', unit: '件', category: 'part' },
+  { id: 'plant/roaster/lining', name: 'Roaster Lining', name_zh: '焙烧炉炉衬', unit: '件', category: 'part' },
 
   /**
    * 布风板。气体从下面吹进床层，把固体吹成"沸腾"状态 —— 沸腾焙烧的全部秘密。
@@ -373,20 +373,20 @@ export const ROASTER_PARTS: readonly Item[] = [
    * 上千个小孔要均匀，孔大了漏料、孔小了阻力大。它工作在 900 °C，
    * 金属撑不住，只能用耐火浇注料整体浇出来。
    */
-  { id: 'plant/roaster/distributor', name: '焙烧炉布风板', unit: '件', category: 'part' },
+  { id: 'plant/roaster/distributor', name: 'Roaster Air Distribution Plate', name_zh: '焙烧炉布风板', unit: '件', category: 'part' },
 
   /** 旋风分离器。把 SO₂ 气体和夹带的固体分开，固体回床、气体去制酸。 */
-  { id: 'plant/roaster/cyclone', name: '焙烧炉旋风分离器', unit: '件', category: 'part' },
+  { id: 'plant/roaster/cyclone', name: 'Roaster Cyclone Separator', name_zh: '焙烧炉旋风分离器', unit: '件', category: 'part' },
 
   /** 鼓风机。整个床层的压力都靠它，叶轮要 45 钢车铣后做动平衡。 */
-  { id: 'plant/roaster/blower', name: '焙烧炉鼓风机', unit: '件', category: 'part' },
+  { id: 'plant/roaster/blower', name: 'Roaster Blower', name_zh: '焙烧炉鼓风机', unit: '件', category: 'part' },
 ];
 
 export const ROASTER_ROUTES: readonly Route[] = [
   {
     /** 炉壳。薄板卷筒焊成，开人孔与风口。 */
     id: 'make/roaster-shell',
-    name: '焙烧炉炉壳制造',
+    name: 'Roaster Shell Manufacturing', name_zh: '焙烧炉炉壳制造',
     produces: [{ item: 'plant/roaster/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -395,7 +395,7 @@ export const ROASTER_ROUTES: readonly Route[] = [
   {
     /** 炉衬。耐火浇注料浇在壳体内，随烘炉固化 —— 浇注与振捣是机器人干的。 */
     id: 'make/roaster-lining',
-    name: '焙烧炉炉衬制造',
+    name: 'Roaster Lining Manufacturing', name_zh: '焙烧炉炉衬制造',
     produces: [{ item: 'plant/roaster/lining', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(1) }] }],
     needs: [],
@@ -404,7 +404,7 @@ export const ROASTER_ROUTES: readonly Route[] = [
   {
     /** 布风板。耐火浇注料整体浇成，孔用芯棒留出 —— 要一次浇成，不能拼接。 */
     id: 'make/roaster-distributor',
-    name: '焙烧炉布风板制造',
+    name: 'Roaster Air Distribution Plate Manufacturing', name_zh: '焙烧炉布风板制造',
     produces: [{ item: 'plant/roaster/distributor', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(1) }] }],
     needs: ['plant/kiln'],
@@ -413,7 +413,7 @@ export const ROASTER_ROUTES: readonly Route[] = [
   {
     /** 旋风分离器。薄板卷制焊接 + 耐磨衬里，内壁要光滑。 */
     id: 'make/roaster-cyclone',
-    name: '焙烧炉旋风分离器制造',
+    name: 'Roaster Cyclone Separator Manufacturing', name_zh: '焙烧炉旋风分离器制造',
     produces: [{ item: 'plant/roaster/cyclone', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -422,7 +422,7 @@ export const ROASTER_ROUTES: readonly Route[] = [
   {
     /** 鼓风机。45 钢叶轮车铣后做动平衡，机壳薄板焊，轴用两只球轴承。 */
     id: 'make/roaster-blower',
-    name: '焙烧炉鼓风机制造',
+    name: 'Roaster Blower Manufacturing', name_zh: '焙烧炉鼓风机制造',
     produces: [{ item: 'plant/roaster/blower', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -446,7 +446,7 @@ export const ROASTER_ROUTES: readonly Route[] = [
  */
 export const BENEFICIARY: Item = {
   id: 'plant/ore-beneficiary',
-  name: '选矿厂',
+  name: 'Ore Beneficiation Plant', name_zh: '选矿厂',
   unit: '套',
   category: 'machine',
   holds: [
@@ -470,7 +470,7 @@ export const BENEFICIARY: Item = {
  */
 export const SUBMERGED_ARC: Item = {
   id: 'plant/submerged-arc-furnace',
-  name: '矿热炉',
+  name: 'Submerged Arc Furnace', name_zh: '矿热炉',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 1500, max: 1800 }],
@@ -489,7 +489,7 @@ export const SUBMERGED_ARC: Item = {
  */
 export const ELECTROREFINING: Item = {
   id: 'plant/electrorefining',
-  name: '电解精炼槽',
+  name: 'Electrorefining Cell', name_zh: '电解精炼槽',
   unit: '套',
   category: 'machine',
   holds: [{ param: 'temperature', min: 50, max: 70 }],
@@ -506,7 +506,7 @@ export const ELECTROREFINING: Item = {
  */
 export const ROASTER: Item = {
   id: 'plant/roaster',
-  name: '焙烧炉',
+  name: 'Roaster', name_zh: '焙烧炉',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 850, max: 1400 }],
@@ -525,7 +525,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/ore-beneficiary',
-    name: '选矿厂装配',
+    name: 'Ore Beneficiation Plant Assembly', name_zh: '选矿厂装配',
     produces: [{
       item: 'plant/ore-beneficiary',
       qty: q(1),
@@ -538,7 +538,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/electrorefining',
-    name: '电解精炼槽装配',
+    name: 'Electrorefining Cell Assembly', name_zh: '电解精炼槽装配',
     produces: [{
       item: 'plant/electrorefining',
       qty: q(1),
@@ -550,7 +550,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/roaster',
-    name: '焙烧炉装配',
+    name: 'Roaster Assembly', name_zh: '焙烧炉装配',
     produces: [{
       item: 'plant/roaster',
       qty: q(1),
@@ -562,7 +562,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/submerged-arc-furnace',
-    name: '矿热炉装配',
+    name: 'Submerged Arc Furnace Assembly', name_zh: '矿热炉装配',
     produces: [{
       item: 'plant/submerged-arc-furnace',
       qty: q(1),

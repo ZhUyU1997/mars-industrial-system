@@ -337,7 +337,7 @@ export const UNBLOCK_ACID_CONV_ROUTES: readonly Route[] = [
      *  ③ 壳 25 mm 铸铁 4 960 kg（对 ≤8 mm 钢板 3.5 倍），不能焊 → 四节 + 100 只 M24
      */
     id: 'make/acid-converter-cast',
-    name: '制酸转化器制造',
+    name: 'Acid Plant Converter Manufacturing', name_zh: '制酸转化器制造',
     produces: [{ item: 'plant/acid-plant/converter', qty: q(1) }],
 
     uses: [
@@ -613,7 +613,7 @@ export const UNBLOCK_ACID_CONV_ROUTES: readonly Route[] = [
      *     只能靠"每批多投 10%"来兜
      */
     id: 'make/acid-catalyst-iron',
-    name: '制酸钒催化剂制造',
+    name: 'Acid Plant Vanadium Catalyst Manufacturing', name_zh: '制酸钒催化剂制造',
     produces: [{ item: 'plant/acid-plant/catalyst', qty: q(1) }],
 
     uses: [

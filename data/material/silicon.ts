@@ -41,7 +41,7 @@ export const SILICON_ITEMS: readonly Item[] = [
    * 它是全表最不缺的东西：风化层 45% 是它。缺的从来不是硅石，是把它还原成
    * 硅的能量与温度。
    */
-  { id: 'mat/silica', name: '硅石', unit: 'kg', category: 'material',
+  { id: 'mat/silica', name: 'Silica', name_zh: '硅石', unit: 'kg', category: 'material',
     props: [{ param: 'sio2', kind: 'range', min: 85, max: 99, unit: '%' }] },
 
   /**
@@ -55,7 +55,7 @@ export const SILICON_ITEMS: readonly Item[] = [
    * 下游按 67 kg 配料就悄悄从 3% 硅变成 5% 硅，而质量账仍是 1000 kg，
    * 校验一条也报不出来。
    */
-  { id: 'mat/ferrosilicon-45', name: '硅铁', unit: 'kg', category: 'material' },
+  { id: 'mat/ferrosilicon-45', name: 'Ferrosilicon', name_zh: '硅铁', unit: 'kg', category: 'material' },
 
   /**
    * 硅钢，3% Si。电机与变压器的铁芯材料。
@@ -66,7 +66,7 @@ export const SILICON_ITEMS: readonly Item[] = [
    * 牌号同理写进 id。真实牌号还有取向/无取向与厚度两个轴，模型不建模尺寸，
    * 所以这里只钉住最要紧的那一个数：3% 硅。
    */
-  { id: 'mat/silicon-steel-3si', name: '硅钢', unit: 'kg', category: 'material' },
+  { id: 'mat/silicon-steel-3si', name: 'Silicon Steel', name_zh: '硅钢', unit: 'kg', category: 'material' },
 ];
 
 export const SILICON_ROUTES: readonly Route[] = [
@@ -78,7 +78,7 @@ export const SILICON_ROUTES: readonly Route[] = [
      * 这一步与耐火料同源 —— 同一堆尾矿，一个烧砖、一个做硅石。
      */
     id: 'make/silica',
-    name: '硅石富集',
+    name: 'Silica Enrichment', name_zh: '硅石富集',
     produces: [
       { item: 'mat/silica', qty: q(1000), gives: [{ param: 'sio2', kind: 'range', min: 90, max: 98, dir: 'atLeast' }] },
       { item: 'mat/tailings', qty: q(1470) },
@@ -99,7 +99,7 @@ export const SILICON_ROUTES: readonly Route[] = [
      * 废气来源（第一是 Bosch 制碳的循环气）。
      */
     id: 'make/ferrosilicon',
-    name: '硅铁制备',
+    name: 'Ferrosilicon Production', name_zh: '硅铁制备',
     produces: [
       { item: 'mat/ferrosilicon-45', qty: q(1000) },
       { item: 'mat/co', qty: q(898), gives: [{ param: 'purity', kind: 'range', min: 40, dir: 'atLeast' }] },
@@ -123,7 +123,7 @@ export const SILICON_ROUTES: readonly Route[] = [
      * 取向硅钢（变压器用）要更复杂的工艺，本层只做无取向的（电机用）。
      */
     id: 'make/silicon-steel',
-    name: '硅钢制备',
+    name: 'Silicon Steel Production', name_zh: '硅钢制备',
     produces: [{ item: 'mat/silicon-steel-3si', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/iron', qty: q(933) }] },

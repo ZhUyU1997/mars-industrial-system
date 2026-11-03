@@ -95,7 +95,7 @@ export const VNA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vna-3ghz/synthesizer',
-    name: 'VNA 合成源',
+    name: 'VNA Synthesizer', name_zh: 'VNA 合成源',
     unit: '件',
     category: 'part',
     props: [
@@ -111,7 +111,7 @@ export const VNA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vna-3ghz/s-parameter-test-set',
-    name: 'S 参数测试座',
+    name: 'S-Parameter Test Fixture', name_zh: 'S 参数测试座',
     unit: '件',
     category: 'part',
     props: [
@@ -128,7 +128,7 @@ export const VNA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vna-3ghz/receiver',
-    name: '4 通道接收机',
+    name: '4-Channel Receiver', name_zh: '4 通道接收机',
     unit: '件',
     category: 'part',
     props: [
@@ -145,7 +145,7 @@ export const VNA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vna-3ghz/cal-kit',
-    name: 'SOLT 校准件',
+    name: 'SOLT Calibration Kit', name_zh: 'SOLT 校准件',
     unit: '套',
     category: 'part',
     props: [
@@ -163,7 +163,7 @@ export const VNA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vna-3ghz',
-    name: 'VNA 射频引擎',
+    name: 'VNA RF Engine', name_zh: 'VNA 射频引擎',
     unit: '套',
     category: 'part',
     props: [
@@ -180,7 +180,7 @@ export const VNA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/vna-3ghz',
-    name: '3 GHz VNA 整机',
+    name: '3 GHz VNA System', name_zh: '3 GHz VNA 整机',
     unit: '台',
     category: 'machine',
     props: [
@@ -204,7 +204,7 @@ export const VNA_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/vna-synthesizer',
-    name: 'VNA 合成源制造',
+    name: 'VNA Synthesizer Manufacturing', name_zh: 'VNA 合成源制造',
     produces: [
       {
         item: 'plant/vna-3ghz/synthesizer',
@@ -241,7 +241,7 @@ export const VNA_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/vna-test-set',
-    name: 'S 参数测试座制造',
+    name: 'S-Parameter Test Fixture Manufacturing', name_zh: 'S 参数测试座制造',
     produces: [
       {
         item: 'plant/vna-3ghz/s-parameter-test-set',
@@ -281,7 +281,7 @@ export const VNA_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/vna-receiver',
-    name: '4 通道接收机制造',
+    name: '4-Channel Receiver Manufacturing', name_zh: '4 通道接收机制造',
     produces: [
       {
         item: 'plant/vna-3ghz/receiver',
@@ -319,7 +319,7 @@ export const VNA_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/vna-cal-kit',
-    name: 'SOLT 校准件制造',
+    name: 'SOLT Calibration Kit Manufacturing', name_zh: 'SOLT 校准件制造',
     produces: [
       {
         item: 'plant/vna-3ghz/cal-kit',
@@ -361,7 +361,7 @@ export const VNA_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/vna-3ghz-rf',
-    name: 'VNA 射频引擎制造',
+    name: 'VNA RF Engine Manufacturing', name_zh: 'VNA 射频引擎制造',
     produces: [
       {
         item: 'plant/vna-3ghz',
@@ -403,7 +403,7 @@ export const VNA_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/vna-3ghz',
-    name: '3 GHz VNA 整机装配',
+    name: '3 GHz VNA System Assembly', name_zh: '3 GHz VNA 整机装配',
     produces: [
       {
         item: 'std/vna-3ghz',

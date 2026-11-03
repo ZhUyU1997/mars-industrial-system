@@ -13,7 +13,7 @@ import { q } from '../../src/index.ts';
 export const FZ_PULLER_RF_POWER_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/float-zone-puller-rf-power-measure-record',
-    name: 'FZ 区熔炉记录',
+    name: 'FZ Zone Melting Furnace Record', name_zh: 'FZ 区熔炉记录',
     unit: '份',
     category: 'part',
     props: [
@@ -29,7 +29,7 @@ export const FZ_PULLER_RF_POWER_MEASURE_ROUTES: readonly Route[] = [
      * **FZ 区熔炉：水冷量热器读 RF 输出 18–22 kW。**
      */
     id: 'measure/float-zone-puller-rf-power',
-    name: 'FZ 区熔炉测量',
+    name: 'FZ Zone Melting Furnace Measurement', name_zh: 'FZ 区熔炉测量',
     produces: [{
       item: 'mat/float-zone-puller-rf-power-measure-record',
       qty: q(1),

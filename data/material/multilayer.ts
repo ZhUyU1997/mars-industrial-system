@@ -49,14 +49,14 @@ export const MULTILAYER_ITEMS: readonly Item[] = [
    *
    *   它在层里有两个用处：层间绝缘的原料，以及（回到前面）丝网版的封孔漆料。
    */
-  { id: 'mat/sodium-silicate', name: '硅酸钠', unit: 'kg', category: 'material' },
+  { id: 'mat/sodium-silicate', name: 'Sodium Silicate', name_zh: '硅酸钠', unit: 'kg', category: 'material' },
 
   /**
    * 旋涂玻璃液。硅酸钠稀释到可甩涂的黏度，加少量有机溶剂改善铺展。
    *
    * 见水就稀、见醇就浑 —— 配好要马上用，不能存。
    */
-  { id: 'mat/spin-on-glass', name: '旋涂玻璃液', unit: 'kg', category: 'material' },
+  { id: 'mat/spin-on-glass', name: 'Spin-on Glass', name_zh: '旋涂玻璃液', unit: 'kg', category: 'material' },
 
   /**
    * 四位二进制计数器芯片（约 40 门，两层铝，pn 结隔离）。
@@ -66,7 +66,7 @@ export const MULTILAYER_ITEMS: readonly Item[] = [
    *
    * 与 `std/logic-chip-general`（4 门）的分工：那个是"能算"，这个是"能数到 16"。
    */
-  { id: 'std/counter-chip-general', name: '四位二进制计数器芯片', unit: '片', category: 'part',
+  { id: 'std/counter-chip-general', name: '4-Bit Binary Counter Chip', name_zh: '四位二进制计数器芯片', unit: '片', category: 'part',
     // 5 µm 世代（与 std/photomask-general 的 3–5 µm 同一档），门数 30–80。
     props: [{ param: 'node', kind: 'range', min: 5000, max: 5000, unit: 'nm', dir: 'atMost' }, { param: 'gates', kind: 'range', min: 30, max: 80, unit: '门' }], },
 ];
@@ -81,7 +81,7 @@ export const MULTILAYER_ROUTES: readonly Route[] = [
      * 熔融态黏得像糖浆，出料要趁热 —— 水淬成小粒，再溶成液体用。
      */
     id: 'make/sodium-silicate',
-    name: '硅酸钠制备',
+    name: 'Sodium Silicate Production', name_zh: '硅酸钠制备',
     produces: [{ item: 'mat/sodium-silicate', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/silica', qty: q(700) }] },
@@ -101,7 +101,7 @@ export const MULTILAYER_ROUTES: readonly Route[] = [
      *   硅酸钠 300 + 水 700 → 涂液 1000
      */
     id: 'make/spin-on-glass',
-    name: '旋涂玻璃液制备',
+    name: 'Spin-on Glass Production', name_zh: '旋涂玻璃液制备',
     produces: [{ item: 'mat/spin-on-glass', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/sodium-silicate', qty: q(300) }] },
@@ -120,7 +120,7 @@ export const MULTILAYER_ROUTES: readonly Route[] = [
      * 三步都在同一条线上，用同一台曝光机、同一台扩散炉 —— 多的只是次数。
      */
     id: 'make/counter-chip',
-    name: '四位二进制计数器芯片制造',
+    name: '4-Bit Binary Counter Chip Manufacturing', name_zh: '四位二进制计数器芯片制造',
     produces: [{ item: 'std/counter-chip-general', qty: q(40), gives: [{ param: 'node', kind: 'range', min: 5000, max: 5000 }, { param: 'gates', kind: 'range', min: 30, max: 80 }] }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },

@@ -520,7 +520,7 @@ const EDGE_ALIGNER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/edge-aligner/objective',
-    name: '边缘对准曝光机对准物镜',
+    name: 'Edge Aligner Alignment Objective', name_zh: '边缘对准曝光机对准物镜',
     unit: '件',
     category: 'part',
     props: [
@@ -552,7 +552,7 @@ const EDGE_ALIGNER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/edge-aligner/illuminator',
-    name: '边缘对准曝光机斜照明',
+    name: 'Edge Aligner Oblique Illumination', name_zh: '边缘对准曝光机斜照明',
     unit: '件',
     category: 'part',
     props: [
@@ -586,7 +586,7 @@ const EDGE_ALIGNER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/edge-aligner/receiver',
-    name: '边缘对准曝光机双路接收',
+    name: 'Edge Aligner Dual-Channel Receiver', name_zh: '边缘对准曝光机双路接收',
     unit: '件',
     category: 'part',
     props: [
@@ -617,7 +617,7 @@ const EDGE_ALIGNER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/edge-aligner/controller',
-    name: '边缘对准曝光机相位解算器',
+    name: 'Edge Aligner Phase Solver', name_zh: '边缘对准曝光机相位解算器',
     unit: '件',
     category: 'part',
     props: [
@@ -642,7 +642,7 @@ const EDGE_ALIGNER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/edge-aligner/mount',
-    name: '边缘对准曝光机基座与热罩',
+    name: 'Edge Aligner Base and Heat Shield', name_zh: '边缘对准曝光机基座与热罩',
     unit: '件',
     category: 'part',
     props: [
@@ -676,7 +676,7 @@ const EDGE_ALIGNER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/edge-aligner/marked-mask',
-    name: '边缘对准曝光机带标记的掩模',
+    name: 'Edge Aligner Marked Mask', name_zh: '边缘对准曝光机带标记的掩模',
     unit: '块',
     category: 'part',
     props: [
@@ -712,7 +712,7 @@ const EDGE_ALIGNER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/edge-aligner/marked-wafer',
-    name: '边缘对准曝光机带标记的片',
+    name: 'Edge Aligner Marked Wafer', name_zh: '边缘对准曝光机带标记的片',
     unit: '片',
     category: 'part',
     props: [
@@ -765,7 +765,7 @@ const EDGE_ALIGNER_PARTS: readonly Item[] = [
  */
 const EDGE_ALIGNER: Item = {
   id: 'plant/edge-aligner',
-  name: '边缘对准曝光机',
+  name: 'Edge Aligner', name_zh: '边缘对准曝光机',
   unit: '台',
   category: 'machine',
   props: [
@@ -823,7 +823,7 @@ export const EDGE_ALIGNER_ROUTES: readonly Route[] = [
      *   这一步是本文件最像"许愿"的一步，所以把它写出来而不是藏起来。
      */
     id: 'make/edge-aligner-objective',
-    name: '边缘对准曝光机对准物镜制造',
+    name: 'Edge Aligner Alignment Objective Manufacturing', name_zh: '边缘对准曝光机对准物镜制造',
     rate: { hours: q(50) },
     produces: [
       {
@@ -897,7 +897,7 @@ export const EDGE_ALIGNER_ROUTES: readonly Route[] = [
      * （`plant/euv-coater` 只会镀金属）—— 8 % 够用，因为要的光只有 µW 级（问题一）。
      */
     id: 'make/edge-aligner-illuminator',
-    name: '边缘对准曝光机斜照明制造',
+    name: 'Edge Aligner Oblique Illumination Manufacturing', name_zh: '边缘对准曝光机斜照明制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -968,7 +968,7 @@ export const EDGE_ALIGNER_ROUTES: readonly Route[] = [
      *   第三次出现（`stabilized-laser.ts` 问题五、`make/laser-stage-receiver`）。
      */
     id: 'make/edge-aligner-receiver',
-    name: '边缘对准曝光机双路接收制造',
+    name: 'Edge Aligner Dual-Channel Receiver Manufacturing', name_zh: '边缘对准曝光机双路接收制造',
     rate: { hours: q(30) },
     produces: [
       {
@@ -1039,7 +1039,7 @@ export const EDGE_ALIGNER_ROUTES: readonly Route[] = [
      *   这两条判据合起来才是"对准与台系在同一个坐标系里"这件事的**实测**。
      */
     id: 'make/edge-aligner-controller',
-    name: '边缘对准曝光机相位解算器制造',
+    name: 'Edge Aligner Phase Solver Manufacturing', name_zh: '边缘对准曝光机相位解算器制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -1111,7 +1111,7 @@ export const EDGE_ALIGNER_ROUTES: readonly Route[] = [
      * 是同一条：**共模才是真的，加一层垫就不是共模了。**
      */
     id: 'make/edge-aligner-mount',
-    name: '边缘对准曝光机基座与热罩制造',
+    name: 'Edge Aligner Base and Heat Shield Manufacturing', name_zh: '边缘对准曝光机基座与热罩制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1176,7 +1176,7 @@ export const EDGE_ALIGNER_ROUTES: readonly Route[] = [
      * η±1 = (2/π)² sin²(2.57/2) = **0.40 × 0.93 = 37 %** —— 比片上的 40.5 % 略低，够。
      */
     id: 'make/edge-aligner-marked-mask',
-    name: '边缘对准曝光机带标记的掩模制造',
+    name: 'Edge Aligner Marked Mask Manufacturing', name_zh: '边缘对准曝光机带标记的掩模制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -1267,7 +1267,7 @@ export const EDGE_ALIGNER_ROUTES: readonly Route[] = [
      * **这一条是整份文件最脆的工艺假设：复开液里多 1 % 的氧化剂，套刻就多 8.5 nm。**
      */
     id: 'make/edge-aligner-marked-wafer',
-    name: '边缘对准曝光机带标记的片制造',
+    name: 'Edge Aligner Marked Wafer Manufacturing', name_zh: '边缘对准曝光机带标记的片制造',
     rate: { hours: q(6) },
     produces: [
       {
@@ -1347,7 +1347,7 @@ export const EDGE_ALIGNER_ROUTES: readonly Route[] = [
      * **一把尺不能自称准，得另有一把尺去量它**（`std/calibrated-scale-100` 的同型）。
      */
     id: 'make/edge-aligner-marked-wafer-certified',
-    name: '边缘对准曝光机带标记的片制造',
+    name: 'Edge Aligner Marked Wafer Manufacturing', name_zh: '边缘对准曝光机带标记的片制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -1452,7 +1452,7 @@ export const EDGE_ALIGNER_ROUTES: readonly Route[] = [
      * 43 nm 档缺的是每层 overlay 标记与 ≤4 nm 的独立量具。
      */
     id: 'make/euv-wafer-overlay-43',
-    name: '曝完 20 层的硅片制造',
+    name: '20-Layer Exposed Silicon Wafer Manufacturing', name_zh: '曝完 20 层的硅片制造',
     // 43 nm 那一档靠的不是基座台，是“边缘对准配置”（同一条机器条目的第二条
     // 产出路线，见 data/machine/euv-stepper-edge.ts）。这一句以前只写在注释里。
     rate: { hours: q(2, 3) },
@@ -1545,7 +1545,7 @@ export const EDGE_ALIGNER_ROUTES: readonly Route[] = [
      *      **两条之差就是"换目标"那一次决定的价格：54 → 43，1.25 倍。**
      */
     id: 'make/euv-wafer-overlay-edge54',
-    name: '曝完 20 层的硅片制造',
+    name: '20-Layer Exposed Silicon Wafer Manufacturing', name_zh: '曝完 20 层的硅片制造',
     rate: { hours: q(2, 3) },
     produces: [
       {
@@ -1629,7 +1629,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/edge-aligner',
-    name: '边缘对准曝光机装配',
+    name: 'Edge Aligner Assembly', name_zh: '边缘对准曝光机装配',
     produces: [{
       item: 'plant/edge-aligner',
       qty: q(1),

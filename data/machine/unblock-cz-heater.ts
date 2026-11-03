@@ -562,7 +562,7 @@ export const UNBLOCK_CZ_HEATER_ROUTES: readonly Route[] = [
      *  · 寿命 **1 年 / 6 000 h**，判据是**壁厚**（残氧 20 ppm → 0.004–0.01 mm/h）
      */
     id: 'make/cz-heater-carbon',
-    name: '直拉单晶炉石墨加热器与保温制造',
+    name: 'Czochralski Single-Crystal Furnace Graphite Heater and Insulation Manufacturing', name_zh: '直拉单晶炉石墨加热器与保温制造',
     produces: [{ item: 'plant/cz-puller/heater', qty: q(1) }],
     uses: [
       /**

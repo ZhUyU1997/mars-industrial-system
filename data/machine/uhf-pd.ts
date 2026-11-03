@@ -121,7 +121,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/germanium',
-    name: '光电二极管用锗',
+    name: 'Germanium for Photodiodes', name_zh: '光电二极管用锗',
     unit: 'kg',
     category: 'material',
     props: [
@@ -138,7 +138,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/sige-epi-wafer-general',
-    name: 'SiGe 外延片',
+    name: 'SiGe Epi Wafer', name_zh: 'SiGe 外延片',
     unit: '片',
     category: 'part',
     props: [
@@ -158,7 +158,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/sige-hbt-general',
-    name: 'SiGe 异质结双极晶体管',
+    name: 'SiGe Heterojunction Bipolar Transistor', name_zh: 'SiGe 异质结双极晶体管',
     unit: '件',
     category: 'part',
     props: [
@@ -180,7 +180,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/uhf-lna-general',
-    name: 'GHz 低噪前放',
+    name: 'GHz Low-Noise Preamplifier', name_zh: 'GHz 低噪前放',
     unit: '件',
     category: 'part',
     props: [
@@ -203,7 +203,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/schottky-diode-general',
-    name: 'Si 肖特基检波二极管',
+    name: 'Si Schottky Detector Diode', name_zh: 'Si 肖特基检波二极管',
     unit: '件',
     category: 'part',
     props: [
@@ -226,7 +226,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/uhf-digitizer',
-    name: 'UHF 数字仪',
+    name: 'UHF Digitizer', name_zh: 'UHF 数字仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -248,7 +248,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/uhf-digitizer/sample-hold',
-    name: 'UHF 采样保持器',
+    name: 'UHF Sample-and-Hold', name_zh: 'UHF 采样保持器',
     unit: '件',
     category: 'part',
     props: [
@@ -269,7 +269,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/uhf-digitizer/comparator',
-    name: 'UHF 高速比较器',
+    name: 'UHF High-Speed Comparator', name_zh: 'UHF 高速比较器',
     unit: '件',
     category: 'part',
     props: [
@@ -290,7 +290,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/uhf-digitizer/timebase',
-    name: 'UHF 时基',
+    name: 'UHF Timebase', name_zh: 'UHF 时基',
     unit: '件',
     category: 'part',
     props: [
@@ -308,7 +308,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/uhf-digitizer/case',
-    name: 'UHF 数字仪屏蔽盒',
+    name: 'UHF Digitizer Shield Box', name_zh: 'UHF 数字仪屏蔽盒',
     unit: '件',
     category: 'part',
     props: [
@@ -327,7 +327,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/uhf-pd-analyzer/antenna',
-    name: 'UHF 天线',
+    name: 'UHF Antenna', name_zh: 'UHF 天线',
     unit: '件',
     category: 'part',
     props: [
@@ -345,7 +345,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/bisphenol-a',
-    name: '双酚 A',
+    name: 'Bisphenol A', name_zh: '双酚 A',
     unit: 'kg',
     category: 'material',
     props: [
@@ -361,7 +361,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/epichlorohydrin',
-    name: '环氧氯丙烷',
+    name: 'Epichlorohydrin', name_zh: '环氧氯丙烷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -378,7 +378,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/epoxy-resin',
-    name: '双酚 A 环氧树脂',
+    name: 'Bisphenol A Epoxy Resin', name_zh: '双酚 A 环氧树脂',
     unit: 'kg',
     category: 'material',
     props: [
@@ -400,7 +400,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/epoxy-cast-insulation',
-    name: '真空浇注环氧绝缘料',
+    name: 'Vacuum-Cast Epoxy Insulation', name_zh: '真空浇注环氧绝缘料',
     unit: 'kg',
     category: 'material',
     props: [
@@ -419,7 +419,7 @@ export const UHF_PD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-free-source-100k/insulator',
-    name: '100 kV 真空浇注绝缘件',
+    name: '100 kV Vacuum-Cast Insulator', name_zh: '100 kV 真空浇注绝缘件',
     unit: '件',
     category: 'part',
     props: [
@@ -449,7 +449,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/germanium',
-    name: '光电二极管用锗制备',
+    name: 'Germanium for Photodiodes Production', name_zh: '光电二极管用锗制备',
     produces: [
       {
         item: 'mat/germanium',
@@ -519,7 +519,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/sige-epi-wafer',
-    name: 'SiGe 外延片制造',
+    name: 'SiGe Epi Wafer Manufacturing', name_zh: 'SiGe 外延片制造',
     produces: [
       {
         item: 'std/sige-epi-wafer-general',
@@ -562,7 +562,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/sige-hbt',
-    name: 'SiGe 异质结双极晶体管制造',
+    name: 'SiGe Heterojunction Bipolar Transistor Manufacturing', name_zh: 'SiGe 异质结双极晶体管制造',
     produces: [
       {
         item: 'std/sige-hbt-general',
@@ -650,7 +650,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/uhf-lna',
-    name: 'GHz 低噪前放制造',
+    name: 'GHz Low-Noise Preamplifier Manufacturing', name_zh: 'GHz 低噪前放制造',
     produces: [
       {
         item: 'std/uhf-lna-general',
@@ -706,7 +706,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/schottky-diode',
-    name: 'Si 肖特基检波二极管制造',
+    name: 'Si Schottky Detector Diode Manufacturing', name_zh: 'Si 肖特基检波二极管制造',
     produces: [
       {
         item: 'std/schottky-diode-general',
@@ -766,7 +766,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/uhf-sample-hold',
-    name: 'UHF 采样保持器制造',
+    name: 'UHF Sample-and-Hold Manufacturing', name_zh: 'UHF 采样保持器制造',
     produces: [
       {
         item: 'plant/uhf-digitizer/sample-hold',
@@ -803,7 +803,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/uhf-comparator',
-    name: 'UHF 高速比较器制造',
+    name: 'UHF High-Speed Comparator Manufacturing', name_zh: 'UHF 高速比较器制造',
     produces: [
       {
         item: 'plant/uhf-digitizer/comparator',
@@ -839,7 +839,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/uhf-timebase',
-    name: 'UHF 时基制造',
+    name: 'UHF Timebase Manufacturing', name_zh: 'UHF 时基制造',
     produces: [
       {
         item: 'plant/uhf-digitizer/timebase',
@@ -876,7 +876,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/uhf-case',
-    name: 'UHF 数字仪屏蔽盒制造',
+    name: 'UHF Digitizer Shield Box Manufacturing', name_zh: 'UHF 数字仪屏蔽盒制造',
     produces: [
       {
         item: 'plant/uhf-digitizer/case',
@@ -908,7 +908,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/uhf-antenna',
-    name: 'UHF 天线制造',
+    name: 'UHF Antenna Manufacturing', name_zh: 'UHF 天线制造',
     produces: [
       {
         item: 'plant/hv-test-bench/uhf-pd-analyzer/antenna',
@@ -943,7 +943,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/uhf-digitizer',
-    name: 'UHF 数字仪制造',
+    name: 'UHF Digitizer Manufacturing', name_zh: 'UHF 数字仪制造',
     produces: [
       {
         item: 'plant/uhf-digitizer',
@@ -989,7 +989,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/bisphenol-a',
-    name: '双酚 A 制备',
+    name: 'Bisphenol A Production', name_zh: '双酚 A 制备',
     produces: [
       {
         item: 'mat/bisphenol-a',
@@ -1031,7 +1031,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/epichlorohydrin',
-    name: '环氧氯丙烷制备',
+    name: 'Epichlorohydrin Production', name_zh: '环氧氯丙烷制备',
     produces: [
       {
         item: 'mat/epichlorohydrin',
@@ -1096,7 +1096,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/epoxy-resin',
-    name: '双酚 A 环氧树脂制备',
+    name: 'Bisphenol A Epoxy Resin Production', name_zh: '双酚 A 环氧树脂制备',
     produces: [
       {
         item: 'mat/epoxy-resin',
@@ -1135,7 +1135,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/epoxy-cast-insulation',
-    name: '真空浇注环氧料制备',
+    name: 'Vacuum-Cast Epoxy Insulation Production', name_zh: '真空浇注环氧料制备',
     produces: [
       {
         item: 'mat/epoxy-cast-insulation',
@@ -1197,7 +1197,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pd-free-insulator',
-    name: '100 kV 真空浇注绝缘件制造',
+    name: '100 kV Vacuum-Cast Insulator Manufacturing', name_zh: '100 kV 真空浇注绝缘件制造',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-free-source-100k/insulator',
@@ -1256,7 +1256,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pd-free-source-100k',
-    name: 'PD-free 100 kV 源制造',
+    name: 'PD-Free 100 kV Source Manufacturing', name_zh: 'PD-free 100 kV 源制造',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-free-source-100k',
@@ -1314,7 +1314,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/uhf-pd-analyzer',
-    name: 'UHF 快源制造',
+    name: 'UHF Fast Source Manufacturing', name_zh: 'UHF 快源制造',
     produces: [
       {
         item: 'plant/hv-test-bench/uhf-pd-analyzer',
@@ -1406,7 +1406,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
      * accuracy 3–5 %（设计值）只覆盖 10–1000 pC 的校准点。
      */
     id: 'make/pd-detector-iec60270',
-    name: 'IEC 60270 PD 检测仪制造',
+    name: 'IEC 60270 PD Detector Manufacturing', name_zh: 'IEC 60270 PD 检测仪制造',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-detector-iec60270',
@@ -1478,7 +1478,7 @@ export const UHF_PD_ROUTES: readonly Route[] = [
      * 真正的第二套独立溯源仍得进口；本条只把"第二台能本地造"写清。
      */
     id: 'make/pd-detector-iec60270-b',
-    name: 'IEC 60270 局放检测仪 B 制造',
+    name: 'IEC 60270 Partial Discharge Detector B Manufacturing', name_zh: 'IEC 60270 局放检测仪 B 制造',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-detector-iec60270-b',

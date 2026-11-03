@@ -60,7 +60,7 @@ export const OES_HCL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/oes-wavelength-hcl-record',
-    name: 'OES 波长记录',
+    name: 'OES Wavelength Record', name_zh: 'OES 波长记录',
     unit: '份',
     category: 'part',
     props: [
@@ -81,7 +81,7 @@ export const OES_HCL_ROUTES: readonly Route[] = [
      *   Ar 灯 1 只 → 记录 1 份
      */
     id: 'measure/oes-wavelength-hcl',
-    name: 'OES 波长测量',
+    name: 'OES Wavelength Measurement', name_zh: 'OES 波长测量',
     produces: [
       {
         item: 'mat/oes-wavelength-hcl-record',

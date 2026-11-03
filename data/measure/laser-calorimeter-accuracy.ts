@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const LASER_CALORIMETER_ACCURACY_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/laser-calorimeter-accuracy-measure-record',
-    name: '量热器准确度测量记录',
+    name: 'Calorimeter Accuracy Measurement Record', name_zh: '量热器准确度测量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -27,7 +27,7 @@ export const LASER_CALORIMETER_ACCURACY_MEASURE_ROUTES: readonly Route[] = [
      * **量热器 accuracy：电加热标准源 vs 量热器读数，5 点线性残差。**
      */
     id: 'measure/laser-calorimeter-accuracy',
-    name: '量热器准确度测量',
+    name: 'Calorimeter Accuracy Measurement', name_zh: '量热器准确度测量',
     produces: [{
       item: 'mat/laser-calorimeter-accuracy-measure-record',
       qty: q(1),

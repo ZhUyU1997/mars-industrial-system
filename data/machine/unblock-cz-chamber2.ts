@@ -337,7 +337,7 @@ export const UNBLOCK_CZ_CH2_ROUTES: readonly Route[] = [
      *    "漏"是快门没关到位还是砌体有缝，而这两种漏的修法完全相反。
      */
     id: 'make/cz-chamber-cast2',
-    name: '直拉单晶炉炉体制造',
+    name: 'Czochralski Single-Crystal Furnace Body Manufacturing', name_zh: '直拉单晶炉炉体制造',
     produces: [{ item: 'plant/cz-puller/chamber', qty: q(1) }],
     uses: [
       /**

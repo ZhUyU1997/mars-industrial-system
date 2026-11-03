@@ -23,7 +23,7 @@ export const WET_BENCH_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/wet-bench-environment-record',
-    name: '湿法台温压记录',
+    name: 'Wet Bench Temperature and Pressure Record', name_zh: '湿法台温压记录',
     unit: '份',
     category: 'part',
     props: [
@@ -47,7 +47,7 @@ export const WET_BENCH_MEASURE_ROUTES: readonly Route[] = [
      *   ③ 记表号与读数，拆表装回。
      */
     id: 'measure/wet-bench-environment',
-    name: '湿法台温压测量',
+    name: 'Wet Bench Temperature and Pressure Measurement', name_zh: '湿法台温压测量',
     produces: [
       {
         item: 'mat/wet-bench-environment-record',

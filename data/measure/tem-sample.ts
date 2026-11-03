@@ -67,7 +67,7 @@ export const TEM_SAMPLE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tem-lamella-prep-record',
-    name: 'TEM 薄片制备记录',
+    name: 'TEM Lamella Preparation Record', name_zh: 'TEM 薄片制备记录',
     unit: '份',
     category: 'part',
     props: [
@@ -98,7 +98,7 @@ export const TEM_SAMPLE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tem-damage-record',
-    name: '损伤层记录',
+    name: 'Damage Layer Record', name_zh: '损伤层记录',
     unit: '份',
     category: 'part',
     props: [
@@ -124,7 +124,7 @@ export const TEM_SAMPLE_ROUTES: readonly Route[] = [
      * Pt 层 0.1–0.5 µm 挡住帘状条纹与顶面非晶化。
      */
     id: 'measure/tem-sample-prep',
-    name: 'TEM 薄片制备',
+    name: 'TEM Lamella Preparation', name_zh: 'TEM 薄片制备',
     produces: [
       {
         item: 'mat/tem-lamella-prep-record',
@@ -194,7 +194,7 @@ export const TEM_SAMPLE_ROUTES: readonly Route[] = [
      * 0.2–0.5 nm 的 4–25 倍，所以必须在它以下的晶体区成像。
      */
     id: 'measure/tem-damage-layer',
-    name: '损伤层测量',
+    name: 'Damage Layer Measurement', name_zh: '损伤层测量',
     produces: [
       {
         item: 'mat/tem-damage-record',

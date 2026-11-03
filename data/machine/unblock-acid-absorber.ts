@@ -319,7 +319,7 @@ export const UNBLOCK_ACID_ABS_ROUTES: readonly Route[] = [
      *  ③ 排管 33 m² = 1 283 kg，是 316L 方案的 3.7 倍；无风机 → 只能用铁换电
      */
     id: 'make/acid-absorber-cast',
-    name: '制酸吸收塔制造',
+    name: 'Acid Plant Absorption Tower Manufacturing', name_zh: '制酸吸收塔制造',
     produces: [{ item: 'plant/acid-plant/absorber', qty: q(1) }],
 
     uses: [

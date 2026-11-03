@@ -149,7 +149,7 @@ const HOTPRESS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/hot-press/frame',
-    name: '热压机机架',
+    name: 'Hot Press Frame', name_zh: '热压机机架',
     unit: '件',
     category: 'part',
     props: [{ param: 'maxForce', kind: 'range', min: 1000, max: 8000, unit: 'kN', dir: 'atLeast' }],
@@ -164,7 +164,7 @@ const HOTPRESS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/hot-press/hydraulic',
-    name: '热压机水压机组',
+    name: 'Hot Press Hydraulic Unit', name_zh: '热压机水压机组',
     unit: '件',
     category: 'part',
     props: [
@@ -183,7 +183,7 @@ const HOTPRESS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/hot-press/platen',
-    name: '热压机加热板',
+    name: 'Hot Press Platen', name_zh: '热压机加热板',
     unit: '件',
     category: 'part',
     props: [{ param: 'tableArea', kind: 'range', min: 0.5, max: 1.5, unit: 'm²' }],
@@ -199,7 +199,7 @@ const HOTPRESS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/hot-press/chamber',
-    name: '热压机真空腔',
+    name: 'Hot Press Vacuum Chamber', name_zh: '热压机真空腔',
     unit: '件',
     category: 'part',
     props: [{ param: 'chamberVolume', kind: 'range', min: 0.5, max: 8, unit: 'm³' }],
@@ -218,7 +218,7 @@ const HOTPRESS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/hot-press/control',
-    name: '热压机温控与测压',
+    name: 'Hot Press Temperature Control and Pressure Measurement', name_zh: '热压机温控与测压',
     unit: '件',
     category: 'part',
     props: [{ param: 'controlBand', kind: 'range', min: 5, max: 20, unit: '°C', dir: 'atMost' }],
@@ -229,7 +229,7 @@ export const HOTPRESS_ROUTES: readonly Route[] = [
   {
     /** 机架。浇上下横梁 → 立柱车螺纹 → 结合面铣 → 预紧装配。 */
     id: 'make/hotpress-frame',
-    name: '热压机机架制造',
+    name: 'Hot Press Frame Manufacturing', name_zh: '热压机机架制造',
     produces: [
       {
         item: 'plant/hot-press/frame',
@@ -267,7 +267,7 @@ export const HOTPRESS_ROUTES: readonly Route[] = [
   {
     /** 水压机组。镗缸筒 → 珩磨内孔 → 车柱塞 → 装填料与泵阀 → 20 MPa 试压。 */
     id: 'make/hotpress-hydraulic',
-    name: '热压机水压机组制造',
+    name: 'Hot Press Hydraulic Unit Manufacturing', name_zh: '热压机水压机组制造',
     produces: [
       {
         item: 'plant/hot-press/hydraulic',
@@ -317,7 +317,7 @@ export const HOTPRESS_ROUTES: readonly Route[] = [
   {
     /** 加热板。铣槽 → 嵌石墨条与耐火绝缘 → 铺矿棉包壳 → 通电测电阻。 */
     id: 'make/hotpress-platen',
-    name: '热压机加热板制造',
+    name: 'Hot Press Platen Manufacturing', name_zh: '热压机加热板制造',
     produces: [
       {
         item: 'plant/hot-press/platen',
@@ -357,7 +357,7 @@ export const HOTPRESS_ROUTES: readonly Route[] = [
   {
     /** 真空腔。卷焊箱体 → 车门法兰与密封槽 → 装窗与填料 → 抽真空检漏。 */
     id: 'make/hotpress-chamber',
-    name: '热压机真空腔制造',
+    name: 'Hot Press Vacuum Chamber Manufacturing', name_zh: '热压机真空腔制造',
     produces: [
       {
         item: 'plant/hot-press/chamber',
@@ -397,7 +397,7 @@ export const HOTPRESS_ROUTES: readonly Route[] = [
   {
     /** 温控与测压。卷双金属片 → 车波登管与阀座 → 沸水定标 → 锡点定标。 */
     id: 'make/hotpress-control',
-    name: '热压机温控与测压制造',
+    name: 'Hot Press Temperature Control and Pressure Measurement Manufacturing', name_zh: '热压机温控与测压制造',
     produces: [
       {
         item: 'plant/hot-press/control',
@@ -452,7 +452,7 @@ export const HOTPRESS_ROUTES: readonly Route[] = [
  */
 export const HOT_PRESS: Item = {
   id: 'plant/hot-press',
-  name: '热压机',
+  name: 'Hot Press', name_zh: '热压机',
   unit: '台',
   category: 'machine',
   holds: [
@@ -490,7 +490,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/hot-press',
-    name: '热压机装配',
+    name: 'Hot Press Assembly', name_zh: '热压机装配',
     produces: [{
       item: 'plant/hot-press',
       qty: q(1),

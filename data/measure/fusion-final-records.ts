@@ -15,7 +15,7 @@ export const FUSION_FINAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-pf-current-record',
-    name: 'PF 电流记录',
+    name: 'PF Current Record', name_zh: 'PF 电流记录',
     unit: '份',
     category: 'part',
     props: [
@@ -29,7 +29,7 @@ export const FUSION_FINAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-cs-field-record',
-    name: 'CS 峰值场记录',
+    name: 'CS Peak Field Record', name_zh: 'CS 峰值场记录',
     unit: '份',
     category: 'part',
     props: [
@@ -43,7 +43,7 @@ export const FUSION_FINAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-cryostat-volume-record',
-    name: '恒温器体积记录',
+    name: 'Thermostat Volume Record', name_zh: '恒温器体积记录',
     unit: '份',
     category: 'part',
     props: [
@@ -57,7 +57,7 @@ export const FUSION_FINAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-thermal-temp-record',
-    name: '冷屏温度记录',
+    name: 'Cold Shield Temperature Record', name_zh: '冷屏温度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -71,7 +71,7 @@ export const FUSION_FINAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-thermal-emissivity-record',
-    name: '冷屏发射率记录',
+    name: 'Cold Shield Emissivity Record', name_zh: '冷屏发射率记录',
     unit: '份',
     category: 'part',
     props: [
@@ -85,7 +85,7 @@ export const FUSION_FINAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-cryoplant-cooling-record',
-    name: '低温厂冷量记录',
+    name: 'Cryoplant Cooling Capacity Record', name_zh: '低温厂冷量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -99,7 +99,7 @@ export const FUSION_FINAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-cryoplant-helium-record',
-    name: '低温厂氦库存记录',
+    name: 'Cryoplant Helium Inventory Record', name_zh: '低温厂氦库存记录',
     unit: '份',
     category: 'part',
     props: [
@@ -113,7 +113,7 @@ export const FUSION_FINAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-control-availability-record',
-    name: '控制可用率记录',
+    name: 'Control Availability Record', name_zh: '控制可用率记录',
     unit: '份',
     category: 'part',
     props: [
@@ -131,7 +131,7 @@ export const FUSION_FINAL_ROUTES: readonly Route[] = [
      * assumed：罗氏线圈未标定，不是实测。
      */
     id: 'measure/fusion-pf-current',
-    name: 'PF 电流测量',
+    name: 'PF Current Measurement', name_zh: 'PF 电流测量',
     produces: [
       {
         item: 'mat/fusion-pf-current-record',
@@ -154,7 +154,7 @@ export const FUSION_FINAL_ROUTES: readonly Route[] = [
      * public-spec：ITER 13 T 公开值，不是本模块实测。
      */
     id: 'measure/fusion-cs-field',
-    name: 'CS 峰值场测量',
+    name: 'CS Peak Field Measurement', name_zh: 'CS 峰值场测量',
     produces: [
       {
         item: 'mat/fusion-cs-field-record',
@@ -177,7 +177,7 @@ export const FUSION_FINAL_ROUTES: readonly Route[] = [
      * calculated：16,000 m³ 公开体积，不是实测。
      */
     id: 'measure/fusion-cryostat-volume',
-    name: '恒温器体积测量',
+    name: 'Thermostat Volume Measurement', name_zh: '恒温器体积测量',
     produces: [
       {
         item: 'mat/fusion-cryostat-volume-record',
@@ -200,7 +200,7 @@ export const FUSION_FINAL_ROUTES: readonly Route[] = [
      * assumed：恒温台未标定，不是实测。
      */
     id: 'measure/fusion-thermal-temp',
-    name: '冷屏温度测量',
+    name: 'Cold Shield Temperature Measurement', name_zh: '冷屏温度测量',
     produces: [
       {
         item: 'mat/fusion-thermal-temp-record',
@@ -223,7 +223,7 @@ export const FUSION_FINAL_ROUTES: readonly Route[] = [
      * assumed：80 K 黑体标准未建，不是实测。
      */
     id: 'measure/fusion-thermal-emissivity',
-    name: '冷屏发射率测量',
+    name: 'Cold Shield Emissivity Measurement', name_zh: '冷屏发射率测量',
     produces: [
       {
         item: 'mat/fusion-thermal-emissivity-record',
@@ -246,7 +246,7 @@ export const FUSION_FINAL_ROUTES: readonly Route[] = [
      * public-spec：ITER 4.5 K / 75 kW 公开值，不是本厂实测。
      */
     id: 'measure/fusion-cryoplant-cooling',
-    name: '低温厂冷量测量',
+    name: 'Cryoplant Cooling Capacity Measurement', name_zh: '低温厂冷量测量',
     produces: [
       {
         item: 'mat/fusion-cryoplant-cooling-record',
@@ -269,7 +269,7 @@ export const FUSION_FINAL_ROUTES: readonly Route[] = [
      * calculated：25 t 公开库存，不是实测。
      */
     id: 'measure/fusion-cryoplant-helium',
-    name: '低温厂氦库存测量',
+    name: 'Cryoplant Helium Inventory Measurement', name_zh: '低温厂氦库存测量',
     produces: [
       {
         item: 'mat/fusion-cryoplant-helium-record',
@@ -292,7 +292,7 @@ export const FUSION_FINAL_ROUTES: readonly Route[] = [
      * assumed：没有 10^6 次长期运行台，不是实测。
      */
     id: 'measure/fusion-control-availability',
-    name: '控制可用率测量',
+    name: 'Control Availability Measurement', name_zh: '控制可用率测量',
     produces: [
       {
         item: 'mat/fusion-control-availability-record',

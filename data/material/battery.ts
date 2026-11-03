@@ -68,7 +68,7 @@ export const BATTERY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nickel-hydroxide',
-    name: '氢氧化镍',
+    name: 'Nickel Hydroxide', name_zh: '氢氧化镍',
     unit: 'kg',
     category: 'material',
     props: [
@@ -87,7 +87,7 @@ export const BATTERY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/robot/battery-cell',
-    name: 'NiFe 单体电池',
+    name: 'NiFe Single Cell', name_zh: 'NiFe 单体电池',
     unit: '件',
     category: 'part',
     props: [
@@ -122,7 +122,7 @@ export const BATTERY_ROUTES: readonly Route[] = [
    */
   {
   id: 'make/nickel-hydroxide',
-  name: '氢氧化镍制备',
+  name: 'Nickel Hydroxide Production', name_zh: '氢氧化镍制备',
   produces: [
     {
       item: 'mat/nickel-hydroxide',
@@ -204,7 +204,7 @@ export const BATTERY_CELL_ROUTES: readonly Route[] = [
      *     化成损失与报废 5–10 %。
      */
     id: 'make/robot-battery-cell',
-    name: 'NiFe 单体电池制造',
+    name: 'NiFe Single Cell Manufacturing', name_zh: 'NiFe 单体电池制造',
     produces: [
       {
         item: 'plant/robot/battery-cell',
@@ -306,7 +306,7 @@ export const BATTERY_PACK_ROUTES: readonly Route[] = [
      * 先反极）。记在这里，不写成"有"。
      */
     id: 'make/robot-battery',
-    name: '机器人动力电池制造',
+    name: 'Robot Power Battery Manufacturing', name_zh: '机器人动力电池制造',
     produces: [
       {
         item: 'plant/robot/battery',

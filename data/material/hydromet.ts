@@ -45,7 +45,7 @@ import { q } from '../../src/index.ts';
  */
 export const DILUTE_ACID_ROUTE: Route = {
   id: 'make/sulfuric-acid-dilute',
-  name: '硫酸制备',
+  name: 'Sulfuric Acid Production', name_zh: '硫酸制备',
   // 一罐 1000 kg 的兑水与搅匀：2 h。
   rate: { hours: q(2) },
   produces: [
@@ -91,7 +91,7 @@ export const HYDROMET_ROUTES: readonly Route[] = [
      * 冷凝到 98% 靠把烟气冷到酸露点以下（铸铁管风冷），那一步没写进路线，记在缺口里。
      */
     id: 'make/sulfuric-acid-wet',
-    name: '硫酸制备',
+    name: 'Sulfuric Acid Production', name_zh: '硫酸制备',
     produces: [
       { item: 'mat/sulfuric-acid', qty: q(980), gives: [{ param: 'concentration', kind: 'range', min: 30, max: 50 }] },
     ],
@@ -118,7 +118,7 @@ export const HYDROMET_ROUTES: readonly Route[] = [
      * 合起来一吨土出 0.05 kg 铜 —— **20 吨土一公斤铜。**
      */
     id: 'make/copper-cement',
-    name: '胆铜法制备',
+    name: 'Cement Copper Production by Gall Copper Method', name_zh: '胆铜法制备',
     produces: [{ item: 'mat/copper', qty: q(1), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.9, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'mars/regolith', qty: q(10000) }] },

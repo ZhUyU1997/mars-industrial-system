@@ -31,7 +31,7 @@ export const C4F6_ETCH_ROUTES: readonly Route[] = [
      * 产出复用 `mat/rie-trench-wafer`，但给的是 C4F6 那一档的侧壁与 AR。
      */
     id: 'make/rie-oxide-trench-c4f6',
-    name: '介质沟槽刻蚀片制造',
+    name: 'Dielectric Trench Etched Wafer Manufacturing', name_zh: '介质沟槽刻蚀片制造',
     produces: [
       {
         item: 'mat/rie-trench-wafer',

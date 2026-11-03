@@ -541,7 +541,7 @@ export const UNBLOCK_ESR_BUS_ROUTES: readonly Route[] = [
      *     这两处要 10 只 M20、13.5 MPa，而且铁那一边会先烂。
      */
     id: 'make/esr-busbar-cast',
-    name: '电渣重熔炉短网与电源接口制造',
+    name: 'Electroslag Remelting Furnace Short Network and Power Interface Manufacturing', name_zh: '电渣重熔炉短网与电源接口制造',
     produces: [{ item: 'plant/esr-furnace/busbar', qty: q(1) }],
     uses: [
       /**

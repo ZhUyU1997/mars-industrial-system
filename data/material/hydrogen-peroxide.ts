@@ -156,7 +156,7 @@ export const HYDROGEN_PEROXIDE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/hydrogen-peroxide',
-    name: '过氧化氢水溶液',
+    name: 'Hydrogen Peroxide Aqueous Solution', name_zh: '过氧化氢水溶液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -191,7 +191,7 @@ export const HYDROGEN_PEROXIDE_ROUTES: readonly Route[] = [
      * 声明值，不是实测值。
      */
     id: 'make/hydrogen-peroxide',
-    name: '过氧化氢制备',
+    name: 'Hydrogen Peroxide Production', name_zh: '过氧化氢制备',
     produces: [
       {
         item: 'mat/hydrogen-peroxide',

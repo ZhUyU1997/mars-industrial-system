@@ -403,7 +403,7 @@ export const UNBLOCK_BOSCH_COND_ROUTES: readonly Route[] = [
      *    而且钝化液是碱性的，残在缝里会与 CO₂ 反应成白霜 —— 冲净、晾干、再装。
      */
     id: 'make/bosch-condenser-cast',
-    name: 'Bosch 除水器制造',
+    name: 'Bosch Water Trap Manufacturing', name_zh: 'Bosch 除水器制造',
     produces: [{ item: 'plant/bosch-reactor/condenser', qty: q(1) }],
     uses: [
       /**

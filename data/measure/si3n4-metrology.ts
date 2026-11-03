@@ -34,7 +34,7 @@ export const SI3N4_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/si3n4-vbd-record',
-    name: 'Si₃N₄ 的 I-V / 击穿记录',
+    name: 'Si₃N₄ I-V/Breakdown Record', name_zh: 'Si₃N₄ 的 I-V / 击穿记录',
     unit: '份',
     category: 'part',
     props: [
@@ -57,7 +57,7 @@ export const SI3N4_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/sims-na-rsf-record',
-    name: 'SIMS Na 相对灵敏度因子记录',
+    name: 'SIMS Na Relative Sensitivity Factor Record', name_zh: 'SIMS Na 相对灵敏度因子记录',
     unit: '份',
     category: 'part',
     props: [
@@ -79,7 +79,7 @@ export const SI3N4_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nh3-flow-cal-record',
-    name: 'NH₃ MFC 流量标定记录',
+    name: 'NH₃ MFC Flow Standardization Record', name_zh: 'NH₃ MFC 流量标定记录',
     unit: '份',
     category: 'part',
     props: [
@@ -103,7 +103,7 @@ export const SI3N4_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cleanroom-class-record',
-    name: '洁净室等级记录',
+    name: 'Cleanroom Class Record', name_zh: '洁净室等级记录',
     unit: '份',
     category: 'part',
     props: [
@@ -126,7 +126,7 @@ export const SI3N4_MEASURE_ROUTES: readonly Route[] = [
      * 1 mA 限流。
      */
     id: 'measure/si3n4-vbd',
-    name: 'Si₃N₄ 的 I-V / 击穿测量',
+    name: 'Si₃N₄ I-V/Breakdown Measurement', name_zh: 'Si₃N₄ 的 I-V / 击穿测量',
     produces: [
       {
         item: 'mat/si3n4-vbd-record',
@@ -177,7 +177,7 @@ export const SI3N4_MEASURE_ROUTES: readonly Route[] = [
      * 实际可用段 1e12–1e13；低端要 100 s 率表（2 ppm）或更厚的膜。
      */
     id: 'measure/sims-na-rsf',
-    name: 'SIMS Na 相对灵敏度因子测量',
+    name: 'SIMS Na Relative Sensitivity Factor Measurement', name_zh: 'SIMS Na 相对灵敏度因子测量',
     produces: [
       {
         item: 'mat/sims-na-rsf-record',
@@ -226,7 +226,7 @@ export const SI3N4_MEASURE_ROUTES: readonly Route[] = [
      * 两条都用温度/压力修正；N₂ 传递只作粗校（±3 %），NH₃ 的粘度/密度不同。
      */
     id: 'measure/nh3-flow-calibration',
-    name: 'NH₃ MFC 标定',
+    name: 'NH₃ MFC Standardization', name_zh: 'NH₃ MFC 标定',
     produces: [
       {
         item: 'mat/nh3-flow-cal-record',
@@ -279,7 +279,7 @@ export const SI3N4_MEASURE_ROUTES: readonly Route[] = [
      * （0.09 µm 是它的交付窗口）。所以这条路线不能发“ISO 5 空气证书”。
      */
     id: 'measure/cleanroom-class',
-    name: '洁净室等级测量',
+    name: 'Cleanroom Class Measurement', name_zh: '洁净室等级测量',
     produces: [
       {
         item: 'mat/cleanroom-class-record',

@@ -15,14 +15,14 @@ describe('设备：不被消耗，只被指名', () => {
   it('设备写进 uses 会被拦下 —— 它不会被用掉', () => {
     const wrong: Description = {
       items: [
-        { id: 'ore', name: 'ore' },
-        { id: 'tool', name: 'tool', category: 'machine' },
-        { id: 'metal', name: 'metal' },
+        { id: 'ore', name: 'ore', name_zh: 'ore' },
+        { id: 'tool', name: 'tool', name_zh: 'tool', category: 'machine' },
+        { id: 'metal', name: 'metal', name_zh: 'metal' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'metal', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }, { anyOf: [{ item: 'tool', qty: q(1) }] }],
           needs: [],
@@ -35,13 +35,13 @@ describe('设备：不被消耗，只被指名', () => {
   it('performedBy 指向非设备会被拒', () => {
     const wrong: Description = {
       items: [
-        { id: 'ore', name: 'ore', category: 'material' },
-        { id: 'metal', name: 'metal' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' },
+        { id: 'metal', name: 'metal', name_zh: 'metal' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'metal', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: [],
@@ -55,14 +55,14 @@ describe('设备：不被消耗，只被指名', () => {
   it('设备可以自己产出自己 —— 母机就是自指，必须允许', () => {
     const self: Description = {
       items: [
-        { id: 'ore', name: 'ore' },
-        { id: 'bed', name: 'bed', category: 'part' },
-        { id: 'lathe', name: 'lathe', category: 'machine' },
+        { id: 'ore', name: 'ore', name_zh: 'ore' },
+        { id: 'bed', name: 'bed', name_zh: 'bed', category: 'part' },
+        { id: 'lathe', name: 'lathe', name_zh: 'lathe', category: 'machine' },
       ],
       routes: [
         {
           id: 'make_lathe',
-          name: 'make_lathe',
+          name: 'make_lathe', name_zh: 'make_lathe',
           produces: [{ item: 'lathe', qty: q(3) }],
           uses: [{ anyOf: [{ item: 'bed', qty: q(3) }] }],
           needs: [],
@@ -77,12 +77,12 @@ describe('设备：不被消耗，只被指名', () => {
   it('没有任何 route 使用的设备只是提示，不是错误', () => {
     const idle: Description = {
       items: [
-        { id: 'ore', name: 'ore' },
-        { id: 'spare', name: 'spare', category: 'machine' },
-        { id: 'metal', name: 'metal' },
+        { id: 'ore', name: 'ore', name_zh: 'ore' },
+        { id: 'spare', name: 'spare', name_zh: 'spare', category: 'machine' },
+        { id: 'metal', name: 'metal', name_zh: 'metal' },
       ],
       routes: [
-        { id: 'r', name: 'r', produces: [{ item: 'metal', qty: q(1) }], uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }], needs: [] },
+        { id: 'r', name: 'r', name_zh: 'r', produces: [{ item: 'metal', qty: q(1) }], uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }], needs: [] },
       ],
     };
     const v = validate(idle);
@@ -93,11 +93,11 @@ describe('设备：不被消耗，只被指名', () => {
   it('材料维持条件仍然矛盾 —— 只有设备能提供条件', () => {
     const wrong: Description = {
       items: [
-        { id: 'a', name: 'a' },
-        { id: 'b', name: 'b' },
-        { id: 'odd', name: 'odd', category: 'material', holds: [{ param: 'temperature', min: 0, max: 10 }] },
+        { id: 'a', name: 'a', name_zh: 'a' },
+        { id: 'b', name: 'b', name_zh: 'b' },
+        { id: 'odd', name: 'odd', name_zh: 'odd', category: 'material', holds: [{ param: 'temperature', min: 0, max: 10 }] },
       ],
-      routes: [{ id: 'r', name: 'r', produces: [{ item: 'b', qty: q(1) }], uses: [{ anyOf: [{ item: 'a', qty: q(1) }] }], needs: [] }],
+      routes: [{ id: 'r', name: 'r', name_zh: 'r', produces: [{ item: 'b', qty: q(1) }], uses: [{ anyOf: [{ item: 'a', qty: q(1) }] }], needs: [] }],
     };
     assert.ok(validate(wrong).errors.some((e) => e.code === 'bad_category'));
   });
@@ -108,14 +108,14 @@ describe('单位：替代必须可通约', () => {
   it('同一子句内单位不一致会被拒 —— 800 kg 焦不能替代 800 kWh 电', () => {
     const bad: Description = {
       items: [
-        { id: 'coke', name: 'coke', unit: 'kg' },
-        { id: 'power', name: 'power', unit: 'kWh' },
-        { id: 'thing', name: 'thing', unit: 'kg' },
+        { id: 'coke', name: 'coke', name_zh: 'coke', unit: 'kg' },
+        { id: 'power', name: 'power', name_zh: 'power', unit: 'kWh' },
+        { id: 'thing', name: 'thing', name_zh: 'thing', unit: 'kg' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'thing', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'coke', qty: q(800) }, { item: 'power', qty: q(800) }] }],
           needs: [],
@@ -129,14 +129,14 @@ describe('单位：替代必须可通约', () => {
   it('不同子句用不同单位是合法的：800 kg 焦 + 800 kWh 电', () => {
     const ok: Description = {
       items: [
-        { id: 'coke', name: 'coke', unit: 'kg' },
-        { id: 'power', name: 'power', unit: 'kWh' },
-        { id: 'thing', name: 'thing', unit: 'kg' },
+        { id: 'coke', name: 'coke', name_zh: 'coke', unit: 'kg' },
+        { id: 'power', name: 'power', name_zh: 'power', unit: 'kWh' },
+        { id: 'thing', name: 'thing', name_zh: 'thing', unit: 'kg' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'thing', qty: q(800) }],
           uses: [{ anyOf: [{ item: 'coke', qty: q(800) }] }, { anyOf: [{ item: 'power', qty: q(800) }] }],
           needs: [],
@@ -152,11 +152,11 @@ describe('质量守恒：只算 kg 项', () => {
   it('进料与出料不平会报错，并给出两边总量', () => {
     const bad: Description = {
       items: [
-        { id: 'ore', name: 'ore', unit: 'kg', category: 'material' },
-        { id: 'metal', name: 'metal', unit: 'kg' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', unit: 'kg', category: 'material' },
+        { id: 'metal', name: 'metal', name_zh: 'metal', unit: 'kg' },
       ],
       routes: [
-        { id: 'r', name: 'r', produces: [{ item: 'metal', qty: q(100) }], uses: [{ anyOf: [{ item: 'ore', qty: q(300) }] }], needs: [] },
+        { id: 'r', name: 'r', name_zh: 'r', produces: [{ item: 'metal', qty: q(100) }], uses: [{ anyOf: [{ item: 'ore', qty: q(300) }] }], needs: [] },
       ],
     };
     const err = validate(bad).errors.find((e) => e.code === 'unbalanced');
@@ -168,14 +168,14 @@ describe('质量守恒：只算 kg 项', () => {
   it('不同量纲不相加：kWh 不参与质量守恒', () => {
     const ok: Description = {
       items: [
-        { id: 'ore', name: 'ore', unit: 'kg', category: 'material' },
-        { id: 'power', name: 'power', unit: 'kWh', category: 'carrier' },
-        { id: 'metal', name: 'metal', unit: 'kg' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', unit: 'kg', category: 'material' },
+        { id: 'power', name: 'power', name_zh: 'power', unit: 'kWh', category: 'carrier' },
+        { id: 'metal', name: 'metal', name_zh: 'metal', unit: 'kg' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'metal', qty: q(100) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(100) }] }, { anyOf: [{ item: 'power', qty: q(9999) }] }],
           needs: [],
@@ -188,13 +188,13 @@ describe('质量守恒：只算 kg 项', () => {
   it('确实不守恒时可以显式声明，但会被点名', () => {
     const declared: Description = {
       items: [
-        { id: 'ore', name: 'ore', unit: 'kg', category: 'material' },
-        { id: 'metal', name: 'metal', unit: 'kg' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', unit: 'kg', category: 'material' },
+        { id: 'metal', name: 'metal', name_zh: 'metal', unit: 'kg' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'metal', qty: q(100) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(300) }] }],
           needs: [],
@@ -213,14 +213,14 @@ describe('单处事实来源', () => {
   it('needs 里重复执行设备会被拒', () => {
     const dup: Description = {
       items: [
-        { id: 'ore', name: 'ore', unit: 'kg' },
-        { id: 'tool', name: 'tool', category: 'machine' },
-        { id: 'metal', name: 'metal', unit: 'kg' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', unit: 'kg' },
+        { id: 'tool', name: 'tool', name_zh: 'tool', category: 'machine' },
+        { id: 'metal', name: 'metal', name_zh: 'metal', unit: 'kg' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'metal', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: ['tool'],
@@ -236,15 +236,15 @@ describe('条件自举：能提供条件的设备，自己造得出来吗', () =
   it('唯一承担者要靠它自己提供的条件才能造 → 条件死锁', () => {
     const dead: Description = {
       items: [
-        { id: 'ore', name: 'ore', unit: 'kg' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', unit: 'kg' },
         /** 这台炉子提供高温，而造它也要高温 */
-        { id: 'furnace', name: 'furnace', category: 'machine', holds: [{ param: 'temperature', min: 1000, max: 1400 }] },
-        { id: 'metal', name: 'metal', unit: 'kg' },
+        { id: 'furnace', name: 'furnace', name_zh: 'furnace', category: 'machine', holds: [{ param: 'temperature', min: 1000, max: 1400 }] },
+        { id: 'metal', name: 'metal', name_zh: 'metal', unit: 'kg' },
       ],
       routes: [
         {
           id: 'smelt',
-          name: 'smelt',
+          name: 'smelt', name_zh: 'smelt',
           produces: [{ item: 'metal', qty: q(1000) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1000) }] }],
           needs: [],
@@ -253,7 +253,7 @@ describe('条件自举：能提供条件的设备，自己造得出来吗', () =
         },
         {
           id: 'make_furnace',
-          name: 'make_furnace',
+          name: 'make_furnace', name_zh: 'make_furnace',
           produces: [{ item: 'furnace', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(5) }] }],
           needs: [],
@@ -267,14 +267,14 @@ describe('条件自举：能提供条件的设备，自己造得出来吗', () =
   it('承担者从外部来就没有死锁', () => {
     const ok: Description = {
       items: [
-        { id: 'ore', name: 'ore', unit: 'kg' },
-        { id: 'furnace', name: 'furnace', category: 'machine', holds: [{ param: 'temperature', min: 1000, max: 1400 }] },
-        { id: 'metal', name: 'metal', unit: 'kg' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', unit: 'kg' },
+        { id: 'furnace', name: 'furnace', name_zh: 'furnace', category: 'machine', holds: [{ param: 'temperature', min: 1000, max: 1400 }] },
+        { id: 'metal', name: 'metal', name_zh: 'metal', unit: 'kg' },
       ],
       routes: [
         {
           id: 'smelt',
-          name: 'smelt',
+          name: 'smelt', name_zh: 'smelt',
           produces: [{ item: 'metal', qty: q(1000) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1000) }] }],
           needs: [],
@@ -290,16 +290,16 @@ describe('条件自举：能提供条件的设备，自己造得出来吗', () =
 describe('自产还是外购，不是声明，是事实', () => {
   const base = (anvilExtra: object, routes: Description['routes']): Description => ({
     items: [
-      { id: 'ore', name: 'ore', unit: 'kg' },
-      { id: 'anvil_part', name: 'anvil_part', unit: 'kg', category: 'part' },
-      { id: 'anvil', name: 'anvil', category: 'machine', ...anvilExtra },
-      { id: 'metal', name: 'metal', unit: 'kg' },
+      { id: 'ore', name: 'ore', name_zh: 'ore', unit: 'kg' },
+      { id: 'anvil_part', name: 'anvil_part', name_zh: 'anvil_part', unit: 'kg', category: 'part' },
+      { id: 'anvil', name: 'anvil', name_zh: 'anvil', category: 'machine', ...anvilExtra },
+      { id: 'metal', name: 'metal', name_zh: 'metal', unit: 'kg' },
     ],
     routes,
   });
   const smelt = {
     id: 'smelt',
-    name: 'smelt',
+    name: 'smelt', name_zh: 'smelt',
     produces: [{ item: 'metal', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
     needs: [],
@@ -317,8 +317,8 @@ describe('自产还是外购，不是声明，是事实', () => {
     const v = validate(
       base({ unit: 'kg' }, [
         smelt,
-        { id: 'make_anvil_part', name: 'make_anvil_part', produces: [{ item: 'anvil_part', qty: q(10) }], uses: [{ anyOf: [{ item: 'ore', qty: q(10) }] }], needs: [], performedBy: 'anvil' },
-        { id: 'make_anvil', name: 'make_anvil', produces: [{ item: 'anvil', qty: q(10) }], uses: [{ anyOf: [{ item: 'anvil_part', qty: q(10) }] }], needs: [], performedBy: 'anvil' },
+        { id: 'make_anvil_part', name: 'make_anvil_part', name_zh: 'make_anvil_part', produces: [{ item: 'anvil_part', qty: q(10) }], uses: [{ anyOf: [{ item: 'ore', qty: q(10) }] }], needs: [], performedBy: 'anvil' },
+        { id: 'make_anvil', name: 'make_anvil', name_zh: 'make_anvil', produces: [{ item: 'anvil', qty: q(10) }], uses: [{ anyOf: [{ item: 'anvil_part', qty: q(10) }] }], needs: [], performedBy: 'anvil' },
       ]),
     );
     assert.deepEqual(v.errors, []);
@@ -330,12 +330,12 @@ describe('批次语义：有消耗必须有产出', () => {
   it('只消耗不产出的路线没有批次规模，被拒', () => {
     const bad: Description = {
       items: [
-        { id: 'ore', name: 'ore', unit: 'kg' },
-        { id: 'metal', name: 'metal', unit: 'kg' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', unit: 'kg' },
+        { id: 'metal', name: 'metal', name_zh: 'metal', unit: 'kg' },
       ],
       routes: [
-        { id: 'consume_only', name: 'consume_only', produces: [], uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }], needs: [] },
-        { id: 'r', name: 'r', produces: [{ item: 'metal', qty: q(1) }], uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }], needs: [] },
+        { id: 'consume_only', name: 'consume_only', name_zh: 'consume_only', produces: [], uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }], needs: [] },
+        { id: 'r', name: 'r', name_zh: 'r', produces: [{ item: 'metal', qty: q(1) }], uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }], needs: [] },
       ],
     };
     assert.ok(validate(bad).errors.some((e) => e.code === 'no_product'));
@@ -346,14 +346,14 @@ describe('仍然装不进去的：单位只做字符串比较', () => {
   it('kg 与 t 视为不一致 —— 校验会误报', () => {
     const falsePositive: Description = {
       items: [
-        { id: 'ore', name: 'ore', unit: 'kg' },
-        { id: 'scrap', name: 'scrap', unit: 't' },
-        { id: 'metal', name: 'metal', unit: 'kg' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', unit: 'kg' },
+        { id: 'scrap', name: 'scrap', name_zh: 'scrap', unit: 't' },
+        { id: 'metal', name: 'metal', name_zh: 'metal', unit: 'kg' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'metal', qty: q(1) }],
           // kg 与 t 是可换算的，但校验只比字符串，于是判为不可通约
           uses: [{ anyOf: [{ item: 'ore', qty: q(1000) }, { item: 'scrap', qty: q(1) }] }],
@@ -372,8 +372,8 @@ describe('未定义：标了就不再算遗漏', () => {
   it('零件标了未定义 —— 不报错，但进 deferred 清单', () => {
     const d: Description = {
       items: [
-        { id: 'bracket', name: 'bracket', unit: '件', category: 'part', deferred: true },
-        { id: 'machine', name: 'machine', unit: '台', category: 'machine' },
+        { id: 'bracket', name: 'bracket', name_zh: 'bracket', unit: '件', category: 'part', deferred: true },
+        { id: 'machine', name: 'machine', name_zh: 'machine', unit: '台', category: 'machine' },
       ],
       routes: [],
     };
@@ -384,7 +384,7 @@ describe('未定义：标了就不再算遗漏', () => {
 
   it('消耗件也可以标', () => {
     const d: Description = {
-      items: [{ id: 'goo', name: 'goo', unit: 'kg', category: 'consumable', deferred: true }],
+      items: [{ id: 'goo', name: 'goo', name_zh: 'goo', unit: 'kg', category: 'consumable', deferred: true }],
       routes: [],
     };
     assert.equal(validate(d).errors.length, 0);
@@ -392,7 +392,7 @@ describe('未定义：标了就不再算遗漏', () => {
 
   it('材料标了未定义会被拒 —— 未定义只落在零件与消耗上', () => {
     const d: Description = {
-      items: [{ id: 'ore', name: 'ore', unit: 'kg', category: 'material', deferred: true }],
+      items: [{ id: 'ore', name: 'ore', name_zh: 'ore', unit: 'kg', category: 'material', deferred: true }],
       routes: [],
     };
     assert.ok(validate(d).errors.some((e) => e.code === 'bad_category'));
@@ -400,7 +400,7 @@ describe('未定义：标了就不再算遗漏', () => {
 
   it('机器标了未定义会被拒 —— 未定义的机器什么也证明不了', () => {
     const d: Description = {
-      items: [{ id: 'lathe', name: 'lathe', unit: '台', category: 'machine', deferred: true }],
+      items: [{ id: 'lathe', name: 'lathe', name_zh: 'lathe', unit: '台', category: 'machine', deferred: true }],
       routes: [],
     };
     assert.ok(validate(d).errors.some((e) => e.code === 'bad_category'));
@@ -408,7 +408,7 @@ describe('未定义：标了就不再算遗漏', () => {
 
   it('去掉标记就回到 unproduced —— 两种状态分开报', () => {
     const d: Description = {
-      items: [{ id: 'bracket', name: 'bracket', unit: '件', category: 'part' }],
+      items: [{ id: 'bracket', name: 'bracket', name_zh: 'bracket', unit: '件', category: 'part' }],
       routes: [],
     };
     const v = validate(d);
@@ -426,7 +426,7 @@ describe('共用件：标准件走规格号', () => {
       items: [
         {
           id: 'mill-a',
-          name: 'mill-a',
+          name: 'mill-a', name_zh: 'mill-a',
           unit: '台',
           category: 'machine',
           composedOf: [
@@ -436,7 +436,7 @@ describe('共用件：标准件走规格号', () => {
         },
         {
           id: 'mill-b',
-          name: 'mill-b',
+          name: 'mill-b', name_zh: 'mill-b',
           unit: '台',
           category: 'machine',
           composedOf: [
@@ -444,9 +444,9 @@ describe('共用件：标准件走规格号', () => {
             { item: 'std/bolt-m8x40', qty: q(4) },
           ],
         },
-        { id: 'mill-a/base', name: 'mill-a/base', unit: '件', category: 'part' },
-        { id: 'mill-b/base', name: 'mill-b/base', unit: '件', category: 'part' },
-        { id: 'std/bolt-m8x40', name: 'std/bolt-m8x40', unit: '件', category: 'part' },
+        { id: 'mill-a/base', name: 'mill-a/base', name_zh: 'mill-a/base', unit: '件', category: 'part' },
+        { id: 'mill-b/base', name: 'mill-b/base', name_zh: 'mill-b/base', unit: '件', category: 'part' },
+        { id: 'std/bolt-m8x40', name: 'std/bolt-m8x40', name_zh: 'std/bolt-m8x40', unit: '件', category: 'part' },
       ],
       routes: [],
     };
@@ -457,7 +457,7 @@ describe('共用件：标准件走规格号', () => {
 
   it('没有规格号的 std/ 会被拒 —— 规格号是它唯一的消歧方式', () => {
     const d: Description = {
-      items: [{ id: 'std/bearing', name: 'std/bearing', unit: '件', category: 'part' }],
+      items: [{ id: 'std/bearing', name: 'std/bearing', name_zh: 'std/bearing', unit: '件', category: 'part' }],
       routes: [],
     };
     assert.ok(validate(d).errors.some((e) => e.code === 'std_without_spec'));
@@ -468,12 +468,12 @@ describe('共用件：标准件走规格号', () => {
       items: [
         {
           id: 'mill-a',
-          name: 'mill-a',
+          name: 'mill-a', name_zh: 'mill-a',
           unit: '台',
           category: 'machine',
           composedOf: [{ item: 'base', qty: q(1) }],
         },
-        { id: 'base', name: 'base', unit: '件', category: 'part' },
+        { id: 'base', name: 'base', name_zh: 'base', unit: '件', category: 'part' },
       ],
       routes: [],
     };
@@ -485,12 +485,12 @@ describe('共用件：标准件走规格号', () => {
       items: [
         {
           id: 'mill-a',
-          name: 'mill-a',
+          name: 'mill-a', name_zh: 'mill-a',
           unit: '台',
           category: 'machine',
           composedOf: [{ item: 'std/tap-m6', qty: q(2) }],
         },
-        { id: 'std/tap-m6', name: 'std/tap-m6', unit: '件', category: 'part' },
+        { id: 'std/tap-m6', name: 'std/tap-m6', name_zh: 'std/tap-m6', unit: '件', category: 'part' },
       ],
       routes: [],
     };
@@ -505,7 +505,7 @@ describe('共用件：标准件走规格号', () => {
       items: [
         {
           id: 'mill-a',
-          name: 'mill-a',
+          name: 'mill-a', name_zh: 'mill-a',
           unit: '台',
           category: 'machine',
           composedOf: [
@@ -515,13 +515,13 @@ describe('共用件：标准件走规格号', () => {
         },
         {
           id: 'std/motor-7.5kw-4p',
-          name: 'std/motor-7.5kw-4p',
+          name: 'std/motor-7.5kw-4p', name_zh: 'std/motor-7.5kw-4p',
           unit: '台',
           category: 'part',
           composedOf: [{ item: 'std/motor-7.5kw-4p/stator', qty: q(1) }],
         },
-        { id: 'std/motor-7.5kw-4p/stator', name: 'std/motor-7.5kw-4p/stator', unit: '件', category: 'part' },
-        { id: 'mill-a/base', name: 'mill-a/base', unit: '件', category: 'part' },
+        { id: 'std/motor-7.5kw-4p/stator', name: 'std/motor-7.5kw-4p/stator', name_zh: 'std/motor-7.5kw-4p/stator', unit: '件', category: 'part' },
+        { id: 'mill-a/base', name: 'mill-a/base', name_zh: 'mill-a/base', unit: '件', category: 'part' },
       ],
       routes: [],
     };
@@ -538,14 +538,14 @@ describe('共用件：标准件走规格号', () => {
 describe('路线级判据只报一次', () => {
   const build = (n: number): Description => ({
     items: [
-      { id: 'mat/ore', name: 'mat/ore', unit: 'kg', category: 'material' },
-      { id: 'plant/blackbox', name: 'plant/blackbox', unit: '台', category: 'machine' },
-      ...Array.from({ length: n }, (_, i) => ({ id: 'part-' + i, name: '零件' + i, unit: '件', category: 'part' as const })),
+      { id: 'mat/ore', name: 'mat/ore', name_zh: 'mat/ore', unit: 'kg', category: 'material' },
+      { id: 'plant/blackbox', name: 'plant/blackbox', name_zh: 'plant/blackbox', unit: '台', category: 'machine' },
+      ...Array.from({ length: n }, (_, i) => ({ id: 'part-' + i, name: 'Part ' + i, name_zh: '零件' + i, unit: '件', category: 'part' as const })),
     ],
     routes: [
       {
         id: 'make/blackbox',
-        name: 'make/blackbox',
+        name: 'make/blackbox', name_zh: 'make/blackbox',
         produces: [{ item: 'plant/blackbox', qty: q(1) }],
         uses: [{ anyOf: [{ item: 'mat/ore', qty: q(1) }] }],
         needs: [],
@@ -567,7 +567,7 @@ describe('路线级判据只报一次', () => {
       const base = build(n);
       // 直接构造新对象，不要 push —— Description 的字段是 readonly
       const d: Description = {
-        items: [...base.items, { id: 'part-heavy', name: 'part-heavy', unit: 'kg', category: 'part' }],
+        items: [...base.items, { id: 'part-heavy', name: 'part-heavy', name_zh: 'part-heavy', unit: 'kg', category: 'part' }],
         routes: [
           {
             ...base.routes[0]!,
@@ -583,11 +583,11 @@ describe('路线级判据只报一次', () => {
 
 describe('工序：一条路线可以由几段接力', () => {
   const parts = () => [
-    { id: 'ingot', name: 'ingot', unit: 'kg', category: 'material' as const },
-    { id: 'part', name: 'part', unit: '件', category: 'part' as const },
-    { id: 'lathe', name: 'lathe', unit: '台', category: 'machine' as const },
-    { id: 'furnace', name: 'furnace', unit: '台', category: 'machine' as const, holds: [{ param: 'temperature', min: 800, max: 900 }] },
-    { id: 'grinder', name: 'grinder', unit: '台', category: 'machine' as const },
+    { id: 'ingot', name: 'ingot', name_zh: 'ingot', unit: 'kg', category: 'material' as const },
+    { id: 'part', name: 'part', name_zh: 'part', unit: '件', category: 'part' as const },
+    { id: 'lathe', name: 'lathe', name_zh: 'lathe', unit: '台', category: 'machine' as const },
+    { id: 'furnace', name: 'furnace', name_zh: 'furnace', unit: '台', category: 'machine' as const, holds: [{ param: 'temperature', min: 800, max: 900 }] },
+    { id: 'grinder', name: 'grinder', name_zh: 'grinder', unit: '台', category: 'machine' as const },
   ];
 
   it('三段各一台设备、各一组条件 —— 通过，路线级 performedBy 不必填', () => {
@@ -596,7 +596,7 @@ describe('工序：一条路线可以由几段接力', () => {
       routes: [
         {
           id: 'make/part',
-          name: 'make/part',
+          name: 'make/part', name_zh: 'make/part',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ingot', qty: q(1) }] }],
           needs: [],
@@ -617,7 +617,7 @@ describe('工序：一条路线可以由几段接力', () => {
       routes: [
         {
           id: 'make/part',
-          name: 'make/part',
+          name: 'make/part', name_zh: 'make/part',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ingot', qty: q(1) }] }],
           needs: [],
@@ -635,7 +635,7 @@ describe('工序：一条路线可以由几段接力', () => {
       routes: [
         {
           id: 'make/part',
-          name: 'make/part',
+          name: 'make/part', name_zh: 'make/part',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ingot', qty: q(1) }] }],
           needs: [],
@@ -652,7 +652,7 @@ describe('工序：一条路线可以由几段接力', () => {
       routes: [
         {
           id: 'make/part',
-          name: 'make/part',
+          name: 'make/part', name_zh: 'make/part',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ingot', qty: q(1) }] }],
           needs: [],
@@ -674,7 +674,7 @@ describe('工序：一条路线可以由几段接力', () => {
       routes: [
         {
           id: 'make/part',
-          name: 'make/part',
+          name: 'make/part', name_zh: 'make/part',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ingot', qty: q(1) }] }],
           needs: [],
@@ -691,7 +691,7 @@ describe('工序：一条路线可以由几段接力', () => {
       routes: [
         {
           id: 'make/part',
-          name: 'make/part',
+          name: 'make/part', name_zh: 'make/part',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ingot', qty: q(1) }] }],
           needs: [],
@@ -713,7 +713,7 @@ describe('工序：一条路线可以由几段接力', () => {
       routes: [
         {
           id: 'make/part',
-          name: 'make/part',
+          name: 'make/part', name_zh: 'make/part',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ingot', qty: q(1) }] }],
           needs: ['grinder'],
@@ -727,16 +727,16 @@ describe('工序：一条路线可以由几段接力', () => {
   it('条件自举能看见 steps —— 造设备的路线在工序里要求同一个条件', () => {
     const d: Description = {
       items: [
-        { id: 'ingot', name: 'ingot', unit: 'kg', category: 'material' },
-        { id: 'part', name: 'part', unit: '件', category: 'part' },
-        { id: 'kiln', name: 'kiln', unit: '台', category: 'machine', holds: [{ param: 'temperature', min: 800, max: 900 }] },
-        { id: 'oven', name: 'oven', unit: '台', category: 'machine', holds: [{ param: 'temperature', min: 850, max: 870 }] },
-        { id: 'lathe', name: 'lathe', unit: '台', category: 'machine' },
+        { id: 'ingot', name: 'ingot', name_zh: 'ingot', unit: 'kg', category: 'material' },
+        { id: 'part', name: 'part', name_zh: 'part', unit: '件', category: 'part' },
+        { id: 'kiln', name: 'kiln', name_zh: 'kiln', unit: '台', category: 'machine', holds: [{ param: 'temperature', min: 800, max: 900 }] },
+        { id: 'oven', name: 'oven', name_zh: 'oven', unit: '台', category: 'machine', holds: [{ param: 'temperature', min: 850, max: 870 }] },
+        { id: 'lathe', name: 'lathe', name_zh: 'lathe', unit: '台', category: 'machine' },
       ],
       routes: [
         {
           id: 'make/oven',
-          name: 'make/oven',
+          name: 'make/oven', name_zh: 'make/oven',
           produces: [{ item: 'oven', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ingot', qty: q(1) }] }],
           needs: [],
@@ -745,7 +745,7 @@ describe('工序：一条路线可以由几段接力', () => {
         },
         {
           id: 'make/part',
-          name: 'make/part',
+          name: 'make/part', name_zh: 'make/part',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ingot', qty: q(1) }] }],
           needs: [],
@@ -767,11 +767,11 @@ describe('环境条件：现场本来就在维持的东西', () => {
   it('要求在环境压力范围内的工序，不需要设备', () => {
     const d: Description = {
       ambient,
-      items: [{ id: 'ore', name: 'ore', category: 'material' }, { id: 'metal', name: 'metal' }],
+      items: [{ id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' }, { id: 'metal', name: 'metal', name_zh: 'metal' }],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'metal', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: [],
@@ -788,14 +788,14 @@ describe('环境条件：现场本来就在维持的东西', () => {
     const d: Description = {
       ambient,
       items: [
-        { id: 'ore', name: 'ore', category: 'material' },
-        { id: 'metal', name: 'metal' },
-        { id: 'shed', name: 'shed', category: 'machine' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' },
+        { id: 'metal', name: 'metal', name_zh: 'metal' },
+        { id: 'shed', name: 'shed', name_zh: 'shed', category: 'machine' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'metal', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: [],
@@ -811,14 +811,14 @@ describe('环境条件：现场本来就在维持的东西', () => {
     const d: Description = {
       ambient,
       items: [
-        { id: 'ore', name: 'ore', category: 'material' },
-        { id: 'metal', name: 'metal' },
-        { id: 'vessel', name: 'vessel', category: 'machine', holds: [{ param: 'pressure', min: 300, max: 1000 }] },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' },
+        { id: 'metal', name: 'metal', name_zh: 'metal' },
+        { id: 'vessel', name: 'vessel', name_zh: 'vessel', category: 'machine', holds: [{ param: 'pressure', min: 300, max: 1000 }] },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'metal', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: [],
@@ -833,7 +833,7 @@ describe('环境条件：现场本来就在维持的东西', () => {
   it('环境条件的区间本身要成立', () => {
     const bad: Description = {
       ambient: [{ param: 'pressure', min: 5, max: 1 }],
-      items: [{ id: 'ore', name: 'ore', category: 'material' }, { id: 'metal', name: 'metal' }],
+      items: [{ id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' }, { id: 'metal', name: 'metal', name_zh: 'metal' }],
       routes: [],
     };
     assert.ok(validate(bad).errors.some((e) => e.code === 'bad_condition'));
@@ -849,18 +849,18 @@ describe('属性窗口：把「同名」与「降级」变成可判定的区间'
       items: [
         {
           id: 'acid',
-          name: 'acid',
+          name: 'acid', name_zh: 'acid',
           category: 'material',
           unit: 'kg',
           props: [{ param: 'concentration', kind: 'range', min: 0, max: 100, unit: '%' }],
         },
-        { id: 'ore', name: 'ore', category: 'material', unit: 'kg' },
-        { id: 'salt', name: 'salt', category: 'material' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material', unit: 'kg' },
+        { id: 'salt', name: 'salt', name_zh: 'salt', category: 'material' },
       ],
       routes: [
         {
           id: 'make/acid-wet',
-          name: 'make/acid-wet',
+          name: 'make/acid-wet', name_zh: 'make/acid-wet',
           produces: [
             {
               item: 'acid',
@@ -876,7 +876,7 @@ describe('属性窗口：把「同名」与「降级」变成可判定的区间'
         },
         {
           id: 'make/uses-conc',
-          name: 'make/uses-conc',
+          name: 'make/uses-conc', name_zh: 'make/uses-conc',
           produces: [{ item: 'salt', qty: q(1) }],
           uses: [
             {
@@ -931,18 +931,18 @@ describe('属性窗口：把「同名」与「降级」变成可判定的区间'
       items: [
         {
           id: 'acid',
-          name: 'acid',
+          name: 'acid', name_zh: 'acid',
           category: 'material',
           unit: 'kg',
           props: [{ param: 'concentration', kind: 'range', min: 0, max: 100, unit: '%' }],
         },
-        { id: 'ore', name: 'ore', category: 'material', unit: 'kg' },
-        { id: 'plant/x', name: 'plant/x', category: 'machine' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material', unit: 'kg' },
+        { id: 'plant/x', name: 'plant/x', name_zh: 'plant/x', category: 'machine' },
       ],
       routes: [
         {
           id: 'make/bad',
-          name: 'make/bad',
+          name: 'make/bad', name_zh: 'make/bad',
           produces: [
             { item: 'acid', qty: q(1000), gives: [{ param: 'concentration', kind: 'range', min: 98, max: 98 }] },
           ],
@@ -971,14 +971,14 @@ describe('属性窗口：把「同名」与「降级」变成可判定的区间'
   it('不写 need/gives 时行为完全不变 —— 老数据零改动', () => {
     const plain = {
       items: [
-        { id: 'acid', name: 'acid', category: 'material', unit: 'kg' },
-        { id: 'ore', name: 'ore', category: 'material', unit: 'kg' },
-        { id: 'plant/x', name: 'plant/x', category: 'machine' },
+        { id: 'acid', name: 'acid', name_zh: 'acid', category: 'material', unit: 'kg' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material', unit: 'kg' },
+        { id: 'plant/x', name: 'plant/x', name_zh: 'plant/x', category: 'machine' },
       ],
       routes: [
         {
           id: 'make/a',
-          name: 'make/a',
+          name: 'make/a', name_zh: 'make/a',
           produces: [{ item: 'acid', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: [],
@@ -996,13 +996,13 @@ describe('必选：声明了就要交付，写了要求就要表态', () => {
   const items = [
     {
       id: 'acid',
-      name: 'acid',
+      name: 'acid', name_zh: 'acid',
       category: 'material',
       unit: 'kg',
       props: [{ param: 'concentration', kind: 'range', min: 0, max: 100, unit: '%' }],
     },
-    { id: 'ore', name: 'ore', category: 'material', unit: 'kg' },
-    { id: 'plant/x', name: 'plant/x', category: 'machine' },
+    { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material', unit: 'kg' },
+    { id: 'plant/x', name: 'plant/x', name_zh: 'plant/x', category: 'machine' },
   ];
 
   it('声明了属性而产出路线没给窗口 → prop_missing_gives（错误，不是提示）', () => {
@@ -1011,7 +1011,7 @@ describe('必选：声明了就要交付，写了要求就要表态', () => {
       routes: [
         {
           id: 'make/a',
-          name: 'make/a',
+          name: 'make/a', name_zh: 'make/a',
           produces: [{ item: 'acid', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: [],
@@ -1029,7 +1029,7 @@ describe('必选：声明了就要交付，写了要求就要表态', () => {
       routes: [
         {
           id: 'make/a',
-          name: 'make/a',
+          name: 'make/a', name_zh: 'make/a',
           produces: [
             { item: 'acid', qty: q(1), gives: [{ param: 'concentration', kind: 'range' }] },
           ],
@@ -1048,7 +1048,7 @@ describe('必选：声明了就要交付，写了要求就要表态', () => {
       routes: [
         {
           id: 'make/a',
-          name: 'make/a',
+          name: 'make/a', name_zh: 'make/a',
           produces: [
             {
               item: 'acid',
@@ -1062,7 +1062,7 @@ describe('必选：声明了就要交付，写了要求就要表态', () => {
         },
         {
           id: 'make/b',
-          name: 'make/b',
+          name: 'make/b', name_zh: 'make/b',
           produces: [{ item: 'ore', qty: q(1) }],
           uses: [
             {
@@ -1085,7 +1085,7 @@ describe('必选：声明了就要交付，写了要求就要表态', () => {
       items: [
         {
           id: 'acid',
-          name: 'acid',
+          name: 'acid', name_zh: 'acid',
           category: 'material',
           unit: 'kg',
           props: [
@@ -1093,7 +1093,7 @@ describe('必选：声明了就要交付，写了要求就要表态', () => {
             { param: 'concentration', kind: 'range', min: 0, max: 50, unit: '%' },
           ],
         },
-        { id: 'plant/x', name: 'plant/x', category: 'machine' },
+        { id: 'plant/x', name: 'plant/x', name_zh: 'plant/x', category: 'machine' },
       ],
       routes: [],
     } as unknown as Description;
@@ -1107,12 +1107,12 @@ describe('D1：子机器可以进组成件', () => {
       items: [
         {
           id: 'room',
-          name: 'room',
+          name: 'room', name_zh: 'room',
           unit: '台',
           category: 'machine',
           composedOf: [{ item: 'meter', qty: q(1) }],
         },
-        { id: 'meter', name: 'meter', unit: '台', category: 'machine' },
+        { id: 'meter', name: 'meter', name_zh: 'meter', unit: '台', category: 'machine' },
       ],
       routes: [],
     };
@@ -1125,14 +1125,14 @@ describe('D1：子机器可以进组成件', () => {
       items: [
         {
           id: 'room',
-          name: 'room',
+          name: 'room', name_zh: 'room',
           unit: '台',
           category: 'machine',
           composedOf: [
             { item: 'meter', qty: q(1), wear: { amount: q(1, 2), per: q(1000) } },
           ],
         },
-        { id: 'meter', name: 'meter', unit: '台', category: 'machine' },
+        { id: 'meter', name: 'meter', name_zh: 'meter', unit: '台', category: 'machine' },
       ],
       routes: [],
     };
@@ -1147,14 +1147,14 @@ describe('D1：子机器可以进组成件', () => {
       items: [
         {
           id: 'a',
-          name: 'a',
+          name: 'a', name_zh: 'a',
           unit: '台',
           category: 'machine',
           composedOf: [{ item: 'b', qty: q(1) }],
         },
         {
           id: 'b',
-          name: 'b',
+          name: 'b', name_zh: 'b',
           unit: '台',
           category: 'machine',
           composedOf: [{ item: 'a', qty: q(1) }],
@@ -1171,7 +1171,7 @@ describe('D1：子机器可以进组成件', () => {
       items: [
         {
           id: 'host',
-          name: 'host',
+          name: 'host', name_zh: 'host',
           unit: 'kg',
           category: 'machine',
           mass: q(100),
@@ -1180,8 +1180,8 @@ describe('D1：子机器可以进组成件', () => {
             { item: 'meter', qty: q(1) },
           ],
         },
-        { id: 'host/base', name: 'host/base', unit: '件', category: 'part', mass: q(60) },
-        { id: 'meter', name: 'meter', unit: '台', category: 'machine', mass: q(40) },
+        { id: 'host/base', name: 'host/base', name_zh: 'host/base', unit: '件', category: 'part', mass: q(60) },
+        { id: 'meter', name: 'meter', name_zh: 'meter', unit: '台', category: 'machine', mass: q(40) },
       ],
       routes: [],
     };
@@ -1197,7 +1197,7 @@ describe('D1：子机器可以进组成件', () => {
       items: [
         {
           id: 'host',
-          name: 'host',
+          name: 'host', name_zh: 'host',
           unit: 'kg',
           category: 'machine',
           mass: q(100),
@@ -1206,8 +1206,8 @@ describe('D1：子机器可以进组成件', () => {
             { item: 'meter', qty: q(1) },
           ],
         },
-        { id: 'host/base', name: 'host/base', unit: '件', category: 'part', mass: q(60) },
-        { id: 'meter', name: 'meter', unit: '台', category: 'machine' },
+        { id: 'host/base', name: 'host/base', name_zh: 'host/base', unit: '件', category: 'part', mass: q(60) },
+        { id: 'meter', name: 'meter', name_zh: 'meter', unit: '台', category: 'machine' },
       ],
       routes: [],
     };
@@ -1225,19 +1225,19 @@ describe('前提：string | Option', () => {
     items: [
       {
         id: 'oven',
-        name: 'oven',
+        name: 'oven', name_zh: 'oven',
         category: 'machine',
         holds: [{ param: 'temperature', min: 20, max: 30 }],
         props: [{ param: 'temperature', kind: 'range', min: 20, max: 30, unit: '°C' }],
       },
-      { id: 'robot', name: 'robot', category: 'machine' },
-      { id: 'ore', name: 'ore', category: 'material' },
-      { id: 'part', name: 'part', category: 'part' },
+      { id: 'robot', name: 'robot', name_zh: 'robot', category: 'machine' },
+      { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' },
+      { id: 'part', name: 'part', name_zh: 'part', category: 'part' },
     ],
     routes: [
       {
         id: 'r',
-        name: 'r',
+        name: 'r', name_zh: 'r',
         produces: [{ item: 'part', qty: q(1) }],
         uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
         needs,
@@ -1277,14 +1277,14 @@ describe('前提：string | Option', () => {
   it('前提与执行者重复 → redundant_need', () => {
     const d: Description = {
       items: [
-        { id: 'oven', name: 'oven', category: 'machine' },
-        { id: 'ore', name: 'ore', category: 'material' },
-        { id: 'part', name: 'part', category: 'part' },
+        { id: 'oven', name: 'oven', name_zh: 'oven', category: 'machine' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' },
+        { id: 'part', name: 'part', name_zh: 'part', category: 'part' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: [{ item: 'oven', qty: q(1) }],
@@ -1300,18 +1300,18 @@ describe('前提：string | Option', () => {
       items: [
         {
           id: 'oven',
-          name: 'oven',
+          name: 'oven', name_zh: 'oven',
           category: 'machine',
           holds: [{ param: 'temperature', min: 20, max: 30 }],
         },
-        { id: 'robot', name: 'robot', category: 'machine' },
-        { id: 'ore', name: 'ore', category: 'material' },
-        { id: 'part', name: 'part', category: 'part' },
+        { id: 'robot', name: 'robot', name_zh: 'robot', category: 'machine' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' },
+        { id: 'part', name: 'part', name_zh: 'part', category: 'part' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: [{ item: 'oven', qty: q(1) }],
@@ -1329,17 +1329,17 @@ describe('执行设备的规格窗口写在 needs 里', () => {
     items: [
       {
         id: 'lathe',
-        name: 'lathe',
+        name: 'lathe', name_zh: 'lathe',
         category: 'machine',
         props: [{ param: 'runout', kind: 'range', min: 0, max: 5, unit: 'µm' }],
       },
-      { id: 'ore', name: 'ore', category: 'material' },
-      { id: 'part', name: 'part', category: 'part' },
+      { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' },
+      { id: 'part', name: 'part', name_zh: 'part', category: 'part' },
     ],
     routes: [
       {
         id: 'r',
-        name: 'r',
+        name: 'r', name_zh: 'r',
         produces: [{ item: 'part', qty: q(1) }],
         uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
         performedBy: 'lathe',
@@ -1370,17 +1370,17 @@ describe('执行设备的规格窗口写在 needs 里', () => {
       items: [
         {
           id: 'lathe',
-          name: 'lathe',
+          name: 'lathe', name_zh: 'lathe',
           category: 'machine',
           props: [{ param: 'runout', kind: 'range', min: 0, max: 5, unit: 'µm' }],
         },
-        { id: 'ore', name: 'ore', category: 'material' },
-        { id: 'part', name: 'part', category: 'part' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' },
+        { id: 'part', name: 'part', name_zh: 'part', category: 'part' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'part', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           steps: [{ note_zh: '车', performedBy: 'lathe' }],
@@ -1402,7 +1402,7 @@ describe('执行设备的规格窗口写在 needs 里', () => {
 describe('接口：iface/ 单继承', () => {
   it('iface/ 条目必须写 interface: true', () => {
     const d: Description = {
-      items: [{ id: 'iface/x', name: 'iface/x' }],
+      items: [{ id: 'iface/x', name: 'iface/x', name_zh: 'iface/x' }],
       routes: [],
     };
     assert.ok(validate(d).errors.some((e) => e.code === 'interface_flag_mismatch'));
@@ -1410,7 +1410,7 @@ describe('接口：iface/ 单继承', () => {
 
   it('interface: true 的条目必须用 iface/ 前缀', () => {
     const d: Description = {
-      items: [{ id: 'std/x', name: 'std/x', interface: true }],
+      items: [{ id: 'std/x', name: 'std/x', name_zh: 'std/x', interface: true }],
       routes: [],
     };
     assert.ok(validate(d).errors.some((e) => e.code === 'interface_flag_mismatch'));
@@ -1418,7 +1418,7 @@ describe('接口：iface/ 单继承', () => {
 
   it('抽象接口不能有 category', () => {
     const d: Description = {
-      items: [{ id: 'iface/x', name: 'iface/x', interface: true, category: 'part' }],
+      items: [{ id: 'iface/x', name: 'iface/x', name_zh: 'iface/x', interface: true, category: 'part' }],
       routes: [],
     };
     assert.ok(validate(d).errors.some((e) => e.code === 'abstract_has_concrete_fields'));
@@ -1427,8 +1427,8 @@ describe('接口：iface/ 单继承', () => {
   it('extends 只能指向抽象接口', () => {
     const d: Description = {
       items: [
-        { id: 'b', name: 'b', category: 'part' },
-        { id: 'a', name: 'a', category: 'part', extends: 'b' },
+        { id: 'b', name: 'b', name_zh: 'b', category: 'part' },
+        { id: 'a', name: 'a', name_zh: 'a', category: 'part', extends: 'b' },
       ],
       routes: [],
     };
@@ -1438,12 +1438,12 @@ describe('接口：iface/ 单继承', () => {
   it('多个实现且没 select → ambiguous_abstract_part', () => {
     const d: Description = {
       items: [
-        { id: 'iface/x', name: 'iface/x', interface: true },
-        { id: 'a', name: 'a', category: 'part', extends: 'iface/x' },
-        { id: 'b', name: 'b', category: 'part', extends: 'iface/x' },
+        { id: 'iface/x', name: 'iface/x', name_zh: 'iface/x', interface: true },
+        { id: 'a', name: 'a', name_zh: 'a', category: 'part', extends: 'iface/x' },
+        { id: 'b', name: 'b', name_zh: 'b', category: 'part', extends: 'iface/x' },
         {
           id: 'host',
-          name: 'host',
+          name: 'host', name_zh: 'host',
           category: 'part',
           composedOf: [{ item: 'iface/x', qty: q(1) }],
         },
@@ -1456,11 +1456,11 @@ describe('接口：iface/ 单继承', () => {
   it('select 落到具体实现后按该实现算质量', () => {
     const d: Description = {
       items: [
-        { id: 'iface/x', name: 'iface/x', interface: true },
-        { id: 'a', name: 'a', category: 'part', mass: q(2), extends: 'iface/x' },
+        { id: 'iface/x', name: 'iface/x', name_zh: 'iface/x', interface: true },
+        { id: 'a', name: 'a', name_zh: 'a', category: 'part', mass: q(2), extends: 'iface/x' },
         {
           id: 'host',
-          name: 'host',
+          name: 'host', name_zh: 'host',
           category: 'part',
           mass: q(2),
           composedOf: [{ item: 'iface/x', qty: q(1), select: 'a' }],
@@ -1474,13 +1474,13 @@ describe('接口：iface/ 单继承', () => {
   it('路线不能产出抽象接口', () => {
     const d: Description = {
       items: [
-        { id: 'iface/x', name: 'iface/x', interface: true },
-        { id: 'ore', name: 'ore', category: 'material' },
+        { id: 'iface/x', name: 'iface/x', name_zh: 'iface/x', interface: true },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'iface/x', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: [],
@@ -1495,13 +1495,13 @@ describe('单体条目：材料直接加工，没有装配 BOM', () => {
   it('monolithic 机器可以不写 composedOf、不用零件输入', () => {
     const d: Description = {
       items: [
-        { id: 'm', name: 'm', category: 'machine', monolithic: true, unit: '台' },
-        { id: 'ore', name: 'ore', category: 'material' },
+        { id: 'm', name: 'm', name_zh: 'm', category: 'machine', monolithic: true, unit: '台' },
+        { id: 'ore', name: 'ore', name_zh: 'ore', category: 'material' },
       ],
       routes: [
         {
           id: 'r',
-          name: 'r',
+          name: 'r', name_zh: 'r',
           produces: [{ item: 'm', qty: q(1) }],
           uses: [{ anyOf: [{ item: 'ore', qty: q(1) }] }],
           needs: [],
@@ -1513,13 +1513,13 @@ describe('单体条目：材料直接加工，没有装配 BOM', () => {
 
   it('monolithic 零件允许，材料不允许', () => {
     const part: Description = {
-      items: [{ id: 'p', name: 'p', category: 'part', monolithic: true, unit: '件' }],
+      items: [{ id: 'p', name: 'p', name_zh: 'p', category: 'part', monolithic: true, unit: '件' }],
       routes: [],
     };
     assert.ok(!validate(part).errors.some((e) => e.code === 'bad_category'));
 
     const material: Description = {
-      items: [{ id: 'ore', name: 'ore', category: 'material', monolithic: true }],
+      items: [{ id: 'ore', name: 'ore', name_zh: 'ore', category: 'material', monolithic: true }],
       routes: [],
     };
     assert.ok(validate(material).errors.some((e) => e.code === 'bad_category'));
@@ -1528,8 +1528,8 @@ describe('单体条目：材料直接加工，没有装配 BOM', () => {
   it('monolithic 不能同时写 composedOf', () => {
     const d: Description = {
       items: [
-        { id: 'p', name: 'p', category: 'part', monolithic: true, composedOf: [{ item: 'q', qty: q(1) }] },
-        { id: 'q', name: 'q', category: 'part' },
+        { id: 'p', name: 'p', name_zh: 'p', category: 'part', monolithic: true, composedOf: [{ item: 'q', qty: q(1) }] },
+        { id: 'q', name: 'q', name_zh: 'q', category: 'part' },
       ],
       routes: [],
     };

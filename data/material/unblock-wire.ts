@@ -126,7 +126,7 @@ export const UNBLOCK_WIRE_ITEMS: readonly Item[] = [
    * 单列之后"拉丝通了、绕包没通"在报告里看得见。漆包线那条仍从 `mat/copper`
    * 直接起（拉丝与涂漆写在同一路线上）—— 本层不合并，理由见文件头。
    */
-  { id: 'mat/copper-wire', name: '裸铜线', unit: 'kg', category: 'material' },
+  { id: 'mat/copper-wire', name: 'Bare Copper Wire', name_zh: '裸铜线', unit: 'kg', category: 'material' },
 
   /**
    * 玻璃丝包铜线：φ1.0 铜线外面两层反向螺旋绕包的玻璃纤维纱，外径 φ1.4。
@@ -143,7 +143,7 @@ export const UNBLOCK_WIRE_ITEMS: readonly Item[] = [
    * 所以它与漆包线不是等价替代：**它是"漆包线还不通时"能走的那条。**
    * 名义 B 级（130 °C），不浸漆按 A 级（105 °C）用，见文件头降级 ③。
    */
-  { id: 'mat/glass-covered-wire', name: '玻璃丝包铜线', unit: 'kg', category: 'material',
+  { id: 'mat/glass-covered-wire', name: 'Glass-Covered Copper Wire', name_zh: '玻璃丝包铜线', unit: 'kg', category: 'material',
     props: [{ param: 'tempClass', kind: 'range', min: 130, max: 180, unit: '°C' }] },
 ];
 
@@ -184,7 +184,7 @@ export const UNBLOCK_WIRE_ROUTES: readonly Route[] = [
      * 前面全白干。量块不加工，是判据 —— 与 make/magnet-drum-copper 同一个写法。
      */
     id: 'make/copper-wire-drawn',
-    name: '拉丝',
+    name: 'Wire Drawing', name_zh: '拉丝',
     produces: [{ item: 'mat/copper-wire', qty: q(1000) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(1000) }] }],
     needs: ['plant/gauge-block'],
@@ -239,7 +239,7 @@ export const UNBLOCK_WIRE_ROUTES: readonly Route[] = [
      * 一部分，不是省了一道工序。见文件头降级 ③，那一条比这一条注释重要。
      */
     id: 'make/glass-covered-wire',
-    name: '包覆制备',
+    name: 'Covering Production', name_zh: '包覆制备',
     produces: [{ item: 'mat/glass-covered-wire', qty: q(1000), gives: [{ param: 'tempClass', kind: 'range', min: 130, max: 180 }] }],
     uses: [
       { anyOf: [{ item: 'mat/copper-wire', qty: q(860) }] },

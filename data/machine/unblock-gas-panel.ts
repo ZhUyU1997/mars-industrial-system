@@ -307,7 +307,7 @@ export const UNBLOCK_GASPANEL_ROUTES: readonly Route[] = [
      *    所以标定这一段借用湿法槽 —— 这一段也是这条路线唯一"面板之外"的工序
      */
     id: 'make/diffusion-gas-panel-orifice',
-    name: '扩散炉气路与源瓶制造',
+    name: 'Diffusion Furnace Gas Line and Source Bottle Manufacturing', name_zh: '扩散炉气路与源瓶制造',
     produces: [{ item: 'plant/diffusion-furnace/gas-panel', qty: q(1) }],
     uses: [
       /**

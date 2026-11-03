@@ -45,7 +45,7 @@ export const THERMAL_ITEMS: readonly Item[] = [
    * 刀片、磨料那些都是按"每小时耗多少"算的（没有时长，写不出来），
    * 而测温锥是**按炉耗**的 —— 一炉几支，`uses` 正好是按批次记的。
    */
-  { id: 'mat/pyrometric-cone', name: '测温锥', unit: 'kg', category: 'consumable',
+  { id: 'mat/pyrometric-cone', name: 'Pyrometric Cone', name_zh: '测温锥', unit: 'kg', category: 'consumable',
     // 锥号（010、012…）本质就是"到多少度软倒"。
     props: [{ param: 'softenTemp', kind: 'range', min: 600, max: 2000, unit: '°C' }] },
 
@@ -59,7 +59,7 @@ export const THERMAL_ITEMS: readonly Item[] = [
    * 纤维之间锁住空气，导热系数只有耐火砖的十分之一 —— 耐火砖挡火，
    * 矿棉挡热，两层一起才有"炉壳摸上去不烫"。
    */
-  { id: 'mat/mineral-wool', name: '矿棉', unit: 'kg', category: 'material' },
+  { id: 'mat/mineral-wool', name: 'Mineral Wool', name_zh: '矿棉', unit: 'kg', category: 'material' },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -68,19 +68,19 @@ export const THERMAL_ITEMS: readonly Item[] = [
 
 export const KILN_PARTS: readonly Item[] = [
   /** 窑壳。薄板与型钢焊成，外壁有保温，承窑衬与窑车的重量。 */
-  { id: 'plant/kiln/shell', name: '窑炉窑壳', unit: '件', category: 'part' },
+  { id: 'plant/kiln/shell', name: 'Kiln Shell', name_zh: '窑炉窑壳', unit: '件', category: 'part' },
 
   /** 窑衬。耐火砖砌在壳内，直接对着 1700 °C 的火。它是窑的寿命本身。 */
-  { id: 'plant/kiln/lining', name: '窑炉窑衬', unit: '件', category: 'part' },
+  { id: 'plant/kiln/lining', name: 'Kiln Lining', name_zh: '窑炉窑衬', unit: '件', category: 'part' },
 
   /** 燃烧器。氢氧在耐火喷口里混合燃烧，火焰温度 2800 °C，靠过量空气压到 1700。 */
-  { id: 'plant/kiln/burner', name: '窑炉燃烧器', unit: '件', category: 'part' },
+  { id: 'plant/kiln/burner', name: 'Kiln Burner', name_zh: '窑炉燃烧器', unit: '件', category: 'part' },
 
   /** 窑车。耐火台面驮着工件走，钢车架在窑外受热少 —— 推车的轨道贯穿全窑。 */
-  { id: 'plant/kiln/trolley', name: '窑炉窑车', unit: '件', category: 'part' },
+  { id: 'plant/kiln/trolley', name: 'Kiln Trolley', name_zh: '窑炉窑车', unit: '件', category: 'part' },
 
   /** 换热器。用烟气余热预热助燃空气，省一半氢。 */
-  { id: 'plant/kiln/recuperator', name: '窑炉换热器', unit: '件', category: 'part' },
+  { id: 'plant/kiln/recuperator', name: 'Kiln Heat Exchanger', name_zh: '窑炉换热器', unit: '件', category: 'part' },
 ];
 
 export const KILN_ROUTES: readonly Route[] = [
@@ -98,7 +98,7 @@ export const KILN_ROUTES: readonly Route[] = [
      * 它们比长石更猛，软化点更低，要多加硅石压回来。
      */
     id: 'make/pyrometric-cone',
-    name: '测温锥制造',
+    name: 'Pyrometric Cone Manufacturing', name_zh: '测温锥制造',
     produces: [{ item: 'mat/pyrometric-cone', qty: q(10), gives: [{ param: 'softenTemp', kind: 'range', min: 600, max: 2000 }] }],
     uses: [
       { anyOf: [{ item: 'mat/silica', qty: q(3) }] },
@@ -119,7 +119,7 @@ export const KILN_ROUTES: readonly Route[] = [
      * 拿出来 —— 它是材料账里唯一一个"成分正好合适"的废料。
      */
     id: 'make/mineral-wool',
-    name: '矿棉制备',
+    name: 'Mineral Wool Production', name_zh: '矿棉制备',
     produces: [
       { item: 'mat/mineral-wool', qty: q(1000) },
       { item: 'mat/slag', qty: q(111) },
@@ -137,7 +137,7 @@ export const KILN_ROUTES: readonly Route[] = [
      * 人碰不得、热也全跑了。
      */
     id: 'make/kiln-shell',
-    name: '窑炉窑壳制造',
+    name: 'Kiln Shell Manufacturing', name_zh: '窑炉窑壳制造',
     produces: [{ item: 'plant/kiln/shell', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -149,7 +149,7 @@ export const KILN_ROUTES: readonly Route[] = [
   {
     /** 窑衬。耐火砖砌筑 —— 砌是装配不是机械加工，执行者是机器人。 */
     id: 'make/kiln-lining',
-    name: '窑炉窑衬制造',
+    name: 'Kiln Lining Manufacturing', name_zh: '窑炉窑衬制造',
     produces: [{ item: 'plant/kiln/lining', qty: q(1) }],
     uses: [
       { anyOf: [
@@ -165,7 +165,7 @@ export const KILN_ROUTES: readonly Route[] = [
   {
     /** 燃烧器。铜喷嘴车成 + 不锈钢混合室，与水冷法兰配作。 */
     id: 'make/kiln-burner',
-    name: '窑炉燃烧器制造',
+    name: 'Kiln Burner Manufacturing', name_zh: '窑炉燃烧器制造',
     produces: [{ item: 'plant/kiln/burner', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -177,7 +177,7 @@ export const KILN_ROUTES: readonly Route[] = [
   {
     /** 窑车。45 钢车架焊成，耐火台面浇注，轮对车磨后装轴承。 */
     id: 'make/kiln-trolley',
-    name: '窑炉窑车制造',
+    name: 'Kiln Trolley Manufacturing', name_zh: '窑炉窑车制造',
     produces: [{ item: 'plant/kiln/trolley', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -189,7 +189,7 @@ export const KILN_ROUTES: readonly Route[] = [
   {
     /** 换热器。不锈钢管束 + 薄板壳，烟气走管内、空气走管外。 */
     id: 'make/kiln-recuperator',
-    name: '窑炉换热器制造',
+    name: 'Kiln Heat Exchanger Manufacturing', name_zh: '窑炉换热器制造',
     produces: [{ item: 'plant/kiln/recuperator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -208,7 +208,7 @@ export const KILN_ROUTES: readonly Route[] = [
  */
 export const KILN: Item = {
   id: 'plant/kiln',
-  name: '窑炉',
+  name: 'Kiln', name_zh: '窑炉',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 1200, max: 1750 }],
@@ -231,10 +231,10 @@ export const SUBLIMATOR_PARTS: readonly Item[] = [
    * 为什么不直接插电热棒：井里有冰有尘，电热丝会烧断；而且电热元件要
    * 镍铬，那是另一条链。燃烧器只要铜与不锈钢。
    */
-  { id: 'plant/sublimator/hot-gas', name: '升华器热风发生器', unit: '件', category: 'part' },
+  { id: 'plant/sublimator/hot-gas', name: 'Sublimator Hot Gas Generator', name_zh: '升华器热风发生器', unit: '件', category: 'part' },
 
   /** 保温罩。扣在井口上，薄板外壳包一层耐火纤维，别让热跑掉。 */
-  { id: 'plant/sublimator/hood', name: '升华器保温罩', unit: '件', category: 'part' },
+  { id: 'plant/sublimator/hood', name: 'Sublimator Insulation Hood', name_zh: '升华器保温罩', unit: '件', category: 'part' },
 
   /**
    * 冷阱。水蒸气在 200 K 左右的冷面上直接凝华成霜，再刮下来化开。
@@ -242,24 +242,24 @@ export const SUBLIMATOR_PARTS: readonly Item[] = [
    * 火星夜间的低温就够用 —— 白天靠辐射散热，夜里靠环境。所以这台设备
    * 最费的不是热量，是"什么时候开工"。
    */
-  { id: 'plant/sublimator/cold-trap', name: '升华器冷阱', unit: '件', category: 'part' },
+  { id: 'plant/sublimator/cold-trap', name: 'Sublimator Cold Trap', name_zh: '升华器冷阱', unit: '件', category: 'part' },
 
   /**
    * 风机。把热风送进井里、把湿风抽到冷阱上 —— 一个闭式循环。
    *
    * 45 钢叶轮车铣后做动平衡；风温不高，密封用 PTFE 就够。
    */
-  { id: 'plant/sublimator/blower', name: '升华器风机', unit: '件', category: 'part' },
+  { id: 'plant/sublimator/blower', name: 'Sublimator Blower', name_zh: '升华器风机', unit: '件', category: 'part' },
 
   /** 管路与阀。不锈钢管焊成，阀门要能在结霜的环境里开关。 */
-  { id: 'plant/sublimator/piping', name: '升华器管路与阀', unit: '件', category: 'part' },
+  { id: 'plant/sublimator/piping', name: 'Sublimator Piping and Valves', name_zh: '升华器管路与阀', unit: '件', category: 'part' },
 ];
 
 export const SUBLIMATOR_ROUTES: readonly Route[] = [
   {
     /** 热风发生器。不锈钢燃烧室 + 铜喷嘴，焊接后试压。 */
     id: 'make/sublimator-hot-gas',
-    name: '升华器热风发生器制造',
+    name: 'Sublimator Hot Gas Generator Manufacturing', name_zh: '升华器热风发生器制造',
     produces: [{ item: 'plant/sublimator/hot-gas', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -271,7 +271,7 @@ export const SUBLIMATOR_ROUTES: readonly Route[] = [
   {
     /** 保温罩。薄板折弯焊成，内衬矿棉 —— 罩子要挡热，不挡火（原来写耐火料是错的）。 */
     id: 'make/sublimator-hood',
-    name: '升华器保温罩制造',
+    name: 'Sublimator Insulation Hood Manufacturing', name_zh: '升华器保温罩制造',
     produces: [{ item: 'plant/sublimator/hood', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -283,7 +283,7 @@ export const SUBLIMATOR_ROUTES: readonly Route[] = [
   {
     /** 冷阱。不锈钢折板焊成，配刮霜刀与化霜盘管。 */
     id: 'make/sublimator-cold-trap',
-    name: '升华器冷阱制造',
+    name: 'Sublimator Cold Trap Manufacturing', name_zh: '升华器冷阱制造',
     produces: [{ item: 'plant/sublimator/cold-trap', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -292,7 +292,7 @@ export const SUBLIMATOR_ROUTES: readonly Route[] = [
   {
     /** 风机。45 钢叶轮车铣 + 动平衡，机壳薄板焊，轴用两只球轴承。 */
     id: 'make/sublimator-blower',
-    name: '升华器风机制造',
+    name: 'Sublimator Blower Manufacturing', name_zh: '升华器风机制造',
     produces: [{ item: 'plant/sublimator/blower', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -305,7 +305,7 @@ export const SUBLIMATOR_ROUTES: readonly Route[] = [
   {
     /** 管路与阀。不锈钢管焊 + 法兰车 + PTFE 密封。 */
     id: 'make/sublimator-piping',
-    name: '升华器管路与阀制造',
+    name: 'Sublimator Piping and Valves Manufacturing', name_zh: '升华器管路与阀制造',
     produces: [{ item: 'plant/sublimator/piping', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -325,7 +325,7 @@ export const SUBLIMATOR_ROUTES: readonly Route[] = [
  */
 export const SUBLIMATOR: Item = {
   id: 'plant/sublimator',
-  name: '升华器',
+  name: 'Sublimator', name_zh: '升华器',
   unit: '套',
   category: 'machine',
   holds: [{ param: 'temperature', min: 273, max: 550 }],
@@ -344,7 +344,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/kiln',
-    name: '窑炉装配',
+    name: 'Kiln Assembly', name_zh: '窑炉装配',
     produces: [{
       item: 'plant/kiln',
       qty: q(1),
@@ -356,7 +356,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/sublimator',
-    name: '升华器装配',
+    name: 'Sublimator Assembly', name_zh: '升华器装配',
     produces: [{
       item: 'plant/sublimator',
       qty: q(1),

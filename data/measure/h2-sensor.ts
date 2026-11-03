@@ -22,7 +22,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/h2-sensor-record',
-    name: '氢气传感器校准记录',
+    name: 'Hydrogen Sensor Calibration Record', name_zh: '氢气传感器校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -54,7 +54,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/h2-sensor-calibration',
-    name: '氢气传感器校准',
+    name: 'Hydrogen Sensor Calibration', name_zh: '氢气传感器校准',
     produces: [
       {
         item: 'mat/h2-sensor-record',

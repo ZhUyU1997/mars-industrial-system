@@ -265,7 +265,7 @@ const PHASE_SHIFTER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/phase-shifter/stack',
-    name: '移相器压电堆',
+    name: 'Phase Shifter Piezo Stack', name_zh: '移相器压电堆',
     unit: '件',
     category: 'part',
     props: [
@@ -294,7 +294,7 @@ const PHASE_SHIFTER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/phase-shifter/lever',
-    name: '3:1 柔性杠杆',
+    name: '3:1 Flexure Lever', name_zh: '3:1 柔性杠杆',
     unit: '件',
     category: 'part',
     props: [
@@ -316,7 +316,7 @@ const PHASE_SHIFTER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/phase-shifter/mirror',
-    name: '移相器参考镜',
+    name: 'Phase Shifter Reference Mirror', name_zh: '移相器参考镜',
     unit: '件',
     category: 'part',
     props: [
@@ -335,7 +335,7 @@ const PHASE_SHIFTER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/phase-shifter/sleeve',
-    name: '移相器高压引出套管',
+    name: 'Phase Shifter High-Voltage Bushing', name_zh: '移相器高压引出套管',
     unit: '件',
     category: 'part',
     props: [{ param: 'withstand', kind: 'range', min: 0, max: 3000, unit: 'V', dir: 'atLeast' }],
@@ -354,7 +354,7 @@ const PHASE_SHIFTER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/phase-shifter/platen',
-    name: '移相器工作台面',
+    name: 'Phase Shifter Platen', name_zh: '移相器工作台面',
     unit: '件',
     category: 'part',
     props: [
@@ -381,7 +381,7 @@ const PHASE_SHIFTER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/phase-shifter/drive',
-    name: '移相器高压驱动',
+    name: 'Phase Shifter High-Voltage Drive', name_zh: '移相器高压驱动',
     unit: '台',
     category: 'part',
     props: [
@@ -404,7 +404,7 @@ const PHASE_SHIFTER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/phase-shifter/step-etalon',
-    name: 'λ/8 台阶样板',
+    name: 'λ/8 Step Etalon', name_zh: 'λ/8 台阶样板',
     unit: '件',
     category: 'part',
     props: [
@@ -440,7 +440,7 @@ export const PHASE_SHIFTER_ROUTES: readonly Route[] = [
      * 也不镀银（银浆要有机载体）。
      */
     id: 'make/phase-shifter-stack',
-    name: '移相器压电堆制造',
+    name: 'Phase Shifter Piezo Stack Manufacturing', name_zh: '移相器压电堆制造',
     produces: [
       {
         item: 'plant/phase-shifter/stack',
@@ -487,7 +487,7 @@ export const PHASE_SHIFTER_ROUTES: readonly Route[] = [
      * 73.6 pm/V 一起，给出 0.221 nm/V）。量出来不在 2.9–3.1，这件就废。
      */
     id: 'make/phase-shifter-lever',
-    name: '3:1 柔性杠杆制造',
+    name: '3:1 Flexure Lever Manufacturing', name_zh: '3:1 柔性杠杆制造',
     produces: [
       {
         item: 'plant/phase-shifter/lever',
@@ -528,7 +528,7 @@ export const PHASE_SHIFTER_ROUTES: readonly Route[] = [
      * 所以这条路线 needs 里必须有 `plant/interferometer`：**没有它，镜子做完也不知道好不好。**
      */
     id: 'make/phase-shifter-mirror',
-    name: '移相器参考镜制造',
+    name: 'Phase Shifter Reference Mirror Manufacturing', name_zh: '移相器参考镜制造',
     produces: [
       {
         item: 'plant/phase-shifter/mirror',
@@ -584,7 +584,7 @@ export const PHASE_SHIFTER_ROUTES: readonly Route[] = [
      * 与 euv-mirror 那条 `reflectivity 55–70` 同一个诚实度。
      */
     id: 'make/phase-shifter-sleeve',
-    name: '移相器高压引出套管制造',
+    name: 'Phase Shifter High-Voltage Bushing Manufacturing', name_zh: '移相器高压引出套管制造',
     produces: [
       {
         item: 'plant/phase-shifter/sleeve',
@@ -619,7 +619,7 @@ export const PHASE_SHIFTER_ROUTES: readonly Route[] = [
      * （与比较仪那条一样，见 `make/metrology-isolation` 的注释）。
      */
     id: 'make/phase-shifter-platen',
-    name: '移相器工作台面制造',
+    name: 'Phase Shifter Platen Manufacturing', name_zh: '移相器工作台面制造',
     produces: [
       {
         item: 'plant/phase-shifter/platen',
@@ -656,7 +656,7 @@ export const PHASE_SHIFTER_ROUTES: readonly Route[] = [
      * （0.4%/K、τ ≈ 10 min）。刻度单位不是伏，是"格"—— 反正没人能测伏。
      */
     id: 'make/phase-shifter-drive',
-    name: '移相器高压驱动制造',
+    name: 'Phase Shifter High-Voltage Drive Manufacturing', name_zh: '移相器高压驱动制造',
     produces: [
       {
         item: 'plant/phase-shifter/drive',
@@ -704,7 +704,7 @@ export const PHASE_SHIFTER_ROUTES: readonly Route[] = [
      * 否则它在描述里不起作用（`idle_machine`）。
      */
     id: 'make/phase-shifter-step-etalon',
-    name: 'λ/8 台阶样板制造',
+    name: 'λ/8 Step Etalon Manufacturing', name_zh: 'λ/8 台阶样板制造',
     produces: [
       {
         item: 'plant/phase-shifter/step-etalon',
@@ -758,7 +758,7 @@ export const PHASE_SHIFTER_ROUTES: readonly Route[] = [
  */
 const PHASE_SHIFTER_MACHINE: Item = {
   id: 'plant/phase-shifter',
-  name: '移相器',
+  name: 'Phase Shifter', name_zh: '移相器',
   unit: '台',
   category: 'machine',
   composedOf: [
@@ -791,7 +791,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/phase-shifter',
-    name: '移相器装配',
+    name: 'Phase Shifter Assembly', name_zh: '移相器装配',
     produces: [{
       item: 'plant/phase-shifter',
       qty: q(1),

@@ -68,7 +68,7 @@ export const COMPUTER_ITEMS: readonly Item[] = [
    * 进位是行波式（一位一位传），所以 4 位加法要 4 级门延迟 —— 慢，但结构简单，
    * 而且**不需要匹配**：数字电路的容错比模拟大得多，门只要"能翻转"就行。
    */
-  { id: 'std/alu-chip-general', name: '4 位算术逻辑单元', unit: '片', category: 'part',
+  { id: 'std/alu-chip-general', name: '4-Bit Arithmetic Logic Unit', name_zh: '4 位算术逻辑单元', unit: '片', category: 'part',
     // 工艺节点取 5 µm 世代（与 std/photomask-general 的 3–5 µm 同一条线），门数 20–60。
     props: [{ param: 'node', kind: 'range', min: 5000, max: 5000, unit: 'nm', dir: 'atMost' }, { param: 'gates', kind: 'range', min: 20, max: 60, unit: '门' }], },
 
@@ -78,7 +78,7 @@ export const COMPUTER_ITEMS: readonly Item[] = [
    * 与静态 RAM 的关键区别：**不要求管子匹配**，只要求时钟稳定。
    * 代价是要不停刷新，一停电就全丢。
    */
-  { id: 'std/ram-chip-general', name: '8 位动态存储芯片', unit: '片', category: 'part',
+  { id: 'std/ram-chip-general', name: '8-Bit Dynamic Memory Chip', name_zh: '8 位动态存储芯片', unit: '片', category: 'part',
     // 与 ALU 同一条 5 µm 线；4 管/位，门数按 8 位一片计 20–60。
     props: [{ param: 'node', kind: 'range', min: 5000, max: 5000, unit: 'nm', dir: 'atMost' }, { param: 'gates', kind: 'range', min: 20, max: 60, unit: '门' }], },
 
@@ -88,7 +88,7 @@ export const COMPUTER_ITEMS: readonly Item[] = [
    * 它是本层第一个**会算**的东西 —— 而在它之前，"算"要么靠人，
    * 要么靠模拟电路（运放做加减乘除，但那是连续的、不精确的）。
    */
-  { id: 'std/computer-general', name: '最小计算机', unit: '台', category: 'part',
+  { id: 'std/computer-general', name: 'Minimal Computer', name_zh: '最小计算机', unit: '台', category: 'part',
     composedOf: [
       { item: 'std/alu-chip-general', qty: q(2) },
       { item: 'std/ram-chip-general', qty: q(4) },
@@ -108,7 +108,7 @@ export const COMPUTER_ROUTES: readonly Route[] = [
      *   硅片 1 片 → 芯片 40 片（门数多，管芯大）
      */
     id: 'make/alu-chip',
-    name: '4 位算术逻辑单元制造',
+    name: '4-Bit Arithmetic Logic Unit Manufacturing', name_zh: '4 位算术逻辑单元制造',
     produces: [{ item: 'std/alu-chip-general', qty: q(40), gives: [{ param: 'node', kind: 'range', min: 5000, max: 5000 }, { param: 'gates', kind: 'range', min: 20, max: 60 }] }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },
@@ -143,7 +143,7 @@ export const COMPUTER_ROUTES: readonly Route[] = [
      * 在位片上，电容器就是**加厚的栅氧**（0.2 µm）—— 不需要单独的电容工艺。
      */
     id: 'make/ram-chip',
-    name: '8 位动态存储芯片制造',
+    name: '8-Bit Dynamic Memory Chip Manufacturing', name_zh: '8 位动态存储芯片制造',
     produces: [{ item: 'std/ram-chip-general', qty: q(60), gives: [{ param: 'node', kind: 'range', min: 5000, max: 5000 }, { param: 'gates', kind: 'range', min: 20, max: 60 }] }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },
@@ -179,7 +179,7 @@ export const COMPUTER_ROUTES: readonly Route[] = [
      * 所以时钟从一处出、用等长线分到各处 —— **等长线是本层第一次遇到"布线也是设计"**。
      */
     id: 'make/computer',
-    name: '最小计算机制造',
+    name: 'Minimal Computer Manufacturing', name_zh: '最小计算机制造',
     produces: [{ item: 'std/computer-general', qty: q(1) }],
     // 装配件在条目的 composedOf 上；这里只留不可逆加工消耗的铜与薄钢板。
     uses: [

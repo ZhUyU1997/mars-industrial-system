@@ -389,7 +389,7 @@ export const UNBLOCK_EVAP_PUMP_ROUTES: readonly Route[] = [
      *  · 停机必须排空吹干：冰膨胀 9%、冻胀 20–50 MPa，**忘一次泵壳裂一次**
      */
     id: 'make/evaporator-pump-cast',
-    name: '蒸发器水环泵体制造',
+    name: 'Evaporator Water-Ring Pump Body Manufacturing', name_zh: '蒸发器水环泵体制造',
     produces: [{ item: 'plant/evaporator/pump/water-ring', qty: q(1) }],
     /**
      * 进 84.1 kg，出 1 件（54.2 kg）。每一笔的用途与算式在各条下面。
@@ -640,7 +640,7 @@ export const UNBLOCK_EVAP_PUMP_ROUTES: readonly Route[] = [
      *    超了就换一段。**配不上对的皮拉尼，零点是漂的。**
      */
     id: 'make/evaporator-gauge-tungsten',
-    name: '蒸发器真空计制造',
+    name: 'Evaporator Vacuum Gauge Manufacturing', name_zh: '蒸发器真空计制造',
     produces: [{ item: 'plant/evaporator/pump/gauge', qty: q(1) }],
     /**
      * 进 3.682 kg，出 1 件（kg 部分 3.05 kg）。

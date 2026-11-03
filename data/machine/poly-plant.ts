@@ -32,31 +32,31 @@ import { q } from '../../src/index.ts';
 
 export const POLY_PLANT_PARTS: readonly Item[] = [
   /** 精馏塔体与塔盘。不锈钢塔节 + 冲孔塔盘，法兰连接；塔内件可抽出清洗。 */
-  { id: 'plant/distillation-tower/shell', name: '精馏塔体与塔盘', unit: '件', category: 'part' },
+  { id: 'plant/distillation-tower/shell', name: 'Rectification Column Body and Trays', name_zh: '精馏塔体与塔盘', unit: '件', category: 'part' },
 
   /**
    * 再沸器与冷凝器。列管换热器：壳程走蒸汽或冷却水，管程走三氯氢硅。
    *
    * 三氯氢硅遇水剧烈水解，所以两台的密封要求都很高 —— 管板与法兰全部 PTFE 垫。
    */
-  { id: 'plant/distillation-tower/heat-exchanger', name: '精馏塔再沸器与冷凝器', unit: '件', category: 'part' },
+  { id: 'plant/distillation-tower/heat-exchanger', name: 'Rectification Column Reboiler and Condenser', name_zh: '精馏塔再沸器与冷凝器', unit: '件', category: 'part' },
 
   /** 还原钟罩。水冷不锈钢双层筒，顶部开观察孔与出气口，底部与底盘密封。 */
-  { id: 'plant/siemens-reactor/bell', name: '西门子反应器还原钟罩', unit: '件', category: 'part' },
+  { id: 'plant/siemens-reactor/bell', name: 'Siemens Reactor Reduction Bell Jar', name_zh: '西门子反应器还原钟罩', unit: '件', category: 'part' },
 
   /**
    * 底盘与电极。不锈钢底盘 + 石墨电极 + 绝缘瓷套 + 进出气管。
    *
    * 电极要穿过底盘而**不漏气**：靠瓷套与 PTFE 垫压紧 —— 与电解槽的密封同一套做法。
    */
-  { id: 'plant/siemens-reactor/base', name: '西门子反应器底盘与电极', unit: '件', category: 'part' },
+  { id: 'plant/siemens-reactor/base', name: 'Siemens Reactor Base Plate and Electrodes', name_zh: '西门子反应器底盘与电极', unit: '件', category: 'part' },
 ];
 
 export const POLY_PLANT_ROUTES: readonly Route[] = [
   {
     /** 塔体与塔盘。不锈钢板卷焊成节 → 冲孔塔盘 → 法兰配作 → 内件试装。 */
     id: 'make/distillation-shell',
-    name: '精馏塔体与塔盘制造',
+    name: 'Rectification Column Body and Trays Manufacturing', name_zh: '精馏塔体与塔盘制造',
     produces: [{ item: 'plant/distillation-tower/shell', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -68,7 +68,7 @@ export const POLY_PLANT_ROUTES: readonly Route[] = [
   {
     /** 再沸器与冷凝器。列管束胀接进管板 → 壳体焊 → 试压 → PTFE 垫装配。 */
     id: 'make/distillation-heat-exchanger',
-    name: '精馏塔再沸器与冷凝器制造',
+    name: 'Rectification Column Reboiler and Condenser Manufacturing', name_zh: '精馏塔再沸器与冷凝器制造',
     produces: [{ item: 'plant/distillation-tower/heat-exchanger', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -81,7 +81,7 @@ export const POLY_PLANT_ROUTES: readonly Route[] = [
   {
     /** 还原钟罩。不锈钢双层筒卷焊 → 水冷夹套 → 观察孔 → 与底盘配作密封面。 */
     id: 'make/siemens-bell',
-    name: '西门子反应器还原钟罩制造',
+    name: 'Siemens Reactor Reduction Bell Jar Manufacturing', name_zh: '西门子反应器还原钟罩制造',
     produces: [{ item: 'plant/siemens-reactor/bell', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -93,7 +93,7 @@ export const POLY_PLANT_ROUTES: readonly Route[] = [
   {
     /** 底盘与电极。不锈钢盘车配 → 石墨电极（碳电极那一套）→ 瓷套绝缘 → 试压检漏。 */
     id: 'make/siemens-base',
-    name: '西门子反应器底盘与电极制造',
+    name: 'Siemens Reactor Base Plate and Electrodes Manufacturing', name_zh: '西门子反应器底盘与电极制造',
     produces: [{ item: 'plant/siemens-reactor/base', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -119,7 +119,7 @@ export const POLY_PLANT_ROUTES: readonly Route[] = [
  */
 export const DISTILLATION_TOWER: Item = {
   id: 'plant/distillation-tower',
-  name: '精馏塔',
+  name: 'Rectification Column', name_zh: '精馏塔',
   unit: '台',
   category: 'machine',
   holds: [
@@ -142,7 +142,7 @@ export const DISTILLATION_TOWER: Item = {
  */
 export const SIEMENS_REACTOR: Item = {
   id: 'plant/siemens-reactor',
-  name: '西门子反应器',
+  name: 'Siemens Reactor', name_zh: '西门子反应器',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 1050, max: 1150 }],
@@ -165,7 +165,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/distillation-tower',
-    name: '精馏塔装配',
+    name: 'Rectification Column Assembly', name_zh: '精馏塔装配',
     produces: [{
       item: 'plant/distillation-tower',
       qty: q(1),
@@ -177,7 +177,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/siemens-reactor',
-    name: '西门子反应器装配',
+    name: 'Siemens Reactor Assembly', name_zh: '西门子反应器装配',
     produces: [{
       item: 'plant/siemens-reactor',
       qty: q(1),

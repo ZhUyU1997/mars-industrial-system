@@ -49,7 +49,7 @@ import { q } from '../../src/index.ts';
 
 export const PLATING_ITEMS: readonly Item[] = [
   /** 硫酸镍。绿色晶体，电镀主盐。镍 + 稀硫酸慢慢溶（要加热、要通气搅拌）。 */
-  { id: 'mat/nickel-sulfate', name: '硫酸镍', unit: 'kg', category: 'material' },
+  { id: 'mat/nickel-sulfate', name: 'Nickel Sulfate', name_zh: '硫酸镍', unit: 'kg', category: 'material' },
 
   /**
    * 镀镍液。硫酸镍 + 氯化镍（导电盐）+ 硼酸（缓冲 pH 3.5–4.5）。
@@ -57,18 +57,18 @@ export const PLATING_ITEMS: readonly Item[] = [
    * pH 是它的命：太低镀层脆，太高会生成氢氧化镍沉淀 —— 而本层没有 pH 计，
    * 只能靠 pH 试纸（石蕊 + 比色卡）与"镀层颜色"判断。
    */
-  { id: 'mat/nickel-plating-solution', name: '镀镍液', unit: 'kg', category: 'material' },
+  { id: 'mat/nickel-plating-solution', name: 'Nickel Plating Solution', name_zh: '镀镍液', unit: 'kg', category: 'material' },
 ];
 
 export const PLATING_PARTS: readonly Item[] = [
   /** 镀槽。PP 或 PVC 焊成的槽体 —— 镀镍液是酸性的，钢槽会溶。 */
-  { id: 'plant/plating-bath/tank', name: '电镀槽槽体', unit: '件', category: 'part' },
+  { id: 'plant/plating-bath/tank', name: 'Electroplating Bath Tank', name_zh: '电镀槽槽体', unit: '件', category: 'part' },
 
   /** 阳极挂具。钛篮装镍板，外包阳极袋（防阳极泥落到工件上）。 */
-  { id: 'plant/plating-bath/anode-rack', name: '电镀槽阳极挂具', unit: '件', category: 'part' },
+  { id: 'plant/plating-bath/anode-rack', name: 'Electroplating Bath Anode Rack', name_zh: '电镀槽阳极挂具', unit: '件', category: 'part' },
 
   /** 直流母线与挂具。铜排 + 阴极挂具（工件挂上去，要能导电、要方便取放）。 */
-  { id: 'plant/plating-bath/busbar', name: '电镀槽直流母线与挂具', unit: '件', category: 'part' },
+  { id: 'plant/plating-bath/busbar', name: 'Electroplating Bath DC Busbar and Rack', name_zh: '电镀槽直流母线与挂具', unit: '件', category: 'part' },
 ];
 
 export const PLATING_ROUTES: readonly Route[] = [
@@ -79,7 +79,7 @@ export const PLATING_ROUTES: readonly Route[] = [
      *   镍 250 + 硫酸 850 → 硫酸镍 1000（结晶带走结晶水）
      */
     id: 'make/nickel-sulfate',
-    name: '硫酸镍制备',
+    name: 'Nickel Sulfate Production', name_zh: '硫酸镍制备',
     produces: [
       { item: 'mat/nickel-sulfate', qty: q(1000) },
       { item: 'mat/hydrogen', qty: q(5), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.9 }] },
@@ -112,7 +112,7 @@ export const PLATING_ROUTES: readonly Route[] = [
      * 它只在镀液里出现，且用量小）。
      */
     id: 'make/nickel-plating-solution',
-    name: '镀镍液制备',
+    name: 'Nickel Plating Solution Production', name_zh: '镀镍液制备',
     produces: [{ item: 'mat/nickel-plating-solution', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/nickel-sulfate', qty: q(250) }] },
@@ -132,7 +132,7 @@ export const PLATING_ROUTES: readonly Route[] = [
   {
     /** 镀槽与挂具：PP 板焊接成槽 + 钛篮 + 铜排。 */
     id: 'make/plating-tank',
-    name: '电镀槽槽体制造',
+    name: 'Electroplating Bath Tank Manufacturing', name_zh: '电镀槽槽体制造',
     produces: [{ item: 'plant/plating-bath/tank', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/ptfe', qty: q(1) }] },
@@ -144,7 +144,7 @@ export const PLATING_ROUTES: readonly Route[] = [
   {
     /** 阳极挂具与母线：钛篮（装镍板）+ 阳极袋 + 铜排 + 阴极挂具。 */
     id: 'make/plating-rack',
-    name: '电镀槽阳极挂具制造',
+    name: 'Electroplating Bath Anode Rack Manufacturing', name_zh: '电镀槽阳极挂具制造',
     produces: [{ item: 'plant/plating-bath/anode-rack', qty: q(1) }],
     uses: [
       // 工业用钛篮（耐蚀又不溶）；本层没有钛（钛铁矿有，但钛的提取是另一条链），
@@ -158,7 +158,7 @@ export const PLATING_ROUTES: readonly Route[] = [
   {
     /** 直流母线：铜排 + 旋转变流机接口 + 电流表 + 调压（串电阻或抽头）。 */
     id: 'make/plating-busbar',
-    name: '电镀槽直流母线与挂具制造',
+    name: 'Electroplating Bath DC Busbar and Rack Manufacturing', name_zh: '电镀槽直流母线与挂具制造',
     produces: [{ item: 'plant/plating-bath/busbar', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -177,7 +177,7 @@ export const PLATING_ROUTES: readonly Route[] = [
  */
 export const PLATING_BATH: Item = {
   id: 'plant/plating-bath',
-  name: '电镀槽',
+  name: 'Electroplating Bath', name_zh: '电镀槽',
   unit: '套',
   category: 'machine',
   // ⚠️ 补 pressure（镀槽那条曾指出）：55 °C 镀液蒸气压 15.7 kPa，
@@ -206,7 +206,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/plating-bath',
-    name: '电镀槽装配',
+    name: 'Electroplating Bath Assembly', name_zh: '电镀槽装配',
     produces: [{
       item: 'plant/plating-bath',
       qty: q(1),

@@ -53,7 +53,7 @@ export const PHOTORESIST_ITEMS: readonly Item[] = [
    * 它在这层的用处只有两个：感光胶的交联剂，和金属的钝化。
    * **顺带它是铬进入"化学"而不是"合金"的入口** —— 之前铬只做铁合金。
    */
-  { id: 'mat/sodium-dichromate', name: '重铬酸钠', unit: 'kg', category: 'material' },
+  { id: 'mat/sodium-dichromate', name: 'Sodium Dichromate', name_zh: '重铬酸钠', unit: 'kg', category: 'material' },
 
   /**
    * 重铬酸盐-酚醛感光胶。琥珀色粘液，避光保存，见紫外光交联。
@@ -63,14 +63,14 @@ export const PHOTORESIST_ITEMS: readonly Item[] = [
    *
    * 所以它是**负胶**：掩模挡黑的地方被洗掉，见光的地方留下 —— 与正胶相反。
    */
-  { id: 'mat/photoresist', name: '重铬酸盐-酚醛感光胶', unit: 'kg', category: 'material' },
+  { id: 'mat/photoresist', name: 'Dichromate-Phenolic Photoresist', name_zh: '重铬酸盐-酚醛感光胶', unit: 'kg', category: 'material' },
 
   /**
    * 接触式掩模。玻璃版上的一层图形，尺寸与片子相同，贴上去曝光。
    *
    * 第一块靠手刻 + 缩微照相；之后靠前一块复制。10 µm 起步，两代之后到 1 µm。
    */
-  { id: 'std/photomask-general', name: '接触式掩模', unit: '件', category: 'part',
+  { id: 'std/photomask-general', name: 'Contact Mask', name_zh: '接触式掩模', unit: '件', category: 'part',
     // 掩模只声明最小图形：0.1 µm 的深亚微米版到 10 µm 的手刻版都在内。
     // 代际就是 minFeature 本身，不另设等级字段。
     props: [{ param: 'minFeature', kind: 'range', min: 0.1, max: 10, unit: 'µm', dir: 'atMost' }] },
@@ -91,7 +91,7 @@ export const PHOTORESIST_ROUTES: readonly Route[] = [
      * （用铁屑或亚硫酸氢钠把 Cr(VI) 还原成 Cr(III) 再沉淀）。**这条比以前任何一条都毒。**
      */
     id: 'make/sodium-dichromate',
-    name: '重铬酸钠制备',
+    name: 'Sodium Dichromate Production', name_zh: '重铬酸钠制备',
     produces: [
       { item: 'mat/sodium-dichromate', qty: q(700) },
       {
@@ -124,7 +124,7 @@ export const PHOTORESIST_ROUTES: readonly Route[] = [
      * 搅匀后要**静置消泡** —— 气泡在胶层里就是一个个针孔。
      */
     id: 'make/photoresist',
-    name: '感光胶制备',
+    name: 'Photoresist Production', name_zh: '感光胶制备',
     produces: [{ item: 'mat/photoresist', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/sodium-dichromate', qty: q(50) }] },
@@ -149,7 +149,7 @@ export const PHOTORESIST_ROUTES: readonly Route[] = [
      * 这是本层第一次做"缩微"：图形不是画出来的，是**缩小**出来的。
      */
     id: 'make/photomask',
-    name: '接触式掩模制造',
+    name: 'Contact Mask Manufacturing', name_zh: '接触式掩模制造',
     produces: [{ item: 'std/photomask-general', qty: q(1), gives: [{ param: 'minFeature', kind: 'range', min: 3, max: 5 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },

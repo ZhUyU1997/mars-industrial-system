@@ -48,14 +48,14 @@ export const MOS_ITEMS: readonly Item[] = [
    *
    * 它在数据里的意义只有一条：让感光胶不再往硅片上撒钠。
    */
-  { id: 'mat/ammonium-dichromate', name: '重铬酸铵', unit: 'kg', category: 'material' },
+  { id: 'mat/ammonium-dichromate', name: 'Ammonium Dichromate', name_zh: '重铬酸铵', unit: 'kg', category: 'material' },
 
   /**
    *   无钠感光胶。重铬酸铵 + 酚醛，其余与那支一样。
    *
    * 见光交联（负胶）、碱水显影，5 µm 级分辨率 —— 与钠盐版没有区别，除了钠。
    */
-  { id: 'mat/photoresist-sodium-free', name: '无钠感光胶', unit: 'kg', category: 'material' },
+  { id: 'mat/photoresist-sodium-free', name: 'Sodium-Free Photoresist', name_zh: '无钠感光胶', unit: 'kg', category: 'material' },
 
   /**
    * n 沟道增强型 MOS 管（铝栅，5 µm，栅氧 100 nm）。
@@ -64,7 +64,7 @@ export const MOS_ITEMS: readonly Item[] = [
    * 这一只是电压控制电流。而它的意义不在参数，在"输入不取电流"：
    * **高输入阻抗，是模拟电路与存储器的基础。**
    */
-  { id: 'std/mos-transistor-general', name: 'n 沟道增强型 MOS 管', unit: '件', category: 'part' },
+  { id: 'std/mos-transistor-general', name: 'n-Channel Enhancement-Mode MOS Transistor', name_zh: 'n 沟道增强型 MOS 管', unit: '件', category: 'part' },
 
   /**
    * 8 路模拟开关芯片。8 对 MOS + 3-8 译码，一只片子把 8 个输入接到一个输出。
@@ -75,7 +75,7 @@ export const MOS_ITEMS: readonly Item[] = [
    *
    * 于是它做成了双极型做不了的事：**一只仪表轮流看八个点。**
    */
-  { id: 'std/analog-mux-chip-general', name: '8 路模拟开关芯片', unit: '片', category: 'part' },
+  { id: 'std/analog-mux-chip-general', name: '8-Channel Analog Switch Chip', name_zh: '8 路模拟开关芯片', unit: '片', category: 'part' },
 ];
 
 export const MOS_ROUTES: readonly Route[] = [
@@ -90,7 +90,7 @@ export const MOS_ROUTES: readonly Route[] = [
      * MOS 没有**（因为它不靠 pn 结导通，靠沟道）。
      */
     id: 'make/analog-mux',
-    name: '8 路模拟开关芯片制造',
+    name: '8-Channel Analog Switch Chip Manufacturing', name_zh: '8 路模拟开关芯片制造',
     produces: [{ item: 'std/analog-mux-chip-general', qty: q(80) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },
@@ -126,7 +126,7 @@ export const MOS_ROUTES: readonly Route[] = [
      * 与量块的"用比较做精度"是同一种思路：不引入新东西，只反复分。
      */
     id: 'make/ammonium-dichromate',
-    name: '重铬酸铵制备',
+    name: 'Ammonium Dichromate Production', name_zh: '重铬酸铵制备',
     produces: [
       { item: 'mat/ammonium-dichromate', qty: q(400) },
       {
@@ -160,7 +160,7 @@ export const MOS_ROUTES: readonly Route[] = [
      * 水也用超纯水 —— 普通水里的钠比胶里还多。
      */
     id: 'make/photoresist-sodium-free',
-    name: '无钠感光胶制备',
+    name: 'Sodium-Free Photoresist Production', name_zh: '无钠感光胶制备',
     produces: [{ item: 'mat/photoresist-sodium-free', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/ammonium-dichromate', qty: q(50) }] },
@@ -182,7 +182,7 @@ export const MOS_ROUTES: readonly Route[] = [
      * 全流程用无钠胶、超纯水、洁净间；栅氧 100 nm，干氧 1000 °C 约一小时。
      */
     id: 'make/mos-transistor',
-    name: 'n 沟道增强型 MOS 管制造',
+    name: 'n-Channel Enhancement-Mode MOS Transistor Manufacturing', name_zh: 'n 沟道增强型 MOS 管制造',
     produces: [{ item: 'std/mos-transistor-general', qty: q(60) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },
@@ -230,7 +230,7 @@ export const MOS_ROUTES: readonly Route[] = [
      * 也就是说——它治的是"随时间变坏"，不是"一开始就不匀"。
      */
     id: 'make/mos-transistor-passivated',
-    name: 'n 沟道增强型 MOS 管制造',
+    name: 'n-Channel Enhancement-Mode MOS Transistor Manufacturing', name_zh: 'n 沟道增强型 MOS 管制造',
     produces: [{ item: 'std/mos-transistor-general', qty: q(70) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },

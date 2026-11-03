@@ -121,7 +121,7 @@ export const PGM_PRODUCT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/platinum-wire',
-    name: '铂丝',
+    name: 'Platinum Wire', name_zh: '铂丝',
     unit: 'kg',
     category: 'material',
     props: [
@@ -140,7 +140,7 @@ export const PGM_PRODUCT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/platinum-foil',
-    name: '铂箔',
+    name: 'Platinum Foil', name_zh: '铂箔',
     unit: 'kg',
     category: 'material',
     props: [
@@ -158,7 +158,7 @@ export const PGM_PRODUCT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/palladium-wire',
-    name: '钯丝',
+    name: 'Palladium Wire', name_zh: '钯丝',
     unit: 'kg',
     category: 'material',
     props: [
@@ -175,7 +175,7 @@ export const PGM_PRODUCT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/palladium-foil',
-    name: '钯箔',
+    name: 'Palladium Foil', name_zh: '钯箔',
     unit: 'kg',
     category: 'material',
     props: [
@@ -194,7 +194,7 @@ export const PGM_PRODUCT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pt-rh-gauze',
-    name: 'Pt-Rh 氨氧化网',
+    name: 'Pt-Rh Ammonia Oxidation Gauze', name_zh: 'Pt-Rh 氨氧化网',
     unit: 'kg',
     category: 'material',
     props: [
@@ -218,7 +218,7 @@ export const PGM_PRODUCT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rhodium',
-    name: '铑',
+    name: 'Rhodium', name_zh: '铑',
     unit: 'kg',
     category: 'material',
     props: [
@@ -238,22 +238,22 @@ export const PGM_PRODUCT_ITEMS: readonly Item[] = [
 
 export const PGM_WIRE_MILL_PARTS: readonly Item[] = [
   /** 拉丝机。金刚石模 0.02–2 mm，减面率 10–20 %/道次，收线 5–200 m/min。 */
-  { id: 'plant/pgm-wire-mill/drawing-machine', name: 'PGM 拉丝机', unit: '件', category: 'part' },
+  { id: 'plant/pgm-wire-mill/drawing-machine', name: 'PGM Wire Drawing Machine', name_zh: 'PGM 拉丝机', unit: '件', category: 'part' },
 
   /** 轧机。φ100–200 mm 辊、辊缝 0.01–1 mm、四辊/二辊，箔厚 0.01–0.5 mm。 */
-  { id: 'plant/pgm-wire-mill/rolling-mill', name: 'PGM 轧机', unit: '件', category: 'part' },
+  { id: 'plant/pgm-wire-mill/rolling-mill', name: 'PGM Rolling Mill', name_zh: 'PGM 轧机', unit: '件', category: 'part' },
 
   /** 退火炉。600–900 °C、真空/氢、±5 K；Pt 700–900、Pd 600–800。 */
-  { id: 'plant/pgm-wire-mill/annealing-furnace', name: 'PGM 退火炉', unit: '件', category: 'part' },
+  { id: 'plant/pgm-wire-mill/annealing-furnace', name: 'PGM Annealing Furnace', name_zh: 'PGM 退火炉', unit: '件', category: 'part' },
 
   /** 感应炉。1800–1900 °C、石墨坩埚、氩保护、电磁搅拌；Pt-Rh 合金熔炼。 */
-  { id: 'plant/pgm-wire-mill/induction-furnace', name: 'PGM 感应炉', unit: '件', category: 'part' },
+  { id: 'plant/pgm-wire-mill/induction-furnace', name: 'PGM Induction Furnace', name_zh: 'PGM 感应炉', unit: '件', category: 'part' },
 
   /** 织网机。80 目、丝径 0.06–0.1 mm、幅宽 100–300 mm。 */
-  { id: 'plant/pgm-wire-mill/loom', name: 'PGM 织网机', unit: '件', category: 'part' },
+  { id: 'plant/pgm-wire-mill/loom', name: 'PGM Wire Loom', name_zh: 'PGM 织网机', unit: '件', category: 'part' },
 
   /** 机架与管路。型材焊接 + 法兰 + 气氛/冷却管路。 */
-  { id: 'plant/pgm-wire-mill/frame', name: 'PGM 线材轧机机架与管路', unit: '件', category: 'part' },
+  { id: 'plant/pgm-wire-mill/frame', name: 'PGM Wire Rolling Mill Frame and Piping', name_zh: 'PGM 线材轧机机架与管路', unit: '件', category: 'part' },
 ];
 
 /**
@@ -265,7 +265,7 @@ export const PGM_WIRE_MILL_PARTS: readonly Item[] = [
  */
 export const PGM_WIRE_MILL: Item = {
   id: 'plant/pgm-wire-mill',
-  name: 'PGM 线材轧机',
+  name: 'PGM Wire Rolling Mill', name_zh: 'PGM 线材轧机',
   unit: '套',
   category: 'machine',
   holds: [
@@ -309,7 +309,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/platinum-wire-coarse',
-    name: '粗 Pt 丝制备',
+    name: 'Coarse Pt Wire Production', name_zh: '粗 Pt 丝制备',
     rate: { hours: q(24) },
     produces: [
       {
@@ -373,7 +373,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/platinum-wire',
-    name: '通用 Pt 丝制备',
+    name: 'General-Purpose Pt Wire Production', name_zh: '通用 Pt 丝制备',
     rate: { hours: q(48) },
     produces: [
       {
@@ -437,7 +437,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/platinum-wire-fine',
-    name: '细 Pt 丝制备',
+    name: 'Fine Pt Wire Production', name_zh: '细 Pt 丝制备',
     rate: { hours: q(72) },
     produces: [
       {
@@ -501,7 +501,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/platinum-foil',
-    name: 'Pt 箔制备',
+    name: 'Pt Foil Production', name_zh: 'Pt 箔制备',
     rate: { hours: q(24) },
     produces: [
       {
@@ -565,7 +565,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/palladium-wire',
-    name: 'Pd 丝制备',
+    name: 'Pd Wire Production', name_zh: 'Pd 丝制备',
     rate: { hours: q(32) },
     produces: [
       {
@@ -627,7 +627,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/palladium-foil',
-    name: 'Pd 箔制备',
+    name: 'Pd Foil Production', name_zh: 'Pd 箔制备',
     rate: { hours: q(20) },
     produces: [
       {
@@ -695,7 +695,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pt-rh-gauze-10',
-    name: 'Pt-10Rh 网制备',
+    name: 'Pt-10Rh Gauze Production', name_zh: 'Pt-10Rh 网制备',
     rate: { hours: q(80) },
     produces: [
       {
@@ -757,7 +757,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pt-rh-gauze-5',
-    name: 'Pt-5Rh 网制备',
+    name: 'Pt-5Rh Gauze Production', name_zh: 'Pt-5Rh 网制备',
     rate: { hours: q(80) },
     produces: [
       {
@@ -822,7 +822,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-wire-mill-drawing',
-    name: 'PGM 拉丝机制造',
+    name: 'PGM Wire Drawing Machine Manufacturing', name_zh: 'PGM 拉丝机制造',
     rate: { hours: q(32) },
     produces: [{ item: 'plant/pgm-wire-mill/drawing-machine', qty: q(1) }],
     uses: [
@@ -848,7 +848,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-wire-mill-rolling',
-    name: 'PGM 轧机制造',
+    name: 'PGM Rolling Mill Manufacturing', name_zh: 'PGM 轧机制造',
     rate: { hours: q(40) },
     produces: [{ item: 'plant/pgm-wire-mill/rolling-mill', qty: q(1) }],
     uses: [
@@ -873,7 +873,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-wire-mill-annealing',
-    name: 'PGM 退火炉制造',
+    name: 'PGM Annealing Furnace Manufacturing', name_zh: 'PGM 退火炉制造',
     rate: { hours: q(32) },
     produces: [{ item: 'plant/pgm-wire-mill/annealing-furnace', qty: q(1) }],
     uses: [
@@ -899,7 +899,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-wire-mill-induction',
-    name: 'PGM 感应炉制造',
+    name: 'PGM Induction Furnace Manufacturing', name_zh: 'PGM 感应炉制造',
     rate: { hours: q(48) },
     produces: [{ item: 'plant/pgm-wire-mill/induction-furnace', qty: q(1) }],
     uses: [
@@ -924,7 +924,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-wire-mill-loom',
-    name: 'PGM 织网机制造',
+    name: 'PGM Wire Loom Manufacturing', name_zh: 'PGM 织网机制造',
     rate: { hours: q(24) },
     produces: [{ item: 'plant/pgm-wire-mill/loom', qty: q(1) }],
     uses: [
@@ -944,7 +944,7 @@ export const PGM_PRODUCT_ROUTES: readonly Route[] = [
   /** 机架与管路：钢板 300 → 1 件；把六个工位连成一条线。 */
   {
     id: 'make/pgm-wire-mill-frame',
-    name: 'PGM 线材轧机机架与管路制造',
+    name: 'PGM Wire Rolling Mill Frame and Piping Manufacturing', name_zh: 'PGM 线材轧机机架与管路制造',
     rate: { hours: q(16) },
     produces: [{ item: 'plant/pgm-wire-mill/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(300) }] }],
@@ -976,7 +976,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/pgm-wire-mill',
-    name: 'PGM 线材轧机装配',
+    name: 'PGM Wire Rolling Mill Assembly', name_zh: 'PGM 线材轧机装配',
     produces: [{
       item: 'plant/pgm-wire-mill',
       qty: q(1),

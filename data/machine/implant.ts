@@ -434,7 +434,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-implanter',
-    name: '离子注入机',
+    name: 'Ion Implanter', name_zh: '离子注入机',
     unit: '台',
     category: 'machine',
     props: [
@@ -504,7 +504,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta',
-    name: '快速热处理炉',
+    name: 'Rapid Thermal Processing Furnace', name_zh: '快速热处理炉',
     unit: '台',
     category: 'machine',
     props: [
@@ -563,7 +563,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/implanted-wafer',
-    name: '注入片',
+    name: 'Implanted Wafer', name_zh: '注入片',
     unit: '片',
     category: 'part',
     props: [
@@ -590,7 +590,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rtp-annealed-wafer',
-    name: 'RTA 退火片',
+    name: 'RTA Annealed Wafer', name_zh: 'RTA 退火片',
     unit: '片',
     category: 'part',
     props: [
@@ -614,7 +614,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/c54-silicide-wafer',
-    name: 'C54 相的 TiSi₂ 片',
+    name: 'C54-Phase TiSi₂ Wafer', name_zh: 'C54 相的 TiSi₂ 片',
     unit: '片',
     category: 'part',
     props: [
@@ -639,7 +639,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rto-wafer',
-    name: '扩散炉氧化',
+    name: 'Diffusion Furnace Oxidation', name_zh: '扩散炉氧化',
     unit: '片',
     category: 'part',
     props: [
@@ -671,7 +671,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-implanter/source',
-    name: '固体进料电子轰击离子源',
+    name: 'Solid-Feed Electron Bombardment Ion Source', name_zh: '固体进料电子轰击离子源',
     unit: '件',
     category: 'part',
     props: [
@@ -690,7 +690,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-implanter/magnet',
-    name: '90° 磁扇质量分析器',
+    name: '90° Magnetic Sector Mass Analyzer', name_zh: '90° 磁扇质量分析器',
     unit: '件',
     category: 'part',
     props: [
@@ -709,7 +709,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-implanter/accel-tube',
-    name: '离子注入机加速管',
+    name: 'Ion Implanter Accelerator Tube', name_zh: '离子注入机加速管',
     unit: '件',
     category: 'part',
     props: [
@@ -729,7 +729,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-implanter/hv-column',
-    name: '离子注入机倍压柱',
+    name: 'Ion Implanter Voltage Multiplier Column', name_zh: '离子注入机倍压柱',
     unit: '件',
     category: 'part',
     props: [
@@ -749,7 +749,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-implanter/end-station',
-    name: '离子注入机靶室与终端站',
+    name: 'Ion Implanter Target Chamber and End Station', name_zh: '离子注入机靶室与终端站',
     unit: '件',
     category: 'part',
     props: [
@@ -768,7 +768,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-implanter/vacuum-manifold',
-    name: '离子注入机真空机组与气路',
+    name: 'Ion Implanter Vacuum System and Gas Line', name_zh: '离子注入机真空机组与气路',
     unit: '件',
     category: 'part',
     props: [{ param: 'conductance', kind: 'range', min: 0, max: 10000, unit: 'L/s', dir: 'atLeast' }],
@@ -792,7 +792,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/lamp-array',
-    name: 'RTA 炉钨丝卤素石英灯阵',
+    name: 'RTA Furnace Tungsten-Halogen Quartz Lamp Array', name_zh: 'RTA 炉钨丝卤素石英灯阵',
     unit: '件',
     category: 'part',
     props: [
@@ -815,7 +815,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/lamp-array-long',
-    name: '40 kW 长寿命 RTA 灯阵',
+    name: '40 kW Long-Life RTA Lamp Array', name_zh: '40 kW 长寿命 RTA 灯阵',
     unit: '件',
     category: 'part',
     props: [
@@ -835,7 +835,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/reflector',
-    name: 'RTA 炉反射罩',
+    name: 'RTA Furnace Reflector', name_zh: 'RTA 炉反射罩',
     unit: '件',
     category: 'part',
     props: [{ param: 'collection', kind: 'range', min: 0, max: 1, unit: '—' }],
@@ -850,7 +850,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/quartz-chamber',
-    name: 'RTA 炉冷壁石英腔',
+    name: 'RTA Furnace Cold-Wall Quartz Chamber', name_zh: 'RTA 炉冷壁石英腔',
     unit: '件',
     category: 'part',
     props: [{ param: 'maxTemperature', kind: 'range', min: 0, max: 2000, unit: '°C', dir: 'atLeast' }],
@@ -870,7 +870,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/susceptor',
-    name: 'RTA 石墨托',
+    name: 'RTA Graphite Susceptor', name_zh: 'RTA 石墨托',
     unit: '件',
     category: 'part',
     props: [
@@ -891,7 +891,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/power-stack',
-    name: 'RTA 炉调功与配电',
+    name: 'RTA Furnace Power Control and Distribution', name_zh: 'RTA 炉调功与配电',
     unit: '件',
     category: 'part',
     props: [
@@ -909,7 +909,7 @@ export const IMPLANT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/load-lock',
-    name: 'RTA 炉装卸与旋转',
+    name: 'RTA Furnace Load-Lock and Rotation', name_zh: 'RTA 炉装卸与旋转',
     unit: '件',
     category: 'part',
     props: [{ param: 'handlingTime', kind: 'range', min: 0, max: 600, unit: 's', dir: 'atMost' }],
@@ -952,7 +952,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      * 对 1e-3 Pa 的工作压强够用（本底 1e-4 Pa），对 1e-5 不够。
      */
     id: 'make/ion-implanter-source',
-    name: '固体进料电子轰击离子源制造',
+    name: 'Solid-Feed Electron Bombardment Ion Source Manufacturing', name_zh: '固体进料电子轰击离子源制造',
     produces: [
       {
         item: 'plant/ion-implanter/source',
@@ -1021,7 +1021,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      *   与 √(2MV)/r 对表。这样做能把 ±5 % 压到 ±2–3 %，但**每次换离子要重对**。
      */
     id: 'make/ion-implanter-magnet',
-    name: '90° 磁扇质量分析器制造',
+    name: '90° Magnetic Sector Mass Analyzer Manufacturing', name_zh: '90° 磁扇质量分析器制造',
     produces: [
       {
         item: 'plant/ion-implanter/magnet',
@@ -1081,7 +1081,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      * 取 10 mm 净距 + 200 mm 沿面（沿面按净距的 3–5 倍取）。
      */
     id: 'make/ion-implanter-accel-tube',
-    name: '离子注入机加速管制造',
+    name: 'Ion Implanter Accelerator Tube Manufacturing', name_zh: '离子注入机加速管制造',
     produces: [
       {
         item: 'plant/ion-implanter/accel-tube',
@@ -1151,7 +1151,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      *   这是 R8 第 11 行：差 10 倍，段间与沿面爬电的那一半只能靠设计余量。
      */
     id: 'make/ion-implanter-hv-column',
-    name: '离子注入机倍压柱制造',
+    name: 'Ion Implanter Voltage Multiplier Column Manufacturing', name_zh: '离子注入机倍压柱制造',
     produces: [
       {
         item: 'plant/ion-implanter/hv-column',
@@ -1222,7 +1222,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      *   高 20–50 %（δ = 0.2–0.5 @ 30–100 keV），而**没有任何东西能发现它失效**。
      */
     id: 'make/ion-implanter-end-station',
-    name: '离子注入机靶室与终端站制造',
+    name: 'Ion Implanter Target Chamber and End Station Manufacturing', name_zh: '离子注入机靶室与终端站制造',
     produces: [
       {
         item: 'plant/ion-implanter/end-station',
@@ -1286,7 +1286,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      * 液氮从 `plant/air-separator` 来 —— 不在本文件白名单，记在这里。
      */
     id: 'make/ion-implanter-vacuum-manifold',
-    name: '离子注入机真空机组与气路制造',
+    name: 'Ion Implanter Vacuum System and Gas Line Manufacturing', name_zh: '离子注入机真空机组与气路制造',
     produces: [
       {
         item: 'plant/ion-implanter/vacuum-manifold',
@@ -1333,7 +1333,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      * 只能每 20 h 用标定片重标升温率。
      */
     id: 'make/rta-lamp-array',
-    name: 'RTA 炉钨丝卤素石英灯阵制造',
+    name: 'RTA Furnace Tungsten-Halogen Quartz Lamp Array Manufacturing', name_zh: 'RTA 炉钨丝卤素石英灯阵制造',
     produces: [
       {
         item: 'plant/rta/lamp-array',
@@ -1394,7 +1394,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      * （`make/iodine`），但 0.08 g/16 只仍是种子级用量。
      */
     id: 'make/rta-lamp-array-long',
-    name: '40 kW 长寿命 RTA 灯阵制造',
+    name: '40 kW Long-Life RTA Lamp Array Manufacturing', name_zh: '40 kW 长寿命 RTA 灯阵制造',
     produces: [
       {
         item: 'plant/rta/lamp-array-long',
@@ -1456,7 +1456,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      * 收集半角 62° ⇒ 几何收集率 0.8；罩面铝 0.88 ⇒ **0.70**（就是 §四·② 那一条）。
      */
     id: 'make/rta-reflector',
-    name: 'RTA 炉反射罩制造',
+    name: 'RTA Furnace Reflector Manufacturing', name_zh: 'RTA 炉反射罩制造',
     produces: [
       {
         item: 'plant/rta/reflector',
@@ -1498,7 +1498,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      * 这一处漏了就是"抽不到 1e-3 Pa"，而本层**判不了漏在哪**（没有氦检漏）。
      */
     id: 'make/rta-quartz-chamber',
-    name: 'RTA 炉冷壁石英腔制造',
+    name: 'RTA Furnace Cold-Wall Quartz Chamber Manufacturing', name_zh: 'RTA 炉冷壁石英腔制造',
     produces: [
       {
         item: 'plant/rta/quartz-chamber',
@@ -1550,7 +1550,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      *   500–1000 °C 那一段靠外推 —— 误差 ±30–50 K。R8 第 7 行。
      */
     id: 'make/rta-susceptor',
-    name: 'RTA 石墨托制造',
+    name: 'RTA Graphite Susceptor Manufacturing', name_zh: 'RTA 石墨托制造',
     produces: [
       {
         item: 'plant/rta/susceptor',
@@ -1613,7 +1613,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      *   ±1–2 K（高温计读数上直接看得见）。
      */
     id: 'make/rta-power-stack',
-    name: 'RTA 炉调功与配电制造',
+    name: 'RTA Furnace Power Control and Distribution Manufacturing', name_zh: 'RTA 炉调功与配电制造',
     produces: [
       {
         item: 'plant/rta/power-stack',
@@ -1668,7 +1668,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      * 代价：**装卸位置不可编程** —— 一片 20 s，且换片径要换销。
      */
     id: 'make/rta-load-lock',
-    name: 'RTA 炉装卸与旋转制造',
+    name: 'RTA Furnace Load-Lock and Rotation Manufacturing', name_zh: 'RTA 炉装卸与旋转制造',
     produces: [
       {
         item: 'plant/rta/load-lock',
@@ -1728,7 +1728,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      *   **倾角是本路线的第一参数，不是可选项。**
      */
     id: 'make/implant-n-source-drain',
-    name: 'n⁺ 源漏注入',
+    name: 'n⁺ Source/Drain Implantation', name_zh: 'n⁺ 源漏注入',
     produces: [
       {
         item: 'mat/implanted-wafer',
@@ -1804,7 +1804,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      *   t = 2e15 × 78.5 × 1.602e-19 / 63e-6 = 2.51e-2 / 63e-6 = **399 s = 6.6 min**
      */
     id: 'make/implant-p-pinning',
-    name: 'p⁺ 钉扎层注入',
+    name: 'p⁺ Pinning Layer Implantation', name_zh: 'p⁺ 钉扎层注入',
     produces: [
       {
         item: 'mat/implanted-wafer',
@@ -1853,7 +1853,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      * 低能端点 —— 否则读者会以为这台机器只有 100 keV 一档。
      */
     id: 'make/implant-field-stop',
-    name: '场区隔离注入',
+    name: 'Field Isolation Implantation', name_zh: '场区隔离注入',
     produces: [
       {
         item: 'mat/implanted-wafer',
@@ -1925,7 +1925,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      *   1–2 nm 的氧化层。对激活退火那是可接受的；对 RTO 那是污染。
      */
     id: 'make/rtp-activate',
-    name: 'RTA 退火片制造',
+    name: 'RTA Annealed Wafer Manufacturing', name_zh: 'RTA 退火片制造',
     produces: [
       {
         item: 'mat/rtp-annealed-wafer',
@@ -1987,7 +1987,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      *   ⇒ **75 s = 0.021 h**（`rate` 写 q(1,120) = 30 s 的等温段）
      */
     id: 'make/rtp-silicide-c54',
-    name: 'C54 相的 TiSi₂ 片制造',
+    name: 'C54-Phase TiSi₂ Wafer Manufacturing', name_zh: 'C54 相的 TiSi₂ 片制造',
     produces: [
       {
         item: 'mat/c54-silicide-wafer',
@@ -2054,7 +2054,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      *   在这里仍然是开环的。
      */
     id: 'make/rto-gate-oxide',
-    name: '扩散炉氧化制造',
+    name: 'Diffusion Furnace Oxidation Manufacturing', name_zh: '扩散炉氧化制造',
     produces: [
       {
         item: 'mat/rto-wafer',
@@ -2108,7 +2108,7 @@ export const IMPLANT_ROUTES: readonly Route[] = [
      * 被挡；先走扩散炉，把材料做出来。RTO 路线保留，等 RTA 有 record 再升级。
      */
     id: 'make/rto-gate-oxide-furnace',
-    name: '扩散炉氧化',
+    name: 'Diffusion Furnace Oxidation', name_zh: '扩散炉氧化',
     produces: [
       {
         item: 'mat/rto-wafer',
@@ -2149,7 +2149,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/ion-implanter',
-    name: '离子注入机装配',
+    name: 'Ion Implanter Assembly', name_zh: '离子注入机装配',
     produces: [{
       item: 'plant/ion-implanter',
       qty: q(1),
@@ -2168,7 +2168,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/rta',
-    name: '快速热处理炉装配',
+    name: 'Rapid Thermal Processing Furnace Assembly', name_zh: '快速热处理炉装配',
     produces: [{
       item: 'plant/rta',
       qty: q(1),

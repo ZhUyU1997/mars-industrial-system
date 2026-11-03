@@ -19,8 +19,8 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const SPINDLE_PROBE_PARTS: readonly Item[] = [
-  { id: 'plant/spindle-error-analyzer/probe/body', name: '主轴周期误差分析仪探头体', unit: '件', category: 'part' },
-  { id: 'plant/spindle-error-analyzer/probe/sensor', name: '主轴周期误差分析仪传感器模块', unit: '件', category: 'part' },
+  { id: 'plant/spindle-error-analyzer/probe/body', name: 'Spindle Periodic Error Analyzer Probe Body', name_zh: '主轴周期误差分析仪探头体', unit: '件', category: 'part' },
+  { id: 'plant/spindle-error-analyzer/probe/sensor', name: 'Spindle Periodic Error Analyzer Sensor Module', name_zh: '主轴周期误差分析仪传感器模块', unit: '件', category: 'part' },
 ];
 
 const SPINDLE_PROBE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -29,7 +29,7 @@ const SPINDLE_PROBE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 探头体：45 钢 0.5 kg，车极板 φ10，与夹持面同轴 ≤5 µm。 */
     id: 'make/spindle-probe-body',
-    name: '主轴周期误差分析仪探头体制造',
+    name: 'Spindle Periodic Error Analyzer Probe Body Manufacturing', name_zh: '主轴周期误差分析仪探头体制造',
     produces: [{ item: 'plant/spindle-error-analyzer/probe/body', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 2) }] }],
     performedBy: 'lathe',
@@ -40,7 +40,7 @@ const SPINDLE_PROBE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 加接地屏蔽与温漂补偿。传感器是别处生产的模块，用 uses 记录输入。
      */
     id: 'make/spindle-probe-sensor',
-    name: '主轴周期误差分析仪传感器模块制造',
+    name: 'Spindle Periodic Error Analyzer Sensor Module Manufacturing', name_zh: '主轴周期误差分析仪传感器模块制造',
     produces: [{ item: 'plant/spindle-error-analyzer/probe/sensor', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'plant/pzt-stage/capacitive-sensor', qty: q(1) }] }],
     needs: ['plant/metrology-room'],

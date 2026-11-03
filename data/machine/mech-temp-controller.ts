@@ -28,39 +28,39 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const TEMP_CTRL_PARTS: readonly Item[] = [
-  { id: 'std/temp-controller-general/base', name: '双金属式温控器底座', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/case-frame', name: '双金属式温控器表壳框架', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/angle-brace', name: '双金属式温控器角撑', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/lever-seat', name: '双金属式温控器杠杆座', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/pointer-seat', name: '双金属式温控器指针座', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/knife-lever', name: '双金属式温控器刀口杠杆', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/micrometer-screw', name: '双金属式温控器千分螺丝', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/shaft-pin-set', name: '双金属式温控器轴销组', unit: '套', category: 'part' },
-  { id: 'std/temp-controller-general/bimetal-element', name: '双金属式温控器双金属元件', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/spring-plate', name: '双金属式温控器弹簧片', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/pointer', name: '双金属式温控器指针', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/scale-strip', name: '双金属式温控器刻尺', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/dial', name: '双金属式温控器白釉陶刻度盘', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/ceramic-insulator', name: '双金属式温控器陶瓷绝缘子', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/rod-guide-ring', name: '双金属式温控器导杆环', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/low-temp-sleeve', name: '双金属式温控器低温套管', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/sensor-rod', name: '双金属式温控器感温棒', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/ceramic-panel', name: '双金属式温控器陶瓷面板', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/side-panel', name: '双金属式温控器侧板', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/quartz-reference', name: '双金属式温控器石英参考支架', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/observation-window', name: '双金属式温控器观察窗', unit: '件', category: 'part' },
-  { id: 'std/temp-controller-general/case-hardware-set', name: '双金属式温控器表壳紧固件组', unit: '套', category: 'part' },
-  { id: 'std/temp-controller-general/dial-bushing', name: '双金属式温控器表盘轴套', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/base', name: 'Bimetallic Thermostat Base', name_zh: '双金属式温控器底座', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/case-frame', name: 'Bimetallic Thermostat Case Frame', name_zh: '双金属式温控器表壳框架', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/angle-brace', name: 'Bimetallic Thermostat Angle Brace', name_zh: '双金属式温控器角撑', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/lever-seat', name: 'Bimetallic Thermostat Lever Seat', name_zh: '双金属式温控器杠杆座', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/pointer-seat', name: 'Bimetallic Thermostat Pointer Seat', name_zh: '双金属式温控器指针座', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/knife-lever', name: 'Bimetallic Thermostat Knife-Edge Lever', name_zh: '双金属式温控器刀口杠杆', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/micrometer-screw', name: 'Bimetallic Thermostat Micrometer Screw', name_zh: '双金属式温控器千分螺丝', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/shaft-pin-set', name: 'Bimetallic Thermostat Shaft Pin Set', name_zh: '双金属式温控器轴销组', unit: '套', category: 'part' },
+  { id: 'std/temp-controller-general/bimetal-element', name: 'Bimetallic Thermostat Bimetal Element', name_zh: '双金属式温控器双金属元件', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/spring-plate', name: 'Bimetallic Thermostat Spring Plate', name_zh: '双金属式温控器弹簧片', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/pointer', name: 'Bimetallic Thermostat Pointer', name_zh: '双金属式温控器指针', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/scale-strip', name: 'Bimetallic Thermostat Scale Strip', name_zh: '双金属式温控器刻尺', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/dial', name: 'Bimetallic Thermostat White Glazed Ceramic Dial', name_zh: '双金属式温控器白釉陶刻度盘', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/ceramic-insulator', name: 'Bimetallic Thermostat Ceramic Insulator', name_zh: '双金属式温控器陶瓷绝缘子', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/rod-guide-ring', name: 'Bimetallic Thermostat Rod Guide Ring', name_zh: '双金属式温控器导杆环', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/low-temp-sleeve', name: 'Bimetallic Thermostat Low-Temperature Sleeve', name_zh: '双金属式温控器低温套管', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/sensor-rod', name: 'Bimetallic Thermostat Sensor Rod', name_zh: '双金属式温控器感温棒', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/ceramic-panel', name: 'Bimetallic Thermostat Ceramic Panel', name_zh: '双金属式温控器陶瓷面板', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/side-panel', name: 'Bimetallic Thermostat Side Panel', name_zh: '双金属式温控器侧板', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/quartz-reference', name: 'Bimetallic Thermostat Quartz Reference Bracket', name_zh: '双金属式温控器石英参考支架', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/observation-window', name: 'Bimetallic Thermostat Observation Window', name_zh: '双金属式温控器观察窗', unit: '件', category: 'part' },
+  { id: 'std/temp-controller-general/case-hardware-set', name: 'Bimetallic Thermostat Case Fastener Set', name_zh: '双金属式温控器表壳紧固件组', unit: '套', category: 'part' },
+  { id: 'std/temp-controller-general/dial-bushing', name: 'Bimetallic Thermostat Dial Bushing', name_zh: '双金属式温控器表盘轴套', unit: '件', category: 'part' },
 
   /**
    * 快跳微动开关。触点间隙 0.3 mm、死区 0.05 mm，铜触点 2 A 干接点。
    *
    * 它是温控器唯一把“位移”变成“通断”的零件，也是整台表里唯一按次数磨损的电气件。
    */
-  { id: 'std/microswitch-general', name: '快跳微动开关', unit: '件', category: 'part' },
+  { id: 'std/microswitch-general', name: 'Snap-Action Micro Switch', name_zh: '快跳微动开关', unit: '件', category: 'part' },
 
   /** 四位端子板：瓷板承 220 V 爬电，铜柱接外部导线。 */
-  { id: 'std/terminal-board-4p-general', name: '四位端子板', unit: '件', category: 'part' },
+  { id: 'std/terminal-board-4p-general', name: '4-Position Terminal Board', name_zh: '四位端子板', unit: '件', category: 'part' },
 ];
 
 const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -68,7 +68,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
 })[] = [
   {
     id: 'make/temp-controller-base',
-    name: '双金属式温控器底座制造',
+    name: 'Bimetallic Thermostat Base Manufacturing', name_zh: '双金属式温控器底座制造',
     produces: [{ item: 'std/temp-controller-general/base', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(191, 80) }] }],
     performedBy: 'plant/melting-furnace',
@@ -76,7 +76,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-case-frame',
-    name: '双金属式温控器表壳框架制造',
+    name: 'Bimetallic Thermostat Case Frame Manufacturing', name_zh: '双金属式温控器表壳框架制造',
     produces: [{ item: 'std/temp-controller-general/case-frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(29, 80) }] }],
     performedBy: 'plant/melting-furnace',
@@ -84,7 +84,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-angle-brace',
-    name: '双金属式温控器角撑制造',
+    name: 'Bimetallic Thermostat Angle Brace Manufacturing', name_zh: '双金属式温控器角撑制造',
     produces: [{ item: 'std/temp-controller-general/angle-brace', qty: q(4) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(1, 4) }] }],
     performedBy: 'plant/melting-furnace',
@@ -92,7 +92,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-lever-seat',
-    name: '双金属式温控器杠杆座制造',
+    name: 'Bimetallic Thermostat Lever Seat Manufacturing', name_zh: '双金属式温控器杠杆座制造',
     produces: [{ item: 'std/temp-controller-general/lever-seat', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1, 2) }] }],
     performedBy: 'plant/melting-furnace',
@@ -100,7 +100,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-pointer-seat',
-    name: '双金属式温控器指针座制造',
+    name: 'Bimetallic Thermostat Pointer Seat Manufacturing', name_zh: '双金属式温控器指针座制造',
     produces: [{ item: 'std/temp-controller-general/pointer-seat', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(3, 10) }] }],
     performedBy: 'plant/melting-furnace',
@@ -113,7 +113,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 刀口两面 0.005 mm、不许倒圆；圆了支点变成圆柱，4:1 随载荷变。
      */
     id: 'make/temp-controller-knife-lever',
-    name: '双金属式温控器刀口杠杆制造',
+    name: 'Bimetallic Thermostat Knife-Edge Lever Manufacturing', name_zh: '双金属式温控器刀口杠杆制造',
     produces: [{ item: 'std/temp-controller-general/knife-lever', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(11, 100) }] }],
     steps: [
@@ -124,7 +124,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 千分螺丝：M8×0.5、长 90、螺纹段 30；单点挑扣，5 µm/格。 */
     id: 'make/temp-controller-micrometer-screw',
-    name: '双金属式温控器千分螺丝制造',
+    name: 'Bimetallic Thermostat Micrometer Screw Manufacturing', name_zh: '双金属式温控器千分螺丝制造',
     produces: [{ item: 'std/temp-controller-general/micrometer-screw', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(7, 100) }] }],
     performedBy: 'lathe',
@@ -132,7 +132,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 轴销组：6 根 φ3–φ6，H7/g6；按杠杆、指针、开关座分别配作。 */
     id: 'make/temp-controller-shaft-pin-set',
-    name: '双金属式温控器轴销组制造',
+    name: 'Bimetallic Thermostat Shaft Pin Set Manufacturing', name_zh: '双金属式温控器轴销组制造',
     produces: [{ item: 'std/temp-controller-general/shaft-pin-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(17, 100) }] }],
     performedBy: 'lathe',
@@ -144,7 +144,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 本层没有轧机，复合带退成两片夹持；夹紧力会松，读数会漂。
      */
     id: 'make/temp-controller-bimetal-element',
-    name: '双金属式温控器双金属元件制造',
+    name: 'Bimetallic Thermostat Bimetal Element Manufacturing', name_zh: '双金属式温控器双金属元件制造',
     produces: [{ item: 'std/temp-controller-general/bimetal-element', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(13, 1000) }] },
@@ -155,14 +155,14 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 弹簧片 2 片：45 钢 0.5×8×30，淬火 + 300 回火。 */
     id: 'make/temp-controller-spring-plate',
-    name: '双金属式温控器弹簧片制造',
+    name: 'Bimetallic Thermostat Spring Plate Manufacturing', name_zh: '双金属式温控器弹簧片制造',
     produces: [{ item: 'std/temp-controller-general/spring-plate', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(7, 100) }] }],
     performedBy: 'plant/forge',
   },
   {
     id: 'make/temp-controller-pointer',
-    name: '双金属式温控器指针制造',
+    name: 'Bimetallic Thermostat Pointer Manufacturing', name_zh: '双金属式温控器指针制造',
     produces: [{ item: 'std/temp-controller-general/pointer', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 50) }] }],
     performedBy: 'lathe',
@@ -170,7 +170,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 刻尺：100 mm 弧、1 mm 一格；分度头刻，量块复核累积 ≤0.05 mm。 */
     id: 'make/temp-controller-scale-strip',
-    name: '双金属式温控器刻尺制造',
+    name: 'Bimetallic Thermostat Scale Strip Manufacturing', name_zh: '双金属式温控器刻尺制造',
     produces: [{ item: 'std/temp-controller-general/scale-strip', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 10) }] }],
     performedBy: 'plant/milling-machine',
@@ -178,7 +178,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 白釉陶刻度盘：外圈 0–900（3 K/格）、内圈 0–300（5 K/格）。 */
     id: 'make/temp-controller-dial',
-    name: '双金属式温控器白釉陶刻度盘制造',
+    name: 'Bimetallic Thermostat White Glazed Ceramic Dial Manufacturing', name_zh: '双金属式温控器白釉陶刻度盘制造',
     produces: [{ item: 'std/temp-controller-general/dial', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(2, 7) }] }],
     performedBy: 'plant/earth-kiln',
@@ -186,7 +186,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-ceramic-insulator',
-    name: '双金属式温控器陶瓷绝缘子制造',
+    name: 'Bimetallic Thermostat Ceramic Insulator Manufacturing', name_zh: '双金属式温控器陶瓷绝缘子制造',
     produces: [{ item: 'std/temp-controller-general/ceramic-insulator', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(6, 7) }] }],
     performedBy: 'plant/earth-kiln',
@@ -194,7 +194,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-rod-guide-ring',
-    name: '双金属式温控器导杆环制造',
+    name: 'Bimetallic Thermostat Rod Guide Ring Manufacturing', name_zh: '双金属式温控器导杆环制造',
     produces: [{ item: 'std/temp-controller-general/rod-guide-ring', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(1, 2) }] }],
     performedBy: 'plant/earth-kiln',
@@ -202,7 +202,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-low-temp-sleeve',
-    name: '双金属式温控器低温套管制造',
+    name: 'Bimetallic Thermostat Low-Temperature Sleeve Manufacturing', name_zh: '双金属式温控器低温套管制造',
     produces: [{ item: 'std/temp-controller-general/low-temp-sleeve', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(5, 14) }] }],
     performedBy: 'plant/earth-kiln',
@@ -215,7 +215,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 它与导向环同一配方；40 K 的温差就有 0.02 mm 过盈，环会把棒箍裂。
      */
     id: 'make/temp-controller-sensor-rod',
-    name: '双金属式温控器感温棒制造',
+    name: 'Bimetallic Thermostat Sensor Rod Manufacturing', name_zh: '双金属式温控器感温棒制造',
     produces: [{ item: 'std/temp-controller-general/sensor-rod', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(15, 14) }] }],
     performedBy: 'plant/brick-kiln',
@@ -223,7 +223,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-ceramic-panel',
-    name: '双金属式温控器陶瓷面板制造',
+    name: 'Bimetallic Thermostat Ceramic Panel Manufacturing', name_zh: '双金属式温控器陶瓷面板制造',
     produces: [{ item: 'std/temp-controller-general/ceramic-panel', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(4, 7) }] }],
     performedBy: 'plant/earth-kiln',
@@ -231,7 +231,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-side-panel',
-    name: '双金属式温控器侧板制造',
+    name: 'Bimetallic Thermostat Side Panel Manufacturing', name_zh: '双金属式温控器侧板制造',
     produces: [{ item: 'std/temp-controller-general/side-panel', qty: q(3) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(3, 7) }] }],
     performedBy: 'plant/earth-kiln',
@@ -244,7 +244,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 它把壳热 50 K 的假信号从 0.17 mm（105 K）压到 0.008 mm（5 K）。
      */
     id: 'make/temp-controller-quartz-reference',
-    name: '双金属式温控器石英参考支架制造',
+    name: 'Bimetallic Thermostat Quartz Reference Bracket Manufacturing', name_zh: '双金属式温控器石英参考支架制造',
     produces: [{ item: 'std/temp-controller-general/quartz-reference', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/silica', qty: q(8, 25) }] }],
     performedBy: 'plant/brick-kiln',
@@ -252,7 +252,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-observation-window',
-    name: '双金属式温控器观察窗制造',
+    name: 'Bimetallic Thermostat Observation Window Manufacturing', name_zh: '双金属式温控器观察窗制造',
     produces: [{ item: 'std/temp-controller-general/observation-window', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/silica', qty: q(13, 100) }] }],
     performedBy: 'plant/brick-kiln',
@@ -265,7 +265,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 螺栓单点车螺纹，卡子与提手锻出；本层没有搓丝机。
      */
     id: 'make/temp-controller-case-hardware-set',
-    name: '双金属式温控器表壳紧固件组制造',
+    name: 'Bimetallic Thermostat Case Fastener Set Manufacturing', name_zh: '双金属式温控器表壳紧固件组制造',
     produces: [{ item: 'std/temp-controller-general/case-hardware-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(24, 25) }] }],
     steps: [
@@ -275,7 +275,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/temp-controller-dial-bushing',
-    name: '双金属式温控器表盘轴套制造',
+    name: 'Bimetallic Thermostat Dial Bushing Manufacturing', name_zh: '双金属式温控器表盘轴套制造',
     produces: [{ item: 'std/temp-controller-general/dial-bushing', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(3, 50) }] }],
     performedBy: 'lathe',
@@ -287,7 +287,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 触点间隙 0.3 mm、死区 0.05 mm；动作/复位之差就是整台表的温度死区。
      */
     id: 'make/microswitch',
-    name: '快跳微动开关制造',
+    name: 'Snap-Action Micro Switch Manufacturing', name_zh: '快跳微动开关制造',
     produces: [{ item: 'std/microswitch-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(9, 50) }] },
@@ -301,7 +301,7 @@ const TEMP_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 四位端子板：瓷板 + 4 只铜接线柱，220 V 上爬电距离 8 mm。
      */
     id: 'make/terminal-board-4p',
-    name: '四位端子板制造',
+    name: '4-Position Terminal Board Manufacturing', name_zh: '四位端子板制造',
     produces: [{ item: 'std/terminal-board-4p-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/refractory', qty: q(3, 7) }] },

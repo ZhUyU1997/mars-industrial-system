@@ -302,7 +302,7 @@ export const UNBLOCK_PYRO_EYE_ROUTES: readonly Route[] = [
      *  ④ 刻线只能 0.05（玻璃刻线 0.01），4.2× 下是 0.21 mm 的黑线 → **只能画在边上**
      */
     id: 'make/pyrometer-eyepiece-lens',
-    name: '高温计目镜与刻度盘制造',
+    name: 'Pyrometer Eyepiece and Dial Manufacturing', name_zh: '高温计目镜与刻度盘制造',
     produces: [{ item: 'plant/pyrometer/eyepiece', qty: q(1) }],
     /**
      * 进 0.575 kg，出 1 件（0.18 kg）。每一笔的算式写在下面。

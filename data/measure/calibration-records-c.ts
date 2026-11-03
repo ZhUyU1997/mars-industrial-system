@@ -10,7 +10,7 @@ import { q } from '../../src/index.ts';
 export const CALIBRATION_C_ITEMS: readonly Item[] = [
   {
     id: 'mat/cal-cycle-time-adapter-record',
-    name: '周期时间适配器自校准记录',
+    name: 'Cycle-Time Adapter Self-Calibration Record', name_zh: '周期时间适配器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -21,7 +21,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-pressure-adapter-record',
-    name: '压力适配器自校准记录',
+    name: 'Pressure Adapter Self-Calibration Record', name_zh: '压力适配器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -33,7 +33,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-boron-assay-adapter-record',
-    name: '硼含量分析适配器自校准记录',
+    name: 'Boron Content Analysis Adapter Self-Calibration Record', name_zh: '硼含量分析适配器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -44,7 +44,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-weighbridge-500t-record',
-    name: '500 t 地磅自校准记录',
+    name: '500 t Weighbridge Self-Calibration Record', name_zh: '500 t 地磅自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -57,7 +57,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-laser-tracker-30m-record',
-    name: '30 m 激光跟踪仪自校准记录',
+    name: '30 m Laser Tracker Self-Calibration Record', name_zh: '30 m 激光跟踪仪自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -70,7 +70,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-cryo-load-75kw-record',
-    name: '75 kW 低温负载自校准记录',
+    name: '75 kW Cryogenic Load Self-Calibration Record', name_zh: '75 kW 低温负载自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -82,7 +82,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-he-leak-detector-record',
-    name: '氦检漏仪自校准记录',
+    name: 'Helium Leak Detector Self-Calibration Record', name_zh: '氦检漏仪自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -93,7 +93,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-thermostat-80-100k-record',
-    name: '80–100 K 恒温器自校准记录',
+    name: '80–100 K Thermostat Self-Calibration Record', name_zh: '80–100 K 恒温器自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -105,7 +105,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-heat-flux-rig-10mw-record',
-    name: '10 MW 热流试验台自校准记录',
+    name: '10 MW Heat Flux Rig Self-Calibration Record', name_zh: '10 MW 热流试验台自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -118,7 +118,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-tritium-calorimeter-record',
-    name: '氚量热计自校准记录',
+    name: 'Tritium Calorimeter Self-Calibration Record', name_zh: '氚量热计自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -130,7 +130,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-control-availability-bench-record',
-    name: '控制可用性试验台自校准记录',
+    name: 'Control Availability Test Bench Self-Calibration Record', name_zh: '控制可用性试验台自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -142,7 +142,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/cal-concrete-thickness-gauge-record',
-    name: '混凝土测厚仪自校准记录',
+    name: 'Concrete Thickness Gauge Self-Calibration Record', name_zh: '混凝土测厚仪自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -157,7 +157,7 @@ export const CALIBRATION_C_ITEMS: readonly Item[] = [
 export const CALIBRATION_C_ROUTES: readonly Route[] = [
   {
     id: 'measure/cal-cycle-time-adapter',
-    name: '周期时间适配器自校准',
+    name: 'Cycle-Time Adapter Self-Calibration', name_zh: '周期时间适配器自校准',
     produces: [{
       item: 'mat/cal-cycle-time-adapter-record',
       qty: q(1),
@@ -177,7 +177,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-pressure-adapter',
-    name: '压力适配器自校准',
+    name: 'Pressure Adapter Self-Calibration', name_zh: '压力适配器自校准',
     produces: [{
       item: 'mat/cal-pressure-adapter-record',
       qty: q(1),
@@ -198,7 +198,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-boron-assay-adapter',
-    name: '硼含量分析适配器自校准',
+    name: 'Boron Content Analysis Adapter Self-Calibration', name_zh: '硼含量分析适配器自校准',
     produces: [{
       item: 'mat/cal-boron-assay-adapter-record',
       qty: q(1),
@@ -218,7 +218,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-weighbridge-500t',
-    name: '500 t 地磅自校准',
+    name: '500 t Weighbridge Self-Calibration', name_zh: '500 t 地磅自校准',
     produces: [{
       item: 'mat/cal-weighbridge-500t-record',
       qty: q(1),
@@ -240,7 +240,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-laser-tracker-30m',
-    name: '30 m 激光跟踪仪自校准',
+    name: '30 m Laser Tracker Self-Calibration', name_zh: '30 m 激光跟踪仪自校准',
     produces: [{
       item: 'mat/cal-laser-tracker-30m-record',
       qty: q(1),
@@ -262,7 +262,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-cryo-load-75kw',
-    name: '75 kW 低温负载自校准',
+    name: '75 kW Cryogenic Load Self-Calibration', name_zh: '75 kW 低温负载自校准',
     produces: [{
       item: 'mat/cal-cryo-load-75kw-record',
       qty: q(1),
@@ -283,7 +283,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-he-leak-detector',
-    name: '氦检漏仪自校准',
+    name: 'Helium Leak Detector Self-Calibration', name_zh: '氦检漏仪自校准',
     produces: [{
       item: 'mat/cal-he-leak-detector-record',
       qty: q(1),
@@ -303,7 +303,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-thermostat-80-100k',
-    name: '80–100 K 恒温器自校准',
+    name: '80–100 K Thermostat Self-Calibration', name_zh: '80–100 K 恒温器自校准',
     produces: [{
       item: 'mat/cal-thermostat-80-100k-record',
       qty: q(1),
@@ -324,7 +324,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-heat-flux-rig-10mw',
-    name: '10 MW 热流试验台自校准',
+    name: '10 MW Heat Flux Rig Self-Calibration', name_zh: '10 MW 热流试验台自校准',
     produces: [{
       item: 'mat/cal-heat-flux-rig-10mw-record',
       qty: q(1),
@@ -346,7 +346,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-tritium-calorimeter',
-    name: '氚量热计自校准',
+    name: 'Tritium Calorimeter Self-Calibration', name_zh: '氚量热计自校准',
     produces: [{
       item: 'mat/cal-tritium-calorimeter-record',
       qty: q(1),
@@ -367,7 +367,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-control-availability-bench',
-    name: '控制可用性试验台自校准',
+    name: 'Control Availability Test Bench Self-Calibration', name_zh: '控制可用性试验台自校准',
     produces: [{
       item: 'mat/cal-control-availability-bench-record',
       qty: q(1),
@@ -388,7 +388,7 @@ export const CALIBRATION_C_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/cal-concrete-thickness-gauge',
-    name: '混凝土测厚仪自校准',
+    name: 'Concrete Thickness Gauge Self-Calibration', name_zh: '混凝土测厚仪自校准',
     produces: [{
       item: 'mat/cal-concrete-thickness-gauge-record',
       qty: q(1),

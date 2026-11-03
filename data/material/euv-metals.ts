@@ -155,7 +155,7 @@ export const EUV_METAL_ITEMS: Item[] = [
    * 另外那 50% 是石英与长石脉石。它不参与后面任何反应：焙烧时原样留在炉底，
    * 随焙砂一起风选分掉（那 199 kg 走 `mat/tailings`）。
    */
-  { id: 'mat/molybdenum-concentrate', name: '钼精矿', unit: 'kg', category: 'material',
+  { id: 'mat/molybdenum-concentrate', name: 'Molybdenum Concentrate', name_zh: '钼精矿', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -167,7 +167,7 @@ export const EUV_METAL_ITEMS: Item[] = [
    *
    * 66.6% 是后面每一步收缩的根：900 kg 氧化钼只出 600 kg 钼。
    */
-  { id: 'mat/molybdic-oxide', name: '三氧化钼', unit: 'kg', category: 'material',
+  { id: 'mat/molybdic-oxide', name: 'Molybdenum Trioxide', name_zh: '三氧化钼', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -178,7 +178,7 @@ export const EUV_METAL_ITEMS: Item[] = [
    * 与那 3.4 nm 的层厚（与硅的 14 差 28 个电子，界面的衬度就是这 28 挣来的），
    * 不要它的强度。
    */
-  { id: 'mat/molybdenum-powder', name: '钼粉', unit: 'kg', category: 'material',
+  { id: 'mat/molybdenum-powder', name: 'Molybdenum Powder', name_zh: '钼粉', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -187,7 +187,7 @@ export const EUV_METAL_ITEMS: Item[] = [
    * 锡石密度 7.0 —— 硅酸盐的两倍多，这就是重选能成立的全部理由。
    * 剩下那 40% 是石英与铁氧化物：铁在熔炼时要石灰造渣，石英本来就是渣。
    */
-  { id: 'mat/tin-concentrate', name: '锡精矿', unit: 'kg', category: 'material',
+  { id: 'mat/tin-concentrate', name: 'Tin Concentrate', name_zh: '锡精矿', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -197,7 +197,7 @@ export const EUV_METAL_ITEMS: Item[] = [
    * 铁让锡变稠，砷与铜在浇铸时浮成硬壳，铋让凝固后的锡发脆。
    * 所以后面一定要有一道精炼（电解或火法），而本层只写得出电解那一条。
    */
-  { id: 'mat/crude-tin', name: '粗锡', unit: 'kg', category: 'material',
+  { id: 'mat/crude-tin', name: 'Crude Tin', name_zh: '粗锡', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -211,7 +211,7 @@ export const EUV_METAL_ITEMS: Item[] = [
    * 现在过期了；铝 660.3 也有条目，只是不在那支热电偶的料表里；铅、锌连条目都没有）。
    * 锡在体系里还有另一半用处 —— 低温焊料与镀层 —— 也从这里起。
    */
-  { id: 'mat/tin', name: '锡', unit: 'kg', category: 'material',
+  { id: 'mat/tin', name: 'Tin', name_zh: '锡', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }] },
 ];
 
@@ -232,7 +232,7 @@ export const EUV_METAL_ROUTES: Route[] = [
      * 选矿厂 `holds` 的 100–300 kPa 就是为这一步准备的（与铜、镍、铬同一条）。
      */
     id: 'make/molybdenum-concentrate',
-    name: '钼精矿制备',
+    name: 'Molybdenum Concentrate Production', name_zh: '钼精矿制备',
     produces: [
       { item: 'mat/molybdenum-concentrate', qty: q(1200), gives: [{ param: 'purity', kind: 'range', min: 45, max: 55, dir: 'atLeast' }] },
       { item: 'mat/tailings', qty: q(399998800) },
@@ -268,7 +268,7 @@ export const EUV_METAL_ROUTES: Route[] = [
      * ores.ts 的 make/so3 ← make/sulfuric-acid 是现成的下游，缺的是中间那段气路。
      */
     id: 'make/molybdic-oxide',
-    name: '氧化焙烧制备',
+    name: 'Oxidizing Roast Production', name_zh: '氧化焙烧制备',
     produces: [
       { item: 'mat/molybdic-oxide', qty: q(900), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5, dir: 'atLeast' }] },
       { item: 'mat/so2', qty: q(801) },
@@ -307,7 +307,7 @@ export const EUV_METAL_ROUTES: Route[] = [
      * 实话：还原照做，粉里带氧。
      */
     id: 'make/molybdenum-powder',
-    name: '氢还原',
+    name: 'Hydrogen Reduction', name_zh: '氢还原',
     produces: [
       { item: 'mat/molybdenum-powder', qty: q(600), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5, dir: 'atLeast' }] },
       { item: 'mat/water', qty: q(338), gives: [{ param: 'conductivity', kind: 'range', min: 1, max: 50 }] },
@@ -339,7 +339,7 @@ export const EUV_METAL_ROUTES: Route[] = [
      * 成为重选最糟糕的料 —— 这一对矛盾就是锡比钼贵一倍半的全部原因。
      */
     id: 'make/tin-concentrate',
-    name: '锡精矿制备',
+    name: 'Tin Concentrate Production', name_zh: '锡精矿制备',
     produces: [
       { item: 'mat/tin-concentrate', qty: q(1000), gives: [{ param: 'purity', kind: 'range', min: 55, max: 65, dir: 'atLeast' }] },
       { item: 'mat/tailings', qty: q(599999000) },
@@ -374,7 +374,7 @@ export const EUV_METAL_ROUTES: Route[] = [
      * 而本层没有锡渣这个条目，所以那 30 kg 只能跟着 `mat/slag` 走。
      */
     id: 'make/crude-tin',
-    name: '还原熔炼',
+    name: 'Reduction Smelting', name_zh: '还原熔炼',
     produces: [
       { item: 'mat/crude-tin', qty: q(570), gives: [{ param: 'purity', kind: 'range', min: 95, max: 99, dir: 'atLeast' }] },
       { item: 'mat/slag', qty: q(336) },
@@ -400,7 +400,7 @@ export const EUV_METAL_ROUTES: Route[] = [
      * 这一步是 `make/tin` 的前置：电解阳极要 98%+，粗锡只到 95–99%。
      */
     id: 'make/tin-fire-refined',
-    name: '火法精炼',
+    name: 'Pyrometallurgical Refining', name_zh: '火法精炼',
     produces: [
       { item: 'mat/crude-tin', qty: q(950), gives: [{ param: 'purity', kind: 'range', min: 98, max: 99, dir: 'atLeast' }] },
       {
@@ -437,7 +437,7 @@ export const EUV_METAL_ROUTES: Route[] = [
      * 全进电解液。`functional-kept`：还是精炼，只是电解液寿命按星期算。
      */
     id: 'make/tin',
-    name: '电解精炼',
+    name: 'Electrolytic Refining', name_zh: '电解精炼',
     produces: [
       { item: 'mat/tin', qty: q(553), gives: [{ param: 'purity', kind: 'range', min: 99.9, max: 99.99, dir: 'atLeast' }] },
       { item: 'mat/anode-sludge', qty: q(11) },

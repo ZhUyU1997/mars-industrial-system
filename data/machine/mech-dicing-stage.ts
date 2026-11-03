@@ -20,9 +20,9 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const DICING_STAGE_PARTS: readonly Item[] = [
-  { id: 'plant/dicing-saw/stage/table', name: '划片机工作台面', unit: '件', category: 'part' },
-  { id: 'plant/dicing-saw/stage/lead-screw', name: '划片机丝杠', unit: '件', category: 'part' },
-  { id: 'plant/dicing-saw/stage/anti-backlash-nut', name: '划片机消隙螺母', unit: '件', category: 'part' },
+  { id: 'plant/dicing-saw/stage/table', name: 'Dicing Saw Work Table', name_zh: '划片机工作台面', unit: '件', category: 'part' },
+  { id: 'plant/dicing-saw/stage/lead-screw', name: 'Dicing Saw Lead Screw', name_zh: '划片机丝杠', unit: '件', category: 'part' },
+  { id: 'plant/dicing-saw/stage/anti-backlash-nut', name: 'Dicing Saw Anti-Backlash Nut', name_zh: '划片机消隙螺母', unit: '件', category: 'part' },
 ];
 
 const DICING_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -31,7 +31,7 @@ const DICING_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 工作台面：45 钢 6 kg，铣/磨导轨面。 */
     id: 'make/dicing-stage-table',
-    name: '划片机工作台面制造',
+    name: 'Dicing Saw Work Table Manufacturing', name_zh: '划片机工作台面制造',
     produces: [{ item: 'plant/dicing-saw/stage/table', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(6) }] }],
     steps: [
@@ -42,7 +42,7 @@ const DICING_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 丝杠 2 根：45 钢 2 kg，X/Y 各一根。 */
     id: 'make/dicing-stage-lead-screw',
-    name: '划片机丝杠制造',
+    name: 'Dicing Saw Lead Screw Manufacturing', name_zh: '划片机丝杠制造',
     produces: [{ item: 'plant/dicing-saw/stage/lead-screw', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(2) }] }],
     steps: [
@@ -53,7 +53,7 @@ const DICING_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 消隙螺母 2 只：45 钢 2 kg，与丝杠配作。 */
     id: 'make/dicing-stage-anti-backlash-nut',
-    name: '划片机消隙螺母制造',
+    name: 'Dicing Saw Anti-Backlash Nut Manufacturing', name_zh: '划片机消隙螺母制造',
     produces: [{ item: 'plant/dicing-saw/stage/anti-backlash-nut', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(2) }] }],
     steps: [

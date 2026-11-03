@@ -53,7 +53,7 @@ export const QUARTZ_CRYSTAL_ITEMS: readonly Item[] = [
    * 与 `mat/quartz-pure`（提纯砂）的区别不是纯度，是**结晶状态**：
    * 砂是碎的、乱向的；单晶是整块、有轴的。压电性只在单晶上成立。
    */
-  { id: 'mat/quartz-crystal', name: '单晶石英', unit: 'kg', category: 'material' },
+  { id: 'mat/quartz-crystal', name: 'Single-Crystal Quartz', name_zh: '单晶石英', unit: 'kg', category: 'material' },
 ];
 
 export const QUARTZ_CRYSTAL_ROUTES: readonly Route[] = [
@@ -67,7 +67,7 @@ export const QUARTZ_CRYSTAL_ROUTES: readonly Route[] = [
      * 或长成废晶 —— 工业上收率也只有 20–30%。
      */
     id: 'make/quartz-crystal',
-    name: '单晶石英制备',
+    name: 'Single-Crystal Quartz Production', name_zh: '单晶石英制备',
     produces: [{ item: 'mat/quartz-crystal', qty: q(100) }],
     uses: [
       { anyOf: [{ item: 'mat/quartz-pure', qty: q(300) }] },

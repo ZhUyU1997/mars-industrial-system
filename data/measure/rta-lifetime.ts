@@ -130,7 +130,7 @@ export const RTA_LIFETIME_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rta-lifetime-record',
-    name: 'RTA 系统寿命记录',
+    name: 'RTA System Lifetime Record', name_zh: 'RTA 系统寿命记录',
     unit: '份',
     category: 'part',
     props: [
@@ -161,7 +161,7 @@ export const RTA_LIFETIME_ROUTES: readonly Route[] = [
      * 不回收装回 `plant/rta-zoned`。记录是数据，不是物料。
      */
     id: 'measure/rta-lifetime',
-    name: 'RTA 系统寿命测量',
+    name: 'RTA System Lifetime Measurement', name_zh: 'RTA 系统寿命测量',
     produces: [
       {
         item: 'mat/rta-lifetime-record',

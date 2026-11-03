@@ -1,10 +1,14 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark" />
-    <title>火星工业体系 · 数据网络</title>
+    <meta
+      name="description"
+      content="Interactive 3D network of a Mars industrial system: items, routes, material inputs, equipment, and measurement chains."
+    />
+    <title data-i18n="page.title">Mars Industrial System · Data Network</title>
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%2338bdf8' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23fb7185'/%3E%3Ccircle cx='7' cy='9' r='2' fill='%23a78bfa'/%3E%3Ccircle cx='25' cy='11' r='2' fill='%2334d399'/%3E%3Ccircle cx='9' cy='24' r='2' fill='%23fbbf24'/%3E%3Cpath d='M8 10 14 15M24 12 18 15M10 23 14 18' stroke='%235f7290' stroke-width='1.2'/%3E%3C/svg%3E"
@@ -25,12 +29,16 @@
             </svg>
           </span>
           <div class="brand-text">
-            <h1>火星工业体系</h1>
-            <p>数据网络 · <span id="meta-summary">读取中</span></p>
+            <h1 data-i18n="brand.title">Mars Industrial System</h1>
+            <p><span data-i18n="brand.sub">Data network</span> · <span id="meta-summary" data-i18n="common.loading">Loading</span></p>
           </div>
         </div>
 
         <div class="topbar-right">
+          <div class="lang-switch" id="lang-switch" role="group" data-i18n-aria="language.label">
+            <button type="button" data-lang="en" class="active">EN</button>
+            <button type="button" data-lang="zh">中文</button>
+          </div>
           <div class="search" id="search-box">
             <svg class="search-icon" viewBox="0 0 20 20" width="15" height="15" aria-hidden="true">
               <circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.4" />
@@ -39,84 +47,93 @@
             <input
               id="search"
               type="search"
-              placeholder="搜索中文名 / id"
+              placeholder="Search English / Chinese name or id"
               autocomplete="off"
               spellcheck="false"
-              aria-label="搜索条目或路线的中文名或 id"
+              aria-label="Search item or route by English name, Chinese name, or id"
+              data-i18n-placeholder="search.placeholder"
+              data-i18n-aria="search.label"
             />
             <kbd>/</kbd>
             <div class="search-results" id="search-results" hidden></div>
           </div>
-          <div class="validation" id="validation" title="模型校验">
+          <div class="validation" id="validation" title="Model validation">
             <span class="dot"></span>
-            <span id="validation-text">校验中</span>
+            <span id="validation-text" data-i18n="common.validating">Validating</span>
           </div>
         </div>
       </header>
 
       <main>
-        <section id="stage" aria-label="数据网络图">
+        <section id="stage" aria-label="Data network graph" data-i18n-aria="stage.aria">
           <div id="graph"></div>
 
           <aside class="panel filters" id="filters">
             <div class="panel-head">
-              <h2>过滤</h2>
-              <button class="icon-btn" id="filters-toggle" title="收起过滤面板" aria-label="收起过滤面板">
+              <h2 data-i18n="filters.title">Filters</h2>
+              <button
+                class="icon-btn"
+                id="filters-toggle"
+                title="Collapse filters"
+                aria-label="Collapse filters"
+                data-i18n-title="filters.collapse"
+                data-i18n-aria="filters.collapse"
+              >
                 <svg viewBox="0 0 16 16" width="14" height="14"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
               </button>
             </div>
             <div class="panel-body">
               <section class="filter-group">
-                <h3>节点 <span class="count" id="visible-count"></span></h3>
+                <h3><span data-i18n="filters.nodes">Nodes</span> <span class="count" id="visible-count"></span></h3>
                 <div id="category-filters"></div>
               </section>
               <section class="filter-group">
-                <h3>连线</h3>
+                <h3 data-i18n="filters.edges">Links</h3>
                 <div id="edge-filters"></div>
-                <p class="level-note">前提默认关闭，可在此开启。</p>
+                <p class="level-note" data-i18n="filters.needsNote">Prerequisites are hidden by default; enable them here.</p>
               </section>
               <section class="filter-group">
-                <h3>细节 <span class="count" id="level-count"></span></h3>
-                <div class="segmented small level-switch" id="level-switch" role="group" aria-label="细节层级">
-                  <button data-level="15">主干</button>
-                  <button data-level="8">精简</button>
-                  <button data-level="4">标准</button>
-                  <button data-level="0" class="active">全部</button>
+                <h3><span data-i18n="filters.detail">Detail</span> <span class="count" id="level-count"></span></h3>
+                <div class="segmented small level-switch" id="level-switch" role="group" aria-label="Detail level" data-i18n-aria="filters.detailAria">
+                  <button data-level="15" data-i18n="filters.trunk">Trunk</button>
+                  <button data-level="8" data-i18n="filters.slim">Slim</button>
+                  <button data-level="4" data-i18n="filters.standard">Standard</button>
+                  <button data-level="0" class="active" data-i18n="filters.all">All</button>
                 </div>
                 <p class="level-note" id="level-note"></p>
               </section>
               <section class="filter-group focus-group">
-                <h3>聚焦</h3>
-                <div class="focus-state" id="focus-state">未聚焦。<br />单击节点查看，或按“聚焦”。</div>
+                <h3 data-i18n="filters.focus">Focus</h3>
+                <div class="focus-state" id="focus-state" data-i18n="filters.focusHint">Not focused. Click a node to inspect, or press Focus.</div>
                 <div class="depth-row" id="depth-row">
-                  <span>范围</span>
-                  <div class="segmented small" id="depth-switch" role="group" aria-label="聚焦跳数">
-                    <button data-depth="1">1 跳</button>
-                    <button data-depth="2" class="active">2 跳</button>
-                    <button data-depth="3">3 跳</button>
+                  <span data-i18n="filters.range">Depth</span>
+                  <div class="segmented small" id="depth-switch" role="group" aria-label="Focus depth" data-i18n-aria="filters.depthAria">
+                    <button data-depth="1" data-i18n="filters.hops1">1 hop</button>
+                    <button data-depth="2" class="active" data-i18n="filters.hops2">2 hops</button>
+                    <button data-depth="3" data-i18n="filters.hops3">3 hops</button>
                   </div>
                 </div>
                 <div class="focus-actions">
-                  <button class="btn primary" id="focus-btn" disabled>聚焦选中节点</button>
-                  <button class="btn ghost" id="focus-clear" disabled>清除</button>
+                  <button class="btn primary" id="focus-btn" disabled data-i18n="filters.focusSelected">Focus selected</button>
+                  <button class="btn ghost" id="focus-clear" disabled data-i18n="filters.clear">Clear</button>
                 </div>
               </section>
               <section class="filter-group">
-                <h3>布局</h3>
+                <h3 data-i18n="filters.layout">Layout</h3>
                 <div class="focus-actions">
-                  <button class="btn ghost" id="reheat">恢复布局</button>
-                  <button class="btn ghost" id="fit">适应窗口</button>
+                  <button class="btn ghost" id="reheat" data-i18n="filters.reheat">Reset layout</button>
+                  <button class="btn ghost" id="fit" data-i18n="filters.fit">Fit view</button>
                 </div>
               </section>
             </div>
           </aside>
 
-          <div class="stage-hint" id="hint">拖拽旋转 · 滚轮缩放 · 右键平移 · 单击节点查看详情</div>
+          <div class="stage-hint" id="hint" data-i18n="stage.hint">Drag to rotate · Scroll to zoom · Right-drag to pan · Click a node for details</div>
 
           <div class="zoom-controls">
-            <button class="icon-btn" id="zoom-in" title="放大" aria-label="放大">+</button>
-            <button class="icon-btn" id="zoom-out" title="缩小" aria-label="缩小">−</button>
-            <button class="icon-btn" id="zoom-fit" title="适应窗口" aria-label="适应窗口">
+            <button class="icon-btn" id="zoom-in" title="Zoom in" aria-label="Zoom in" data-i18n-title="zoom.in" data-i18n-aria="zoom.in">+</button>
+            <button class="icon-btn" id="zoom-out" title="Zoom out" aria-label="Zoom out" data-i18n-title="zoom.out" data-i18n-aria="zoom.out">−</button>
+            <button class="icon-btn" id="zoom-fit" title="Fit view" aria-label="Fit view" data-i18n-title="zoom.fit" data-i18n-aria="zoom.fit">
               <svg viewBox="0 0 18 18" width="15" height="15" aria-hidden="true">
                 <path d="M3 7V3h4M11 3h4v4M15 11v4h-4M7 15H3v-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
               </svg>
@@ -125,16 +142,16 @@
 
           <div class="statusbar" id="statusbar">
             <span class="status-dot"></span>
-            <span id="status-text">正在装载数据</span>
+            <span id="status-text" data-i18n="status.loading">Loading data</span>
           </div>
 
           <div class="loading" id="loading">
             <div class="loading-inner">
               <div class="loading-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
-              <p class="loading-title">正在构建网络</p>
-              <p class="loading-sub" id="loading-sub">正在读取 data/ 下的条目与路线</p>
+              <p class="loading-title" data-i18n="loading.title">Building network</p>
+              <p class="loading-sub" id="loading-sub" data-i18n="loading.sub">Reading items and routes under data/</p>
               <div class="loading-bar"><span id="loading-bar"></span></div>
-              <p class="loading-step" id="loading-step">装载 graph.json</p>
+              <p class="loading-step" id="loading-step" data-i18n="loading.step">Loading graph.json</p>
             </div>
           </div>
         </section>
@@ -142,12 +159,20 @@
         <aside class="details" id="details" aria-live="polite">
           <div class="details-head">
             <span class="details-kicker" id="details-kicker">OVERVIEW</span>
-            <button class="icon-btn" id="details-close" title="关闭详情" aria-label="关闭详情" hidden>
+            <button
+              class="icon-btn"
+              id="details-close"
+              title="Close details"
+              aria-label="Close details"
+              data-i18n-title="details.close"
+              data-i18n-aria="details.close"
+              hidden
+            >
               <svg viewBox="0 0 16 16" width="14" height="14"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
             </button>
           </div>
           <div class="details-body" id="details-body">
-            <p class="placeholder">装载中…</p>
+            <p class="placeholder" data-i18n="details.placeholder">Loading…</p>
           </div>
         </aside>
       </main>

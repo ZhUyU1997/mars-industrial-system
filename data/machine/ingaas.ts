@@ -106,7 +106,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/indium',
-    name: '铟',
+    name: 'Indium', name_zh: '铟',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 99.99, max: 99.999, unit: '%', dir: 'atLeast' }],
@@ -121,7 +121,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gallium',
-    name: '镓',
+    name: 'Gallium', name_zh: '镓',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 99.99, max: 99.999, unit: '%', dir: 'atLeast' }],
@@ -136,7 +136,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/germanium-metal',
-    name: '欧姆接触用锗',
+    name: 'Germanium for Ohmic Contacts', name_zh: '欧姆接触用锗',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 99.99, max: 99.999, unit: '%', dir: 'atLeast' }],
@@ -150,7 +150,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/indium-trichloride',
-    name: '三氯化铟',
+    name: 'Indium Trichloride', name_zh: '三氯化铟',
     unit: 'kg',
     category: 'material',
     props: [
@@ -162,7 +162,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 三氯化镓（GaCl₃）。白色吸湿固体，熔点 77.9 °C，同样遇水水解。 */
   {
     id: 'mat/gallium-trichloride',
-    name: '三氯化镓',
+    name: 'Gallium Trichloride', name_zh: '三氯化镓',
     unit: 'kg',
     category: 'material',
     props: [
@@ -180,7 +180,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/trimethyl-indium',
-    name: '三甲基铟',
+    name: 'Trimethylindium', name_zh: '三甲基铟',
     unit: 'kg',
     category: 'material',
     props: [
@@ -192,7 +192,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 三甲基镓（TMGa，(CH₃)₃Ga）。无色液体，bp 55.7 °C，MOCVD 的镓源。 */
   {
     id: 'mat/trimethyl-gallium',
-    name: '三甲基镓',
+    name: 'Trimethylgallium', name_zh: '三甲基镓',
     unit: 'kg',
     category: 'material',
     props: [
@@ -209,7 +209,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/arsenic',
-    name: '砷',
+    name: 'Arsenic', name_zh: '砷',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 99.5, max: 99.99, unit: '%', dir: 'atLeast' }],
@@ -224,7 +224,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/phosphine',
-    name: '磷化氢',
+    name: 'Phosphine', name_zh: '磷化氢',
     unit: 'kg',
     category: 'material',
     props: [
@@ -236,7 +236,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 砷化氢（AsH₃，99.9–99.99 %）。无色剧毒气体，bp −62.5 °C。 */
   {
     id: 'mat/arsine',
-    name: '砷化氢',
+    name: 'Arsine', name_zh: '砷化氢',
     unit: 'kg',
     category: 'material',
     props: [
@@ -254,7 +254,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/boron-oxide',
-    name: '氧化硼',
+    name: 'Boron Oxide', name_zh: '氧化硼',
     unit: 'kg',
     category: 'material',
     props: [
@@ -272,7 +272,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/silane',
-    name: '硅烷',
+    name: 'Silane', name_zh: '硅烷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -290,7 +290,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/diethyl-ether',
-    name: '乙醚',
+    name: 'Diethyl Ether', name_zh: '乙醚',
     unit: 'kg',
     category: 'material',
     props: [
@@ -308,7 +308,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ammonia-anhydrous',
-    name: '无水氨',
+    name: 'Anhydrous Ammonia', name_zh: '无水氨',
     unit: 'kg',
     category: 'material',
     props: [
@@ -331,7 +331,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/inp-polycrystal',
-    name: '磷化铟多晶',
+    name: 'Indium Phosphide Polycrystal', name_zh: '磷化铟多晶',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 99.99, max: 99.999, unit: '%', dir: 'atLeast' }],
@@ -348,7 +348,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/inp-single-crystal',
-    name: '磷化铟单晶',
+    name: 'Indium Phosphide Single Crystal', name_zh: '磷化铟单晶',
     unit: 'kg',
     category: 'material',
     props: [
@@ -372,7 +372,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/inp-substrate-general',
-    name: '2 英寸 InP 衬底',
+    name: '2-Inch InP Substrate', name_zh: '2 英寸 InP 衬底',
     unit: '片',
     category: 'part',
     props: [
@@ -401,7 +401,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ingaas-epi-wafer',
-    name: 'InGaAs 外延片',
+    name: 'InGaAs Epi Wafer', name_zh: 'InGaAs 外延片',
     unit: '片',
     category: 'part',
     props: [
@@ -429,7 +429,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/inp-crystal-grower',
-    name: '高压 LEC 单晶炉',
+    name: 'High-Pressure LEC Crystal Grower', name_zh: '高压 LEC 单晶炉',
     unit: '台',
     category: 'machine',
     holds: [
@@ -448,7 +448,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 高压腔体。φ150 mm 内径、30 mm 壁厚、40 atm 设计压力；40Cr 锻件 + 316L 内衬。 */
   {
     id: 'plant/inp-crystal-grower/chamber',
-    name: '高压 LEC 单晶炉高压腔体',
+    name: 'High-Pressure LEC Crystal Grower High-Pressure Chamber', name_zh: '高压 LEC 单晶炉高压腔体',
     unit: '件',
     category: 'part',
     props: [
@@ -461,7 +461,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 石墨/碳化硅加热体。φ120 × 150 mm 筒形，2–3 区，10–20 kW。 */
   {
     id: 'plant/inp-crystal-grower/heater',
-    name: '石墨/碳化硅加热体',
+    name: 'Graphite/Silicon Carbide Heating Element', name_zh: '石墨/碳化硅加热体',
     unit: '件',
     category: 'part',
     props: [
@@ -481,7 +481,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/inp-crystal-grower/crucible',
-    name: '高压 LEC 单晶炉石英坩埚',
+    name: 'High-Pressure LEC Crystal Grower Quartz Crucible', name_zh: '高压 LEC 单晶炉石英坩埚',
     unit: '件',
     category: 'part',
     props: [
@@ -493,7 +493,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 提拉头。籽晶夹 + 软轴 + 称重/位移；1–10 mm/h、5–30 rpm。 */
   {
     id: 'plant/inp-crystal-grower/pull-head',
-    name: '高压 LEC 单晶炉提拉头',
+    name: 'High-Pressure LEC Crystal Grower Pull Head', name_zh: '高压 LEC 单晶炉提拉头',
     unit: '件',
     category: 'part',
     props: [
@@ -510,7 +510,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 压力控制。B₂O₃ 加料器 + 电容薄膜规 + 泄放阀；1000–5100 kPa、±2 %。 */
   {
     id: 'plant/inp-crystal-grower/pressure-control',
-    name: '高压 LEC 单晶炉压力控制',
+    name: 'High-Pressure LEC Crystal Grower Pressure Control', name_zh: '高压 LEC 单晶炉压力控制',
     unit: '件',
     category: 'part',
     props: [
@@ -537,7 +537,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mocvd-reactor',
-    name: 'MOCVD 反应室',
+    name: 'MOCVD Reactor', name_zh: 'MOCVD 反应室',
     unit: '台',
     category: 'machine',
     holds: [
@@ -556,7 +556,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** MOCVD 腔体。φ300 × 600 mm，316L 水冷夹套 + 石英内衬 + 观察窗。 */
   {
     id: 'plant/mocvd-reactor/chamber',
-    name: 'MOCVD 腔体',
+    name: 'MOCVD Chamber', name_zh: 'MOCVD 腔体',
     unit: '件',
     category: 'part',
     props: [
@@ -569,7 +569,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 石墨基座（SiC 涂层）。φ100–120 mm，承 3 片 2 英寸；±5 °C。 */
   {
     id: 'plant/mocvd-reactor/susceptor',
-    name: 'MOCVD 石墨基座',
+    name: 'MOCVD Graphite Susceptor', name_zh: 'MOCVD 石墨基座',
     unit: '件',
     category: 'part',
     props: [
@@ -581,7 +581,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 感应/电阻加热体。5–10 kW，2–3 区。 */
   {
     id: 'plant/mocvd-reactor/heater',
-    name: 'MOCVD 感应/电阻加热体',
+    name: 'MOCVD Induction/Resistance Heater', name_zh: 'MOCVD 感应/电阻加热体',
     unit: '件',
     category: 'part',
     props: [
@@ -593,7 +593,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 金属有机源鼓泡器。0.5–2 L 不锈钢瓶，20–40 °C 恒温；TMIn 是固体，用 40–60 °C。 */
   {
     id: 'plant/mocvd-reactor/bubbler',
-    name: 'MOCVD 金属有机源鼓泡器',
+    name: 'MOCVD Metal-Organic Source Bubbler', name_zh: 'MOCVD 金属有机源鼓泡器',
     unit: '件',
     category: 'part',
     props: [
@@ -614,7 +614,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pecvd-reactor',
-    name: 'PECVD 反应室',
+    name: 'PECVD Reactor', name_zh: 'PECVD 反应室',
     unit: '台',
     category: 'machine',
     holds: [
@@ -632,7 +632,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** PECVD 腔体。φ300 × 400 mm，316L + 石英内衬。 */
   {
     id: 'plant/pecvd-reactor/chamber',
-    name: 'PECVD 腔体',
+    name: 'PECVD Chamber', name_zh: 'PECVD 腔体',
     unit: '件',
     category: 'part',
     props: [
@@ -645,7 +645,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 喷淋头。φ200–250 mm，100–500 个 φ0.3 mm 孔；气流均匀性靠孔板压降。 */
   {
     id: 'plant/pecvd-reactor/showerhead',
-    name: 'PECVD 喷淋头',
+    name: 'PECVD Showerhead', name_zh: 'PECVD 喷淋头',
     unit: '件',
     category: 'part',
     props: [
@@ -657,7 +657,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** PECVD 基座加热。1–3 kW，200–400 °C。 */
   {
     id: 'plant/pecvd-reactor/heater',
-    name: 'PECVD 基座加热',
+    name: 'PECVD Susceptor Heating', name_zh: 'PECVD 基座加热',
     unit: '件',
     category: 'part',
     props: [
@@ -674,7 +674,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dicing-saw',
-    name: '划片机',
+    name: 'Dicing Saw', name_zh: '划片机',
     unit: '台',
     category: 'machine',
     props: [
@@ -692,7 +692,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dicing-saw/spindle',
-    name: '划片机精密主轴',
+    name: 'Dicing Saw Precision Spindle', name_zh: '划片机精密主轴',
     unit: '件',
     category: 'part',
     props: [
@@ -709,7 +709,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 金刚石镍刀片。φ50–60 mm、厚 30–50 µm，镍电镀把金刚石粉粘在刃口。 */
   {
     id: 'plant/dicing-saw/blade',
-    name: '划片机金刚石镍刀片',
+    name: 'Dicing Saw Diamond Nickel Blade', name_zh: '划片机金刚石镍刀片',
     unit: '件',
     category: 'part',
     props: [
@@ -721,7 +721,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** X-Y 工作台。100–150 mm 行程，1–5 µm 定位；丝杠 + 消隙螺母，定位用千分尺校。 */
   {
     id: 'plant/dicing-saw/stage',
-    name: 'X-Y 工作台',
+    name: 'X-Y Table', name_zh: 'X-Y 工作台',
     unit: '件',
     category: 'part',
     props: [
@@ -739,7 +739,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 对准显微镜。50–200×，同轴光 + 十字线。 */
   {
     id: 'plant/dicing-saw/microscope',
-    name: '划片机对准显微镜',
+    name: 'Dicing Saw Alignment Microscope', name_zh: '划片机对准显微镜',
     unit: '件',
     category: 'part',
     props: [{ param: 'magnification', kind: 'range', min: 50, max: 200, unit: '×' }],
@@ -755,7 +755,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/monochromator',
-    name: '光栅单色仪',
+    name: 'Grating Monochromator', name_zh: '光栅单色仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -769,7 +769,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** 600 线/mm 平面光栅。30 × 30 mm，槽深 100–200 nm，镀金 100 nm。 */
   {
     id: 'plant/monochromator/grating',
-    name: '600 线/mm 平面光栅',
+    name: '600 Lines/mm Plane Grating', name_zh: '600 线/mm 平面光栅',
     unit: '件',
     category: 'part',
     props: [
@@ -791,7 +791,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/picoammeter',
-    name: '皮安表',
+    name: 'Picoammeter', name_zh: '皮安表',
     unit: '台',
     category: 'machine',
     props: [
@@ -811,7 +811,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
   /** TO-46 窗片。φ2.5–3.0 mm、厚 0.3–0.5 mm 的硼硅玻璃，双面抛光，1.55 µm 透过 ≥92 %。 */
   {
     id: 'std/to-window-glass-general',
-    name: 'TO-46 窗片',
+    name: 'TO-46 Window', name_zh: 'TO-46 窗片',
     unit: '件',
     category: 'part',
     props: [
@@ -827,7 +827,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/to-package-46',
-    name: 'TO-46 封装',
+    name: 'TO-46 Package', name_zh: 'TO-46 封装',
     unit: '套',
     category: 'part',
     props: [
@@ -852,7 +852,7 @@ export const INGAAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/thermopile-detector-general',
-    name: '标准探测器',
+    name: 'Standard Detector', name_zh: '标准探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -888,7 +888,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 是 `plant/electrorefining` 的下沿。90 ppm 是设计值，没有溶液化验。
      */
     id: 'make/indium',
-    name: '铟制备',
+    name: 'Indium Production', name_zh: '铟制备',
     produces: [
       {
         item: 'mat/indium',
@@ -940,7 +940,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 地球 80–90 % 的镓仍从拜耳母液来。这是来源降级，不是不能做。
      */
     id: 'make/gallium',
-    name: '镓制备',
+    name: 'Gallium Production', name_zh: '镓制备',
     produces: [
       {
         item: 'mat/gallium',
@@ -991,7 +991,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 本层未逐项建条目，所以显式声明。
      */
     id: 'make/germanium-metal',
-    name: '欧姆接触用锗制备',
+    name: 'Germanium for Ohmic Contacts Production', name_zh: '欧姆接触用锗制备',
     produces: [
       {
         item: 'mat/germanium-metal',
@@ -1064,7 +1064,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 四舍五入与烟尘损失，显式声明。
      */
     id: 'make/arsenic',
-    name: '砷制备',
+    name: 'Arsenic Production', name_zh: '砷制备',
     produces: [
       {
         item: 'mat/arsenic',
@@ -1125,7 +1125,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 水与酸雾在废气/废液里，不进 kg 账。
      */
     id: 'make/indium-trichloride',
-    name: '三氯化铟制备',
+    name: 'Indium Trichloride Production', name_zh: '三氯化铟制备',
     produces: [
       {
         item: 'mat/indium-trichloride',
@@ -1163,7 +1163,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 2 Ga + 6 HCl → 2 GaCl₃ + 3 H₂；60–80 °C、100–300 kPa。
      */
     id: 'make/gallium-trichloride',
-    name: '三氯化镓制备',
+    name: 'Gallium Trichloride Production', name_zh: '三氯化镓制备',
     produces: [
       {
         item: 'mat/gallium-trichloride',
@@ -1206,7 +1206,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 精馏在 40–80 °C、300–800 kPa 下切掉乙醚与低沸物；4N5 是设计值。
      */
     id: 'make/trimethyl-indium',
-    name: '三甲基铟制备',
+    name: 'Trimethylindium Production', name_zh: '三甲基铟制备',
     produces: [
       {
         item: 'mat/trimethyl-indium',
@@ -1263,7 +1263,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 与 TMIn 同一条格氏/精馏路径；TMGa bp 55.7 °C，精馏切割点更低。
      */
     id: 'make/trimethyl-gallium',
-    name: '三甲基镓制备',
+    name: 'Trimethylgallium Production', name_zh: '三甲基镓制备',
     produces: [
       {
         item: 'mat/trimethyl-gallium',
@@ -1325,7 +1325,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 本模型不记循环，所以按 100 % 计量、把代价记在 `rate` 与能耗上。
      */
     id: 'make/phosphine',
-    name: '磷化氢制备',
+    name: 'Phosphine Production', name_zh: '磷化氢制备',
     produces: [
       {
         item: 'mat/phosphine',
@@ -1359,7 +1359,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 比 PH₃ 低一档；高压 + 快速冷凝把产物带出平衡。
      */
     id: 'make/arsine',
-    name: '砷化氢制备',
+    name: 'Arsine Production', name_zh: '砷化氢制备',
     produces: [
       {
         item: 'mat/arsine',
@@ -1394,7 +1394,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * SiH₄，这是硅烷贵的原因，也是 PECVD 用量按克记的原因。
      */
     id: 'make/silane',
-    name: '硅烷制备',
+    name: 'Silane Production', name_zh: '硅烷制备',
     produces: [
       {
         item: 'mat/silane',
@@ -1430,7 +1430,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 覆盖。硫酸在 needs 里（催化/吸水，不按批计），精馏塔切乙醚/水。
      */
     id: 'make/diethyl-ether',
-    name: '乙醚制备',
+    name: 'Diethyl Ether Production', name_zh: '乙醚制备',
     produces: [
       {
         item: 'mat/diethyl-ether',
@@ -1467,7 +1467,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 取 28 %，所以 1000 kg 出 280 kg NH₃；1 kg NaOH 进废水。
      */
     id: 'make/ammonia-anhydrous',
-    name: '无水氨制备',
+    name: 'Anhydrous Ammonia Production', name_zh: '无水氨制备',
     produces: [
       {
         item: 'mat/ammonia-anhydrous',
@@ -1506,7 +1506,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 产物是玻璃状 B₂O₃，冷却后破碎成 5–20 mm 颗粒，供 LEC 液封。
      */
     id: 'make/boron-oxide',
-    name: '氧化硼制备',
+    name: 'Boron Oxide Production', name_zh: '氧化硼制备',
     produces: [
       {
         item: 'mat/boron-oxide',
@@ -1548,7 +1548,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 低于 1050 °C 合成不完全，高于 1100 °C 石英坩埚的侵蚀加快。
      */
     id: 'make/inp-polycrystal',
-    name: 'InP 多晶制备',
+    name: 'InP Polycrystal Production', name_zh: 'InP 多晶制备',
     produces: [
       {
         item: 'mat/inp-polycrystal',
@@ -1584,7 +1584,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 本层没有 EPD 腐蚀坑计数的手段，EPD 是**设计值**，不是实测。
      */
     id: 'make/inp-single-crystal',
-    name: 'LEC 单晶制备',
+    name: 'LEC Single-Crystal Production', name_zh: 'LEC 单晶制备',
     produces: [
       {
         item: 'mat/inp-single-crystal',
@@ -1627,7 +1627,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 每片的克数与去向。
      */
     id: 'make/inp-substrate',
-    name: '2 英寸 InP 衬底制造',
+    name: '2-Inch InP Substrate Manufacturing', name_zh: '2 英寸 InP 衬底制造',
     produces: [
       {
         item: 'std/inp-substrate-general',
@@ -1699,7 +1699,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 边界层太厚、均匀性掉。500–700 °C 是 InGaAs 的 MOCVD 窗口。
      */
     id: 'make/ingaas-epi-wafer',
-    name: 'InGaAs/InP 外延',
+    name: 'InGaAs/InP Epitaxy', name_zh: 'InGaAs/InP 外延',
     produces: [
       {
         item: 'mat/ingaas-epi-wafer',
@@ -1775,7 +1775,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      *      `std/contact-tlm-general`，但不在本文件里假装已测）。
      */
     id: 'make/photodiode-ingaas',
-    name: 'InGaAs 光电二极管制造',
+    name: 'InGaAs Photodiode Manufacturing', name_zh: 'InGaAs 光电二极管制造',
     produces: [
       {
         item: 'std/photodiode-ingaas',
@@ -1924,7 +1924,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 压升法记到 1×10⁻³ Pa·L/s 级。
      */
     id: 'make/inp-crystal-grower',
-    name: 'LEC 单晶炉装配',
+    name: 'LEC Single-Crystal Furnace Assembly', name_zh: 'LEC 单晶炉装配',
     produces: [
       {
         item: 'plant/inp-crystal-grower',
@@ -1989,7 +1989,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * RF 由 `plant/rf-13m56` 提供，不在本机零件里。
      */
     id: 'make/mocvd-reactor',
-    name: 'MOCVD 反应室装配',
+    name: 'MOCVD Reactor Assembly', name_zh: 'MOCVD 反应室装配',
     produces: [
       {
         item: 'plant/mocvd-reactor',
@@ -2055,7 +2055,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 防回火（干泵前装氮气吹扫）。
      */
     id: 'make/pecvd-reactor',
-    name: 'PECVD 反应室装配',
+    name: 'PECVD Reactor Assembly', name_zh: 'PECVD 反应室装配',
     produces: [
       {
         item: 'plant/pecvd-reactor',
@@ -2110,7 +2110,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      *   + 冷却水 1 → 划片机 1 台
      */
     id: 'make/dicing-saw',
-    name: '划片机装配',
+    name: 'Dicing Saw Assembly', name_zh: '划片机装配',
     produces: [
       {
         item: 'plant/dicing-saw',
@@ -2169,7 +2169,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 绝对波长 ±2–5 nm。没有汞灯/氩灯，长波端靠二级线外推。
      */
     id: 'make/monochromator',
-    name: '单色仪装配',
+    name: 'Monochromator Assembly', name_zh: '单色仪装配',
     produces: [
       {
         item: 'plant/monochromator',
@@ -2226,7 +2226,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 100 GΩ 电阻 + 1 V 做替代标定，没有标准电流源溯源。
      */
     id: 'make/picoammeter',
-    name: '皮安表装配',
+    name: 'Picoammeter Assembly', name_zh: '皮安表装配',
     produces: [
       {
         item: 'plant/picoammeter',
@@ -2278,7 +2278,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** LEC 高压腔体：40Cr 锻件 + 316L 内衬，深孔/法兰/水压。 */
     id: 'make/inp-crystal-grower-chamber',
-    name: '高压 LEC 单晶炉高压腔体制造',
+    name: 'High-Pressure LEC Crystal Grower High-Pressure Chamber Manufacturing', name_zh: '高压 LEC 单晶炉高压腔体制造',
     produces: [
       {
         item: 'plant/inp-crystal-grower/chamber',
@@ -2309,7 +2309,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** LEC 加热体：SiC 筒 + 铜电极，2–3 区、10–20 kW。 */
     id: 'make/inp-crystal-grower-heater',
-    name: '石墨/碳化硅加热体制造',
+    name: 'Graphite/Silicon Carbide Heating Element Manufacturing', name_zh: '石墨/碳化硅加热体制造',
     produces: [
       {
         item: 'plant/inp-crystal-grower/heater',
@@ -2337,7 +2337,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** LEC 石英坩埚：φ75–100 mm、高 100–150 mm，玻璃车床成形 + 退火。 */
     id: 'make/inp-crystal-grower-crucible',
-    name: '高压 LEC 单晶炉石英坩埚制造',
+    name: 'High-Pressure LEC Crystal Grower Quartz Crucible Manufacturing', name_zh: '高压 LEC 单晶炉石英坩埚制造',
     produces: [
       {
         item: 'plant/inp-crystal-grower/crucible',
@@ -2363,7 +2363,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** LEC 提拉头：籽晶夹 + 软轴 + 称重；1–10 mm/h、5–30 rpm。 */
     id: 'make/inp-crystal-grower-pull-head',
-    name: '高压 LEC 单晶炉提拉头制造',
+    name: 'High-Pressure LEC Crystal Grower Pull Head Manufacturing', name_zh: '高压 LEC 单晶炉提拉头制造',
     produces: [
       {
         item: 'plant/inp-crystal-grower/pull-head',
@@ -2389,7 +2389,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** LEC 压力控制：B₂O₃ 加料器 + 电容薄膜规 + 泄放阀。 */
     id: 'make/inp-crystal-grower-pressure-control',
-    name: '高压 LEC 单晶炉压力控制制造',
+    name: 'High-Pressure LEC Crystal Grower Pressure Control Manufacturing', name_zh: '高压 LEC 单晶炉压力控制制造',
     produces: [
       {
         item: 'plant/inp-crystal-grower/pressure-control',
@@ -2415,7 +2415,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** MOCVD 腔体：φ300 × 600 mm，316L 水冷夹套 + 石英内衬。 */
     id: 'make/mocvd-chamber',
-    name: 'MOCVD 腔体制造',
+    name: 'MOCVD Chamber Manufacturing', name_zh: 'MOCVD 腔体制造',
     produces: [
       {
         item: 'plant/mocvd-reactor/chamber',
@@ -2445,7 +2445,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** MOCVD 基座：SiC 涂层石墨盘，φ100–120 mm，±5 °C。 */
     id: 'make/mocvd-susceptor',
-    name: 'MOCVD 石墨基座制造',
+    name: 'MOCVD Graphite Susceptor Manufacturing', name_zh: 'MOCVD 石墨基座制造',
     produces: [
       {
         item: 'plant/mocvd-reactor/susceptor',
@@ -2473,7 +2473,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** MOCVD 加热体：5–10 kW、2–3 区，感应/电阻。 */
     id: 'make/mocvd-heater',
-    name: 'MOCVD 感应/电阻加热体制造',
+    name: 'MOCVD Induction/Resistance Heater Manufacturing', name_zh: 'MOCVD 感应/电阻加热体制造',
     produces: [
       {
         item: 'plant/mocvd-reactor/heater',
@@ -2501,7 +2501,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** MOCVD 鼓泡器：0.5–2 L 不锈钢瓶，20–60 °C 恒温。 */
     id: 'make/mocvd-bubbler',
-    name: 'MOCVD 金属有机源鼓泡器制造',
+    name: 'MOCVD Metal-Organic Source Bubbler Manufacturing', name_zh: 'MOCVD 金属有机源鼓泡器制造',
     produces: [
       {
         item: 'plant/mocvd-reactor/bubbler',
@@ -2530,7 +2530,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** PECVD 腔体：φ300 × 400 mm，316L + 石英内衬。 */
     id: 'make/pecvd-chamber',
-    name: 'PECVD 腔体制造',
+    name: 'PECVD Chamber Manufacturing', name_zh: 'PECVD 腔体制造',
     produces: [
       {
         item: 'plant/pecvd-reactor/chamber',
@@ -2560,7 +2560,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** PECVD 喷淋头：φ200–250 mm、100–500 个 φ0.3 mm 孔。 */
     id: 'make/pecvd-showerhead',
-    name: 'PECVD 喷淋头制造',
+    name: 'PECVD Showerhead Manufacturing', name_zh: 'PECVD 喷淋头制造',
     produces: [
       {
         item: 'plant/pecvd-reactor/showerhead',
@@ -2589,7 +2589,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** PECVD 基座加热：1–3 kW，200–400 °C。 */
     id: 'make/pecvd-heater',
-    name: 'PECVD 基座加热制造',
+    name: 'PECVD Susceptor Heating Manufacturing', name_zh: 'PECVD 基座加热制造',
     produces: [
       {
         item: 'plant/pecvd-reactor/heater',
@@ -2617,7 +2617,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** 划片机主轴：10 000–40 000 rpm，径向跳动 ≤2 µm。 */
     id: 'make/dicing-spindle',
-    name: '划片机精密主轴制造',
+    name: 'Dicing Saw Precision Spindle Manufacturing', name_zh: '划片机精密主轴制造',
     produces: [
       {
         item: 'plant/dicing-saw/spindle',
@@ -2644,7 +2644,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** 金刚石镍刀片：φ50–60 mm、厚 30–50 µm。 */
     id: 'make/dicing-blade',
-    name: '划片机金刚石镍刀片制造',
+    name: 'Dicing Saw Diamond Nickel Blade Manufacturing', name_zh: '划片机金刚石镍刀片制造',
     produces: [
       {
         item: 'plant/dicing-saw/blade',
@@ -2673,7 +2673,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** 划片机工作台：100–150 mm 行程、1–5 µm 定位。 */
     id: 'make/dicing-stage',
-    name: 'X-Y 工作台制造',
+    name: 'X-Y Table Manufacturing', name_zh: 'X-Y 工作台制造',
     produces: [
       {
         item: 'plant/dicing-saw/stage',
@@ -2699,7 +2699,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** 划片机显微镜：50–200×，同轴光。 */
     id: 'make/dicing-microscope',
-    name: '划片机对准显微镜制造',
+    name: 'Dicing Saw Alignment Microscope Manufacturing', name_zh: '划片机对准显微镜制造',
     produces: [
       {
         item: 'plant/dicing-saw/microscope',
@@ -2736,7 +2736,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 镀金都更容易；一级效率设计 5–15 %（浅槽，不是闪耀光栅）。
      */
     id: 'make/monochromator-grating',
-    name: '600 线/mm 平面光栅制造',
+    name: '600 Lines/mm Plane Grating Manufacturing', name_zh: '600 线/mm 平面光栅制造',
     produces: [
       {
         item: 'plant/monochromator/grating',
@@ -2777,7 +2777,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
   {
     /** TO-46 窗片：φ2.5–3.0 mm、0.3–0.5 mm 硼硅玻璃，双面抛光。 */
     id: 'make/to-window-glass',
-    name: 'TO-46 窗片制造',
+    name: 'TO-46 Window Manufacturing', name_zh: 'TO-46 窗片制造',
     produces: [
       {
         item: 'std/to-window-glass-general',
@@ -2817,7 +2817,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 1000 套的玻璃粉 0.1 kg = 每套 0.1 g，是封接量的 3–5 倍（含损耗）。
      */
     id: 'make/to-package',
-    name: 'TO-46 封装',
+    name: 'TO-46 Package', name_zh: 'TO-46 封装',
     produces: [
       {
         item: 'std/to-package-46',
@@ -2858,7 +2858,7 @@ export const INGAAS_ROUTES: readonly Route[] = [
      * 时间常数 0.5–1.5 s；绝对响应按电功率替代标定，没有 NIST 溯源。
      */
     id: 'make/thermopile-detector',
-    name: '标准探测器制造',
+    name: 'Standard Detector Manufacturing', name_zh: '标准探测器制造',
     produces: [
       {
         item: 'std/thermopile-detector-general',

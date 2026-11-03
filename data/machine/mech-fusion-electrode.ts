@@ -19,9 +19,9 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const FUSION_ELECTRODE_PARTS: readonly Item[] = [
-  { id: 'plant/inert-gas-fusion-analyzer/electrode/graphite', name: '惰气熔融-红外氧分析仪石墨电极', unit: '件', category: 'part' },
-  { id: 'plant/inert-gas-fusion-analyzer/electrode/copper-seat', name: '惰气熔融-红外氧分析仪铜水冷座', unit: '件', category: 'part' },
-  { id: 'plant/inert-gas-fusion-analyzer/electrode/clamp-ring', name: '45 钢压紧环', unit: '件', category: 'part' },
+  { id: 'plant/inert-gas-fusion-analyzer/electrode/graphite', name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Graphite Electrode', name_zh: '惰气熔融-红外氧分析仪石墨电极', unit: '件', category: 'part' },
+  { id: 'plant/inert-gas-fusion-analyzer/electrode/copper-seat', name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Copper Water-Cooled Seat', name_zh: '惰气熔融-红外氧分析仪铜水冷座', unit: '件', category: 'part' },
+  { id: 'plant/inert-gas-fusion-analyzer/electrode/clamp-ring', name: '45 Steel Clamp Ring', name_zh: '45 钢压紧环', unit: '件', category: 'part' },
 ];
 
 const FUSION_ELECTRODE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -30,7 +30,7 @@ const FUSION_ELECTRODE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 石墨电极：从 300 mm 标准碳电极车出 φ40×120，两端 30° 锥面。 */
     id: 'make/fusion-graphite-electrode',
-    name: '惰气熔融-红外氧分析仪石墨电极制造',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Graphite Electrode Manufacturing', name_zh: '惰气熔融-红外氧分析仪石墨电极制造',
     produces: [{ item: 'plant/inert-gas-fusion-analyzer/electrode/graphite', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'std/carbon-electrode-300', qty: q(1, 150) }] }],
     performedBy: 'lathe',
@@ -38,7 +38,7 @@ const FUSION_ELECTRODE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 铜水冷座：铜 1.2 kg，车内腔与密封面。 */
     id: 'make/fusion-copper-seat',
-    name: '惰气熔融-红外氧分析仪铜水冷座制造',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Copper Water-Cooled Seat Manufacturing', name_zh: '惰气熔融-红外氧分析仪铜水冷座制造',
     produces: [{ item: 'plant/inert-gas-fusion-analyzer/electrode/copper-seat', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(6, 5) }] }],
     performedBy: 'lathe',
@@ -46,7 +46,7 @@ const FUSION_ELECTRODE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 45 钢压紧环：0.3 kg，车成，压住石墨电极。 */
     id: 'make/fusion-clamp-ring',
-    name: '45 钢压紧环制造',
+    name: '45 Steel Clamp Ring Manufacturing', name_zh: '45 钢压紧环制造',
     produces: [{ item: 'plant/inert-gas-fusion-analyzer/electrode/clamp-ring', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 10) }] }],
     performedBy: 'lathe',

@@ -288,7 +288,7 @@ export const UNBLOCK_REFR_PRISM_ROUTES: readonly Route[] = [
      *  · **池最后装**：池的围堰如果先粘上，斜面就没法贴平板看条纹了
      */
     id: 'make/refractometer-prism-lapped',
-    name: '折射仪测量棱镜制造',
+    name: 'Refractometer Measuring Prism Manufacturing', name_zh: '折射仪测量棱镜制造',
     produces: [{ item: 'plant/refractometer/prism', qty: q(1) }],
     uses: [
       /**

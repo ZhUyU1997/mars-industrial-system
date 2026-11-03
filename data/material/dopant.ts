@@ -53,14 +53,14 @@ export const DOPANT_ITEMS: readonly Item[] = [
    * 本层用它只有两个去处：做磷铜合金（合金结的施主球），以后做扩散源（POCl₃）。
    * 它有毒且自燃，是本层最危险的物料之一。
    */
-  { id: 'mat/phosphorus', name: '黄磷', unit: 'kg', category: 'material' },
+  { id: 'mat/phosphorus', name: 'Yellow Phosphorus', name_zh: '黄磷', unit: 'kg', category: 'material' },
 
   /**
    * 合金结晶体管（n-p-n）。一片硅片、两颗磷铜球、三根引线。
    *
    * 增益 20–50 倍，寿命几年。它是**第一只能用的器件** —— 点接触那只只是证据。
    */
-  { id: 'std/alloy-junction-transistor-general', name: '合金结晶体管', unit: '件', category: 'part' },
+  { id: 'std/alloy-junction-transistor-general', name: 'Alloy-Junction Transistor', name_zh: '合金结晶体管', unit: '件', category: 'part' },
 ];
 
 export const DOPANT_ROUTES: readonly Route[] = [
@@ -79,7 +79,7 @@ export const DOPANT_ROUTES: readonly Route[] = [
      * 收率比 131 kg 低一档（这里按理论值写，不编折减）。
      */
     id: 'make/phosphorus',
-    name: '黄磷制备',
+    name: 'Yellow Phosphorus Production', name_zh: '黄磷制备',
     produces: [{ item: 'mat/phosphorus', qty: q(131) }],
     uses: [
       { anyOf: [{ item: 'mat/apatite-concentrate', qty: q(1000) }] },
@@ -100,7 +100,7 @@ export const DOPANT_ROUTES: readonly Route[] = [
      * 合金温度 600–700 °C：高了穿通、低了没熔透 —— 靠看火色与计时，模型没有时间维。
      */
     id: 'make/alloy-transistor',
-    name: '合金结晶体管制造',
+    name: 'Alloy-Junction Transistor Manufacturing', name_zh: '合金结晶体管制造',
     produces: [{ item: 'std/alloy-junction-transistor-general', qty: q(15) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },

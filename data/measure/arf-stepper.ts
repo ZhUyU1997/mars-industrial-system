@@ -20,7 +20,7 @@ export const ARF_STEPPER_MEASURE_ITEMS: readonly Item[] = [
   /** 步进机 overlay 资格记录：产品片/标记片 10 点 X/Y。 */
   {
     id: 'mat/arf-stepper-overlay-record',
-    name: 'ArF 步进机套刻记录',
+    name: 'ArF Stepper Overlay Record', name_zh: 'ArF 步进机套刻记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'overlay', kind: 'range', min: 0.1, max: 0.15, unit: 'µm' }],
@@ -28,7 +28,7 @@ export const ARF_STEPPER_MEASURE_ITEMS: readonly Item[] = [
   /** 照明系统剂量资格记录：15 mm 场 9 点均匀性 + 单脉冲闭环误差。 */
   {
     id: 'mat/arf-stepper-dose-record',
-    name: '照明系统剂量资格记录',
+    name: 'Illumination System Dose Qualification Record', name_zh: '照明系统剂量资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -39,7 +39,7 @@ export const ARF_STEPPER_MEASURE_ITEMS: readonly Item[] = [
   /** 吸盘平面度资格记录：φ100–150 盘面 9 点。 */
   {
     id: 'mat/arf-stepper-chuck-record',
-    name: '吸盘平面度资格记录',
+    name: 'Chuck Flatness Qualification Record', name_zh: '吸盘平面度资格记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'flatness', kind: 'range', min: 0.1, max: 0.5, unit: 'µm' }],
@@ -57,7 +57,7 @@ export const ARF_STEPPER_MEASURE_ROUTES: readonly Route[] = [
      * 资格带 0.10–0.15 µm 落在整机 0.05–0.15 内；真跑后收窄。
      */
     id: 'measure/arf-stepper-overlay',
-    name: 'ArF 步进机套刻测量',
+    name: 'ArF Stepper Overlay Measurement', name_zh: 'ArF 步进机套刻测量',
     produces: [{
       item: 'mat/arf-stepper-overlay-record',
       qty: q(1),
@@ -91,7 +91,7 @@ export const ARF_STEPPER_MEASURE_ROUTES: readonly Route[] = [
      * 0.5–1 % 是过程能力，不是单次读数。
      */
     id: 'measure/arf-stepper-dose',
-    name: '照明系统剂量资格测量',
+    name: 'Illumination System Dose Qualification Measurement', name_zh: '照明系统剂量资格测量',
     produces: [{
       item: 'mat/arf-stepper-dose-record',
       qty: q(1),
@@ -118,7 +118,7 @@ export const ARF_STEPPER_MEASURE_ROUTES: readonly Route[] = [
      * 资格带 0.1–0.5 µm 是研磨 + 干涉仪判读的能力域。
      */
     id: 'measure/arf-stepper-chuck',
-    name: '吸盘平面度资格测量',
+    name: 'Chuck Flatness Qualification Measurement', name_zh: '吸盘平面度资格测量',
     produces: [{
       item: 'mat/arf-stepper-chuck-record',
       qty: q(1),

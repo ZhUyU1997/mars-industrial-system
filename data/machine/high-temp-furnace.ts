@@ -50,7 +50,7 @@ import { q } from '../../src/index.ts';
 
 export const HIGH_TEMP_FURNACE_PARTS: readonly Item[] = [
   /** 炉壳。薄钢板焊箱，水冷法兰（1600 时炉口热辐射很强）。 */
-  { id: 'plant/high-temp-furnace/shell', name: '高温炉炉壳', unit: '件', category: 'part' },
+  { id: 'plant/high-temp-furnace/shell', name: 'High-Temperature Furnace Shell', name_zh: '高温炉炉壳', unit: '件', category: 'part' },
 
   /**
    * 炉衬。**氧化铝空心球砖**：刚玉质，耐火度 1800 以上，比高铝砖轻一半。
@@ -58,7 +58,7 @@ export const HIGH_TEMP_FURNACE_PARTS: readonly Item[] = [
    * 用空心球是为了隔热 —— 1600 °C 的炉子如果炉衬蓄热太大，升温要几小时，
    * 电全花在烧砖上。
    */
-  { id: 'plant/high-temp-furnace/lining', name: '高温炉炉衬', unit: '件', category: 'part' },
+  { id: 'plant/high-temp-furnace/lining', name: 'High-Temperature Furnace Lining', name_zh: '高温炉炉衬', unit: '件', category: 'part' },
 
   /**
    * 硅碳棒与夹具。六根棒分两组，串并联切换给三档功率。
@@ -66,17 +66,17 @@ export const HIGH_TEMP_FURNACE_PARTS: readonly Item[] = [
    * **它是这台炉子的寿命件**：硅碳棒用久了电阻变大（氧化生成二氧化硅膜），
    * 功率上不去，就要换。而它自己也是本层造的（`std/sic-heating-element-general`）。
    */
-  { id: 'plant/high-temp-furnace/heating', name: '高温炉硅碳棒与夹具', unit: '件', category: 'part' },
+  { id: 'plant/high-temp-furnace/heating', name: 'High-Temperature Furnace Silicon Carbide Rods and Fixture', name_zh: '高温炉硅碳棒与夹具', unit: '件', category: 'part' },
 
   /** 炉门与料台。炉门水冷夹套 + 配重；料台用刚玉板，不粘不裂。 */
-  { id: 'plant/high-temp-furnace/door', name: '高温炉炉门与料台', unit: '件', category: 'part' },
+  { id: 'plant/high-temp-furnace/door', name: 'High-Temperature Furnace Door and Loading Table', name_zh: '高温炉炉门与料台', unit: '件', category: 'part' },
 ];
 
 export const HIGH_TEMP_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 炉壳。薄板剪折焊 + 水冷夹套 + 开孔。 */
     id: 'make/hightemp-shell',
-    name: '高温炉炉壳制造',
+    name: 'High-Temperature Furnace Shell Manufacturing', name_zh: '高温炉炉壳制造',
     produces: [{ item: 'plant/high-temp-furnace/shell', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -88,7 +88,7 @@ export const HIGH_TEMP_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 炉衬。氧化铝空心球砖砌筑 —— 砌是装配，执行者是机器人。 */
     id: 'make/hightemp-lining',
-    name: '高温炉炉衬制造',
+    name: 'High-Temperature Furnace Lining Manufacturing', name_zh: '高温炉炉衬制造',
     produces: [{ item: 'plant/high-temp-furnace/lining', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/fused-alumina', qty: q(1) }] },
@@ -100,7 +100,7 @@ export const HIGH_TEMP_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 硅碳棒与夹具。棒外购自产，夹具是铜排 + 铝座，压紧不发热。 */
     id: 'make/hightemp-heating',
-    name: '高温炉硅碳棒与夹具制造',
+    name: 'High-Temperature Furnace Silicon Carbide Rods and Fixture Manufacturing', name_zh: '高温炉硅碳棒与夹具制造',
     produces: [{ item: 'plant/high-temp-furnace/heating', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/sic-heating-element-general', qty: q(6) }] },
@@ -113,7 +113,7 @@ export const HIGH_TEMP_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 炉门与料台。水冷门 + 配重；料台刚玉板由熔融氧化铝浇成。 */
     id: 'make/hightemp-door',
-    name: '高温炉炉门与料台制造',
+    name: 'High-Temperature Furnace Door and Loading Table Manufacturing', name_zh: '高温炉炉门与料台制造',
     produces: [{ item: 'plant/high-temp-furnace/door', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -133,7 +133,7 @@ export const HIGH_TEMP_FURNACE_ROUTES: readonly Route[] = [
  */
 export const HIGH_TEMP_FURNACE: Item = {
   id: 'plant/high-temp-furnace',
-  name: '高温炉',
+  name: 'High-Temperature Furnace', name_zh: '高温炉',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 1100, max: 1600 }],
@@ -162,7 +162,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/high-temp-furnace',
-    name: '高温炉装配',
+    name: 'High-Temperature Furnace Assembly', name_zh: '高温炉装配',
     produces: [{
       item: 'plant/high-temp-furnace',
       qty: q(1),

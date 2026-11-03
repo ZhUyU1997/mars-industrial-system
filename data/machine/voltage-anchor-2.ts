@@ -189,7 +189,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/calculable-capacitor/electrode',
-    name: '可计算电容交叉电容电极',
+    name: 'Calculable Capacitor Cross-Capacitor Electrode', name_zh: '可计算电容交叉电容电极',
     unit: '件',
     category: 'part',
     props: [
@@ -211,7 +211,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/calculable-capacitor/guard-tube',
-    name: '可计算电容保护段',
+    name: 'Calculable Capacitor Guard Section', name_zh: '可计算电容保护段',
     unit: '件',
     category: 'part',
     props: [
@@ -230,7 +230,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/calculable-capacitor/frame',
-    name: '可计算电容框架',
+    name: 'Calculable Capacitor Frame', name_zh: '可计算电容框架',
     unit: '件',
     category: 'part',
     props: [
@@ -252,7 +252,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/calculable-capacitor/length-drive',
-    name: '可计算电容长度驱动',
+    name: 'Calculable Capacitor Length Drive', name_zh: '可计算电容长度驱动',
     unit: '件',
     category: 'part',
     props: [
@@ -272,7 +272,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/calculable-capacitor/shield',
-    name: '可计算电容屏蔽罩',
+    name: 'Calculable Capacitor Shield Cover', name_zh: '可计算电容屏蔽罩',
     unit: '件',
     category: 'part',
     props: [
@@ -296,7 +296,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/calculable-capacitor',
-    name: '可计算电容',
+    name: 'Calculable Capacitor', name_zh: '可计算电容',
     unit: '台',
     category: 'machine',
     props: [
@@ -324,7 +324,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ratio-bridge/transformer',
-    name: '精密比率桥精密比率变压器',
+    name: 'Precision Ratio Bridge Precision Ratio Transformer', name_zh: '精密比率桥精密比率变压器',
     unit: '件',
     category: 'part',
     props: [
@@ -345,7 +345,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ratio-bridge/arm',
-    name: '精密比率桥比率臂',
+    name: 'Precision Ratio Bridge Ratio Arm', name_zh: '精密比率桥比率臂',
     unit: '件',
     category: 'part',
     props: [
@@ -365,7 +365,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ratio-bridge/shield',
-    name: '精密比率桥屏蔽罩',
+    name: 'Precision Ratio Bridge Shield Cover', name_zh: '精密比率桥屏蔽罩',
     unit: '件',
     category: 'part',
     props: [
@@ -386,7 +386,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ratio-bridge',
-    name: '精密比率桥',
+    name: 'Precision Ratio Bridge', name_zh: '精密比率桥',
     unit: '台',
     category: 'machine',
     props: [
@@ -417,7 +417,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/current-balance/coil',
-    name: '电流天平的线圈',
+    name: 'Current Balance Coil', name_zh: '电流天平的线圈',
     unit: '件',
     category: 'part',
     props: [
@@ -438,7 +438,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/current-balance/former',
-    name: '电流天平线圈骨架',
+    name: 'Current Balance Coil Former', name_zh: '电流天平线圈骨架',
     unit: '件',
     category: 'part',
     props: [
@@ -457,7 +457,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/current-balance/frame',
-    name: '电流天平框架',
+    name: 'Current Balance Frame', name_zh: '电流天平框架',
     unit: '件',
     category: 'part',
     props: [
@@ -476,7 +476,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/current-balance/shield',
-    name: '电流天平屏蔽',
+    name: 'Current Balance Shield', name_zh: '电流天平屏蔽',
     unit: '件',
     category: 'part',
     props: [
@@ -502,7 +502,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/current-balance/supply',
-    name: '电流天平电流源',
+    name: 'Current Balance Current Source', name_zh: '电流天平电流源',
     unit: '件',
     category: 'part',
     props: [
@@ -529,7 +529,7 @@ export const VOLTAGE_ANCHOR2_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/current-balance',
-    name: '电流天平',
+    name: 'Current Balance', name_zh: '电流天平',
     unit: '台',
     category: 'machine',
     props: [
@@ -561,7 +561,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 否则 0.5 m 长的圆柱会慢慢弯，直线度从 0.2 µm 漂到 1 µm。
      */
     id: 'make/calculable-capacitor-electrode',
-    name: '可计算电容交叉电容电极制造',
+    name: 'Calculable Capacitor Cross-Capacitor Electrode Manufacturing', name_zh: '可计算电容交叉电容电极制造',
     rate: { hours: q(80) },
     produces: [
       {
@@ -610,7 +610,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 1e-3 量级（1000 ppm）；有它，残差 10 ppm。
      */
     id: 'make/calculable-capacitor-guard-tube',
-    name: '可计算电容保护段制造',
+    name: 'Calculable Capacitor Guard Section Manufacturing', name_zh: '可计算电容保护段制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -649,7 +649,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 150 kg 底座把地面振动旁路。
      */
     id: 'make/calculable-capacitor-frame',
-    name: '可计算电容框架制造',
+    name: 'Calculable Capacitor Frame Manufacturing', name_zh: '可计算电容框架制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -692,7 +692,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 它只负责「走到环隙的同一位置」；L 的绝对值由激光干涉仪直接量。
      */
     id: 'make/calculable-capacitor-length-drive',
-    name: '可计算电容长度驱动制造',
+    name: 'Calculable Capacitor Length Drive Manufacturing', name_zh: '可计算电容长度驱动制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -738,7 +738,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 罩 + 单点接地 + 保护环驱动，把未保护杂散压到 0.00003 pF（0.03 fF）以下。
      */
     id: 'make/calculable-capacitor-shield',
-    name: '可计算电容屏蔽罩制造',
+    name: 'Calculable Capacitor Shield Cover Manufacturing', name_zh: '可计算电容屏蔽罩制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -787,7 +787,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 可计算电容去交叉验证。
      */
     id: 'make/calculable-capacitor',
-    name: '可计算电容总装',
+    name: 'Calculable Capacitor Final Assembly', name_zh: '可计算电容总装',
     rate: { hours: q(120) },
     produces: [
       {
@@ -855,7 +855,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * （`std/transformer-general` 1–1000 kVA），这一台是新造的精密件。
      */
     id: 'make/ratio-bridge-transformer',
-    name: '精密比率桥精密比率变压器制造',
+    name: 'Precision Ratio Bridge Precision Ratio Transformer Manufacturing', name_zh: '精密比率桥精密比率变压器制造',
     rate: { hours: q(48) },
     produces: [
       {
@@ -906,7 +906,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 这里要做到 1.63:1 / 100:1 / 1000:1 三档。
      */
     id: 'make/ratio-bridge-arm',
-    name: '精密比率桥比率臂制造',
+    name: 'Precision Ratio Bridge Ratio Arm Manufacturing', name_zh: '精密比率桥比率臂制造',
     rate: { hours: q(32) },
     produces: [
       {
@@ -950,7 +950,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * （1 pF 臂要 0.03 fF）。
      */
     id: 'make/ratio-bridge-shield',
-    name: '精密比率桥屏蔽罩制造',
+    name: 'Precision Ratio Bridge Shield Cover Manufacturing', name_zh: '精密比率桥屏蔽罩制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -996,7 +996,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * ⚠️ 比率误差 60–80 ppm 是本文件的**主项**：它同时进 C 与 R 两条传递。
      */
     id: 'make/ratio-bridge',
-    name: '比率桥总装',
+    name: 'Ratio Bridge Final Assembly', name_zh: '比率桥总装',
     rate: { hours: q(80) },
     produces: [
       {
@@ -1059,7 +1059,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 层间位置偏差 0.1 mm 就是 dM/dx 的 20–30 ppm，所以必须单层。
      */
     id: 'make/current-balance-coil',
-    name: '电流天平的线圈制造',
+    name: 'Current Balance Coil Manufacturing', name_zh: '电流天平的线圈制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -1101,7 +1101,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 误差放大到 ~4 ppm。氧化铝 α=7 ppm/K，0.1 K 是 0.7 ppm；不用铝（23 ppm/K）。
      */
     id: 'make/current-balance-former',
-    name: '电流天平线圈骨架制造',
+    name: 'Current Balance Coil Former Manufacturing', name_zh: '电流天平线圈骨架制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -1139,7 +1139,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 激光干涉量到 0.1 µm。40 kg 框架把地面振动旁路；配重卸掉 3 kg 静态负载。
      */
     id: 'make/current-balance-frame',
-    name: '电流天平框架制造',
+    name: 'Current Balance Frame Manufacturing', name_zh: '电流天平框架制造',
     rate: { hours: q(32) },
     produces: [
       {
@@ -1185,7 +1185,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 屏蔽 + 双绞引线 + 正反向换向，把这一项压到 10 ppm 以下。
      */
     id: 'make/current-balance-shield',
-    name: '电流天平屏蔽制造',
+    name: 'Current Balance Shield Manufacturing', name_zh: '电流天平屏蔽制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -1227,7 +1227,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 扣接触热电势与地磁偏置。
      */
     id: 'make/current-balance-supply',
-    name: '电流天平电流源制造',
+    name: 'Current Balance Current Source Manufacturing', name_zh: '电流天平电流源制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -1278,7 +1278,7 @@ export const VOLTAGE_ANCHOR2_ROUTES: readonly Route[] = [
      * 力反推，再与几何值比，差 >30 ppm 查绕组的层间位置。
      */
     id: 'make/current-balance',
-    name: '电流天平总装',
+    name: 'Current Balance Final Assembly', name_zh: '电流天平总装',
     rate: { hours: q(96) },
     produces: [
       {

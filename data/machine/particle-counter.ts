@@ -387,7 +387,7 @@ export const PARTICLE_COUNTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter/illuminator',
-    name: '暗场颗粒计数器线照明头',
+    name: 'Dark-Field Particle Counter Line Illumination Head', name_zh: '暗场颗粒计数器线照明头',
     unit: '件',
     category: 'part',
     props: [
@@ -412,7 +412,7 @@ export const PARTICLE_COUNTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter/collection',
-    name: '颗粒计数器收集槽',
+    name: 'Particle Counter Collection Trough', name_zh: '颗粒计数器收集槽',
     unit: '件',
     category: 'part',
     props: [
@@ -445,7 +445,7 @@ export const PARTICLE_COUNTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter/detector',
-    name: '颗粒计数器探测头',
+    name: 'Particle Counter Detector Head', name_zh: '颗粒计数器探测头',
     unit: '件',
     category: 'part',
     props: [
@@ -477,7 +477,7 @@ export const PARTICLE_COUNTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter/cold-finger',
-    name: '颗粒计数器冷指',
+    name: 'Particle Counter Cold Finger', name_zh: '颗粒计数器冷指',
     unit: '件',
     category: 'part',
     props: [
@@ -506,7 +506,7 @@ export const PARTICLE_COUNTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter/lockin',
-    name: '颗粒计数器锁相同步检波',
+    name: 'Particle Counter Lock-In Synchronous Detection', name_zh: '颗粒计数器锁相同步检波',
     unit: '件',
     category: 'part',
     props: [
@@ -530,7 +530,7 @@ export const PARTICLE_COUNTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter/stage',
-    name: '颗粒计数器片子台',
+    name: 'Particle Counter Wafer Stage', name_zh: '颗粒计数器片子台',
     unit: '件',
     category: 'part',
     props: [
@@ -554,7 +554,7 @@ export const PARTICLE_COUNTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter/dark-box',
-    name: '颗粒计数器暗箱',
+    name: 'Particle Counter Dark Box', name_zh: '颗粒计数器暗箱',
     unit: '件',
     category: 'part',
     props: [
@@ -580,7 +580,7 @@ export const PARTICLE_COUNTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter',
-    name: '193 nm 暗场颗粒计数器',
+    name: '193 nm Dark-Field Particle Counter', name_zh: '193 nm 暗场颗粒计数器',
     unit: '台',
     category: 'machine',
     holds: [
@@ -636,7 +636,7 @@ export const PARTICLE_COUNTER_ROUTES: readonly Route[] = [
      * 烧蚀阈约 0.1 J/cm²，够了。
      */
     id: 'make/particle-illuminator',
-    name: '暗场颗粒计数器线照明头制造',
+    name: 'Dark-Field Particle Counter Line Illumination Head Manufacturing', name_zh: '暗场颗粒计数器线照明头制造',
     produces: [
       {
         item: 'plant/particle-counter/illuminator',
@@ -701,7 +701,7 @@ export const PARTICLE_COUNTER_ROUTES: readonly Route[] = [
      * 这一手量的是"槽口在不在那条线上"，不是绝对立体角；绝对值的 0.067 是算的（26/17 的几何）。
      */
     id: 'make/particle-collector',
-    name: '颗粒计数器收集槽制造',
+    name: 'Particle Counter Collection Trough Manufacturing', name_zh: '颗粒计数器收集槽制造',
     produces: [
       {
         item: 'plant/particle-counter/collection',
@@ -775,7 +775,7 @@ export const PARTICLE_COUNTER_ROUTES: readonly Route[] = [
      * 所以 0.05 A/W 这个数带着 ±30 % 的不确定度（不影响 0.1 µm 的结论，只影响 SNR）。
      */
     id: 'make/particle-detector',
-    name: '颗粒计数器探测头制造',
+    name: 'Particle Counter Detector Head Manufacturing', name_zh: '颗粒计数器探测头制造',
     produces: [
       {
         item: 'plant/particle-counter/detector',
@@ -852,7 +852,7 @@ export const PARTICLE_COUNTER_ROUTES: readonly Route[] = [
      * `mat/` 里没有低温热电偶；K 型要镍铬，而镍链是圆的）。
      */
     id: 'make/particle-coldfinger',
-    name: '颗粒计数器冷指制造',
+    name: 'Particle Counter Cold Finger Manufacturing', name_zh: '颗粒计数器冷指制造',
     produces: [
       {
         item: 'plant/particle-counter/cold-finger',
@@ -912,7 +912,7 @@ export const PARTICLE_COUNTER_ROUTES: readonly Route[] = [
      * 这一条写进注释是因为它是个缺口：**38 dB 是算的，不是测的。**
      */
     id: 'make/particle-lockin',
-    name: '颗粒计数器锁相同步检波制造',
+    name: 'Particle Counter Lock-In Synchronous Detection Manufacturing', name_zh: '颗粒计数器锁相同步检波制造',
     produces: [
       {
         item: 'plant/particle-counter/lockin',
@@ -970,7 +970,7 @@ export const PARTICLE_COUNTER_ROUTES: readonly Route[] = [
      * 也是 0.1 mm 步距能"靠限位块"的前提。
      */
     id: 'make/particle-stage',
-    name: '颗粒计数器片子台制造',
+    name: 'Particle Counter Wafer Stage Manufacturing', name_zh: '颗粒计数器片子台制造',
     produces: [
       {
         item: 'plant/particle-counter/stage',
@@ -1023,7 +1023,7 @@ export const PARTICLE_COUNTER_ROUTES: readonly Route[] = [
      * 不能用铝。这一条是 193 nm 与 500 nm 的第二处不同。
      */
     id: 'make/particle-darkbox',
-    name: '颗粒计数器暗箱制造',
+    name: 'Particle Counter Dark Box Manufacturing', name_zh: '颗粒计数器暗箱制造',
     produces: [
       {
         item: 'plant/particle-counter/dark-box',
@@ -1098,7 +1098,7 @@ export const PARTICLE_COUNTER_ROUTES: readonly Route[] = [
      * 而"0.09"那一侧是同一颗颗粒的误差棒**，不是另一个档。
      */
     id: 'make/wafer-inspect-193',
-    name: '检验后晶圆制造',
+    name: 'Inspected Wafer Manufacturing', name_zh: '检验后晶圆制造',
     produces: [
       {
         item: 'mat/wafer-inspected',
@@ -1182,7 +1182,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/particle-counter',
-    name: '193 nm 暗场颗粒计数器装配',
+    name: '193 nm Dark-Field Particle Counter Assembly', name_zh: '193 nm 暗场颗粒计数器装配',
     produces: [{
       item: 'plant/particle-counter',
       qty: q(1),

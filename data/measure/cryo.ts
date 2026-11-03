@@ -61,7 +61,7 @@ export const CRYO_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/dew-point-record',
-    name: '露点记录',
+    name: 'Dew-Point Record', name_zh: '露点记录',
     unit: '份',
     category: 'part',
     props: [
@@ -76,7 +76,7 @@ export const CRYO_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/dew-point-80k-record',
-    name: '80 K 阱露点记录',
+    name: '80 K Trap Dew Point Record', name_zh: '80 K 阱露点记录',
     unit: '份',
     category: 'part',
     props: [
@@ -97,7 +97,7 @@ export const CRYO_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cryo-record',
-    name: '20 K 冷量记录',
+    name: '20 K Cooling Capacity Record', name_zh: '20 K 冷量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -128,7 +128,7 @@ export const CRYO_MEASURE_ROUTES: readonly Route[] = [
      *   ④ 记录：露点 −80…−72 °C、水 0.5–1.9 ppm、重复性 0.5–1 K
      */
     id: 'measure/dew-point',
-    name: '露点测量',
+    name: 'Dew-Point Measurement', name_zh: '露点测量',
     produces: [
       {
         item: 'mat/dew-point-record',
@@ -185,7 +185,7 @@ export const CRYO_MEASURE_ROUTES: readonly Route[] = [
      *   ⑤ 记录：冷量 1.5–4 W、温度 19–22 K、降温 3–6 h、氦充装 0.8–1.5 kg、稳定度 0.2–0.5 K
      */
     id: 'measure/cryo-capacity',
-    name: '20 K 冷量测量',
+    name: '20 K Cooling Capacity Measurement', name_zh: '20 K 冷量测量',
     produces: [
       {
         item: 'mat/cryo-record',

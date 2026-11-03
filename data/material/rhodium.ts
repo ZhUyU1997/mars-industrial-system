@@ -104,7 +104,7 @@ export const RHODIUM_ITEMS: readonly Item[] = [
    * 它不是"矿"，是**把 Rh 从难溶金属相转成可溶盐**的中间体；水浸/酸浸
    * 之后 Rh 进液，Pt/Pd/Au/Ag 留在渣里（回到 Pt/Pd 线）。
    */
-  { id: 'mat/rh-fusion-cake', name: '碱熔块', unit: 'kg', category: 'material' },
+  { id: 'mat/rh-fusion-cake', name: 'Alkali Fusion Cake', name_zh: '碱熔块', unit: 'kg', category: 'material' },
 
   /**
    * Rh 氯化液。**Rh 3.7–3.9 g/L，以 RhCl₆³⁻ 存在。**
@@ -114,7 +114,7 @@ export const RHODIUM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rh-chloride-solution',
-    name: 'Rh 氯化液',
+    name: 'Rh Chloride Solution', name_zh: 'Rh 氯化液',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'rh', kind: 'range', min: 1, max: 10, unit: 'g/L', dir: 'atLeast' }],
@@ -127,7 +127,7 @@ export const RHODIUM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ammonium-rhodium-chloride',
-    name: '氯铑酸铵',
+    name: 'Ammonium Chlororhodate', name_zh: '氯铑酸铵',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 100, unit: '%', dir: 'atLeast' }],
@@ -136,25 +136,25 @@ export const RHODIUM_ITEMS: readonly Item[] = [
   // ═══ 七个零件 ═══
 
   /** 碱熔炉。600–800 °C、石墨/刚玉坩埚、NaOH/NaHSO₄ 熔体。 */
-  { id: 'plant/rh-refinery/fusion-furnace', name: '铑精炼碱熔炉', unit: '件', category: 'part' },
+  { id: 'plant/rh-refinery/fusion-furnace', name: 'Rhodium Refining Alkali Fusion Furnace', name_zh: '铑精炼碱熔炉', unit: '件', category: 'part' },
 
   /** 浸出槽。80–100 °C、32 % HCl + Cl₂、100–300 kPa、PTFE 衬里。 */
-  { id: 'plant/rh-refinery/leach-tank', name: '铑精炼浸出槽', unit: '件', category: 'part' },
+  { id: 'plant/rh-refinery/leach-tank', name: 'Rhodium Refining Leaching Tank', name_zh: '铑精炼浸出槽', unit: '件', category: 'part' },
 
   /** 氯化柱。Cl₂ 分布器 + 填料，RhCl₆³⁻ 在此形成；与浸出槽串联。 */
-  { id: 'plant/rh-refinery/chlorination-column', name: '铑精炼氯化柱', unit: '件', category: 'part' },
+  { id: 'plant/rh-refinery/chlorination-column', name: 'Rhodium Refining Chlorination Column', name_zh: '铑精炼氯化柱', unit: '件', category: 'part' },
 
   /** 沉淀槽。20–60 °C、NH₄Cl 加料、慢搅 4–6 h；316L + PTFE。 */
-  { id: 'plant/rh-refinery/precipitator', name: '铑精炼沉淀槽', unit: '件', category: 'part' },
+  { id: 'plant/rh-refinery/precipitator', name: 'Rhodium Refining Precipitation Tank', name_zh: '铑精炼沉淀槽', unit: '件', category: 'part' },
 
   /** 还原炉。700–900 °C、H₂、石英管/刚玉坩埚；把铵盐还原成海绵 Rh。 */
-  { id: 'plant/rh-refinery/reduction-furnace', name: '铑精炼还原炉', unit: '件', category: 'part' },
+  { id: 'plant/rh-refinery/reduction-furnace', name: 'Rhodium Refining Reduction Furnace', name_zh: '铑精炼还原炉', unit: '件', category: 'part' },
 
   /** 碱洗塔。NaOH 循环吸收 Cl₂/HCl/SO₂；PTFE 填料 + 316L 塔体。 */
-  { id: 'plant/rh-refinery/scrubber', name: '铑精炼碱洗塔', unit: '件', category: 'part' },
+  { id: 'plant/rh-refinery/scrubber', name: 'Rhodium Refining Alkali Wash Tower', name_zh: '铑精炼碱洗塔', unit: '件', category: 'part' },
 
   /** 机架与管路。型材焊接 + 法兰 + 耐酸垫。 */
-  { id: 'plant/rh-refinery/frame', name: '铑精炼机架与管路', unit: '件', category: 'part' },
+  { id: 'plant/rh-refinery/frame', name: 'Rhodium Refining Frame and Piping', name_zh: '铑精炼机架与管路', unit: '件', category: 'part' },
 ];
 
 /**
@@ -166,7 +166,7 @@ export const RHODIUM_ITEMS: readonly Item[] = [
  */
 export const RHODIUM_REFINERY: Item = {
   id: 'plant/rh-refinery',
-  name: '铑精炼装置',
+  name: 'Rhodium Refining Plant', name_zh: '铑精炼装置',
   unit: '套',
   category: 'machine',
   holds: [
@@ -202,7 +202,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/rh-fusion-cake',
-    name: '碱熔块制备',
+    name: 'Alkali Fusion Cake Production', name_zh: '碱熔块制备',
     rate: { hours: q(24) },
     produces: [
       { item: 'mat/rh-fusion-cake', qty: q(1400) },
@@ -260,7 +260,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/rh-chloride-solution',
-    name: 'Rh 氯化液制备',
+    name: 'Rh Chloride Solution Production', name_zh: 'Rh 氯化液制备',
     rate: { hours: q(24) },
     produces: [
       {
@@ -317,7 +317,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/ammonium-rhodium-chloride',
-    name: '氯铑酸铵制备',
+    name: 'Ammonium Chlororhodate Production', name_zh: '氯铑酸铵制备',
     rate: { hours: q(16) },
     produces: [
       {
@@ -374,7 +374,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/rhodium',
-    name: '铑制备',
+    name: 'Rhodium Production', name_zh: '铑制备',
     rate: { hours: q(24) },
     produces: [
       {
@@ -441,7 +441,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
   /** 碱熔炉：耐火料 300 + 45 钢 300 + 碳 100 + 电阻丝 30 → 1 件。 */
   {
     id: 'make/rh-fusion-furnace',
-    name: '铑精炼碱熔炉制造',
+    name: 'Rhodium Refining Alkali Fusion Furnace Manufacturing', name_zh: '铑精炼碱熔炉制造',
     rate: { hours: q(32) },
     produces: [{ item: 'plant/rh-refinery/fusion-furnace', qty: q(1) }],
     uses: [
@@ -462,7 +462,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
   /** 浸出槽：316L 500 + PTFE 40 + 45 钢 50 → 1 件。 */
   {
     id: 'make/rh-leach-tank',
-    name: '铑精炼浸出槽制造',
+    name: 'Rhodium Refining Leaching Tank Manufacturing', name_zh: '铑精炼浸出槽制造',
     rate: { hours: q(24) },
     produces: [{ item: 'plant/rh-refinery/leach-tank', qty: q(1) }],
     uses: [
@@ -482,7 +482,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
   /** 氯化柱：316L 200 + PTFE 60 + 玻璃 20 → 1 件。 */
   {
     id: 'make/rh-chlorination-column',
-    name: '铑精炼氯化柱制造',
+    name: 'Rhodium Refining Chlorination Column Manufacturing', name_zh: '铑精炼氯化柱制造',
     rate: { hours: q(20) },
     produces: [{ item: 'plant/rh-refinery/chlorination-column', qty: q(1) }],
     uses: [
@@ -502,7 +502,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
   /** 沉淀槽：316L 400 + PTFE 30 + 45 钢 30 → 1 件。 */
   {
     id: 'make/rh-precipitator',
-    name: '铑精炼沉淀槽制造',
+    name: 'Rhodium Refining Precipitation Tank Manufacturing', name_zh: '铑精炼沉淀槽制造',
     rate: { hours: q(20) },
     produces: [{ item: 'plant/rh-refinery/precipitator', qty: q(1) }],
     uses: [
@@ -522,7 +522,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
   /** 还原炉：316L 150 + 耐火料 100 + 电阻丝 15 + 石英 15 → 1 件。 */
   {
     id: 'make/rh-reduction-furnace',
-    name: '铑精炼还原炉制造',
+    name: 'Rhodium Refining Reduction Furnace Manufacturing', name_zh: '铑精炼还原炉制造',
     rate: { hours: q(24) },
     produces: [{ item: 'plant/rh-refinery/reduction-furnace', qty: q(1) }],
     uses: [
@@ -543,7 +543,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
   /** 碱洗塔：316L 150 + PTFE 40 + 玻璃纤维 10 → 1 件。 */
   {
     id: 'make/rh-scrubber',
-    name: '铑精炼碱洗塔制造',
+    name: 'Rhodium Refining Alkali Wash Tower Manufacturing', name_zh: '铑精炼碱洗塔制造',
     rate: { hours: q(16) },
     produces: [{ item: 'plant/rh-refinery/scrubber', qty: q(1) }],
     uses: [
@@ -563,7 +563,7 @@ export const RHODIUM_ROUTES: readonly Route[] = [
   /** 机架：钢板 200 → 1 件。 */
   {
     id: 'make/rh-frame',
-    name: '铑精炼机架与管路制造',
+    name: 'Rhodium Refining Frame and Piping Manufacturing', name_zh: '铑精炼机架与管路制造',
     rate: { hours: q(12) },
     produces: [{ item: 'plant/rh-refinery/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(200) }] }],
@@ -596,7 +596,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/rh-refinery',
-    name: '铑精炼装置装配',
+    name: 'Rhodium Refining Plant Assembly', name_zh: '铑精炼装置装配',
     produces: [{
       item: 'plant/rh-refinery',
       qty: q(1),

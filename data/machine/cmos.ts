@@ -456,7 +456,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cmos-nsd-wafer',
-    name: 'n⁺ 源漏注入片',
+    name: 'n⁺ Source/Drain Implanted Wafer', name_zh: 'n⁺ 源漏注入片',
     unit: '片',
     category: 'part',
   },
@@ -468,7 +468,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cmos-sd-implanted-wafer',
-    name: 'n⁺/p⁺ 源漏注入片',
+    name: 'n⁺/p⁺ Source/Drain Implanted Wafer', name_zh: 'n⁺/p⁺ 源漏注入片',
     unit: '片',
     category: 'part',
   },
@@ -489,7 +489,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cmos-sd-wafer',
-    name: '源漏激活片',
+    name: 'Source/Drain Activated Wafer', name_zh: '源漏激活片',
     unit: '片',
     category: 'part',
     props: [
@@ -516,7 +516,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/cmos-inverter-general',
-    name: '单级 CMOS 反相器测试结构',
+    name: 'Single-Stage CMOS Inverter Test Structure', name_zh: '单级 CMOS 反相器测试结构',
     unit: '件',
     category: 'part',
     props: [
@@ -543,7 +543,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/inverter-layout-general',
-    name: '反相器 5 层版图数据集',
+    name: 'Inverter 5-Layer Layout Dataset', name_zh: '反相器 5 层版图数据集',
     unit: '件',
     category: 'part',
     props: [
@@ -578,7 +578,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/contact-tlm-general',
-    name: '接触 TLM 测试结构',
+    name: 'Contact TLM Test Structure', name_zh: '接触 TLM 测试结构',
     unit: '件',
     category: 'part',
     props: [
@@ -601,7 +601,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/contacted-wafer',
-    name: '做完 Al 接触孔的 device 片',
+    name: 'Device Wafer with Completed Al Contact Holes', name_zh: '做完 Al 接触孔的 device 片',
     unit: '片',
     category: 'part',
     props: [
@@ -627,7 +627,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/w-plug-wafer',
-    name: 'W plug 片',
+    name: 'W Plug Wafer', name_zh: 'W plug 片',
     unit: '片',
     category: 'part',
     props: [
@@ -663,7 +663,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/inverter-contacted-wafer',
-    name: '反相器接触片',
+    name: 'Inverter Contacted Wafer', name_zh: '反相器接触片',
     unit: '片',
     category: 'part',
     props: [
@@ -688,7 +688,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/via-layer',
-    name: '在 2 层大马士革上开通孔',
+    name: '2-Layer Damascene Via Opening', name_zh: '在 2 层大马士革上开通孔',
     unit: '片',
     category: 'part',
     props: [
@@ -720,7 +720,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cu-via-layer',
-    name: 'Cu 通孔片',
+    name: 'Cu Via Wafer', name_zh: 'Cu 通孔片',
     unit: '片',
     category: 'part',
     props: [
@@ -755,7 +755,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/dual-damascene-layer',
-    name: 'via-first 双大马士革片',
+    name: 'Via-First Dual Damascene Wafer', name_zh: 'via-first 双大马士革片',
     unit: '片',
     category: 'part',
     props: [
@@ -783,7 +783,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/via-chain-general',
-    name: '2 层金属通孔链',
+    name: '2-Layer Metal Via Chain', name_zh: '2 层金属通孔链',
     unit: '件',
     category: 'part',
     props: [
@@ -809,7 +809,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/overlay-vernier-general',
-    name: '套刻 vernier 掩模',
+    name: 'Overlay Vernier Mask', name_zh: '套刻 vernier 掩模',
     unit: '件',
     category: 'part',
     props: [
@@ -833,7 +833,7 @@ export const CMOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cu-bts-wafer',
-    name: 'Cu/TiN/栅氧 MOS 电容专门试样',
+    name: 'Cu/TiN/Gate Oxide MOS Capacitor Dedicated Sample', name_zh: 'Cu/TiN/栅氧 MOS 电容专门试样',
     unit: '片',
     category: 'part',
     props: [
@@ -869,7 +869,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 才是大头，一批 3 h。
      */
     id: 'make/cmos-nsd',
-    name: 'n⁺ 源漏注入',
+    name: 'n⁺ Source/Drain Implantation', name_zh: 'n⁺ 源漏注入',
     produces: [{ item: 'mat/cmos-nsd-wafer', qty: q(1) }],
     uses: [
       {
@@ -958,7 +958,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 固溶度封顶（R8①/⑥）。若团簇，这条 p⁺ 不成立，记缺口。
      */
     id: 'make/implant-p-source-drain',
-    name: 'p⁺ 源漏注入',
+    name: 'p⁺ Source/Drain Implantation', name_zh: 'p⁺ 源漏注入',
     produces: [{ item: 'mat/cmos-sd-implanted-wafer', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/cmos-nsd-wafer', qty: q(1) }] },
@@ -1038,7 +1038,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * p⁺ 的低端是理想值、高端是固溶度封顶，不是同一个物理状态（R8①/⑥）。
      */
     id: 'make/cmos-activation',
-    name: '源漏激活',
+    name: 'Source/Drain Activation', name_zh: '源漏激活',
     produces: [
       {
         item: 'mat/cmos-sd-wafer',
@@ -1099,7 +1099,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 高 k 是并列的 `make/device-wafer-highk`，不是同一条的 AND 项。
      */
     id: 'make/cmos-silicide',
-    name: '自对准硅化物片制造',
+    name: 'Self-Aligned Silicide Wafer Manufacturing', name_zh: '自对准硅化物片制造',
     produces: [
       {
         item: 'mat/silicide-wafer',
@@ -1172,7 +1172,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 时间：光刻 0.5 h + 蒸铝/剥离 1.5 h + 检验 0.5 h + 装片/传片 ≈ 4 h。
      */
     id: 'make/cmos-inverter',
-    name: '单级 CMOS 反相器测试结构制造',
+    name: 'Single-Stage CMOS Inverter Test Structure Manufacturing', name_zh: '单级 CMOS 反相器测试结构制造',
     produces: [
       {
         item: 'std/cmos-inverter-general',
@@ -1246,7 +1246,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 时间：光刻 0.5 + RIE 0.5 + ALD 1–2 + 蒸铝/剥离 1.5 + 合金 1 + 装卸 ≈ 6 h。
      */
     id: 'make/cmos-contact-tlm',
-    name: '接触 TLM 测试结构制造',
+    name: 'Contact TLM Test Structure Manufacturing', name_zh: '接触 TLM 测试结构制造',
     produces: [
       {
         item: 'std/contact-tlm-general',
@@ -1352,7 +1352,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * + 装卸 ≈ 6 h。
      */
     id: 'make/cmos-contact-hole',
-    name: '做完 Al 接触孔的 device 片制造',
+    name: 'Device Wafer with Completed Al Contact Holes Manufacturing', name_zh: '做完 Al 接触孔的 device 片制造',
     produces: [
       {
         item: 'mat/contacted-wafer',
@@ -1472,7 +1472,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * + 装卸 ≈ 6 h。
      */
     id: 'make/cmos-inverter-contact',
-    name: '反相器接触片制造',
+    name: 'Inverter Contacted Wafer Manufacturing', name_zh: '反相器接触片制造',
     produces: [
       {
         item: 'mat/inverter-contacted-wafer',
@@ -1581,7 +1581,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * DRC，也没有套刻实测；前道片是否按同一版图制造要靠版图与工艺共同保证。
      */
     id: 'make/cmos-inverter-contacted',
-    name: '单级 CMOS 反相器测试结构制造',
+    name: 'Single-Stage CMOS Inverter Test Structure Manufacturing', name_zh: '单级 CMOS 反相器测试结构制造',
     produces: [
       {
         item: 'std/cmos-inverter-general',
@@ -1655,7 +1655,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 时间：光刻 0.5 + RIE 0.5 + 蒸铝/回蚀 2 + 合金 1 + 装卸 ≈ 6 h。
      */
     id: 'make/damascene-via',
-    name: '在 2 层大马士革上开通孔制造',
+    name: '2-Layer Damascene Via Opening Manufacturing', name_zh: '在 2 层大马士革上开通孔制造',
     produces: [
       {
         item: 'mat/via-layer',
@@ -1788,7 +1788,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * CMP 1.5 + 退火 1 + 装卸 ≈ 9 h。
      */
     id: 'make/damascene-via-cu',
-    name: 'Cu 通孔片制造',
+    name: 'Cu Via Wafer Manufacturing', name_zh: 'Cu 通孔片制造',
     produces: [
       {
         item: 'mat/cu-via-layer',
@@ -1925,7 +1925,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 时间：光刻 0.5 + 蒸铝/剥离 1.5 + 检验 0.5 + 装卸 ≈ 4 h。
      */
     id: 'make/via-chain',
-    name: '2 层金属通孔链制造',
+    name: '2-Layer Metal Via Chain Manufacturing', name_zh: '2 层金属通孔链制造',
     produces: [
       {
         item: 'std/via-chain-general',
@@ -2003,7 +2003,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 时间：光刻 0.5 + 蒸铝/剥离 1.5 + 检验 0.5 + 装卸 ≈ 4 h。
      */
     id: 'make/via-chain-cu',
-    name: '2 层金属通孔链制造',
+    name: '2-Layer Metal Via Chain Manufacturing', name_zh: '2 层金属通孔链制造',
     produces: [
       {
         item: 'std/via-chain-general',
@@ -2107,7 +2107,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 电镀 1.5 + CMP 2 + 退火 1 + 装卸 ≈ 11 h。
      */
     id: 'make/dual-damascene',
-    name: 'via-first 双大马士革片制造',
+    name: 'Via-First Dual Damascene Wafer Manufacturing', name_zh: 'via-first 双大马士革片制造',
     produces: [
       {
         item: 'mat/dual-damascene-layer',
@@ -2255,7 +2255,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 时间：光刻 0.5 + 蒸铝/剥离 1.5 + 检验 0.5 + 装卸 ≈ 4 h。
      */
     id: 'make/via-chain-dual',
-    name: '2 层金属通孔链制造',
+    name: '2-Layer Metal Via Chain Manufacturing', name_zh: '2 层金属通孔链制造',
     produces: [
       {
         item: 'std/via-chain-general',
@@ -2348,7 +2348,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 退火 1 + 装卸 ≈ 9 h。
      */
     id: 'make/cmos-w-plug',
-    name: 'W plug 片制造',
+    name: 'W Plug Wafer Manufacturing', name_zh: 'W plug 片制造',
     produces: [
       {
         item: 'mat/w-plug-wafer',
@@ -2479,7 +2479,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 若是全片注入，B⁺ 会把 n⁺ 源漏补偿掉。这一条是并列候选的边界。
      */
     id: 'make/implant-p-source-drain-bf3',
-    name: 'BF₃ p⁺ 源漏注入',
+    name: 'BF₃ p⁺ Source/Drain Implantation', name_zh: 'BF₃ p⁺ 源漏注入',
     produces: [
       {
         item: 'mat/cmos-sd-wafer',
@@ -2548,7 +2548,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 没有通孔；Cu 直接贴在 TiN/栅氧上。rate 6 h。
      */
     id: 'make/cu-bts-capacitor',
-    name: 'Cu/TiN/栅氧 MOS 电容专门试样制造',
+    name: 'Cu/TiN/Gate Oxide MOS Capacitor Dedicated Sample Manufacturing', name_zh: 'Cu/TiN/栅氧 MOS 电容专门试样制造',
     produces: [
       {
         item: 'mat/cu-bts-wafer',
@@ -2642,7 +2642,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 只写温度/压力，1.5 s 记在步骤里。
      */
     id: 'make/cmos-activation-long',
-    name: '长时源漏激活',
+    name: 'Long-Time Source/Drain Activation', name_zh: '长时源漏激活',
     produces: [
       {
         item: 'mat/cmos-sd-wafer',
@@ -2693,7 +2693,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * e-beam 直写分辨率够 0.1 µm，但套刻测量仍只到 5/2 µm 框。
      */
     id: 'make/overlay-vernier-mask',
-    name: '套刻 vernier 掩模制造',
+    name: 'Overlay Vernier Mask Manufacturing', name_zh: '套刻 vernier 掩模制造',
     produces: [
       {
         item: 'std/overlay-vernier-general',
@@ -2793,7 +2793,7 @@ export const CMOS_ROUTES: readonly Route[] = [
      * 30×25 µm 与 5 µm 规则是设计窗口，不是仿真结果。
      */
     id: 'make/inverter-layout-general',
-    name: '反相器 5 层版图数据集制造',
+    name: 'Inverter 5-Layer Layout Dataset Manufacturing', name_zh: '反相器 5 层版图数据集制造',
     produces: [
       {
         item: 'std/inverter-layout-general',

@@ -48,7 +48,7 @@ export const IRON_CORE_ROUTES: readonly Route[] = [
      * 片间绝缘是唯一的要求 —— 它决定涡流损耗，不决定能不能转。
      */
     id: 'make/motor-stator-ironcore',
-    name: '7.5 kW 四极电机定子制造',
+    name: '7.5 kW Four-Pole Motor Stator Manufacturing', name_zh: '7.5 kW 四极电机定子制造',
     produces: [{ item: 'std/motor-7.5kw-4p/stator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron', qty: q(1) }] },
@@ -76,7 +76,7 @@ export const IRON_CORE_ROUTES: readonly Route[] = [
      * 那是两条老路线，不在这里重复。
      */
     id: 'make/motor-rotor-ironcore',
-    name: '7.5 kW 四极电机转子制造',
+    name: '7.5 kW Four-Pole Motor Rotor Manufacturing', name_zh: '7.5 kW 四极电机转子制造',
     produces: [{ item: 'std/motor-7.5kw-4p/rotor', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron', qty: q(1) }] },

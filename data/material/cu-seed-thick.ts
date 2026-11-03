@@ -41,7 +41,7 @@ export const CU_SEED_THICK_ROUTES: readonly Route[] = [
      * 电阻率 2.5–4 µΩ·cm、氯 0.2–0.5 at%。
      */
     id: 'make/cu-seed-cvd-thick',
-    name: '长了铜籽晶的片制造',
+    name: 'Wafer with Copper Seed Layer Manufacturing', name_zh: '长了铜籽晶的片制造',
     produces: [
       {
         item: 'mat/cu-seed-wafer',

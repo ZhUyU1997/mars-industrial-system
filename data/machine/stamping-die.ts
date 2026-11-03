@@ -38,7 +38,7 @@ export const STAMPING_DIE_ITEMS: readonly Item[] = [
    * 它是**工具**：一副模具冲几万件（本层水平），磨钝了要重磨刃口。
    * 所以进 `needs`，不进 `uses`。
    */
-  { id: 'std/stamping-die-general', name: '冲模', unit: '套', category: 'part' },
+  { id: 'std/stamping-die-general', name: 'Stamping Die', name_zh: '冲模', unit: '套', category: 'part' },
 ];
 
 export const STAMPING_DIE_ROUTES: readonly Route[] = [
@@ -52,7 +52,7 @@ export const STAMPING_DIE_ROUTES: readonly Route[] = [
      * 再压、再看。三十六个槽要一个一个配。
      */
     id: 'make/stamping-die',
-    name: '冲模制造',
+    name: 'Stamping Die Manufacturing', name_zh: '冲模制造',
     produces: [{ item: 'std/stamping-die-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] },

@@ -154,7 +154,7 @@ export const CGH_EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cgh-e-beam/laser-stage',
-    name: 'CGH 写入台的激光干涉闭环工作台',
+    name: 'CGH Writer Stage Laser-Interferometer Closed-Loop Stage', name_zh: 'CGH 写入台的激光干涉闭环工作台',
     unit: '件',
     category: 'part',
     props: [
@@ -179,7 +179,7 @@ export const CGH_EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cgh-e-beam/thermal-shield',
-    name: '真空腔温控罩',
+    name: 'Vacuum Chamber Thermal Shield', name_zh: '真空腔温控罩',
     unit: '件',
     category: 'part',
     props: [
@@ -203,7 +203,7 @@ export const CGH_EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cgh-e-beam/charge-bleed',
-    name: '电荷泄放源',
+    name: 'Charge Bleed Source', name_zh: '电荷泄放源',
     unit: '件',
     category: 'part',
     props: [
@@ -227,7 +227,7 @@ export const CGH_EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cgh-e-beam-writer',
-    name: 'CGH 写入机',
+    name: 'CGH Writer', name_zh: 'CGH 写入机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'pressure', min: 1e-7, max: 1e-3 }],
@@ -259,7 +259,7 @@ export const CGH_EBEAM_ROUTES: readonly Route[] = [
      * （X 射线干涉仪，Si (111) 0.3135 nm）→ 闭环整定 0.5–1 µm。
      */
     id: 'make/cgh-e-beam-laser-stage',
-    name: 'CGH 写入台的激光干涉闭环工作台制造',
+    name: 'CGH Writer Stage Laser-Interferometer Closed-Loop Stage Manufacturing', name_zh: 'CGH 写入台的激光干涉闭环工作台制造',
     produces: [
       {
         item: 'plant/cgh-e-beam/laser-stage',
@@ -328,7 +328,7 @@ export const CGH_EBEAM_ROUTES: readonly Route[] = [
      * 外层 1 mm 钢板 + 15 mm 矿棉，内层 Peltier 4 片 + 热敏电阻 3 只。
      */
     id: 'make/cgh-e-beam-thermal-shield',
-    name: '真空腔温控罩制造',
+    name: 'Vacuum Chamber Thermal Shield Manufacturing', name_zh: '真空腔温控罩制造',
     produces: [
       {
         item: 'plant/cgh-e-beam/thermal-shield',
@@ -376,7 +376,7 @@ export const CGH_EBEAM_ROUTES: readonly Route[] = [
      * 直射束（不挡工件），水冷把舟的热挡在腔壁之外。
      */
     id: 'make/cgh-e-beam-charge-bleed',
-    name: '电荷泄放源制造',
+    name: 'Charge Bleed Source Manufacturing', name_zh: '电荷泄放源制造',
     produces: [
       {
         item: 'plant/cgh-e-beam/charge-bleed',
@@ -430,7 +430,7 @@ export const CGH_EBEAM_ROUTES: readonly Route[] = [
      * 机器，装一次用一次，不是写入机的一部分（所以它不在 `needs` 里）。
      */
     id: 'make/cgh-e-beam-writer',
-    name: 'CGH 写入机制造',
+    name: 'CGH Writer Manufacturing', name_zh: 'CGH 写入机制造',
     produces: [
       {
         item: 'plant/cgh-e-beam-writer',

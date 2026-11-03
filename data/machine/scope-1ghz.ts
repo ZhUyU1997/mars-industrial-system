@@ -89,7 +89,7 @@ export const SCOPE_1GHZ_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/scope-1ghz',
-    name: '1 GHz 数字示波器',
+    name: '1 GHz Digital Oscilloscope', name_zh: '1 GHz 数字示波器',
     unit: '台',
     category: 'machine',
     props: [
@@ -114,7 +114,7 @@ export const SCOPE_1GHZ_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/scope-1ghz/frontend',
-    name: '1 GHz 前端',
+    name: '1 GHz Front End', name_zh: '1 GHz 前端',
     unit: '件',
     category: 'part',
     props: [
@@ -135,7 +135,7 @@ export const SCOPE_1GHZ_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/scope-1ghz/sample-hold',
-    name: '1 GHz 数字示波器高速采样保持',
+    name: '1 GHz Digital Oscilloscope High-Speed Sample-and-Hold', name_zh: '1 GHz 数字示波器高速采样保持',
     unit: '件',
     category: 'part',
     props: [
@@ -155,7 +155,7 @@ export const SCOPE_1GHZ_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/scope-1ghz/adc',
-    name: '1 GHz 示波器 ADC',
+    name: '1 GHz Oscilloscope ADC', name_zh: '1 GHz 示波器 ADC',
     unit: '件',
     category: 'part',
     props: [
@@ -176,7 +176,7 @@ export const SCOPE_1GHZ_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/uhf-probe',
-    name: '1 GHz 探头/同轴',
+    name: '1 GHz Probe/Coaxial', name_zh: '1 GHz 探头/同轴',
     unit: '件',
     category: 'part',
     props: [
@@ -197,7 +197,7 @@ export const SCOPE_1GHZ_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/scope-1ghz/step-source',
-    name: '1 GHz 数字示波器快阶跃源',
+    name: '1 GHz Digital Oscilloscope Fast Step Source', name_zh: '1 GHz 数字示波器快阶跃源',
     unit: '件',
     category: 'part',
     props: [
@@ -218,7 +218,7 @@ export const SCOPE_1GHZ_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/scope-frontend',
-    name: '1 GHz 前端制造',
+    name: '1 GHz Front End Manufacturing', name_zh: '1 GHz 前端制造',
     produces: [
       {
         item: 'plant/scope-1ghz/frontend',
@@ -257,7 +257,7 @@ export const SCOPE_1GHZ_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/scope-sample-hold',
-    name: '1 GHz 数字示波器高速采样保持制造',
+    name: '1 GHz Digital Oscilloscope High-Speed Sample-and-Hold Manufacturing', name_zh: '1 GHz 数字示波器高速采样保持制造',
     produces: [
       {
         item: 'plant/scope-1ghz/sample-hold',
@@ -295,7 +295,7 @@ export const SCOPE_1GHZ_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/scope-adc',
-    name: '1 GHz 示波器 ADC 制造',
+    name: '1 GHz Oscilloscope ADC Manufacturing', name_zh: '1 GHz 示波器 ADC 制造',
     produces: [
       {
         item: 'plant/scope-1ghz/adc',
@@ -334,7 +334,7 @@ export const SCOPE_1GHZ_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/uhf-probe',
-    name: '1 GHz 探头/同轴制造',
+    name: '1 GHz Probe/Coaxial Manufacturing', name_zh: '1 GHz 探头/同轴制造',
     produces: [
       {
         item: 'plant/uhf-probe',
@@ -372,7 +372,7 @@ export const SCOPE_1GHZ_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/scope-step-source',
-    name: '1 GHz 数字示波器快阶跃源制造',
+    name: '1 GHz Digital Oscilloscope Fast Step Source Manufacturing', name_zh: '1 GHz 数字示波器快阶跃源制造',
     produces: [
       {
         item: 'plant/scope-1ghz/step-source',
@@ -409,7 +409,7 @@ export const SCOPE_1GHZ_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/scope-1ghz',
-    name: '1 GHz 数字示波器装配',
+    name: '1 GHz Digital Oscilloscope Assembly', name_zh: '1 GHz 数字示波器装配',
     produces: [
       {
         item: 'plant/scope-1ghz',

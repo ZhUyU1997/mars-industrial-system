@@ -21,7 +21,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/asphere-150-record',
-    name: 'φ150 非球面检测记录',
+    name: 'φ150 Asphere Inspection Record', name_zh: 'φ150 非球面检测记录',
     unit: '份',
     category: 'part',
     props: [
@@ -44,7 +44,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/asphere-150',
-    name: 'φ150 非球面检测测量',
+    name: 'φ150 Asphere Inspection Measurement', name_zh: 'φ150 非球面检测测量',
     rate: { hours: q(8) },
     produces: [
       {

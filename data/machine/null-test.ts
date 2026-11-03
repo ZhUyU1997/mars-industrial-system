@@ -354,7 +354,7 @@ export const NULL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test',
-    name: '椭球共轭零位检验站',
+    name: 'Ellipsoid Conjugate Null Test Station', name_zh: '椭球共轭零位检验站',
     unit: '台',
     category: 'machine',
     props: [
@@ -395,7 +395,7 @@ export const NULL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/hindle',
-    name: 'Hindle 球',
+    name: 'Hindle Sphere', name_zh: 'Hindle 球',
     unit: '件',
     category: 'part',
     props: [
@@ -418,7 +418,7 @@ export const NULL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/tsphere',
-    name: 'λ/4 透射球',
+    name: 'λ/4 Transmission Sphere', name_zh: 'λ/4 透射球',
     unit: '件',
     category: 'part',
     props: [
@@ -457,7 +457,7 @@ export const NULL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/null-lens',
-    name: '零位镜组',
+    name: 'Null Lens Assembly', name_zh: '零位镜组',
     unit: '件',
     category: 'part',
     props: [
@@ -512,7 +512,7 @@ export const NULL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/stitch-stage',
-    name: '1 µm 亚口径扫描台',
+    name: '1 µm Sub-Aperture Scanning Stage', name_zh: '1 µm 亚口径扫描台',
     unit: '件',
     category: 'part',
     props: [
@@ -530,7 +530,7 @@ export const NULL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/focal-screen',
-    name: '零位检验站斜率验收屏',
+    name: 'Null Test Station Slope Acceptance Screen', name_zh: '零位检验站斜率验收屏',
     unit: '件',
     category: 'part',
     props: [
@@ -563,7 +563,7 @@ export const NULL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/pdi-plate',
-    name: '零位检验站点衍射板',
+    name: 'Null Test Station Point Diffraction Plate', name_zh: '零位检验站点衍射板',
     unit: '件',
     category: 'part',
     props: [
@@ -593,7 +593,7 @@ export const NULL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/cgh',
-    name: '零位检验站计算全息板',
+    name: 'Null Test Station Computer-Generated Hologram Plate', name_zh: '零位检验站计算全息板',
     unit: '件',
     category: 'part',
     props: [
@@ -614,7 +614,7 @@ export const NULL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/cgh-blank',
-    name: 'CGH 基板',
+    name: 'CGH Substrate', name_zh: 'CGH 基板',
     unit: '件',
     category: 'part',
     props: [
@@ -632,7 +632,7 @@ export const NULL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/cgh-mount',
-    name: 'CGH 五维调整架',
+    name: 'CGH Five-Axis Adjustable Mount', name_zh: 'CGH 五维调整架',
     unit: '件',
     category: 'part',
     props: [
@@ -676,7 +676,7 @@ export const NULL_TEST_ROUTES: readonly Route[] = [
      * 测法是使用说明书，不是这条路线。
      */
     id: 'make/null-test-hindle',
-    name: 'Hindle 球制造',
+    name: 'Hindle Sphere Manufacturing', name_zh: 'Hindle 球制造',
     produces: [
       {
         item: 'plant/null-test/hindle',
@@ -750,7 +750,7 @@ export const NULL_TEST_ROUTES: readonly Route[] = [
      * f/# 必须 ≤ 5.5（锥角 0.09 rad），这一点**没有余量**：本层没有别的 f/5.5 球。
      */
     id: 'make/null-test-tsphere',
-    name: 'λ/4 透射球制造',
+    name: 'λ/4 Transmission Sphere Manufacturing', name_zh: 'λ/4 透射球制造',
     produces: [
       {
         item: 'plant/null-test/tsphere',
@@ -806,7 +806,7 @@ export const NULL_TEST_ROUTES: readonly Route[] = [
      * 真正要用它的是另一件事：定顶点 R（1 µm → 矢高 95.7 nm），补拼接的零空间。
      */
     id: 'make/null-test-stitch-stage',
-    name: '1 µm 亚口径扫描台制造',
+    name: '1 µm Sub-Aperture Scanning Stage Manufacturing', name_zh: '1 µm 亚口径扫描台制造',
     produces: [
       {
         item: 'plant/null-test/stitch-stage',
@@ -868,7 +868,7 @@ export const NULL_TEST_ROUTES: readonly Route[] = [
      * 是三项验收里唯一一条独立于主方案的读数。两条一致，斜率这一项才算过。
      */
     id: 'make/null-test-focal-screen',
-    name: '零位检验站斜率验收屏制造',
+    name: 'Null Test Station Slope Acceptance Screen Manufacturing', name_zh: '零位检验站斜率验收屏制造',
     produces: [
       {
         item: 'plant/null-test/focal-screen',
@@ -933,7 +933,7 @@ export const NULL_TEST_ROUTES: readonly Route[] = [
      * 与 `ref-flat.ts` 的"没有氧分析仪"同一性质：缺的东西不在判据上。
      */
     id: 'make/null-test-pdi-plate',
-    name: '零位检验站点衍射板制造',
+    name: 'Null Test Station Point Diffraction Plate Manufacturing', name_zh: '零位检验站点衍射板制造',
     produces: [
       {
         item: 'plant/null-test/pdi-plate',
@@ -1046,7 +1046,7 @@ export const NULL_TEST_ROUTES: readonly Route[] = [
      * 本来就在干这件事（`litho-m3.ts` 第 1 952 行：刻在胶上再离子束刻蚀）。
      */
     id: 'make/null-test-cgh',
-    name: '零位检验站计算全息板制造',
+    name: 'Null Test Station Computer-Generated Hologram Plate Manufacturing', name_zh: '零位检验站计算全息板制造',
     produces: [
       {
         item: 'plant/null-test/cgh',
@@ -1132,7 +1132,7 @@ export const NULL_TEST_ROUTES: readonly Route[] = [
      * 否则前面那 36 h 白写。这一条是本路线唯一的设计判据。
      */
     id: 'make/null-test-cgh-mount',
-    name: 'CGH 五维调整架制造',
+    name: 'CGH Five-Axis Adjustable Mount Manufacturing', name_zh: 'CGH 五维调整架制造',
     produces: [
       {
         item: 'plant/null-test/cgh-mount',
@@ -1193,7 +1193,7 @@ export const NULL_TEST_ROUTES: readonly Route[] = [
      * 比 5 nm 的指标细 10 倍。
      */
     id: 'make/null-test-cgh-blank',
-    name: 'CGH 基板制造',
+    name: 'CGH Substrate Manufacturing', name_zh: 'CGH 基板制造',
     produces: [
       {
         item: 'plant/null-test/cgh-blank',
@@ -1283,7 +1283,7 @@ export const NULL_TEST_ROUTES: readonly Route[] = [
      * **面形精度的天花板在抛光，不在测量** —— 与 `euv-mirror.ts` 降级⑧同一句。
      */
     id: 'make/collector-null-figure',
-    name: 'EUV 收集镜坯制造',
+    name: 'EUV Collector Mirror Blank Manufacturing', name_zh: 'EUV 收集镜坯制造',
     produces: [
       {
         item: 'plant/euv-source/collector',
@@ -1383,7 +1383,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/null-test',
-    name: '椭球共轭零位检验站装配',
+    name: 'Ellipsoid Conjugate Null Test Station Assembly', name_zh: '椭球共轭零位检验站装配',
     produces: [{
       item: 'plant/null-test',
       qty: q(1),

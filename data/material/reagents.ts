@@ -69,23 +69,23 @@ export const REAGENT_ITEMS: readonly Item[] = [
    * 火星上硫极富裕但全在硫酸盐里，出来都是 SO₂；单质硫是二硫化碳的前体，
    * 而二硫化碳是黄药的另一半。
    */
-  { id: 'mat/sulfur', name: '单质硫', unit: 'kg', category: 'material' },
+  { id: 'mat/sulfur', name: 'Elemental Sulfur', name_zh: '单质硫', unit: 'kg', category: 'material' },
 
   /** 盐。卤水自然蒸发结晶，饱和食盐水 26%。氯碱的原料。 */
-  { id: 'mat/salt', name: '盐', unit: 'kg', category: 'material' },
+  { id: 'mat/salt', name: 'Salt', name_zh: '盐', unit: 'kg', category: 'material' },
 
   /** 氢氧化钠。氯碱的三分之一。做黄药的碱、调 pH、吸收酸性气体。 */
-  { id: 'mat/naoh', name: '氢氧化钠', unit: 'kg', category: 'material',
+  { id: 'mat/naoh', name: 'Sodium Hydroxide', name_zh: '氢氧化钠', unit: 'kg', category: 'material',
     props: [{ param: 'concentration', kind: 'range', min: 20, max: 99, unit: '%' }] },
 
   /** 二硫化碳。甲烷加硫，600–700 °C。黄药的硫从这里来。 */
-  { id: 'mat/cs2', name: '二硫化碳', unit: 'kg', category: 'material' },
+  { id: 'mat/cs2', name: 'Carbon Disulfide', name_zh: '二硫化碳', unit: 'kg', category: 'material' },
 
   /** 乙醛。乙炔水合，80–100 °C，汞盐催化。乙醇的前一步。 */
-  { id: 'mat/acetaldehyde', name: '乙醛', unit: 'kg', category: 'material' },
+  { id: 'mat/acetaldehyde', name: 'Acetaldehyde', name_zh: '乙醛', unit: 'kg', category: 'material' },
 
   /** 乙醇。乙醛加氢，100–150 °C。**本层唯一的 C2 醇** —— 黄药的醇从这里来。 */
-  { id: 'mat/ethanol', name: '乙醇', unit: 'kg', category: 'material' },
+  { id: 'mat/ethanol', name: 'Ethanol', name_zh: '乙醇', unit: 'kg', category: 'material' },
 
   /**
    * 黄药（乙基黄原酸钠）。乙醇 + 二硫化碳 + 氢氧化钠，常温。
@@ -93,7 +93,7 @@ export const REAGENT_ITEMS: readonly Item[] = [
    * 它是浮选的**捕收剂**：一端亲矿物表面、一端亲水，把有用矿物拽到气泡上。
    * 铜、镍、磷三次富集都靠它。
    */
-  { id: 'mat/xanthate', name: '黄药', unit: 'kg', category: 'material' },
+  { id: 'mat/xanthate', name: 'Xanthate', name_zh: '黄药', unit: 'kg', category: 'material' },
 
   /**
    * 正丁醇。两分子乙醇缩合（Guerbet 反应），200–250 °C，碱催化。
@@ -103,14 +103,14 @@ export const REAGENT_ITEMS: readonly Item[] = [
    * 但它是本层唯一能自己造的 C≥4 醇。这是"能用但不是最好"的那一类，
    * 和碳电极同理：不完美，但把断点解开了。
    */
-  { id: 'mat/butanol', name: '正丁醇', unit: 'kg', category: 'material' },
+  { id: 'mat/butanol', name: 'n-Butanol', name_zh: '正丁醇', unit: 'kg', category: 'material' },
 
   /**
    * 硫酸钠。碱加硫酸中和：2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O。
    *
    * 它自己用处只有一个：电解成过硫酸钠，也就是聚合引发剂。
    */
-  { id: 'mat/sodium-sulfate', name: '硫酸钠', unit: 'kg', category: 'material' },
+  { id: 'mat/sodium-sulfate', name: 'Sodium Sulfate', name_zh: '硫酸钠', unit: 'kg', category: 'material' },
 
   /**
    * 浮选药剂。捕收剂 + 起泡剂按 3 : 1 配。
@@ -118,7 +118,7 @@ export const REAGENT_ITEMS: readonly Item[] = [
    * 它自己不是化合物，是**配好的药剂** —— 浮选槽加的是这个，不是黄药。
    * 配比 3 : 1 是常规用量：捕收剂每吨矿几十克，起泡剂更少。
    */
-  { id: 'mat/flotation-reagent', name: '浮选药剂', unit: 'kg', category: 'consumable' },
+  { id: 'mat/flotation-reagent', name: 'Flotation Reagent', name_zh: '浮选药剂', unit: 'kg', category: 'consumable' },
 ];
 
 export const REAGENT_ROUTES: readonly Route[] = [
@@ -132,7 +132,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 缺的是一条不用有机物的路。
      */
     id: 'make/sulfur',
-    name: '硫还原',
+    name: 'Sulfur Reduction', name_zh: '硫还原',
     produces: [
       { item: 'mat/sulfur', qty: q(1000) },
       { item: 'mat/water', qty: q(1124), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -156,7 +156,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 26% 是上限，实际低了就要多晒几遍，账是线性的。
      */
     id: 'make/salt',
-    name: '卤水晒盐制备',
+    name: 'Brine Solar Salt Production', name_zh: '卤水晒盐制备',
     produces: [
       { item: 'mat/salt', qty: q(264) },
       { item: 'mat/water', qty: q(736), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -174,7 +174,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 隔膜（分开氯与氢）与镀镍电极（耐碱），换电解液就换产品。
      */
     id: 'make/naoh',
-    name: '氯碱制备',
+    name: 'Chlor-Alkali Production', name_zh: '氯碱制备',
     produces: [
       { item: 'mat/naoh', qty: q(684), gives: [{ param: 'concentration', kind: 'range', min: 40, max: 50 }] },
       { item: 'mat/chlorine', qty: q(607) },
@@ -215,7 +215,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * I⁻ 再氧化；本层没有亚硫酸盐/二氧化硫还原那一步的路线，见缺口②。
      */
     id: 'make/iodine',
-    name: '碘制备',
+    name: 'Iodine Production', name_zh: '碘制备',
     produces: [
       {
         item: 'mat/iodine',
@@ -272,7 +272,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 所以按不平衡声明。这是这一层唯一一处"产物没人接"。
      */
     id: 'make/cs2',
-    name: '二硫化碳制备',
+    name: 'Carbon Disulfide Production', name_zh: '二硫化碳制备',
     produces: [
       { item: 'mat/cs2', qty: q(1000) },
       { item: 'mat/h2s', qty: q(895), gives: [{ param: 'purity', kind: 'range', min: 85 }] },
@@ -296,7 +296,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 也没有汞的条目，所以只能写"催化"。
      */
     id: 'make/acetaldehyde',
-    name: '乙炔水合制备',
+    name: 'Acetylene Hydration Production', name_zh: '乙炔水合制备',
     produces: [{ item: 'mat/acetaldehyde', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/acetylene', qty: q(591) }] },
@@ -315,7 +315,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 这一步把 C2 的醛变成 C2 的醇 —— 黄药要的是醇，不是醛。
      */
     id: 'make/ethanol',
-    name: '乙醛加氢制备',
+    name: 'Acetaldehyde Hydrogenation Production', name_zh: '乙醛加氢制备',
     produces: [{ item: 'mat/ethanol', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/acetaldehyde', qty: q(956) }] },
@@ -335,7 +335,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 也是应该的：不是所有反应都需要加热。
      */
     id: 'make/xanthate',
-    name: '黄药合成',
+    name: 'Xanthate Synthesis', name_zh: '黄药合成',
     produces: [
       { item: 'mat/xanthate', qty: q(1000) },
       { item: 'mat/water', qty: q(125), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -359,7 +359,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 想要 MIBC，得先有 C4 的酮，那要丙烯，本层没有。
      */
     id: 'make/flotation-reagent',
-    name: '浮选药剂制造',
+    name: 'Flotation Reagent Manufacturing', name_zh: '浮选药剂制造',
     produces: [{ item: 'mat/flotation-reagent', qty: q(1364) }],
     uses: [
       { anyOf: [{ item: 'mat/xanthate', qty: q(1000) }] },
@@ -382,7 +382,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 所以这条链到 C4 就断了。
      */
     id: 'make/butanol',
-    name: '丁醇缩合制备',
+    name: 'Butanol Production by Condensation', name_zh: '丁醇缩合制备',
     produces: [
       { item: 'mat/butanol', qty: q(1000) },
       { item: 'mat/water', qty: q(244), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -401,7 +401,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 强放热，也是最没有悬念的一步 —— 它存在的唯一理由是过硫酸盐要它。
      */
     id: 'make/sodium-sulfate',
-    name: '中和制硫酸钠',
+    name: 'Sodium Sulfate Production by Neutralization', name_zh: '中和制硫酸钠',
     produces: [
       { item: 'mat/sodium-sulfate', qty: q(1000) },
       { item: 'mat/water', qty: q(254), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -429,7 +429,7 @@ export const REAGENT_ROUTES: readonly Route[] = [
      * 那是模型的简化，不是它真能在 60 °C 做过硫酸盐。
      */
     id: 'make/initiator',
-    name: '聚合引发剂制造',
+    name: 'Polymerization Initiator Manufacturing', name_zh: '聚合引发剂制造',
     produces: [
       { item: 'mat/polymerization-initiator', qty: q(1000) },
       { item: 'mat/hydrogen', qty: q(8), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5, dir: 'atLeast' }] },

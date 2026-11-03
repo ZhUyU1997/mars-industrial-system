@@ -459,7 +459,7 @@ export const UNBLOCK_AL_COOL_ROUTES: readonly Route[] = [
      *    的水套会把结壳冻到 139 mm、槽膛剩 222 mm，360 宽的阳极根本装不进去（第二节）。
      */
     id: 'make/al-cell-cooling-cast',
-    name: '铝电解槽槽壳冷却制造',
+    name: 'Aluminium Electrolysis Cell Shell Cooling Manufacturing', name_zh: '铝电解槽槽壳冷却制造',
     produces: [{ item: 'plant/aluminium-cell/shell-cooling', qty: q(1) }],
     uses: [
       /**

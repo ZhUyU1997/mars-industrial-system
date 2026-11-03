@@ -41,20 +41,20 @@ import { q } from '../../src/index.ts';
 
 export const ALIGNER_PARTS: readonly Item[] = [
   /** 碳弧灯与聚光镜。两根碳棒 + 手动进给 + 抛物面反光碗 + 石英聚光镜。 */
-  { id: 'plant/mask-aligner/lamp', name: '掩模对准曝光机碳弧灯与聚光镜', unit: '件', category: 'part' },
+  { id: 'plant/mask-aligner/lamp', name: 'Mask Aligner Carbon Arc Lamp and Condenser Lens', name_zh: '掩模对准曝光机碳弧灯与聚光镜', unit: '件', category: 'part' },
 
   /** 掩模架与对准台。压紧机构（气囊或弹簧）+ x-y-θ 微调 + 显微镜座。 */
-  { id: 'plant/mask-aligner/stage', name: '掩模对准曝光机掩模架与对准台', unit: '件', category: 'part' },
+  { id: 'plant/mask-aligner/stage', name: 'Mask Aligner Mask Holder and Alignment Stage', name_zh: '掩模对准曝光机掩模架与对准台', unit: '件', category: 'part' },
 
   /** 机架与遮光罩。暗箱、快门、防尘罩 —— 胶见光就废，整台机器在暗室里用。 */
-  { id: 'plant/mask-aligner/frame', name: '掩模对准曝光机机架与遮光罩', unit: '件', category: 'part' },
+  { id: 'plant/mask-aligner/frame', name: 'Mask Aligner Frame and Light Shield', name_zh: '掩模对准曝光机机架与遮光罩', unit: '件', category: 'part' },
 ];
 
 export const ALIGNER_ROUTES: readonly Route[] = [
   {
     /** 碳弧灯。碳棒夹持与进给机构 + 反光碗 + 石英聚光镜（石英本层有）。 */
     id: 'make/aligner-lamp',
-    name: '掩模对准曝光机碳弧灯与聚光镜制造',
+    name: 'Mask Aligner Carbon Arc Lamp and Condenser Lens Manufacturing', name_zh: '掩模对准曝光机碳弧灯与聚光镜制造',
     produces: [{ item: 'plant/mask-aligner/lamp', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/carbon-electrode-300', qty: q(2) }] },
@@ -67,7 +67,7 @@ export const ALIGNER_ROUTES: readonly Route[] = [
   {
     /** 掩模架与对准台。微调台照比较仪的进给台做（丝杠 + 导轨 + 千分旋钮）。 */
     id: 'make/aligner-stage',
-    name: '掩模对准曝光机掩模架与对准台制造',
+    name: 'Mask Aligner Mask Holder and Alignment Stage Manufacturing', name_zh: '掩模对准曝光机掩模架与对准台制造',
     produces: [{ item: 'plant/mask-aligner/stage', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -80,7 +80,7 @@ export const ALIGNER_ROUTES: readonly Route[] = [
   {
     /** 机架与遮光罩。暗箱薄板折焊 + 快门 + 防尘罩 —— 装配归机器人。 */
     id: 'make/aligner-frame',
-    name: '掩模对准曝光机机架与遮光罩制造',
+    name: 'Mask Aligner Frame and Light Shield Manufacturing', name_zh: '掩模对准曝光机机架与遮光罩制造',
     produces: [{ item: 'plant/mask-aligner/frame', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -99,7 +99,7 @@ export const ALIGNER_ROUTES: readonly Route[] = [
  */
 export const MASK_ALIGNER: Item = {
   id: 'plant/mask-aligner',
-  name: '掩模对准曝光机',
+  name: 'Mask Aligner', name_zh: '掩模对准曝光机',
   unit: '台',
   category: 'machine',
   composedOf: [
@@ -121,7 +121,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/mask-aligner',
-    name: '掩模对准曝光机装配',
+    name: 'Mask Aligner Assembly', name_zh: '掩模对准曝光机装配',
     produces: [{
       item: 'plant/mask-aligner',
       qty: q(1),

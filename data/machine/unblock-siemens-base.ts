@@ -580,7 +580,7 @@ export const UNBLOCK_SIEMENS_BASE_ROUTES: readonly Route[] = [
      *  · 底盘接热 **13 kW**，沸腾水套吃掉它要 **18 kg/h** 水（钟罩喷淋的 1/5）
      */
     id: 'make/siemens-base-cast',
-    name: '西门子反应器底盘与电极制造',
+    name: 'Siemens Reactor Base Plate and Electrodes Manufacturing', name_zh: '西门子反应器底盘与电极制造',
     produces: [{ item: 'plant/siemens-reactor/base', qty: q(1) }],
     uses: [
       /**

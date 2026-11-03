@@ -472,7 +472,7 @@ export const UNBLOCK_POLY_AGI_ROUTES: readonly Route[] = [
      *    与上一件 ⑮ 步同一条；本件只有**钝化那一步**能写两个条件。
      */
     id: 'make/polymer-agitator-cast',
-    name: '聚合物搅拌器制造',
+    name: 'Polymer Agitator Manufacturing', name_zh: '聚合物搅拌器制造',
     produces: [{ item: 'plant/polymer-plant/agitator', qty: q(1) }],
     uses: [
       /**

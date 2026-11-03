@@ -474,7 +474,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/zsm-5',
-    name: '晶种法 ZSM-5',
+    name: 'Seed-Method ZSM-5', name_zh: '晶种法 ZSM-5',
     unit: 'kg',
     category: 'material',
     props: [
@@ -495,7 +495,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/propene',
-    name: '丙烯',
+    name: 'Propylene', name_zh: '丙烯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -513,7 +513,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/c4-plus',
-    name: 'C4⁺ 馏分',
+    name: 'C4⁺ Fraction', name_zh: 'C4⁺ 馏分',
     unit: 'kg',
     category: 'material',
     props: [
@@ -529,7 +529,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/isopropanol',
-    name: '异丙醇',
+    name: 'Isopropanol', name_zh: '异丙醇',
     unit: 'kg',
     category: 'material',
     props: [
@@ -547,7 +547,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/acetone',
-    name: '丙酮',
+    name: 'Acetone', name_zh: '丙酮',
     unit: 'kg',
     category: 'material',
     props: [
@@ -571,7 +571,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ketene',
-    name: '乙烯酮',
+    name: 'Ketene', name_zh: '乙烯酮',
     unit: 'kg',
     category: 'material',
     props: [
@@ -590,7 +590,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ethyl-acetate',
-    name: '乙酸乙酯',
+    name: 'Ethyl Acetate', name_zh: '乙酸乙酯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -609,7 +609,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/acetylacetone',
-    name: '乙酰丙酮',
+    name: 'Acetylacetone', name_zh: '乙酰丙酮',
     unit: 'kg',
     category: 'material',
     props: [
@@ -640,7 +640,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/hf-anhydrous',
-    name: '无水氟化氢',
+    name: 'Anhydrous Hydrogen Fluoride', name_zh: '无水氟化氢',
     unit: 'kg',
     category: 'material',
     props: [
@@ -659,7 +659,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/hfac',
-    name: '六氟乙酰丙酮',
+    name: 'Hexafluoroacetylacetone', name_zh: '六氟乙酰丙酮',
     unit: 'kg',
     category: 'material',
     props: [
@@ -678,7 +678,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cu-hfac2',
-    name: '双(六氟乙酰丙酮)合铜(II)',
+    name: 'Bis(Hexafluoroacetylacetonato)Copper(II)', name_zh: '双(六氟乙酰丙酮)合铜(II)',
     unit: 'kg',
     category: 'material',
     props: [
@@ -696,7 +696,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/acrylonitrile',
-    name: '丙烯腈',
+    name: 'Acrylonitrile', name_zh: '丙烯腈',
     unit: 'kg',
     category: 'material',
     props: [
@@ -712,7 +712,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/acrylic-acid',
-    name: '丙烯酸',
+    name: 'Acrylic Acid', name_zh: '丙烯酸',
     unit: 'kg',
     category: 'material',
     props: [
@@ -731,7 +731,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/methyl-acrylate',
-    name: '丙烯酸甲酯',
+    name: 'Methyl Acrylate', name_zh: '丙烯酸甲酯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -749,7 +749,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/potassium-sulfate',
-    name: '硫酸钾',
+    name: 'Potassium Sulfate', name_zh: '硫酸钾',
     unit: 'kg',
     category: 'material',
     props: [
@@ -788,7 +788,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/n-propanol',
-    name: '正丙醇',
+    name: 'n-Propanol', name_zh: '正丙醇',
     unit: 'kg',
     category: 'material',
     props: [
@@ -809,7 +809,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/chloropropane',
-    name: '1-氯丙烷',
+    name: '1-Chloropropane', name_zh: '1-氯丙烷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -828,7 +828,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tripropylamine',
-    name: '三丙胺',
+    name: 'Tripropylamine', name_zh: '三丙胺',
     unit: 'kg',
     category: 'material',
     props: [
@@ -852,7 +852,7 @@ export const C3_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tpaoh',
-    name: '四丙基氢氧化铵 40 % 水溶液',
+    name: 'Tetrapropylammonium Hydroxide 40 % Aqueous Solution', name_zh: '四丙基氢氧化铵 40 % 水溶液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -901,7 +901,7 @@ export const C3_ROUTES: readonly Route[] = [
      *      丙酮/异丙醇/乙酸乙酯在"40–80 °C ∩ 300–1000 kPa"里没有沸点（缺口②）。
      */
     id: 'make/dimethyl-ether',
-    name: '甲醇脱水制备',
+    name: 'Methanol Dehydration Production', name_zh: '甲醇脱水制备',
     produces: [
       {
         item: 'mat/dimethyl-ether',
@@ -1011,7 +1011,7 @@ export const C3_ROUTES: readonly Route[] = [
      * 真正要申报的是母液与洗水的 217 kg（已申报）。
      */
     id: 'make/zsm-5',
-    name: '晶种法 ZSM-5 制备',
+    name: 'Seed-Method ZSM-5 Production', name_zh: '晶种法 ZSM-5 制备',
     produces: [
       {
         item: 'mat/zsm-5',
@@ -1151,7 +1151,7 @@ export const C3_ROUTES: readonly Route[] = [
      * 单列出来是为了让"5–6 C% 变成 CO₂"这句话在账上看得见。
      */
     id: 'make/mto-olefins',
-    name: '乙烯制备',
+    name: 'Ethylene Production', name_zh: '乙烯制备',
     produces: [
       {
         item: 'mat/ethylene',
@@ -1246,7 +1246,7 @@ export const C3_ROUTES: readonly Route[] = [
      * **C4⁺ 占它碳的 46 %，而 MFI 路线把那 46 % 的三分之二变回了丙烯。**
      */
     id: 'make/olefins-amorphous',
-    name: '零模板降级 OR 制备',
+    name: 'Zero-Template Downgrade OR Production', name_zh: '零模板降级 OR 制备',
     produces: [
       { item: 'mat/ethylene', qty: q(180) },
       {
@@ -1304,7 +1304,7 @@ export const C3_ROUTES: readonly Route[] = [
      *   高温的代价是焦多（3 C%），所以这条的再生周期比 MTO 短。
      */
     id: 'make/propene-from-c4',
-    name: 'C4⁺ 回裂制备',
+    name: 'C4⁺ Recycle Cracking Production', name_zh: 'C4⁺ 回裂制备',
     produces: [
       {
         item: 'mat/propene',
@@ -1386,7 +1386,7 @@ export const C3_ROUTES: readonly Route[] = [
      * （那里本来就是 C3/C4 混着的）—— 不要送进 `make/propene-from-c4`，那台炉子会把丙烯也裂掉。
      */
     id: 'make/propene-distilled',
-    name: '丙烯精制',
+    name: 'Propylene Refining', name_zh: '丙烯精制',
     produces: [
       {
         item: 'mat/propene',
@@ -1465,7 +1465,7 @@ export const C3_ROUTES: readonly Route[] = [
      *   釜只用来做第二步的精制（`make/acetone` 的第②段同一个道理）。
      */
     id: 'make/isopropanol',
-    name: '丙烯直接水合制备',
+    name: 'Isopropanol Production by Direct Propylene Hydration', name_zh: '丙烯直接水合制备',
     produces: [
       {
         item: 'mat/isopropanol',
@@ -1530,7 +1530,7 @@ export const C3_ROUTES: readonly Route[] = [
      *   只能退成釜式 60–90 °C / 200–300 kPa（1–2 块板），纯度 95–99 %（R8 ⑤）。
      */
     id: 'make/acetone',
-    name: '异丙醇脱氢制备',
+    name: 'Isopropanol Dehydrogenation Production', name_zh: '异丙醇脱氢制备',
     produces: [
       {
         item: 'mat/acetone',
@@ -1614,7 +1614,7 @@ export const C3_ROUTES: readonly Route[] = [
      * **不在氧那一格**（那三件量具是 `oxygen-metrology.ts` 建的），只剩"有机物在线分析"这一半。
      */
     id: 'make/ketene',
-    name: '乙烯酮制备',
+    name: 'Ketene Production', name_zh: '乙烯酮制备',
     produces: [
       {
         item: 'mat/ketene',
@@ -1657,7 +1657,7 @@ export const C3_ROUTES: readonly Route[] = [
      * 进料要先过干燥（`mat/zeolite-4a`，250–300 °C 再生）—— 本路线唯一一件"借来的"工艺。
      */
     id: 'make/ethyl-acetate',
-    name: '乙酸乙酯制备',
+    name: 'Ethyl Acetate Production', name_zh: '乙酸乙酯制备',
     produces: [
       {
         item: 'mat/ethyl-acetate',
@@ -1713,7 +1713,7 @@ export const C3_ROUTES: readonly Route[] = [
      * 必须在同一个厂房里串起来；模型里用"乙烯酮是条目"来表达这个串联关系。
      */
     id: 'make/acetylacetone-ketene',
-    name: '乙酰丙酮制备',
+    name: 'Acetylacetone Production', name_zh: '乙酰丙酮制备',
     produces: [
       {
         item: 'mat/acetylacetone',
@@ -1761,7 +1761,7 @@ export const C3_ROUTES: readonly Route[] = [
      *   与乙酸乙酯的皂化（3–8 %）。**温度过 100 °C 时皂化会翻倍** —— 这是上限。
      */
     id: 'make/acetylacetone-claisen',
-    name: '乙酰丙酮制备',
+    name: 'Acetylacetone Production', name_zh: '乙酰丙酮制备',
     produces: [
       {
         item: 'mat/acetylacetone',
@@ -1869,7 +1869,7 @@ export const C3_ROUTES: readonly Route[] = [
      *   故意不写进 `uses` —— 写进 `needs` 反而像在用）。
      */
     id: 'make/hf-anhydrous',
-    name: '无水 HF 制备',
+    name: 'Anhydrous HF Production', name_zh: '无水 HF 制备',
     produces: [
       {
         item: 'mat/hf-anhydrous',
@@ -1956,7 +1956,7 @@ export const C3_ROUTES: readonly Route[] = [
      *   ③ 氢气带 HF 与 CF₄（1–5 %），要碱洗才回电解槽 —— 这一格也没有量具（缺口⑥）。
      */
     id: 'make/hfac',
-    name: '六氟乙酰丙酮制备',
+    name: 'Hexafluoroacetylacetone Production', name_zh: '六氟乙酰丙酮制备',
     produces: [
       {
         item: 'mat/hfac',
@@ -2022,7 +2022,7 @@ export const C3_ROUTES: readonly Route[] = [
      *   而 Cu₂O 的 ρ 是铜的 1e6 倍 ⇒ **一批 25 片的方阻直接翻倍**。
      */
     id: 'make/cu-hfac2',
-    name: '双(六氟乙酰丙酮)合铜(II) 制备',
+    name: 'Bis(Hexafluoroacetylacetonato)Copper(II) Production', name_zh: '双(六氟乙酰丙酮)合铜(II) 制备',
     produces: [
       {
         item: 'mat/cu-hfac2',
@@ -2078,7 +2078,7 @@ export const C3_ROUTES: readonly Route[] = [
      * 它走得到，但走一趟带 1.7 t 盐。
      */
     id: 'make/acrylonitrile',
-    name: '丙烯氨氧化',
+    name: 'Propylene Ammoxidation', name_zh: '丙烯氨氧化',
     produces: [
       {
         item: 'mat/acrylonitrile',
@@ -2130,7 +2130,7 @@ export const C3_ROUTES: readonly Route[] = [
      *   （`aromatics.ts:117`），给不到鎓盐 —— 问六第 12 跳。
      */
     id: 'make/acrylic-acid',
-    name: '丙烯两步氧化制丙烯酸',
+    name: 'Acrylic Acid Production by Two-Step Propylene Oxidation', name_zh: '丙烯两步氧化制丙烯酸',
     produces: [
       {
         item: 'mat/acrylic-acid',
@@ -2189,7 +2189,7 @@ export const C3_ROUTES: readonly Route[] = [
      *   **丙烯酸酯这一族到此为止都是通的**，而它们离 PAG 还差一个 C6 芳香。
      */
     id: 'make/methyl-acrylate',
-    name: '丙烯酸甲酯制备',
+    name: 'Methyl Acrylate Production', name_zh: '丙烯酸甲酯制备',
     produces: [
       {
         item: 'mat/methyl-acrylate',
@@ -2240,7 +2240,7 @@ export const C3_ROUTES: readonly Route[] = [
      * 不新增设备。**不走丙烯水合**：那个给的是异丙醇（仲醇），做不了正丙基。
      */
     id: 'make/n-propanol',
-    name: '正丙醇制备',
+    name: 'n-Propanol Production', name_zh: '正丙醇制备',
     produces: [
       {
         item: 'mat/n-propanol',
@@ -2292,7 +2292,7 @@ export const C3_ROUTES: readonly Route[] = [
      * 在 `plant/acid-plant`（20–500 °C / 100–500 kPa）里做，不新增设备。
      */
     id: 'make/chloropropane',
-    name: '1-氯丙烷制备',
+    name: '1-Chloropropane Production', name_zh: '1-氯丙烷制备',
     produces: [
       {
         item: 'mat/chloropropane',
@@ -2331,7 +2331,7 @@ export const C3_ROUTES: readonly Route[] = [
      * （`mat/ammonium-chloride`，byproducts.ts），不塞进 `unbalanced_zh`。
      */
     id: 'make/tripropylamine',
-    name: '三丙胺制备',
+    name: 'Tripropylamine Production', name_zh: '三丙胺制备',
     produces: [
       {
         item: 'mat/tripropylamine',
@@ -2377,7 +2377,7 @@ export const C3_ROUTES: readonly Route[] = [
      * ③ 调浓度到 40 wt %（密度/折光估，本层没有在线滴定）
      */
     id: 'make/tpaoh',
-    name: '四丙基氢氧化铵 40 % 水溶液制备',
+    name: 'Tetrapropylammonium Hydroxide 40 % Aqueous Solution Production', name_zh: '四丙基氢氧化铵 40 % 水溶液制备',
     produces: [
       {
         item: 'mat/tpaoh',
@@ -2457,7 +2457,7 @@ export const C3_ROUTES: readonly Route[] = [
      *   模板不是催化剂，是**一次性有机料**，所以它必须有自己的产出路线。
      */
     id: 'make/zsm-5-seed-template',
-    name: '模板法 ZSM-5 晶种制备',
+    name: 'Template Method ZSM-5 Seed Production', name_zh: '模板法 ZSM-5 晶种制备',
     produces: [
       {
         // 不是 50 kg：一批晶种够 20 个 `make/zsm-5` 批次（每批 50 kg），

@@ -31,7 +31,7 @@ export const PD_RATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-rate-meter',
-    name: 'PD 脉冲率表',
+    name: 'PD Pulse Rate Meter', name_zh: 'PD 脉冲率表',
     unit: '件',
     category: 'part',
     props: [
@@ -51,7 +51,7 @@ export const PD_RATE_ROUTES: readonly Route[] = [
      *   运放 2 + 薄膜电容 2 + 电阻丝 0.02 + 铝 0.2 + 铜线 0.05 → 率表 1
      */
     id: 'make/pd-rate-meter',
-    name: 'PD 脉冲率表制造',
+    name: 'PD Pulse Rate Meter Manufacturing', name_zh: 'PD 脉冲率表制造',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-rate-meter',

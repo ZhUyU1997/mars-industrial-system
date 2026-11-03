@@ -20,9 +20,9 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const ELLIPSOMETER_STAGE_PARTS: readonly Item[] = [
-  { id: 'plant/ellipsometer/sample-stage/table', name: '椭偏仪承片台', unit: '件', category: 'part' },
-  { id: 'plant/ellipsometer/sample-stage/lead-screw', name: '椭偏仪丝杠', unit: '件', category: 'part' },
-  { id: 'plant/ellipsometer/sample-stage/anti-backlash-nut', name: '椭偏仪消隙螺母', unit: '件', category: 'part' },
+  { id: 'plant/ellipsometer/sample-stage/table', name: 'Ellipsometer Sample Stage Table', name_zh: '椭偏仪承片台', unit: '件', category: 'part' },
+  { id: 'plant/ellipsometer/sample-stage/lead-screw', name: 'Ellipsometer Lead Screw', name_zh: '椭偏仪丝杠', unit: '件', category: 'part' },
+  { id: 'plant/ellipsometer/sample-stage/anti-backlash-nut', name: 'Ellipsometer Anti-Backlash Nut', name_zh: '椭偏仪消隙螺母', unit: '件', category: 'part' },
 ];
 
 const ELLIPSOMETER_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -31,7 +31,7 @@ const ELLIPSOMETER_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 承片台：铝 12 kg，铣台面与 φ200 承片盘，盘面平面度 10 µm。 */
     id: 'make/ellipsometer-stage-table',
-    name: '椭偏仪承片台制造',
+    name: 'Ellipsometer Sample Stage Table Manufacturing', name_zh: '椭偏仪承片台制造',
     produces: [{ item: 'plant/ellipsometer/sample-stage/table', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/aluminium', qty: q(12) }] }],
     steps: [
@@ -42,7 +42,7 @@ const ELLIPSOMETER_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 丝杠 2 根：45 钢，2 mm/转，X/Y 各一根。 */
     id: 'make/ellipsometer-stage-lead-screw',
-    name: '椭偏仪丝杠制造',
+    name: 'Ellipsometer Lead Screw Manufacturing', name_zh: '椭偏仪丝杠制造',
     produces: [{ item: 'plant/ellipsometer/sample-stage/lead-screw', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(2) }] }],
     steps: [
@@ -53,7 +53,7 @@ const ELLIPSOMETER_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 消隙螺母 2 只：45 钢，两半配作，回差 ≤2 µm。 */
     id: 'make/ellipsometer-stage-anti-backlash-nut',
-    name: '椭偏仪消隙螺母制造',
+    name: 'Ellipsometer Anti-Backlash Nut Manufacturing', name_zh: '椭偏仪消隙螺母制造',
     produces: [{ item: 'plant/ellipsometer/sample-stage/anti-backlash-nut', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(2) }] }],
     steps: [

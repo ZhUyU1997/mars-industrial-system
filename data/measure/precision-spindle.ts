@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const PRECISION_SPINDLE_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/precision-spindle-runout-record',
-    name: '精密主轴跳动记录',
+    name: 'Precision Spindle Runout Record', name_zh: '精密主轴跳动记录',
     unit: '份',
     category: 'part',
     props: [
@@ -28,7 +28,7 @@ export const PRECISION_SPINDLE_MEASURE_ROUTES: readonly Route[] = [
      * **精密主轴跳动：比较仪 + 量块，盘车 8 点 × 3 圈。**
      */
     id: 'measure/precision-spindle-runout',
-    name: '精密主轴跳动测量',
+    name: 'Precision Spindle Runout Measurement', name_zh: '精密主轴跳动测量',
     produces: [
       {
         item: 'mat/precision-spindle-runout-record',

@@ -59,7 +59,7 @@ export const IGNITION_ROUTES: readonly Route[] = [
      * 铁粉按风化层金属铁含量 0.2% 估（陨铁碎屑 + 纳米相铁的下限）。
      */
     id: 'make/free-iron-gravity',
-    name: '金属铁粉制备',
+    name: 'Metallic Iron Powder Production', name_zh: '金属铁粉制备',
     produces: [
       { item: 'mat/sponge-iron', qty: q(2) },
       { item: 'mat/tailings', qty: q(999) },
@@ -86,7 +86,7 @@ export const IGNITION_ROUTES: readonly Route[] = [
      * 用土窑就够（400–1100，种子之一）。
      */
     id: 'make/hydrogen-iron-steam',
-    name: '氢制备',
+    name: 'Hydrogen Production', name_zh: '氢制备',
     produces: [{ item: 'mat/hydrogen', qty: q(2), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'mat/sponge-iron', qty: q(100) }] },
@@ -113,7 +113,7 @@ export const IGNITION_ROUTES: readonly Route[] = [
      * 干燥在土窑里 200 °C 就够。
      */
     id: 'make/magnesium-hydroxide-lime',
-    name: '氢氧化镁制备',
+    name: 'Magnesium Hydroxide Production', name_zh: '氢氧化镁制备',
     produces: [{ item: 'mat/magnesium-hydroxide', qty: q(300) }],
     uses: [
       { anyOf: [{ item: 'mars/brine', qty: q(1000) }] },

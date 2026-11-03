@@ -23,7 +23,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/voltage-absolute-capacitor-record',
-    name: '可计算电容法的绝对电压记录',
+    name: 'Calculable Capacitor Absolute Voltage Record', name_zh: '可计算电容法的绝对电压记录',
     unit: '份',
     category: 'part',
     props: [
@@ -51,7 +51,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/voltage-anchor-intercomparison-record',
-    name: '两法比对记录',
+    name: 'Two-Method Comparison Record', name_zh: '两法比对记录',
     unit: '份',
     category: 'part',
     props: [
@@ -93,7 +93,7 @@ export const DATA_ROUTES: readonly Route[] = [
      *      1 µV 热电势修正（10 V 上 0.1 ppm）。
      */
     id: 'measure/voltage-absolute-capacitor',
-    name: '可计算电容法的绝对电压测量',
+    name: 'Absolute Voltage Measurement by Calculable Capacitor Method', name_zh: '可计算电容法的绝对电压测量',
     rate: { hours: q(240) },
     produces: [
       {
@@ -206,7 +206,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 20 ppm 的共同偏差，比对查不出 —— 这是第二套也解决不了的第三层缺口。
      */
     id: 'measure/voltage-anchor-intercomparison',
-    name: '两法比对',
+    name: 'Two-Method Comparison', name_zh: '两法比对',
     rate: { hours: q(24) },
     produces: [
       {

@@ -12,7 +12,7 @@ import { q } from '../../src/index.ts';
 export const LARGE_FLAT_320_ITEMS: readonly Item[] = [
   {
     id: 'mat/fused-silica-blank-320',
-    name: 'φ320 熔石英毛坯',
+    name: 'φ320 Fused Quartz Blank', name_zh: 'φ320 熔石英毛坯',
     unit: '件',
     category: 'material',
     props: [
@@ -23,7 +23,7 @@ export const LARGE_FLAT_320_ITEMS: readonly Item[] = [
   },
   {
     id: 'std/large-flat-320',
-    name: 'φ320 大平面标准件',
+    name: 'φ320 Large Flat Standard', name_zh: 'φ320 大平面标准件',
     unit: '件',
     category: 'part',
     props: [
@@ -34,7 +34,7 @@ export const LARGE_FLAT_320_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/null-lens-320-fizeau-record',
-    name: 'φ320 零位镜 Fizeau 记录',
+    name: 'φ320 Null Lens Fizeau Record', name_zh: 'φ320 零位镜 Fizeau 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -48,7 +48,7 @@ export const LARGE_FLAT_320_ITEMS: readonly Item[] = [
 export const LARGE_FLAT_320_ROUTES: readonly Route[] = [
   {
     id: 'make/fused-silica-blank-320',
-    name: 'φ320 熔石英毛坯制备',
+    name: 'φ320 Fused Quartz Blank Production', name_zh: 'φ320 熔石英毛坯制备',
     produces: [{
       item: 'mat/fused-silica-blank-320',
       qty: q(1),
@@ -75,7 +75,7 @@ export const LARGE_FLAT_320_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/large-flat-320',
-    name: 'φ320 大平面标准件制造',
+    name: 'φ320 Large Flat Standard Manufacturing', name_zh: 'φ320 大平面标准件制造',
     produces: [{
       item: 'std/large-flat-320',
       qty: q(1),
@@ -110,7 +110,7 @@ export const LARGE_FLAT_320_ROUTES: readonly Route[] = [
   },
   {
     id: 'measure/null-lens-320-fizeau',
-    name: 'φ320 零位镜 Fizeau 测量',
+    name: 'φ320 Null Lens Fizeau Measurement', name_zh: 'φ320 零位镜 Fizeau 测量',
     produces: [{
       item: 'mat/null-lens-320-fizeau-record',
       qty: q(1),

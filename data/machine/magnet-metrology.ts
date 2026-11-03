@@ -23,7 +23,7 @@ export const MAGNET_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rogowski-50ka',
-    name: '罗氏线圈电流探头',
+    name: 'Rogowski Coil Current Probe', name_zh: '罗氏线圈电流探头',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：线圈、屏蔽、积分器在整机内不可再拆成独立零件，标 monolithic。
@@ -43,7 +43,7 @@ export const MAGNET_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/high-field-nmr-probe',
-    name: '高场 NMR 探头',
+    name: 'High-Field NMR Probe', name_zh: '高场 NMR 探头',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：探头线圈、安瓿、振荡/锁相在整机内不可再拆，标 monolithic。
@@ -64,7 +64,7 @@ export const MAGNET_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/coil-energy-test-stand',
-    name: '线圈储能测试台',
+    name: 'Coil Energy Storage Test Stand', name_zh: '线圈储能测试台',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：机架、负载、测量接口按整台装配，不再拆独立零件，标 monolithic。
@@ -87,7 +87,7 @@ export const MAGNET_METROLOGY_ROUTES: readonly Route[] = [
      * 量程 50 kA 是设计：现有电流源只到 2 kA，校准差 25 倍；积分漂移未测。
      */
     id: 'make/rogowski-50ka',
-    name: '罗氏线圈电流探头制造',
+    name: 'Rogowski Coil Current Probe Manufacturing', name_zh: '罗氏线圈电流探头制造',
     produces: [
       {
         item: 'plant/rogowski-50ka',
@@ -121,7 +121,7 @@ export const MAGNET_METROLOGY_ROUTES: readonly Route[] = [
      * 量程是设计。标定与装调在 19–21 °C 的计量间进行；封安瓿在 20–30 °C。
      */
     id: 'make/high-field-nmr-probe',
-    name: '高场 NMR 探头制造',
+    name: 'High-Field NMR Probe Manufacturing', name_zh: '高场 NMR 探头制造',
     produces: [
       {
         item: 'plant/high-field-nmr-probe',
@@ -170,7 +170,7 @@ export const MAGNET_METROLOGY_ROUTES: readonly Route[] = [
      * 差 34 倍。
      */
     id: 'make/coil-energy-test-stand',
-    name: '线圈储能测试台制造',
+    name: 'Coil Energy Storage Test Stand Manufacturing', name_zh: '线圈储能测试台制造',
     produces: [
       {
         item: 'plant/coil-energy-test-stand',

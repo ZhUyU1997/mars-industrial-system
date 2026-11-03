@@ -483,7 +483,7 @@ export const UNBLOCK_CLEANROOM_ROUTES: readonly Route[] = [
      *      unblock-atmos-tube 第 584 行同一句）
      */
     id: 'make/cleanroom-shell-cast',
-    name: '洁净室洁净间制造',
+    name: 'Cleanroom Enclosure Manufacturing', name_zh: '洁净室洁净间制造',
     produces: [{ item: 'plant/clean-room/shell', qty: q(1) }],
     uses: [
       /**

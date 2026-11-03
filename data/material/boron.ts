@@ -38,7 +38,7 @@ export const BORON_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/borax',
-    name: '硼砂 Na₂B₄O₇·10H₂O',
+    name: 'Borax Na₂B₄O₇·10H₂O', name_zh: '硼砂 Na₂B₄O₇·10H₂O',
     unit: 'kg',
     category: 'material',
     props: [
@@ -50,7 +50,7 @@ export const BORON_ITEMS: readonly Item[] = [
   /** 硼酸 H₃BO₃。 */
   {
     id: 'mat/boric-acid',
-    name: '硼酸 H₃BO₃',
+    name: 'Boric Acid H₃BO₃', name_zh: '硼酸 H₃BO₃',
     unit: 'kg',
     category: 'material',
     props: [
@@ -67,7 +67,7 @@ export const BORON_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/boron-trifluoride',
-    name: '三氟化硼 BF₃',
+    name: 'Boron Trifluoride BF₃', name_zh: '三氟化硼 BF₃',
     unit: 'kg',
     category: 'material',
     props: [
@@ -89,7 +89,7 @@ export const BORON_ROUTES: readonly Route[] = [
      * 硼砂 11.3 % B ⇒ 1.06 kg 理论，取 1 kg。
      */
     id: 'make/borax',
-    name: '硼砂 Na₂B₄O₇·10H₂O 制备',
+    name: 'Borax Na₂B₄O₇·10H₂O Production', name_zh: '硼砂 Na₂B₄O₇·10H₂O 制备',
     produces: [
       {
         item: 'mat/borax',
@@ -166,7 +166,7 @@ export const BORON_ROUTES: readonly Route[] = [
      * 80–100 °C、8 h；冷却结晶硼酸，母液回收硫酸钠。
      */
     id: 'make/boric-acid',
-    name: '硼酸 H₃BO₃制备',
+    name: 'Boric Acid H₃BO₃ Production', name_zh: '硼酸 H₃BO₃制备',
     produces: [
       {
         item: 'mat/boric-acid',
@@ -239,7 +239,7 @@ export const BORON_ROUTES: readonly Route[] = [
      * BF₃ 纯度 99.5 %、水 ≤10 ppm 是目标值，没有露点/质谱实测。
      */
     id: 'make/boron-trifluoride',
-    name: '三氟化硼 BF₃制备',
+    name: 'Boron Trifluoride BF₃ Production', name_zh: '三氟化硼 BF₃制备',
     produces: [
       {
         item: 'mat/boron-trifluoride',

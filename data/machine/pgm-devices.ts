@@ -83,7 +83,7 @@ import { q } from '../../src/index.ts';
 export const PGM_DEVICE_ITEMS: readonly Item[] = [
   {
     id: 'plant/diffusion-furnace/pd-membrane',
-    name: '钯膜',
+    name: 'Palladium Membrane', name_zh: '钯膜',
     unit: '件',
     category: 'part',
     props: [
@@ -106,7 +106,7 @@ export const PGM_DEVICE_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pt-rtd-pair',
-    name: '质量流量控制器镍薄膜电阻对制造',
+    name: 'Mass Flow Controller Nickel Thin-Film Resistor Pair Manufacturing', name_zh: '质量流量控制器镍薄膜电阻对制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -163,7 +163,7 @@ export const PGM_DEVICE_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/oxygen-probe-electrode-pt',
-    name: '氧化锆氧电池多孔银电极制造',
+    name: 'Zirconia Oxygen Cell Porous Silver Electrode Manufacturing', name_zh: '氧化锆氧电池多孔银电极制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -207,7 +207,7 @@ export const PGM_DEVICE_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pd-membrane',
-    name: '钯膜制造',
+    name: 'Palladium Membrane Manufacturing', name_zh: '钯膜制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -262,7 +262,7 @@ export const PGM_DEVICE_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/gas-purifier-pd',
-    name: '扩散炉气体纯化单元制造',
+    name: 'Diffusion Furnace Gas Purification Unit Manufacturing', name_zh: '扩散炉气体纯化单元制造',
     rate: { hours: q(16) },
     produces: [{ item: 'plant/diffusion-furnace/gas-purifier', qty: q(1) }],
     uses: [

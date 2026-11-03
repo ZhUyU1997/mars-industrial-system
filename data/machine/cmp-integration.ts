@@ -482,7 +482,7 @@ export const CMPINT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-integration',
-    name: 'CMP 终点与分区压力集成台',
+    name: 'CMP Endpoint and Zone Pressure Integrated Station', name_zh: 'CMP 终点与分区压力集成台',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'pressure', min: 15, max: 30 }],
@@ -529,7 +529,7 @@ export const CMPINT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-integration/hard-pad',
-    name: 'CMP 硬垫',
+    name: 'CMP Hard Pad', name_zh: 'CMP 硬垫',
     unit: '件',
     category: 'part',
     props: [
@@ -553,7 +553,7 @@ export const CMPINT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-integration/two-zone-carrier',
-    name: 'CMP 两区载片头',
+    name: 'CMP Two-Zone Carrier Head', name_zh: 'CMP 两区载片头',
     unit: '件',
     category: 'part',
     props: [
@@ -577,7 +577,7 @@ export const CMPINT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-integration/platen-window',
-    name: 'CMP 盘的熔石英窗',
+    name: 'CMP Platen Fused Quartz Window', name_zh: 'CMP 盘的熔石英窗',
     unit: '件',
     category: 'part',
     props: [
@@ -602,7 +602,7 @@ export const CMPINT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-integration/eddy-probe',
-    name: 'CMP 涡流探头',
+    name: 'CMP Eddy Current Probe', name_zh: 'CMP 涡流探头',
     unit: '件',
     category: 'part',
     props: [
@@ -626,7 +626,7 @@ export const CMPINT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-integration/current-tap',
-    name: 'CMP 主轴电流分流器',
+    name: 'CMP Spindle Current Shunt', name_zh: 'CMP 主轴电流分流器',
     unit: '件',
     category: 'part',
     props: [
@@ -649,7 +649,7 @@ export const CMPINT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-integration/dc-amplifier',
-    name: 'CMP 直流放大器',
+    name: 'CMP DC Amplifier', name_zh: 'CMP 直流放大器',
     unit: '件',
     category: 'part',
     props: [
@@ -678,7 +678,7 @@ export const CMPINT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/silicon-tetrafluoride',
-    name: '四氟化硅',
+    name: 'Silicon Tetrafluoride', name_zh: '四氟化硅',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 80, max: 100, unit: '%', dir: 'atLeast' }],
@@ -717,7 +717,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * ⚠️ 0.5 mm 的沟是寿命的一半：磨掉 0.3 mm 沟就平了 ⇒ 300–500 片（毡是 100 片）。
      */
     id: 'make/cmp-integration-hard-pad',
-    name: 'CMP 硬垫制造',
+    name: 'CMP Hard Pad Manufacturing', name_zh: 'CMP 硬垫制造',
     produces: [
       {
         item: 'plant/cmp-integration/hard-pad',
@@ -786,7 +786,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * 所以 `pressureZones 2` 的意思是"有第二个区"，**不是**"第二个区是闭环的"。
      */
     id: 'make/cmp-integration-two-zone-carrier',
-    name: 'CMP 两区载片头制造',
+    name: 'CMP Two-Zone Carrier Head Manufacturing', name_zh: 'CMP 两区载片头制造',
     produces: [
       {
         item: 'plant/cmp-integration/two-zone-carrier',
@@ -842,7 +842,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * 不是真空），这一条写出来是为了诚实：它不是真空件。
      */
     id: 'make/cmp-integration-platen-window',
-    name: 'CMP 盘的熔石英窗制造',
+    name: 'CMP Platen Fused Quartz Window Manufacturing', name_zh: 'CMP 盘的熔石英窗制造',
     produces: [
       {
         item: 'plant/cmp-integration/platen-window',
@@ -897,7 +897,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * （铜排热时间常数 ≈90 s，2 s 内漂 <0.2 %）。真正的限制是信号本身太小，不是分流器。
      */
     id: 'make/cmp-integration-current-tap',
-    name: 'CMP 主轴电流分流器制造',
+    name: 'CMP Spindle Current Shunt Manufacturing', name_zh: 'CMP 主轴电流分流器制造',
     produces: [
       {
         item: 'plant/cmp-integration/current-tap',
@@ -953,7 +953,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * **不要斩波**：终点是台阶，1/f 在 2 s 内只贡 0.01 %。要低噪声，不要低漂移。
      */
     id: 'make/cmp-integration-dc-amplifier',
-    name: 'CMP 直流放大器制造',
+    name: 'CMP DC Amplifier Manufacturing', name_zh: 'CMP 直流放大器制造',
     produces: [
       {
         item: 'plant/cmp-integration/dc-amplifier',
@@ -1013,7 +1013,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * 要更好只有相敏检波（本层没有锁放，R8 ⑧）。
      */
     id: 'make/cmp-integration-eddy-probe',
-    name: 'CMP 涡流探头制造',
+    name: 'CMP Eddy Current Probe Manufacturing', name_zh: 'CMP 涡流探头制造',
     produces: [
       {
         item: 'plant/cmp-integration/eddy-probe',
@@ -1082,7 +1082,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * 要换介质走 `make/lowk-fsg-trench`。
      */
     id: 'make/cmp-endpoint-optical',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -1175,7 +1175,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * 探头嵌在一个没有石英的小孔里）—— 这是它的价值：窗一漏浆、一划伤，主路就瞎了。
      */
     id: 'make/cmp-endpoint-eddy',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -1257,7 +1257,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * （7–12 对 15–25，终点只值 2 倍）。
      */
     id: 'make/cmp-timed-witness',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -1341,7 +1341,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * F₂ 的利用率 90–95 % 是"下一批少加点"的经验纪律，不是仪表读出来的。
      */
     id: 'make/silicon-tetrafluoride',
-    name: '四氟化硅制备',
+    name: 'Silicon Tetrafluoride Production', name_zh: '四氟化硅制备',
     produces: [
       {
         item: 'mat/silicon-tetrafluoride',
@@ -1411,7 +1411,7 @@ export const CMPINT_ROUTES: readonly Route[] = [
      * 模型里这两条会并排出现，报告会挑 k 小的那条 —— 这正是属性窗口系统的用法。
      */
     id: 'make/lowk-fsg-trench',
-    name: '开好沟槽制造',
+    name: 'Trench-Opened Wafer Manufacturing', name_zh: '开好沟槽制造',
     produces: [
       {
         item: 'mat/trench-wafer',
@@ -1490,7 +1490,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/cmp-integration',
-    name: 'CMP 终点与分区压力集成台装配',
+    name: 'CMP Endpoint and Zone Pressure Integrated Station Assembly', name_zh: 'CMP 终点与分区压力集成台装配',
     produces: [{
       item: 'plant/cmp-integration',
       qty: q(1),

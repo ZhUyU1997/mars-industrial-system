@@ -72,7 +72,7 @@ export const TRANSFORMER_OIL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/alpha-olefins-c10c14',
-    name: 'C10–C14 α-烯烃',
+    name: 'C10–C14 α-Olefins', name_zh: 'C10–C14 α-烯烃',
     unit: 'kg',
     category: 'material',
     props: [
@@ -92,7 +92,7 @@ export const TRANSFORMER_OIL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/transformer-oil',
-    name: '变压器油',
+    name: 'Transformer Oil', name_zh: '变压器油',
     unit: 'kg',
     category: 'material',
     props: [
@@ -117,7 +117,7 @@ export const TRANSFORMER_OIL_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/precision-resistor-oil',
-    name: '油浸精密标准电阻',
+    name: 'Oil-Immersed Precision Standard Resistor', name_zh: '油浸精密标准电阻',
     unit: '件',
     category: 'part',
     props: [
@@ -141,7 +141,7 @@ export const TRANSFORMER_OIL_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/alpha-olefins',
-    name: 'α-烯烃制备',
+    name: 'α-Olefin Production', name_zh: 'α-烯烃制备',
     produces: [
       {
         item: 'mat/alpha-olefins-c10c14',
@@ -185,7 +185,7 @@ export const TRANSFORMER_OIL_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/transformer-oil',
-    name: 'PAO 变压器油制备',
+    name: 'PAO Transformer Oil Production', name_zh: 'PAO 变压器油制备',
     produces: [
       {
         item: 'mat/transformer-oil',
@@ -244,7 +244,7 @@ export const TRANSFORMER_OIL_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/precision-resistor-oil',
-    name: '油浸精密标准电阻制造',
+    name: 'Oil-Immersed Precision Standard Resistor Manufacturing', name_zh: '油浸精密标准电阻制造',
     produces: [
       {
         item: 'std/precision-resistor-oil',
@@ -288,7 +288,7 @@ export const TRANSFORMER_OIL_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/lcr-resistance-arm-oil',
-    name: '四端对电阻桥臂制造',
+    name: 'Four-Terminal-Pair Resistance Arm Manufacturing', name_zh: '四端对电阻桥臂制造',
     produces: [
       {
         item: 'plant/lcr-resistance-arm',

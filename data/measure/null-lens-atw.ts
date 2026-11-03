@@ -12,7 +12,7 @@ import { q } from '../../src/index.ts';
 export const NULL_LENS_ATW_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/null-lens-atw-measure-record',
-    name: '零位镜 at-wavelength 面形记录',
+    name: 'Null Lens At-Wavelength Surface Figure Record', name_zh: '零位镜 at-wavelength 面形记录',
     unit: '份',
     category: 'part',
     props: [
@@ -29,7 +29,7 @@ export const NULL_LENS_ATW_MEASURE_ROUTES: readonly Route[] = [
      * **320 mm null lens：null-test 装夹，atw 干涉仪 13.5 nm 读 10 点面形。**
      */
     id: 'measure/null-lens-atw-figure',
-    name: '零位镜 at-wavelength 面形测量',
+    name: 'Null Lens At-Wavelength Surface Figure Measurement', name_zh: '零位镜 at-wavelength 面形测量',
     produces: [{
       item: 'mat/null-lens-atw-measure-record',
       qty: q(1),

@@ -43,7 +43,7 @@ export const PROCESS_CTRL_ITEMS: readonly Item[] = [
    * 高铝感温棒、石英参考棒、烟熏记录盘、四对触点与六块陶板机壳等件装配。
    * 零件与零件路线见 `data/machine/mech-process-controller.ts`。
    */
-  { id: 'std/process-controller-general', name: '机械式过程控制器', unit: '台', category: 'part',
+  { id: 'std/process-controller-general', name: 'Mechanical Process Controller', name_zh: '机械式过程控制器', unit: '台', category: 'part',
     composedOf: [
       { item: 'std/process-controller-general/base', qty: q(1) },
       { item: 'std/process-controller-general/weight', qty: q(1) },
@@ -85,7 +85,7 @@ export const PROCESS_CTRL_ITEMS: readonly Item[] = [
    *
    * 模块与板卡为装配/接线关系；芯片与元件属于不可逆加工，零件输入写在路线 uses。
    */
-  { id: 'std/process-controller-electronic', name: '电子式数字过程控制器', unit: '台', category: 'part' },
+  { id: 'std/process-controller-electronic', name: 'Electronic Digital Process Controller', name_zh: '电子式数字过程控制器', unit: '台', category: 'part' },
 ];
 
 export const PROCESS_CTRL_ROUTES: readonly Route[] = [
@@ -100,7 +100,7 @@ export const PROCESS_CTRL_ROUTES: readonly Route[] = [
      * **一台仪器的内部信号被另一台用了**，这是本层第一次"设备之间对话"。
      */
     id: 'make/process-controller',
-    name: '电子式数字过程控制器制造',
+    name: 'Electronic Digital Process Controller Manufacturing', name_zh: '电子式数字过程控制器制造',
     produces: [{ item: 'std/process-controller-electronic', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/computer-general', qty: q(1) }] },

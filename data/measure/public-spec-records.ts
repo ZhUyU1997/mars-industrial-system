@@ -23,7 +23,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fz-silicon-public-record',
-    name: 'FZ-Si 公开规格记录',
+    name: 'FZ-Si Public Specification Record', name_zh: 'FZ-Si 公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -42,7 +42,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/znse-window-public-record',
-    name: 'ZnSe 窗口公开规格记录',
+    name: 'ZnSe Window Public Specification Record', name_zh: 'ZnSe 窗口公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -62,7 +62,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/diamond-turned-copper-public-record',
-    name: '金刚石车削镀金铜镜/OAP 公开规格记录',
+    name: 'Diamond-Turned Gold-Plated Copper Mirror/OAP Public Specification Record', name_zh: '金刚石车削镀金铜镜/OAP 公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -81,7 +81,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/precision-resistor-public-record',
-    name: '精密电阻公开规格记录',
+    name: 'Precision Resistor Public Specification Record', name_zh: '精密电阻公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -99,7 +99,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/euv-absolute-flat-public-record',
-    name: 'EUV 绝对平面公开规格记录',
+    name: 'EUV Absolute Flat Public Specification Record', name_zh: 'EUV 绝对平面公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -117,7 +117,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/euv-grating-public-record',
-    name: 'EUV 光栅公开规格记录',
+    name: 'EUV Grating Public Specification Record', name_zh: 'EUV 光栅公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -134,7 +134,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/euv-detector-fast-public-record',
-    name: 'EUV 快探测器公开规格记录',
+    name: 'EUV Fast Detector Public Specification Record', name_zh: 'EUV 快探测器公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -151,7 +151,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/laser-calorimeter-public-record',
-    name: '30 kW 水冷量热器公开规格记录',
+    name: '30 kW Water-Cooled Calorimeter Public Specification Record', name_zh: '30 kW 水冷量热器公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -167,7 +167,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/water-flow-meter-public-record',
-    name: '水流量计公开规格记录',
+    name: 'Water Flowmeter Public Specification Record', name_zh: '水流量计公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -179,7 +179,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** RF 合成器公开规格：insertionLoss 0.3–0.8 dB（14:1、27 MHz）。 */
   {
     id: 'mat/rf-combiner-public-record',
-    name: '射频合成器公开规格记录',
+    name: 'RF Combiner Public Specification Record', name_zh: '射频合成器公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -191,7 +191,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** 激光光束剖面仪公开规格：spot 20–50 µm、pointing 20–50 µrad。 */
   {
     id: 'mat/laser-beam-profiler-public-record',
-    name: '激光光束剖面仪公开规格记录',
+    name: 'Laser Beam Profiler Public Specification Record', name_zh: '激光光束剖面仪公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -204,7 +204,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** IBF 束流剖面仪公开规格：uniformity 1–5 %。 */
   {
     id: 'mat/ion-beam-profiler-public-record',
-    name: '离子束剖面仪公开规格记录',
+    name: 'Ion Beam Profiler Public Specification Record', name_zh: '离子束剖面仪公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -216,7 +216,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** X 射线测角仪公开规格：resolution 0.001–0.005°、accuracy 0.005–0.01°。 */
   {
     id: 'mat/xray-goniometer-public-record',
-    name: 'X 射线测角仪公开规格记录',
+    name: 'X-Ray Goniometer Public Specification Record', name_zh: 'X 射线测角仪公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -229,7 +229,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** 双晶 X 射线衍射仪公开规格：resolution 0.001–0.002°。 */
   {
     id: 'mat/xray-diffractometer-public-record',
-    name: 'X 射线衍射仪公开规格记录',
+    name: 'X-Ray Diffractometer Public Specification Record', name_zh: 'X 射线衍射仪公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -241,7 +241,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** EUV 液滴成像仪公开规格：resolution 1–3 µm、jitter 2–10 ns。 */
   {
     id: 'mat/euv-droplet-imager-public-record',
-    name: 'EUV 液滴成像仪公开规格记录',
+    name: 'EUV Droplet Imager Public Specification Record', name_zh: 'EUV 液滴成像仪公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -254,7 +254,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** EUV 光谱仪公开规格：resolution 0.2–0.5 nm（10–20 nm）。 */
   {
     id: 'mat/euv-spectrometer-public-record',
-    name: 'EUV 光谱仪公开规格记录',
+    name: 'EUV Spectrometer Public Specification Record', name_zh: 'EUV 光谱仪公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -266,7 +266,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** 快刀伺服公开规格：resolution 1–10 nm。 */
   {
     id: 'mat/fast-tool-servo-public-record',
-    name: '快速刀具伺服公开规格记录',
+    name: 'Fast Tool Servo Public Specification Record', name_zh: '快速刀具伺服公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -278,7 +278,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** 激光气体循环公开规格：tempStability 0.5–2 K。 */
   {
     id: 'mat/laser-gas-loop-public-record',
-    name: '激光气体循环公开规格记录',
+    name: 'Laser Gas Circulation Public Specification Record', name_zh: '激光气体循环公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -290,7 +290,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** 20 kW RF 发生器公开规格：power 18–22 kW、efficiency 0.7–0.85、stability 0.2–0.5 %。 */
   {
     id: 'mat/rf-generator-public-record',
-    name: '射频发生器公开规格记录',
+    name: 'RF Generator Public Specification Record', name_zh: '射频发生器公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -304,7 +304,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** 精密主轴公开规格：radial 0.1–0.5 µm、axial 0.1–0.5 µm。 */
   {
     id: 'mat/precision-spindle-public-record',
-    name: '精密主轴公开规格记录',
+    name: 'Precision Spindle Public Specification Record', name_zh: '精密主轴公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -317,7 +317,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** 660 mm 静压转台公开规格：axial/radial 0.1–0.5 µm、angle 1–2 角秒。 */
   {
     id: 'mat/rotary-table-public-record',
-    name: '回转台公开规格记录',
+    name: 'Rotary Table Public Specification Record', name_zh: '回转台公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -331,7 +331,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** EUV 660 mm 台公开规格：positionError 0.5–1 µm、readout 0.5–1 µm。 */
   {
     id: 'mat/euv-stage-public-record',
-    name: 'EUV 工件台公开规格记录',
+    name: 'EUV Wafer Stage Public Specification Record', name_zh: 'EUV 工件台公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -344,7 +344,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** 10.6 µm 铜输出耦合镜公开规格：reflectivity 0.6–0.9。 */
   {
     id: 'mat/copper-output-coupler-public-record',
-    name: '铜输出耦合镜公开规格记录',
+    name: 'Copper Output Coupler Public Specification Record', name_zh: '铜输出耦合镜公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -356,7 +356,7 @@ export const PUBLIC_SPEC_ITEMS: readonly Item[] = [
   /** 320 mm NA 0.43 大 null lens 公开规格：figure 0–130 nm。 */
   {
     id: 'mat/large-null-lens-public-record',
-    name: '大口径零位镜公开规格记录',
+    name: 'Large-Aperture Null Lens Public Specification Record', name_zh: '大口径零位镜公开规格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -372,7 +372,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
      * **FZ-Si 公开规格复核：查材料证书/公开 datasheet，不冒充本锭实测。**
      */
     id: 'spec/fz-silicon-public-spec',
-    name: 'FZ-Si 公开规格采集',
+    name: 'FZ-Si Public Specification Collection', name_zh: 'FZ-Si 公开规格采集',
     produces: [
       {
         item: 'mat/fz-silicon-public-record',
@@ -405,7 +405,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
      * **ZnSe 窗口公开规格复核：10.6 µm 透射/吸收 datasheet。**
      */
     id: 'spec/znse-window-public-spec',
-    name: 'ZnSe 窗口公开规格采集',
+    name: 'ZnSe Window Public Specification Collection', name_zh: 'ZnSe 窗口公开规格采集',
     produces: [
       {
         item: 'mat/znse-window-public-record',
@@ -439,7 +439,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
      * **金刚石车削铜镜/OAP 公开规格复核：Ra/反射率 datasheet。**
      */
     id: 'spec/diamond-turned-copper-public-spec',
-    name: '金刚石车削镀金铜镜/OAP 公开规格采集',
+    name: 'Diamond-Turned Gold-Plated Copper Mirror/OAP Public Specification Collection', name_zh: '金刚石车削镀金铜镜/OAP 公开规格采集',
     produces: [
       {
         item: 'mat/diamond-turned-copper-public-record',
@@ -472,7 +472,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
      * **精密电阻公开规格复核：Vishay VHP101 datasheet。**
      */
     id: 'spec/precision-resistor-public-spec',
-    name: '精密电阻公开规格采集',
+    name: 'Precision Resistor Public Specification Collection', name_zh: '精密电阻公开规格采集',
     produces: [
       {
         item: 'mat/precision-resistor-public-record',
@@ -504,7 +504,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
      * **EUV 绝对平面公开规格复核：超抛光基板 datasheet。**
      */
     id: 'spec/euv-absolute-flat-public-spec',
-    name: 'EUV 绝对平面公开规格采集',
+    name: 'EUV Absolute Flat Public Specification Collection', name_zh: 'EUV 绝对平面公开规格采集',
     produces: [
       {
         item: 'mat/euv-absolute-flat-public-record',
@@ -536,7 +536,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
      * **EUV 光栅公开规格复核：1200 l/mm 闪耀光栅 datasheet。**
      */
     id: 'spec/euv-grating-public-spec',
-    name: 'EUV 光栅公开规格采集',
+    name: 'EUV Grating Public Specification Collection', name_zh: 'EUV 光栅公开规格采集',
     produces: [
       {
         item: 'mat/euv-grating-public-record',
@@ -567,7 +567,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
      * **EUV 快探测器公开规格复核：QE/timeConstant datasheet。**
      */
     id: 'spec/euv-detector-fast-public-spec',
-    name: 'EUV 快探测器公开规格采集',
+    name: 'EUV Fast Detector Public Specification Collection', name_zh: 'EUV 快探测器公开规格采集',
     produces: [
       {
         item: 'mat/euv-detector-fast-public-record',
@@ -599,7 +599,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
      * **30 kW 量热器公开规格复核：±1 % datasheet。**
      */
     id: 'spec/laser-calorimeter-public-spec',
-    name: '30 kW 水冷量热器公开规格采集',
+    name: '30 kW Water-Cooled Calorimeter Public Specification Collection', name_zh: '30 kW 水冷量热器公开规格采集',
     produces: [
       {
         item: 'mat/laser-calorimeter-public-record',
@@ -630,7 +630,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
      * **水流量计公开规格复核：1–2 % datasheet。**
      */
     id: 'spec/water-flow-meter-public-spec',
-    name: '水流量计公开规格采集',
+    name: 'Water Flowmeter Public Specification Collection', name_zh: '水流量计公开规格采集',
     produces: [
       {
         item: 'mat/water-flow-meter-public-record',
@@ -658,7 +658,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/rf-combiner-public-spec',
-    name: '射频合成器公开规格采集',
+    name: 'RF Combiner Public Specification Collection', name_zh: '射频合成器公开规格采集',
     produces: [{
       item: 'mat/rf-combiner-public-record', qty: q(1),
       gives: [
@@ -675,7 +675,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/laser-beam-profiler-public-spec',
-    name: '激光光束剖面仪公开规格采集',
+    name: 'Laser Beam Profiler Public Specification Collection', name_zh: '激光光束剖面仪公开规格采集',
     produces: [{
       item: 'mat/laser-beam-profiler-public-record', qty: q(1),
       gives: [
@@ -693,7 +693,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/ion-beam-profiler-public-spec',
-    name: '离子束剖面仪公开规格采集',
+    name: 'Ion Beam Profiler Public Specification Collection', name_zh: '离子束剖面仪公开规格采集',
     produces: [{
       item: 'mat/ion-beam-profiler-public-record', qty: q(1),
       gives: [
@@ -710,7 +710,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/xray-goniometer-public-spec',
-    name: 'X 射线测角仪公开规格采集',
+    name: 'X-Ray Goniometer Public Specification Collection', name_zh: 'X 射线测角仪公开规格采集',
     produces: [{
       item: 'mat/xray-goniometer-public-record', qty: q(1),
       gives: [
@@ -728,7 +728,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/xray-diffractometer-public-spec',
-    name: 'X 射线衍射仪公开规格采集',
+    name: 'X-Ray Diffractometer Public Specification Collection', name_zh: 'X 射线衍射仪公开规格采集',
     produces: [{
       item: 'mat/xray-diffractometer-public-record', qty: q(1),
       gives: [
@@ -745,7 +745,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/euv-droplet-imager-public-spec',
-    name: 'EUV 液滴成像仪公开规格采集',
+    name: 'EUV Droplet Imager Public Specification Collection', name_zh: 'EUV 液滴成像仪公开规格采集',
     produces: [{
       item: 'mat/euv-droplet-imager-public-record', qty: q(1),
       gives: [
@@ -763,7 +763,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/euv-spectrometer-public-spec',
-    name: 'EUV 光谱仪公开规格采集',
+    name: 'EUV Spectrometer Public Specification Collection', name_zh: 'EUV 光谱仪公开规格采集',
     produces: [{
       item: 'mat/euv-spectrometer-public-record', qty: q(1),
       gives: [
@@ -780,7 +780,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/fast-tool-servo-public-spec',
-    name: '快速刀具伺服公开规格采集',
+    name: 'Fast Tool Servo Public Specification Collection', name_zh: '快速刀具伺服公开规格采集',
     produces: [{
       item: 'mat/fast-tool-servo-public-record', qty: q(1),
       gives: [{ param: 'resolution', kind: 'range', min: 1, max: 10 }, { param: 'points', kind: 'range', min: 3, max: 3 }],
@@ -794,7 +794,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/laser-gas-loop-public-spec',
-    name: '激光气体循环公开规格采集',
+    name: 'Laser Gas Circulation Public Specification Collection', name_zh: '激光气体循环公开规格采集',
     produces: [{
       item: 'mat/laser-gas-loop-public-record', qty: q(1),
       gives: [{ param: 'tempStability', kind: 'range', min: 0.5, max: 2 }, { param: 'points', kind: 'range', min: 3, max: 3 }],
@@ -808,7 +808,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/rf-generator-public-spec',
-    name: '射频发生器公开规格采集',
+    name: 'RF Generator Public Specification Collection', name_zh: '射频发生器公开规格采集',
     produces: [{
       item: 'mat/rf-generator-public-record', qty: q(1),
       gives: [
@@ -827,7 +827,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/precision-spindle-public-spec',
-    name: '精密主轴公开规格采集',
+    name: 'Precision Spindle Public Specification Collection', name_zh: '精密主轴公开规格采集',
     produces: [{
       item: 'mat/precision-spindle-public-record', qty: q(1),
       gives: [
@@ -845,7 +845,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/rotary-table-public-spec',
-    name: '回转台公开规格采集',
+    name: 'Rotary Table Public Specification Collection', name_zh: '回转台公开规格采集',
     produces: [{
       item: 'mat/rotary-table-public-record', qty: q(1),
       gives: [
@@ -864,7 +864,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/euv-stage-public-spec',
-    name: 'EUV 工件台公开规格采集',
+    name: 'EUV Wafer Stage Public Specification Collection', name_zh: 'EUV 工件台公开规格采集',
     produces: [{
       item: 'mat/euv-stage-public-record', qty: q(1),
       gives: [
@@ -882,7 +882,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/copper-output-coupler-public-spec',
-    name: '铜输出耦合镜公开规格采集',
+    name: 'Copper Output Coupler Public Specification Collection', name_zh: '铜输出耦合镜公开规格采集',
     produces: [{
       item: 'mat/copper-output-coupler-public-record', qty: q(1),
       gives: [{ param: 'reflectivity', kind: 'range', min: 0.6, max: 0.9 }, { param: 'points', kind: 'range', min: 3, max: 3 }],
@@ -896,7 +896,7 @@ export const PUBLIC_SPEC_ROUTES: readonly Route[] = [
   },
   {
     id: 'spec/large-null-lens-public-spec',
-    name: '大口径零位镜公开规格采集',
+    name: 'Large-Aperture Null Lens Public Specification Collection', name_zh: '大口径零位镜公开规格采集',
     produces: [{
       item: 'mat/large-null-lens-public-record', qty: q(1),
       gives: [{ param: 'figure', kind: 'range', min: 0, max: 130 }, { param: 'points', kind: 'range', min: 3, max: 3 }],

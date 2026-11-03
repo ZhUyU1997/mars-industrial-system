@@ -49,7 +49,7 @@ export const IC_ITEMS: readonly Item[] = [
    * 封装有两种：酚醛压铸（`make/logic-chip`）与金属帽气密（`make/logic-chip-hermetic`），
    * 同一个产出、两条来路 —— 选哪种取决于用在哪。
    */
-  { id: 'std/logic-chip-general', name: '集成逻辑芯片', unit: '片', category: 'part',
+  { id: 'std/logic-chip-general', name: 'Integrated Logic Chip', name_zh: '集成逻辑芯片', unit: '片', category: 'part',
     // 规格按行业口径分两条轴：工艺节点 node（5 µm 世代）、集成度 gates（10–50 门/片）。
     props: [{ param: 'node', kind: 'range', min: 5000, max: 5000, unit: 'nm', dir: 'atMost' }, { param: 'gates', kind: 'range', min: 10, max: 50, unit: '门' }], },
 ];
@@ -70,7 +70,7 @@ export const IC_ROUTES: readonly Route[] = [
      * **算有了，但算得太慢。**
      */
     id: 'make/robot-controller-computer',
-    name: '机器人控制柜制造',
+    name: 'Robot Control Cabinet Manufacturing', name_zh: '机器人控制柜制造',
     produces: [{ item: 'plant/robot/controller', qty: q(1), gives: [{ param: 'dof', kind: 'range', min: 6, max: 6 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -94,7 +94,7 @@ export const IC_ROUTES: readonly Route[] = [
      * 变的只是"数圈数"这一件事 —— 而它恰好是集成电路最擅长的：**计数。**
      */
     id: 'make/winder-control-ic',
-    name: '绕线机计数与排线控制制造',
+    name: 'Winder Counting and Traverse Control Manufacturing', name_zh: '绕线机计数与排线控制制造',
     produces: [{ item: 'plant/winder/control', qty: q(1) }],
     uses: [
       // 两片 4 门芯片搭计数与译码，或一片 40 门的计数器芯片（两层铝）。

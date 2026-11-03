@@ -57,7 +57,7 @@ export const GRINDER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/grinder/wheel',
-    name: '磨床砂轮',
+    name: 'Grinder Grinding Wheel', name_zh: '磨床砂轮',
     unit: '件',
     category: 'part',
     // 验收上限：修整去重后的残余不平衡量 ≤50 g·mm（G6.3 档按 5–20 kg 轮重收紧）。
@@ -72,7 +72,7 @@ export const GRINDER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/grinder/bed',
-    name: '磨床床身',
+    name: 'Grinder Bed', name_zh: '磨床床身',
     unit: '件',
     category: 'part',
     // 工作台导轨面平面度（每 300 mm 口径）。磨床比车床更依赖这一项：
@@ -88,7 +88,7 @@ export const GRINDER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/grinder/wheel-head',
-    name: '磨床砂轮架',
+    name: 'Grinder Wheel Head', name_zh: '磨床砂轮架',
     unit: '件',
     category: 'part',
     // 砂轮架进给分辨率：刻度盘每格对应多少位移。磨削的最后一刀就靠这一格。
@@ -104,7 +104,7 @@ export const GRINDER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/grinder/spindle',
-    name: '磨床砂轮主轴',
+    name: 'Grinder Wheel Spindle', name_zh: '磨床砂轮主轴',
     unit: '件',
     category: 'part',
     // 砂轮主轴径向跳动。磨削把跳动直接复印到工件上，所以这个数比车床那个更紧。
@@ -118,7 +118,7 @@ export const GRINDER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/grinder/work-head',
-    name: '磨床工件头架',
+    name: 'Grinder Work Headstock', name_zh: '磨床工件头架',
     unit: '件',
     category: 'part',
     props: [{ param: 'flatness', kind: 'range', min: 0, max: 0.02, unit: 'mm', dir: 'atMost' }],
@@ -131,7 +131,7 @@ export const GRINDER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/grinder/feed-screw',
-    name: '磨床进给丝杠',
+    name: 'Grinder Feed Lead Screw', name_zh: '磨床进给丝杠',
     unit: '件',
     category: 'part',
     props: [{ param: 'pitchError', kind: 'range', min: 0, max: 20, unit: 'µm', dir: 'atMost' }],
@@ -149,7 +149,7 @@ export const GRINDER_ROUTES: readonly Route[] = [
   {
     /** 砂轮。刚玉磨粒 + 树脂混料 → 压环 → 180–200 °C 固化 → 修整。 */
     id: 'make/grinder-wheel',
-    name: '磨床砂轮制造',
+    name: 'Grinder Grinding Wheel Manufacturing', name_zh: '磨床砂轮制造',
     produces: [{
       item: 'plant/grinder/wheel',
       qty: q(1),
@@ -183,7 +183,7 @@ export const GRINDER_ROUTES: readonly Route[] = [
      *      最后空走两刀。
      */
     id: 'make/grinder-wheel-sic',
-    name: '磨床砂轮制造',
+    name: 'Grinder Grinding Wheel Manufacturing', name_zh: '磨床砂轮制造',
     produces: [{
       item: 'plant/grinder/wheel',
       qty: q(1),
@@ -201,7 +201,7 @@ export const GRINDER_ROUTES: readonly Route[] = [
   {
     /** 床身。HT300 浇成 → 时效 → 磨导轨。 */
     id: 'make/grinder-bed',
-    name: '磨床床身制造',
+    name: 'Grinder Bed Manufacturing', name_zh: '磨床床身制造',
     produces: [
       {
         item: 'plant/grinder/bed',
@@ -218,7 +218,7 @@ export const GRINDER_ROUTES: readonly Route[] = [
   {
     /** 砂轮架。HT300 浇成 → 磨配合面。 */
     id: 'make/grinder-wheel-head',
-    name: '磨床砂轮架制造',
+    name: 'Grinder Wheel Head Manufacturing', name_zh: '磨床砂轮架制造',
     produces: [
       {
         item: 'plant/grinder/wheel-head',
@@ -251,7 +251,7 @@ export const GRINDER_ROUTES: readonly Route[] = [
      * 磨床还能磨，只是磨不出量块那一路要的面。
      */
     id: 'make/grinder-spindle',
-    name: '磨床砂轮主轴制造',
+    name: 'Grinder Wheel Spindle Manufacturing', name_zh: '磨床砂轮主轴制造',
     // 磨出来的主轴，跳动继承磨床自己（A2 精度继承的第二例）。
     produces: [
       {
@@ -280,7 +280,7 @@ export const GRINDER_ROUTES: readonly Route[] = [
   {
     /** 工件头架。HT250 浇成 → 与床身配刮。 */
     id: 'make/grinder-work-head',
-    name: '磨床工件头架制造',
+    name: 'Grinder Work Headstock Manufacturing', name_zh: '磨床工件头架制造',
     produces: [{
       item: 'plant/grinder/work-head',
       qty: q(1),
@@ -295,7 +295,7 @@ export const GRINDER_ROUTES: readonly Route[] = [
   {
     /** 进给丝杠。45 钢车螺纹 → 淬 → 磨。车床出形状，磨床出精度。 */
     id: 'make/grinder-feed-screw',
-    name: '磨床进给丝杠制造',
+    name: 'Grinder Feed Lead Screw Manufacturing', name_zh: '磨床进给丝杠制造',
     produces: [{
       item: 'plant/grinder/feed-screw',
       qty: q(1),
@@ -381,7 +381,7 @@ export const GRINDER_ROUTES: readonly Route[] = [
  */
 export const MILL_PARTS: readonly Item[] = [
   /** 床身。HT300 浇成。承立柱与工作台，导轨面磨。 */
-  { id: 'plant/milling-machine/bed', name: '铣镗床床身', unit: '件', category: 'part' },
+  { id: 'plant/milling-machine/bed', name: 'Milling and Boring Machine Bed', name_zh: '铣镗床床身', unit: '件', category: 'part' },
 
   /**
    * 立柱。HT300 浇成。铣头沿它的导轨升降。
@@ -389,7 +389,7 @@ export const MILL_PARTS: readonly Item[] = [
    * 立柱和床身的直角是这台机器的基准：不垂直，铣出来的面就是斜的。
    * 直角靠刮，不靠加工 —— 与车床尾座同轴度同理。
    */
-  { id: 'plant/milling-machine/column', name: '铣镗床立柱', unit: '件', category: 'part' },
+  { id: 'plant/milling-machine/column', name: 'Milling and Boring Machine Column', name_zh: '铣镗床立柱', unit: '件', category: 'part' },
 
   /**
    * 工作台。HT250 浇成。
@@ -398,7 +398,7 @@ export const MILL_PARTS: readonly Item[] = [
    * 纵向进给"铣出来 —— 车床上唯一能走直线的进给就是溜板，而铣槽正好
    * 只要一条直线。
    */
-  { id: 'plant/milling-machine/table', name: '铣镗床工作台', unit: '件', category: 'part' },
+  { id: 'plant/milling-machine/table', name: 'Milling and Boring Machine Table', name_zh: '铣镗床工作台', unit: '件', category: 'part' },
 
   /**
    * 铣头。HT250 浇成，装主轴与变速齿轮。
@@ -406,7 +406,7 @@ export const MILL_PARTS: readonly Item[] = [
    * 主轴孔在**车床花盘上镗**：把铸件夹在花盘上，用镗刀杆进给。箱体镗孔
    * 本来该是镗床的活，但第一台镗床的孔只能由车床开出来。
    */
-  { id: 'plant/milling-machine/spindle-head', name: '铣镗床铣头', unit: '件', category: 'part' },
+  { id: 'plant/milling-machine/spindle-head', name: 'Milling and Boring Machine Milling Head', name_zh: '铣镗床铣头', unit: '件', category: 'part' },
 
   /**
    * 主轴。40Cr 锻件 → 淬 → 磨。
@@ -416,10 +416,10 @@ export const MILL_PARTS: readonly Item[] = [
    * 但磨锥孔还要**锥形砂轮修整**与**工件头架扳角度**，那是另一道手艺。
    * 所以这一处退到"车后研配"（几份 unblock 都按这个写）。
    */
-  { id: 'plant/milling-machine/spindle', name: '铣镗床主轴', unit: '件', category: 'part' },
+  { id: 'plant/milling-machine/spindle', name: 'Milling and Boring Machine Spindle', name_zh: '铣镗床主轴', unit: '件', category: 'part' },
 
   /** 进给丝杠。45 钢车螺纹 → 淬 → 磨。导程误差直接变成进给误差。 */
-  { id: 'plant/milling-machine/feed-screw', name: '铣镗床进给丝杠', unit: '件', category: 'part' },
+  { id: 'plant/milling-machine/feed-screw', name: 'Milling and Boring Machine Feed Lead Screw', name_zh: '铣镗床进给丝杠', unit: '件', category: 'part' },
 ];
 
 /**
@@ -432,7 +432,7 @@ export const MILL_ROUTES: readonly Route[] = [
   {
     /** 床身。HT300 浇 → 时效 → 顶面与底面磨平。 */
     id: 'make/mill-bed',
-    name: '铣镗床床身制造',
+    name: 'Milling and Boring Machine Bed Manufacturing', name_zh: '铣镗床床身制造',
     produces: [{ item: 'plant/milling-machine/bed', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht300', qty: q(1) }] }],
     needs: ['lathe', 'plant/grinder'],
@@ -442,7 +442,7 @@ export const MILL_ROUTES: readonly Route[] = [
   {
     /** 立柱。HT300 浇 → 导轨面磨 → 与床身配刮出直角。 */
     id: 'make/mill-column',
-    name: '铣镗床立柱制造',
+    name: 'Milling and Boring Machine Column Manufacturing', name_zh: '铣镗床立柱制造',
     produces: [{ item: 'plant/milling-machine/column', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht300', qty: q(1) }] }],
     needs: ['lathe', 'plant/grinder'],
@@ -452,7 +452,7 @@ export const MILL_ROUTES: readonly Route[] = [
   {
     /** 工作台。HT250 浇 → 台面磨 → T 型槽用铣头铣。 */
     id: 'make/mill-table',
-    name: '铣镗床工作台制造',
+    name: 'Milling and Boring Machine Table Manufacturing', name_zh: '铣镗床工作台制造',
     produces: [{ item: 'plant/milling-machine/table', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     needs: ['lathe', 'plant/grinder'],
@@ -462,7 +462,7 @@ export const MILL_ROUTES: readonly Route[] = [
   {
     /** 铣头。HT250 浇 → 主轴孔在车床花盘上镗 → 结合面磨。 */
     id: 'make/mill-spindle-head',
-    name: '铣镗床铣头制造',
+    name: 'Milling and Boring Machine Milling Head Manufacturing', name_zh: '铣镗床铣头制造',
     produces: [{ item: 'plant/milling-machine/spindle-head', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     needs: ['lathe', 'plant/grinder'],
@@ -472,7 +472,7 @@ export const MILL_ROUTES: readonly Route[] = [
   {
     /** 主轴。40Cr 锻 → 粗车 → 调质 → 精车 → 淬 → 磨外圆与锥孔。 */
     id: 'make/mill-spindle',
-    name: '铣镗床主轴制造',
+    name: 'Milling and Boring Machine Spindle Manufacturing', name_zh: '铣镗床主轴制造',
     produces: [{ item: 'plant/milling-machine/spindle', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] },
       { anyOf: [{ item: 'std/bearing-spindle-p5', qty: q(2) }] }],
@@ -482,7 +482,7 @@ export const MILL_ROUTES: readonly Route[] = [
   {
     /** 进给丝杠。45 钢车螺纹 → 淬 → 磨。车床出形状，磨床出精度。 */
     id: 'make/mill-feed-screw',
-    name: '铣镗床进给丝杠制造',
+    name: 'Milling and Boring Machine Feed Lead Screw Manufacturing', name_zh: '铣镗床进给丝杠制造',
     produces: [{ item: 'plant/milling-machine/feed-screw', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/grinder'],
@@ -506,14 +506,14 @@ export const SHEET_PARTS: readonly Item[] = [
    * 冷轧板要轧机，而轧机还没建**。用铸铁就不需要轧机：熔炼炉能浇。
    * 这不是省事，是先把这个循环切断；等轧机建成，下一代机身自然换回焊接。
    */
-  { id: 'plant/sheet-shop/frame', name: '钣金与焊接工位机身', unit: '件', category: 'part' },
+  { id: 'plant/sheet-shop/frame', name: 'Sheet Metal and Welding Workstation Frame', name_zh: '钣金与焊接工位机身', unit: '件', category: 'part' },
 
   /**
    * 折弯滑块与上模。45 钢锻件，铣出 V 形槽，淬硬。
    *
    * 滑块与导轨的间隙靠配刮，不靠装配公差 —— 与溜板同理。
    */
-  { id: 'plant/sheet-shop/ram', name: '钣金与焊接工位折弯滑块与上模', unit: '件', category: 'part' },
+  { id: 'plant/sheet-shop/ram', name: 'Sheet Metal and Welding Workstation Bending Ram and Upper Die', name_zh: '钣金与焊接工位折弯滑块与上模', unit: '件', category: 'part' },
 
   /**
    * 剪板刀片。40Cr 淬硬后磨刃。
@@ -521,7 +521,7 @@ export const SHEET_PARTS: readonly Item[] = [
    * ⚠️ 真正的剪板刀片是 Cr12MoV 这类高铬工具钢，本链只有 40Cr 与 45 ——
    * 用 40Cr 代用，刀片寿命打折。刀片钢链未建，这是缺口。
    */
-  { id: 'plant/sheet-shop/blade', name: '钣金与焊接工位剪板刀片', unit: '件', category: 'part' },
+  { id: 'plant/sheet-shop/blade', name: 'Sheet Metal and Welding Workstation Shear Blade', name_zh: '钣金与焊接工位剪板刀片', unit: '件', category: 'part' },
 
   /**
    * 传动丝杠。45 钢车螺纹 → 淬 → 磨。
@@ -530,7 +530,7 @@ export const SHEET_PARTS: readonly Item[] = [
    * 橡胶链（硫化要硫，硫有了；成型与配方没有）也没建。丝杠传动只要
    * 车床与磨床两台现成的设备。
    */
-  { id: 'plant/sheet-shop/drive', name: '钣金与焊接工位传动丝杠', unit: '件', category: 'part' },
+  { id: 'plant/sheet-shop/drive', name: 'Sheet Metal and Welding Workstation Drive Lead Screw', name_zh: '钣金与焊接工位传动丝杠', unit: '件', category: 'part' },
 
   /**
    * 焊机。变压器、送丝机构、焊枪。
@@ -541,7 +541,7 @@ export const SHEET_PARTS: readonly Item[] = [
    * ⚠️ 这条路线一度用冷轧薄板代铁芯，理由写的是"硅钢片没有条目" ——
    * 那是**那时**没有（硅钢是后来补的，见 data/material/silicon.ts）。现在有了，改回来。
    */
-  { id: 'plant/sheet-shop/welder', name: '钣金与焊接工位焊机', unit: '件', category: 'part' },
+  { id: 'plant/sheet-shop/welder', name: 'Sheet Metal and Welding Workstation Welder', name_zh: '钣金与焊接工位焊机', unit: '件', category: 'part' },
 ];
 
 /**
@@ -557,7 +557,7 @@ export const SHEET_ROUTES: readonly Route[] = [
   {
     /** 机身。HT250 浇 → 结合面铣 → 导轨面磨。 */
     id: 'make/sheet-frame',
-    name: '钣金与焊接工位机身制造',
+    name: 'Sheet Metal and Welding Workstation Frame Manufacturing', name_zh: '钣金与焊接工位机身制造',
     produces: [{ item: 'plant/sheet-shop/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     needs: ['lathe', 'plant/milling-machine', 'plant/grinder'],
@@ -567,7 +567,7 @@ export const SHEET_ROUTES: readonly Route[] = [
   {
     /** 折弯滑块。45 钢锻 → 铣 V 槽 → 淬 → 磨配合面。 */
     id: 'make/sheet-ram',
-    name: '钣金与焊接工位折弯滑块与上模制造',
+    name: 'Sheet Metal and Welding Workstation Bending Ram and Upper Die Manufacturing', name_zh: '钣金与焊接工位折弯滑块与上模制造',
     produces: [{ item: 'plant/sheet-shop/ram', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/grinder', 'plant/forge'],
@@ -576,7 +576,7 @@ export const SHEET_ROUTES: readonly Route[] = [
   {
     /** 剪板刀片。40Cr 锻 → 铣出刃口 → 淬 → 磨刃。 */
     id: 'make/sheet-blade',
-    name: '钣金与焊接工位剪板刀片制造',
+    name: 'Sheet Metal and Welding Workstation Shear Blade Manufacturing', name_zh: '钣金与焊接工位剪板刀片制造',
     produces: [{ item: 'plant/sheet-shop/blade', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] }],
     needs: ['plant/grinder', 'plant/forge'],
@@ -585,7 +585,7 @@ export const SHEET_ROUTES: readonly Route[] = [
   {
     /** 传动丝杠。45 钢车螺纹 → 淬 → 磨。 */
     id: 'make/sheet-drive',
-    name: '钣金与焊接工位传动丝杠制造',
+    name: 'Sheet Metal and Welding Workstation Drive Lead Screw Manufacturing', name_zh: '钣金与焊接工位传动丝杠制造',
     produces: [{ item: 'plant/sheet-shop/drive', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/grinder'],
@@ -604,7 +604,7 @@ export const SHEET_ROUTES: readonly Route[] = [
      * 型钢与管道 —— 厚板够用，薄板会烧穿。
      */
     id: 'make/sheet-welder-tap',
-    name: '钣金与焊接工位焊机制造',
+    name: 'Sheet Metal and Welding Workstation Welder Manufacturing', name_zh: '钣金与焊接工位焊机制造',
     produces: [{ item: 'plant/sheet-shop/welder', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/transformer-general', qty: q(1) }] },
@@ -622,7 +622,7 @@ export const SHEET_ROUTES: readonly Route[] = [
      * 只有按 kg 的 `mat/silicon-steel-3si` —— 那是长度量纲的缺口，不是材料的缺口。
      */
     id: 'make/sheet-welder',
-    name: '钣金与焊接工位焊机制造',
+    name: 'Sheet Metal and Welding Workstation Welder Manufacturing', name_zh: '钣金与焊接工位焊机制造',
     produces: [{ item: 'plant/sheet-shop/welder', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(1) }] },
@@ -646,7 +646,7 @@ export const SEED_ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/grinder',
-    name: '磨床装配',
+    name: 'Grinder Assembly', name_zh: '磨床装配',
     produces: [{
       item: 'plant/grinder',
       qty: q(1),

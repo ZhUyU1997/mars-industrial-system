@@ -22,7 +22,7 @@ export const PLATING_SHALLOW_ROUTES: readonly Route[] = [
   {
     /** 浅沟片的镀前处理：除油、酸洗、冲洗。三样与通用片同一套。 */
     id: 'make/plating-prime-shallow',
-    name: '预浸活化制造',
+    name: 'Pre-Dip Activation Manufacturing', name_zh: '预浸活化制造',
     produces: [
       {
         item: 'mat/plating-ready-wafer',

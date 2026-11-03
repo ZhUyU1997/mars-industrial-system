@@ -271,7 +271,7 @@ export const DEPROCESS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/mcu-40nm-general',
-    name: '40 nm 制程的 MCU',
+    name: '40 nm Process MCU', name_zh: '40 nm 制程的 MCU',
     unit: '片',
     category: 'part',
     props: [
@@ -316,7 +316,7 @@ export const DEPROCESS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/soc-8nm-general',
-    name: '8 nm 制程的 SoC',
+    name: '8 nm Process SoC', name_zh: '8 nm 制程的 SoC',
     unit: '片',
     category: 'part',
     props: [
@@ -349,7 +349,7 @@ export const DEPROCESS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/die-exposed-general',
-    name: '开盖后的裸片',
+    name: 'Decapped Bare Die', name_zh: '开盖后的裸片',
     unit: '件',
     category: 'part',
     props: [
@@ -378,7 +378,7 @@ export const DEPROCESS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/layer-tracing-general',
-    name: '一层的手刻原图',
+    name: 'Single-Layer Hand-Traced Master', name_zh: '一层的手刻原图',
     unit: '张',
     category: 'part',
     props: [{ param: 'lineWidth', kind: 'range', min: 0.01, max: 1, unit: 'mm', dir: 'atMost' }],
@@ -394,7 +394,7 @@ export const DEPROCESS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/die-replica-general',
-    name: '复版裸片',
+    name: 'Replica Bare Die', name_zh: '复版裸片',
     unit: '片',
     category: 'part',
     props: [
@@ -413,7 +413,7 @@ export const DEPROCESS_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/die-ir-image-general',
-    name: '背面红外透视图',
+    name: 'Backside Infrared Image', name_zh: '背面红外透视图',
     unit: '张',
     category: 'part',
     props: [{ param: 'minFeature', kind: 'range', min: 1, max: 2000, unit: 'µm', dir: 'atMost' }],
@@ -443,7 +443,7 @@ export const DEPROCESS_ROUTES: readonly Route[] = [
      *    湿法槽必须盖紧、尾气走碱液吸收。**这类危险不写在模型里，但它是真的。**
      */
     id: 'make/deprocess-decap-epoxy',
-    name: '开盖后的裸片制造',
+    name: 'Decapped Bare Die Manufacturing', name_zh: '开盖后的裸片制造',
     produces: [
       {
         item: 'std/die-exposed-general',
@@ -503,7 +503,7 @@ export const DEPROCESS_ROUTES: readonly Route[] = [
      * 于是"复制自己的芯片行、复制那两颗不行"这句话，在数据里是一条路线之差，不是态度之差。
      */
     id: 'make/deprocess-decap-can',
-    name: '开盖后的裸片制造',
+    name: 'Decapped Bare Die Manufacturing', name_zh: '开盖后的裸片制造',
     produces: [
       {
         item: 'std/die-exposed-general',
@@ -554,7 +554,7 @@ export const DEPROCESS_ROUTES: readonly Route[] = [
      *    "时间到就捞出来看"，而不是"看见再停"。
      */
     id: 'make/deprocess-oxide',
-    name: '去介质/钝化',
+    name: 'Dielectric Removal/Passivation', name_zh: '去介质/钝化',
     produces: [
       {
         item: 'std/die-exposed-general',
@@ -595,7 +595,7 @@ export const DEPROCESS_ROUTES: readonly Route[] = [
      * 代价写在第二节：200 nm 的 M1 去完时 TaN 掉 4–10 nm，而它本体只有 5–10 nm。
      */
     id: 'make/deprocess-metal-cu',
-    name: '开盖后的裸片制造',
+    name: 'Decapped Bare Die Manufacturing', name_zh: '开盖后的裸片制造',
     produces: [
       {
         item: 'std/die-exposed-general',
@@ -646,7 +646,7 @@ export const DEPROCESS_ROUTES: readonly Route[] = [
      * 王水对铜是 1 : 1，所以它对铜片是**毁掉那一层**而不是"去过头"：放宽 = 功能丢掉。
      */
     id: 'make/deprocess-metal-al',
-    name: '开盖后的裸片制造',
+    name: 'Decapped Bare Die Manufacturing', name_zh: '开盖后的裸片制造',
     produces: [
       {
         item: 'std/die-exposed-general',
@@ -701,7 +701,7 @@ export const DEPROCESS_ROUTES: readonly Route[] = [
      * 这条路线是为将来那条"能造 1 µm 的链"留的：`make/cpu-8bit` 的栅就是多晶硅。
      */
     id: 'make/deprocess-poly',
-    name: '开盖后的裸片制造',
+    name: 'Decapped Bare Die Manufacturing', name_zh: '开盖后的裸片制造',
     produces: [
       {
         item: 'std/die-exposed-general',
@@ -747,7 +747,7 @@ export const DEPROCESS_ROUTES: readonly Route[] = [
      * ⇒ **读出来的图形最小 5 µm**。40 nm 的线在这个尺度上是"一片糊的灰"，不是线。
      */
     id: 'make/deprocess-trace',
-    name: '一层的手刻原图制造',
+    name: 'Single-Layer Hand-Traced Master Manufacturing', name_zh: '一层的手刻原图制造',
     produces: [
       {
         item: 'std/layer-tracing-general',
@@ -782,7 +782,7 @@ export const DEPROCESS_ROUTES: readonly Route[] = [
      * 三条并存不矛盾：**版就是版，问题只是这一块刻得多细**。
      */
     id: 'make/deprocess-mask-set',
-    name: '接触式掩模制造',
+    name: 'Contact Mask Manufacturing', name_zh: '接触式掩模制造',
     produces: [
       {
         item: 'std/photomask-general',
@@ -835,7 +835,7 @@ export const DEPROCESS_ROUTES: readonly Route[] = [
      *      量不出来，只能靠"蒸之前多抽 10 min"这种没有刻度的纪律。
      */
     id: 'make/deprocess-replica',
-    name: '复版裸片制造',
+    name: 'Replica Bare Die Manufacturing', name_zh: '复版裸片制造',
     produces: [
       {
         item: 'std/die-replica-general',
@@ -912,7 +912,7 @@ export const DEPROCESS_ROUTES: readonly Route[] = [
      * **有它就不用瞎磨** —— 这是它在这条工艺里的位置。
      */
     id: 'make/deprocess-ir-image',
-    name: '背面红外透视图制造',
+    name: 'Backside Infrared Image Manufacturing', name_zh: '背面红外透视图制造',
     produces: [
       {
         item: 'std/die-ir-image-general',

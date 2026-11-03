@@ -413,7 +413,7 @@ export const UNBLOCK_PLATING_TANK_ROUTES: readonly Route[] = [
      * 的水汽，而零件是**在常压下造的**（与 unblock-wet-bench 第八节同一条口径）。
      */
     id: 'make/plating-tank-cast',
-    name: '电镀槽槽体铸造',
+    name: 'Electroplating Bath Tank Casting', name_zh: '电镀槽槽体铸造',
     produces: [{ item: 'plant/plating-bath/tank', qty: q(1) }],
     uses: [
       {

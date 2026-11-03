@@ -609,7 +609,7 @@ export const UNBLOCK_AUTOCLAVE_SIGHT_ROUTES: readonly Route[] = [
      *     谁把它当"石英片是现成料"用，就会在出成（0.58）与气泡（10³–10⁴ 个/cm³）上算错
      */
     id: 'make/autoclave-sight-cast',
-    name: '高压釜观察窗制造',
+    name: 'Autoclave Sight Glass Manufacturing', name_zh: '高压釜观察窗制造',
     produces: [{ item: 'plant/autoclave/sight-glass', qty: q(1) }],
 
     /**

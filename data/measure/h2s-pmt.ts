@@ -23,7 +23,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/h2s-pmt-record',
-    name: 'H₂S PMT-FPD 记录',
+    name: 'H₂S PMT-FPD Record', name_zh: 'H₂S PMT-FPD 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -49,7 +49,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 0.05 ppm = 21.8 pg S/s ⇒ S/N 16–65。
      */
     id: 'measure/h2s-pmt',
-    name: 'H₂S PMT-FPD 测量',
+    name: 'H₂S PMT-FPD Measurement', name_zh: 'H₂S PMT-FPD 测量',
     rate: { hours: q(4) },
     produces: [
       {

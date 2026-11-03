@@ -22,7 +22,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ra-profile-record',
-    name: 'Ra 记录',
+    name: 'Ra Record', name_zh: 'Ra 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -46,7 +46,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/spindle-error-record',
-    name: '主轴误差记录',
+    name: 'Spindle Error Record', name_zh: '主轴误差记录',
     unit: '份',
     category: 'part',
     props: [
@@ -67,7 +67,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/guideway-straightness-record',
-    name: '导轨直线度记录',
+    name: 'Guideway Straightness Record', name_zh: '导轨直线度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -97,7 +97,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 单条散布 10–20 % 是研磨面的常态。
      */
     id: 'measure/gauge-block-ra-profile',
-    name: 'Ra 测量',
+    name: 'Ra Measurement', name_zh: 'Ra 测量',
     produces: [
       {
         item: 'mat/ra-profile-record',
@@ -137,7 +137,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 2–5 µm 跳动小一个量级 —— **两者不是同一件事**：跳动是包络，这是谱。
      */
     id: 'measure/lathe-spindle-periodic-error',
-    name: '主轴误差测量',
+    name: 'Spindle Error Measurement', name_zh: '主轴误差测量',
     produces: [
       {
         item: 'mat/spindle-error-record',
@@ -176,7 +176,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * **复印**到工件上（砂轮与工件是刚性接触），所以它比车床那根更值钱。
      */
     id: 'measure/grinder-spindle-periodic-error',
-    name: '主轴误差测量',
+    name: 'Spindle Error Measurement', name_zh: '主轴误差测量',
     produces: [
       {
         item: 'mat/spindle-error-record',
@@ -219,7 +219,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 时间常数 10–20 h）。这一条写进记录的条件里，不写成"已消除"。
      */
     id: 'measure/lathe-bed-straightness',
-    name: '导轨直线度测量',
+    name: 'Guideway Straightness Measurement', name_zh: '导轨直线度测量',
     produces: [
       {
         item: 'mat/guideway-straightness-record',

@@ -213,7 +213,7 @@ export const UNBLOCK_INSUL_ITEMS: readonly Item[] = [
    *
    * 用途：织玻璃布/带；也可直接绕包、绑扎（端部绑扎与层间垫）。
    */
-  { id: 'mat/glass-fiber', name: '玻璃纤维粗纱', unit: 'kg', category: 'material' },
+  { id: 'mat/glass-fiber', name: 'Glass Fiber Roving', name_zh: '玻璃纤维粗纱', unit: 'kg', category: 'material' },
 
   /**
    * 玻璃布/带。粗纱平纹方格布：幅宽 100 mm，4 根/cm 经纬密，约 400 g/m²，
@@ -231,7 +231,7 @@ export const UNBLOCK_INSUL_ITEMS: readonly Item[] = [
    * 用途：电机定子的槽绝缘（槽衬、相间、端部），也是层间与对地绝缘的垫。
    * 它替的是 `mat/phenolic-resin` 在电机那两条路线里的位置 —— 不是替它的性能。
    */
-  { id: 'mat/glass-cloth', name: '玻璃布/带', unit: 'kg', category: 'material' },
+  { id: 'mat/glass-cloth', name: 'Glass Cloth/Tape', name_zh: '玻璃布/带', unit: 'kg', category: 'material' },
 ];
 
 export const UNBLOCK_INSUL_ROUTES: readonly Route[] = [
@@ -249,7 +249,7 @@ export const UNBLOCK_INSUL_ROUTES: readonly Route[] = [
      * 的东西，而拉丝要的正好是"一个恒定线速度的卷筒"。
      */
     id: 'make/glass-fiber',
-    name: '玻璃纤维制备',
+    name: 'Glass Fiber Production', name_zh: '玻璃纤维制备',
     produces: [{ item: 'mat/glass-fiber', qty: q(1000) }],
     uses: [
       {
@@ -352,7 +352,7 @@ export const UNBLOCK_INSUL_ROUTES: readonly Route[] = [
      * 织机本身没有条目 —— 那是缺口⑤，不是豁免。
      */
     id: 'make/glass-cloth',
-    name: '玻璃布/带制备',
+    name: 'Glass Cloth/Tape Production', name_zh: '玻璃布/带制备',
     produces: [{ item: 'mat/glass-cloth', qty: q(1000) }],
     uses: [
       {

@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const FZ_SILICON_RESISTIVITY_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/fz-silicon-resistivity-measure-record',
-    name: 'FZ 硅电阻率测量记录',
+    name: 'FZ Silicon Resistivity Measurement Record', name_zh: 'FZ 硅电阻率测量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -27,7 +27,7 @@ export const FZ_SILICON_RESISTIVITY_MEASURE_ROUTES: readonly Route[] = [
      * **FZ 硅：四探针方块电阻 + 厚度，算 10–50 Ω·cm。**
      */
     id: 'measure/fz-silicon-resistivity',
-    name: 'FZ 硅电阻率测量',
+    name: 'FZ Silicon Resistivity Measurement', name_zh: 'FZ 硅电阻率测量',
     produces: [{
       item: 'mat/fz-silicon-resistivity-measure-record',
       qty: q(1),

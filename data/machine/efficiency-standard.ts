@@ -14,7 +14,7 @@ export const EFFICIENCY_STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/efficiency-standard',
-    name: '效率标准',
+    name: 'Efficiency Standard', name_zh: '效率标准',
     unit: '台',
     category: 'machine',
     props: [
@@ -37,7 +37,7 @@ export const EFFICIENCY_STANDARD_ROUTES: readonly Route[] = [
      * 0–100 % 与 0.1–1 % 是设计量程，不是读数。
      */
     id: 'make/efficiency-standard',
-    name: '效率标准装配',
+    name: 'Efficiency Standard Assembly', name_zh: '效率标准装配',
     produces: [
       {
         item: 'plant/efficiency-standard',

@@ -30,7 +30,7 @@ export const FURNACE_PARTS_MEASURE_ROUTES: readonly Route[] = [
      * 与工件同温）。U(k=2) ≈ 0.02 mm：千分尺 0.01 + 重复 0.005 + 温度 0.005。
      */
     id: 'measure/furnace-shell-wall',
-    name: '熔炼炉炉壳测量',
+    name: 'Melting Furnace Shell Measurement', name_zh: '熔炼炉炉壳测量',
     produces: [{
       item: 'plant/melting-furnace/shell',
       qty: q(1),
@@ -56,7 +56,7 @@ export const FURNACE_PARTS_MEASURE_ROUTES: readonly Route[] = [
      * 炉口基准面；U(k=2) ≈ 3 mm：尺 0.5 + 基准面 1 + 捣实面不平 2。
      */
     id: 'measure/furnace-lining-thickness',
-    name: '熔炼炉炉衬测量',
+    name: 'Melting Furnace Lining Measurement', name_zh: '熔炼炉炉衬测量',
     produces: [{
       item: 'plant/melting-furnace/lining',
       qty: q(1),
@@ -81,7 +81,7 @@ export const FURNACE_PARTS_MEASURE_ROUTES: readonly Route[] = [
      * U(k=2)：电感 1 %、电阻 0.5 mΩ（LCR 表 0.3–1.2 % 档 + 重复）。
      */
     id: 'measure/furnace-coil-electrical',
-    name: '熔炼炉感应线圈测量',
+    name: 'Melting Furnace Induction Coil Measurement', name_zh: '熔炼炉感应线圈测量',
     produces: [{
       item: 'plant/melting-furnace/coil',
       qty: q(1),
@@ -109,7 +109,7 @@ export const FURNACE_PARTS_MEASURE_ROUTES: readonly Route[] = [
      * U(k=2) ≈ 20 %（表 1.6 级 + 温度漂移 + 30 min 读数）。
      */
     id: 'measure/furnace-coil-cooling-leak',
-    name: '熔炼炉感应圈水冷套测量',
+    name: 'Melting Furnace Induction Coil Water-Cooled Jacket Measurement', name_zh: '熔炼炉感应圈水冷套测量',
     produces: [{
       item: 'plant/melting-furnace/coil-cooling',
       qty: q(1),
@@ -135,7 +135,7 @@ export const FURNACE_PARTS_MEASURE_ROUTES: readonly Route[] = [
      * + 扭矩重复 0.5′。
      */
     id: 'measure/furnace-tilt-backlash',
-    name: '熔炼炉倾转机构测量',
+    name: 'Melting Furnace Tilting Mechanism Measurement', name_zh: '熔炼炉倾转机构测量',
     produces: [{
       item: 'plant/melting-furnace/tilt-drive',
       qty: q(1),
@@ -160,7 +160,7 @@ export const FURNACE_PARTS_MEASURE_ROUTES: readonly Route[] = [
      * 电压 1 %、纹波 0.5 个百分点（表 0.5 级 + 分压比 1 % + 示波器 2 %）。
      */
     id: 'measure/furnace-psu-output',
-    name: '熔炼炉中频电源测量',
+    name: 'Melting Furnace Medium-Frequency Power Supply Measurement', name_zh: '熔炼炉中频电源测量',
     produces: [{
       item: 'plant/melting-furnace/psu',
       qty: q(1),

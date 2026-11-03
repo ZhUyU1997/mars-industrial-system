@@ -31,7 +31,7 @@ export const ARF_STEPPER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-stepper/frame',
-    name: 'ArF 光刻机机架',
+    name: 'ArF Stepper Frame', name_zh: 'ArF 光刻机机架',
     unit: '件',
     category: 'part',
     props: [{ param: 'flatness', kind: 'range', min: 0, max: 0.01, unit: 'mm', dir: 'atMost' }],
@@ -50,7 +50,7 @@ export const ARF_STEPPER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-stepper/illuminator',
-    name: 'ArF 光刻机照明系统',
+    name: 'ArF Stepper Illumination System', name_zh: 'ArF 光刻机照明系统',
     unit: '件',
     category: 'part',
     props: [
@@ -70,7 +70,7 @@ export const ARF_STEPPER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-stepper/alignment',
-    name: 'ArF 光刻机对准系统',
+    name: 'ArF Stepper Alignment System', name_zh: 'ArF 光刻机对准系统',
     unit: '件',
     category: 'part',
     props: [
@@ -89,7 +89,7 @@ export const ARF_STEPPER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-stepper/chuck',
-    name: 'ArF 光刻机工件台吸盘',
+    name: 'ArF Stepper Wafer Stage Chuck', name_zh: 'ArF 光刻机工件台吸盘',
     unit: '件',
     category: 'part',
     props: [
@@ -108,7 +108,7 @@ export const ARF_STEPPER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-stepper/isolation',
-    name: 'ArF 光刻机隔振基础',
+    name: 'ArF Stepper Vibration Isolation Foundation', name_zh: 'ArF 光刻机隔振基础',
     unit: '件',
     category: 'part',
     props: [
@@ -128,7 +128,7 @@ export const ARF_STEPPER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-stepper/beam-delivery',
-    name: 'ArF 光刻机光束传输',
+    name: 'ArF Stepper Beam Delivery', name_zh: 'ArF 光刻机光束传输',
     unit: '件',
     category: 'part',
     props: [
@@ -149,7 +149,7 @@ export const ARF_STEPPER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/arf-stepper',
-    name: '193 nm ArF 步进光刻机',
+    name: '193 nm ArF Stepper', name_zh: '193 nm ArF 步进光刻机',
     unit: '台',
     category: 'machine',
     props: [
@@ -178,7 +178,7 @@ export const ARF_STEPPER_ROUTES: readonly Route[] = [
   {
     /** 机架：HT250 浇成 → 人工时效 → 刨铣 → 刮研安装面。 */
     id: 'make/arf-stepper-frame',
-    name: 'ArF 光刻机机架制造',
+    name: 'ArF Stepper Frame Manufacturing', name_zh: 'ArF 光刻机机架制造',
     produces: [{
       item: 'plant/arf-stepper/frame',
       qty: q(1),
@@ -209,7 +209,7 @@ export const ARF_STEPPER_ROUTES: readonly Route[] = [
      *   ④ 首片曝光：0.35 µm 线条显影后 CD-SEM 抽 10 点（判据 ≤0.35 µm）。
      */
     id: 'make/arf-stepper',
-    name: '193 nm ArF 步进光刻机装配',
+    name: '193 nm ArF Stepper Assembly', name_zh: '193 nm ArF 步进光刻机装配',
     produces: [{
       item: 'plant/arf-stepper',
       qty: q(1),
@@ -241,7 +241,7 @@ export const ARF_STEPPER_ROUTES: readonly Route[] = [
      * 研磨/镀膜/计量只作为前提设备。
      */
     id: 'make/arf-stepper-illuminator',
-    name: 'ArF 光刻机照明系统制造',
+    name: 'ArF Stepper Illumination System Manufacturing', name_zh: 'ArF 光刻机照明系统制造',
     produces: [{
       item: 'plant/arf-stepper/illuminator',
       qty: q(1),
@@ -268,7 +268,7 @@ export const ARF_STEPPER_ROUTES: readonly Route[] = [
      * `plant/arf-lens/element`；标记照明是可见光 LED，避免 193 nm 曝光胶。
      */
     id: 'make/arf-stepper-alignment',
-    name: 'ArF 光刻机对准系统制造',
+    name: 'ArF Stepper Alignment System Manufacturing', name_zh: 'ArF 光刻机对准系统制造',
     produces: [{
       item: 'plant/arf-stepper/alignment',
       qty: q(1),
@@ -298,7 +298,7 @@ export const ARF_STEPPER_ROUTES: readonly Route[] = [
      * 铜线绕测温、电阻丝绕加热。研磨、干涉仪、计量间是前提设备。
      */
     id: 'make/arf-stepper-chuck',
-    name: 'ArF 光刻机工件台吸盘制造',
+    name: 'ArF Stepper Wafer Stage Chuck Manufacturing', name_zh: 'ArF 光刻机工件台吸盘制造',
     produces: [{
       item: 'plant/arf-stepper/chuck',
       qty: q(1),
@@ -326,7 +326,7 @@ export const ARF_STEPPER_ROUTES: readonly Route[] = [
      * 铸铁（熔炼炉浇、地窑时效）。
      */
     id: 'make/arf-stepper-isolation',
-    name: 'ArF 光刻机隔振基础制造',
+    name: 'ArF Stepper Vibration Isolation Foundation Manufacturing', name_zh: 'ArF 光刻机隔振基础制造',
     produces: [{
       item: 'plant/arf-stepper/isolation',
       qty: q(1),
@@ -352,7 +352,7 @@ export const ARF_STEPPER_ROUTES: readonly Route[] = [
      * （`mat/nitrogen`），把 O₂ 吸收压下去。
      */
     id: 'make/arf-stepper-beam-delivery',
-    name: 'ArF 光刻机光束传输制造',
+    name: 'ArF Stepper Beam Delivery Manufacturing', name_zh: 'ArF 光刻机光束传输制造',
     produces: [{
       item: 'plant/arf-stepper/beam-delivery',
       qty: q(1),

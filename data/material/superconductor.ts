@@ -18,7 +18,7 @@ export const SUPERCONDUCTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nb3sn-cable',
-    name: '未反应的 Nb3Sn 前驱电缆',
+    name: 'Unreacted Nb3Sn Precursor Cable', name_zh: '未反应的 Nb3Sn 前驱电缆',
     unit: 'kg',
     category: 'material',
   },
@@ -30,7 +30,7 @@ export const SUPERCONDUCTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nbti-cable',
-    name: 'NbTi 超导线缆',
+    name: 'NbTi Superconducting Cable', name_zh: 'NbTi 超导线缆',
     unit: 'kg',
     category: 'material',
   },
@@ -45,7 +45,7 @@ export const SUPERCONDUCTOR_ROUTES: readonly Route[] = [
      * 青铜法/内锡法未建模，100 kg 只是线材量级。
      */
     id: 'make/nb3sn-cable',
-    name: 'Nb3Sn 前驱电缆制备',
+    name: 'Nb3Sn Precursor Cable Production', name_zh: 'Nb3Sn 前驱电缆制备',
     produces: [{ item: 'mat/nb3sn-cable', qty: q(100) }],
     uses: [
       { anyOf: [{ item: 'mat/niobium-powder', qty: q(40) }] },
@@ -63,7 +63,7 @@ export const SUPERCONDUCTOR_ROUTES: readonly Route[] = [
      * 拉丝与退火借用现有丝材工位，不是专用超导线材线；工位幅面与线径未建模。
      */
     id: 'make/nbti-cable',
-    name: 'NbTi 线缆制备',
+    name: 'NbTi Cable Production', name_zh: 'NbTi 线缆制备',
     produces: [{ item: 'mat/nbti-cable', qty: q(100) }],
     uses: [
       { anyOf: [{ item: 'mat/niobium-powder', qty: q(40) }] },

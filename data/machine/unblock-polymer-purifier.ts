@@ -391,7 +391,7 @@ export const UNBLOCK_POLY_PUR_ROUTES: readonly Route[] = [
      *    一台塔不能又除酸又保酸；这一台只服务 PTFE 一条线。
      */
     id: 'make/polymer-purifier-cast',
-    name: '聚合物精制塔制造',
+    name: 'Polymer Refining Column Manufacturing', name_zh: '聚合物精制塔制造',
     produces: [{ item: 'plant/polymer-plant/purifier', qty: q(1) }],
     uses: [
       /**

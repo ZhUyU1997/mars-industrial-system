@@ -45,7 +45,7 @@ export const SAQP_ROUTES: readonly Route[] = [
      * `needs` 里），只多两轮循环。所以这是**工艺步骤的加法，不是设备的加法**。
      */
     id: 'make/device-wafer-saqp',
-    name: '前道完成片制造',
+    name: 'Front-End Completed Wafer Manufacturing', name_zh: '前道完成片制造',
     produces: [
       {
         item: 'mat/device-wafer',
@@ -85,7 +85,7 @@ export const SAQP_ROUTES: readonly Route[] = [
      * 那一层不在本文件；`node ≤10` 那笔仍然挂着。
      */
     id: 'make/fine-damascene-layer-saqp',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',

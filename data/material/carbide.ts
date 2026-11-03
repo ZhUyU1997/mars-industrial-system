@@ -80,7 +80,7 @@ export const ATMOSPHERE_FURNACE_PARTS: readonly Item[] = [
    *
    * 它与自衬电弧炉的壳是同一个思路：**热不靠砖挡，靠水带走**。
    */
-  { id: 'plant/atmosphere-furnace/shell', name: '气氛炉水冷炉壳', unit: '件', category: 'part' },
+  { id: 'plant/atmosphere-furnace/shell', name: 'Atmosphere Furnace Water-Cooled Shell', name_zh: '气氛炉水冷炉壳', unit: '件', category: 'part' },
 
   /**
    * 石墨发热管。既是炉膛也是发热体 —— 电流直接通过管壁，管壁自己红。
@@ -88,13 +88,13 @@ export const ATMOSPHERE_FURNACE_PARTS: readonly Item[] = [
    * 用石墨不用金属：钨钼都要进口，而石墨是本层最熟的材料（碳电极那一套）。
    * 石墨管能到 2200 °C，在氢气里不氧化，而且**它自己就是坩埚**。
    */
-  { id: 'plant/atmosphere-furnace/tube', name: '气氛炉石墨发热管', unit: '件', category: 'part' },
+  { id: 'plant/atmosphere-furnace/tube', name: 'Atmosphere Furnace Graphite Heating Tube', name_zh: '气氛炉石墨发热管', unit: '件', category: 'part' },
 
   /**
    * 石墨毡保温层。把发热管裹住 —— 石墨毡的导热比耐火砖低一个量级，
    * 而且轻，不会把炉壳压塌。
    */
-  { id: 'plant/atmosphere-furnace/insulation', name: '气氛炉石墨毡保温层', unit: '件', category: 'part' },
+  { id: 'plant/atmosphere-furnace/insulation', name: 'Atmosphere Furnace Graphite Felt Insulation', name_zh: '气氛炉石墨毡保温层', unit: '件', category: 'part' },
 
   /**
    * 氢气与氩气系统。减压阀、流量计、点火排空。
@@ -102,21 +102,21 @@ export const ATMOSPHERE_FURNACE_PARTS: readonly Item[] = [
    * **氢气是会炸的。** 炉子升温前要先用氩气把空气赶净，降温时也不能马上开炉 ——
    * 这两条操作规程比设备本身更要紧，而模型写不出"规程"。
    */
-  { id: 'plant/atmosphere-furnace/gas', name: '气氛炉氢气与氩气系统', unit: '件', category: 'part' },
+  { id: 'plant/atmosphere-furnace/gas', name: 'Atmosphere Furnace Hydrogen and Argon System', name_zh: '气氛炉氢气与氩气系统', unit: '件', category: 'part' },
 
   /**
    * 观察孔与火色判读。石墨管上开一个石英窗，用眼睛看炉膛的颜色判温度。
    *
    * 这就是前面说的第三个卡点：**没有能读 1450 的热电偶，只有火色。**
    */
-  { id: 'plant/atmosphere-furnace/sight', name: '气氛炉观察孔与火色判读', unit: '件', category: 'part' },
+  { id: 'plant/atmosphere-furnace/sight', name: 'Atmosphere Furnace Sight Hole and Flame Color Reading', name_zh: '气氛炉观察孔与火色判读', unit: '件', category: 'part' },
 ];
 
 export const ATMOSPHERE_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 炉壳。钢板卷焊夹套，两端法兰车削，接管焊在水套上。 */
     id: 'make/atm-furnace-shell',
-    name: '气氛炉水冷炉壳制造',
+    name: 'Atmosphere Furnace Water-Cooled Shell Manufacturing', name_zh: '气氛炉水冷炉壳制造',
     produces: [{ item: 'plant/atmosphere-furnace/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -130,7 +130,7 @@ export const ATMOSPHERE_FURNACE_ROUTES: readonly Route[] = [
      * 它的电阻要均匀 —— 电流全从管壁过，壁厚不匀就会局部过热。
      */
     id: 'make/atm-furnace-tube',
-    name: '气氛炉石墨发热管制造',
+    name: 'Atmosphere Furnace Graphite Heating Tube Manufacturing', name_zh: '气氛炉石墨发热管制造',
     produces: [{ item: 'plant/atmosphere-furnace/tube', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(1) }] },
@@ -143,7 +143,7 @@ export const ATMOSPHERE_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 石墨毡。碳纤维毡（本层做不出纤维，用碳粉加树脂压成多孔板代）。 */
     id: 'make/atm-furnace-insulation',
-    name: '气氛炉石墨毡保温层制造',
+    name: 'Atmosphere Furnace Graphite Felt Insulation Manufacturing', name_zh: '气氛炉石墨毡保温层制造',
     produces: [{ item: 'plant/atmosphere-furnace/insulation', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(1) }] },
@@ -156,7 +156,7 @@ export const ATMOSPHERE_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 气路。不锈钢管 + 减压阀 + 浮子流量计（玻璃管 + 浮子，不用电）。 */
     id: 'make/atm-furnace-gas',
-    name: '气氛炉氢气与氩气系统制造',
+    name: 'Atmosphere Furnace Hydrogen and Argon System Manufacturing', name_zh: '气氛炉氢气与氩气系统制造',
     produces: [{ item: 'plant/atmosphere-furnace/gas', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -168,7 +168,7 @@ export const ATMOSPHERE_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 观察孔。石英窗 + 耐热玻璃片，法兰压紧。 */
     id: 'make/atm-furnace-sight',
-    name: '气氛炉观察孔与火色判读制造',
+    name: 'Atmosphere Furnace Sight Hole and Flame Color Reading Manufacturing', name_zh: '气氛炉观察孔与火色判读制造',
     produces: [{ item: 'plant/atmosphere-furnace/sight', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -192,7 +192,7 @@ export const ATMOSPHERE_FURNACE_ROUTES: readonly Route[] = [
  */
 export const ATMOSPHERE_FURNACE: Item = {
   id: 'plant/atmosphere-furnace',
-  name: '气氛炉',
+  name: 'Atmosphere Furnace', name_zh: '气氛炉',
   unit: '台',
   category: 'machine',
   holds: [
@@ -232,7 +232,7 @@ export const CARBIDE_ROUTES: readonly Route[] = [
      * 它不是循环定义（不产出它自己就不能开工），是真实的再制造。
      */
     id: 'make/carbide-insert-recycled',
-    name: '硬质合金回收再生',
+    name: 'Cemented Carbide Recovery and Regeneration', name_zh: '硬质合金回收再生',
     produces: [{ item: 'mat/carbide-insert', qty: q(900), gives: [{ param: 'grade', kind: 'enum', oneOf: ['P', 'M', 'K'] }, { param: 'hardness', kind: 'range', min: 1300, max: 2000 }] }],
     uses: [
       { anyOf: [{ item: 'mat/carbide-insert', qty: q(1000) }] },
@@ -264,7 +264,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/atmosphere-furnace',
-    name: '气氛炉装配',
+    name: 'Atmosphere Furnace Assembly', name_zh: '气氛炉装配',
     produces: [{
       item: 'plant/atmosphere-furnace',
       qty: q(1),

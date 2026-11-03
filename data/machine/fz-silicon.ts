@@ -21,7 +21,7 @@ export const FZ_SILICON_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/fz-silicon',
-    name: '区熔硅片',
+    name: 'Float-Zone Silicon Wafer', name_zh: '区熔硅片',
     unit: '片',
     category: 'part',
     props: [
@@ -40,7 +40,7 @@ export const FZ_SILICON_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/float-zone-puller',
-    name: '区熔炉',
+    name: 'Float-Zone Furnace', name_zh: '区熔炉',
     unit: '台',
     category: 'machine',
     props: [
@@ -62,7 +62,7 @@ export const FZ_SILICON_ROUTES: readonly Route[] = [
      * 300 h 是装配/调校估算；RF 18–22 kW、2–5 MHz 是 design。
      */
     id: 'make/float-zone-puller',
-    name: '区熔炉制造',
+    name: 'Float-Zone Furnace Manufacturing', name_zh: '区熔炉制造',
     produces: [
       {
         item: 'plant/float-zone-puller',
@@ -113,7 +113,7 @@ export const FZ_SILICON_ROUTES: readonly Route[] = [
      * ρ 10–50 Ω·cm、O 2e15–8e15 cm⁻³、位错 0 是 design；50 h 估算。
      */
     id: 'make/fz-silicon',
-    name: '区熔硅片制造',
+    name: 'Float-Zone Silicon Wafer Manufacturing', name_zh: '区熔硅片制造',
     produces: [
       {
         item: 'std/fz-silicon',

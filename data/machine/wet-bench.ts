@@ -37,20 +37,20 @@ import { q } from '../../src/index.ts';
 
 export const WET_BENCH_PARTS: readonly Item[] = [
   /** 槽体与衬里。钢板外壳 + PTFE 衬里（3 mm），接管与放料阀从衬里里穿出。 */
-  { id: 'plant/wet-bench/vessel', name: '湿法台槽体与衬里', unit: '件', category: 'part' },
+  { id: 'plant/wet-bench/vessel', name: 'Wet Bench Tank and Liner', name_zh: '湿法台槽体与衬里', unit: '件', category: 'part' },
 
   /** 搅拌与密封盖。法兰盖 + PTFE 垫 + 搅拌轴密封 + 电机座。 */
-  { id: 'plant/wet-bench/agitator', name: '湿法台搅拌与密封盖', unit: '件', category: 'part' },
+  { id: 'plant/wet-bench/agitator', name: 'Wet Bench Agitation and Sealing Lid', name_zh: '湿法台搅拌与密封盖', unit: '件', category: 'part' },
 
   /** 加热夹套。槽体外焊一层夹套，通蒸汽或热油 —— 60–90 °C 的加速段靠它。 */
-  { id: 'plant/wet-bench/jacket', name: '湿法台加热夹套', unit: '件', category: 'part' },
+  { id: 'plant/wet-bench/jacket', name: 'Wet Bench Heating Jacket', name_zh: '湿法台加热夹套', unit: '件', category: 'part' },
 ];
 
 export const WET_BENCH_ROUTES: readonly Route[] = [
   {
     /** 槽体与衬里。钢板卷焊成槽 → 内壁 PTFE 衬里（板材搭接焊）→ 接管与阀门。 */
     id: 'make/wetbench-vessel',
-    name: '湿法台槽体与衬里制造',
+    name: 'Wet Bench Tank and Liner Manufacturing', name_zh: '湿法台槽体与衬里制造',
     produces: [{ item: 'plant/wet-bench/vessel', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -63,7 +63,7 @@ export const WET_BENCH_ROUTES: readonly Route[] = [
   {
     /** 搅拌与密封盖。法兰盖车配 → 机械密封（PTFE 唇封）→ 搅拌桨与电机座。 */
     id: 'make/wetbench-agitator',
-    name: '湿法台搅拌与密封盖制造',
+    name: 'Wet Bench Agitation and Sealing Lid Manufacturing', name_zh: '湿法台搅拌与密封盖制造',
     produces: [{ item: 'plant/wet-bench/agitator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -76,7 +76,7 @@ export const WET_BENCH_ROUTES: readonly Route[] = [
   {
     /** 加热夹套。槽体外加一层夹套壳，接管进蒸汽或热油。 */
     id: 'make/wetbench-jacket',
-    name: '湿法台加热夹套制造',
+    name: 'Wet Bench Heating Jacket Manufacturing', name_zh: '湿法台加热夹套制造',
     produces: [{ item: 'plant/wet-bench/jacket', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -94,7 +94,7 @@ export const WET_BENCH_ROUTES: readonly Route[] = [
  */
 export const WET_BENCH: Item = {
   id: 'plant/wet-bench',
-  name: '湿法台',
+  name: 'Wet Bench', name_zh: '湿法台',
   unit: '台',
   category: 'machine',
   holds: [
@@ -126,7 +126,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/wet-bench',
-    name: '湿法台装配',
+    name: 'Wet Bench Assembly', name_zh: '湿法台装配',
     produces: [{
       item: 'plant/wet-bench',
       qty: q(1),

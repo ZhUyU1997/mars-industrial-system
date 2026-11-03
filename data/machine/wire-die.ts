@@ -50,7 +50,7 @@ export const DIE_ITEMS: readonly Item[] = [
    * 它是**工具**：一只模子能拉几吨丝，磨损了就换（磨孔重磨一次还能用一轮）。
    * 所以它在数据里进 `needs`，不进 `uses`。
    */
-  { id: 'std/wire-die-general', name: '硬质合金拉丝模', unit: '件', category: 'part' },
+  { id: 'std/wire-die-general', name: 'Cemented Carbide Wire Drawing Die', name_zh: '硬质合金拉丝模', unit: '件', category: 'part' },
 ];
 
 export const DIE_ROUTES: readonly Route[] = [
@@ -64,7 +64,7 @@ export const DIE_ROUTES: readonly Route[] = [
      * **这是本层第一件"以工时换精度"的零件** —— 它的成本不在材料，在时间。
      */
     id: 'make/wire-die',
-    name: '硬质合金拉丝模制造',
+    name: 'Cemented Carbide Wire Drawing Die Manufacturing', name_zh: '硬质合金拉丝模制造',
     produces: [{ item: 'std/wire-die-general', qty: q(20) }],
     uses: [
       { anyOf: [{ item: 'mat/tungsten-carbide', qty: q(1) }] },

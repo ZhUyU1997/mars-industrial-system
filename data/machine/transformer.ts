@@ -44,7 +44,7 @@ export const TRANSFORMER_ITEMS: readonly Item[] = [
    *
    * 三个消费者：焊机（抽头换电流）、电解槽整流器（降压）、中频电源（隔离与匹配）。
    */
-  { id: 'std/transformer-general', name: '工频变压器', unit: '台', category: 'part',
+  { id: 'std/transformer-general', name: 'Power-Frequency Transformer', name_zh: '工频变压器', unit: '台', category: 'part',
     props: [{ param: 'ratedPower', kind: 'range', min: 1, max: 1000, unit: 'kVA' }] },
 ];
 
@@ -59,7 +59,7 @@ export const TRANSFORMER_ROUTES: readonly Route[] = [
      *   装配   插片、压紧、装外壳与接线端子            plant/robot
      */
     id: 'make/transformer',
-    name: '工频变压器制造',
+    name: 'Power-Frequency Transformer Manufacturing', name_zh: '工频变压器制造',
     produces: [{ item: 'std/transformer-general', qty: q(1), gives: [{ param: 'ratedPower', kind: 'range', min: 5, max: 500, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(1) }] },

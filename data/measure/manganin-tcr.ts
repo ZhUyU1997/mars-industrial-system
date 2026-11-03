@@ -49,7 +49,7 @@ export const MANGANIN_TCR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/manganin-tcr-record',
-    name: '锰铜 TCR 记录',
+    name: 'Manganin TCR Record', name_zh: '锰铜 TCR 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -66,7 +66,7 @@ export const MANGANIN_TCR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/manganin-tcr-high-temp-record',
-    name: '130–140 °C 退火条件记录',
+    name: '130–140 °C Annealing Condition Record', name_zh: '130–140 °C 退火条件记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'temperature', kind: 'range', min: 130, max: 140, unit: '°C' }],
@@ -76,7 +76,7 @@ export const MANGANIN_TCR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/manganin-tcr-room-temp-record',
-    name: '19–21 °C 测量环境记录',
+    name: '19–21 °C Measurement Environment Record', name_zh: '19–21 °C 测量环境记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'temperature', kind: 'range', min: 19, max: 21, unit: '°C' }],
@@ -87,7 +87,7 @@ export const MANGANIN_TCR_ROUTES: readonly Route[] = [
   {
     /** 锰铜 TCR：四端对接线 → 20/25/30 °C 油浴三点 → 换向读 R → 线性拟合。 */
     id: 'measure/manganin-tcr',
-    name: '锰铜 TCR 测量',
+    name: 'Manganin TCR Measurement', name_zh: '锰铜 TCR 测量',
     produces: [
       {
         item: 'mat/manganin-tcr-record',
@@ -133,7 +133,7 @@ export const MANGANIN_TCR_ROUTES: readonly Route[] = [
   {
     /** 130–140 °C 退火条件：只产出温度记录，不产出 TCR 读数。 */
     id: 'measure/manganin-tcr-high-temp',
-    name: '130–140 °C 退火条件测量',
+    name: '130–140 °C Annealing Condition Measurement', name_zh: '130–140 °C 退火条件测量',
     produces: [{
       item: 'mat/manganin-tcr-high-temp-record',
       qty: q(1),
@@ -151,7 +151,7 @@ export const MANGANIN_TCR_ROUTES: readonly Route[] = [
   {
     /** 19–21 °C 测量环境条件：只产出温度记录。 */
     id: 'measure/manganin-tcr-room-temp',
-    name: '19–21 °C 测量环境测量',
+    name: '19–21 °C Measurement Environment Measurement', name_zh: '19–21 °C 测量环境测量',
     produces: [{
       item: 'mat/manganin-tcr-room-temp-record',
       qty: q(1),

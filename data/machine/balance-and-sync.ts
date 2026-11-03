@@ -128,7 +128,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dynamic-balance-machine',
-    name: '硬支承卧式动平衡机',
+    name: 'Hard-Bearing Horizontal Dynamic Balancing Machine', name_zh: '硬支承卧式动平衡机',
     unit: '台',
     category: 'machine',
     props: [
@@ -148,7 +148,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
   /** 基座。HT250 200 kg，安装面磨到 5–15 µm；承 5–50 kg 转子。 */
   {
     id: 'plant/dynamic-balance-machine/base',
-    name: '动平衡机基座',
+    name: 'Dynamic Balancing Machine Base', name_zh: '动平衡机基座',
     unit: '件',
     category: 'part',
     props: [
@@ -165,7 +165,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dynamic-balance-machine/cradle',
-    name: '动平衡机摆架',
+    name: 'Dynamic Balancing Machine Cradle', name_zh: '动平衡机摆架',
     unit: '件',
     category: 'part',
     props: [
@@ -185,7 +185,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dynamic-balance-machine/sensor',
-    name: '动平衡机磁电式速度传感器',
+    name: 'Dynamic Balancing Machine Magnetoelectric Velocity Sensor', name_zh: '动平衡机磁电式速度传感器',
     unit: '件',
     category: 'part',
     props: [
@@ -205,7 +205,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dynamic-balance-machine/drill-station',
-    name: '动平衡机去重工位',
+    name: 'Dynamic Balancing Machine Weight-Removal Station', name_zh: '动平衡机去重工位',
     unit: '件',
     category: 'part',
     props: [
@@ -223,7 +223,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dynamic-balance-machine/readout',
-    name: '动平衡机读数箱',
+    name: 'Dynamic Balancing Machine Readout Box', name_zh: '动平衡机读数箱',
     unit: '件',
     category: 'part',
     props: [
@@ -243,7 +243,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dynamic-balance-machine/calibration-rotor',
-    name: '动平衡机标定转子',
+    name: 'Dynamic Balancing Machine Calibration Rotor', name_zh: '动平衡机标定转子',
     unit: '件',
     category: 'part',
     props: [
@@ -269,7 +269,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/multi-axis-sync-analyzer',
-    name: '24 轴同步性分析仪',
+    name: '24-Axis Synchronism Analyzer', name_zh: '24 轴同步性分析仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -295,7 +295,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/multi-axis-sync-analyzer/acquisition-card',
-    name: '24 路采集卡',
+    name: '24-Channel Acquisition Card', name_zh: '24 路采集卡',
     unit: '件',
     category: 'part',
     props: [
@@ -315,7 +315,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/multi-axis-sync-analyzer/clock',
-    name: '24 路同步时钟',
+    name: '24-Channel Synchronization Clock', name_zh: '24 路同步时钟',
     unit: '件',
     category: 'part',
     props: [
@@ -329,7 +329,7 @@ export const BALANCE_SYNC_ITEMS: readonly Item[] = [
   /** 19 英寸机箱 + 24 路编码器接头 + 背板。屏蔽 40–80 dB。 */
   {
     id: 'plant/multi-axis-sync-analyzer/frame',
-    name: '24 轴同步性分析仪机箱',
+    name: '24-Axis Synchronism Analyzer Chassis', name_zh: '24 轴同步性分析仪机箱',
     unit: '件',
     category: 'part',
     props: [
@@ -354,7 +354,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dynamic-balance-base',
-    name: '动平衡机基座制造',
+    name: 'Dynamic Balancing Machine Base Manufacturing', name_zh: '动平衡机基座制造',
     produces: [
       {
         item: 'plant/dynamic-balance-machine/base',
@@ -395,7 +395,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dynamic-balance-cradle',
-    name: '动平衡机摆架制造',
+    name: 'Dynamic Balancing Machine Cradle Manufacturing', name_zh: '动平衡机摆架制造',
     produces: [
       {
         item: 'plant/dynamic-balance-machine/cradle',
@@ -433,7 +433,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dynamic-balance-sensor',
-    name: '动平衡机磁电式速度传感器制造',
+    name: 'Dynamic Balancing Machine Magnetoelectric Velocity Sensor Manufacturing', name_zh: '动平衡机磁电式速度传感器制造',
     produces: [
       {
         item: 'plant/dynamic-balance-machine/sensor',
@@ -467,7 +467,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dynamic-balance-drill',
-    name: '动平衡机去重工位制造',
+    name: 'Dynamic Balancing Machine Weight-Removal Station Manufacturing', name_zh: '动平衡机去重工位制造',
     produces: [
       {
         item: 'plant/dynamic-balance-machine/drill-station',
@@ -506,7 +506,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dynamic-balance-readout',
-    name: '动平衡机读数箱制造',
+    name: 'Dynamic Balancing Machine Readout Box Manufacturing', name_zh: '动平衡机读数箱制造',
     produces: [
       {
         item: 'plant/dynamic-balance-machine/readout',
@@ -551,7 +551,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dynamic-balance-calibration-rotor',
-    name: '动平衡机标定转子制造',
+    name: 'Dynamic Balancing Machine Calibration Rotor Manufacturing', name_zh: '动平衡机标定转子制造',
     produces: [
       {
         item: 'plant/dynamic-balance-machine/calibration-rotor',
@@ -593,7 +593,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dynamic-balance-machine',
-    name: '硬支承卧式动平衡机装配',
+    name: 'Hard-Bearing Horizontal Dynamic Balancing Machine Assembly', name_zh: '硬支承卧式动平衡机装配',
     produces: [
       {
         item: 'plant/dynamic-balance-machine',
@@ -668,7 +668,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/multi-axis-sync-card',
-    name: '24 路采集卡制造',
+    name: '24-Channel Acquisition Card Manufacturing', name_zh: '24 路采集卡制造',
     produces: [
       {
         item: 'plant/multi-axis-sync-analyzer/acquisition-card',
@@ -708,7 +708,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/multi-axis-sync-clock',
-    name: '24 路同步时钟制造',
+    name: '24-Channel Synchronization Clock Manufacturing', name_zh: '24 路同步时钟制造',
     produces: [
       {
         item: 'plant/multi-axis-sync-analyzer/clock',
@@ -745,7 +745,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/multi-axis-sync-frame',
-    name: '24 轴同步性分析仪机箱制造',
+    name: '24-Axis Synchronism Analyzer Chassis Manufacturing', name_zh: '24 轴同步性分析仪机箱制造',
     produces: [
       {
         item: 'plant/multi-axis-sync-analyzer/frame',
@@ -778,7 +778,7 @@ export const BALANCE_SYNC_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/multi-axis-sync-analyzer',
-    name: '24 轴同步性分析仪装配',
+    name: '24-Axis Synchronism Analyzer Assembly', name_zh: '24 轴同步性分析仪装配',
     produces: [
       {
         item: 'plant/multi-axis-sync-analyzer',

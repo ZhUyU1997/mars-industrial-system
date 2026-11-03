@@ -378,7 +378,7 @@ export const UNBLOCK_AUTOCLAVE_HEAT_ROUTES: readonly Route[] = [
      *    压力账全部写在注释里 —— 与壳体、密封、搅拌三条路线同一处理。
      */
     id: 'make/autoclave-heater-jacket',
-    name: '高压釜夹套与内盘管制造',
+    name: 'Autoclave Jacket and Inner Coil Manufacturing', name_zh: '高压釜夹套与内盘管制造',
     produces: [{ item: 'plant/autoclave/heater', qty: q(1) }],
     uses: [
       /**

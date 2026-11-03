@@ -153,7 +153,7 @@ export const HR_ICP_MS_STAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/precision-slit',
-    name: '精密可调缝',
+    name: 'Precision Adjustable Slit', name_zh: '精密可调缝',
     unit: '套',
     category: 'part',
     props: [
@@ -178,7 +178,7 @@ export const HR_ICP_MS_STAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/magnet-power-supply',
-    name: '磁铁精密电源',
+    name: 'Precision Magnet Power Supply', name_zh: '磁铁精密电源',
     unit: '台',
     category: 'part',
     props: [
@@ -201,7 +201,7 @@ export const HR_ICP_MS_STAGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/nmr-field-probe',
-    name: 'NMR 场探头',
+    name: 'NMR Field Probe', name_zh: 'NMR 场探头',
     unit: '件',
     category: 'part',
     props: [
@@ -227,7 +227,7 @@ export const HR_ICP_MS_STAGE_ROUTES: readonly Route[] = [
      * 10 mm 上的高度差；平行度 1 µm 落在它的横向分辨上（1–2 倍余量）。
      */
     id: 'make/precision-slit',
-    name: '精密可调缝制造',
+    name: 'Precision Adjustable Slit Manufacturing', name_zh: '精密可调缝制造',
     produces: [
       {
         item: 'plant/precision-slit',
@@ -289,7 +289,7 @@ export const HR_ICP_MS_STAGE_ROUTES: readonly Route[] = [
      * 电流天平（`plant/current-balance`）是这条链上唯一 0.1 ppm 档的电流基准。
      */
     id: 'make/magnet-power-supply',
-    name: '磁铁精密电源制造',
+    name: 'Precision Magnet Power Supply Manufacturing', name_zh: '磁铁精密电源制造',
     produces: [
       {
         item: 'plant/magnet-power-supply',
@@ -344,7 +344,7 @@ export const HR_ICP_MS_STAGE_ROUTES: readonly Route[] = [
      * 0.14 T → 5.96 MHz；0.05 ppm 的频率分辨（0.3 Hz）。
      */
     id: 'make/nmr-field-probe',
-    name: 'NMR 场探头制造',
+    name: 'NMR Field Probe Manufacturing', name_zh: 'NMR 场探头制造',
     produces: [
       {
         item: 'plant/nmr-field-probe',
@@ -400,7 +400,7 @@ export const HR_ICP_MS_STAGE_ROUTES: readonly Route[] = [
      * NMR），其余 23 件同 BOM —— 这是**同一台仪器的第二条产出路线**，不是新机器。
      */
     id: 'make/hr-icp-ms-hr',
-    name: 'HR-ICP-MS 整机制造',
+    name: 'HR-ICP-MS System Manufacturing', name_zh: 'HR-ICP-MS 整机制造',
     produces: [
       {
         item: 'plant/hr-icp-ms',

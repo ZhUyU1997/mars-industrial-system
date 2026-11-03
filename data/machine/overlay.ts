@@ -175,7 +175,7 @@ export const OVERLAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/overlay-traceable/objective',
-    name: '套刻标定级 DBO 物镜',
+    name: 'Overlay Calibration-Grade DBO Objective', name_zh: '套刻标定级 DBO 物镜',
     unit: '件',
     category: 'part',
     props: [
@@ -210,7 +210,7 @@ export const OVERLAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/overlay-traceable/stage',
-    name: '套刻溯源装置激光尺台',
+    name: 'Overlay Traceability System Laser Scale Stage', name_zh: '套刻溯源装置激光尺台',
     unit: '件',
     category: 'part',
     props: [
@@ -234,7 +234,7 @@ export const OVERLAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/overlay-traceable/illuminator',
-    name: '套刻溯源装置多波长明场照明',
+    name: 'Overlay Traceability System Multi-Wavelength Bright-Field Illumination', name_zh: '套刻溯源装置多波长明场照明',
     unit: '件',
     category: 'part',
     props: [
@@ -260,7 +260,7 @@ export const OVERLAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/overlay-traceable/enclosure',
-    name: '套刻溯源装置温控/隔声罩',
+    name: 'Overlay Traceability System Temperature-Controlled/Soundproof Enclosure', name_zh: '套刻溯源装置温控/隔声罩',
     unit: '件',
     category: 'part',
     props: [
@@ -283,7 +283,7 @@ export const OVERLAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/overlay-traceable',
-    name: '套刻溯源装置',
+    name: 'Overlay Traceability System', name_zh: '套刻溯源装置',
     unit: '台',
     category: 'machine',
     props: [
@@ -314,7 +314,7 @@ export const OVERLAY_ROUTES: readonly Route[] = [
      * （畸变 ∝ 视场²，0.15/0.3 的一半 → 1/4）。
      */
     id: 'make/overlay-traceable-objective',
-    name: '套刻标定级 DBO 物镜制造',
+    name: 'Overlay Calibration-Grade DBO Objective Manufacturing', name_zh: '套刻标定级 DBO 物镜制造',
     produces: [
       {
         item: 'plant/overlay-traceable/objective',
@@ -371,7 +371,7 @@ export const OVERLAY_ROUTES: readonly Route[] = [
      * 直线度本层没有量具**，所以不写 30 nm/100 mm。
      */
     id: 'make/overlay-traceable-stage',
-    name: '套刻溯源装置激光尺台制造',
+    name: 'Overlay Traceability System Laser Scale Stage Manufacturing', name_zh: '套刻溯源装置激光尺台制造',
     produces: [
       {
         item: 'plant/overlay-traceable/stage',
@@ -433,7 +433,7 @@ export const OVERLAY_ROUTES: readonly Route[] = [
      * 1000 个相关元 ⇒ N ≈ 2500 个独立散斑，对比度 ≈ 1/√N = **2 %**。
      */
     id: 'make/overlay-traceable-illuminator',
-    name: '套刻溯源装置多波长明场照明制造',
+    name: 'Overlay Traceability System Multi-Wavelength Bright-Field Illumination Manufacturing', name_zh: '套刻溯源装置多波长明场照明制造',
     produces: [
       {
         item: 'plant/overlay-traceable/illuminator',
@@ -478,7 +478,7 @@ export const OVERLAY_ROUTES: readonly Route[] = [
      * 内层 Peltier + 热敏电阻，门缝磁性胶条。
      */
     id: 'make/overlay-traceable-enclosure',
-    name: '套刻溯源装置温控/隔声罩制造',
+    name: 'Overlay Traceability System Temperature-Controlled/Soundproof Enclosure Manufacturing', name_zh: '套刻溯源装置温控/隔声罩制造',
     produces: [
       {
         item: 'plant/overlay-traceable/enclosure',
@@ -529,7 +529,7 @@ export const OVERLAY_ROUTES: readonly Route[] = [
      * `measure/overlay-traceable` 出（测量与记录只放 `data/measure/`，R13）。
      */
     id: 'make/overlay-traceable',
-    name: '套刻溯源装置装配',
+    name: 'Overlay Traceability System Assembly', name_zh: '套刻溯源装置装配',
     produces: [
       {
         item: 'plant/overlay-traceable',

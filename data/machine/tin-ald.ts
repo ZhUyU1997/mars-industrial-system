@@ -87,7 +87,7 @@ export const TIN_ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/tin-ald',
-    name: '单片刻蚀/热 ALD TiN 机',
+    name: 'Single-Wafer Etch/Thermal ALD TiN Tool', name_zh: '单片刻蚀/热 ALD TiN 机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -117,7 +117,7 @@ export const TIN_ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/tin-ald/chamber',
-    name: '2 L 单片刻蚀/热 ALD 腔',
+    name: '2 L Single-Wafer Etch/Thermal ALD Chamber', name_zh: '2 L 单片刻蚀/热 ALD 腔',
     unit: '件',
     category: 'part',
     props: [
@@ -129,7 +129,7 @@ export const TIN_ALD_ITEMS: readonly Item[] = [
   /** 3 区 × 1.5 kW 加热套：300–450 °C，片内 ±5 K（单片的均匀性靠小腔 + 3 区）。 */
   {
     id: 'plant/tin-ald/heater',
-    name: '三区加热套',
+    name: '3-Zone Heating Jacket', name_zh: '三区加热套',
     unit: '件',
     category: 'part',
     props: [
@@ -141,7 +141,7 @@ export const TIN_ALD_ITEMS: readonly Item[] = [
   /** TiCl₄ 鼓泡瓶：20–60 °C、p_sat 1.33 kPa @20 °C、0.5 L 液位；PTFE 阀座。 */
   {
     id: 'plant/tin-ald/ticl4-source',
-    name: 'TiCl₄ 鼓泡瓶',
+    name: 'TiCl₄ Bubbler Bottle', name_zh: 'TiCl₄ 鼓泡瓶',
     unit: '件',
     category: 'part',
     props: [
@@ -154,7 +154,7 @@ export const TIN_ALD_ITEMS: readonly Item[] = [
   /** NH₃/N₂ 热吹扫面板：0–5 slm、150 °C 保温、PTFE 阀座（NH₃ 不碰铜）。 */
   {
     id: 'plant/tin-ald/purge-panel',
-    name: 'NH₃/N₂ 热吹扫面板',
+    name: 'NH₃/N₂ Hot Purge Panel', name_zh: 'NH₃/N₂ 热吹扫面板',
     unit: '件',
     category: 'part',
     props: [
@@ -171,7 +171,7 @@ export const TIN_ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tin-barrier-2nm',
-    name: '2 nm TiN 阻挡片',
+    name: '2 nm TiN Barrier Wafer', name_zh: '2 nm TiN 阻挡片',
     unit: '片',
     category: 'part',
     props: [
@@ -192,7 +192,7 @@ export const TIN_ALD_ROUTES: readonly Route[] = [
   {
     /** 2 L 铝腔 + 水冷夹套 + 熔石英窗；刀口面车到 0.02。 */
     id: 'make/tin-ald-chamber',
-    name: '2 L 单片刻蚀/热 ALD 腔制造',
+    name: '2 L Single-Wafer Etch/Thermal ALD Chamber Manufacturing', name_zh: '2 L 单片刻蚀/热 ALD 腔制造',
     produces: [
       {
         item: 'plant/tin-ald/chamber',
@@ -233,7 +233,7 @@ export const TIN_ALD_ROUTES: readonly Route[] = [
   {
     /** 3 区 × 1.5 kW 加热套，450 °C；镍丝绕氧化铝骨架，矿棉保温。 */
     id: 'make/tin-ald-heater',
-    name: '三区加热套制造',
+    name: '3-Zone Heating Jacket Manufacturing', name_zh: '三区加热套制造',
     produces: [
       {
         item: 'plant/tin-ald/heater',
@@ -274,7 +274,7 @@ export const TIN_ALD_ROUTES: readonly Route[] = [
   {
     /** TiCl₄ 鼓泡瓶：20–60 °C、0.5 L、PTFE 阀座；饱和蒸气压 1.33 kPa @20 °C。 */
     id: 'make/tin-ald-ticl4-source',
-    name: 'TiCl₄ 鼓泡瓶制造',
+    name: 'TiCl₄ Bubbler Bottle Manufacturing', name_zh: 'TiCl₄ 鼓泡瓶制造',
     produces: [
       {
         item: 'plant/tin-ald/ticl4-source',
@@ -304,7 +304,7 @@ export const TIN_ALD_ROUTES: readonly Route[] = [
   {
     /** NH₃/N₂ 热吹扫面板：5 slm、150 °C 保温、PTFE 阀座。 */
     id: 'make/tin-ald-purge-panel',
-    name: 'NH₃/N₂ 热吹扫面板制造',
+    name: 'NH₃/N₂ Hot Purge Panel Manufacturing', name_zh: 'NH₃/N₂ 热吹扫面板制造',
     produces: [
       {
         item: 'plant/tin-ald/purge-panel',
@@ -343,7 +343,7 @@ export const TIN_ALD_ROUTES: readonly Route[] = [
      * Cl 残留与吹扫时间的账在文件头第二节。
      */
     id: 'make/tin-barrier-2nm',
-    name: '2 nm TiN 阻挡片制造',
+    name: '2 nm TiN Barrier Wafer Manufacturing', name_zh: '2 nm TiN 阻挡片制造',
     produces: [
       {
         item: 'mat/tin-barrier-2nm',
@@ -451,7 +451,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/tin-ald',
-    name: '单片刻蚀/热 ALD TiN 机装配',
+    name: 'Single-Wafer Etch/Thermal ALD TiN Tool Assembly', name_zh: '单片刻蚀/热 ALD TiN 机装配',
     produces: [{
       item: 'plant/tin-ald',
       qty: q(1),

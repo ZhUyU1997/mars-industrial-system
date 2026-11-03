@@ -95,7 +95,7 @@ export const PHOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/oxygen-cell',
-    name: 'O₂ 反应池',
+    name: 'O₂ Reaction Cell', name_zh: 'O₂ 反应池',
     unit: '件',
     category: 'part',
     props: [
@@ -116,7 +116,7 @@ export const PHOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/membrane-desolvator',
-    name: '膜去溶整机',
+    name: 'Membrane Desolvator System', name_zh: '膜去溶整机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 120, max: 160 }],
@@ -136,7 +136,7 @@ export const PHOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/membrane-desolvator/membrane',
-    name: '膜去溶膜组件',
+    name: 'Membrane Desolvator Membrane Assembly', name_zh: '膜去溶膜组件',
     unit: '件',
     category: 'part',
     props: [
@@ -152,7 +152,7 @@ export const PHOS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/membrane-desolvator/heater',
-    name: '膜去溶加热块',
+    name: 'Membrane Desolvator Heater Block', name_zh: '膜去溶加热块',
     unit: '件',
     category: 'part',
     props: [
@@ -171,7 +171,7 @@ export const PHOS_ROUTES: readonly Route[] = [
      *   石英 0.02 + 316L 0.2 + PTFE 0.01 → 池 1 件（150 mm、0.2–0.8 mL/min、70–85 %）
      */
     id: 'make/icp-ms-oxygen-cell',
-    name: 'O₂ 反应池制造',
+    name: 'O₂ Reaction Cell Manufacturing', name_zh: 'O₂ 反应池制造',
     produces: [
       {
         item: 'plant/icp-ms/oxygen-cell',
@@ -206,7 +206,7 @@ export const PHOS_ROUTES: readonly Route[] = [
      *   PTFE 0.5 + 环氧 0.05 → 膜组件 1 件
      */
     id: 'make/membrane-desolvator-membrane',
-    name: '膜去溶膜组件制造',
+    name: 'Membrane Desolvator Membrane Assembly Manufacturing', name_zh: '膜去溶膜组件制造',
     produces: [
       {
         item: 'plant/membrane-desolvator/membrane',
@@ -237,7 +237,7 @@ export const PHOS_ROUTES: readonly Route[] = [
      * **加热块：100–300 W 加热棒 + 热电偶 + 氧化铝绝缘。**
      */
     id: 'make/membrane-desolvator-heater',
-    name: '膜去溶加热块制造',
+    name: 'Membrane Desolvator Heater Block Manufacturing', name_zh: '膜去溶加热块制造',
     produces: [
       {
         item: 'plant/membrane-desolvator/heater',
@@ -268,7 +268,7 @@ export const PHOS_ROUTES: readonly Route[] = [
      *   膜组件 1 + 加热块 1 + 316L 2 + 接触器 1 → 去溶器 1 台
      */
     id: 'make/membrane-desolvator',
-    name: '膜去溶装配',
+    name: 'Membrane Desolvator Assembly', name_zh: '膜去溶装配',
     produces: [
       {
         item: 'plant/membrane-desolvator',

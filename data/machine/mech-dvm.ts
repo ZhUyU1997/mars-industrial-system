@@ -28,25 +28,25 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const DVM_PARTS: readonly Item[] = [
-  { id: 'std/dvm-general/base', name: '补偿式数字毫伏表底座', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/panel-frame', name: '补偿式数字毫伏表面板框', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/wheel-cover', name: '补偿式数字毫伏表表轮罩', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/galvanometer-cover', name: '补偿式数字毫伏表检流计罩', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/scale', name: '补偿式数字毫伏表刻度盘', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/micrometer-screw', name: '补偿式数字毫伏表千分螺丝', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/drum', name: '补偿式数字毫伏表鼓轮', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/digit-wheel', name: '补偿式数字毫伏表字轮', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/gear', name: '补偿式数字毫伏表变速齿轮', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/star-wheel', name: '补偿式数字毫伏表四齿星轮', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/slide-wire', name: '补偿式数字毫伏表铁皮滑线', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/equalizing-bar', name: '补偿式数字毫伏表等温铜带', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/ceramic-insulator', name: '补偿式数字毫伏表陶瓷绝缘柱', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/wheel-bushing', name: '补偿式数字毫伏表字轮轴套', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/astatic-galvanometer', name: '补偿式数字毫伏表星形检流计', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/changeover-switch', name: '补偿式数字毫伏表换向开关', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/terminal', name: '补偿式数字毫伏表接线柱', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/thermopile', name: '补偿式数字毫伏表热电堆', unit: '件', category: 'part' },
-  { id: 'std/dvm-general/drying-agent', name: '补偿式数字毫伏表干燥剂袋', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/base', name: 'Compensated Digital Millivoltmeter Base', name_zh: '补偿式数字毫伏表底座', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/panel-frame', name: 'Compensated Digital Millivoltmeter Panel Frame', name_zh: '补偿式数字毫伏表面板框', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/wheel-cover', name: 'Compensated Digital Millivoltmeter Dial Wheel Cover', name_zh: '补偿式数字毫伏表表轮罩', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/galvanometer-cover', name: 'Compensated Digital Millivoltmeter Galvanometer Cover', name_zh: '补偿式数字毫伏表检流计罩', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/scale', name: 'Compensated Digital Millivoltmeter Dial', name_zh: '补偿式数字毫伏表刻度盘', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/micrometer-screw', name: 'Compensated Digital Millivoltmeter Micrometer Screw', name_zh: '补偿式数字毫伏表千分螺丝', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/drum', name: 'Compensated Digital Millivoltmeter Drum', name_zh: '补偿式数字毫伏表鼓轮', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/digit-wheel', name: 'Compensated Digital Millivoltmeter Digit Wheel', name_zh: '补偿式数字毫伏表字轮', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/gear', name: 'Compensated Digital Millivoltmeter Speed-Change Gear', name_zh: '补偿式数字毫伏表变速齿轮', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/star-wheel', name: 'Compensated Digital Millivoltmeter Four-Tooth Star Wheel', name_zh: '补偿式数字毫伏表四齿星轮', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/slide-wire', name: 'Compensated Digital Millivoltmeter Sheet-Metal Slide Wire', name_zh: '补偿式数字毫伏表铁皮滑线', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/equalizing-bar', name: 'Compensated Digital Millivoltmeter Isothermal Copper Strip', name_zh: '补偿式数字毫伏表等温铜带', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/ceramic-insulator', name: 'Compensated Digital Millivoltmeter Ceramic Insulator Post', name_zh: '补偿式数字毫伏表陶瓷绝缘柱', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/wheel-bushing', name: 'Compensated Digital Millivoltmeter Digit Wheel Bushing', name_zh: '补偿式数字毫伏表字轮轴套', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/astatic-galvanometer', name: 'Compensated Digital Millivoltmeter Star-Shaped Galvanometer', name_zh: '补偿式数字毫伏表星形检流计', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/changeover-switch', name: 'Compensated Digital Millivoltmeter Changeover Switch', name_zh: '补偿式数字毫伏表换向开关', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/terminal', name: 'Compensated Digital Millivoltmeter Terminal', name_zh: '补偿式数字毫伏表接线柱', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/thermopile', name: 'Compensated Digital Millivoltmeter Thermopile', name_zh: '补偿式数字毫伏表热电堆', unit: '件', category: 'part' },
+  { id: 'std/dvm-general/drying-agent', name: 'Compensated Digital Millivoltmeter Desiccant Bag', name_zh: '补偿式数字毫伏表干燥剂袋', unit: '件', category: 'part' },
 ];
 
 const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -55,7 +55,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 底座：φ260×20 厚铸铁，整台表的热锚。 */
     id: 'make/dvm-base',
-    name: '补偿式数字毫伏表底座制造',
+    name: 'Compensated Digital Millivoltmeter Base Manufacturing', name_zh: '补偿式数字毫伏表底座制造',
     produces: [{ item: 'std/dvm-general/base', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(7, 5) }] }],
     performedBy: 'plant/melting-furnace',
@@ -64,7 +64,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 面板框：280×200 铸铁。 */
     id: 'make/dvm-panel-frame',
-    name: '补偿式数字毫伏表面板框制造',
+    name: 'Compensated Digital Millivoltmeter Panel Frame Manufacturing', name_zh: '补偿式数字毫伏表面板框制造',
     produces: [{ item: 'std/dvm-general/panel-frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(7, 20) }] }],
     performedBy: 'plant/melting-furnace',
@@ -72,7 +72,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/dvm-wheel-cover',
-    name: '补偿式数字毫伏表表轮罩制造',
+    name: 'Compensated Digital Millivoltmeter Dial Wheel Cover Manufacturing', name_zh: '补偿式数字毫伏表表轮罩制造',
     produces: [{ item: 'std/dvm-general/wheel-cover', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(1, 5) }] }],
     performedBy: 'plant/melting-furnace',
@@ -80,7 +80,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/dvm-galvanometer-cover',
-    name: '补偿式数字毫伏表检流计罩制造',
+    name: 'Compensated Digital Millivoltmeter Galvanometer Cover Manufacturing', name_zh: '补偿式数字毫伏表检流计罩制造',
     produces: [{ item: 'std/dvm-general/galvanometer-cover', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(1, 10) }] }],
     performedBy: 'plant/melting-furnace',
@@ -89,7 +89,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 刻度盘：100 mm 弧、100 条线，与滑线长度比对应。 */
     id: 'make/dvm-scale',
-    name: '补偿式数字毫伏表刻度盘制造',
+    name: 'Compensated Digital Millivoltmeter Dial Manufacturing', name_zh: '补偿式数字毫伏表刻度盘制造',
     produces: [{ item: 'std/dvm-general/scale', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 20) }] }],
     performedBy: 'plant/milling-machine',
@@ -101,7 +101,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 螺距是全表换算的根；没有螺纹磨床，靠同一次车两根、挑互配的那一根。
      */
     id: 'make/dvm-micrometer-screw',
-    name: '补偿式数字毫伏表千分螺丝制造',
+    name: 'Compensated Digital Millivoltmeter Micrometer Screw Manufacturing', name_zh: '补偿式数字毫伏表千分螺丝制造',
     produces: [{ item: 'std/dvm-general/micrometer-screw', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 25) }] }],
     performedBy: 'lathe',
@@ -109,7 +109,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 鼓轮：φ40、200 格，0.0025 mm/格。 */
     id: 'make/dvm-drum',
-    name: '补偿式数字毫伏表鼓轮制造',
+    name: 'Compensated Digital Millivoltmeter Drum Manufacturing', name_zh: '补偿式数字毫伏表鼓轮制造',
     produces: [{ item: 'std/dvm-general/drum', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 50) }] }],
     performedBy: 'lathe',
@@ -117,7 +117,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 字轮：4 只，每只 10 面，面上刻 0–9。 */
     id: 'make/dvm-digit-wheel',
-    name: '补偿式数字毫伏表字轮制造',
+    name: 'Compensated Digital Millivoltmeter Digit Wheel Manufacturing', name_zh: '补偿式数字毫伏表字轮制造',
     produces: [{ item: 'std/dvm-general/digit-wheel', qty: q(4) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 25) }] }],
     performedBy: 'plant/milling-machine',
@@ -125,7 +125,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 变速齿轮 3 只：模数 0.5，15:4 那一组，同一把刀同一次装夹铣完。 */
     id: 'make/dvm-gear',
-    name: '补偿式数字毫伏表变速齿轮制造',
+    name: 'Compensated Digital Millivoltmeter Speed-Change Gear Manufacturing', name_zh: '补偿式数字毫伏表变速齿轮制造',
     produces: [{ item: 'std/dvm-general/gear', qty: q(3) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(2, 25) }] }],
     performedBy: 'plant/milling-machine',
@@ -133,7 +133,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 四齿星轮：字轮进位用。 */
     id: 'make/dvm-star-wheel',
-    name: '补偿式数字毫伏表四齿星轮制造',
+    name: 'Compensated Digital Millivoltmeter Four-Tooth Star Wheel Manufacturing', name_zh: '补偿式数字毫伏表四齿星轮制造',
     produces: [{ item: 'std/dvm-general/star-wheel', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 100) }] }],
     performedBy: 'plant/milling-machine',
@@ -145,7 +145,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 0.20 kg 铁从 6 mm 三火锻到 0.01 mm；氧化皮与剪边吃掉九成。
      */
     id: 'make/dvm-slide-wire',
-    name: '补偿式数字毫伏表铁皮滑线制造',
+    name: 'Compensated Digital Millivoltmeter Sheet-Metal Slide Wire Manufacturing', name_zh: '补偿式数字毫伏表铁皮滑线制造',
     produces: [{ item: 'std/dvm-general/slide-wire', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron', qty: q(1, 5) }] }],
     steps: [
@@ -156,7 +156,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 等温铜带：6 mm 厚，垫在滑线下，把两端与中段的温差压到 0.1 K。 */
     id: 'make/dvm-equalizing-bar',
-    name: '补偿式数字毫伏表等温铜带制造',
+    name: 'Compensated Digital Millivoltmeter Isothermal Copper Strip Manufacturing', name_zh: '补偿式数字毫伏表等温铜带制造',
     produces: [{ item: 'std/dvm-general/equalizing-bar', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(1, 20) }] }],
     performedBy: 'plant/milling-machine',
@@ -164,7 +164,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 陶瓷绝缘柱 6 只：φ10×40，900–1000 烧，端子与开关座。 */
     id: 'make/dvm-ceramic-insulator',
-    name: '补偿式数字毫伏表陶瓷绝缘柱制造',
+    name: 'Compensated Digital Millivoltmeter Ceramic Insulator Post Manufacturing', name_zh: '补偿式数字毫伏表陶瓷绝缘柱制造',
     produces: [{ item: 'std/dvm-general/ceramic-insulator', qty: q(6) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(2, 5) }] }],
     performedBy: 'plant/earth-kiln',
@@ -173,7 +173,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 字轮轴套 4 只：陶瓷，900–1000 烧。 */
     id: 'make/dvm-wheel-bushing',
-    name: '补偿式数字毫伏表字轮轴套制造',
+    name: 'Compensated Digital Millivoltmeter Digit Wheel Bushing Manufacturing', name_zh: '补偿式数字毫伏表字轮轴套制造',
     produces: [{ item: 'std/dvm-general/wheel-bushing', qty: q(4) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(1, 20) }] }],
     performedBy: 'plant/earth-kiln',
@@ -187,7 +187,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 星形把地磁 20 A/m 抵消到 0.2 A/m，灵敏度因此高 100 倍。
      */
     id: 'make/dvm-astatic-galvanometer',
-    name: '补偿式数字毫伏表星形检流计制造',
+    name: 'Compensated Digital Millivoltmeter Star-Shaped Galvanometer Manufacturing', name_zh: '补偿式数字毫伏表星形检流计制造',
     produces: [{ item: 'std/dvm-general/astatic-galvanometer', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1, 20) }] },
@@ -205,7 +205,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 换向开关：双刀双掷铜刀 4 片 + 陶瓷座；正反向各测一次抵消热电势。 */
     id: 'make/dvm-changeover-switch',
-    name: '补偿式数字毫伏表换向开关制造',
+    name: 'Compensated Digital Millivoltmeter Changeover Switch Manufacturing', name_zh: '补偿式数字毫伏表换向开关制造',
     produces: [{ item: 'std/dvm-general/changeover-switch', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1, 25) }] },
@@ -219,7 +219,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 接线柱 4 只：被测一对、基准一对。 */
     id: 'make/dvm-terminal',
-    name: '补偿式数字毫伏表接线柱制造',
+    name: 'Compensated Digital Millivoltmeter Terminal Manufacturing', name_zh: '补偿式数字毫伏表接线柱制造',
     produces: [{ item: 'std/dvm-general/terminal', qty: q(4) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(1, 25) }] }],
     performedBy: 'lathe',
@@ -231,7 +231,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 每对 0.986 mV；腿短粗 0.05 Ω/对，32 只陶瓷珠串绝缘。
      */
     id: 'make/dvm-thermopile',
-    name: '补偿式数字毫伏表热电堆制造',
+    name: 'Compensated Digital Millivoltmeter Thermopile Manufacturing', name_zh: '补偿式数字毫伏表热电堆制造',
     produces: [{ item: 'std/dvm-general/thermopile', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1, 50) }] },
@@ -247,7 +247,7 @@ const DVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 干燥剂袋：石英砂烘到 300，装铜网袋，守 10¹² Ω 绝缘。 */
     id: 'make/dvm-drying-agent',
-    name: '补偿式数字毫伏表干燥剂袋制造',
+    name: 'Compensated Digital Millivoltmeter Desiccant Bag Manufacturing', name_zh: '补偿式数字毫伏表干燥剂袋制造',
     produces: [{ item: 'std/dvm-general/drying-agent', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/quartz-pure', qty: q(1, 50) }] }],
     performedBy: 'plant/wet-bench',

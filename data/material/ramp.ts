@@ -39,7 +39,7 @@ import { q } from '../../src/index.ts';
 export const RAMP_ITEMS: readonly Item[] = [
   {
     id: 'iface/ramp-controller',
-    name: '斜率控制器接口',
+    name: 'Ramp Controller Interface', name_zh: '斜率控制器接口',
     interface: true,
   },
   {
@@ -51,7 +51,7 @@ export const RAMP_ITEMS: readonly Item[] = [
      * 零件与零件路线见 `data/machine/mech-ramp-controller.ts`。
      */
     id: 'std/ramp-controller-general',
-    name: '机械式凸轮程序升温控制器',
+    name: 'Mechanical Cam-Programmed Temperature Controller', name_zh: '机械式凸轮程序升温控制器',
     extends: 'iface/ramp-controller',
     unit: '台',
     category: 'part',
@@ -89,7 +89,7 @@ export const RAMP_ITEMS: readonly Item[] = [
   },
   {
     id: 'std/ramp-controller/electronic',
-    name: '电子单元',
+    name: 'Electronic Unit', name_zh: '电子单元',
     extends: 'iface/ramp-controller',
     unit: '台',
     category: 'machine',
@@ -115,7 +115,7 @@ export const RAMP_ROUTES: readonly Route[] = [
      * 差得多就重烧 PROM 或修梯形网络。
      */
     id: 'make/ramp-controller',
-    name: '电子单元制造',
+    name: 'Electronic Unit Manufacturing', name_zh: '电子单元制造',
     produces: [{ item: 'std/ramp-controller/electronic', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/prom-chip-general', qty: q(1) }] },

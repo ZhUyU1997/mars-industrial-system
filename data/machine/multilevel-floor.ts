@@ -263,7 +263,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-polisher/platen',
-    name: '化学机械抛光机抛光盘',
+    name: 'CMP Machine Platen', name_zh: '化学机械抛光机抛光盘',
     unit: '件',
     category: 'part',
     props: [
@@ -286,7 +286,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-polisher/pad',
-    name: '化学机械抛光机抛光垫',
+    name: 'CMP Machine Polishing Pad', name_zh: '化学机械抛光机抛光垫',
     unit: '件',
     category: 'part',
     props: [
@@ -307,7 +307,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-polisher/carrier',
-    name: '化学机械抛光机抛光头',
+    name: 'CMP Machine Polishing Head', name_zh: '化学机械抛光机抛光头',
     unit: '件',
     category: 'part',
     props: [
@@ -326,7 +326,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-polisher/conditioner',
-    name: '化学机械抛光机修整环',
+    name: 'CMP Machine Conditioning Ring', name_zh: '化学机械抛光机修整环',
     unit: '件',
     category: 'part',
     props: [
@@ -344,7 +344,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-polisher/drive',
-    name: '化学机械抛光机主传动',
+    name: 'CMP Machine Main Drive', name_zh: '化学机械抛光机主传动',
     unit: '件',
     category: 'part',
     props: [
@@ -363,7 +363,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-polisher/slurry-feed',
-    name: '化学机械抛光机供浆',
+    name: 'CMP Machine Slurry Supply', name_zh: '化学机械抛光机供浆',
     unit: '件',
     category: 'part',
     props: [
@@ -385,7 +385,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-polisher/enclosure',
-    name: '化学机械抛光机罩',
+    name: 'CMP Machine Cover', name_zh: '化学机械抛光机罩',
     unit: '件',
     category: 'part',
     props: [{ param: 'leakRate', kind: 'range', min: 0, max: 5, unit: 'Pa·L/s', dir: 'atMost' }],
@@ -404,7 +404,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-polisher',
-    name: '化学机械抛光机',
+    name: 'CMP Machine', name_zh: '化学机械抛光机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'pressure', min: 15, max: 30 }],
@@ -447,7 +447,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-scanner/optics',
-    name: '暗场颗粒扫描仪反射光学',
+    name: 'Dark-Field Particle Scanner Reflective Optics', name_zh: '暗场颗粒扫描仪反射光学',
     unit: '件',
     category: 'part',
     props: [
@@ -467,7 +467,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-scanner/detector',
-    name: '暗场颗粒扫描仪探测头',
+    name: 'Dark-Field Particle Scanner Detection Head', name_zh: '暗场颗粒扫描仪探测头',
     unit: '件',
     category: 'part',
     props: [
@@ -485,7 +485,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-scanner/counter',
-    name: '暗场颗粒扫描仪计数与显示',
+    name: 'Dark-Field Particle Scanner Counting and Display', name_zh: '暗场颗粒扫描仪计数与显示',
     unit: '件',
     category: 'part',
     props: [{ param: 'maxCount', kind: 'range', min: 1e3, max: 1e7, unit: '个', dir: 'atLeast' }],
@@ -501,7 +501,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-scanner/stage',
-    name: '暗场颗粒扫描仪片子台',
+    name: 'Dark-Field Particle Scanner Wafer Stage', name_zh: '暗场颗粒扫描仪片子台',
     unit: '件',
     category: 'part',
     props: [
@@ -521,7 +521,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-scanner/dark-box',
-    name: '暗场颗粒扫描仪暗箱',
+    name: 'Dark-Field Particle Scanner Dark Box', name_zh: '暗场颗粒扫描仪暗箱',
     unit: '件',
     category: 'part',
     props: [{ param: 'attenuation', kind: 'range', min: 1e2, max: 1e9, unit: '倍', dir: 'atLeast' }],
@@ -535,7 +535,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-scanner',
-    name: '暗场颗粒扫描仪',
+    name: 'Dark-Field Particle Scanner', name_zh: '暗场颗粒扫描仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -575,7 +575,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/wafer-level',
-    name: '单层完成片',
+    name: 'Single-Layer Finished Wafer', name_zh: '单层完成片',
     unit: '片',
     category: 'part',
     props: [
@@ -600,7 +600,7 @@ export const MULTILEVEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/wafer-inspected',
-    name: '检验后晶圆',
+    name: 'Inspected Wafer', name_zh: '检验后晶圆',
     unit: '片',
     category: 'part',
     props: [
@@ -634,7 +634,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 干涉仪帮不上忙 —— 它的平晶只有 φ70。
      */
     id: 'make/cmp-platen',
-    name: '化学机械抛光机抛光盘制造',
+    name: 'CMP Machine Platen Manufacturing', name_zh: '化学机械抛光机抛光盘制造',
     produces: [
       {
         item: 'plant/cmp-polisher/platen',
@@ -697,7 +697,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 所以这一条不欠料账。
      */
     id: 'make/cmp-pad',
-    name: '化学机械抛光机抛光垫制造',
+    name: 'CMP Machine Polishing Pad Manufacturing', name_zh: '化学机械抛光机抛光垫制造',
     produces: [
       {
         item: 'plant/cmp-polisher/pad',
@@ -754,7 +754,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 而 8μr_s/R = 2.7 % 在 5 % 预算内。**球再大一点点，均匀性就出界。**
      */
     id: 'make/cmp-carrier',
-    name: '化学机械抛光机抛光头制造',
+    name: 'CMP Machine Polishing Head Manufacturing', name_zh: '化学机械抛光机抛光头制造',
     produces: [
       {
         item: 'plant/cmp-polisher/carrier',
@@ -798,7 +798,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 嵌砂槽 4 条 3×3 mm，填尾矿砂后用少量石灰浆固定（同一个胶结）。
      */
     id: 'make/cmp-conditioner',
-    name: '化学机械抛光机修整环制造',
+    name: 'CMP Machine Conditioning Ring Manufacturing', name_zh: '化学机械抛光机修整环制造',
     produces: [
       {
         item: 'plant/cmp-polisher/conditioner',
@@ -838,7 +838,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 代价是调速只能换塔轮档位（10/20/40/80 r/min 四档），没有无级。
      */
     id: 'make/cmp-drive',
-    name: '化学机械抛光机主传动制造',
+    name: 'CMP Machine Main Drive Manufacturing', name_zh: '化学机械抛光机主传动制造',
     produces: [
       {
         item: 'plant/cmp-polisher/drive',
@@ -880,7 +880,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 针阀：φ6 通径，阀杆 1:50 锥面，一圈 = 0.2 mm ⇒ 开度可重复到 5 %。
      */
     id: 'make/cmp-slurry-feed',
-    name: '化学机械抛光机供浆制造',
+    name: 'CMP Machine Slurry Supply Manufacturing', name_zh: '化学机械抛光机供浆制造',
     produces: [
       {
         item: 'plant/cmp-polisher/slurry-feed',
@@ -917,7 +917,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 这一条与 `unblock-evaporator-bell` 的保压法同门：**没有表就用水柱，水柱本身就是表。**
      */
     id: 'make/cmp-enclosure',
-    name: '化学机械抛光机罩制造',
+    name: 'CMP Machine Cover Manufacturing', name_zh: '化学机械抛光机罩制造',
     produces: [
       {
         item: 'plant/cmp-polisher/enclosure',
@@ -959,7 +959,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 但比不镀（铝 85 %、钢 55 %）都好）。
      */
     id: 'make/scanner-optics',
-    name: '暗场颗粒扫描仪反射光学制造',
+    name: 'Dark-Field Particle Scanner Reflective Optics Manufacturing', name_zh: '暗场颗粒扫描仪反射光学制造',
     produces: [
       {
         item: 'plant/particle-scanner/optics',
@@ -1005,7 +1005,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 温度差 1 K，暗电流就变 7 %。
      */
     id: 'make/scanner-detector',
-    name: '暗场颗粒扫描仪探测头制造',
+    name: 'Dark-Field Particle Scanner Detection Head Manufacturing', name_zh: '暗场颗粒扫描仪探测头制造',
     produces: [
       {
         item: 'plant/particle-scanner/detector',
@@ -1048,7 +1048,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      *   计数芯片 1 + 检流计 1 + 铝 4 + 铜线 1 + 钢板 2 → 计数件 1 套
      */
     id: 'make/scanner-counter',
-    name: '暗场颗粒扫描仪计数与显示制造',
+    name: 'Dark-Field Particle Scanner Counting and Display Manufacturing', name_zh: '暗场颗粒扫描仪计数与显示制造',
     produces: [
       {
         item: 'plant/particle-scanner/counter',
@@ -1083,7 +1083,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 不是靠刻度。
      */
     id: 'make/scanner-stage',
-    name: '暗场颗粒扫描仪片子台制造',
+    name: 'Dark-Field Particle Scanner Wafer Stage Manufacturing', name_zh: '暗场颗粒扫描仪片子台制造',
     produces: [
       {
         item: 'plant/particle-scanner/stage',
@@ -1124,7 +1124,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 这一条把"暗"变成可测的：2 nA 对应 10⁻¹⁰ 的漏光比，正是不漏光的样子。
      */
     id: 'make/scanner-darkbox',
-    name: '暗场颗粒扫描仪暗箱制造',
+    name: 'Dark-Field Particle Scanner Dark Box Manufacturing', name_zh: '暗场颗粒扫描仪暗箱制造',
     produces: [
       {
         item: 'plant/particle-scanner/dark-box',
@@ -1171,7 +1171,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 只有"配浆"有温度与压力（湿法槽），"抽检"有 19–21（计量间）。
      */
     id: 'make/wafer-level-cmp',
-    name: '单层完成片制造',
+    name: 'Single-Layer Finished Wafer Manufacturing', name_zh: '单层完成片制造',
     produces: [
       {
         item: 'mat/wafer-level',
@@ -1255,7 +1255,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * "没有 CMP 就用不了"这句话，在这里是可以被数据执行的。
      */
     id: 'make/wafer-level-handlap',
-    name: '单层完成片制造',
+    name: 'Single-Layer Finished Wafer Manufacturing', name_zh: '单层完成片制造',
     produces: [
       {
         item: 'mat/wafer-level',
@@ -1309,7 +1309,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 所以这一条路线**不可重复**（温度一变，阈值就偏），这也是它只敢报 0.4–0.6 的原因。
      */
     id: 'make/wafer-inspect-darkfield',
-    name: '检验后晶圆制造',
+    name: 'Inspected Wafer Manufacturing', name_zh: '检验后晶圆制造',
     produces: [
       {
         item: 'mat/wafer-inspected',
@@ -1370,7 +1370,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 暗场只给"这里有个亮点"，显微镜给"这是一颗 0.6 µm 的颗粒，不是针孔"。
      */
     id: 'make/wafer-inspect-microscope',
-    name: '检验后晶圆制造',
+    name: 'Inspected Wafer Manufacturing', name_zh: '检验后晶圆制造',
     produces: [
       {
         item: 'mat/wafer-inspected',
@@ -1425,7 +1425,7 @@ export const MULTILEVEL_ROUTES: readonly Route[] = [
      * 所以 `coverage 100` 在这里是"道理上全覆盖"，不是"这一片真扫完了" —— 这是它最糟的一处。
      */
     id: 'make/wafer-inspect-mirror',
-    name: '检验后晶圆制造',
+    name: 'Inspected Wafer Manufacturing', name_zh: '检验后晶圆制造',
     produces: [
       {
         item: 'mat/wafer-inspected',
@@ -1476,7 +1476,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/cmp-polisher',
-    name: '化学机械抛光机装配',
+    name: 'CMP Machine Assembly', name_zh: '化学机械抛光机装配',
     produces: [{
       item: 'plant/cmp-polisher',
       qty: q(1),
@@ -1493,7 +1493,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/particle-scanner',
-    name: '暗场颗粒扫描仪装配',
+    name: 'Dark-Field Particle Scanner Assembly', name_zh: '暗场颗粒扫描仪装配',
     produces: [{
       item: 'plant/particle-scanner',
       qty: q(1),

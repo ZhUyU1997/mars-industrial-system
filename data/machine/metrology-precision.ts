@@ -114,7 +114,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/stylus-profilometer/stylus',
-    name: '触针式轮廓仪金刚石触针',
+    name: 'Stylus Profilometer Diamond Stylus', name_zh: '触针式轮廓仪金刚石触针',
     unit: '件',
     category: 'part',
     props: [
@@ -155,7 +155,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/stylus-profilometer/force-sensor',
-    name: '触针式轮廓仪低力传感器',
+    name: 'Stylus Profilometer Low-Force Sensor', name_zh: '触针式轮廓仪低力传感器',
     unit: '件',
     category: 'part',
     props: [
@@ -182,7 +182,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/stylus-profilometer/z-axis',
-    name: 'Z 轴',
+    name: 'Z-Axis', name_zh: 'Z 轴',
     unit: '件',
     category: 'part',
     props: [
@@ -209,7 +209,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/stylus-profilometer/guide',
-    name: '触针式轮廓仪精密导轨',
+    name: 'Stylus Profilometer Precision Guideway', name_zh: '触针式轮廓仪精密导轨',
     unit: '件',
     category: 'part',
     props: [
@@ -232,7 +232,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/stylus-profilometer/traverse',
-    name: '触针式轮廓仪行程驱动',
+    name: 'Stylus Profilometer Traverse Drive', name_zh: '触针式轮廓仪行程驱动',
     unit: '件',
     category: 'part',
     props: [
@@ -264,7 +264,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/stylus-profilometer/base',
-    name: '触针式轮廓仪基座与立柱',
+    name: 'Stylus Profilometer Base and Column', name_zh: '触针式轮廓仪基座与立柱',
     unit: '件',
     category: 'part',
     props: [
@@ -292,7 +292,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/stylus-profilometer',
-    name: '触针式轮廓仪',
+    name: 'Stylus Profilometer', name_zh: '触针式轮廓仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -341,7 +341,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dividing-table/worm-wheel',
-    name: '分度台蜗轮',
+    name: 'Dividing Table Worm Wheel', name_zh: '分度台蜗轮',
     unit: '件',
     category: 'part',
     props: [
@@ -360,7 +360,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dividing-table/worm',
-    name: '分度台蜗杆',
+    name: 'Dividing Table Worm', name_zh: '分度台蜗杆',
     unit: '件',
     category: 'part',
     props: [{ param: 'leadError', kind: 'range', min: 1, max: 3, unit: 'µm/300mm', dir: 'atMost' }],
@@ -376,7 +376,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dividing-table/spindle',
-    name: '分度台主轴',
+    name: 'Dividing Table Spindle', name_zh: '分度台主轴',
     unit: '件',
     category: 'part',
     props: [{ param: 'runout', kind: 'range', min: 0.2, max: 1, unit: 'µm', dir: 'atMost' }],
@@ -389,7 +389,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
   /** 分度台基座。HT250 25 kg + 矿棉，与轮廓仪基座同一条工艺（热时间常数 24–48 h）。 */
   {
     id: 'plant/dividing-table/base',
-    name: '分度台基座',
+    name: 'Dividing Table Base', name_zh: '分度台基座',
     unit: '件',
     category: 'part',
     props: [
@@ -414,7 +414,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dividing-table',
-    name: '分度台',
+    name: 'Dividing Table', name_zh: '分度台',
     unit: '台',
     category: 'machine',
     props: [
@@ -449,7 +449,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/rotary-encoder',
-    name: '圆光栅盘',
+    name: 'Rotary Grating Disk', name_zh: '圆光栅盘',
     unit: '件',
     category: 'part',
     props: [
@@ -474,7 +474,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/rotary-encoder/head',
-    name: '圆光栅盘圆光栅读数头',
+    name: 'Rotary Grating Disk Read Head', name_zh: '圆光栅盘圆光栅读数头',
     unit: '件',
     category: 'part',
     props: [
@@ -496,7 +496,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/spindle-error-analyzer/probe',
-    name: '主轴周期误差分析仪电容位移探头',
+    name: 'Spindle Periodic Error Analyzer Capacitive Displacement Probe', name_zh: '主轴周期误差分析仪电容位移探头',
     unit: '件',
     category: 'part',
     props: [
@@ -523,7 +523,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/spindle-error-analyzer/sync-clock',
-    name: '主轴周期误差分析仪同步采样时钟',
+    name: 'Spindle Periodic Error Analyzer Synchronous Sampling Clock', name_zh: '主轴周期误差分析仪同步采样时钟',
     unit: '件',
     category: 'part',
     props: [
@@ -545,7 +545,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/spindle-error-analyzer/fixture',
-    name: '主轴周期误差分析仪定心/翻转夹具',
+    name: 'Spindle Periodic Error Analyzer Centering/Flipping Fixture', name_zh: '主轴周期误差分析仪定心/翻转夹具',
     unit: '件',
     category: 'part',
     props: [
@@ -563,7 +563,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
   /** 分析仪基座。HT250 40 kg + 矿棉：探头与主轴之间不许有相对振动（0.05 nm 的地板）。 */
   {
     id: 'plant/spindle-error-analyzer/frame',
-    name: '主轴周期误差分析仪基座',
+    name: 'Spindle Periodic Error Analyzer Base', name_zh: '主轴周期误差分析仪基座',
     unit: '件',
     category: 'part',
     props: [
@@ -589,7 +589,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/spindle-error-analyzer',
-    name: '主轴周期误差分析仪',
+    name: 'Spindle Periodic Error Analyzer', name_zh: '主轴周期误差分析仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -634,7 +634,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/laser-straightness/source',
-    name: '激光直线度仪激光头',
+    name: 'Laser Straightness Instrument Laser Head', name_zh: '激光直线度仪激光头',
     unit: '件',
     category: 'part',
     props: [
@@ -655,7 +655,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/laser-straightness/quadrant',
-    name: '激光直线度仪四象限探测器',
+    name: 'Laser Straightness Instrument Quadrant Detector', name_zh: '激光直线度仪四象限探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -669,7 +669,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
   /** 四路读数。**增益 100–1000、噪声 1–5 µV、4 通道。** 相减/相加后给 X、Y 与总光强（总光强用来归一化，压掉功率波动）。 */
   {
     id: 'plant/laser-straightness/readout',
-    name: '激光直线度仪四路读数',
+    name: 'Laser Straightness Instrument Four-Channel Readout', name_zh: '激光直线度仪四路读数',
     unit: '件',
     category: 'part',
     props: [
@@ -687,7 +687,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/laser-straightness/carriage',
-    name: '激光直线度仪靶座/滑块',
+    name: 'Laser Straightness Instrument Target Mount / Slider', name_zh: '激光直线度仪靶座/滑块',
     unit: '件',
     category: 'part',
     props: [
@@ -715,7 +715,7 @@ export const METROLOGY_PRECISION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/laser-straightness',
-    name: '激光直线度仪',
+    name: 'Laser Straightness Instrument', name_zh: '激光直线度仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -751,7 +751,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      *    量锥角（±0.2°）。
      */
     id: 'make/stylus-profilometer-stylus',
-    name: '触针式轮廓仪金刚石触针制造',
+    name: 'Stylus Profilometer Diamond Stylus Manufacturing', name_zh: '触针式轮廓仪金刚石触针制造',
     produces: [
       {
         item: 'plant/stylus-profilometer/stylus',
@@ -800,7 +800,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 比桥漂小一个量级（算在条目注释里）。**这一格是算出来该用电容的。**
      */
     id: 'make/stylus-force-sensor',
-    name: '触针式轮廓仪低力传感器制造',
+    name: 'Stylus Profilometer Low-Force Sensor Manufacturing', name_zh: '触针式轮廓仪低力传感器制造',
     produces: [
       {
         item: 'plant/stylus-profilometer/force-sensor',
@@ -848,7 +848,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 就只是"电噪声小"，不是"读得准"。
      */
     id: 'make/stylus-z-axis',
-    name: 'Z 轴制造',
+    name: 'Z-Axis Manufacturing', name_zh: 'Z 轴制造',
     produces: [
       {
         item: 'plant/stylus-profilometer/z-axis',
@@ -896,7 +896,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      *   偶部消不掉，只能靠平板自己的平面度（0.1 µm）—— 所以窗口是 0.05–0.1。
      */
     id: 'make/stylus-guide',
-    name: '触针式轮廓仪精密导轨制造',
+    name: 'Stylus Profilometer Precision Guideway Manufacturing', name_zh: '触针式轮廓仪精密导轨制造',
     produces: [
       {
         item: 'plant/stylus-profilometer/guide',
@@ -935,7 +935,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 低速端的转矩余量 100 倍，换来的是 0.05 mm/s 不爬行 —— 本层只有这一种电机。
      */
     id: 'make/stylus-traverse',
-    name: '触针式轮廓仪行程驱动制造',
+    name: 'Stylus Profilometer Traverse Drive Manufacturing', name_zh: '触针式轮廓仪行程驱动制造',
     produces: [
       {
         item: 'plant/stylus-profilometer/traverse',
@@ -973,7 +973,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * = 0.046 µm，仍在亚微米档。
      */
     id: 'make/stylus-base',
-    name: '触针式轮廓仪基座与立柱制造',
+    name: 'Stylus Profilometer Base and Column Manufacturing', name_zh: '触针式轮廓仪基座与立柱制造',
     produces: [
       {
         item: 'plant/stylus-profilometer/base',
@@ -1014,7 +1014,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 重复性只能自己重复自己 —— 它证明的是"稳定"，不是"准"。
      */
     id: 'make/stylus-profilometer',
-    name: '触针式轮廓仪装配',
+    name: 'Stylus Profilometer Assembly', name_zh: '触针式轮廓仪装配',
     produces: [
       {
         item: 'plant/stylus-profilometer',
@@ -1071,7 +1071,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * **要一个准的东西，不需要一个准的基准，需要一套会自我纠正的工序。**
      */
     id: 'make/dividing-worm-wheel',
-    name: '分度台蜗轮制造',
+    name: 'Dividing Table Worm Wheel Manufacturing', name_zh: '分度台蜗轮制造',
     produces: [
       {
         item: 'plant/dividing-table/worm-wheel',
@@ -1110,7 +1110,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * **开环值**：量具比被量的还粗。
      */
     id: 'make/dividing-worm',
-    name: '分度台蜗杆制造',
+    name: 'Dividing Table Worm Manufacturing', name_zh: '分度台蜗杆制造',
     produces: [
       {
         item: 'plant/dividing-table/worm',
@@ -1142,7 +1142,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 所以仍要 0.2–1 µm。磨轴颈在恒温间做：0.1 K 的温差在 φ60 上就是 0.07 µm。
      */
     id: 'make/dividing-spindle',
-    name: '分度台主轴制造',
+    name: 'Dividing Table Spindle Manufacturing', name_zh: '分度台主轴制造',
     produces: [
       {
         item: 'plant/dividing-table/spindle',
@@ -1164,7 +1164,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
   {
     /** **分度台基座：HT250 25 kg + 矿棉，热时间常数 24–48 h。** 与轮廓仪基座同一工艺。 */
     id: 'make/dividing-base',
-    name: '分度台基座制造',
+    name: 'Dividing Table Base Manufacturing', name_zh: '分度台基座制造',
     produces: [
       {
         item: 'plant/dividing-table/base',
@@ -1204,7 +1204,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 不证明中间 720 个位置各自准 —— 这一条与编码器同源，见第四节。
      */
     id: 'make/dividing-table',
-    name: '分度台制造',
+    name: 'Dividing Table Manufacturing', name_zh: '分度台制造',
     produces: [
       {
         item: 'plant/dividing-table',
@@ -1261,7 +1261,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 母版（狭缝掩模）可以反复用。
      */
     id: 'make/rotary-encoder',
-    name: '圆光栅盘制造',
+    name: 'Rotary Grating Disk Manufacturing', name_zh: '圆光栅盘制造',
     produces: [
       {
         item: 'std/rotary-encoder',
@@ -1310,7 +1310,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 交付写 0.14–0.47″，就是 18″/128 与 60″/128 这两个数本身。
      */
     id: 'make/rotary-encoder-head',
-    name: '圆光栅盘圆光栅读数头制造',
+    name: 'Rotary Grating Disk Read Head Manufacturing', name_zh: '圆光栅盘圆光栅读数头制造',
     produces: [
       {
         item: 'std/rotary-encoder/head',
@@ -1354,7 +1354,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 0.08 nm 的台阶在不在**。
      */
     id: 'make/spindle-probe',
-    name: '主轴周期误差分析仪电容位移探头制造',
+    name: 'Spindle Periodic Error Analyzer Capacitive Displacement Probe Manufacturing', name_zh: '主轴周期误差分析仪电容位移探头制造',
     produces: [
       {
         item: 'plant/spindle-error-analyzer/probe',
@@ -1390,7 +1390,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 上就是 1.8° 相位。所以 10 µs 的需求、0.1–1 µs 的交付。
      */
     id: 'make/spindle-sync-clock',
-    name: '主轴周期误差分析仪同步采样时钟制造',
+    name: 'Spindle Periodic Error Analyzer Synchronous Sampling Clock Manufacturing', name_zh: '主轴周期误差分析仪同步采样时钟制造',
     produces: [
       {
         item: 'plant/spindle-error-analyzer/sync-clock',
@@ -1429,7 +1429,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 四个定位销（0/90/180/270°）让光盘相对主轴转四次，是多步分离法的硬件。
      */
     id: 'make/spindle-fixture',
-    name: '主轴周期误差分析仪定心/翻转夹具制造',
+    name: 'Spindle Periodic Error Analyzer Centering/Flipping Fixture Manufacturing', name_zh: '主轴周期误差分析仪定心/翻转夹具制造',
     produces: [
       {
         item: 'plant/spindle-error-analyzer/fixture',
@@ -1455,7 +1455,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
   {
     /** **分析仪基座：HT250 40 kg + 矿棉。** 探头与主轴之间不许有相对振动（0.05 nm 的地板）。 */
     id: 'make/spindle-frame',
-    name: '主轴周期误差分析仪基座制造',
+    name: 'Spindle Periodic Error Analyzer Base Manufacturing', name_zh: '主轴周期误差分析仪基座制造',
     produces: [
       {
         item: 'plant/spindle-error-analyzer/frame',
@@ -1497,7 +1497,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      *     要再换 0/120/240° 三步或第二只盘（缺口，见第四节）。
      */
     id: 'make/spindle-error-analyzer',
-    name: '主轴周期误差分析仪装配',
+    name: 'Spindle Periodic Error Analyzer Assembly', name_zh: '主轴周期误差分析仪装配',
     produces: [
       {
         item: 'plant/spindle-error-analyzer',
@@ -1557,7 +1557,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 所以镜筒与管子一起装进热罩（时间常数 24–48 h），而不是分体。
      */
     id: 'make/laser-straightness-source',
-    name: '激光直线度仪激光头制造',
+    name: 'Laser Straightness Instrument Laser Head Manufacturing', name_zh: '激光直线度仪激光头制造',
     produces: [
       {
         item: 'plant/laser-straightness/source',
@@ -1603,7 +1603,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 是算的**（散粒噪声 + 光束漂移），不是量的。这一条写在缺口里。
      */
     id: 'make/laser-quadrant',
-    name: '激光直线度仪四象限探测器制造',
+    name: 'Laser Straightness Instrument Quadrant Detector Manufacturing', name_zh: '激光直线度仪四象限探测器制造',
     produces: [
       {
         item: 'plant/laser-straightness/quadrant',
@@ -1644,7 +1644,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * 分母是总光强，功率漂 1 % 时 X 不动 —— **归一化是 0.1 µm 能稳 10 min 的原因**。
      */
     id: 'make/laser-readout',
-    name: '激光直线度仪四路读数制造',
+    name: 'Laser Straightness Instrument Four-Channel Readout Manufacturing', name_zh: '激光直线度仪四路读数制造',
     produces: [
       {
         item: 'plant/laser-straightness/readout',
@@ -1680,7 +1680,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      * ≤1 mm 内线性够）。
      */
     id: 'make/laser-carriage',
-    name: '激光直线度仪靶座/滑块制造',
+    name: 'Laser Straightness Instrument Target Mount / Slider Manufacturing', name_zh: '激光直线度仪靶座/滑块制造',
     produces: [
       {
         item: 'plant/laser-straightness/carriage',
@@ -1726,7 +1726,7 @@ export const METROLOGY_PRECISION_ROUTES: readonly Route[] = [
      *      （翻转法的一致性），不是对原器的偏差。
      */
     id: 'make/laser-straightness',
-    name: '激光直线度仪装配',
+    name: 'Laser Straightness Instrument Assembly', name_zh: '激光直线度仪装配',
     produces: [
       {
         item: 'plant/laser-straightness',

@@ -39,7 +39,7 @@ export const GAUGE_BLOCK_WRINGING_ROUTES: readonly Route[] = [
   {
     /** 研合性测量：比较仪读差值 + 悬挂不脱开 ⇒ 记录（不产块）。 */
     id: 'measure/gauge-block-wringing',
-    name: '研合性测量',
+    name: 'Gauge Block Wringing Measurement', name_zh: '研合性测量',
     produces: [
       {
         item: 'mat/gauge-block-wringing-record',
@@ -80,7 +80,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gauge-block-wringing-record',
-    name: '量块研合性记录',
+    name: 'Gauge Block Wringing Record', name_zh: '量块研合性记录',
     unit: '份',
     category: 'part',
     props: [

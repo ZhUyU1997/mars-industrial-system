@@ -47,7 +47,7 @@ export const MAGNESIA_ITEMS: readonly Item[] = [
    * 它自己没什么用，是氧化镁的前一步 —— 记下来是因为"沉淀 → 过滤 → 洗涤"
    * 这套湿法操作在本表里第一次出现，而它后面还会反复用到（沉钒、沉镍）。
    */
-  { id: 'mat/magnesium-hydroxide', name: '氢氧化镁', unit: 'kg', category: 'material' },
+  { id: 'mat/magnesium-hydroxide', name: 'Magnesium Hydroxide', name_zh: '氢氧化镁', unit: 'kg', category: 'material' },
 
   /**
    * 氧化镁（镁砂）。碱性耐火料，熔点 2852 °C —— 全表最耐高温的材料。
@@ -55,7 +55,7 @@ export const MAGNESIA_ITEMS: readonly Item[] = [
    * 它比刚玉还高（2072），比硅石高得多（1713）。**自衬电弧炉的 2200 °C
    * 若要用砖，只能用镁砖**；而镁砖要纯 MgO 加少量铁氧体结合。
    */
-  { id: 'mat/magnesia', name: '氧化镁', unit: 'kg', category: 'material' },
+  { id: 'mat/magnesia', name: 'Magnesia', name_zh: '氧化镁', unit: 'kg', category: 'material' },
 ];
 
 export const MAGNESIA_ROUTES: readonly Route[] = [
@@ -72,7 +72,7 @@ export const MAGNESIA_ROUTES: readonly Route[] = [
      * 余下 19247 kg 是卤水带来的水与钠盐母液 —— 排出去了，本链未建条目。
      */
     id: 'make/magnesium-hydroxide',
-    name: '沉镁制备',
+    name: 'Magnesium Precipitation', name_zh: '沉镁制备',
     produces: [
       { item: 'mat/magnesium-hydroxide', qty: q(1000) },
     ],
@@ -97,7 +97,7 @@ export const MAGNESIA_ROUTES: readonly Route[] = [
      * 本层只做前者。
      */
     id: 'make/magnesia',
-    name: '煅烧制备',
+    name: 'Magnesia Production', name_zh: '煅烧制备',
     produces: [
       { item: 'mat/magnesia', qty: q(1000) },
       { item: 'mat/water', qty: q(447), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },

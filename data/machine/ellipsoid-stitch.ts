@@ -429,7 +429,7 @@ export const ELL_STITCH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsoid-stitch',
-    name: '椭球拼接台',
+    name: 'Ellipsoid Stitching Stage', name_zh: '椭球拼接台',
     unit: '台',
     category: 'machine',
     props: [
@@ -470,7 +470,7 @@ export const ELL_STITCH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsoid-stitch/stage',
-    name: '5 轴亚口径扫描台',
+    name: '5-Axis Sub-Aperture Scanning Stage', name_zh: '5 轴亚口径扫描台',
     unit: '件',
     category: 'part',
     props: [
@@ -519,7 +519,7 @@ export const ELL_STITCH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsoid-stitch/local-sphere',
-    name: '椭球拼接台长半径透射球',
+    name: 'Ellipsoid Stitching Stage Long-Radius Transmission Sphere', name_zh: '椭球拼接台长半径透射球',
     unit: '件',
     category: 'part',
     props: [
@@ -544,7 +544,7 @@ export const ELL_STITCH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsoid-stitch/mask',
-    name: '椭球拼接台子孔径光阑组',
+    name: 'Ellipsoid Stitching Stage Sub-Aperture Stop Set', name_zh: '椭球拼接台子孔径光阑组',
     unit: '件',
     category: 'part',
     props: [
@@ -574,7 +574,7 @@ export const ELL_STITCH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsoid-stitch/xray-bridge',
-    name: 'X 射线尺桥',
+    name: 'X-Ray Scale Bridge', name_zh: 'X 射线尺桥',
     unit: '件',
     category: 'part',
     props: [
@@ -602,7 +602,7 @@ export const ELL_STITCH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsoid-stitch/normal-pair',
-    name: '椭球拼接台法珀标定对板',
+    name: 'Ellipsoid Stitching Stage Fabry-Perot Calibration Pair', name_zh: '椭球拼接台法珀标定对板',
     unit: '件',
     category: 'part',
     props: [
@@ -630,7 +630,7 @@ export const ELL_STITCH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsoid-stitch/solver',
-    name: '椭球拼接台读数与解算单元',
+    name: 'Ellipsoid Stitching Stage Readout and Solver Unit', name_zh: '椭球拼接台读数与解算单元',
     unit: '件',
     category: 'part',
     props: [
@@ -652,7 +652,7 @@ export const ELL_STITCH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsoid-stitch/frame',
-    name: '椭球拼接台基座',
+    name: 'Ellipsoid Stitching Stage Base', name_zh: '椭球拼接台基座',
     unit: '件',
     category: 'part',
     props: [
@@ -692,7 +692,7 @@ export const ELL_STITCH_ROUTES: readonly Route[] = [
      * **用 100 mm 校准尺反标台子**（10 nm/100 mm），而不是拿台子去当尺。
      */
     id: 'make/ellipsoid-stitch-stage',
-    name: '5 轴亚口径扫描台制造',
+    name: '5-Axis Sub-Aperture Scanning Stage Manufacturing', name_zh: '5 轴亚口径扫描台制造',
     rate: { hours: q(320) },
     produces: [
       {
@@ -752,7 +752,7 @@ export const ELL_STITCH_ROUTES: readonly Route[] = [
      * 一只慢球上，而慢球的回迹比快球小 (0.073/0.573)² = 1/61。
      */
     id: 'make/ellipsoid-stitch-local-spheres',
-    name: '椭球拼接台长半径透射球制造',
+    name: 'Ellipsoid Stitching Stage Long-Radius Transmission Sphere Manufacturing', name_zh: '椭球拼接台长半径透射球制造',
     rate: { hours: q(210) },
     produces: [
       {
@@ -822,7 +822,7 @@ export const ELL_STITCH_ROUTES: readonly Route[] = [
      * 与 `make/null-test-focal-screen` 同一条）、研边、装挡圈、编号。
      */
     id: 'make/ellipsoid-stitch-mask',
-    name: '椭球拼接台子孔径光阑组制造',
+    name: 'Ellipsoid Stitching Stage Sub-Aperture Stop Set Manufacturing', name_zh: '椭球拼接台子孔径光阑组制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -878,7 +878,7 @@ export const ELL_STITCH_ROUTES: readonly Route[] = [
      * 装配 8 h、用尺自检 30 跳 2 h，其余是复测与返修。
      */
     id: 'make/ellipsoid-stitch-xray-bridge',
-    name: 'X 射线尺桥制造',
+    name: 'X-Ray Scale Bridge Manufacturing', name_zh: 'X 射线尺桥制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -946,7 +946,7 @@ export const ELL_STITCH_ROUTES: readonly Route[] = [
      * 否则下一个人会拿 0.0613 去算椭球（文件头降级①）。
      */
     id: 'make/ellipsoid-stitch-normal-pair',
-    name: '椭球拼接台法珀标定对板制造',
+    name: 'Ellipsoid Stitching Stage Fabry-Perot Calibration Pair Manufacturing', name_zh: '椭球拼接台法珀标定对板制造',
     rate: { hours: q(260) },
     produces: [
       {
@@ -1031,7 +1031,7 @@ export const ELL_STITCH_ROUTES: readonly Route[] = [
      * 老化 100 h（不入工时，与 `make/phase-shifter` 同一条口径）。
      */
     id: 'make/ellipsoid-stitch-solver',
-    name: '椭球拼接台读数与解算单元制造',
+    name: 'Ellipsoid Stitching Stage Readout and Solver Unit Manufacturing', name_zh: '椭球拼接台读数与解算单元制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -1092,7 +1092,7 @@ export const ELL_STITCH_ROUTES: readonly Route[] = [
      * `flatness ≤ 10 µm` 不要求高 —— 姿态由球窝定，不由平台定（`subnm-thermostat/base` 同一条）。
      */
     id: 'make/ellipsoid-stitch-frame',
-    name: '椭球拼接台基座制造',
+    name: 'Ellipsoid Stitching Stage Base Manufacturing', name_zh: '椭球拼接台基座制造',
     rate: { hours: q(120) },
     produces: [
       {
@@ -1158,7 +1158,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/ellipsoid-stitch',
-    name: '椭球拼接台装配',
+    name: 'Ellipsoid Stitching Stage Assembly', name_zh: '椭球拼接台装配',
     produces: [{
       item: 'plant/ellipsoid-stitch',
       qty: q(1),

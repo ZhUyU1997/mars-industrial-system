@@ -514,7 +514,7 @@ export const UNBLOCK_WS_SLURRY_ITEMS: readonly Item[] = [];
 export const UNBLOCK_WS_SLURRY_ROUTES: readonly Route[] = [
   {
     id: 'make/wire-saw-slurry-cast',
-    name: '线锯丝与浆料系统制造',
+    name: 'Wire Saw Wire and Slurry System Manufacturing', name_zh: '线锯丝与浆料系统制造',
     produces: [{ item: 'plant/wire-saw/slurry', qty: q(1) }],
     uses: [
       // 137 kg：槽体 90、蜗壳 15、叶轮 3、铸铁管 8、收放轮 12、搅拌桨 3、
@@ -720,7 +720,7 @@ export const UNBLOCK_WS_SLURRY_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/silicon-carbide-melting',
-    name: '二制备',
+    name: 'Secondary Production', name_zh: '二制备',
     produces: [
       { item: 'mat/silicon-carbide', qty: q(700) },
       { item: 'mat/co', qty: q(980), gives: [{ param: 'purity', kind: 'range', min: 40, dir: 'atLeast' }] },

@@ -387,7 +387,7 @@ export const UNBLOCK_MASK_ALIGN_ROUTES: readonly Route[] = [
      *    薄到 0.5 mm 会翘，翘了那一层就裂。
      */
     id: 'make/photodiode-cu2o',
-    name: '光电二极管制造',
+    name: 'Photodiode Manufacturing', name_zh: '光电二极管制造',
     produces: [{ item: 'std/photodiode-general', qty: q(4) }],
     uses: [
       /**

@@ -44,7 +44,7 @@ export const DAMASCENE_2NM_ROUTES: readonly Route[] = [
      * k 4.0–4.5、层数 1–3。与 `make/fine-damascene-layer` 的差别只有阻挡那一格。
      */
     id: 'make/fine-damascene-layer-2nm',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -110,7 +110,7 @@ export const DAMASCENE_2NM_ROUTES: readonly Route[] = [
      * 这是"能力有、接线没有"的第三例（前两例：阻挡层的 2 nm、相机出清单）。
      */
     id: 'make/fine-damascene-layer-lowk',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -175,7 +175,7 @@ export const DAMASCENE_2NM_ROUTES: readonly Route[] = [
      * 真正恶化的是累积套刻误差与应力，而模型没有这两个参数（见未闭合项）。
      */
     id: 'make/damascene-stack-8',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -232,7 +232,7 @@ export const DAMASCENE_2NM_ROUTES: readonly Route[] = [
      * 真正恶化的是累积套刻误差与应力，而模型没有这两个参数（见未闭合项）。
      */
     id: 'make/damascene-stack-12',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',

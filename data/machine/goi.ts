@@ -122,7 +122,7 @@ export const GOI_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/copper-anode',
-    name: '铜阳极片',
+    name: 'Copper Anode Plate', name_zh: '铜阳极片',
     unit: 'kg',
     category: 'material',
     props: [
@@ -146,7 +146,7 @@ export const GOI_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cu-decoration-cell/tank',
-    name: '铜装饰槽槽体',
+    name: 'Copper Decoration Cell Tank', name_zh: '铜装饰槽槽体',
     unit: '件',
     category: 'part',
     props: [
@@ -167,7 +167,7 @@ export const GOI_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cu-decoration-cell/anode-holder',
-    name: '铜装饰槽阳极架',
+    name: 'Copper Decoration Cell Anode Rack', name_zh: '铜装饰槽阳极架',
     unit: '件',
     category: 'part',
     props: [
@@ -190,7 +190,7 @@ export const GOI_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cu-decoration-cell/dc-supply',
-    name: '0–100 V 直流电源',
+    name: '0–100 V DC Power Supply', name_zh: '0–100 V 直流电源',
     unit: '件',
     category: 'part',
     props: [
@@ -213,7 +213,7 @@ export const GOI_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cu-decoration-cell/current-meter',
-    name: '铜装饰槽电流表',
+    name: 'Copper Decoration Cell Ammeter', name_zh: '铜装饰槽电流表',
     unit: '件',
     category: 'part',
     props: [
@@ -243,7 +243,7 @@ export const GOI_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cu-decoration-cell',
-    name: '铜装饰槽整机',
+    name: 'Copper Decoration Cell System', name_zh: '铜装饰槽整机',
     unit: '台',
     category: 'machine',
     props: [
@@ -269,7 +269,7 @@ export const GOI_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vramp-tester/wafer-chuck',
-    name: '电压斜坡台片台',
+    name: 'Voltage Ramp Tester Wafer Chuck', name_zh: '电压斜坡台片台',
     unit: '件',
     category: 'part',
     props: [
@@ -292,7 +292,7 @@ export const GOI_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vramp-tester/gate-contact',
-    name: '电压斜坡台正面金箔接触',
+    name: 'Voltage Ramp Tester Front Gold-Foil Contact', name_zh: '电压斜坡台正面金箔接触',
     unit: '件',
     category: 'part',
     props: [
@@ -317,7 +317,7 @@ export const GOI_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vramp-tester/sweep-controller',
-    name: '电压斜坡台扫点控制器',
+    name: 'Voltage Ramp Tester Sweep Controller', name_zh: '电压斜坡台扫点控制器',
     unit: '件',
     category: 'part',
     props: [
@@ -347,7 +347,7 @@ export const GOI_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/vramp-tester',
-    name: '电压斜坡台整机',
+    name: 'Voltage Ramp Tester System', name_zh: '电压斜坡台整机',
     unit: '台',
     category: 'machine',
     props: [
@@ -381,7 +381,7 @@ export const GOI_HW_ROUTES: readonly Route[] = [
      * 水是去油与冲洗，不进产品；质量账差 1 kg，按 `unbalanced_zh` 声明。
      */
     id: 'make/copper-anode',
-    name: '铜阳极制备',
+    name: 'Copper Anode Production', name_zh: '铜阳极制备',
     produces: [
       {
         item: 'mat/copper-anode',
@@ -431,7 +431,7 @@ export const GOI_HW_ROUTES: readonly Route[] = [
      * 会在 0.6 kPa 的火星大气下从焊缝渗气。
      */
     id: 'make/cu-decoration-tank',
-    name: '铜装饰槽槽体制造',
+    name: 'Copper Decoration Cell Tank Manufacturing', name_zh: '铜装饰槽槽体制造',
     produces: [
       {
         item: 'plant/cu-decoration-cell/tank',
@@ -479,7 +479,7 @@ export const GOI_HW_ROUTES: readonly Route[] = [
      * 同样电压下的电流变，所以每换一档要重记背景电流。
      */
     id: 'make/cu-decoration-anode-holder',
-    name: '铜装饰槽阳极架制造',
+    name: 'Copper Decoration Cell Anode Rack Manufacturing', name_zh: '铜装饰槽阳极架制造',
     produces: [
       {
         item: 'plant/cu-decoration-cell/anode-holder',
@@ -526,7 +526,7 @@ export const GOI_HW_ROUTES: readonly Route[] = [
      * 一片”的故障上限，到 1 mA 就停，免得把整片铜化。
      */
     id: 'make/cu-decoration-dc-supply',
-    name: '0–100 V 直流电源制造',
+    name: '0–100 V DC Power Supply Manufacturing', name_zh: '0–100 V 直流电源制造',
     produces: [
       {
         item: 'plant/cu-decoration-cell/dc-supply',
@@ -587,7 +587,7 @@ export const GOI_HW_ROUTES: readonly Route[] = [
      * 与 `make/femto-front-end` 的路线。
      */
     id: 'make/cu-decoration-current-meter',
-    name: '铜装饰槽电流表制造',
+    name: 'Copper Decoration Cell Ammeter Manufacturing', name_zh: '铜装饰槽电流表制造',
     produces: [
       {
         item: 'plant/cu-decoration-cell/current-meter',
@@ -639,7 +639,7 @@ export const GOI_HW_ROUTES: readonly Route[] = [
      *   ③ 装饰均匀性：同一片重复装饰 3 次，铜点数差 ≤20 %。
      */
     id: 'make/cu-decoration-cell',
-    name: '铜装饰槽整机制造',
+    name: 'Copper Decoration Cell System Manufacturing', name_zh: '铜装饰槽整机制造',
     produces: [
       {
         item: 'plant/cu-decoration-cell',
@@ -699,7 +699,7 @@ export const GOI_HW_ROUTES: readonly Route[] = [
      * 台面 5 µm 的起伏让压力从 20 kPa 掉到 5 kPa，接触面积掉一半。
      */
     id: 'make/vramp-wafer-chuck',
-    name: '电压斜坡台片台制造',
+    name: 'Voltage Ramp Tester Wafer Chuck Manufacturing', name_zh: '电压斜坡台片台制造',
     produces: [
       {
         item: 'plant/vramp-tester/wafer-chuck',
@@ -746,7 +746,7 @@ export const GOI_HW_ROUTES: readonly Route[] = [
      * 把边缘的表面漏电引走 —— 没有它，1 pA 档的读数就是环的漏电。
      */
     id: 'make/vramp-gate-contact',
-    name: '电压斜坡台正面金箔接触制造',
+    name: 'Voltage Ramp Tester Front Gold-Foil Contact Manufacturing', name_zh: '电压斜坡台正面金箔接触制造',
     produces: [
       {
         item: 'plant/vramp-tester/gate-contact',
@@ -801,7 +801,7 @@ export const GOI_HW_ROUTES: readonly Route[] = [
      * 继电器阶梯。
      */
     id: 'make/vramp-sweep-controller',
-    name: '电压斜坡台扫点控制器制造',
+    name: 'Voltage Ramp Tester Sweep Controller Manufacturing', name_zh: '电压斜坡台扫点控制器制造',
     produces: [
       {
         item: 'plant/vramp-tester/sweep-controller',
@@ -868,7 +868,7 @@ export const GOI_HW_ROUTES: readonly Route[] = [
      *   ③ 空白片：无膜硅片 200 V 下漏电 ≤1 pA（说明夹具绝缘够）。
      */
     id: 'make/vramp-tester',
-    name: '电压斜坡台整机制造',
+    name: 'Voltage Ramp Tester System Manufacturing', name_zh: '电压斜坡台整机制造',
     produces: [
       {
         item: 'plant/vramp-tester',

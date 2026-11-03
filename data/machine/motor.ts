@@ -64,7 +64,7 @@ export const MOTOR_MATERIALS: readonly Item[] = [
    */
   {
     id: 'mat/enamel-wire',
-    name: '漆包线',
+    name: 'Enamelled Wire', name_zh: '漆包线',
     unit: 'kg',
     category: 'material',
     // 两条路线交两档：酚醛 B 级 130（make/enamel-wire）、THEIC 聚酯 F 级 155
@@ -80,7 +80,7 @@ export const MOTOR_PARTS: readonly Item[] = [
    * 片与片之间要绝缘（否则涡流把铁芯烧热），叠完用扣片或焊接固定。
    * ⚠️ 冲片本应冲压，本层用铣削代 —— 冲模是硬质合金，从地球带。
    */
-  { id: 'std/motor-7.5kw-4p/stator', name: '7.5 kW 四极电机定子', unit: '件', category: 'part' },
+  { id: 'std/motor-7.5kw-4p/stator', name: '7.5 kW Four-Pole Motor Stator', name_zh: '7.5 kW 四极电机定子', unit: '件', category: 'part' },
 
   /**
    * 转子。硅钢叠片 + 绕组（+ 滑环，绕线式才有）。
@@ -89,16 +89,16 @@ export const MOTOR_PARTS: readonly Item[] = [
    * **鼠笼式**（转子槽里铸铝，简单、免维护）。鼠笼要铝，而铝链是后来才补上的
    * —— 所以绕线式不是妥协的终点，它是"铝还没有的时候"唯一能走的那条。
    */
-  { id: 'std/motor-7.5kw-4p/rotor', name: '7.5 kW 四极电机转子', unit: '件', category: 'part' },
+  { id: 'std/motor-7.5kw-4p/rotor', name: '7.5 kW Four-Pole Motor Rotor', name_zh: '7.5 kW 四极电机转子', unit: '件', category: 'part' },
 
   /** 绕组。漆包线按匝数绕进定子与转子的槽里，端部绑扎、浸漆。 */
-  { id: 'std/motor-7.5kw-4p/windings', name: '7.5 kW 四极电机绕组', unit: '件', category: 'part' },
+  { id: 'std/motor-7.5kw-4p/windings', name: '7.5 kW Four-Pole Motor Windings', name_zh: '7.5 kW 四极电机绕组', unit: '件', category: 'part' },
 
   /** 轴。45 钢，两头装轴承，一头出轴伸 —— 与车床主轴同一类零件，只是不要求那么高的精度。 */
-  { id: 'std/motor-7.5kw-4p/shaft', name: '7.5 kW 四极电机轴', unit: '件', category: 'part' },
+  { id: 'std/motor-7.5kw-4p/shaft', name: '7.5 kW Four-Pole Motor Shaft', name_zh: '7.5 kW 四极电机轴', unit: '件', category: 'part' },
 
   /** 机座。HT200 浇成，带散热筋；它同时是定子的外套与安装基准。 */
-  { id: 'std/motor-7.5kw-4p/frame', name: '7.5 kW 四极电机机座', unit: '件', category: 'part' },
+  { id: 'std/motor-7.5kw-4p/frame', name: '7.5 kW Four-Pole Motor Frame', name_zh: '7.5 kW 四极电机机座', unit: '件', category: 'part' },
 ];
 
 export const MOTOR_ROUTES: readonly Route[] = [
@@ -113,7 +113,7 @@ export const MOTOR_ROUTES: readonly Route[] = [
      * 而那些要 C3 以上的单体）。**降级使用的第四次**，够用到 B 级绝缘。
      */
     id: 'make/enamel-wire',
-    name: '漆包线制备',
+    name: 'Enamelled Wire Production', name_zh: '漆包线制备',
     produces: [
       {
         item: 'mat/enamel-wire',
@@ -144,7 +144,7 @@ export const MOTOR_ROUTES: readonly Route[] = [
      * "要做很多台电机"，不适合"做一两台"—— 而模型看不出产量，这个问题只能写在注释里。
      */
     id: 'make/motor-stator-stamped',
-    name: '7.5 kW 四极电机定子制造',
+    name: '7.5 kW Four-Pole Motor Stator Manufacturing', name_zh: '7.5 kW 四极电机定子制造',
     produces: [{ item: 'std/motor-7.5kw-4p/stator', qty: q(1) }],
     // 0.6 与铣削那条的 1.0 表示**利用率差**（40% → 75%）；绝对值都是占位量级。
     uses: [{ anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(3, 5) }] }],
@@ -159,7 +159,7 @@ export const MOTOR_ROUTES: readonly Route[] = [
   {
     /** 定子。硅钢片铣槽叠压 → 压入机座 → 槽绝缘。 */
     id: 'make/motor-stator',
-    name: '7.5 kW 四极电机定子制造',
+    name: '7.5 kW Four-Pole Motor Stator Manufacturing', name_zh: '7.5 kW 四极电机定子制造',
     produces: [{ item: 'std/motor-7.5kw-4p/stator', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(1) }] }],
     needs: [],
@@ -172,7 +172,7 @@ export const MOTOR_ROUTES: readonly Route[] = [
   {
     /** 转子。硅钢叠片 + 铜绕组 + 滑环；动平衡要磨校重。 */
     id: 'make/motor-rotor',
-    name: '7.5 kW 四极电机转子制造',
+    name: '7.5 kW Four-Pole Motor Rotor Manufacturing', name_zh: '7.5 kW 四极电机转子制造',
     produces: [{ item: 'std/motor-7.5kw-4p/rotor', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(1) }] },
@@ -193,7 +193,7 @@ export const MOTOR_ROUTES: readonly Route[] = [
      * 是人工（机器人）操作，不是设备。见文件头第三条。
      */
     id: 'make/motor-windings',
-    name: '7.5 kW 四极电机绕组制造',
+    name: '7.5 kW Four-Pole Motor Windings Manufacturing', name_zh: '7.5 kW 四极电机绕组制造',
     produces: [{ item: 'std/motor-7.5kw-4p/windings', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/enamel-wire', qty: q(1) }] }],
     needs: [],
@@ -206,7 +206,7 @@ export const MOTOR_ROUTES: readonly Route[] = [
   {
     /** 轴。45 钢车 → 淬 → 磨轴颈与轴伸。 */
     id: 'make/motor-shaft',
-    name: '7.5 kW 四极电机轴制造',
+    name: '7.5 kW Four-Pole Motor Shaft Manufacturing', name_zh: '7.5 kW 四极电机轴制造',
     produces: [{ item: 'std/motor-7.5kw-4p/shaft', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
       { anyOf: [{ item: 'std/bearing-general-p0', qty: q(2) }] }],
@@ -234,7 +234,7 @@ export const MOTOR_ROUTES: readonly Route[] = [
      * 要重浇或换瓦 —— **但它不依赖任何一条没通的路。**
      */
     id: 'make/motor-shaft-bushed',
-    name: '7.5 kW 四极电机轴制造',
+    name: '7.5 kW Four-Pole Motor Shaft Manufacturing', name_zh: '7.5 kW 四极电机轴制造',
     produces: [{ item: 'std/motor-7.5kw-4p/shaft', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -260,7 +260,7 @@ export const MOTOR_ROUTES: readonly Route[] = [
      * "哪一条先能跑"取决于铝链什么时候通。
      */
     id: 'make/motor-rotor-squirrel',
-    name: '7.5 kW 四极电机转子制造',
+    name: '7.5 kW Four-Pole Motor Rotor Manufacturing', name_zh: '7.5 kW 四极电机转子制造',
     produces: [{ item: 'std/motor-7.5kw-4p/rotor', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(1) }] },
@@ -277,7 +277,7 @@ export const MOTOR_ROUTES: readonly Route[] = [
   {
     /** 机座。HT200 浇 → 车止口 → 镗轴承室；散热筋随铸。 */
     id: 'make/motor-frame',
-    name: '7.5 kW 四极电机机座制造',
+    name: '7.5 kW Four-Pole Motor Frame Manufacturing', name_zh: '7.5 kW 四极电机机座制造',
     produces: [{ item: 'std/motor-7.5kw-4p/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(1) }] }],
     needs: [],
@@ -298,7 +298,7 @@ export const MOTOR_ROUTES: readonly Route[] = [
  */
 export const MOTOR: Item = {
   id: 'std/motor-7.5kw-4p',
-  name: '7.5 kW 四极电机',
+  name: '7.5 kW Four-Pole Motor', name_zh: '7.5 kW 四极电机',
   unit: '台',
   category: 'part',
   composedOf: MOTOR_PARTS.map((p) => ({ item: p.id, qty: q(1) })),
@@ -322,7 +322,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/motor-7.5kw-4p',
-    name: '7.5 kW 四极电机装配',
+    name: '7.5 kW Four-Pole Motor Assembly', name_zh: '7.5 kW 四极电机装配',
     produces: [{
       item: 'std/motor-7.5kw-4p',
       qty: q(1),

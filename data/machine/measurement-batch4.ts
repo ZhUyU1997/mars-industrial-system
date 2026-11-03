@@ -22,7 +22,7 @@ export const BATCH4_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/tritium-calorimeter',
-    name: '氚量热计',
+    name: 'Tritium Calorimeter', name_zh: '氚量热计',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：量热腔、屏蔽、热电堆按整台装配，不再拆独立零件，标 monolithic。
@@ -42,7 +42,7 @@ export const BATCH4_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/control-availability-bench',
-    name: '控制可用率试验台',
+    name: 'Control Availability Test Bench', name_zh: '控制可用率试验台',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：机架、负载、故障注入按整台装配，不再拆独立零件，标 monolithic。
@@ -62,7 +62,7 @@ export const BATCH4_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/concrete-thickness-gauge',
-    name: '混凝土超声测厚仪',
+    name: 'Concrete Ultrasonic Thickness Gauge', name_zh: '混凝土超声测厚仪',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：换能器、脉冲/接收、计时按整台装配，不再拆独立零件，标 monolithic。
@@ -85,7 +85,7 @@ export const BATCH4_ROUTES: readonly Route[] = [
      * 只能用电气加热标定；氚 handling 未建。
      */
     id: 'make/tritium-calorimeter',
-    name: '氚量热计制造',
+    name: 'Tritium Calorimeter Manufacturing', name_zh: '氚量热计制造',
     produces: [
       {
         item: 'plant/tritium-calorimeter',
@@ -121,7 +121,7 @@ export const BATCH4_ROUTES: readonly Route[] = [
      * 量程够但长期计时未标。
      */
     id: 'make/control-availability-bench',
-    name: '控制可用率试验台制造',
+    name: 'Control Availability Test Bench Manufacturing', name_zh: '控制可用率试验台制造',
     produces: [
       {
         item: 'plant/control-availability-bench',
@@ -158,7 +158,7 @@ export const BATCH4_ROUTES: readonly Route[] = [
      * 是假设；短基线只能到 0.5 m 级。
      */
     id: 'make/concrete-thickness-gauge',
-    name: '混凝土超声测厚仪制造',
+    name: 'Concrete Ultrasonic Thickness Gauge Manufacturing', name_zh: '混凝土超声测厚仪制造',
     produces: [
       {
         item: 'plant/concrete-thickness-gauge',

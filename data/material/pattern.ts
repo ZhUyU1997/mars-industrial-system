@@ -54,14 +54,14 @@ export const PATTERN_ITEMS: readonly Item[] = [
    * 它在 0.1 mm 这一档替代光刻胶：光刻胶的用处是"留下图形"，油墨也是"留下图形"，
    * 只是图形不是光画的，是印上去的。
    */
-  { id: 'mat/resist-ink', name: '抗蚀油墨', unit: 'kg', category: 'material' },
+  { id: 'mat/resist-ink', name: 'Resist Ink', name_zh: '抗蚀油墨', unit: 'kg', category: 'material' },
 
   /**
    * 丝网版。不锈钢丝网绷在铝框上，网孔封漆，只在要印的地方留空。
    *
    * 一块版对应一层图形 —— 晶闸管要三块（n 基区、p 区、阴极区）。
    */
-  { id: 'std/screen-frame-general', name: '丝网版', unit: '件', category: 'part' },
+  { id: 'std/screen-frame-general', name: 'Screen Frame', name_zh: '丝网版', unit: '件', category: 'part' },
 
   /**
    * 晶闸管（可控硅）。四层 p-n-p-n，三个结，0.1 mm 图形精度。
@@ -69,7 +69,7 @@ export const PATTERN_ITEMS: readonly Item[] = [
    * 它是本层自造的第一只**功率器件** —— 也是第一次有可能把
    * `std/power-device-general` 从某条路线上换下来。
    */
-  { id: 'std/thyristor-general', name: '晶闸管', unit: '件', category: 'part',
+  { id: 'std/thyristor-general', name: 'Thyristor', name_zh: '晶闸管', unit: '件', category: 'part',
     props: [{ param: 'ratedCurrent', kind: 'range', min: 5, max: 500, unit: 'A' }] },
 ];
 
@@ -77,7 +77,7 @@ export const PATTERN_ROUTES: readonly Route[] = [
   {
     /** 抗蚀油墨。酚醛树脂 + 刚玉细粉 + 少量乙醇（配方溶剂），球磨均匀。 */
     id: 'make/resist-ink',
-    name: '抗蚀油墨制备',
+    name: 'Resist Ink Production', name_zh: '抗蚀油墨制备',
     produces: [{ item: 'mat/resist-ink', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/phenolic-resin', qty: q(500) }] },
@@ -98,7 +98,7 @@ export const PATTERN_ROUTES: readonly Route[] = [
      *   刻版：漆膜上按图纸划线、剥掉要印的部分 —— 精度靠手与放大镜
      */
     id: 'make/screen-frame',
-    name: '丝网版制造',
+    name: 'Screen Frame Manufacturing', name_zh: '丝网版制造',
     produces: [{ item: 'std/screen-frame-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -118,7 +118,7 @@ export const PATTERN_ROUTES: readonly Route[] = [
      * 三个结的结深靠扩散时间控制（模型没有时间），这是良率低的主因。
      */
     id: 'make/thyristor',
-    name: '晶闸管制造',
+    name: 'Thyristor Manufacturing', name_zh: '晶闸管制造',
     produces: [{ item: 'std/thyristor-general', qty: q(12), gives: [{ param: 'ratedCurrent', kind: 'range', min: 10, max: 200, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },

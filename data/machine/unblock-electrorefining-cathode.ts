@@ -461,7 +461,7 @@ export const UNBLOCK_EREF_CATHODE_ROUTES: readonly Route[] = [
      *    （土窑，铜的再结晶温度带）
      */
     id: 'make/electrorefining-cathode-sheet',
-    name: '电解精炼槽阴极板制造',
+    name: 'Electrorefining Cell Cathode Plate Manufacturing', name_zh: '电解精炼槽阴极板制造',
     produces: [{ item: 'plant/electrorefining/cathode', qty: q(1) }],
     uses: [
       /**

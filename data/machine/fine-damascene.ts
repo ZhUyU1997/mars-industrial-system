@@ -507,7 +507,7 @@ export const FINED_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/soc-fine-general',
-    name: '通用细线 SoC',
+    name: 'General-Purpose Fine-Line SoC', name_zh: '通用细线 SoC',
     unit: '片',
     category: 'part',
     props: [
@@ -565,7 +565,7 @@ export const FINED_ROUTES: readonly Route[] = [
      * **这个差**从"一句话"变成六个能判的窗口。
      */
     id: 'make/fine-damascene-layer',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -914,7 +914,7 @@ export const FINED_ROUTES: readonly Route[] = [
      * 它归 `std/soc-fine-general`，不是 3–5 µm，也不是 8 nm。
      */
     id: 'make/fine-soc-interconnect',
-    name: '通用细线 SoC 制造',
+    name: 'General-Purpose Fine-Line SoC Manufacturing', name_zh: '通用细线 SoC 制造',
     produces: [
       {
         item: 'std/soc-fine-general',

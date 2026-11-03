@@ -59,7 +59,7 @@ export const BORON_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/boron-record',
-    name: '硼含量记录',
+    name: 'Boron Content Record', name_zh: '硼含量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -93,7 +93,7 @@ export const BORON_MEASURE_ROUTES: readonly Route[] = [
      *   ⑤ 空白与判读：同一批做 3 个空白（台面开盖 10 min），B 空白 ≤0.05 ppb
      */
     id: 'measure/trace-boron',
-    name: '硼含量测量',
+    name: 'Boron Content Measurement', name_zh: '硼含量测量',
     produces: [
       {
         item: 'mat/boron-record',

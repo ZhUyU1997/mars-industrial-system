@@ -452,7 +452,7 @@ export const METROLOGY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/barrier-coverage-cert',
-    name: '阻挡层内角覆盖证书',
+    name: 'Barrier Layer Inner-Corner Coverage Certificate', name_zh: '阻挡层内角覆盖证书',
     unit: '件',
     category: 'part',
     props: [
@@ -478,7 +478,7 @@ export const METROLOGY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tin-2nm-coverage-record',
-    name: '2 nm TiN 内角覆盖记录',
+    name: '2 nm TiN Inner Corner Coverage Record', name_zh: '2 nm TiN 内角覆盖记录',
     unit: '份',
     category: 'part',
     props: [
@@ -507,7 +507,7 @@ export const METROLOGY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rta-lamp-life-record',
-    name: 'RTA 40 kW 长寿命灯阵的寿命/光衰记录',
+    name: 'RTA 40 kW Long-Life Lamp Array Life/Lumen Depreciation Record', name_zh: 'RTA 40 kW 长寿命灯阵的寿命/光衰记录',
     unit: '份',
     category: 'part',
     props: [
@@ -545,7 +545,7 @@ export const METROLOGY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/bf3-water-record',
-    name: 'BF₃ 的水分记录',
+    name: 'BF₃ Moisture Record', name_zh: 'BF₃ 的水分记录',
     unit: '份',
     category: 'part',
     props: [
@@ -590,7 +590,7 @@ export const METROLOGY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/oes-wavelength-record',
-    name: 'OES 绝对波长记录',
+    name: 'OES Absolute Wavelength Record', name_zh: 'OES 绝对波长记录',
     unit: '份',
     category: 'part',
     props: [
@@ -608,7 +608,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
   {
     /** 量内角覆盖：FIB 切 20 个剖面点 → STEM 读四个角 → 统计。给的是 ±12 % 的证书。 */
     id: 'measure/barrier-corner-coverage',
-    name: '阻挡层内角覆盖证书测量',
+    name: 'Barrier Layer Inner-Corner Coverage Certificate Measurement', name_zh: '阻挡层内角覆盖证书测量',
     produces: [
       {
         item: 'mat/barrier-coverage-cert',
@@ -654,7 +654,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * 20 条薄片、给 ±12 % 证书；本条只吃 2 nm 低 k 片、5 点、不给证书。
      */
     id: 'measure/tin-2nm-corner-coverage',
-    name: '2 nm TiN 内角覆盖测量',
+    name: '2 nm TiN Inner Corner Coverage Measurement', name_zh: '2 nm TiN 内角覆盖测量',
     produces: [
       {
         item: 'mat/tin-2nm-coverage-record',
@@ -729,7 +729,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * + **一次 2.3 h 的定标** ⇒ 0.001 ppm ⇒ 0.07 nm ⇒ 回到主路线 `measure/collector-stitch-subnm`。
      */
     id: 'measure/collector-stitch-noruler',
-    name: 'EUV 收集镜坯测量',
+    name: 'EUV Collector Mirror Blank Measurement', name_zh: 'EUV 收集镜坯测量',
     rate: { hours: q(36) },
     produces: [
       {
@@ -832,7 +832,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      *   工时 38 h（Hindle 30 h 的 1.3 倍、旧拼接 384 h 的 1/10）。
      */
     id: 'measure/collector-stitch-subnm',
-    name: 'EUV 收集镜坯测量',
+    name: 'EUV Collector Mirror Blank Measurement', name_zh: 'EUV 收集镜坯测量',
     rate: { hours: q(38) },
     produces: [
       {
@@ -960,7 +960,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * 而补它们一共只要 6.6 h（4.3 + 2.3）。**
      */
     id: 'measure/collector-stitch-vertex-R',
-    name: 'EUV 收集镜坯测量',
+    name: 'EUV Collector Mirror Blank Measurement', name_zh: 'EUV 收集镜坯测量',
     rate: { hours: q(32) },
     produces: [
       {
@@ -1063,7 +1063,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * + 两侧各 2 点定本底，够定峰高与峰位。加上 36 h 烘烤与抽气，一批 46 h。
      */
     id: 'measure/euv-mirror-mutual',
-    name: 'EUV 多层膜反射镜测量',
+    name: 'EUV Multilayer Mirror Measurement', name_zh: 'EUV 多层膜反射镜测量',
     produces: [
       {
         item: 'std/euv-mirror-300',
@@ -1198,7 +1198,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * 如果互测给出 68 % 以上，那一定哪里错了（比天花板还高）。
      */
     id: 'measure/euv-mirror-tis',
-    name: 'EUV 多层膜反射镜测量',
+    name: 'EUV Multilayer Mirror Measurement', name_zh: 'EUV 多层膜反射镜测量',
     produces: [
       {
         item: 'std/euv-mirror-300',
@@ -1279,7 +1279,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      *      写在这里是因为"验收"必须三项齐全，缺一项的验收不是验收。
      */
     id: 'measure/collector-null-accept',
-    name: 'EUV 收集镜坯测量',
+    name: 'EUV Collector Mirror Blank Measurement', name_zh: 'EUV 收集镜坯测量',
     produces: [
       {
         item: 'plant/euv-source/collector',
@@ -1385,7 +1385,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * 这一个数不补，R 差 0.1 mm 就是 9.6 µm 的面形差 —— 拼接会以为自己测得很准。
      */
     id: 'measure/collector-stitch',
-    name: 'EUV 收集镜坯测量',
+    name: 'EUV Collector Mirror Blank Measurement', name_zh: 'EUV 收集镜坯测量',
     produces: [
       {
         item: 'plant/euv-source/collector',
@@ -1476,7 +1476,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      *      第一次"估"变成"测"**）
      */
     id: 'measure/hafnium-oxygen',
-    name: '量铪里的氧制备',
+    name: 'Oxygen-in-Hafnium Measurement Production', name_zh: '量铪里的氧制备',
     rate: { hours: q(2) },
     produces: [
       {
@@ -1553,7 +1553,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * —— 两者不能混成一句 `under`。
      */
     id: 'measure/nitrogen-moisture',
-    name: '量氮气里的水制备',
+    name: 'Water-in-Nitrogen Measurement Production', name_zh: '量氮气里的水制备',
     rate: { hours: q(4) },
     produces: [
       {
@@ -1619,7 +1619,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * ⚠️ `needs` 里必须有 `plant/resistance-furnace`：700–800 °C 不是本机给的（§条目注释）。
      */
     id: 'measure/nitrogen-oxygen',
-    name: '量氮气里的氧制备',
+    name: 'Oxygen-in-Nitrogen Measurement Production', name_zh: '量氮气里的氧制备',
     rate: { hours: q(3) },
     produces: [
       {
@@ -1685,7 +1685,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * 所以两条路线**共用 ① 那一步**：这不是重复，是同一台仪器的一次开机。
      */
     id: 'measure/oxygen-purity',
-    name: '量氧气自己的纯度制备',
+    name: 'Oxygen Purity Measurement Production', name_zh: '量氧气自己的纯度制备',
     rate: { hours: q(2) },
     produces: [
       {
@@ -1744,7 +1744,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * 不给更窄的 `dishing` 窗口 —— 那一格要等属性传递那一层建起来。
      */
     id: 'measure/cmp-uniformity-map',
-    name: '单层铜互连片测量',
+    name: 'Single-Layer Copper Interconnect Wafer Measurement', name_zh: '单层铜互连片测量',
     rate: { hours: q(1, 10) },
     produces: [
       {
@@ -1823,7 +1823,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * 执行者填 `plant/robot`：它装片、它对中、它记录，本机提供那 1e-6 Pa 与那个束。
      */
     id: 'measure/sims-depth-profile',
-    name: '剖面样品片测量',
+    name: 'Cross-Section Sample Wafer Measurement', name_zh: '剖面样品片测量',
     rate: { hours: q(1) },
     produces: [
       {
@@ -1923,7 +1923,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      *     它的 0.8 µm 波前畸变对整个视场是共模的，抵消。**这是冷腔能造出来的全部理由。**
      */
     id: 'measure/subnm-readout',
-    name: 'λ/1000 参考面元件测量',
+    name: 'λ/1000 Reference Flat Element Measurement', name_zh: 'λ/1000 参考面元件测量',
     rate: { hours: q(36) },
     produces: [
       {
@@ -2042,7 +2042,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * 所以它是"先做哪一条"的答案：先做这一条，恒温腔是它的确认。**
      */
     id: 'measure/subnm-readout-short',
-    name: 'λ/1000 参考面元件测量',
+    name: 'λ/1000 Reference Flat Element Measurement', name_zh: 'λ/1000 参考面元件测量',
     rate: { hours: q(12) },
     produces: [
       {
@@ -2135,7 +2135,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * 探头自己不 hold 温度（与 `measure/nitrogen-oxygen` 同一条）。
      */
     id: 'measure/fcgas-oxygen',
-    name: '量测制备',
+    name: 'Measurement Production', name_zh: '量测制备',
     rate: { hours: q(6) },
     produces: [
       {
@@ -2223,7 +2223,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      *   低 k 片 1 → 低 k 片 1（带 E/H 读数；非破坏）
      */
     id: 'measure/nanoindent-lowk',
-    name: '低 k 介质镀 TiN 片测量',
+    name: 'Low-k Dielectric TiN-Coated Wafer Measurement', name_zh: '低 k 介质镀 TiN 片测量',
     produces: [
       {
         item: 'mat/lowk-barrier-wafer',
@@ -2297,7 +2297,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      * 不是“EUV 掩模 + 台”的全链 —— 后者缺的是 EUV 反射坯/掩模条目，不在本文件。
      */
     id: 'measure/euv-overlay',
-    name: '套刻 vernier 测量',
+    name: 'Overlay Vernier Measurement', name_zh: '套刻 vernier 测量',
     rate: { hours: q(3) },
     produces: [
       {
@@ -2474,7 +2474,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      *   等温的间歇脉冲（见文件头）。
      */
     id: 'measure/rta-lamp-life',
-    name: 'RTA 40 kW 长寿命灯阵的寿命/光衰测量',
+    name: 'RTA 40 kW Long-Life Lamp Array Life/Lumen Depreciation Measurement', name_zh: 'RTA 40 kW 长寿命灯阵的寿命/光衰测量',
     rate: { hours: q(2000) },
     produces: [
       {
@@ -2596,7 +2596,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      *   判废可用（>15 ppm 一眼看出），判合格不可用。
      */
     id: 'measure/bf3-water',
-    name: 'BF₃ 的水分测量',
+    name: 'BF₃ Moisture Measurement', name_zh: 'BF₃ 的水分测量',
     rate: { hours: q(1) },
     produces: [
       {
@@ -2706,7 +2706,7 @@ export const METROLOGY_MEASURE_ROUTES: readonly Route[] = [
      *   400–900` / 设计 ±0.2 nm 变成全段实测。记录里的 error 是局部的。
      */
     id: 'measure/oes-wavelength',
-    name: 'OES 绝对波长测量',
+    name: 'OES Absolute Wavelength Measurement', name_zh: 'OES 绝对波长测量',
     rate: { hours: q(2) },
     produces: [
       {

@@ -377,7 +377,7 @@ export const UNBLOCK_PYRO_OBJ_ROUTES: readonly Route[] = [
      *     谁把它当成"磨损"就会去加保护膜，而保护膜要真空镀（本层没有）
      */
     id: 'make/pyrometer-objective-cast',
-    name: '高温计物镜筒制造',
+    name: 'Pyrometer Objective Tube Manufacturing', name_zh: '高温计物镜筒制造',
     produces: [{ item: 'plant/pyrometer/objective', qty: q(1) }],
     /**
      * 进 9.15 kg，出 1 件（5.68 kg）。每一笔的用途与算式写在各条下面。

@@ -77,7 +77,7 @@ export const POLYESTER_MONOMER_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/urea',
-    name: '尿素',
+    name: 'Urea', name_zh: '尿素',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'nitrogen', kind: 'range', min: 46, max: 46.6, unit: '%', dir: 'atLeast' }],
@@ -86,14 +86,14 @@ export const POLYESTER_MONOMER_ITEMS: readonly Item[] = [
   /** 氰尿酸。白色结晶，三嗪环的母体。300 °C 以上升华，热解温度要压在 300 以下。 */
   {
     id: 'mat/cyanuric-acid',
-    name: '氰尿酸',
+    name: 'Cyanuric Acid', name_zh: '氰尿酸',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 98, max: 99.5, unit: '%', dir: 'atLeast' }],
   },
 
   /** 碳酸乙烯酯。无色液体（mp 36 °C），THEIC 的羟乙基化剂。 */
-  { id: 'mat/ethylene-carbonate', name: '碳酸乙烯酯', unit: 'kg', category: 'material' },
+  { id: 'mat/ethylene-carbonate', name: 'Ethylene Carbonate', name_zh: '碳酸乙烯酯', unit: 'kg', category: 'material' },
 
   /**
    * THEIC：三羟乙基异氰脲酸酯。白色固体，mp 135 °C，羟值 640–660。
@@ -103,7 +103,7 @@ export const POLYESTER_MONOMER_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/theic',
-    name: 'THEIC（三羟乙基异氰脲酸酯）',
+    name: 'THEIC (Trihydroxyethyl Isocyanurate)', name_zh: 'THEIC（三羟乙基异氰脲酸酯）',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'hydroxylValue', kind: 'range', min: 630, max: 670, unit: 'mgKOH/g' }],
@@ -114,7 +114,7 @@ export const POLYESTER_MONOMER_ITEMS: readonly Item[] = [
    *
    * 本层它只有两个去处：碳酸乙烯酯（→ THEIC）与聚酯（下一条路线）。
    */
-  { id: 'mat/ethylene-glycol', name: '乙二醇', unit: 'kg', category: 'material' },
+  { id: 'mat/ethylene-glycol', name: 'Ethylene Glycol', name_zh: '乙二醇', unit: 'kg', category: 'material' },
 ];
 
 export const POLYESTER_MONOMER_ROUTES: readonly Route[] = [
@@ -129,7 +129,7 @@ export const POLYESTER_MONOMER_ROUTES: readonly Route[] = [
      * 所以压力是**为了第二步**，不是为了溶解。
      */
     id: 'make/urea',
-    name: '尿素合成',
+    name: 'Urea Synthesis', name_zh: '尿素合成',
     produces: [
       {
         item: 'mat/urea',
@@ -165,7 +165,7 @@ export const POLYESTER_MONOMER_ROUTES: readonly Route[] = [
      * 温度不能过 300：氰尿酸在 300 °C 以上升华，收率掉得比温升快。
      */
     id: 'make/cyanuric-acid',
-    name: '尿素热解成氰尿酸制备',
+    name: 'Cyanuric Acid from Urea Pyrolysis', name_zh: '尿素热解成氰尿酸制备',
     produces: [
       {
         item: 'mat/cyanuric-acid',
@@ -190,7 +190,7 @@ export const POLYESTER_MONOMER_ROUTES: readonly Route[] = [
      * 氨要一边生成一边抽走，否则平衡不往右走 —— 所以是"偏负压"而不是加压。
      */
     id: 'make/ethylene-carbonate',
-    name: '碳酸乙烯酯制备',
+    name: 'Ethylene Carbonate Production', name_zh: '碳酸乙烯酯制备',
     produces: [
       { item: 'mat/ethylene-carbonate', qty: q(1000) },
       // 这一步的氨带少量水，凝下来是 90–95 % 的氨水，回尿素合成前要提浓。
@@ -217,7 +217,7 @@ export const POLYESTER_MONOMER_ROUTES: readonly Route[] = [
      * 碳酸酯既当反应物又当溶剂，过量 20 %；过量的部分随 CO₂ 一起蒸出、冷凝回用。
      */
     id: 'make/theic',
-    name: 'THEIC（三羟乙基异氰脲酸酯） 制备',
+    name: 'THEIC (Trihydroxyethyl Isocyanurate) Production', name_zh: 'THEIC（三羟乙基异氰脲酸酯） 制备',
     produces: [
       {
         item: 'mat/theic',
@@ -249,7 +249,7 @@ export const POLYESTER_MONOMER_ROUTES: readonly Route[] = [
      * `plant/autoclave`（150–550 °C、10–35 MPa），不是常压釜。
      */
     id: 'make/ethylene-glycol',
-    name: '乙二醇制备',
+    name: 'Ethylene Glycol Production', name_zh: '乙二醇制备',
     produces: [{ item: 'mat/ethylene-glycol', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/formaldehyde', qty: q(484) }] },

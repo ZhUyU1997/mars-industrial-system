@@ -310,7 +310,7 @@ export const UNBLOCK_MVM_ROUTES: readonly Route[] = [
      *  ③ 没有锰铜 + 铁氧体 −0.2%/K → 板温 10 K = 读数 3.6%；表壳升 35 K = 再掉 7%
      */
     id: 'make/millivoltmeter-coil',
-    name: '可动磁体式毫伏表制造',
+    name: 'Moving-Magnet Millivoltmeter Manufacturing', name_zh: '可动磁体式毫伏表制造',
     produces: [{ item: 'std/millivoltmeter-general', qty: q(1) }],
     uses: [
       /**

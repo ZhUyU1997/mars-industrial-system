@@ -150,7 +150,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fid/nozzle',
-    name: 'FID 喷嘴',
+    name: 'FID Nozzle', name_zh: 'FID 喷嘴',
     unit: '件',
     category: 'part',
     props: [
@@ -172,7 +172,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fid/electrodes',
-    name: 'FID 电极对',
+    name: 'FID Electrode Pair', name_zh: 'FID 电极对',
     unit: '件',
     category: 'part',
     props: [
@@ -192,7 +192,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fid/flow-panel',
-    name: 'FID 气路板',
+    name: 'FID Gas Panel', name_zh: 'FID 气路板',
     unit: '件',
     category: 'part',
     props: [
@@ -215,7 +215,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fpd/burner',
-    name: 'FPD 燃烧器',
+    name: 'FPD Burner', name_zh: 'FPD 燃烧器',
     unit: '件',
     category: 'part',
     props: [
@@ -237,7 +237,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fpd/filter',
-    name: '394 nm 干涉滤光片',
+    name: '394 nm Interference Filter', name_zh: '394 nm 干涉滤光片',
     unit: '件',
     category: 'part',
     props: [
@@ -263,7 +263,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/sipm-1mm-general',
-    name: '硅光电倍增器',
+    name: 'Silicon Photomultiplier', name_zh: '硅光电倍增器',
     unit: '只',
     category: 'part',
     props: [
@@ -283,7 +283,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/methanizer/tube',
-    name: '甲烷转化炉管',
+    name: 'Methane Reformer Tube', name_zh: '甲烷转化炉管',
     unit: '件',
     category: 'part',
     props: [
@@ -301,7 +301,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/methanizer/heater',
-    name: '甲烷转化炉加热器',
+    name: 'Methane Reformer Heater', name_zh: '甲烷转化炉加热器',
     unit: '件',
     category: 'part',
     props: [
@@ -321,7 +321,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nickel-catalyst',
-    name: '镍催化剂',
+    name: 'Nickel Catalyst', name_zh: '镍催化剂',
     unit: 'kg',
     category: 'material',
     props: [
@@ -346,7 +346,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fid',
-    name: 'FID 整机',
+    name: 'FID System', name_zh: 'FID 整机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 250, max: 380 }],
@@ -372,7 +372,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/methanizer',
-    name: '甲烷转化炉整机',
+    name: 'Methane Reformer System', name_zh: '甲烷转化炉整机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 350, max: 400 }],
@@ -397,7 +397,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fpd/ptfe-column',
-    name: 'PTFE 分种柱',
+    name: 'PTFE Fractionation Column', name_zh: 'PTFE 分种柱',
     unit: '件',
     category: 'part',
     props: [
@@ -426,7 +426,7 @@ export const NH3_CH4_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fpd',
-    name: 'FPD 整机',
+    name: 'FPD System', name_zh: 'FPD 整机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 150, max: 260 }],
@@ -451,7 +451,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      *   石英 0.005 → 喷嘴 1 件（φ0.35–0.45、长 15–25 mm）。
      */
     id: 'make/fid-nozzle',
-    name: 'FID 喷嘴制造',
+    name: 'FID Nozzle Manufacturing', name_zh: 'FID 喷嘴制造',
     produces: [
       {
         item: 'plant/fid/nozzle',
@@ -481,7 +481,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      *   316L 0.05 + 金 0.001 + 氧化铝 2 → 电极对 1 套。
      */
     id: 'make/fid-electrodes',
-    name: 'FID 电极对制造',
+    name: 'FID Electrode Pair Manufacturing', name_zh: 'FID 电极对制造',
     produces: [
       {
         item: 'plant/fid/electrodes',
@@ -515,7 +515,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      *   316L 0.6 + 铜 0.1 + PTFE 0.05 + 接触器 1 → 气路板 1 件。
      */
     id: 'make/fid-flow-panel',
-    name: 'FID 气路板制造',
+    name: 'FID Gas Panel Manufacturing', name_zh: 'FID 气路板制造',
     produces: [
       {
         item: 'plant/fid/flow-panel',
@@ -551,7 +551,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      *   316L 0.3 + 石英 0.01 + 热电偶 1 + 电阻丝 0.02 → 燃烧器 1 件。
      */
     id: 'make/fpd-burner',
-    name: 'FPD 燃烧器制造',
+    name: 'FPD Burner Manufacturing', name_zh: 'FPD 燃烧器制造',
     produces: [
       {
         item: 'plant/fpd/burner',
@@ -589,7 +589,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      * 394/4/1.46 = 67.5 nm（SiO₂）；21 层（11 高 + 10 低）= 1.2 µm 总厚。
      */
     id: 'make/fpd-filter',
-    name: '394 nm 干涉滤光片制造',
+    name: '394 nm Interference Filter Manufacturing', name_zh: '394 nm 干涉滤光片制造',
     produces: [
       {
         item: 'plant/fpd/filter',
@@ -627,7 +627,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      * CH₃SH 2.4、CS₂ 3.8 min；相邻峰宽 0.20–0.36 min ⇒ 分离度 3.2 / 3.3 / 4.2。
      */
     id: 'make/fpd-ptfe-column',
-    name: 'PTFE 分种柱制造',
+    name: 'PTFE Fractionation Column Manufacturing', name_zh: 'PTFE 分种柱制造',
     produces: [
       {
         item: 'plant/fpd/ptfe-column',
@@ -668,7 +668,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      * 这三处就是「盖格模式增益」与「线性光电二极管」的全部差别。
      */
     id: 'make/sipm-1mm',
-    name: '硅光电倍增器制造',
+    name: 'Silicon Photomultiplier Manufacturing', name_zh: '硅光电倍增器制造',
     produces: [
       {
         item: 'std/sipm-1mm-general',
@@ -710,7 +710,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      * **转化炉管：φ3 × 150 mm 316L 车制 + 卡套。**
      */
     id: 'make/methanizer-tube',
-    name: '甲烷转化炉管制造',
+    name: 'Methane Reformer Tube Manufacturing', name_zh: '甲烷转化炉管制造',
     produces: [
       {
         item: 'plant/methanizer/tube',
@@ -733,7 +733,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      * **转化炉加热器：卡式加热 + 热电偶 + 氧化铝绝缘。**
      */
     id: 'make/methanizer-heater',
-    name: '甲烷转化炉加热器制造',
+    name: 'Methane Reformer Heater Manufacturing', name_zh: '甲烷转化炉加热器制造',
     produces: [
       {
         item: 'plant/methanizer/heater',
@@ -766,7 +766,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      * 浸渍 60–80 °C、干燥 110–120 °C、焙烧 400–500 °C（NiO）、还原 350–400 °C（H₂）。
      */
     id: 'make/nickel-catalyst',
-    name: '镍催化剂制备',
+    name: 'Nickel Catalyst Production', name_zh: '镍催化剂制备',
     produces: [
       {
         item: 'mat/nickel-catalyst',
@@ -805,7 +805,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      *   + 喷嘴 1 + 电极对 1 + 气路板 1 + 接触器 1 + 钢板 5 → FID 1 台
      */
     id: 'make/fid',
-    name: 'FID 整机装配',
+    name: 'FID System Assembly', name_zh: 'FID 整机装配',
     produces: [
       {
         item: 'plant/fid',
@@ -851,7 +851,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      *   350–400 °C，写了会撞 `condition_cycle`（与 `make/icp-ms` 同一条边界）。
      */
     id: 'make/methanizer',
-    name: '转化炉装配',
+    name: 'Methanizer Assembly', name_zh: '转化炉装配',
     produces: [
       {
         item: 'plant/methanizer',
@@ -887,7 +887,7 @@ export const NH3_CH4_HW_ROUTES: readonly Route[] = [
      * **FPD 整机装配：燃烧器 + 394 nm 滤光片 + SiPM + 复用件（电表/ADC/高压）。**
      */
     id: 'make/fpd',
-    name: 'FPD 整机装配',
+    name: 'FPD System Assembly', name_zh: 'FPD 整机装配',
     produces: [
       {
         item: 'plant/fpd',

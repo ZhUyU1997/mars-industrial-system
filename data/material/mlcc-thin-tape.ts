@@ -47,7 +47,7 @@ export const MLCC_THIN_TAPE_ROUTES: readonly Route[] = [
      *   浆料 2200 kg → 生带 1280 kg（与手刮同账，固含 58 %）
      */
     id: 'make/mlcc-green-tape-thin',
-    name: '机拖刀流延制备',
+    name: 'Doctor-Blade Tape Casting Production', name_zh: '机拖刀流延制备',
     produces: [
       {
         item: 'mat/mlcc-green-tape',

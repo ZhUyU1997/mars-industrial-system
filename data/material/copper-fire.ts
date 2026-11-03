@@ -43,7 +43,7 @@ export const COPPER_ROUTES: readonly Route[] = [
      * **铜里的氧要是不除，拉丝时会"氢病"（晶界起泡）**。
      */
     id: 'make/copper-fire-refined',
-    name: '火法精铜制备',
+    name: 'Pyrometallurgical Refined Copper Production', name_zh: '火法精铜制备',
     produces: [
       // 窗口按本文件头：火法精炼到 99.5 %（不是 99.9）—— 氧与少量金属留在铜里，
       // 导电率约 98 % IACS。要 ≥99.9 的场合（Cu 籽晶、大马士革）只能用 `make/copper` 的电解铜。

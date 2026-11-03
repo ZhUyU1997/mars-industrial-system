@@ -436,7 +436,7 @@ export const UNBLOCK_HTF_SHELL_ROUTES: readonly Route[] = [
      *     `tapping` 出本体同一种切法
      */
     id: 'make/htf-shell-brick',
-    name: '高温炉炉壳制造',
+    name: 'High-Temperature Furnace Shell Manufacturing', name_zh: '高温炉炉壳制造',
     produces: [{ item: 'plant/high-temp-furnace/shell', qty: q(1) }],
     uses: [
       /**

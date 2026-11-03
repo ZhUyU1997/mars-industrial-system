@@ -333,7 +333,7 @@ export const UNBLOCK_ELECTRODE_CARBON_ROUTES: readonly Route[] = [
      * 在炉子里，不在这条路线上。
      */
     id: 'make/carbon-electrode-baked',
-    name: 'φ300 碳电极制造',
+    name: 'φ300 Carbon Electrode Manufacturing', name_zh: 'φ300 碳电极制造',
     produces: [{ item: 'std/carbon-electrode-300', qty: q(1) }],
     uses: [
       /**

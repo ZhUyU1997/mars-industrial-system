@@ -181,7 +181,7 @@ export const CU_ALD_ROUTES: readonly Route[] = [
      * 六道工序，执行者逐段写；条件只写整机能承担的那两个（§三）。
      */
     id: 'make/cu-ald-hfac',
-    name: '长了铜籽晶的片制造',
+    name: 'Wafer with Copper Seed Layer Manufacturing', name_zh: '长了铜籽晶的片制造',
     produces: [
       {
         item: 'mat/cu-seed-wafer',

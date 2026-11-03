@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const RF_COMBINER_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/rf-combiner-measure-record',
-    name: 'RF 合成器记录',
+    name: 'RF Combiner Record', name_zh: 'RF 合成器记录',
     unit: '份',
     category: 'part',
     props: [
@@ -27,7 +27,7 @@ export const RF_COMBINER_MEASURE_ROUTES: readonly Route[] = [
      * **RF 合成器：VNA 27 MHz S21 读插入损耗。**
      */
     id: 'measure/rf-combiner-insertion-loss',
-    name: 'RF 合成器测量',
+    name: 'RF Combiner Measurement', name_zh: 'RF 合成器测量',
     produces: [
       {
         item: 'mat/rf-combiner-measure-record',

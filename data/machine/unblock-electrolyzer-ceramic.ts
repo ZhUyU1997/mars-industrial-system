@@ -163,7 +163,7 @@ export const UNBLOCK_CELLSTACK_ROUTES: readonly Route[] = [
      * 同一种写法），端盖对研后的平面度与槽深要拿平板与量块核。
      */
     id: 'make/electrolyzer-cellstack-ceramic',
-    name: '电解槽槽体制造',
+    name: 'Electrolyser Cell Stack Manufacturing', name_zh: '电解槽槽体制造',
     produces: [{ item: 'plant/electrolyzer/cell-stack', qty: q(1) }],
     uses: [
       /**

@@ -23,7 +23,7 @@ import { q } from '../../src/index.ts';
 export const BYPRODUCT_ITEMS: readonly Item[] = [
   {
     id: 'mat/calcium-chloride',
-    name: '氯化钙',
+    name: 'Calcium Chloride', name_zh: '氯化钙',
     unit: 'kg',
     category: 'material',
     // 干燥剂、融雪剂、混凝土早强剂。本层最直接的用途是气路干燥（氯化钙增重判干那一手已经在用）。
@@ -31,7 +31,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/ammonium-chloride',
-    name: '氯化铵',
+    name: 'Ammonium Chloride', name_zh: '氯化铵',
     unit: 'kg',
     category: 'material',
     // 氮肥；但在这条链上更重要的是回到氨 —— 索尔维法的氨是循环使用的。
@@ -39,7 +39,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/h2s',
-    name: '硫化氢',
+    name: 'Hydrogen Sulfide', name_zh: '硫化氢',
     unit: 'kg',
     category: 'material',
     // 剧毒（TLV 1 ppm），但也是本层唯一的"硫氢"来源 —— 克劳斯法把它变回硫。
@@ -47,7 +47,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/phosphogypsum',
-    name: '磷石膏',
+    name: 'Phosphogypsum', name_zh: '磷石膏',
     unit: 'kg',
     category: 'material',
     // 磷石膏。工业上堆成山（全球几十亿吨），本层可以烧成硫酸 + 石灰，但能耗高。
@@ -55,7 +55,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/phosphoric-acid',
-    name: '磷酸',
+    name: 'Phosphoric Acid', name_zh: '磷酸',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'concentration', kind: 'range', min: 20, max: 85, unit: '%' }],
@@ -70,7 +70,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 本层先记条目，不建回收路线。
      */
     id: 'mat/metaphosphoric-acid',
-    name: '偏磷酸',
+    name: 'Metaphosphoric Acid', name_zh: '偏磷酸',
     unit: 'kg',
     category: 'material',
     props: [
@@ -88,7 +88,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 现在把它记成真实条目，让 1670 kg 进 = 210 银 + 1460 液。
      */
     id: 'mat/copper-nitrate-solution',
-    name: '硝酸铜溶液',
+    name: 'Copper Nitrate Solution', name_zh: '硝酸铜溶液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -105,7 +105,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 真实去处：工业上多乙苯可脱烷基回乙苯；本层先记条目，不建回收路线。
      */
     id: 'mat/polyethylbenzene',
-    name: '多乙苯',
+    name: 'Polyethylbenzene', name_zh: '多乙苯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -121,7 +121,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 所以它自己有处理路线；有机磺酸盐是 COD 主项。
      */
     id: 'mat/sulfonation-waste-acid',
-    name: '磺化废酸',
+    name: 'Sulfonation Waste Acid', name_zh: '磺化废酸',
     unit: 'kg',
     category: 'material',
     props: [
@@ -137,7 +137,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 真实去处：**回下一炉配料**（SiC 熔炼本来就是回炉料循环），不是废料。
      */
     id: 'mat/unreacted-silica-carbon',
-    name: '未反应硅石/碳',
+    name: 'Unreacted Silica/Carbon', name_zh: '未反应硅石/碳',
     unit: 'kg',
     category: 'material',
     props: [
@@ -153,7 +153,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 真实去处：**回炼钢**（Fe 氧化物还原或直接进电弧炉），不是废料。
      */
     id: 'mat/oxidation-scale',
-    name: '氧化皮/切边',
+    name: 'Oxidation Scale/Edge Trim', name_zh: '氧化皮/切边',
     unit: 'kg',
     category: 'material',
     props: [
@@ -169,7 +169,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 真实去处：**回熔炼**（回电解精炼或中频炉重熔），不是废料。
      */
     id: 'mat/copper-scrap',
-    name: '铜边裂/氧化皮/酸洗铜',
+    name: 'Copper Edge Crack/Oxide Scale/Pickled Copper', name_zh: '铜边裂/氧化皮/酸洗铜',
     unit: 'kg',
     category: 'material',
     props: [
@@ -184,7 +184,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 真实去处：可回 `make/phenolic-resin` 的填料段，或按尾渣堆存（热固后不熔）。
      */
     id: 'mat/phenolic-scrap',
-    name: '覆铜板热压挤出的胶',
+    name: 'Adhesive from Copper-Clad Laminate Hot Pressing', name_zh: '覆铜板热压挤出的胶',
     unit: 'kg',
     category: 'material',
     props: [
@@ -199,7 +199,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 真实去处：粉碎后作填料（或按尾渣堆存）——热固性环氧不能再熔。
      */
     id: 'mat/epoxy-cast-waste',
-    name: '环氧浇注废料',
+    name: 'Epoxy Casting Waste', name_zh: '环氧浇注废料',
     unit: 'kg',
     category: 'material',
     props: [
@@ -219,7 +219,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 85–95 % / 8–12 % 是设计值（Earth 工程值），不是本层实测。
      */
     id: 'mat/tungsten-carbide-scrap',
-    name: '硬质合金废料',
+    name: 'Cemented Carbide Scrap', name_zh: '硬质合金废料',
     unit: 'kg',
     category: 'material',
     props: [
@@ -237,7 +237,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 真实去处：直接回煅烧炉配料（替代一部分 `mars/gypsum`），不进渣场。
      */
     id: 'mat/uncalcined-gypsum',
-    name: '未煅烧石膏',
+    name: 'Uncalcined Gypsum', name_zh: '未煅烧石膏',
     unit: 'kg',
     category: 'material',
     props: [
@@ -255,7 +255,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 冰晶石与 AlF₃ 都回槽，不是危废。
      */
     id: 'mat/spent-bath',
-    name: '废电解质',
+    name: 'Spent Electrolyte', name_zh: '废电解质',
     unit: 'kg',
     category: 'material',
     props: [
@@ -270,7 +270,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 组成按设计值：B 1–3 %、硫酸盐 2–5 %，其余是水。可回硼酸浸出/硼砂溶解。
      */
     id: 'mat/boric-acid-mother-liquor',
-    name: '硼酸母液',
+    name: 'Boric Acid Mother Liquor', name_zh: '硼酸母液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -285,7 +285,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 组成按设计值：硼砂 2–5 %、碳酸盐/硫酸盐 3–8 %，其余是水。可回浸出/蒸发结晶。
      */
     id: 'mat/borax-mother-liquor',
-    name: '硼砂母液',
+    name: 'Borax Mother Liquor', name_zh: '硼砂母液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -300,7 +300,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 组成按设计值：氯化物 20–40 %、氧化物 10–30 %，其余是未分解盐。可回盐/尾渣。
      */
     id: 'mat/perchlorate-decomposition-residue',
-    name: '高氯酸盐分解残渣',
+    name: 'Perchlorate Decomposition Residue', name_zh: '高氯酸盐分解残渣',
     unit: 'kg',
     category: 'material',
     props: [
@@ -316,7 +316,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 可回下一釜母液（晶种法本来就走母液循环）。
      */
     id: 'mat/zsm-5-mother-liquor',
-    name: 'ZSM-5 母液与铵交换洗水',
+    name: 'ZSM-5 Mother Liquor and Ammonium Exchange Wash Water', name_zh: 'ZSM-5 母液与铵交换洗水',
     unit: 'kg',
     category: 'material',
     props: [
@@ -333,7 +333,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 组成按设计值：Al₂O₃ 10–30 %、Fe/Si 30–60 %，其余是焦炭灰。可回铁合金/耐火骨料。
      */
     id: 'mat/fused-alumina-slag',
-    name: '刚玉铁合金渣',
+    name: 'Corundum Ferroalloy Slag', name_zh: '刚玉铁合金渣',
     unit: 'kg',
     category: 'material',
     props: [
@@ -348,7 +348,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 组成按设计值：Fe 95–98 %、C 0.8–1.1 %，其余是渣。可回 ESR 重熔。
      */
     id: 'mat/esr-crop-end',
-    name: 'ESR 切头/渣壳',
+    name: 'ESR Crop End/Slag Skull', name_zh: 'ESR 切头/渣壳',
     unit: 'kg',
     category: 'material',
     props: [
@@ -363,7 +363,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 组成按设计值：Si 99–99.9 %，其余是滚磨带入的 SiO₂/Fe。回 CZ 或区熔料。
      */
     id: 'mat/silicon-crop-end',
-    name: '单晶硅切头/滚磨屑',
+    name: 'Single-Crystal Silicon Crop End/Grinding Swarf', name_zh: '单晶硅切头/滚磨屑',
     unit: 'kg',
     category: 'material',
     props: [
@@ -377,7 +377,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 组成按设计值：Sn 40–70 %、Fe 5–20 %，其余是氧化物。可回锡精炼。
      */
     id: 'mat/tin-dross',
-    name: '锡浮渣',
+    name: 'Tin Dross', name_zh: '锡浮渣',
     unit: 'kg',
     category: 'material',
     props: [
@@ -392,7 +392,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 组成按设计值：Fe₂O₃ 30–60 %、Cr₂O₃ 1–5 %，其余是脉石/硫酸钠。可回铁/耐火骨料。
      */
     id: 'mat/chromite-leach-slag',
-    name: '铬铁矿浸出渣',
+    name: 'Chromite Leach Slag', name_zh: '铬铁矿浸出渣',
     unit: 'kg',
     category: 'material',
     props: [
@@ -407,7 +407,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * 组成按设计值：Na₂SO₄ 10–20 %，其余是水与少量铬酸盐。可回硫酸钠结晶。
      */
     id: 'mat/sodium-sulfate-mother-liquor',
-    name: '硫酸钠母液',
+    name: 'Sodium Sulfate Mother Liquor', name_zh: '硫酸钠母液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -418,7 +418,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
   {
     /** 硫酸镍结晶母液：`make/nickel-sulfate` 的 95 kg/批；Ni 2–5%、硫酸盐 10–20%，可回结晶。 */
     id: 'mat/nickel-sulfate-mother-liquor',
-    name: '硫酸镍结晶母液',
+    name: 'Nickel Sulfate Crystallization Mother Liquor', name_zh: '硫酸镍结晶母液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -430,7 +430,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
   {
     /** 钨酸钠钙渣：`make/tungstic-oxide` 的 550 kg/批；CaO 20–40%、Na₂O 5–15%，可回建材/耐火骨料。 */
     id: 'mat/tungstic-oxide-slag',
-    name: '钨酸钠钙渣',
+    name: 'Sodium Tungstate Calcium Residue', name_zh: '钨酸钠钙渣',
     unit: 'kg',
     category: 'material',
     props: [
@@ -442,7 +442,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
   {
     /** 高纯石英酸洗渣：`make/quartz-pure` 的 330 kg/批；Fe 1–5%、Al 0.5–2%，可中和/回收铁铝。 */
     id: 'mat/quartz-purification-waste',
-    name: '高纯石英酸洗渣',
+    name: 'High-Purity Quartz Acid-Wash Slag', name_zh: '高纯石英酸洗渣',
     unit: 'kg',
     category: 'material',
     props: [
@@ -457,7 +457,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * Fe 50–99%、form [turnings, offcut, solid]；**回 make/steel-45 的 uses 替代部分铁水**。
      */
     id: 'mat/metal-scrap',
-    name: '金属回炉料',
+    name: 'Metal Remelt Scrap', name_zh: '金属回炉料',
     unit: 'kg',
     category: 'material',
     props: [
@@ -471,7 +471,7 @@ export const BYPRODUCT_ITEMS: readonly Item[] = [
      * SiO₂ 99–99.9%、form [cullet, offcut]；**回 make/quartz-crucible 的 uses 替代部分高纯石英**。
      */
     id: 'mat/quartz-scrap',
-    name: '石英回炉料',
+    name: 'Quartz Scrap', name_zh: '石英回炉料',
     unit: 'kg',
     category: 'material',
     props: [
@@ -495,7 +495,7 @@ export const BYPRODUCT_ROUTES: readonly Route[] = [
      * 1000 kg 氯化铵 + 1860 kg 石灰 → 640 kg 氨 + 2220 kg 氯化钙。
      */
     id: 'make/ammonia-recovery',
-    name: '氨回收',
+    name: 'Ammonia Recovery', name_zh: '氨回收',
     produces: [
       { item: 'mat/ammonia', qty: q(640), gives: [{ param: 'concentration', kind: 'range', min: 25, max: 30 }] },
       { item: 'mat/calcium-chloride', qty: q(2220), gives: [{ param: 'purity', kind: 'range', min: 70 }] },
@@ -522,7 +522,7 @@ export const BYPRODUCT_ROUTES: readonly Route[] = [
      * 1000 kg H₂S + 470 kg 氧 → 940 kg 硫 + 530 kg 水。
      */
     id: 'make/sulfur-from-h2s',
-    name: '克劳斯法制备',
+    name: 'Claus Process Production', name_zh: '克劳斯法制备',
     produces: [
       { item: 'mat/sulfur', qty: q(940) },
       { item: 'mat/water', qty: q(530), gives: [{ param: 'conductivity', kind: 'range', min: 100, max: 1000 }] },
@@ -547,7 +547,7 @@ export const BYPRODUCT_ROUTES: readonly Route[] = [
      * 不烧掉它就是排放；烧掉它是**热**（火星上唯一"白捡"的燃料）。
      */
     id: 'make/co2-from-co',
-    name: '把一氧化碳烧掉制备',
+    name: 'CO₂ Production by CO Combustion', name_zh: '把一氧化碳烧掉制备',
     produces: [{ item: 'mat/co2', qty: q(1571) }],
     uses: [
       { anyOf: [{ item: 'mat/co', qty: q(1000) }] },
@@ -566,7 +566,7 @@ export const BYPRODUCT_ROUTES: readonly Route[] = [
      * 进 1500 = 出 1500。
      */
     id: 'make/waste-acid-neutralization',
-    name: '磺化废酸中和',
+    name: 'Sulfonation Waste Acid Neutralization', name_zh: '磺化废酸中和',
     produces: [
       { item: 'mat/tailings', qty: q(1400) },
       { item: 'mat/water', qty: q(100), gives: [{ param: 'conductivity', kind: 'range', min: 500, max: 1000 }] },
@@ -586,7 +586,7 @@ export const BYPRODUCT_ROUTES: readonly Route[] = [
      * 回炉料替代部分原生铁水；不改 `make/steel-45` 原路线。
      */
     id: 'make/steel-from-scrap',
-    name: '废钢回炉制备',
+    name: 'Steel Production from Scrap', name_zh: '废钢回炉制备',
     produces: [{
       item: 'mat/steel-45',
       qty: q(1000),
@@ -620,7 +620,7 @@ export const BYPRODUCT_ROUTES: readonly Route[] = [
      * 回炉料替代部分高纯石英；不改 `make/quartz-crucible` 原路线。
      */
     id: 'make/quartz-from-scrap',
-    name: '石英坩埚制造',
+    name: 'Quartz Crucible Manufacturing', name_zh: '石英坩埚制造',
     produces: [{ item: 'mat/quartz-crucible', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/quartz-scrap', qty: q(1) }] }],
     needs: [],

@@ -251,7 +251,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xray-interferometer/tube',
-    name: 'X 光管管体',
+    name: 'X-Ray Tube Body', name_zh: 'X 光管管体',
     unit: '件',
     category: 'part',
     props: [
@@ -277,7 +277,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xray-interferometer/hv',
-    name: 'X 高压电源',
+    name: 'X-Ray High-Voltage Power Supply', name_zh: 'X 高压电源',
     unit: '件',
     category: 'part',
     props: [
@@ -311,7 +311,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xray-interferometer/crystal',
-    name: 'X 三晶瓣',
+    name: 'X-Ray Three-Crystal Element', name_zh: 'X 三晶瓣',
     unit: '件',
     category: 'part',
     props: [
@@ -342,7 +342,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xray-interferometer/stage',
-    name: 'X 微动台',
+    name: 'X-Ray Fine Adjustment Stage', name_zh: 'X 微动台',
     unit: '件',
     category: 'part',
     props: [
@@ -373,7 +373,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xray-interferometer/detector',
-    name: 'X 探测器',
+    name: 'X-Ray Detector', name_zh: 'X 探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -400,7 +400,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xray-interferometer/housing',
-    name: 'X 恒温罩',
+    name: 'X-Ray Temperature-Controlled Enclosure', name_zh: 'X 恒温罩',
     unit: '件',
     category: 'part',
     props: [
@@ -437,7 +437,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xray-interferometer/step-standard',
-    name: 'X 台阶标准件',
+    name: 'X-Ray Step Height Standard', name_zh: 'X 台阶标准件',
     unit: '件',
     category: 'part',
     props: [
@@ -470,7 +470,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xray-interferometer',
-    name: 'X 射线干涉仪',
+    name: 'X-Ray Interferometer', name_zh: 'X 射线干涉仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -497,7 +497,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/xray-goniometer',
-    name: 'X 射线测角仪',
+    name: 'X-Ray Goniometer', name_zh: 'X 射线测角仪',
     unit: '件',
     category: 'part',
     props: [
@@ -515,7 +515,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xray-goniometer',
-    name: 'X 射线测角仪整机',
+    name: 'X-Ray Goniometer System', name_zh: 'X 射线测角仪整机',
     unit: '台',
     category: 'machine',
     props: [
@@ -537,7 +537,7 @@ export const XRAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xray-diffractometer',
-    name: '双晶 X 射线衍射仪',
+    name: 'Double-Crystal X-Ray Diffractometer', name_zh: '双晶 X 射线衍射仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -591,7 +591,7 @@ export const XRAY_ROUTES: readonly Route[] = [
      * 比要测的 0.1 nm 大 7000 倍 —— 所以只能靠重力与三个球窝（`null-test.ts` 2.1 同一条）。
      */
     id: 'make/xray-interferometer-crystal',
-    name: 'X 三晶瓣制造',
+    name: 'X-Ray Three-Crystal Element Manufacturing', name_zh: 'X 三晶瓣制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -668,7 +668,7 @@ export const XRAY_ROUTES: readonly Route[] = [
      * 丝径 250 µm 蒸发掉 10 % 要 5000 h。
      */
     id: 'make/xray-interferometer-tube',
-    name: 'X 光管管体制造',
+    name: 'X-Ray Tube Body Manufacturing', name_zh: 'X 光管管体制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -754,7 +754,7 @@ export const XRAY_ROUTES: readonly Route[] = [
      * 那条 3 kV 堆的试验是同一台设备、同一个判据（1.3 倍额定）。
      */
     id: 'make/xray-interferometer-hv',
-    name: 'X 高压电源制造',
+    name: 'X-Ray High-Voltage Power Supply Manufacturing', name_zh: 'X 高压电源制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -812,7 +812,7 @@ export const XRAY_ROUTES: readonly Route[] = [
      * 等整机装好，台阶标准件那一条路线会把它重标到 10 pm（这就是这台机器的用处）。
      */
     id: 'make/xray-interferometer-stage',
-    name: 'X 微动台制造',
+    name: 'X-Ray Fine Adjustment Stage Manufacturing', name_zh: 'X 微动台制造',
     rate: { hours: q(30) },
     produces: [
       {
@@ -877,7 +877,7 @@ export const XRAY_ROUTES: readonly Route[] = [
      * 净收益不到 1.5 倍 —— 而 8 µm 是沉降法最好控制的那一档。
      */
     id: 'make/xray-interferometer-detector',
-    name: 'X 探测器制造',
+    name: 'X-Ray Detector Manufacturing', name_zh: 'X 探测器制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -938,7 +938,7 @@ export const XRAY_ROUTES: readonly Route[] = [
      * 但**对流**会把管壳的热带到晶体上）—— 所以管与晶体之间有一块铜隔板（钢罩的一部分）。
      */
     id: 'make/xray-interferometer-housing',
-    name: 'X 恒温罩制造',
+    name: 'X-Ray Temperature-Controlled Enclosure Manufacturing', name_zh: 'X 恒温罩制造',
     rate: { hours: q(36) },
     produces: [
       {
@@ -1013,7 +1013,7 @@ export const XRAY_ROUTES: readonly Route[] = [
      * 这一句是本路线最容易被读错的地方。
      */
     id: 'make/xray-step-standard',
-    name: 'X 台阶标准件制造',
+    name: 'X-Ray Step Height Standard Manufacturing', name_zh: 'X 台阶标准件制造',
     rate: { hours: q(30) },
     produces: [
       {
@@ -1085,7 +1085,7 @@ export const XRAY_ROUTES: readonly Route[] = [
      * 是**参考面自己只有 0.52 nm**。这正是文件头那句"尺子本身是光学做的"的出处。
      */
     id: 'make/xray-step-standard-optical',
-    name: 'X 台阶标准件制造',
+    name: 'X-Ray Step Height Standard Manufacturing', name_zh: 'X 台阶标准件制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -1136,7 +1136,7 @@ export const XRAY_ROUTES: readonly Route[] = [
      * 2θ 0–160°、0.001–0.005° 分辨率、0.005–0.01° 准确度是 design；150 h。
      */
     id: 'make/xray-goniometer',
-    name: 'X 射线测角仪制造',
+    name: 'X-Ray Goniometer Manufacturing', name_zh: 'X 射线测角仪制造',
     produces: [
       {
         item: 'std/xray-goniometer',
@@ -1189,7 +1189,7 @@ export const XRAY_ROUTES: readonly Route[] = [
      * Cu Kα 0.154 nm、0.001–0.002° 是 design；200 h 估算。
      */
     id: 'make/xray-diffractometer',
-    name: '双晶 X 射线衍射仪制造',
+    name: 'Double-Crystal X-Ray Diffractometer Manufacturing', name_zh: '双晶 X 射线衍射仪制造',
     produces: [
       {
         item: 'plant/xray-diffractometer',
@@ -1248,7 +1248,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/xray-interferometer',
-    name: 'X 射线干涉仪装配',
+    name: 'X-Ray Interferometer Assembly', name_zh: 'X 射线干涉仪装配',
     produces: [{
       item: 'plant/xray-interferometer',
       qty: q(1),

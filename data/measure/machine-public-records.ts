@@ -9,46 +9,46 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const MACHINE_PUBLIC_ITEMS: readonly Item[] = [
-  { id: 'mat/ccp-polisher-public-record', name: 'CCP 抛光机公开规格记录', unit: '份', category: 'part', props: [
+  { id: 'mat/ccp-polisher-public-record', name: 'CCP Polisher Public Specification Record', name_zh: 'CCP 抛光机公开规格记录', unit: '份', category: 'part', props: [
     { param: 'position', kind: 'range', min: 0.5, max: 1, unit: 'µm', dir: 'atMost' },
     { param: 'points', kind: 'range', min: 1, max: 10, unit: '点' },
   ] },
-  { id: 'mat/euv-hina-overlay-public-record', name: 'EUV 光刻机套刻公开规格记录', unit: '份', category: 'part', props: [
+  { id: 'mat/euv-hina-overlay-public-record', name: 'EUV Stepper Overlay Public Specification Record', name_zh: 'EUV 光刻机套刻公开规格记录', unit: '份', category: 'part', props: [
     { param: 'overlay', kind: 'range', min: 0, max: 1.1, unit: 'nm', dir: 'atMost' },
     { param: 'points', kind: 'range', min: 1, max: 10, unit: '点' },
   ] },
-  { id: 'mat/euv-interferometer-public-record', name: 'EUV 干涉仪公开规格记录', unit: '份', category: 'part', props: [
+  { id: 'mat/euv-interferometer-public-record', name: 'EUV Interferometer Public Specification Record', name_zh: 'EUV 干涉仪公开规格记录', unit: '份', category: 'part', props: [
     { param: 'resolution', kind: 'range', min: 0.1, max: 0.2, unit: 'nm', dir: 'atMost' },
     { param: 'repeatability', kind: 'range', min: 0.05, max: 0.1, unit: 'nm', dir: 'atMost' },
     { param: 'points', kind: 'range', min: 1, max: 10, unit: '点' },
   ] },
-  { id: 'mat/float-zone-puller-public-record', name: 'FZ 炉公开规格记录', unit: '份', category: 'part', props: [
+  { id: 'mat/float-zone-puller-public-record', name: 'FZ Furnace Public Specification Record', name_zh: 'FZ 炉公开规格记录', unit: '份', category: 'part', props: [
     { param: 'rfPower', kind: 'range', min: 18000, max: 22000, unit: 'W' },
     { param: 'points', kind: 'range', min: 1, max: 10, unit: '点' },
   ] },
-  { id: 'mat/robot-npu-public-record', name: '机器人 NPU 公开规格记录', unit: '份', category: 'part', props: [
+  { id: 'mat/robot-npu-public-record', name: 'Robot NPU Public Specification Record', name_zh: '机器人 NPU 公开规格记录', unit: '份', category: 'part', props: [
     { param: 'tops', kind: 'range', min: 100, max: 275, unit: 'TOPS' },
     { param: 'sram', kind: 'range', min: 10, max: 100, unit: 'MB' },
     { param: 'power', kind: 'range', min: 10, max: 30, unit: 'W' },
     { param: 'points', kind: 'range', min: 1, max: 10, unit: '点' },
   ] },
-  { id: 'mat/rta-public-record', name: 'RTA 公开规格记录', unit: '份', category: 'part', props: [
+  { id: 'mat/rta-public-record', name: 'RTA Public Specification Record', name_zh: 'RTA 公开规格记录', unit: '份', category: 'part', props: [
     { param: 'waferUniformity', kind: 'range', min: 1, max: 5, unit: 'K', dir: 'atMost' },
     { param: 'points', kind: 'range', min: 1, max: 10, unit: '点' },
   ] },
-  { id: 'mat/rta-zone-control-public-record', name: 'RTA 分区控制公开规格记录', unit: '份', category: 'part', props: [
+  { id: 'mat/rta-zone-control-public-record', name: 'RTA Zone Control Public Specification Record', name_zh: 'RTA 分区控制公开规格记录', unit: '份', category: 'part', props: [
     { param: 'uniformity', kind: 'range', min: 0, max: 8, unit: 'K', dir: 'atMost' },
     { param: 'points', kind: 'range', min: 1, max: 10, unit: '点' },
   ] },
-  { id: 'mat/rta-zone-lamp-public-record', name: 'RTA 灯区公开规格记录', unit: '份', category: 'part', props: [
+  { id: 'mat/rta-zone-lamp-public-record', name: 'RTA Lamp Zone Public Specification Record', name_zh: 'RTA 灯区公开规格记录', unit: '份', category: 'part', props: [
     { param: 'relativeAccuracy', kind: 'range', min: 1, max: 1.5, unit: '%', dir: 'atMost' },
     { param: 'points', kind: 'range', min: 1, max: 10, unit: '点' },
   ] },
-  { id: 'mat/rta-zoned-public-record', name: '分区 RTA 公开规格记录', unit: '份', category: 'part', props: [
+  { id: 'mat/rta-zoned-public-record', name: 'Zoned RTA Public Specification Record', name_zh: '分区 RTA 公开规格记录', unit: '份', category: 'part', props: [
     { param: 'waferUniformity', kind: 'range', min: 2, max: 3, unit: 'K', dir: 'atMost' },
     { param: 'points', kind: 'range', min: 1, max: 10, unit: '点' },
   ] },
-  { id: 'mat/slab-laser-public-record', name: '20 kW slab CO₂ 激光公开规格记录', unit: '份', category: 'part', props: [
+  { id: 'mat/slab-laser-public-record', name: '20 kW Slab CO₂ Laser Public Specification Record', name_zh: '20 kW slab CO₂ 激光公开规格记录', unit: '份', category: 'part', props: [
     { param: 'power', kind: 'range', min: 18000, max: 22000, unit: 'W' },
     { param: 'points', kind: 'range', min: 1, max: 10, unit: '点' },
   ] },
@@ -67,9 +67,23 @@ const PUBLIC_RECORD_NAMES: Record<string, string> = {
   'mat/slab-laser-public-record': '20 kW slab CO₂ 激光公开规格',
 };
 
+const PUBLIC_RECORD_NAMES_EN: Record<string, string> = {
+  'mat/ccp-polisher-public-record': 'CCP Polisher Public Specification',
+  'mat/euv-hina-overlay-public-record': 'EUV Stepper Overlay Public Specification',
+  'mat/euv-interferometer-public-record': 'EUV Interferometer Public Specification',
+  'mat/float-zone-puller-public-record': 'FZ Furnace Public Specification',
+  'mat/robot-npu-public-record': 'Robot NPU Public Specification',
+  'mat/rta-public-record': 'RTA Public Specification',
+  'mat/rta-zone-control-public-record': 'RTA Zone Control Public Specification',
+  'mat/rta-zone-lamp-public-record': 'RTA Lamp Zone Public Specification',
+  'mat/rta-zoned-public-record': 'Zoned RTA Public Specification',
+  'mat/slab-laser-public-record': '20 kW Slab CO₂ Laser Public Specification',
+};
+
 const specRoute = (id: string, item: string, gives: { param: string; min: number; max: number }[], source: string): Route => ({
   id,
-  name: `${PUBLIC_RECORD_NAMES[item] ?? source}采集`,
+  name: `${PUBLIC_RECORD_NAMES_EN[item] ?? source} Collection`,
+  name_zh: `${PUBLIC_RECORD_NAMES[item] ?? source}采集`,
   produces: [{
     item,
     qty: q(1),

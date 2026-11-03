@@ -463,7 +463,7 @@ export const UNBLOCK_ROAST_BLOWER_ROUTES: readonly Route[] = [
      *    用了键，相位就被键槽位置定死了。这也是"没有滚齿"逼出来的做法。
      */
     id: 'make/roaster-blower-cast',
-    name: '焙烧炉鼓风机制造',
+    name: 'Roaster Blower Manufacturing', name_zh: '焙烧炉鼓风机制造',
     produces: [{ item: 'plant/roaster/blower', qty: q(1) }],
     uses: [
       // 转子与齿轮：要强度、要耐磨。到得了：make/iron-ht300（铁 968 + 碳 32，

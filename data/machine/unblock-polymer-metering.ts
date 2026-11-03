@@ -568,7 +568,7 @@ export const UNBLOCK_POLY_METER_ROUTES: readonly Route[] = [
      *    就是 `no_machine` —— 与釜体 ⑮ 步、搅拌、精制塔三条同一条。
      */
     id: 'make/polymer-metering-cast',
-    name: '聚合物引发剂计量制造',
+    name: 'Polymer Initiator Metering Manufacturing', name_zh: '聚合物引发剂计量制造',
     produces: [{ item: 'plant/polymer-plant/metering', qty: q(1) }],
     uses: [
       /**

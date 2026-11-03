@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const LASER_GAS_LOOP_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/laser-gas-loop-measure-record',
-    name: '激光气体循环记录',
+    name: 'Laser Gas Circulation Record', name_zh: '激光气体循环记录',
     unit: '份',
     category: 'part',
     props: [
@@ -27,7 +27,7 @@ export const LASER_GAS_LOOP_MEASURE_ROUTES: readonly Route[] = [
      * **激光气体循环：进出口 T 型偶，出口 30 min 温度时程最大偏差。**
      */
     id: 'measure/laser-gas-loop-stability',
-    name: '激光气体循环测量',
+    name: 'Laser Gas Circulation Measurement', name_zh: '激光气体循环测量',
     produces: [{
       item: 'mat/laser-gas-loop-measure-record',
       qty: q(1),

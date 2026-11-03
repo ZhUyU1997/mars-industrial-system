@@ -46,7 +46,7 @@ export const ST_I_PROFILE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/st-i-profile-record',
-    name: 'STI 槽剖面记录',
+    name: 'STI Trench Profile Record', name_zh: 'STI 槽剖面记录',
     unit: '份',
     category: 'part',
     props: [
@@ -70,7 +70,7 @@ export const ST_I_PROFILE_ROUTES: readonly Route[] = [
      * 破坏性：FIB 切 5 个槽，测完这片不能再用；5 点不是全片图。
      */
     id: 'measure/st-i-profile',
-    name: 'STI 槽剖面测量',
+    name: 'STI Trench Profile Measurement', name_zh: 'STI 槽剖面测量',
     produces: [
       {
         item: 'mat/st-i-profile-record',

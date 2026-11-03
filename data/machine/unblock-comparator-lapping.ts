@@ -323,7 +323,7 @@ export const UNBLOCK_COMPARATOR_LAPPING_ROUTES: readonly Route[] = [
      *  · **8 字 + 每 20 圈转 60°**：直线来回会把板研成鞍形（第六节）
      */
     id: 'make/comparator-lapping-plate',
-    name: '量块比较仪研磨平板制造',
+    name: 'Gauge Block Comparator Lapping Plate Manufacturing', name_zh: '量块比较仪研磨平板制造',
     // 一套三块 22–26 工时（含六级研磨与三块轮换），取 24 h。
     rate: { hours: q(24) },
     produces: [{ item: 'plant/comparator/lapping-plate', qty: q(1) }],

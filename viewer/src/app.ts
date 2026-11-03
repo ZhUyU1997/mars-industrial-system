@@ -12,6 +12,18 @@ import { itemDetailsHtml, overviewHtml, routeDetailsHtml } from './details.ts';
 import type { RenderCtx } from './render.ts';
 import { escapeHtml as esc } from './render.ts';
 import { Scene3D } from './scene3d.ts';
+import {
+  applyStaticI18n,
+  catLabel,
+  edgeLabel,
+  getLang,
+  n as fmtN,
+  nodeKindLabel,
+  nodeLabel,
+  setLang,
+  t,
+} from './i18n.ts';
+import type { Lang } from './i18n.ts';
 
 const CATEGORY_ORDER = ['material', 'part', 'machine', 'consumable', 'carrier', 'interface'] as const;
 const ROUTE_ORDER = ['route', 'measure'] as const;
@@ -96,6 +108,7 @@ const dom = {
   detailsBody: el<HTMLElement>('details-body'),
   detailsKicker: el<HTMLElement>('details-kicker'),
   detailsClose: el<HTMLButtonElement>('details-close'),
+  langSwitch: el<HTMLElement>('lang-switch'),
 };
 
 function frame(): Promise<void> {
@@ -136,10 +149,10 @@ function subsetAt(model: ViewerModel, threshold: number): {
 }
 
 function levelName(threshold: number): string {
-  if (threshold === 0) return '全部';
-  if (threshold >= 15) return '主干';
-  if (threshold >= 8) return '精简';
-  return '标准';
+  if (threshold === 0) return t('status.all');
+  if (threshold >= 15) return t('status.trunk');
+  if (threshold >= 8) return t('status.slim');
+  return t('status.standard');
 }
 
 function nodeVisible(node: ViewerNode): boolean {
@@ -169,22 +182,41 @@ function updateStatus(): void {
   const links = state.model.links.length;
   const level =
     state.focusId !== null
-      ? `聚焦 ${focusLabel()} · ${state.focusDepth} 跳`
+      ? t('status.focus', { label: focusLabel(), depth: fmtN(state.focusDepth) })
       : state.threshold === 0
-        ? '全部'
-        : `${levelName(state.threshold)} ≥ ${state.threshold}`;
+        ? t('status.all')
+        : `${levelName(state.threshold)} ≥ ${fmtN(state.threshold)}`;
   dom.statusbar.classList.toggle('is-settled', state.settled);
   dom.statusText.textContent = state.settled
-    ? `${level} · 已稳定 · 显示 ${visibleNodes.toLocaleString('zh-CN')} / ${total.toLocaleString('zh-CN')} 节点 · ${visibleLinks.toLocaleString('zh-CN')} / ${links.toLocaleString('zh-CN')} 连线`
-    : `${level} · 布局中 · ${state.tick} 次迭代 · 显示 ${visibleNodes.toLocaleString('zh-CN')} 节点 / ${visibleLinks.toLocaleString('zh-CN')} 连线`;
-  dom.visibleCount.textContent = `${visibleNodes} / ${total}`;
+    ? t('status.settled', {
+        level,
+        visible: fmtN(visibleNodes),
+        total: fmtN(total),
+        links: fmtN(visibleLinks),
+        allLinks: fmtN(links),
+      })
+    : t('status.layout', {
+        level,
+        tick: fmtN(state.tick),
+        visible: fmtN(visibleNodes),
+        links: fmtN(visibleLinks),
+      });
+  dom.visibleCount.textContent = `${fmtN(visibleNodes)} / ${fmtN(total)}`;
   dom.levelNote.textContent =
     state.focusId !== null
-      ? `子图 ${state.focusDepth} 跳 · ${state.currentNodes.length.toLocaleString('zh-CN')} 节点 / ${state.currentLinks.length.toLocaleString('zh-CN')} 连线`
+      ? t('status.levelNoteFocus', {
+          depth: fmtN(state.focusDepth),
+          nodes: fmtN(state.currentNodes.length),
+          links: fmtN(state.currentLinks.length),
+        })
       : state.threshold === 0
-        ? `全部 ${total.toLocaleString('zh-CN')} 个节点 · ${links.toLocaleString('zh-CN')} 条连线`
-        : `连接度 ≥ ${state.threshold} · ${state.currentNodes.length.toLocaleString('zh-CN')} 节点 / ${state.currentLinks.length.toLocaleString('zh-CN')} 连线`;
-  dom.levelCount.textContent = state.focusId !== null ? '聚焦' : level;
+        ? t('status.levelNoteAll', { nodes: fmtN(total), links: fmtN(links) })
+        : t('status.levelNoteThreshold', {
+            threshold: fmtN(state.threshold),
+            nodes: fmtN(state.currentNodes.length),
+            links: fmtN(state.currentLinks.length),
+          });
+  dom.levelCount.textContent = state.focusId !== null ? t('status.levelCountFocus') : level;
 }
 
 function swapGraph(
@@ -222,7 +254,7 @@ function applyThreshold(threshold: number, options: { keepView?: boolean } = {})
   state.render.selectedSet = null;
   state.render.labels = new Set();
   state.focusId = null;
-  dom.focusState.textContent = '未聚焦。单击节点查看，或按“聚焦”。';
+  dom.focusState.textContent = t('filters.focusHint');
   updateFocusButtons();
   renderOverview();
   for (const button of dom.levelSwitch.querySelectorAll<HTMLButtonElement>('[data-level]')) {
@@ -266,14 +298,25 @@ function egoSubset(id: string, depth: number): {
 
 function applyMeta(model: ViewerModel): void {
   const { meta } = model.file;
-  dom.metaSummary.textContent = `${meta.counts.items.toLocaleString('zh-CN')} 条目 · ${meta.counts.routes.toLocaleString('zh-CN')} 路线 · ${model.links.length.toLocaleString('zh-CN')} 关系`;
-  dom.loadingSub.textContent = `${meta.counts.items.toLocaleString('zh-CN')} 条目 · ${meta.counts.routes.toLocaleString('zh-CN')} 路线 · ${model.links.length.toLocaleString('zh-CN')} 连线`;
+  dom.metaSummary.textContent = t('meta.summary', {
+    items: fmtN(meta.counts.items),
+    routes: fmtN(meta.counts.routes),
+    links: fmtN(model.links.length),
+  });
+  dom.loadingSub.textContent = t('meta.loadingCounts', {
+    items: fmtN(meta.counts.items),
+    routes: fmtN(meta.counts.routes),
+    links: fmtN(model.links.length),
+  });
   const bad = meta.validation.errors > 0;
   dom.validation.classList.toggle('is-bad', bad);
-  dom.validationText.textContent = `${meta.validation.errors} 错误 · ${meta.validation.notes} 提示`;
+  dom.validationText.textContent = t('validation.summary', {
+    errors: fmtN(meta.validation.errors),
+    notes: fmtN(meta.validation.notes),
+  });
   dom.validation.title = bad
     ? meta.validation.errorSample.join('\n')
-    : `data/** 校验通过 · ${meta.validation.notes} 条提示`;
+    : t('validation.okTitle', { notes: fmtN(meta.validation.notes) });
 }
 
 function checkboxRow(attrs: string, color: string, label: string, count: number, checked = true): string {
@@ -281,7 +324,7 @@ function checkboxRow(attrs: string, color: string, label: string, count: number,
     <input type="checkbox" ${attrs} ${checked ? 'checked' : ''} />
     <span class="swatch" style="--c:${color}"></span>
     <span class="name">${esc(label)}</span>
-    <span class="count">${count.toLocaleString('zh-CN')}</span>
+    <span class="count">${fmtN(count)}</span>
   </label>`;
 }
 
@@ -294,13 +337,13 @@ function buildFilters(model: ViewerModel): void {
     const n = counts.get(cat) ?? 0;
     if (n === 0) continue;
     const meta = CATEGORIES[cat]!;
-    catRows.push(checkboxRow(`data-filter-cat="${cat}"`, meta.color, meta.label, n));
+    catRows.push(checkboxRow(`data-filter-cat="${cat}"`, meta.color, catLabel(cat), n));
   }
   for (const kind of ROUTE_ORDER) {
     const n = counts.get(kind) ?? 0;
     if (n === 0) continue;
     const meta = CATEGORIES[kind]!;
-    catRows.push(checkboxRow(`data-filter-cat="${kind}"`, meta.color, meta.label, n));
+    catRows.push(checkboxRow(`data-filter-cat="${kind}"`, meta.color, catLabel(kind), n));
   }
   dom.categoryFilters.innerHTML = catRows.join('');
 
@@ -312,7 +355,7 @@ function buildFilters(model: ViewerModel): void {
     return checkboxRow(
       `data-filter-edge="${kind}"`,
       meta.color,
-      meta.label,
+      edgeLabel(kind),
       edgeCounts.get(kind) ?? 0,
       !state.hiddenEdges.has(kind),
     );
@@ -320,7 +363,7 @@ function buildFilters(model: ViewerModel): void {
 }
 
 function renderOverview(): void {
-  dom.detailsKicker.textContent = 'OVERVIEW';
+  dom.detailsKicker.textContent = t('details.overview');
   dom.detailsClose.hidden = true;
   dom.detailsBody.innerHTML = overviewHtml(state.model);
   dom.detailsBody.scrollTop = 0;
@@ -332,7 +375,7 @@ function renderDetails(id: string): void {
     renderOverview();
     return;
   }
-  dom.detailsKicker.textContent = node.kind === 'route' ? 'ROUTE' : 'ITEM';
+  dom.detailsKicker.textContent = node.kind === 'route' ? t('details.route') : t('details.item');
   dom.detailsBody.innerHTML =
     node.kind === 'route' ? routeDetailsHtml(state.model, id) : itemDetailsHtml(state.model, id);
   dom.detailsBody.scrollTop = 0;
@@ -373,7 +416,7 @@ function updateFocusButtons(): void {
 function focusLabel(): string {
   if (state.focusId === null) return '';
   const node = state.model.nodeById.get(state.focusId);
-  return node?.label ?? state.focusId;
+  return node !== undefined ? nodeLabel(node) : state.focusId;
 }
 
 function setFocus(id: string, depth: number): void {
@@ -400,7 +443,11 @@ function setFocus(id: string, depth: number): void {
   for (const button of dom.levelSwitch.querySelectorAll<HTMLButtonElement>('[data-level]')) {
     button.classList.remove('active');
   }
-  dom.focusState.innerHTML = `聚焦 <b>${esc(node.label)}</b><br /><span>${depth} 跳 · ${subset.nodes.length} 个节点</span>`;
+  dom.focusState.innerHTML = t('focus.state', {
+    label: esc(nodeLabel(node)),
+    depth: fmtN(depth),
+    nodes: fmtN(subset.nodes.length),
+  });
   dom.focusClear.disabled = false;
 
   // 聚焦只切换子图，沿用预计算 3D 坐标；不在浏览器里重跑力模拟。
@@ -418,7 +465,7 @@ function setFocus(id: string, depth: number): void {
 function clearFocus(): void {
   if (state.focusId === null) return;
   state.focusId = null;
-  dom.focusState.textContent = '未聚焦。单击节点查看，或按“聚焦”。';
+  dom.focusState.textContent = t('filters.focusHint');
   applyThreshold(0);
 }
 
@@ -472,11 +519,11 @@ let currentMatches: string[] = [];
 function buildSearchIndex(model: ViewerModel): void {
   searchRows = model.nodes.map((node) => ({
     id: node.id,
-    label: node.label,
-    kind: node.kind === 'route' ? (node.route?.kind === 'measure' ? '测量' : '路线') : (CATEGORIES[node.cat]?.label ?? node.cat),
+    label: nodeLabel(node),
+    kind: nodeKindLabel(node),
     color: node.color,
     degree: node.degree,
-    haystack: `${node.id} ${node.label}`.toLowerCase(),
+    haystack: `${node.id} ${node.label} ${node.labelZh}`.toLowerCase(),
   }));
 }
 
@@ -536,7 +583,7 @@ function runSearch(raw: string): void {
   searchActive = top.length > 0 ? 0 : -1;
 
   if (top.length === 0) {
-    dom.searchResults.innerHTML = `<p class="search-empty">没有匹配的 id</p>`;
+    dom.searchResults.innerHTML = `<p class="search-empty">${esc(t('search.empty'))}</p>`;
   } else {
     dom.searchResults.innerHTML = top.map(searchResultHtml).join('');
   }
@@ -629,6 +676,12 @@ function wireControls(): void {
 
   dom.detailsClose.addEventListener('click', () => clearSelection());
 
+  dom.langSwitch.addEventListener('click', (event) => {
+    const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-lang]');
+    const lang = button?.dataset.lang;
+    if (lang === 'en' || lang === 'zh') switchLanguage(lang);
+  });
+
   dom.focusBtn.addEventListener('click', () => {
     if (state.render.selectedId !== null) {
       setFocus(state.render.selectedId, state.focusDepth);
@@ -672,7 +725,8 @@ function wireControls(): void {
   dom.filtersToggle.addEventListener('click', () => {
     dom.filters.classList.toggle('is-collapsed');
     const collapsed = dom.filters.classList.contains('is-collapsed');
-    dom.filtersToggle.title = collapsed ? '展开过滤面板' : '收起过滤面板';
+    dom.filtersToggle.title = t(collapsed ? 'filters.expand' : 'filters.collapse');
+    dom.filtersToggle.setAttribute('aria-label', dom.filtersToggle.title);
   });
 
   document.addEventListener('keydown', (event) => {
@@ -702,24 +756,61 @@ function wireControls(): void {
 
 /* ── 启动 ─────────────────────────────────────────────────────────────── */
 
+function syncLangButtons(): void {
+  const lang = getLang();
+  for (const button of dom.langSwitch.querySelectorAll<HTMLButtonElement>('[data-lang]')) {
+    button.classList.toggle('active', button.dataset.lang === lang);
+  }
+}
+
+function switchLanguage(next: Lang): void {
+  if (next === getLang()) return;
+  setLang(next);
+  applyStaticI18n();
+  syncLangButtons();
+  const collapsed = dom.filters.classList.contains('is-collapsed');
+  dom.filtersToggle.title = t(collapsed ? 'filters.expand' : 'filters.collapse');
+  dom.filtersToggle.setAttribute('aria-label', dom.filtersToggle.title);
+  hideSearch();
+  buildFilters(state.model);
+  buildSearchIndex(state.model);
+  applyMeta(state.model);
+  if (state.render.selectedId !== null) renderDetails(state.render.selectedId);
+  else renderOverview();
+  if (state.focusId !== null) {
+    const node = state.model.nodeById.get(state.focusId);
+    if (node !== undefined) {
+      dom.focusState.innerHTML = t('focus.state', {
+        label: esc(nodeLabel(node)),
+        depth: fmtN(state.focusDepth),
+        nodes: fmtN(state.currentNodes.length),
+      });
+    }
+  }
+  updateStatus();
+  state.graph.applyRenderState();
+}
+
 function showFatal(error: unknown): void {
   const message = error instanceof Error ? error.message : String(error);
   dom.loading.classList.add('hidden');
   dom.statusbar.classList.add('is-error');
-  dom.statusText.textContent = '装载失败';
+  dom.statusText.textContent = t('fatal.status');
   dom.detailsKicker.textContent = 'ERROR';
-  dom.detailsBody.innerHTML = `<div class="fatal"><h2>数据未能装载</h2><p>${esc(message)}</p><p class="hint-block">在 <code>viewer/</code> 下运行 <code>pnpm data</code> 生成 <code>public/graph.json</code>，再刷新本页。</p></div>`;
+  dom.detailsBody.innerHTML = `<div class="fatal"><h2>${esc(t('fatal.title'))}</h2><p>${esc(message)}</p><p class="hint-block">${t('fatal.hint')}</p></div>`;
   dom.detailsClose.hidden = true;
 }
 
 async function boot(): Promise<void> {
+  applyStaticI18n();
+  syncLangButtons();
   try {
-    setLoading(8, '读取 graph.json');
+    setLoading(8, t('loading.reading'));
     await frame();
     const model = await loadModel();
     // 旧 graph.json 没有预计算坐标时，先在本地补一次布局，避免页面只有一团平面散点。
     if (model.file.positions === undefined) {
-      setLoading(50, '首次布局（旧 graph.json 没有坐标）');
+      setLoading(50, t('loading.layout'));
       await frame();
       layoutPositions(
         model.nodes as unknown as LayoutNode[],
@@ -730,7 +821,7 @@ async function boot(): Promise<void> {
         model.homePositions.set(node.id, [node.x ?? 0, node.y ?? 0, node.z ?? 0]);
       }
     }
-    setLoading(52, `建立索引 · ${model.nodes.length.toLocaleString('zh-CN')} 个节点`);
+    setLoading(52, t('loading.index', { n: fmtN(model.nodes.length) }));
     await frame();
 
     state = {
@@ -765,18 +856,18 @@ async function boot(): Promise<void> {
     buildFilters(model);
     buildSearchIndex(model);
     renderOverview();
-    setLoading(62, '装配 3D 场景');
+    setLoading(62, t('loading.scene'));
     await frame();
 
     state.graph = initGraph();
     wireControls();
 
-    setLoading(76, '绘制画布');
+    setLoading(76, t('loading.draw'));
     await sleep(60);
     updateStatus();
     setTimeout(() => {
       dom.loading.classList.add('hidden');
-      setLoading(100, '就绪');
+      setLoading(100, t('loading.ready'));
     }, 250);
     setTimeout(() => {
       if (!state.userMoved) fitGraph(600);

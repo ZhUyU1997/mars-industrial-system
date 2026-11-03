@@ -27,7 +27,7 @@ export const LATHE_LEAD_SCREW_ROUTES: readonly Route[] = [
   {
     /** 导程误差：量块段 + 比较仪，每 100 mm 一段、三段累积。 */
     id: 'measure/lathe-lead-screw-pitch',
-    name: '丝杠测量',
+    name: 'Lead Screw Measurement', name_zh: '丝杠测量',
     produces: [
       {
         item: 'lathe/lead-screw',

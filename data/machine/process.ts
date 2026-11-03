@@ -33,7 +33,7 @@ export const FURNACE_PARTS: readonly Item[] = [
   /** 炉壳。钢板卷成筒再焊，承炉衬、承倾转力矩，不承高温。 */
   {
     id: 'plant/melting-furnace/shell',
-    name: '熔炼炉炉壳',
+    name: 'Melting Furnace Shell', name_zh: '熔炼炉炉壳',
     unit: '件',
     category: 'part',
     // 炉壳钢板厚度：3–12 mm 是卷焊筒体的常用档；读数由 measure/furnace-parts 用千分尺交。
@@ -43,7 +43,7 @@ export const FURNACE_PARTS: readonly Item[] = [
   /** 炉衬。耐火打结料捣实，第一次开炉时自己烧结成型。铁水就盛在里面。 */
   {
     id: 'plant/melting-furnace/lining',
-    name: '熔炼炉炉衬',
+    name: 'Melting Furnace Lining', name_zh: '熔炼炉炉衬',
     unit: '件',
     category: 'part',
     // 打结层厚度：80–300 mm（炉容 1–5 t 档）；读数由测厚/高度尺交。
@@ -53,7 +53,7 @@ export const FURNACE_PARTS: readonly Item[] = [
   /** 感应线圈。紫铜管绕成，管内通水冷却 —— 铜的导电与导热同时用上。 */
   {
     id: 'plant/melting-furnace/coil',
-    name: '熔炼炉感应线圈',
+    name: 'Melting Furnace Induction Coil', name_zh: '熔炼炉感应线圈',
     unit: '件',
     category: 'part',
     // 线圈电感/直流电阻：中频感应炉 1 kHz 档的典型窗口；LCR 表可测。
@@ -74,7 +74,7 @@ export const FURNACE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/melting-furnace/coil-cooling',
-    name: '熔炼炉感应圈水冷套',
+    name: 'Melting Furnace Induction Coil Water-Cooled Jacket', name_zh: '熔炼炉感应圈水冷套',
     unit: '件',
     category: 'part',
     // 水套气密性：1e-3 Pa·m³/s 是 0.3–0.6 MPa 保压 30 min 的允许泄漏率上限；
@@ -85,7 +85,7 @@ export const FURNACE_PARTS: readonly Item[] = [
   /** 倾转机构。减速机加扇形齿轮，把炉体倾到倒铁水的角度。 */
   {
     id: 'plant/melting-furnace/tilt-drive',
-    name: '熔炼炉倾转机构',
+    name: 'Melting Furnace Tilting Mechanism', name_zh: '熔炼炉倾转机构',
     unit: '件',
     category: 'part',
     // 倾转减速机回差：倒铁水角度控制 0–10′；分度台 + 自准直/千分表测。
@@ -95,7 +95,7 @@ export const FURNACE_PARTS: readonly Item[] = [
   /** 中频电源。把工频电整成中频，几百赫兹到几千赫兹，是炉子的心脏。 */
   {
     id: 'plant/melting-furnace/psu',
-    name: '熔炼炉中频电源',
+    name: 'Melting Furnace Medium-Frequency Power Supply', name_zh: '熔炼炉中频电源',
     unit: '件',
     category: 'part',
     // 输出电压/纹波：中频电源 10–80 V、纹波 ≤5%；数字表 + 示波器测。
@@ -117,7 +117,7 @@ export const FURNACE_ROUTES: readonly Route[] = [
   {
     /** 水冷套。铝板卷焊成夹套，不锈钢接管，与感应圈同轴装配。 */
     id: 'make/furnace-coil-cooling',
-    name: '熔炼炉感应圈水冷套制造',
+    name: 'Melting Furnace Induction Coil Water-Cooled Jacket Manufacturing', name_zh: '熔炼炉感应圈水冷套制造',
     produces: [{
       item: 'plant/melting-furnace/coil-cooling',
       qty: q(1),
@@ -134,7 +134,7 @@ export const FURNACE_ROUTES: readonly Route[] = [
   {
     /** 炉壳。钢板卷筒 → 焊接 → 法兰加工。 */
     id: 'make/furnace-shell',
-    name: '熔炼炉炉壳制造',
+    name: 'Melting Furnace Shell Manufacturing', name_zh: '熔炼炉炉壳制造',
     produces: [{
       item: 'plant/melting-furnace/shell',
       qty: q(1),
@@ -161,7 +161,7 @@ export const FURNACE_ROUTES: readonly Route[] = [
      * 它只需要一堆料、一双手与一次烘炉。温度条件属于烘炉工艺，不属于制造路线。
      */
     id: 'make/furnace-lining',
-    name: '熔炼炉炉衬制造',
+    name: 'Melting Furnace Lining Manufacturing', name_zh: '熔炼炉炉衬制造',
     produces: [{
       item: 'plant/melting-furnace/lining',
       qty: q(1),
@@ -177,7 +177,7 @@ export const FURNACE_ROUTES: readonly Route[] = [
   {
     /** 感应线圈。紫铜管绕制 → 绝缘包扎 → 水压试验。绕制要绕线机。 */
     id: 'make/furnace-coil',
-    name: '熔炼炉感应线圈制造',
+    name: 'Melting Furnace Induction Coil Manufacturing', name_zh: '熔炼炉感应线圈制造',
     produces: [{
       item: 'plant/melting-furnace/coil',
       qty: q(1),
@@ -193,7 +193,7 @@ export const FURNACE_ROUTES: readonly Route[] = [
   {
     /** 倾转机构。减速机箱体镗孔、齿轮滚齿、蜗杆车制。 */
     id: 'make/furnace-tilt-drive',
-    name: '熔炼炉倾转机构制造',
+    name: 'Melting Furnace Tilting Mechanism Manufacturing', name_zh: '熔炼炉倾转机构制造',
     produces: [{
       item: 'plant/melting-furnace/tilt-drive',
       qty: q(1),
@@ -217,7 +217,7 @@ export const FURNACE_ROUTES: readonly Route[] = [
      * DFS 选 `std/control-board-general`，它不进证明树属预期（PLAN 监控项，不删不塞）。
      */
     id: 'make/furnace-psu',
-    name: '熔炼炉中频电源制造',
+    name: 'Melting Furnace Medium-Frequency Power Supply Manufacturing', name_zh: '熔炼炉中频电源制造',
     produces: [{
       item: 'plant/melting-furnace/psu',
       qty: q(1),
@@ -249,7 +249,7 @@ export const FURNACE_ROUTES: readonly Route[] = [
      * 差别，正来自这里。
      */
     id: 'make/furnace-psu-rotary',
-    name: '熔炼炉中频电源制造',
+    name: 'Melting Furnace Medium-Frequency Power Supply Manufacturing', name_zh: '熔炼炉中频电源制造',
     produces: [{
       item: 'plant/melting-furnace/psu',
       qty: q(1),
@@ -278,19 +278,19 @@ export const FURNACE_ROUTES: readonly Route[] = [
  */
 export const ELECTROLYZER_PARTS: readonly Item[] = [
   /** 槽体。钢板焊成，内衬防腐。承电解液，不导电。 */
-  { id: 'plant/electrolyzer/cell-stack', name: '电解槽槽体', unit: '件', category: 'part' },
+  { id: 'plant/electrolyzer/cell-stack', name: 'Electrolyser Cell Stack', name_zh: '电解槽槽体', unit: '件', category: 'part' },
 
   /** 电极。钢板上镀镍 —— 碱液里铁会溶，镍耐蚀又是析氢的好催化面。 */
-  { id: 'plant/electrolyzer/electrode', name: '电解槽电极', unit: '件', category: 'part' },
+  { id: 'plant/electrolyzer/electrode', name: 'Electrolyser Electrode', name_zh: '电解槽电极', unit: '件', category: 'part' },
 
   /** 隔膜。把氢和氧分开，隔一层多孔膜，否则一混合就是爆炸极限。 */
-  { id: 'plant/electrolyzer/diaphragm', name: '电解槽隔膜', unit: '件', category: 'part' },
+  { id: 'plant/electrolyzer/diaphragm', name: 'Electrolyser Diaphragm', name_zh: '电解槽隔膜', unit: '件', category: 'part' },
 
   /** 整流电源。交流变直流，几千安培的低压大电流 —— 电耗全在这里。 */
-  { id: 'plant/electrolyzer/rectifier', name: '电解槽整流电源', unit: '件', category: 'part' },
+  { id: 'plant/electrolyzer/rectifier', name: 'Electrolyser Rectifier Power Supply', name_zh: '电解槽整流电源', unit: '件', category: 'part' },
 
   /** 气液分离器。氢氧各自带液，要先甩掉碱雾再进储罐。 */
-  { id: 'plant/electrolyzer/gas-separator', name: '电解槽气液分离器', unit: '件', category: 'part' },
+  { id: 'plant/electrolyzer/gas-separator', name: 'Electrolyser Gas-Liquid Separator', name_zh: '电解槽气液分离器', unit: '件', category: 'part' },
 
   /**
    * 冷却盘管。**电解槽是放热的**（水电解、氯碱、过硫酸盐都放），
@@ -299,7 +299,7 @@ export const ELECTROLYZER_PARTS: readonly Item[] = [
    * 盘管浸在电解液里通冷却水。它是这台设备的温度边界本身：**没有它，
    * 前面那些"60–90 °C"的条件一个都维持不住。**
    */
-  { id: 'plant/electrolyzer/cell-cooling', name: '电解槽冷却盘管', unit: '件', category: 'part' },
+  { id: 'plant/electrolyzer/cell-cooling', name: 'Electrolyser Cooling Coil', name_zh: '电解槽冷却盘管', unit: '件', category: 'part' },
 ];
 
 /**
@@ -312,7 +312,7 @@ export const ELECTROLYZER_ROUTES: readonly Route[] = [
   {
     /** 冷却盘管。不锈钢管弯成蛇形，接管穿槽壁，PTFE 垫密封。 */
     id: 'make/electrolyzer-cooling',
-    name: '电解槽冷却盘管制造',
+    name: 'Electrolyser Cooling Coil Manufacturing', name_zh: '电解槽冷却盘管制造',
     produces: [{ item: 'plant/electrolyzer/cell-cooling', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -324,7 +324,7 @@ export const ELECTROLYZER_ROUTES: readonly Route[] = [
   {
     /** 槽体。钢板焊接，内壁衬防腐层。 */
     id: 'make/electrolyzer-cell-stack',
-    name: '电解槽槽体制造',
+    name: 'Electrolyser Cell Stack Manufacturing', name_zh: '电解槽槽体制造',
     produces: [{ item: 'plant/electrolyzer/cell-stack', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: [],
@@ -333,7 +333,7 @@ export const ELECTROLYZER_ROUTES: readonly Route[] = [
   {
     /** 电极。钢板镀镍。 */
     id: 'make/electrolyzer-electrode',
-    name: '电解槽电极制造',
+    name: 'Electrolyser Electrode Manufacturing', name_zh: '电解槽电极制造',
     produces: [{ item: 'plant/electrolyzer/electrode', qty: q(1) }],
     // 电极不是实心镍：**薄钢板 + 镀镍层**。
     // 前面直接写 1 kg 镍，是"假装有电镀" —— 现在真镀了。
@@ -357,7 +357,7 @@ export const ELECTROLYZER_ROUTES: readonly Route[] = [
      * 第一次由"压多少"决定，而不是由"手感"决定。
      */
     id: 'make/electrolyzer-diaphragm',
-    name: '电解槽隔膜制造',
+    name: 'Electrolyser Diaphragm Manufacturing', name_zh: '电解槽隔膜制造',
     produces: [{ item: 'plant/electrolyzer/diaphragm', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/ptfe', qty: q(1) }] }],
     needs: [],
@@ -385,7 +385,7 @@ export const ELECTROLYZER_ROUTES: readonly Route[] = [
      * DFS 选 `std/control-board-general`，它不进证明树属预期（PLAN 监控项，不删不塞）。
      */
     id: 'make/electrolyzer-rectifier',
-    name: '电解槽整流电源制造',
+    name: 'Electrolyser Rectifier Power Supply Manufacturing', name_zh: '电解槽整流电源制造',
     produces: [{ item: 'plant/electrolyzer/rectifier', qty: q(1) }],
     uses: [
       // 功率器件：外购的，或本地做的晶闸管（std/thyristor-general）——
@@ -413,7 +413,7 @@ export const ELECTROLYZER_ROUTES: readonly Route[] = [
      * 要定期修 —— 那 25% 变成热，最后落到辐射板面积上。
      */
     id: 'make/electrolyzer-rectifier-rotary',
-    name: '电解槽整流电源制造',
+    name: 'Electrolyser Rectifier Power Supply Manufacturing', name_zh: '电解槽整流电源制造',
     produces: [{ item: 'plant/electrolyzer/rectifier', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/rectifier-rotary-general', qty: q(1) }] },
@@ -425,7 +425,7 @@ export const ELECTROLYZER_ROUTES: readonly Route[] = [
   {
     /** 气液分离器。钢板卷焊 + 除雾丝网。 */
     id: 'make/electrolyzer-gas-separator',
-    name: '电解槽气液分离器制造',
+    name: 'Electrolyser Gas-Liquid Separator Manufacturing', name_zh: '电解槽气液分离器制造',
     produces: [{ item: 'plant/electrolyzer/gas-separator', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: [],
@@ -446,7 +446,7 @@ export const ELECTROLYZER_ROUTES: readonly Route[] = [
  */
 export const ELECTROLYZER: Item = {
   id: 'plant/electrolyzer',
-  name: '电解槽',
+  name: 'Electrolyser', name_zh: '电解槽',
   unit: '套',
   category: 'machine',
   holds: [
@@ -469,7 +469,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/electrolyzer',
-    name: '电解槽装配',
+    name: 'Electrolyser Assembly', name_zh: '电解槽装配',
     produces: [{
       item: 'plant/electrolyzer',
       qty: q(1),
@@ -489,7 +489,7 @@ export const SEED_ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/melting-furnace',
-    name: '熔炼炉装配',
+    name: 'Melting Furnace Assembly', name_zh: '熔炼炉装配',
     produces: [{
       item: 'plant/melting-furnace',
       qty: q(1),

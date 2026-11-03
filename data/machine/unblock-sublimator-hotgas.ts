@@ -395,7 +395,7 @@ export const UNBLOCK_SUBLIM_ROUTES: readonly Route[] = [
      *     梳齿的 48 间距、锥面 1:10，都是**判据**，量块不加工。
      */
     id: 'make/sublimator-hotgas-cast',
-    name: '升华器热风发生器制造',
+    name: 'Sublimator Hot Gas Generator Manufacturing', name_zh: '升华器热风发生器制造',
     produces: [{ item: 'plant/sublimator/hot-gas', qty: q(1) }],
     uses: [
       /**

@@ -54,7 +54,7 @@ export const BOOTSTRAP_ROUTES: readonly Route[] = [
      * 850–950 °C，氢过量 2 倍（低品位矿要更多气）。
      */
     id: 'make/metallized-regolith',
-    name: '直接还原风化层制备',
+    name: 'Direct Reduced Regolith Production', name_zh: '直接还原风化层制备',
     produces: [
       { item: 'mat/sponge-iron', qty: q(900) },
       { item: 'mat/tailings', qty: q(100) },
@@ -88,7 +88,7 @@ export const BOOTSTRAP_ROUTES: readonly Route[] = [
      *      单列为 `mat/uncalcined-gypsum`（窑尾截留，二水基 85–95 %），回煅烧炉配料
      */
     id: 'make/lime-gypsum',
-    name: '石灰制备',
+    name: 'Lime Production', name_zh: '石灰制备',
     produces: [
       { item: 'mat/lime', qty: q(420) },
       { item: 'mat/so2', qty: q(470) },
@@ -125,7 +125,7 @@ export const BOOTSTRAP_ROUTES: readonly Route[] = [
      * 这条路线是**一切砖砌设备的前置**：还原炉壳、Bosch 壳、电解槽体、窑炉内衬。
      */
     id: 'make/refractory-brick',
-    name: '耐火砖制备',
+    name: 'Refractory Brick Production', name_zh: '耐火砖制备',
     produces: [
       { item: 'mat/refractory', qty: q(800), gives: [
         { param: 'grade', kind: 'enum', oneOf: ['clay'] },
@@ -158,7 +158,7 @@ export const BOOTSTRAP_ROUTES: readonly Route[] = [
      * ⚠️ 降级：纤维直径 15–25 µm（工业岩棉 4–6），脆、扎手、绕包时断头多。
      */
     id: 'make/mineral-wool-kiln',
-    name: '矿棉制备',
+    name: 'Mineral Wool Production', name_zh: '矿棉制备',
     produces: [{ item: 'mat/mineral-wool', qty: q(800) }],
     uses: [{ anyOf: [{ item: 'mars/regolith', qty: q(1000) }] }],
     needs: [],
@@ -180,7 +180,7 @@ export const BOOTSTRAP_ROUTES: readonly Route[] = [
      * 做耐火砖、玻璃、水玻璃够用；做石英坩埚不够（那要 make/quartz-pure）。
      */
     id: 'make/silica-washed',
-    name: '石英砂制备',
+    name: 'Quartz Sand Production', name_zh: '石英砂制备',
     produces: [
       { item: 'mat/silica', qty: q(300), gives: [{ param: 'sio2', kind: 'range', min: 90, max: 98, dir: 'atLeast' }] },
       { item: 'mat/tailings', qty: q(900) },
@@ -211,7 +211,7 @@ export const BOOTSTRAP_ROUTES: readonly Route[] = [
      * 但两百吨土是机器人一铲一铲能挖出来的，而"第一张钢板"不是。
      */
     id: 'make/co2-roast',
-    name: '二氧化碳制备',
+    name: 'Carbon Dioxide Production', name_zh: '二氧化碳制备',
     produces: [
       { item: 'mat/co2', qty: q(5) },
       { item: 'mat/tailings', qty: q(995) },
@@ -242,7 +242,7 @@ export const BOOTSTRAP_ROUTES: readonly Route[] = [
      * 这恰好也是好事（CO 是还原剂），但**不能拿来当纯氢用**（比如硅的还原要纯氢）。
      */
     id: 'make/hydrogen-water-gas',
-    name: '氢制备',
+    name: 'Hydrogen Production', name_zh: '氢制备',
     produces: [{ item: 'mat/hydrogen', qty: q(20), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(120) }] },
@@ -270,7 +270,7 @@ export const BOOTSTRAP_ROUTES: readonly Route[] = [
      * 也就是说：**薄板这一环通了，才轮到那些吃薄板的设备**。
      */
     id: 'make/sheet-steel-forged',
-    name: '钢板制备',
+    name: 'Steel Plate Production', name_zh: '钢板制备',
     produces: [
       { item: 'mat/sheet-steel', qty: q(900) },
       {
@@ -305,7 +305,7 @@ export const BOOTSTRAP_ROUTES: readonly Route[] = [
  * 氧化镁走耐火料或回电解。
      */
     id: 'make/carbon-magnesium',
-    name: '碳制备',
+    name: 'Carbon Production', name_zh: '碳制备',
     produces: [
       { item: 'mat/carbon', qty: q(300), gives: [{ param: 'ash', kind: 'range', min: 2, max: 15 }] },
       { item: 'mat/magnesia', qty: q(1400) },

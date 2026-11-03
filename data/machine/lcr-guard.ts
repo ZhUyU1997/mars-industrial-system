@@ -78,7 +78,7 @@ export const LCR_GUARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/lcr-guard-fixture',
-    name: '保护环夹具',
+    name: 'Guard Ring Fixture', name_zh: '保护环夹具',
     unit: '件',
     category: 'part',
     props: [
@@ -101,7 +101,7 @@ export const LCR_GUARD_ROUTES: readonly Route[] = [
      * 变化 <0.001 pF。
      */
     id: 'make/lcr-guard-fixture',
-    name: '保护环夹具制造',
+    name: 'Guard Ring Fixture Manufacturing', name_zh: '保护环夹具制造',
     produces: [
       {
         item: 'plant/lcr-guard-fixture',
@@ -171,7 +171,7 @@ export const LCR_GUARD_ROUTES: readonly Route[] = [
      *   ④ L/R：L 五点、R 七档；Q 0.1–100。
      */
     id: 'make/lcr-meter-lf-guarded',
-    name: '10 Hz–1 kHz LCR 表制造',
+    name: '10 Hz–1 kHz LCR Meter Manufacturing', name_zh: '10 Hz–1 kHz LCR 表制造',
     produces: [
       {
         item: 'plant/lcr-meter-lf',

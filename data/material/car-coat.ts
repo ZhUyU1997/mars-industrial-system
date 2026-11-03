@@ -36,7 +36,7 @@ export const CAR_COAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/car-resist-coated-wafer',
-    name: 'CAR 涂胶片',
+    name: 'CAR Resist-Coated Wafer', name_zh: 'CAR 涂胶片',
     unit: '片',
     // 按“片”而不是“料”记账：它由硅片（零件）旋涂而来，与 mat/trench-wafer 同一档。
     category: 'part',
@@ -58,7 +58,7 @@ export const CAR_COAT_ROUTES: readonly Route[] = [
      *   ③ `plant/ellipsometer` 读 60–200 nm（0.05 nm 精度，够）
      */
     id: 'make/car-resist-coated-wafer',
-    name: 'CAR 涂胶片制造',
+    name: 'CAR Resist-Coated Wafer Manufacturing', name_zh: 'CAR 涂胶片制造',
     produces: [
       {
         item: 'mat/car-resist-coated-wafer',

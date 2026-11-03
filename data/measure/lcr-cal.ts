@@ -84,7 +84,7 @@ export const LCR_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/lcr-cal-record',
-    name: 'LCR 三频点校准记录',
+    name: 'LCR Three-Frequency Calibration Record', name_zh: 'LCR 三频点校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -115,7 +115,7 @@ export const LCR_CAL_ROUTES: readonly Route[] = [
      * 8 h = 三个频点 × 五段（1 pF、10 pF–100 nF、1 µF、L、R）+ 写记录。
      */
     id: 'measure/lcr-cal',
-    name: 'LCR 三频点校准',
+    name: 'LCR Three-Frequency Calibration', name_zh: 'LCR 三频点校准',
     rate: { hours: q(8) },
     produces: [
       {

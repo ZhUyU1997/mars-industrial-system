@@ -57,30 +57,30 @@ export const CLEAN_ITEMS: readonly Item[] = [
    *
    * 够洗片子，不够做 MOS 的栅氧。
    */
-  { id: 'mat/ultrapure-water', name: '超纯水', unit: 'kg', category: 'material',
+  { id: 'mat/ultrapure-water', name: 'Ultrapure Water', name_zh: '超纯水', unit: 'kg', category: 'material',
     // 1 MΩ·cm = 1 µS/cm；5 MΩ·cm = 0.2；18 MΩ·cm = 0.055。
     props: [{ param: 'conductivity', kind: 'range', min: 0.05, max: 1, unit: 'µS/cm', dir: 'atMost' }] },
 ];
 
 export const CLEAN_PARTS: readonly Item[] = [
   /** 石英蒸馏器。三级串联，每级石英壶 + 石英冷凝管 —— 玻璃会带钠，只能用石英。 */
-  { id: 'plant/water-polisher/still', name: '水抛光机石英蒸馏器', unit: '件', category: 'part' },
+  { id: 'plant/water-polisher/still', name: 'Water Polisher Quartz Still', name_zh: '水抛光机石英蒸馏器', unit: '件', category: 'part' },
 
   /** 微孔过滤器。0.2 µm 的陶瓷或 PTFE 滤芯，装在最后一级之后。 */
-  { id: 'plant/water-polisher/filter', name: '水抛光机微孔过滤器', unit: '件', category: 'part' },
+  { id: 'plant/water-polisher/filter', name: 'Water Polisher Microporous Filter', name_zh: '水抛光机微孔过滤器', unit: '件', category: 'part' },
 
   /** 洁净间（层流罩 + 壁板 + 风淋）。玻璃纤维 HEPA + 风机 + 正压控制。 */
-  { id: 'plant/clean-room/shell', name: '洁净室洁净间', unit: '件', category: 'part' },
+  { id: 'plant/clean-room/shell', name: 'Cleanroom Enclosure', name_zh: '洁净室洁净间', unit: '件', category: 'part' },
 
   /** 风机过滤单元。风机 + HEPA 滤材 + 均流膜，一单元 0.5 m² 出风面。 */
-  { id: 'plant/clean-room/ffu', name: '洁净室风机过滤单元', unit: '件', category: 'part' },
+  { id: 'plant/clean-room/ffu', name: 'Cleanroom Fan Filter Unit', name_zh: '洁净室风机过滤单元', unit: '件', category: 'part' },
 ];
 
 export const CLEAN_ROUTES: readonly Route[] = [
   {
     /** 石英蒸馏器。石英管熔接成壶与冷凝管，三级串联，全 PTFE 接口。 */
     id: 'make/water-still',
-    name: '水抛光机石英蒸馏器制造',
+    name: 'Water Polisher Quartz Still Manufacturing', name_zh: '水抛光机石英蒸馏器制造',
     produces: [{ item: 'plant/water-polisher/still', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/quartz-pure', qty: q(1) }] },
@@ -92,7 +92,7 @@ export const CLEAN_ROUTES: readonly Route[] = [
   {
     /** 微孔过滤器。陶瓷滤芯烧结 + 壳体 + 接管。 */
     id: 'make/water-filter',
-    name: '水抛光机微孔过滤器制造',
+    name: 'Water Polisher Microporous Filter Manufacturing', name_zh: '水抛光机微孔过滤器制造',
     produces: [{ item: 'plant/water-polisher/filter', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/alumina-insulator-general', qty: q(1) }] },
@@ -104,7 +104,7 @@ export const CLEAN_ROUTES: readonly Route[] = [
   {
     /** 洁净间壳体。壁板折弯咬合 + 顶部 FFU 框 + 风淋箱 —— 不用胶，缝里不藏尘。 */
     id: 'make/clean-room-shell',
-    name: '洁净室洁净间制造',
+    name: 'Cleanroom Enclosure Manufacturing', name_zh: '洁净室洁净间制造',
     produces: [{ item: 'plant/clean-room/shell', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/aluminium', qty: q(1) }] },
@@ -116,7 +116,7 @@ export const CLEAN_ROUTES: readonly Route[] = [
   {
     /** 风机过滤单元。风机 + 玻璃纤维 HEPA 滤材 + 均流膜（PTFE 多孔膜）。 */
     id: 'make/clean-room-ffu',
-    name: '洁净室风机过滤单元制造',
+    name: 'Cleanroom Fan Filter Unit Manufacturing', name_zh: '洁净室风机过滤单元制造',
     produces: [{ item: 'plant/clean-room/ffu', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/mineral-wool', qty: q(1) }] },
@@ -133,7 +133,7 @@ export const CLEAN_ROUTES: readonly Route[] = [
      *   水 1000 → 超纯水 800（每级留 1/3 的残液）
      */
     id: 'make/ultrapure-water',
-    name: '超纯水制备',
+    name: 'Ultrapure Water Production', name_zh: '超纯水制备',
     produces: [
       { item: 'mat/ultrapure-water', qty: q(800), gives: [{ param: 'conductivity', kind: 'range', min: 0.2, max: 1, dir: 'atMost' }] },
       { item: 'mat/water', qty: q(200), gives: [{ param: 'conductivity', kind: 'range', min: 500, max: 1000 }] },
@@ -157,7 +157,7 @@ export const CLEAN_ROUTES: readonly Route[] = [
      * 不是替代它们。**顺序是：蒸馏 → 过滤 → 离子交换。**
      */
     id: 'make/ultrapure-water-resin',
-    name: '超纯水制备',
+    name: 'Ultrapure Water Production', name_zh: '超纯水制备',
     produces: [{ item: 'mat/ultrapure-water', qty: q(950), gives: [{ param: 'conductivity', kind: 'range', min: 0.05, max: 0.1, dir: 'atMost' }] }],
     uses: [
       { anyOf: [{ item: 'mat/water', qty: q(1000) }] },
@@ -182,7 +182,7 @@ export const CLEAN_ROUTES: readonly Route[] = [
      * `isoClass ≥5` 永远判 kept —— 这不是 need 太严，是交付没有落点。
      */
     id: 'make/clean-room',
-    name: '洁净室制造',
+    name: 'Cleanroom Manufacturing', name_zh: '洁净室制造',
     produces: [
       {
         item: 'plant/clean-room',
@@ -228,7 +228,7 @@ export const CLEAN_ROUTES: readonly Route[] = [
  */
 export const WATER_POLISHER: Item = {
   id: 'plant/water-polisher',
-  name: '水抛光机',
+  name: 'Water Polisher', name_zh: '水抛光机',
   unit: '套',
   category: 'machine',
   holds: [{ param: 'pressure', min: 100, max: 500 }],
@@ -265,7 +265,7 @@ export const WATER_POLISHER: Item = {
  */
 export const CLEAN_ROOM: Item = {
   id: 'plant/clean-room',
-  name: '洁净室',
+  name: 'Cleanroom', name_zh: '洁净室',
   unit: '间',
   category: 'machine',
   props: [
@@ -288,7 +288,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/water-polisher',
-    name: '水抛光机装配',
+    name: 'Water Polisher Assembly', name_zh: '水抛光机装配',
     produces: [{
       item: 'plant/water-polisher',
       qty: q(1),

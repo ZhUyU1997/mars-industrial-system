@@ -53,7 +53,7 @@ export const BOARD_ITEMS: readonly Item[] = [
    * 规格写"一档"：板子的功能由接线决定，同一块坯板能接成放大器、比较器或触发器 ——
    * 与"电机只造 7.5 kW 一种"同理，备件统一比逐台匹配要紧。
    */
-  { id: 'std/control-board-discrete', name: '分立元件控制板', unit: '件', category: 'part' },
+  { id: 'std/control-board-discrete', name: 'Discrete Component Control Board', name_zh: '分立元件控制板', unit: '件', category: 'part' },
 ];
 
 export const BOARD_ROUTES: readonly Route[] = [
@@ -68,7 +68,7 @@ export const BOARD_ROUTES: readonly Route[] = [
      * 调试要一格一格地对 —— **这块板子的成本几乎全是人工。**
      */
     id: 'make/control-board-discrete',
-    name: '分立元件控制板制造',
+    name: 'Discrete Component Control Board Manufacturing', name_zh: '分立元件控制板制造',
     produces: [{ item: 'std/control-board-discrete', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/alumina-insulator-general', qty: q(1) }] },
@@ -113,7 +113,7 @@ export const BOARD_ROUTES: readonly Route[] = [
      * 接线靠锡焊 —— 见 R8 ①。
      */
     id: 'make/control-board-general',
-    name: '控制板制造',
+    name: 'Control Board Manufacturing', name_zh: '控制板制造',
     produces: [{ item: 'std/control-board-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/multilayer-pcb', qty: q(1) }] },

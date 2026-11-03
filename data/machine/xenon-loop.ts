@@ -318,7 +318,7 @@ export const XENON_LOOP_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/xenon-exhaust',
-    name: '光源排出气',
+    name: 'Light Source Exhaust Gas', name_zh: '光源排出气',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'xeFraction', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }],
@@ -346,7 +346,7 @@ export const XENON_LOOP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-loop',
-    name: '氙回收机组',
+    name: 'Xenon Recovery Unit', name_zh: '氙回收机组',
     unit: '台',
     category: 'machine',
     holds: [
@@ -382,7 +382,7 @@ export const XENON_LOOP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-loop/vessel',
-    name: '氙回收机组回路筒体',
+    name: 'Xenon Recovery Unit Loop Vessel', name_zh: '氙回收机组回路筒体',
     unit: '件',
     category: 'part',
     props: [
@@ -403,7 +403,7 @@ export const XENON_LOOP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-loop/flange-set',
-    name: '刀口法兰与无氧铜垫',
+    name: 'Knife-Edge Flange and Oxygen-Free Copper Gasket', name_zh: '刀口法兰与无氧铜垫',
     unit: '套',
     category: 'part',
     props: [
@@ -429,7 +429,7 @@ export const XENON_LOOP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-loop/separator',
-    name: '氙回收机组分离芯',
+    name: 'Xenon Recovery Unit Separator Core', name_zh: '氙回收机组分离芯',
     unit: '件',
     category: 'part',
     props: [
@@ -453,7 +453,7 @@ export const XENON_LOOP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-loop/dewar',
-    name: '液氮杜瓦',
+    name: 'Liquid Nitrogen Dewar', name_zh: '液氮杜瓦',
     unit: '件',
     category: 'part',
     props: [
@@ -476,7 +476,7 @@ export const XENON_LOOP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-loop/receiver',
-    name: '氙回收机组回气罐',
+    name: 'Xenon Recovery Unit Return Gas Tank', name_zh: '氙回收机组回气罐',
     unit: '件',
     category: 'part',
     props: [
@@ -498,7 +498,7 @@ export const XENON_LOOP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/xenon-loop/orifice',
-    name: '氙回收机组回腔定流组件',
+    name: 'Xenon Recovery Unit Return Cavity Constant-Flow Assembly', name_zh: '氙回收机组回腔定流组件',
     unit: '件',
     category: 'part',
     props: [
@@ -531,7 +531,7 @@ export const XENON_LOOP_ROUTES: readonly Route[] = [
      * 因为它看得见（用 0.02 塞尺与量块比刃口高度）。
      */
     id: 'make/xenon-loop-vessel',
-    name: '氙回收机组回路筒体制造',
+    name: 'Xenon Recovery Unit Loop Vessel Manufacturing', name_zh: '氙回收机组回路筒体制造',
     produces: [
       {
         item: 'plant/xenon-loop/vessel',
@@ -586,7 +586,7 @@ export const XENON_LOOP_ROUTES: readonly Route[] = [
      * 而不是"铜里没有氧" —— 因为本层测不了铜里的氧。
      */
     id: 'make/xenon-loop-flange-set',
-    name: '刀口法兰与无氧铜垫制造',
+    name: 'Knife-Edge Flange and Oxygen-Free Copper Gasket Manufacturing', name_zh: '刀口法兰与无氧铜垫制造',
     produces: [
       {
         item: 'plant/xenon-loop/flange-set',
@@ -646,7 +646,7 @@ export const XENON_LOOP_ROUTES: readonly Route[] = [
      *   **这不是偷懒，是本层没有能证 0.1 % 的尺子**（文件头一节⑤）。
      */
     id: 'make/xenon-loop-separator',
-    name: '氙回收机组分离芯制造',
+    name: 'Xenon Recovery Unit Separator Core Manufacturing', name_zh: '氙回收机组分离芯制造',
     produces: [
       {
         item: 'plant/xenon-loop/separator',
@@ -706,7 +706,7 @@ export const XENON_LOOP_ROUTES: readonly Route[] = [
      * 只能量液位），够判"≤10 W 还是 14 W"—— 够，因为这两档差 4 W。
      */
     id: 'make/xenon-loop-dewar',
-    name: '液氮杜瓦制造',
+    name: 'Liquid Nitrogen Dewar Manufacturing', name_zh: '液氮杜瓦制造',
     produces: [
       {
         item: 'plant/xenon-loop/dewar',
@@ -751,7 +751,7 @@ export const XENON_LOOP_ROUTES: readonly Route[] = [
      * 而缓冲的代价是破空损失按体积走 —— 所以它故意做小。
      */
     id: 'make/xenon-loop-receiver',
-    name: '氙回收机组回气罐制造',
+    name: 'Xenon Recovery Unit Return Gas Tank Manufacturing', name_zh: '氙回收机组回气罐制造',
     produces: [
       {
         item: 'plant/xenon-loop/receiver',
@@ -797,7 +797,7 @@ export const XENON_LOOP_ROUTES: readonly Route[] = [
      * 重复性 ±5 % —— 这个数就是"本层的 MFC"（文件头一节⑤）。
      */
     id: 'make/xenon-loop-orifice',
-    name: '氙回收机组回腔定流组件制造',
+    name: 'Xenon Recovery Unit Return Cavity Constant-Flow Assembly Manufacturing', name_zh: '氙回收机组回腔定流组件制造',
     produces: [
       {
         item: 'plant/xenon-loop/orifice',
@@ -871,7 +871,7 @@ export const XENON_LOOP_ROUTES: readonly Route[] = [
      *   氙分压是 300 Pa（600 Pa 的 50 %），而那正是"77 K 下 99.92 %"的分母。
      */
     id: 'make/xenon-exhaust',
-    name: '抽制备',
+    name: 'Xenon Production from Exhaust Gas', name_zh: '抽制备',
     produces: [
       {
         item: 'mat/xenon-exhaust',
@@ -962,7 +962,7 @@ export const XENON_LOOP_ROUTES: readonly Route[] = [
      *      乱掉的压力只会表现成"这炉片子不对"。
      */
     id: 'make/xenon-recover-cold',
-    name: '氙制备',
+    name: 'Xenon Production', name_zh: '氙制备',
     produces: [
       {
         item: 'mat/xenon',
@@ -1053,7 +1053,7 @@ export const XENON_LOOP_ROUTES: readonly Route[] = [
      *   若将来有了氧分析仪（或换炭的日历维护被认可），这条路线是**更好的那条**。
      */
     id: 'make/xenon-recover-adsorb',
-    name: '氙制备',
+    name: 'Xenon Production', name_zh: '氙制备',
     produces: [
       {
         item: 'mat/xenon',
@@ -1119,7 +1119,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/xenon-loop',
-    name: '氙回收机组装配',
+    name: 'Xenon Recovery Unit Assembly', name_zh: '氙回收机组装配',
     produces: [{
       item: 'plant/xenon-loop',
       qty: q(1),

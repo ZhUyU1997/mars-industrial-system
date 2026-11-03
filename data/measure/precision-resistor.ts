@@ -30,7 +30,7 @@ export const PRECISION_RESISTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/precision-resistor-oil-record',
-    name: '油浸精密电阻的 accuracy / TCR 记录',
+    name: 'Oil-Immersed Precision Resistor Accuracy/TCR Record', name_zh: '油浸精密电阻的 accuracy / TCR 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -52,7 +52,7 @@ export const PRECISION_RESISTOR_ROUTES: readonly Route[] = [
      * 100 ppm 是本条的底；油槽 10 K 跨度只够测 10 K 段的斜率。
      */
     id: 'measure/precision-resistor-oil-accuracy',
-    name: '油浸精密电阻的 accuracy / TCR 测量',
+    name: 'Oil-Immersed Precision Resistor Accuracy/TCR Measurement', name_zh: '油浸精密电阻的 accuracy / TCR 测量',
     produces: [
       {
         item: 'mat/precision-resistor-oil-record',

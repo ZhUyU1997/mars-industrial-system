@@ -32,7 +32,7 @@ export const MEASUREMENT_LOCAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/standard-capacitor-local',
-    name: '本地 100 pF 标准电容',
+    name: 'Local 100 pF Standard Capacitor', name_zh: '本地 100 pF 标准电容',
     unit: '件',
     category: 'part',
     props: [
@@ -47,7 +47,7 @@ export const MEASUREMENT_LOCAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/standard-resistor-local',
-    name: '本地 10 kΩ / 1 MΩ 标准电阻',
+    name: 'Local 10 kΩ / 1 MΩ Standard Resistor', name_zh: '本地 10 kΩ / 1 MΩ 标准电阻',
     unit: '件',
     category: 'part',
     props: [
@@ -66,7 +66,7 @@ export const MEASUREMENT_LOCAL_ROUTES: readonly Route[] = [
      *   铝 2 + PTFE 0.2 + 铜 0.1 → 标准电容 1
      */
     id: 'make/standard-capacitor-local',
-    name: '本地 100 pF 标准电容制造',
+    name: 'Local 100 pF Standard Capacitor Manufacturing', name_zh: '本地 100 pF 标准电容制造',
     produces: [
       {
         item: 'plant/hv-test-bench/standard-capacitor-local',
@@ -96,7 +96,7 @@ export const MEASUREMENT_LOCAL_ROUTES: readonly Route[] = [
      *   电阻丝 0.05 + 氧化铝 0.2 + 铜 0.05 → 标准电阻 1
      */
     id: 'make/standard-resistor-local',
-    name: '本地 10 kΩ / 1 MΩ 标准电阻制造',
+    name: 'Local 10 kΩ / 1 MΩ Standard Resistor Manufacturing', name_zh: '本地 10 kΩ / 1 MΩ 标准电阻制造',
     produces: [
       {
         item: 'plant/hv-test-bench/standard-resistor-local',
@@ -141,7 +141,7 @@ export const MEASUREMENT_LOCAL_ROUTES: readonly Route[] = [
      * 本层没有 tanδ 测量 —— 缺口，不写数。
      */
     id: 'make/standard-capacitor-100pf-pair',
-    name: '100 pF 标准电容对装配',
+    name: '100 pF Standard Capacitor Pair Assembly', name_zh: '100 pF 标准电容对装配',
     produces: [
       {
         item: 'plant/hv-test-bench/standard-capacitor-100pf',
@@ -218,7 +218,7 @@ export const MEASUREMENT_LOCAL_ROUTES: readonly Route[] = [
      * “本地可造”补上，不把溯源闭环补上。
      */
     id: 'make/pd-calibrator-reference',
-    name: 'pC 校准器基准对装配',
+    name: 'pC Calibrator Reference Pair Assembly', name_zh: 'pC 校准器基准对装配',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-calibrator-reference',

@@ -57,7 +57,7 @@ export const LEVELER_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/methylamine-crude',
-    name: '混合甲胺',
+    name: 'Mixed Methylamine', name_zh: '混合甲胺',
     unit: 'kg',
     category: 'material',
     props: [
@@ -74,7 +74,7 @@ export const LEVELER_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/methylamine',
-    name: '一甲胺',
+    name: 'Methylamine', name_zh: '一甲胺',
     unit: 'kg',
     category: 'material',
     props: [
@@ -88,7 +88,7 @@ export const LEVELER_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/dimethylamine',
-    name: '二甲胺',
+    name: 'Dimethylamine', name_zh: '二甲胺',
     unit: 'kg',
     category: 'material',
     props: [
@@ -105,7 +105,7 @@ export const LEVELER_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/leveler-jgb',
-    name: '季铵盐整平剂 JGB',
+    name: 'Quaternary Ammonium Leveler JGB', name_zh: '季铵盐整平剂 JGB',
     unit: 'kg',
     category: 'material',
     props: [
@@ -123,7 +123,7 @@ export const LEVELER_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/superfill-bath-3',
-    name: '三组分超填充镀液',
+    name: '3-Component Superfilling Bath', name_zh: '三组分超填充镀液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -147,7 +147,7 @@ export const LEVELER_ROUTES: readonly Route[] = [
      * 循环量与分离损失不进 uses。MMA/DMA/TMA 都出，不假装选择性。
      */
     id: 'make/methylamine',
-    name: '甲胺化制备',
+    name: 'Methylamination Production', name_zh: '甲胺化制备',
     produces: [
       {
         item: 'mat/methylamine-crude',
@@ -211,7 +211,7 @@ export const LEVELER_ROUTES: readonly Route[] = [
      * purity 95–99 % 是设计窗口，不是实测；DMA/TMA 是副产，不保证各自纯度。
      */
     id: 'make/methylamine-separation',
-    name: '精馏切 MMA / DMA / TMA 制备',
+    name: 'MMA / DMA / TMA Rectification Cut Production', name_zh: '精馏切 MMA / DMA / TMA 制备',
     produces: [
       {
         item: 'mat/methylamine',
@@ -261,7 +261,7 @@ export const LEVELER_ROUTES: readonly Route[] = [
      * 都是设计窗口。氯甲烷过量 5–10 % 压游离胺，未反应的进尾气/回收（未计）。
      */
     id: 'make/leveler-jgb',
-    name: '季铵化制备',
+    name: 'Quaternization Production', name_zh: '季铵化制备',
     produces: [
       {
         item: 'mat/leveler-jgb',
@@ -297,7 +297,7 @@ export const LEVELER_ROUTES: readonly Route[] = [
      * 照工业窗口。混合是物理过程，没有反应；2 h 是配液/循环/过滤。
      */
     id: 'make/superfill-bath-3',
-    name: '三组分 bath 制备',
+    name: '3-Component Bath Production', name_zh: '三组分 bath 制备',
     produces: [
       {
         item: 'mat/superfill-bath-3',

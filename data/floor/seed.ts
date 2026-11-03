@@ -200,7 +200,7 @@ export const SEED: Description = {
      */
     {
       id: 'plant/robot',
-      name: '机器人',
+      name: 'Robot', name_zh: '机器人',
     // 2026 具身机器人：算力 100–275 TOPS（NPU 7–12 nm）、关节 MCU 与相机 40 nm、
     // 传感器 ASIC 0.13–0.5 µm。**整机不设 node**：node 是单片的规格，整机的电子件
     // 等级由零件表里的 NPU / 控制器 CPU / 相机分别给；本层控制柜 CPU 到 0.13 µm、
@@ -285,7 +285,7 @@ export const SEED: Description = {
      */
     {
       id: 'lathe',
-      name: '精密车床',
+      name: 'Precision Lathe', name_zh: '精密车床',
       unit: '台',
       category: 'machine',
       // 精度：四个数**全部来自测量路线**（data/measure/lathe-*.ts），不是设计值。
@@ -348,7 +348,7 @@ export const SEED: Description = {
      */
     {
       id: 'plant/grinder',
-      name: '磨床',
+      name: 'Grinder', name_zh: '磨床',
       unit: '套',
       category: 'machine',
       // 三项精度，全部来自测量路线（data/measure/grinder-*.ts）。
@@ -393,7 +393,7 @@ export const SEED: Description = {
      */
     {
       id: 'plant/melting-furnace',
-      name: '熔炼炉',
+      name: 'Melting Furnace', name_zh: '熔炼炉',
       unit: '台',
       category: 'machine',
       // 三项工况，全部来自测量路线（data/measure/furnace-*.ts）。
@@ -454,7 +454,7 @@ export const SEED: Description = {
      */
     {
       id: 'plant/gauge-block',
-      name: '量块',
+      name: 'Gauge Block', name_zh: '量块',
       unit: '套',
       category: 'part',
       // 套的精度：工作量块档 ±1.015 um（1 级）。**这是唯一一个自己量自己的种子**：
@@ -549,7 +549,7 @@ export const SEED: Description = {
      * 现在缺的是 40 nm CAR（本层 80–200 nm）与 E≥5 GPa 的低 k 介质，不是后道整体。
      * 两件事分开记，不再把 3–5 µm 交付叫 40 nm。
      */
-    { id: 'std/control-board-general', name: '控制板', unit: '件', category: 'part' },
+    { id: 'std/control-board-general', name: 'Control Board', name_zh: '控制板', unit: '件', category: 'part' },
 
 
     /**
@@ -577,7 +577,7 @@ export const SEED: Description = {
      */
     {
       id: 'mat/zsm-5-seed',
-      name: 'ZSM-5 晶种',
+      name: 'ZSM-5 Seed Crystal', name_zh: 'ZSM-5 晶种',
       unit: 'kg',
       category: 'material',
       props: [
@@ -649,7 +649,7 @@ export const SEED: Description = {
      */
     {
       id: 'plant/hv-test-bench',
-      name: '高压器件测试台',
+      name: 'High-Voltage Device Test Bench', name_zh: '高压器件测试台',
       unit: '台',
       category: 'machine',
       props: [

@@ -132,7 +132,7 @@ export const AFM_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tip-radius-afm-record',
-    name: '压头针尖半径的 AFM 记录',
+    name: 'AFM Indenter Tip Radius Record', name_zh: '压头针尖半径的 AFM 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -155,7 +155,7 @@ export const AFM_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/step-height-afm-record',
-    name: '台阶高度的 AFM 记录',
+    name: 'AFM Step Height Record', name_zh: '台阶高度的 AFM 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -198,7 +198,7 @@ export const AFM_MEASURE_ROUTES: readonly Route[] = [
      * 作粗交叉检查：两条差 >3 倍 ⇒ 重装/重扫。
      */
     id: 'measure/tip-radius-afm',
-    name: '压头针尖半径的 AFM 测量',
+    name: 'AFM Indenter Tip Radius Measurement', name_zh: '压头针尖半径的 AFM 测量',
     produces: [
       {
         item: 'mat/tip-radius-afm-record',
@@ -264,7 +264,7 @@ export const AFM_MEASURE_ROUTES: readonly Route[] = [
      * 本路线只对 1/10 nm 两点负责，其余段没有标准件（D8）。
      */
     id: 'measure/step-height-afm',
-    name: '台阶高度的 AFM 测量',
+    name: 'AFM Step Height Measurement', name_zh: '台阶高度的 AFM 测量',
     produces: [
       {
         item: 'mat/step-height-afm-record',

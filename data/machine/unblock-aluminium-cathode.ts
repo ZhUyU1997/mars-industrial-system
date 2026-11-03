@@ -360,7 +360,7 @@ export const UNBLOCK_AL_CELL_CATHODE_ROUTES: readonly Route[] = [
      * 这条路线**不用** plant/brick-kiln。
      */
     id: 'make/aluminium-cathode-brick',
-    name: '铝电解槽阴极碳块制造',
+    name: 'Aluminium Electrolysis Cell Cathode Carbon Block Manufacturing', name_zh: '铝电解槽阴极碳块制造',
     produces: [{ item: 'plant/aluminium-cell/cathode', qty: q(1) }],
     uses: [
       /**

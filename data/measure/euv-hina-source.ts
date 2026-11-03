@@ -17,7 +17,7 @@ export const EUV_HINA_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/source-spectrum-record',
-    name: '源光谱/etendue 记录',
+    name: 'Source Spectrum/Etendue Record', name_zh: '源光谱/etendue 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -34,7 +34,7 @@ export const EUV_HINA_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/droplet-record',
-    name: '液滴尺寸/速度记录',
+    name: 'Droplet Size/Velocity Record', name_zh: '液滴尺寸/速度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -52,7 +52,7 @@ export const EUV_HINA_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/debris-lifetime-record',
-    name: '碎屑寿命记录',
+    name: 'Debris Lifetime Record', name_zh: '碎屑寿命记录',
     unit: '份',
     category: 'part',
     props: [
@@ -68,7 +68,7 @@ export const EUV_HINA_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/laser-focus-record',
-    name: '激光聚焦/指向记录',
+    name: 'Laser Focusing / Pointing Record', name_zh: '激光聚焦/指向记录',
     unit: '份',
     category: 'part',
     props: [
@@ -85,7 +85,7 @@ export const EUV_HINA_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/laser-power-record',
-    name: '激光功率记录',
+    name: 'Laser Power Record', name_zh: '激光功率记录',
     unit: '份',
     category: 'part',
     props: [
@@ -105,7 +105,7 @@ export const EUV_HINA_SOURCE_ROUTES: readonly Route[] = [
      * `etendue 0–10 mm²·sr`、`points 10`；不是 250 W 的“已测”读数。
      */
     id: 'measure/source-spectrum',
-    name: '源光谱/etendue 测量',
+    name: 'Source Spectrum/Etendue Measurement', name_zh: '源光谱/etendue 测量',
     produces: [
       {
         item: 'mat/source-spectrum-record',
@@ -148,7 +148,7 @@ export const EUV_HINA_SOURCE_ROUTES: readonly Route[] = [
      * `jitter 2–20 ns`、`points 10`；不是 18–20 µm 的读数。
      */
     id: 'measure/droplet-size-velocity',
-    name: '液滴尺寸/速度测量',
+    name: 'Droplet Size/Velocity Measurement', name_zh: '液滴尺寸/速度测量',
     produces: [
       {
         item: 'mat/droplet-record',
@@ -194,7 +194,7 @@ export const EUV_HINA_SOURCE_ROUTES: readonly Route[] = [
      * 反射率点，且每次测量前收集镜回到同一温度。
      */
     id: 'measure/debris-lifetime',
-    name: '碎屑寿命测量',
+    name: 'Debris Lifetime Measurement', name_zh: '碎屑寿命测量',
     produces: [
       {
         item: 'mat/debris-lifetime-record',
@@ -241,7 +241,7 @@ export const EUV_HINA_SOURCE_ROUTES: readonly Route[] = [
      * `power 0–30000 W`、`points 10`；不是 20 kW/20 µm 的已测读数。
      */
     id: 'measure/laser-focus',
-    name: '激光聚焦/指向测量',
+    name: 'Laser Focusing / Pointing Measurement', name_zh: '激光聚焦/指向测量',
     produces: [
       {
         item: 'mat/laser-focus-record',
@@ -282,7 +282,7 @@ export const EUV_HINA_SOURCE_ROUTES: readonly Route[] = [
      * 不是 20 kW 的已测读数。
      */
     id: 'measure/laser-power',
-    name: '激光功率测量',
+    name: 'Laser Power Measurement', name_zh: '激光功率测量',
     produces: [
       {
         item: 'mat/laser-power-record',

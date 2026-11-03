@@ -366,7 +366,7 @@ export const UNBLOCK_PROC_CTRL_ROUTES: readonly Route[] = [
      *    间隙大了棒会晃（晃 0.02 mm = 16 K）
      */
     id: 'make/process-controller-mech',
-    name: '机械式过程控制器制造',
+    name: 'Mechanical Process Controller Manufacturing', name_zh: '机械式过程控制器制造',
     produces: [{ item: 'std/process-controller-general', qty: q(1) }],
     uses: [
       /**

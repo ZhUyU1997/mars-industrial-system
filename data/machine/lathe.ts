@@ -69,7 +69,7 @@ export const LATHE_PARTS: readonly Item[] = [
      */
     {
       id: 'lathe/base',
-      name: '精密车床床身',
+      name: 'Precision Lathe Bed', name_zh: '精密车床床身',
       unit: '件',
       mass: q(780),
       category: 'part',
@@ -93,7 +93,7 @@ export const LATHE_PARTS: readonly Item[] = [
      */
     {
       id: 'lathe/headstock',
-      name: '精密车床主轴箱',
+      name: 'Precision Lathe Headstock', name_zh: '精密车床主轴箱',
       unit: '件',
       mass: q(210),
       category: 'part',
@@ -116,7 +116,7 @@ export const LATHE_PARTS: readonly Item[] = [
      */
     {
       id: 'lathe/spindle',
-      name: '精密车床主轴',
+      name: 'Precision Lathe Spindle', name_zh: '精密车床主轴',
       unit: '件',
       mass: q(42),
       category: 'part',
@@ -136,7 +136,7 @@ export const LATHE_PARTS: readonly Item[] = [
      */
     {
       id: 'lathe/tailstock',
-      name: '精密车床尾座',
+      name: 'Precision Lathe Tailstock', name_zh: '精密车床尾座',
       unit: '件',
       mass: q(85),
       category: 'part',
@@ -155,7 +155,7 @@ export const LATHE_PARTS: readonly Item[] = [
      */
     {
       id: 'lathe/carriage',
-      name: '精密车床溜板',
+      name: 'Precision Lathe Carriage', name_zh: '精密车床溜板',
       unit: '件',
       mass: q(110),
       category: 'part',
@@ -174,7 +174,7 @@ export const LATHE_PARTS: readonly Item[] = [
      */
     {
       id: 'lathe/tool-post',
-      name: '精密车床刀架',
+      name: 'Precision Lathe Tool Post', name_zh: '精密车床刀架',
       unit: '件',
       mass: q(38),
       category: 'part',
@@ -193,7 +193,7 @@ export const LATHE_PARTS: readonly Item[] = [
      */
     {
     id: 'lathe/lead-screw',
-    name: '精密车床丝杠',
+    name: 'Precision Lathe Lead Screw', name_zh: '精密车床丝杠',
     unit: '件',
     mass: q(22),
     category: 'part',
@@ -211,7 +211,7 @@ export const LATHE_PARTS: readonly Item[] = [
      */
     {
       id: 'lathe/feed-gearbox',
-      name: '精密车床进给箱',
+      name: 'Precision Lathe Feed Box', name_zh: '精密车床进给箱',
       unit: '件',
       mass: q(65),
       category: 'part',
@@ -230,7 +230,7 @@ export const LATHE_PARTS: readonly Item[] = [
      */
     {
       id: 'lathe/guard',
-      name: '精密车床防护罩',
+      name: 'Precision Lathe Guard', name_zh: '精密车床防护罩',
       unit: '件',
       mass: q(25),
       category: 'part',
@@ -256,19 +256,19 @@ export const LATHE_SUPPLIES: readonly Item[] = [
   // ═══ 材料 ═══
 
   /** HT300 灰铸铁。床身与主轴箱 —— 含碳量高、片状石墨吸振，机床底座的传统材料。 */
-  { id: 'mat/iron-ht300', name: 'HT300 灰铸铁', unit: 'kg', category: 'material' },
+  { id: 'mat/iron-ht300', name: 'HT300 Gray Cast Iron', name_zh: 'HT300 灰铸铁', unit: 'kg', category: 'material' },
   /** HT250 灰铸铁。尾座与溜板，强度要求低一档。 */
-  { id: 'mat/iron-ht250', name: 'HT250 灰铸铁', unit: 'kg', category: 'material' },
+  { id: 'mat/iron-ht250', name: 'HT250 Gray Cast Iron', name_zh: 'HT250 灰铸铁', unit: 'kg', category: 'material' },
   /** HT200 灰铸铁。进给箱箱体，主要承箱，不承切削力。 */
-  { id: 'mat/iron-ht200', name: 'HT200 灰铸铁', unit: 'kg', category: 'material' },
+  { id: 'mat/iron-ht200', name: 'HT200 Gray Cast Iron', name_zh: 'HT200 灰铸铁', unit: 'kg', category: 'material' },
   /** 40Cr 合金结构钢。主轴用，调质后综合力学性能好，可表面淬火。 */
-  { id: 'mat/steel-40cr', name: '40Cr 合金结构钢', unit: 'kg', category: 'material',
+  { id: 'mat/steel-40cr', name: '40Cr Alloy Structural Steel', name_zh: '40Cr 合金结构钢', unit: 'kg', category: 'material',
     props: [{ param: 'hardness', kind: 'range', min: 180, max: 350, unit: 'HB' }, { param: 'temper', kind: 'enum', values: ['as-rolled', 'normalized', 'quenched', 'tempered'] }] },
   /** 45 号优质碳素结构钢。刀架、丝杠这类要淬硬又要韧的件。 */
-  { id: 'mat/steel-45', name: '45 号优质碳素结构钢', unit: 'kg', category: 'material',
+  { id: 'mat/steel-45', name: '45 High-Quality Carbon Structural Steel', name_zh: '45 号优质碳素结构钢', unit: 'kg', category: 'material',
     props: [{ param: 'hardness', kind: 'range', min: 150, max: 300, unit: 'HB' }, { param: 'temper', kind: 'enum', values: ['as-rolled', 'normalized', 'quenched', 'tempered'] }] },
   /** 冷轧薄钢板。防护罩、护板。 */
-  { id: 'mat/sheet-steel', name: '冷轧薄钢板', unit: 'kg', category: 'material' },
+  { id: 'mat/sheet-steel', name: 'Cold-Rolled Steel Sheet', name_zh: '冷轧薄钢板', unit: 'kg', category: 'material' },
 
   // ═══ 设备 —— 第二台车床要造它们，而种子里没有 ═══
   // （熔炼炉不在这里了：它是种子 —— 第一台必须运来，见 data/floor/seed.ts）
@@ -283,7 +283,7 @@ export const LATHE_SUPPLIES: readonly Item[] = [
    */
   {
     id: 'plant/milling-machine',
-    name: '铣镗床',
+    name: 'Milling and Boring Machine', name_zh: '铣镗床',
     unit: '台',
     category: 'machine',
     composedOf: [...MILL_PARTS.map((p) => ({ item: p.id, qty: q(1) })), { item: 'std/motor-7.5kw-4p', qty: q(1) }],
@@ -299,7 +299,7 @@ export const LATHE_SUPPLIES: readonly Item[] = [
    */
   {
     id: 'plant/sheet-shop',
-    name: '钣金与焊接工位',
+    name: 'Sheet Metal and Welding Workstation', name_zh: '钣金与焊接工位',
     unit: '套',
     category: 'machine',
     composedOf: [...SHEET_PARTS.map((p) => ({ item: p.id, qty: q(1) })), { item: 'std/motor-7.5kw-4p', qty: q(1) }],
@@ -325,7 +325,7 @@ export const LATHE_ROUTES: readonly Route[] = [
   {
     /** 床身。HT300 浇成毛坯 → 时效去内应力 → 车配合面 → 磨导轨面。 */
     id: 'make/lathe-base',
-    name: '精密车床床身制造',
+    name: 'Precision Lathe Bed Manufacturing', name_zh: '精密车床床身制造',
     produces: [
       {
         item: 'lathe/base',
@@ -348,7 +348,7 @@ export const LATHE_ROUTES: readonly Route[] = [
   {
     /** 主轴箱。铸 → 镗孔 → 与床身配刮。配刮是手工作业，机器人做，但仍是刮出来的。 */
     id: 'make/lathe-headstock',
-    name: '精密车床主轴箱制造',
+    name: 'Precision Lathe Headstock Manufacturing', name_zh: '精密车床主轴箱制造',
     produces: [{
       item: 'lathe/headstock',
       qty: q(1),
@@ -379,7 +379,7 @@ export const LATHE_ROUTES: readonly Route[] = [
      * 写一个验不了的数，就是把缺口藏进数字里。
      */
     id: 'make/lathe-spindle',
-    name: '精密车床主轴制造',
+    name: 'Precision Lathe Spindle Manufacturing', name_zh: '精密车床主轴制造',
     // 车出来的主轴，跳动**继承**车床自己的跳动 —— 这是 A2 精度继承的第一次落表：
     // 新主轴的回转误差不会比车它的那台小。要求写在设备上（`needs` 的 Option 窗口）。
     produces: [
@@ -410,7 +410,7 @@ export const LATHE_ROUTES: readonly Route[] = [
   {
     /** 尾座。铸 → 底面与导轨配刮。同轴度靠刮，不靠加工精度。 */
     id: 'make/lathe-tailstock',
-    name: '精密车床尾座制造',
+    name: 'Precision Lathe Tailstock Manufacturing', name_zh: '精密车床尾座制造',
     produces: [
       {
         item: 'lathe/tailstock',
@@ -428,7 +428,7 @@ export const LATHE_ROUTES: readonly Route[] = [
   {
     /** 溜板。铸 → 底面贴塑或淬硬 → 与导轨配磨。 */
     id: 'make/lathe-carriage',
-    name: '精密车床溜板制造',
+    name: 'Precision Lathe Carriage Manufacturing', name_zh: '精密车床溜板制造',
     produces: [{
       item: 'lathe/carriage',
       qty: q(1),
@@ -444,7 +444,7 @@ export const LATHE_ROUTES: readonly Route[] = [
   {
     /** 刀架。45 钢锻件 → 铣刀槽 → 淬火。形状与刚性都来自铣。 */
     id: 'make/lathe-tool-post',
-    name: '精密车床刀架制造',
+    name: 'Precision Lathe Tool Post Manufacturing', name_zh: '精密车床刀架制造',
     produces: [{
       item: 'lathe/tool-post',
       qty: q(1),
@@ -458,7 +458,7 @@ export const LATHE_ROUTES: readonly Route[] = [
   {
     /** 丝杠。45 钢 → 车螺纹 → 淬硬 → 磨。导程误差直接变成螺距误差。 */
     id: 'make/lathe-lead-screw',
-    name: '精密车床丝杠制造',
+    name: 'Precision Lathe Lead Screw Manufacturing', name_zh: '精密车床丝杠制造',
     produces: [
       {
         item: 'lathe/lead-screw',
@@ -474,7 +474,7 @@ export const LATHE_ROUTES: readonly Route[] = [
   {
     /** 进给箱。HT200 铸 → 镗各轴孔。形状由铸定，孔由镗定。 */
     id: 'make/lathe-feed-gearbox',
-    name: '精密车床进给箱制造',
+    name: 'Precision Lathe Feed Box Manufacturing', name_zh: '精密车床进给箱制造',
     produces: [{
       item: 'lathe/feed-gearbox',
       qty: q(1),
@@ -489,7 +489,7 @@ export const LATHE_ROUTES: readonly Route[] = [
   {
     /** 防护罩。薄板折弯后焊接。不承力，不决定精度 —— 唯一不磨的零件。 */
     id: 'make/lathe-guard',
-    name: '精密车床防护罩制造',
+    name: 'Precision Lathe Guard Manufacturing', name_zh: '精密车床防护罩制造',
     produces: [{
       item: 'lathe/guard',
       qty: q(1),
@@ -514,7 +514,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/milling-machine',
-    name: '铣镗床装配',
+    name: 'Milling and Boring Machine Assembly', name_zh: '铣镗床装配',
     produces: [{
       item: 'plant/milling-machine',
       qty: q(1),
@@ -526,7 +526,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/sheet-shop',
-    name: '钣金与焊接工位装配',
+    name: 'Sheet Metal and Welding Workstation Assembly', name_zh: '钣金与焊接工位装配',
     produces: [{
       item: 'plant/sheet-shop',
       qty: q(1),
@@ -538,7 +538,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：车床。第一台是运来的，第二台起由这条路线造（母机：由车床装车床）。 */
     id: 'make/lathe',
-    name: '精密车床装配',
+    name: 'Precision Lathe Assembly', name_zh: '精密车床装配',
     produces: [{
       item: 'lathe',
       qty: q(1),

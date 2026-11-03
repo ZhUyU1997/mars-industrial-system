@@ -55,7 +55,7 @@ export const OIL_QUALIFICATION_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/oil-qualification-record',
-    name: '变压器油验收记录',
+    name: 'Transformer Oil Acceptance Record', name_zh: '变压器油验收记录',
     unit: '份',
     category: 'part',
     props: [
@@ -80,7 +80,7 @@ export const OIL_QUALIFICATION_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/oil-copper-record',
-    name: '铜相容性记录',
+    name: 'Copper Compatibility Record', name_zh: '铜相容性记录',
     unit: '份',
     category: 'part',
     props: [
@@ -112,7 +112,7 @@ export const OIL_QUALIFICATION_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/flash-point-pour-point-record',
-    name: '闪点/倾点记录',
+    name: 'Flash Point/Pour Point Record', name_zh: '闪点/倾点记录',
     unit: '份',
     category: 'part',
     props: [
@@ -136,7 +136,7 @@ export const OIL_QUALIFICATION_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/kinematic-viscosity-record',
-    name: '运动粘度记录',
+    name: 'Kinematic Viscosity Record', name_zh: '运动粘度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -150,7 +150,7 @@ export const OIL_QUALIFICATION_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/oil-copper-ambient-record',
-    name: '油-铜试验的环境温度记录',
+    name: 'Oil-Copper Test Ambient Temperature Record', name_zh: '油-铜试验的环境温度记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'temperature', kind: 'range', min: 19, max: 21, unit: '°C' }],
@@ -161,28 +161,28 @@ export const OIL_QUALIFICATION_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/oil-qualification-voltage-low-record',
-    name: '油验收的四个试验条件记录',
+    name: 'Oil Acceptance Four Test Conditions Record', name_zh: '油验收的四个试验条件记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'voltage', kind: 'range', min: 0, max: 80, unit: 'V' }],
   },
   {
     id: 'mat/oil-qualification-voltage-high-record',
-    name: 'tanδ 的高压条件记录',
+    name: 'tanδ High-Voltage Condition Record', name_zh: 'tanδ 的高压条件记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'voltage', kind: 'range', min: 100, max: 100, unit: 'V' }],
   },
   {
     id: 'mat/oil-qualification-temp-90-record',
-    name: 'tanδ 的 90 °C 条件记录',
+    name: 'tanδ 90 °C Condition Record', name_zh: 'tanδ 的 90 °C 条件记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'temperature', kind: 'range', min: 90, max: 90, unit: '°C' }],
   },
   {
     id: 'mat/oil-qualification-temp-ambient-record',
-    name: '酸值滴定的 19–21 °C 环境条件记录',
+    name: 'Acid Value Titration 19–21 °C Ambient Condition Record', name_zh: '酸值滴定的 19–21 °C 环境条件记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'temperature', kind: 'range', min: 19, max: 21, unit: '°C' }],
@@ -202,7 +202,7 @@ export const OIL_QUALIFICATION_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/oil-qualification',
-    name: '变压器油验收测量',
+    name: 'Transformer Oil Acceptance Measurement', name_zh: '变压器油验收测量',
     produces: [
       {
         item: 'mat/oil-qualification-record',
@@ -262,7 +262,7 @@ export const OIL_QUALIFICATION_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/oil-copper-compatibility',
-    name: '铜相容性测量',
+    name: 'Copper Compatibility Measurement', name_zh: '铜相容性测量',
     produces: [
       {
         item: 'mat/oil-copper-record',
@@ -313,7 +313,7 @@ export const OIL_QUALIFICATION_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/flash-point-pour-point',
-    name: '闪点/倾点测量',
+    name: 'Flash Point/Pour Point Measurement', name_zh: '闪点/倾点测量',
     produces: [
       {
         item: 'mat/flash-point-pour-point-record',
@@ -350,7 +350,7 @@ export const OIL_QUALIFICATION_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/kinematic-viscosity',
-    name: '运动粘度测量',
+    name: 'Kinematic Viscosity Measurement', name_zh: '运动粘度测量',
     produces: [
       {
         item: 'mat/kinematic-viscosity-record',
@@ -374,7 +374,7 @@ export const OIL_QUALIFICATION_ROUTES: readonly Route[] = [
   {
     /** 油-铜试验的环境温度条件：19–21 °C，只记条件。 */
     id: 'measure/oil-copper-ambient',
-    name: '油-铜试验的环境温度测量',
+    name: 'Oil-Copper Test Ambient Temperature Measurement', name_zh: '油-铜试验的环境温度测量',
     produces: [{
       item: 'mat/oil-copper-ambient-record',
       qty: q(1),
@@ -392,7 +392,7 @@ export const OIL_QUALIFICATION_ROUTES: readonly Route[] = [
   {
     /** 击穿试验的低压条件：0–80 V。 */
     id: 'measure/oil-qualification-voltage-low',
-    name: '油验收的四个试验条件测量',
+    name: 'Oil Acceptance Four Test Conditions Measurement', name_zh: '油验收的四个试验条件测量',
     produces: [{
       item: 'mat/oil-qualification-voltage-low-record',
       qty: q(1),
@@ -410,7 +410,7 @@ export const OIL_QUALIFICATION_ROUTES: readonly Route[] = [
   {
     /** tanδ 的高压条件：100 V。 */
     id: 'measure/oil-qualification-voltage-high',
-    name: 'tanδ 的高压条件测量',
+    name: 'tanδ High-Voltage Condition Measurement', name_zh: 'tanδ 的高压条件测量',
     produces: [{
       item: 'mat/oil-qualification-voltage-high-record',
       qty: q(1),
@@ -428,7 +428,7 @@ export const OIL_QUALIFICATION_ROUTES: readonly Route[] = [
   {
     /** tanδ 的 90 °C 条件。 */
     id: 'measure/oil-qualification-temp-90',
-    name: 'tanδ 的 90 °C 条件测量',
+    name: 'tanδ 90 °C Condition Measurement', name_zh: 'tanδ 的 90 °C 条件测量',
     produces: [{
       item: 'mat/oil-qualification-temp-90-record',
       qty: q(1),
@@ -446,7 +446,7 @@ export const OIL_QUALIFICATION_ROUTES: readonly Route[] = [
   {
     /** 酸值滴定的 19–21 °C 环境条件。 */
     id: 'measure/oil-qualification-temp-ambient',
-    name: '酸值滴定的 19–21 °C 环境条件测量',
+    name: 'Acid Value Titration 19–21 °C Ambient Condition Measurement', name_zh: '酸值滴定的 19–21 °C 环境条件测量',
     produces: [{
       item: 'mat/oil-qualification-temp-ambient-record',
       qty: q(1),

@@ -68,7 +68,7 @@ export const DMM_7HALF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/precision-oil-bath',
-    name: '精密恒温油浴',
+    name: 'Precision Temperature-Controlled Oil Bath', name_zh: '精密恒温油浴',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 20, max: 30 }],
@@ -90,7 +90,7 @@ export const DMM_7HALF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hamon-divider-7half',
-    name: 'Hamon 传递标准',
+    name: 'Hamon Transfer Standard', name_zh: 'Hamon 传递标准',
     unit: '件',
     category: 'part',
     props: [
@@ -112,7 +112,7 @@ export const DMM_7HALF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/adc-28bit-inl',
-    name: '28 位 ADC',
+    name: '28-Bit ADC', name_zh: '28 位 ADC',
     unit: '件',
     category: 'part',
     props: [
@@ -133,7 +133,7 @@ export const DMM_7HALF_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/zener-reference-7half',
-    name: '7½ 位电压基准',
+    name: '7½-Digit Voltage Reference', name_zh: '7½ 位电压基准',
     unit: '件',
     category: 'part',
     props: [
@@ -153,7 +153,7 @@ export const DMM_7HALF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dmm-7half/input-front-end',
-    name: '7½ 输入前端',
+    name: '7½-Digit Input Front End', name_zh: '7½ 输入前端',
     unit: '件',
     category: 'part',
     props: [
@@ -171,7 +171,7 @@ export const DMM_7HALF_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/dmm-7half-general',
-    name: '7½ 位数字万用表',
+    name: '7½-Digit Digital Multimeter', name_zh: '7½ 位数字万用表',
     unit: '台',
     category: 'machine',
     props: [
@@ -199,7 +199,7 @@ export const DMM_7HALF_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/precision-oil-bath',
-    name: '精密恒温油浴制造',
+    name: 'Precision Temperature-Controlled Oil Bath Manufacturing', name_zh: '精密恒温油浴制造',
     produces: [
       {
         item: 'plant/precision-oil-bath',
@@ -241,7 +241,7 @@ export const DMM_7HALF_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/hamon-divider-7half',
-    name: 'Hamon 传递标准制造',
+    name: 'Hamon Transfer Standard Manufacturing', name_zh: 'Hamon 传递标准制造',
     produces: [
       {
         item: 'plant/hamon-divider-7half',
@@ -284,7 +284,7 @@ export const DMM_7HALF_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/adc-28bit-inl',
-    name: '28 位 ADC 制造',
+    name: '28-Bit ADC Manufacturing', name_zh: '28 位 ADC 制造',
     produces: [
       {
         item: 'plant/adc-28bit-inl',
@@ -328,7 +328,7 @@ export const DMM_7HALF_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/zener-reference-7half',
-    name: '7½ 位电压基准制造',
+    name: '7½-Digit Voltage Reference Manufacturing', name_zh: '7½ 位电压基准制造',
     produces: [
       {
         item: 'std/zener-reference-7half',
@@ -371,7 +371,7 @@ export const DMM_7HALF_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dmm-7half-input-front-end',
-    name: '7½ 输入前端制造',
+    name: '7½-Digit Input Front End Manufacturing', name_zh: '7½ 输入前端制造',
     produces: [
       {
         item: 'plant/dmm-7half/input-front-end',
@@ -410,7 +410,7 @@ export const DMM_7HALF_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dmm-7half',
-    name: '7½ 位数字万用表制造',
+    name: '7½-Digit Digital Multimeter Manufacturing', name_zh: '7½ 位数字万用表制造',
     produces: [
       {
         item: 'std/dmm-7half-general',

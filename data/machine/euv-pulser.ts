@@ -268,7 +268,7 @@ export const EUV_PULSER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-pulser/cap-bank',
-    name: '脉冲电源储能电容组',
+    name: 'Pulse Power Supply Energy Storage Capacitor Bank', name_zh: '脉冲电源储能电容组',
     unit: '件',
     category: 'part',
     props: [
@@ -295,7 +295,7 @@ export const EUV_PULSER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-pulser/busbar',
-    name: '脉冲电源低感汇流排',
+    name: 'Pulse Power Supply Low-Inductance Busbar', name_zh: '脉冲电源低感汇流排',
     unit: '件',
     category: 'part',
     props: [{ param: 'inductance', kind: 'range', min: 0, max: 1000, unit: 'nH', dir: 'atMost' }],
@@ -317,7 +317,7 @@ export const EUV_PULSER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-pulser/switch',
-    name: '脉冲电源主开关',
+    name: 'Pulse Power Supply Main Switch', name_zh: '脉冲电源主开关',
     unit: '件',
     category: 'part',
     props: [
@@ -345,7 +345,7 @@ export const EUV_PULSER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-pulser/charger',
-    name: '脉冲电源充电机',
+    name: 'Pulse Power Supply Charger', name_zh: '脉冲电源充电机',
     unit: '件',
     category: 'part',
     props: [
@@ -372,7 +372,7 @@ export const EUV_PULSER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-pulser/trigger',
-    name: '脉冲电源触发单元',
+    name: 'Pulse Power Supply Trigger Unit', name_zh: '脉冲电源触发单元',
     unit: '件',
     category: 'part',
     props: [
@@ -395,7 +395,7 @@ export const EUV_PULSER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-pulser/cold-plate',
-    name: '脉冲电源水冷板',
+    name: 'Pulse Power Supply Water-Cooled Plate', name_zh: '脉冲电源水冷板',
     unit: '件',
     category: 'part',
     props: [{ param: 'dissipation', kind: 'range', min: 0, max: 20000, unit: 'W', dir: 'atLeast' }],
@@ -408,7 +408,7 @@ export const EUV_PULSER_ITEMS: readonly Item[] = [
    * 3.3 kV 的感应电势 —— 不屏蔽，旁边的计数器会自己跳。
    * 本层没有频谱仪、没有场强计，屏蔽效果只能靠"计数器不乱跳"判（又一处"测不了"）。
    */
-  { id: 'plant/euv-pulser/rack', name: '脉冲电源机柜', unit: '件', category: 'part' },
+  { id: 'plant/euv-pulser/rack', name: 'Pulse Power Supply Rack', name_zh: '脉冲电源机柜', unit: '件', category: 'part' },
 
   // ───────────────────────────────────────────────────────────────────────
   // 设备
@@ -429,7 +429,7 @@ export const EUV_PULSER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-pulser',
-    name: '脉冲电源整机',
+    name: 'Pulse Power Supply System', name_zh: '脉冲电源整机',
     unit: '台',
     category: 'machine',
     props: [
@@ -469,7 +469,7 @@ export const EUV_PULSER_ROUTES: readonly Route[] = [
      * 交付窗口是 3S3P 的结果（10 µF / 1 890 V / 5 J），不是单只的。
      */
     id: 'make/euv-pulser-cap-bank',
-    name: '脉冲电源储能电容组制造',
+    name: 'Pulse Power Supply Energy Storage Capacitor Bank Manufacturing', name_zh: '脉冲电源储能电容组制造',
     produces: [
       {
         item: 'plant/euv-pulser/cap-bank',
@@ -542,7 +542,7 @@ export const EUV_PULSER_ROUTES: readonly Route[] = [
      * 精度只有 ±30 %，但足够判"是 30 nH 还是 300 nH" —— 而后者才是会出事的那一档。
      */
     id: 'make/euv-pulser-busbar',
-    name: '脉冲电源低感汇流排制造',
+    name: 'Pulse Power Supply Low-Inductance Busbar Manufacturing', name_zh: '脉冲电源低感汇流排制造',
     produces: [
       {
         item: 'plant/euv-pulser/busbar',
@@ -588,7 +588,7 @@ export const EUV_PULSER_ROUTES: readonly Route[] = [
      * 用量 1 g 级 —— 全层最贵的气体，用在最便宜的位置上。
      */
     id: 'make/euv-pulser-switch',
-    name: '脉冲电源主开关制造',
+    name: 'Pulse Power Supply Main Switch Manufacturing', name_zh: '脉冲电源主开关制造',
     produces: [
       {
         item: 'plant/euv-pulser/switch',
@@ -673,7 +673,7 @@ export const EUV_PULSER_ROUTES: readonly Route[] = [
      * 代价：石灰水吸 CO₂ 长碳酸钙壳，要定期换水；还要敞口排气（电解出 H₂ 4 g/h）。
      */
     id: 'make/euv-pulser-charger',
-    name: '脉冲电源充电机制造',
+    name: 'Pulse Power Supply Charger Manufacturing', name_zh: '脉冲电源充电机制造',
     produces: [
       {
         item: 'plant/euv-pulser/charger',
@@ -754,7 +754,7 @@ export const EUV_PULSER_ROUTES: readonly Route[] = [
      * 大十倍也无所谓 —— 这是本文件唯一一处"用大件干小事"而不付代价的地方。
      */
     id: 'make/euv-pulser-trigger',
-    name: '脉冲电源触发单元制造',
+    name: 'Pulse Power Supply Trigger Unit Manufacturing', name_zh: '脉冲电源触发单元制造',
     produces: [
       {
         item: 'plant/euv-pulser/trigger',
@@ -838,7 +838,7 @@ export const EUV_PULSER_ROUTES: readonly Route[] = [
      * 所以 5.8 kW 这个数在实物上是 ±15 % 的。
      */
     id: 'make/euv-pulser-cold-plate',
-    name: '脉冲电源水冷板制造',
+    name: 'Pulse Power Supply Water-Cooled Plate Manufacturing', name_zh: '脉冲电源水冷板制造',
     produces: [
       {
         item: 'plant/euv-pulser/cold-plate',
@@ -876,7 +876,7 @@ export const EUV_PULSER_ROUTES: readonly Route[] = [
      * 判据只能用"旁边的计数器不乱跳"（没有场强计）。
      */
     id: 'make/euv-pulser-rack',
-    name: '脉冲电源机柜制造',
+    name: 'Pulse Power Supply Rack Manufacturing', name_zh: '脉冲电源机柜制造',
     produces: [{ item: 'plant/euv-pulser/rack', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(45) }] },
@@ -908,7 +908,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/euv-pulser',
-    name: '脉冲电源整机装配',
+    name: 'Pulse Power Supply System Assembly', name_zh: '脉冲电源整机装配',
     produces: [{
       item: 'plant/euv-pulser',
       qty: q(1),

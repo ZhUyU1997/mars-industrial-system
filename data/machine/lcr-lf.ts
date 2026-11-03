@@ -141,7 +141,7 @@ const LCR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/lcr-oscillator-lf',
-    name: '10 Hz–1 kHz 正交正弦振荡器',
+    name: '10 Hz–1 kHz Quadrature Sine Oscillator', name_zh: '10 Hz–1 kHz 正交正弦振荡器',
     unit: '台',
     category: 'machine',
     props: [
@@ -160,7 +160,7 @@ const LCR_ITEMS: readonly Item[] = [
    * 布局：两块积分器对称、地平面整片、输出串 50 Ω；10 Hz 档的 1 µF 电容
    * 是聚丙烯薄膜（介质吸收 <0.01 %），不是电解。
    */
-  { id: 'plant/lcr-oscillator-lf/board', name: '正交振荡器板', unit: '件', category: 'part' },
+  { id: 'plant/lcr-oscillator-lf/board', name: 'Quadrature Oscillator Board', name_zh: '正交振荡器板', unit: '件', category: 'part' },
 
   /**
    * **10 Hz–1 kHz 分频链。100 kHz 石英 ÷10/÷100/÷1000/÷10⁴。**
@@ -176,7 +176,7 @@ const LCR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/lcr-divider-lf',
-    name: '10 Hz–1 kHz 分频链',
+    name: '10 Hz–1 kHz Frequency Divider Chain', name_zh: '10 Hz–1 kHz 分频链',
     unit: '台',
     category: 'machine',
     props: [
@@ -188,7 +188,7 @@ const LCR_ITEMS: readonly Item[] = [
   },
 
   /** 分频板。4 片 4 位计数片串成 4 个十进制级（反馈复位）+ 2 片逻辑片做门控。 */
-  { id: 'plant/lcr-divider-lf/board', name: '分频板', unit: '件', category: 'part' },
+  { id: 'plant/lcr-divider-lf/board', name: 'Frequency Divider Board', name_zh: '分频板', unit: '件', category: 'part' },
 
   /**
    * **1 Hz–1 kHz 双相锁相放大器。**
@@ -208,7 +208,7 @@ const LCR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/lockin-lf',
-    name: '1 Hz–1 kHz 双相锁相放大器',
+    name: '1 Hz–1 kHz Dual-Phase Lock-In Amplifier', name_zh: '1 Hz–1 kHz 双相锁相放大器',
     unit: '台',
     category: 'machine',
     props: [
@@ -227,7 +227,7 @@ const LCR_ITEMS: readonly Item[] = [
    * 源阻抗 ≤1 kΩ，所以不需要 pA 偏置；pA 那一关在
    * `plant/lcr-meter-lf/range-network` 的筛选 MOS 缓冲上。
    */
-  { id: 'plant/lockin-lf/front-end', name: '锁相前端', unit: '件', category: 'part' },
+  { id: 'plant/lockin-lf/front-end', name: 'Lock-In Front End', name_zh: '锁相前端', unit: '件', category: 'part' },
 
   /**
    * 锁相解调板。两路开关乘法器（0°/90°）+ RC 低通 + 20 位双积分 ADC +
@@ -237,7 +237,7 @@ const LCR_ITEMS: readonly Item[] = [
    * （ENOB 20–22），这里只取 20 位、采样 10 Hz。25 MHz 石英由
    * `std/quartz-resonator-general` 的 25 MHz 档（`make/quartz-resonator-25mhz`）。
    */
-  { id: 'plant/lockin-lf/demodulator', name: '锁相解调板', unit: '件', category: 'part' },
+  { id: 'plant/lockin-lf/demodulator', name: 'Lock-In Demodulator Board', name_zh: '锁相解调板', unit: '件', category: 'part' },
 
   /**
    * **10 Hz–1 kHz 的 LCR 表头：4 端屏蔽夹具 + 量程网络 + 1 µF 标准。**
@@ -260,7 +260,7 @@ const LCR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/lcr-meter-lf',
-    name: '10 Hz–1 kHz LCR 表',
+    name: '10 Hz–1 kHz LCR Meter', name_zh: '10 Hz–1 kHz LCR 表',
     unit: '台',
     category: 'machine',
     props: [
@@ -281,7 +281,7 @@ const LCR_ITEMS: readonly Item[] = [
   },
 
   /** 4 端屏蔽夹具。铜电极 + 保护环 + PTFE 绝缘 + 铝壳；开路残差 ≤0.05 pF。 */
-  { id: 'plant/lcr-meter-lf/fixture', name: 'LCR 表四端屏蔽夹具', unit: '件', category: 'part' },
+  { id: 'plant/lcr-meter-lf/fixture', name: 'LCR Meter Four-Terminal Shielded Fixture', name_zh: 'LCR 表四端屏蔽夹具', unit: '件', category: 'part' },
 
   /**
    * 量程网络。**I/V 级 + 量程电阻 + 分压 + 表头接线。**
@@ -295,7 +295,7 @@ const LCR_ITEMS: readonly Item[] = [
    * 上也是 63 mV —— 同一台锁相能读。电荷积分那种做法要可切换的 10 pF–10 µF
    * 反馈，1 µF/10 Hz 的 6.3 mA 根本积不下；I/V 电阻分档才是对的拓扑。
    */
-  { id: 'plant/lcr-meter-lf/range-network', name: '低频 LCR 表量程网络', unit: '件', category: 'part' },
+  { id: 'plant/lcr-meter-lf/range-network', name: 'Low-Frequency LCR Meter Range Network', name_zh: '低频 LCR 表量程网络', unit: '件', category: 'part' },
 
   /**
    * 1 µF 标准电容。**不是买 0.1 % 的成品**：从 4 只 1 µF 薄膜电容里挑，
@@ -308,7 +308,7 @@ const LCR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/lcr-meter-lf/standard-1uf',
-    name: '1 µF 标准电容',
+    name: '1 µF Standard Capacitor', name_zh: '1 µF 标准电容',
     unit: '件',
     category: 'part',
     props: [
@@ -338,7 +338,7 @@ const LCR_ROUTES: readonly Route[] = [
      * 只记 0.05–0.2 % 的量级，不报具体谱。
      */
     id: 'make/lcr-oscillator-board',
-    name: '正交振荡器板制造',
+    name: 'Quadrature Oscillator Board Manufacturing', name_zh: '正交振荡器板制造',
     produces: [{ item: 'plant/lcr-oscillator-lf/board', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/opamp-chip-general', qty: q(2) }] },
@@ -368,7 +368,7 @@ const LCR_ROUTES: readonly Route[] = [
      *   的交流档看拍频幅度 —— 两种都行，路线写前者。
      */
     id: 'make/lcr-oscillator-lf',
-    name: '10 Hz–1 kHz 正交正弦振荡器制造',
+    name: '10 Hz–1 kHz Quadrature Sine Oscillator Manufacturing', name_zh: '10 Hz–1 kHz 正交正弦振荡器制造',
     produces: [
       {
         item: 'plant/lcr-oscillator-lf',
@@ -409,7 +409,7 @@ const LCR_ROUTES: readonly Route[] = [
      * 100 kHz ÷10 = 10 kHz、÷100 = 1 kHz、÷1000 = 100 Hz、÷10⁴ = 10 Hz。
      */
     id: 'make/lcr-divider-board',
-    name: '分频板制造',
+    name: 'Frequency Divider Board Manufacturing', name_zh: '分频板制造',
     produces: [{ item: 'plant/lcr-divider-lf/board', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/counter-chip-general', qty: q(4) }] },
@@ -436,7 +436,7 @@ const LCR_ROUTES: readonly Route[] = [
      * 频率误差，只引入相位抖动（<1 µs，对 10 Hz 是 1e-5）。
      */
     id: 'make/lcr-divider-lf',
-    name: '10 Hz–1 kHz 分频链制造',
+    name: '10 Hz–1 kHz Frequency Divider Chain Manufacturing', name_zh: '10 Hz–1 kHz 分频链制造',
     produces: [
       {
         item: 'plant/lcr-divider-lf',
@@ -477,7 +477,7 @@ const LCR_ROUTES: readonly Route[] = [
      * 源阻抗 ≤1 kΩ，所以 pA 筛选不在这里做（在表头的 I/V 缓冲上）。
      */
     id: 'make/lockin-front-end',
-    name: '锁相前端制造',
+    name: 'Lock-In Front End Manufacturing', name_zh: '锁相前端制造',
     produces: [{ item: 'plant/lockin-lf/front-end', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/opamp-chip-general', qty: q(2) }] },
@@ -511,7 +511,7 @@ const LCR_ROUTES: readonly Route[] = [
      * 模拟 RC 只做抗混叠（10 ms）。
      */
     id: 'make/lockin-demodulator',
-    name: '锁相解调板制造',
+    name: 'Lock-In Demodulator Board Manufacturing', name_zh: '锁相解调板制造',
     produces: [{ item: 'plant/lockin-lf/demodulator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/opamp-chip-general', qty: q(2) }] },
@@ -540,7 +540,7 @@ const LCR_ROUTES: readonly Route[] = [
      * 10 Hz–1 kHz 内参考相位由分频链数字给出，不随频率变。
      */
     id: 'make/lockin-lf',
-    name: '1 Hz–1 kHz 双相锁相放大器制造',
+    name: '1 Hz–1 kHz Dual-Phase Lock-In Amplifier Manufacturing', name_zh: '1 Hz–1 kHz 双相锁相放大器制造',
     produces: [
       {
         item: 'plant/lockin-lf',
@@ -574,7 +574,7 @@ const LCR_ROUTES: readonly Route[] = [
   {
     /** 4 端屏蔽夹具：铜电极 + 保护环 + PTFE + 铝壳。车与铣，不镀。 */
     id: 'make/lcr-fixture',
-    name: 'LCR 表四端屏蔽夹具制造',
+    name: 'LCR Meter Four-Terminal Shielded Fixture Manufacturing', name_zh: 'LCR 表四端屏蔽夹具制造',
     produces: [{ item: 'plant/lcr-meter-lf/fixture', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -605,7 +605,7 @@ const LCR_ROUTES: readonly Route[] = [
      * （电压基准那套，0.01 % 级）把 1 V 激励降到 0.1 V / 0.01 V，给 1 µF 档。
      */
     id: 'make/lcr-range-network',
-    name: '低频 LCR 表量程网络制造',
+    name: 'Low-Frequency LCR Meter Range Network Manufacturing', name_zh: '低频 LCR 表量程网络制造',
     produces: [{ item: 'plant/lcr-meter-lf/range-network', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/opamp-chip-general', qty: q(2) }] },
@@ -637,7 +637,7 @@ const LCR_ROUTES: readonly Route[] = [
      * 复测，漂 <0.02 % 才收。
      */
     id: 'make/lcr-standard-1uf',
-    name: '1 µF 标准电容制造',
+    name: '1 µF Standard Capacitor Manufacturing', name_zh: '1 µF 标准电容制造',
     produces: [
       {
         item: 'plant/lcr-meter-lf/standard-1uf',
@@ -686,7 +686,7 @@ const LCR_ROUTES: readonly Route[] = [
      * 按 `prop_missing_gives` 这条旧路线必须补一行 gives；窗口其余不动。
      */
     id: 'make/lcr-meter-lf',
-    name: '10 Hz–1 kHz LCR 表制造',
+    name: '10 Hz–1 kHz LCR Meter Manufacturing', name_zh: '10 Hz–1 kHz LCR 表制造',
     produces: [
       {
         item: 'plant/lcr-meter-lf',
@@ -752,7 +752,7 @@ const OES_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/trimethyl-aluminium',
-    name: '三甲基铝',
+    name: 'Trimethylaluminium', name_zh: '三甲基铝',
     unit: 'kg',
     category: 'material',
     props: [
@@ -775,7 +775,7 @@ const OES_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gaas-single-crystal',
-    name: 'GaAs 单晶锭',
+    name: 'GaAs Single-Crystal Ingot', name_zh: 'GaAs 单晶锭',
     unit: 'kg',
     category: 'material',
     props: [
@@ -796,7 +796,7 @@ const OES_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/gaas-substrate-2in',
-    name: '2 英寸 GaAs 衬底',
+    name: '2-Inch GaAs Substrate', name_zh: '2 英寸 GaAs 衬底',
     unit: '片',
     category: 'part',
     props: [
@@ -827,7 +827,7 @@ const OES_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/gaas-epi-870-general',
-    name: 'GaAs/AlGaAs 870 nm 双异质结外延片',
+    name: 'GaAs/AlGaAs 870 nm Double Heterostructure Epi Wafer', name_zh: 'GaAs/AlGaAs 870 nm 双异质结外延片',
     unit: '片',
     category: 'part',
     props: [
@@ -852,7 +852,7 @@ const OES_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/oes-line-source/laser-chip',
-    name: '870 nm 双异质结激光芯片',
+    name: '870 nm Double-Heterostructure Laser Chip', name_zh: '870 nm 双异质结激光芯片',
     unit: '件',
     category: 'part',
     props: [
@@ -869,7 +869,7 @@ const OES_SOURCE_ITEMS: readonly Item[] = [
    *   输出镜   φ10、f = 80 mm —— 把光栅零级聚焦到谱仪缝上（80 mm 处 ~100 µm）
    * 装在同一根铝镜筒里，准直镜可轴向调 0–3 mm。
    */
-  { id: 'plant/oes-line-source/collimator', name: 'OES 870 准直/输出镜组', unit: '件', category: 'part' },
+  { id: 'plant/oes-line-source/collimator', name: 'OES 870 Collimator/Output Mirror Assembly', name_zh: 'OES 870 准直/输出镜组', unit: '件', category: 'part' },
 
   /**
    * 光栅台 + 调谐镜。Littman–Metcalf 的两个角：
@@ -880,7 +880,7 @@ const OES_SOURCE_ITEMS: readonly Item[] = [
    * 调谐率：δλ = d·cosβ·2δθ = 833.333×0.743×2×10⁻⁵ = 0.0124 nm/µm；
    * 20 mm 行程覆盖 860–880 nm 有余。
    */
-  { id: 'plant/oes-line-source/grating-stage', name: '光栅台', unit: '件', category: 'part' },
+  { id: 'plant/oes-line-source/grating-stage', name: 'Grating Stage', name_zh: '光栅台', unit: '件', category: 'part' },
 
   /**
    * 温控座。铜块 30×30×10 mm + 镍丝加热（10 Ω）+ T 型热电偶 + PID。
@@ -889,10 +889,10 @@ const OES_SOURCE_ITEMS: readonly Item[] = [
    * 设在 25–30 °C（高于机箱 3–5 K），靠自然对流散热。±0.5 K。
    * 870 nm 的调谐系数 0.06–0.08 nm/K ⇒ ±0.03–0.04 nm，够。
    */
-  { id: 'plant/oes-line-source/thermal-mount', name: 'OES 870 温控座', unit: '件', category: 'part' },
+  { id: 'plant/oes-line-source/thermal-mount', name: 'OES 870 Temperature-Controlled Mount', name_zh: 'OES 870 温控座', unit: '件', category: 'part' },
 
   /** 机箱。300×150×100 mm 铝箱，内壁贴 PTFE 绝缘，前端 φ10 出光窗、后端电气接口。 */
-  { id: 'plant/oes-line-source/housing', name: 'OES 870 机箱', unit: '件', category: 'part' },
+  { id: 'plant/oes-line-source/housing', name: 'OES 870 Housing', name_zh: 'OES 870 机箱', unit: '件', category: 'part' },
 
   /**
    * **OES 870 nm 窄线源（Littman–Metcalf 外腔二极管激光器）。**
@@ -908,7 +908,7 @@ const OES_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/oes-line-source',
-    name: 'OES 870 nm 窄线源',
+    name: 'OES 870 nm Narrow-Line Source', name_zh: 'OES 870 nm 窄线源',
     unit: '台',
     category: 'machine',
     props: [
@@ -938,7 +938,7 @@ const OES_SOURCE_ROUTES: readonly Route[] = [
      * 与 `make/trimethyl-gallium` 同一条格氏/精馏路，只是把 GaCl₃ 换 AlCl₃。
      */
     id: 'make/trimethyl-aluminium',
-    name: '三甲基铝制备',
+    name: 'Trimethylaluminium Production', name_zh: '三甲基铝制备',
     produces: [
       {
         item: 'mat/trimethyl-aluminium',
@@ -1009,7 +1009,7 @@ const OES_SOURCE_ROUTES: readonly Route[] = [
      * 本层没有 Te/Se 的金属链，Si 是唯一可用的 n 型掺杂剂。
      */
     id: 'make/gaas-single-crystal',
-    name: 'GaAs 单晶制备',
+    name: 'GaAs Single-Crystal Production', name_zh: 'GaAs 单晶制备',
     produces: [
       {
         item: 'mat/gaas-single-crystal',
@@ -1059,7 +1059,7 @@ const OES_SOURCE_ROUTES: readonly Route[] = [
      *   清洗/量厚度/TTV
      */
     id: 'make/gaas-substrate-2in',
-    name: '2 英寸 GaAs 衬底制造',
+    name: '2-Inch GaAs Substrate Manufacturing', name_zh: '2 英寸 GaAs 衬底制造',
     produces: [
       {
         item: 'std/gaas-substrate-2in',
@@ -1109,7 +1109,7 @@ const OES_SOURCE_ROUTES: readonly Route[] = [
      *    20–50 %；p 型碳掺杂反而因此更容易（低 V/III + 低温度）。
      */
     id: 'make/gaas-algaas-epi-wafer',
-    name: 'GaAs/AlGaAs 外延',
+    name: 'GaAs/AlGaAs Epitaxy', name_zh: 'GaAs/AlGaAs 外延',
     produces: [
       {
         item: 'std/gaas-epi-870-general',
@@ -1197,7 +1197,7 @@ const OES_SOURCE_ROUTES: readonly Route[] = [
      * 解理/镀膜/焊装废一半，再按条宽与腔长留边，交 200 只（7–8 %）。
      */
     id: 'make/oes-laser-chip',
-    name: '870 nm 双异质结激光芯片制造',
+    name: '870 nm Double-Heterostructure Laser Chip Manufacturing', name_zh: '870 nm 双异质结激光芯片制造',
     produces: [
       {
         item: 'plant/oes-line-source/laser-chip',
@@ -1254,7 +1254,7 @@ const OES_SOURCE_ROUTES: readonly Route[] = [
      * 0.5–20 mW 的窗口已经含这项）。
      */
     id: 'make/oes-collimator',
-    name: 'OES 870 准直/输出镜组制造',
+    name: 'OES 870 Collimator/Output Mirror Assembly Manufacturing', name_zh: 'OES 870 准直/输出镜组制造',
     produces: [{ item: 'plant/oes-line-source/collimator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/quartz-pure', qty: q(1, 20) }] },
@@ -1282,7 +1282,7 @@ const OES_SOURCE_ROUTES: readonly Route[] = [
      * 调谐率 0.0124 nm/µm（见文件头 B 节）。
      */
     id: 'make/oes-grating-stage',
-    name: '光栅台制造',
+    name: 'Grating Stage Manufacturing', name_zh: '光栅台制造',
     produces: [{ item: 'plant/oes-line-source/grating-stage', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -1312,7 +1312,7 @@ const OES_SOURCE_ROUTES: readonly Route[] = [
      *   PID  `std/temp-controller-general`，±0.5 K（1 h）
      */
     id: 'make/oes-thermal-mount',
-    name: 'OES 870 温控座制造',
+    name: 'OES 870 Temperature-Controlled Mount Manufacturing', name_zh: 'OES 870 温控座制造',
     produces: [{ item: 'plant/oes-line-source/thermal-mount', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1, 2) }] },
@@ -1333,7 +1333,7 @@ const OES_SOURCE_ROUTES: readonly Route[] = [
   {
     /** 机箱：300×150×100 mm 铝箱、PTFE 内衬、φ10 出光窗、后端电气接口。 */
     id: 'make/oes-housing',
-    name: 'OES 870 机箱制造',
+    name: 'OES 870 Housing Manufacturing', name_zh: 'OES 870 机箱制造',
     produces: [{ item: 'plant/oes-line-source/housing', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/aluminium', qty: q(1) }] },
@@ -1370,7 +1370,7 @@ const OES_SOURCE_ROUTES: readonly Route[] = [
      *    几何计算 + 光栅节距；与 589 nm 的钠双线标定无关（钠只校谱仪）。
      */
     id: 'make/oes-line-source',
-    name: 'OES 870 nm 窄线源制造',
+    name: 'OES 870 nm Narrow-Line Source Manufacturing', name_zh: 'OES 870 nm 窄线源制造',
     produces: [
       {
         item: 'plant/oes-line-source',

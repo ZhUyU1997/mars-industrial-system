@@ -294,7 +294,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/cathode',
-    name: '电子束柱钨发叉阴极',
+    name: 'Electron Beam Column Tungsten Hairpin Cathode', name_zh: '电子束柱钨发叉阴极',
     unit: '件',
     category: 'part',
     props: [
@@ -315,7 +315,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/wehnelt',
-    name: '电子束柱栅极帽',
+    name: 'Electron Beam Column Wehnelt Cap', name_zh: '电子束柱栅极帽',
     unit: '件',
     category: 'part',
     props: [{ param: 'bias', kind: 'range', min: -400, max: 0, unit: 'V' }],
@@ -333,7 +333,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/gun-chamber',
-    name: '电子束柱枪室',
+    name: 'Electron Beam Column Gun Chamber', name_zh: '电子束柱枪室',
     unit: '件',
     category: 'part',
     props: [{ param: 'withstand', kind: 'range', min: 0, max: 100, unit: 'kV', dir: 'atLeast' }],
@@ -355,7 +355,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/condenser',
-    name: '电子束柱聚光镜',
+    name: 'Electron Beam Column Condenser Lens', name_zh: '电子束柱聚光镜',
     unit: '件',
     category: 'part',
     props: [
@@ -377,7 +377,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/objective',
-    name: '电子束柱物镜',
+    name: 'Electron Beam Column Objective Lens', name_zh: '电子束柱物镜',
     unit: '件',
     category: 'part',
     props: [
@@ -405,7 +405,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/aperture',
-    name: '电子束柱光阑组',
+    name: 'Electron Beam Column Aperture Assembly', name_zh: '电子束柱光阑组',
     unit: '件',
     category: 'part',
     props: [{ param: 'holeDiameter', kind: 'range', min: 5, max: 500, unit: 'µm' }],
@@ -428,7 +428,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/scan-coil',
-    name: '电子束柱双偏转扫描线圈',
+    name: 'Electron Beam Column Double-Deflection Scan Coil', name_zh: '电子束柱双偏转扫描线圈',
     unit: '件',
     category: 'part',
     props: [
@@ -454,7 +454,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/column-tube',
-    name: '电子束柱镜筒',
+    name: 'Electron Beam Column Tube', name_zh: '电子束柱镜筒',
     unit: '件',
     category: 'part',
     props: [{ param: 'residualField', kind: 'range', min: 0, max: 10, unit: 'µT', dir: 'atMost' }],
@@ -472,7 +472,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/chamber',
-    name: '电子束柱样品室',
+    name: 'Electron Beam Column Sample Chamber', name_zh: '电子束柱样品室',
     unit: '件',
     category: 'part',
     props: [{ param: 'leakRate', kind: 'range', min: 0, max: 10, unit: 'Pa·L/s', dir: 'atMost' }],
@@ -493,7 +493,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/stage',
-    name: '电子束柱五轴样品台',
+    name: 'Electron Beam Column 5-Axis Sample Stage', name_zh: '电子束柱五轴样品台',
     unit: '件',
     category: 'part',
     props: [
@@ -525,7 +525,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/detector',
-    name: '电子轰击二极管探测器',
+    name: 'Electron-Bombardment Diode Detector', name_zh: '电子轰击二极管探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -545,7 +545,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/faraday-cup',
-    name: '电子束柱法拉第杯',
+    name: 'Electron Beam Column Faraday Cup', name_zh: '电子束柱法拉第杯',
     unit: '件',
     category: 'part',
     props: [{ param: 'minCurrent', kind: 'range', min: 1e-15, max: 1e-9, unit: 'A', dir: 'atMost' }],
@@ -579,7 +579,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/hv-supply',
-    name: '电子束柱高压电源',
+    name: 'Electron Beam Column High-Voltage Power Supply', name_zh: '电子束柱高压电源',
     unit: '台',
     category: 'part',
     props: [
@@ -601,7 +601,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/beam-blanker',
-    name: '电子束柱束闸',
+    name: 'Electron Beam Column Beam Blanker', name_zh: '电子束柱束闸',
     unit: '件',
     category: 'part',
     props: [
@@ -627,7 +627,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/control',
-    name: '剂量与扫描控制单元',
+    name: 'Dose and Scan Control Unit', name_zh: '剂量与扫描控制单元',
     unit: '件',
     category: 'part',
     props: [
@@ -656,7 +656,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/exposed-wafer',
-    name: '电子束柱写好的片子',
+    name: 'Electron Beam Column Exposed Wafer', name_zh: '电子束柱写好的片子',
     unit: '片',
     category: 'part',
     props: [
@@ -678,7 +678,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column/thin-coupon',
-    name: '电子束柱透射样品',
+    name: 'Electron Beam Column Transmission Sample', name_zh: '电子束柱透射样品',
     unit: '件',
     category: 'part',
     props: [
@@ -706,7 +706,7 @@ export const EBEAM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-column',
-    name: '电子束柱',
+    name: 'Electron Beam Column', name_zh: '电子束柱',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'pressure', min: 1e-7, max: 1e-3 }],
@@ -765,7 +765,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 因为阴极丝的直径（0.12）比灯丝（0.2–0.3）细、批量大、可以挑。
      */
     id: 'make/eb-cathode',
-    name: '电子束柱钨发叉阴极制造',
+    name: 'Electron Beam Column Tungsten Hairpin Cathode Manufacturing', name_zh: '电子束柱钨发叉阴极制造',
     produces: [
       {
         item: 'plant/e-beam-column/cathode',
@@ -826,7 +826,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 走 20 mm，等于用大炮打蚊子，但除此之外本层没有别的东西能把孔修圆。
      */
     id: 'make/eb-wehnelt',
-    name: '电子束柱栅极帽制造',
+    name: 'Electron Beam Column Wehnelt Cap Manufacturing', name_zh: '电子束柱栅极帽制造',
     produces: [
       {
         item: 'plant/e-beam-column/wehnelt',
@@ -878,7 +878,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 石灰 0.25 kg 吸 1.79 mmol/g × 250 g = 0.45 mol 水，够 10⁻⁶ Pa 下 3000 h。
      */
     id: 'make/eb-gun-chamber',
-    name: '电子束柱枪室制造',
+    name: 'Electron Beam Column Gun Chamber Manufacturing', name_zh: '电子束柱枪室制造',
     produces: [
       {
         item: 'plant/e-beam-column/gun-chamber',
@@ -944,7 +944,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      *    只是闭环落在 cd-sem 那一侧（"测尖靠本机"）。
      */
     id: 'make/eb-condenser',
-    name: '电子束柱聚光镜制造',
+    name: 'Electron Beam Column Condenser Lens Manufacturing', name_zh: '电子束柱聚光镜制造',
     produces: [
       {
         item: 'plant/e-beam-column/condenser',
@@ -994,7 +994,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 探测器"的下限。这是一个被机械挤出来的数，不是光学挑出来的。
      */
     id: 'make/eb-objective',
-    name: '电子束柱物镜制造',
+    name: 'Electron Beam Column Objective Lens Manufacturing', name_zh: '电子束柱物镜制造',
     produces: [
       {
         item: 'plant/e-beam-column/objective',
@@ -1049,7 +1049,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      *   ④ 离子束修圆 + 去毛刺
      */
     id: 'make/eb-aperture',
-    name: '电子束柱光阑组制造',
+    name: 'Electron Beam Column Aperture Assembly Manufacturing', name_zh: '电子束柱光阑组制造',
     produces: [
       {
         item: 'plant/e-beam-column/aperture',
@@ -1098,7 +1098,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 下一个像素的位置就偏。空气芯的线性由几何定，只要骨架铣得准。
      */
     id: 'make/eb-scan-coil',
-    name: '电子束柱双偏转扫描线圈制造',
+    name: 'Electron Beam Column Double-Deflection Scan Coil Manufacturing', name_zh: '电子束柱双偏转扫描线圈制造',
     produces: [
       {
         item: 'plant/e-beam-column/scan-coil',
@@ -1141,7 +1141,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 与 `plant/resistance-furnace` 的 100–1100 温区对得上。
      */
     id: 'make/eb-column-tube',
-    name: '电子束柱镜筒制造',
+    name: 'Electron Beam Column Tube Manufacturing', name_zh: '电子束柱镜筒制造',
     produces: [
       {
         item: 'plant/e-beam-column/column-tube',
@@ -1183,7 +1183,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 门框是刚度的大头。）
      */
     id: 'make/eb-chamber',
-    name: '电子束柱样品室制造',
+    name: 'Electron Beam Column Sample Chamber Manufacturing', name_zh: '电子束柱样品室制造',
     produces: [
       {
         item: 'plant/e-beam-column/chamber',
@@ -1224,7 +1224,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 的角度分辨力 0.1° → 3 mm 上 5 µm 的余弦误差，够用）。
      */
     id: 'make/eb-stage',
-    name: '电子束柱五轴样品台制造',
+    name: 'Electron Beam Column 5-Axis Sample Stage Manufacturing', name_zh: '电子束柱五轴样品台制造',
     produces: [
       {
         item: 'plant/e-beam-column/stage',
@@ -1285,7 +1285,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      *    这是问题五里说的那次降级。
      */
     id: 'make/eb-detector',
-    name: '电子轰击二极管探测器制造',
+    name: 'Electron-Bombardment Diode Detector Manufacturing', name_zh: '电子轰击二极管探测器制造',
     produces: [
       {
         item: 'plant/e-beam-column/detector',
@@ -1346,7 +1346,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 判据 1e-13 A 是相减之后的。
      */
     id: 'make/eb-faraday-cup',
-    name: '电子束柱法拉第杯制造',
+    name: 'Electron Beam Column Faraday Cup Manufacturing', name_zh: '电子束柱法拉第杯制造',
     produces: [
       {
         item: 'plant/e-beam-column/faraday-cup',
@@ -1392,7 +1392,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 最后一道工序是"装进恒温箱、在计量室里标分压比"。
      */
     id: 'make/eb-hv-supply',
-    name: '电子束柱高压电源制造',
+    name: 'Electron Beam Column High-Voltage Power Supply Manufacturing', name_zh: '电子束柱高压电源制造',
     produces: [
       {
         item: 'plant/e-beam-column/hv-supply',
@@ -1453,7 +1453,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 但精度只有一个量级"。
      */
     id: 'make/eb-beam-blanker',
-    name: '电子束柱束闸制造',
+    name: 'Electron Beam Column Beam Blanker Manufacturing', name_zh: '电子束柱束闸制造',
     produces: [
       {
         item: 'plant/e-beam-column/beam-blanker',
@@ -1502,7 +1502,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 图形数据流）差得最远，也是本层"读出来也写不快"的根（问题二、三）。
      */
     id: 'make/eb-control',
-    name: '剂量与扫描控制单元制造',
+    name: 'Dose and Scan Control Unit Manufacturing', name_zh: '剂量与扫描控制单元制造',
     produces: [
       {
         item: 'plant/e-beam-column/control',
@@ -1563,7 +1563,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      *   温度 19–21      由 `plant/metrology-room` hold（它在 needs 里）
      */
     id: 'make/eb-expose-layer',
-    name: '电子束柱写好的片子制造',
+    name: 'Electron Beam Column Exposed Wafer Manufacturing', name_zh: '电子束柱写好的片子制造',
     produces: [
       {
         item: 'plant/e-beam-column/exposed-wafer',
@@ -1609,7 +1609,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * 记在这里而不是藏起来。
      */
     id: 'make/eb-thin-coupon',
-    name: '减薄',
+    name: 'Thinning', name_zh: '减薄',
     produces: [
       {
         item: 'plant/e-beam-column/thin-coupon',
@@ -1665,7 +1665,7 @@ export const EBEAM_ROUTES: readonly Route[] = [
      * ≤0.05 mm（条目 `lineWidth` 的 mm 口径，与手刻原图同一档）。
      */
     id: 'make/eb-read-layer',
-    name: '一层的手刻原图制造',
+    name: 'Single-Layer Hand-Traced Master Manufacturing', name_zh: '一层的手刻原图制造',
     produces: [
       {
         item: 'std/layer-tracing-general',
@@ -1700,7 +1700,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/e-beam-column',
-    name: '电子束柱装配',
+    name: 'Electron Beam Column Assembly', name_zh: '电子束柱装配',
     produces: [{
       item: 'plant/e-beam-column',
       qty: q(1),

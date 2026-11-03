@@ -26,7 +26,7 @@ export const LATHE_TAILSTOCK_ROUTES: readonly Route[] = [
   {
     /** 同轴度：检验棒 + 比较仪，近端/远端 × x/y 四读。 */
     id: 'measure/lathe-tailstock-coaxiality',
-    name: '尾座测量',
+    name: 'Tailstock Measurement', name_zh: '尾座测量',
     produces: [
       {
         item: 'lathe/tailstock',

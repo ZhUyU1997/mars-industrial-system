@@ -86,7 +86,7 @@ export const DMM_6HALF_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/dmm-6half-general',
-    name: '6½ 位数字万用表',
+    name: '6½-Digit Digital Multimeter', name_zh: '6½ 位数字万用表',
     unit: '台',
     category: 'machine',
     props: [
@@ -113,7 +113,7 @@ export const DMM_6HALF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dmm-6half/input-front-end',
-    name: '输入前端',
+    name: 'Input Front End', name_zh: '输入前端',
     unit: '件',
     category: 'part',
     props: [
@@ -136,7 +136,7 @@ export const DMM_6HALF_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dmm-input-front-end',
-    name: '输入前端制造',
+    name: 'Input Front End Manufacturing', name_zh: '输入前端制造',
     produces: [
       {
         item: 'plant/dmm-6half/input-front-end',
@@ -180,7 +180,7 @@ export const DMM_6HALF_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/dmm-6half',
-    name: '6½ 位数字万用表制造',
+    name: '6½-Digit Digital Multimeter Manufacturing', name_zh: '6½ 位数字万用表制造',
     produces: [
       {
         item: 'std/dmm-6half-general',

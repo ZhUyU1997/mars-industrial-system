@@ -27,7 +27,7 @@ export const STI_ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sti-ald-reactor',
-    name: 'STI 专用 ALD 反应器',
+    name: 'STI Dedicated ALD Reactor', name_zh: 'STI 专用 ALD 反应器',
     unit: '台',
     category: 'machine',
     holds: [
@@ -41,19 +41,19 @@ export const STI_ALD_ITEMS: readonly Item[] = [
     ],
   },
 
-  { id: 'plant/sti-ald-reactor/chamber', name: 'STI 真空腔', unit: '件', category: 'part' },
-  { id: 'plant/sti-ald-reactor/showerhead', name: 'STI 喷淋头', unit: '件', category: 'part' },
-  { id: 'plant/sti-ald-reactor/heater', name: 'STI 加热器', unit: '件', category: 'part' },
-  { id: 'plant/sti-ald-reactor/pump', name: 'STI 泵', unit: '件', category: 'part' },
-  { id: 'plant/sti-ald-reactor/valve', name: 'STI 阀', unit: '件', category: 'part' },
-  { id: 'plant/sti-ald-reactor/ozone-cell', name: 'STI 臭氧发生器', unit: '件', category: 'part' },
-  { id: 'plant/sti-ald-reactor/thermocouple', name: 'STI 热电偶', unit: '件', category: 'part' },
+  { id: 'plant/sti-ald-reactor/chamber', name: 'STI Vacuum Chamber', name_zh: 'STI 真空腔', unit: '件', category: 'part' },
+  { id: 'plant/sti-ald-reactor/showerhead', name: 'STI Showerhead', name_zh: 'STI 喷淋头', unit: '件', category: 'part' },
+  { id: 'plant/sti-ald-reactor/heater', name: 'STI Heater', name_zh: 'STI 加热器', unit: '件', category: 'part' },
+  { id: 'plant/sti-ald-reactor/pump', name: 'STI Pump', name_zh: 'STI 泵', unit: '件', category: 'part' },
+  { id: 'plant/sti-ald-reactor/valve', name: 'STI Valve', name_zh: 'STI 阀', unit: '件', category: 'part' },
+  { id: 'plant/sti-ald-reactor/ozone-cell', name: 'STI Ozone Generator', name_zh: 'STI 臭氧发生器', unit: '件', category: 'part' },
+  { id: 'plant/sti-ald-reactor/thermocouple', name: 'STI Thermocouple', name_zh: 'STI 热电偶', unit: '件', category: 'part' },
 ];
 
 export const STI_ALD_ROUTES: readonly Route[] = [
   {
     id: 'make/sti-ald-chamber',
-    name: 'STI 真空腔制造',
+    name: 'STI Vacuum Chamber Manufacturing', name_zh: 'STI 真空腔制造',
     produces: [{ item: 'plant/sti-ald-reactor/chamber', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(200) }] }],
     needs: ['plant/clean-room'],
@@ -63,7 +63,7 @@ export const STI_ALD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/sti-ald-showerhead',
-    name: 'STI 喷淋头制造',
+    name: 'STI Showerhead Manufacturing', name_zh: 'STI 喷淋头制造',
     produces: [{ item: 'plant/sti-ald-reactor/showerhead', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(20) }] }],
     needs: ['lathe', 'plant/clean-room'],
@@ -73,7 +73,7 @@ export const STI_ALD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/sti-ald-heater',
-    name: 'STI 加热器制造',
+    name: 'STI Heater Manufacturing', name_zh: 'STI 加热器制造',
     produces: [{ item: 'plant/sti-ald-reactor/heater', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/resistance-wire', qty: q(1, 2) }] },
@@ -86,7 +86,7 @@ export const STI_ALD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/sti-ald-pump',
-    name: 'STI 泵制造',
+    name: 'STI Pump Manufacturing', name_zh: 'STI 泵制造',
     produces: [{ item: 'plant/sti-ald-reactor/pump', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'plant/evaporator/pump', qty: q(1) }] }],
     needs: ['plant/clean-room'],
@@ -96,7 +96,7 @@ export const STI_ALD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/sti-ald-valve',
-    name: 'STI 阀制造',
+    name: 'STI Valve Manufacturing', name_zh: 'STI 阀制造',
     produces: [{ item: 'plant/sti-ald-reactor/valve', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe', 'plant/clean-room'],
@@ -106,7 +106,7 @@ export const STI_ALD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/sti-ald-ozone-cell',
-    name: 'STI 臭氧发生器制造',
+    name: 'STI Ozone Generator Manufacturing', name_zh: 'STI 臭氧发生器制造',
     produces: [{ item: 'plant/sti-ald-reactor/ozone-cell', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/quartz-pure', qty: q(2) }] },
@@ -119,7 +119,7 @@ export const STI_ALD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/sti-ald-thermocouple',
-    name: 'STI 热电偶制造',
+    name: 'STI Thermocouple Manufacturing', name_zh: 'STI 热电偶制造',
     produces: [{ item: 'plant/sti-ald-reactor/thermocouple', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/thermocouple-t-general', qty: q(1) }] },
@@ -132,7 +132,7 @@ export const STI_ALD_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/sti-ald-reactor',
-    name: 'STI 专用 ALD 反应器制造',
+    name: 'STI Dedicated ALD Reactor Manufacturing', name_zh: 'STI 专用 ALD 反应器制造',
     produces: [
       {
         item: 'plant/sti-ald-reactor',

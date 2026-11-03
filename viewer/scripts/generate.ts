@@ -85,6 +85,7 @@ function condOut(c: Condition): CondOut {
 interface ItemOut {
   id: string;
   name: string;
+  name_zh: string;
   cat: string;
   unit?: string;
   mass?: number;
@@ -103,6 +104,7 @@ interface ItemOut {
 interface RouteOut {
   id: string;
   name: string;
+  name_zh: string;
   kind: 'make' | 'measure';
   p: { i: string; q: number; g?: ReqLite[] }[];
   u: { anyOf: { i: string; q: number; need?: ReqLite[] }[] }[];
@@ -120,6 +122,7 @@ const items: ItemOut[] = data.items.map((it: Item) => {
   const out: ItemOut = {
     id: it.id,
     name: it.name,
+    name_zh: it.name_zh,
     cat: it.category ?? 'material',
     ...(it.unit ? { unit: it.unit } : {}),
     ...(it.mass ? { mass: num(it.mass) } : {}),
@@ -157,6 +160,7 @@ const routes: RouteOut[] = data.routes.map((r: Route) => {
   return {
     id: r.id,
     name: r.name,
+    name_zh: r.name_zh,
     kind: r.id.startsWith('measure/') ? 'measure' : 'make',
     p: r.produces.map((t) => ({
       i: t.item,

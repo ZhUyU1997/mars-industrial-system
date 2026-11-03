@@ -40,34 +40,34 @@ export const POLYMER_PARTS: readonly Item[] = [
    *
    * 衬 PTFE 不只是防腐：单体与聚合物都爱粘壁，粘一圈就传热不良。
    */
-  { id: 'plant/polymer-plant/autoclave', name: '聚合物聚合釜', unit: '件', category: 'part' },
+  { id: 'plant/polymer-plant/autoclave', name: 'Polymer Polymerization Reactor', name_zh: '聚合物聚合釜', unit: '件', category: 'part' },
 
   /**
    * 搅拌器。40Cr 轴进釜，PTFE 填料密封 —— 这里唯一会漏的地方。
    *
    * 转速不高，但轴要长、要直：偏一点，PTFE 密封几分钟就磨穿。
    */
-  { id: 'plant/polymer-plant/agitator', name: '聚合物搅拌器', unit: '件', category: 'part' },
+  { id: 'plant/polymer-plant/agitator', name: 'Polymer Agitator', name_zh: '聚合物搅拌器', unit: '件', category: 'part' },
 
   /** 精制塔。不锈钢填料塔，把单体里的水与酸气脱掉 —— 不纯就不聚合。 */
-  { id: 'plant/polymer-plant/purifier', name: '聚合物精制塔', unit: '件', category: 'part' },
+  { id: 'plant/polymer-plant/purifier', name: 'Polymer Refining Column', name_zh: '聚合物精制塔', unit: '件', category: 'part' },
 
   /** 引发剂计量。计量泵 + 储罐，PTFE 隔膜，每小时几毫升的精度。 */
-  { id: 'plant/polymer-plant/metering', name: '聚合物引发剂计量', unit: '件', category: 'part' },
+  { id: 'plant/polymer-plant/metering', name: 'Polymer Initiator Metering', name_zh: '聚合物引发剂计量', unit: '件', category: 'part' },
 
   /**
    * 凝聚与干燥。乳液破乳成粉，再洗涤、脱水、烘干 —— 聚合之后还有三步。
    *
    * 干燥温度 200 °C 上下，PTFE 本身不怕，怕的是粉料结块，所以用热风循环。
    */
-  { id: 'plant/polymer-plant/dryer', name: '聚合物凝聚与干燥', unit: '件', category: 'part' },
+  { id: 'plant/polymer-plant/dryer', name: 'Polymer Coagulation and Drying', name_zh: '聚合物凝聚与干燥', unit: '件', category: 'part' },
 ];
 
 export const POLYMER_ROUTES: readonly Route[] = [
   {
     /** 聚合釜。不锈钢板卷焊 → 内衬 PTFE 板 → 夹套试压。 */
     id: 'make/polymer-autoclave',
-    name: '聚合物聚合釜制造',
+    name: 'Polymer Polymerization Reactor Manufacturing', name_zh: '聚合物聚合釜制造',
     produces: [{ item: 'plant/polymer-plant/autoclave', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -79,7 +79,7 @@ export const POLYMER_ROUTES: readonly Route[] = [
   {
     /** 搅拌器。40Cr 轴车磨 → 桨叶铣 → PTFE 填料函配作。 */
     id: 'make/polymer-agitator',
-    name: '聚合物搅拌器制造',
+    name: 'Polymer Agitator Manufacturing', name_zh: '聚合物搅拌器制造',
     produces: [{ item: 'plant/polymer-plant/agitator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] },
@@ -91,7 +91,7 @@ export const POLYMER_ROUTES: readonly Route[] = [
   {
     /** 精制塔。不锈钢塔体焊 + 不锈钢填料，塔节法兰连接。 */
     id: 'make/polymer-purifier',
-    name: '聚合物精制塔制造',
+    name: 'Polymer Refining Column Manufacturing', name_zh: '聚合物精制塔制造',
     produces: [{ item: 'plant/polymer-plant/purifier', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -100,7 +100,7 @@ export const POLYMER_ROUTES: readonly Route[] = [
   {
     /** 引发剂计量。不锈钢泵体车成，PTFE 隔膜与阀座；偏心轮轴上一对球轴承。 */
     id: 'make/polymer-metering',
-    name: '聚合物引发剂计量制造',
+    name: 'Polymer Initiator Metering Manufacturing', name_zh: '聚合物引发剂计量制造',
     produces: [{ item: 'plant/polymer-plant/metering', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -113,7 +113,7 @@ export const POLYMER_ROUTES: readonly Route[] = [
   {
     /** 干燥机。不锈钢壳体 + 45 钢风机，热风来自高温窑余热。 */
     id: 'make/polymer-dryer',
-    name: '聚合物凝聚与干燥制造',
+    name: 'Polymer Coagulation and Drying Manufacturing', name_zh: '聚合物凝聚与干燥制造',
     produces: [{ item: 'plant/polymer-plant/dryer', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -131,7 +131,7 @@ export const POLYMER_ROUTES: readonly Route[] = [
  */
 export const POLYMER_PLANT: Item = {
   id: 'plant/polymer-plant',
-  name: '聚合物装置',
+  name: 'Polymer Plant', name_zh: '聚合物装置',
   unit: '套',
   category: 'machine',
   holds: [{ param: 'temperature', min: 50, max: 120 }],
@@ -151,7 +151,7 @@ export const ACID_PLANT_PARTS: readonly Item[] = [
    * SO₂ + ½O₂ → SO₃ 是放热反应，温度太高会把催化剂烧坏，所以要分层降温。
    * 壳、衬、床三层各有各的材料：钢、耐火砖、钒催化剂。
    */
-  { id: 'plant/acid-plant/converter', name: '制酸转化器', unit: '件', category: 'part' },
+  { id: 'plant/acid-plant/converter', name: 'Acid Plant Converter', name_zh: '制酸转化器', unit: '件', category: 'part' },
 
   /**
    * 钒催化剂。V₂O₅ 载在硅藻土（用高铝耐火料代）上，400–450 °C 才有活性。
@@ -165,20 +165,20 @@ export const ACID_PLANT_PARTS: readonly Item[] = [
    * 上一版把这一件标成 `deferred`，判"要一整条稀有金属线"。那句话不算错，
    * 错在没问"要不要建" —— 有些东西的价值不在造得出来，在**值不值得造**。
    */
-  { id: 'plant/acid-plant/catalyst', name: '制酸钒催化剂', unit: '件', category: 'part' },
+  { id: 'plant/acid-plant/catalyst', name: 'Acid Plant Vanadium Catalyst', name_zh: '制酸钒催化剂', unit: '件', category: 'part' },
 
   /**
    * 吸收塔。SO₃ 从塔底上来，98% 的硫酸从塔顶淋下，酸越淋越浓。
    *
    * 填料用陶瓷环 —— 耐酸、耐温、便宜，但脆。塔里一塌，整塔填料要重装。
    */
-  { id: 'plant/acid-plant/absorber', name: '制酸吸收塔', unit: '件', category: 'part' },
+  { id: 'plant/acid-plant/absorber', name: 'Acid Plant Absorption Tower', name_zh: '制酸吸收塔', unit: '件', category: 'part' },
 
   /** 鼓风机。把 SO₂ 吹过整个系统，全流程的压力都靠它。 */
-  { id: 'plant/acid-plant/blower', name: '制酸鼓风机', unit: '件', category: 'part' },
+  { id: 'plant/acid-plant/blower', name: 'Acid Plant Blower', name_zh: '制酸鼓风机', unit: '件', category: 'part' },
 
   /** 冷却器。转化器出来的气要先降温再进吸收塔，否则酸会被气带走。 */
-  { id: 'plant/acid-plant/cooler', name: '制酸冷却器', unit: '件', category: 'part' },
+  { id: 'plant/acid-plant/cooler', name: 'Acid Plant Cooler', name_zh: '制酸冷却器', unit: '件', category: 'part' },
 ];
 
 export const ACID_PLANT_ROUTES: readonly Route[] = [
@@ -200,7 +200,7 @@ export const ACID_PLANT_ROUTES: readonly Route[] = [
      * 判据是**用量 × 单价**，不是单价。
      */
     id: 'make/acid-catalyst',
-    name: '制酸钒催化剂制造',
+    name: 'Acid Plant Vanadium Catalyst Manufacturing', name_zh: '制酸钒催化剂制造',
     produces: [{ item: 'plant/acid-plant/catalyst', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/vanadium-oxide', qty: q(80) }] },
@@ -211,7 +211,7 @@ export const ACID_PLANT_ROUTES: readonly Route[] = [
   {
     /** 转化器。不锈钢壳卷焊 → 耐火砖内衬 → 催化剂床隔板装配。 */
     id: 'make/acid-converter',
-    name: '制酸转化器制造',
+    name: 'Acid Plant Converter Manufacturing', name_zh: '制酸转化器制造',
     produces: [{ item: 'plant/acid-plant/converter', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -223,7 +223,7 @@ export const ACID_PLANT_ROUTES: readonly Route[] = [
   {
     /** 吸收塔。不锈钢塔体焊 + 陶瓷填料环，塔节法兰连接，内壁要光滑。 */
     id: 'make/acid-absorber',
-    name: '制酸吸收塔制造',
+    name: 'Acid Plant Absorption Tower Manufacturing', name_zh: '制酸吸收塔制造',
     produces: [{ item: 'plant/acid-plant/absorber', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -235,7 +235,7 @@ export const ACID_PLANT_ROUTES: readonly Route[] = [
   {
     /** 鼓风机。45 钢叶轮车铣 + 动平衡，机壳薄板焊，轴封用 PTFE。轴用两只球轴承。 */
     id: 'make/acid-blower',
-    name: '制酸鼓风机制造',
+    name: 'Acid Plant Blower Manufacturing', name_zh: '制酸鼓风机制造',
     produces: [{ item: 'plant/acid-plant/blower', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -249,7 +249,7 @@ export const ACID_PLANT_ROUTES: readonly Route[] = [
   {
     /** 冷却器。不锈钢管束 + 薄板壳，气走管内、水走管外。 */
     id: 'make/acid-cooler',
-    name: '制酸冷却器制造',
+    name: 'Acid Plant Cooler Manufacturing', name_zh: '制酸冷却器制造',
     produces: [{ item: 'plant/acid-plant/cooler', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -280,7 +280,7 @@ export const ACID_PLANT_ROUTES: readonly Route[] = [
  */
 export const ACID_PLANT: Item = {
   id: 'plant/acid-plant',
-  name: '制酸装置',
+  name: 'Acid Plant', name_zh: '制酸装置',
   unit: '套',
   category: 'machine',
   holds: [
@@ -303,7 +303,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/acid-plant',
-    name: '制酸装置装配',
+    name: 'Acid Plant Assembly', name_zh: '制酸装置装配',
     produces: [{
       item: 'plant/acid-plant',
       qty: q(1),
@@ -315,7 +315,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/polymer-plant',
-    name: '聚合物装置装配',
+    name: 'Polymer Plant Assembly', name_zh: '聚合物装置装配',
     produces: [{
       item: 'plant/polymer-plant',
       qty: q(1),

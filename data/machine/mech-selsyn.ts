@@ -20,9 +20,9 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const SELSYN_PARTS: readonly Item[] = [
-  { id: 'std/selsyn-general/stator', name: '自整角机定子', unit: '件', category: 'part' },
-  { id: 'std/selsyn-general/rotor', name: '自整角机转子', unit: '件', category: 'part' },
-  { id: 'std/selsyn-general/brush-block', name: '自整角机电刷与刷握', unit: '件', category: 'part' },
+  { id: 'std/selsyn-general/stator', name: 'Selsyn Stator', name_zh: '自整角机定子', unit: '件', category: 'part' },
+  { id: 'std/selsyn-general/rotor', name: 'Selsyn Rotor', name_zh: '自整角机转子', unit: '件', category: 'part' },
+  { id: 'std/selsyn-general/brush-block', name: 'Selsyn Brush and Brush Holder', name_zh: '自整角机电刷与刷握', unit: '件', category: 'part' },
 ];
 
 const SELSYN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -31,7 +31,7 @@ const SELSYN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 定子：硅钢叠片，三相整步绕组按 120° 分布。 */
     id: 'make/selsyn-stator',
-    name: '自整角机定子制造',
+    name: 'Selsyn Stator Manufacturing', name_zh: '自整角机定子制造',
     produces: [{ item: 'std/selsyn-general/stator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(3, 5) }] },
@@ -42,7 +42,7 @@ const SELSYN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 转子：凸极单相绕组，轴上压两只铜滑环。 */
     id: 'make/selsyn-rotor',
-    name: '自整角机转子制造',
+    name: 'Selsyn Rotor Manufacturing', name_zh: '自整角机转子制造',
     produces: [{ item: 'std/selsyn-general/rotor', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(2, 5) }] },
@@ -57,7 +57,7 @@ const SELSYN_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 电刷与刷握：碳刷压在滑环上，铜引线引出转子电流。 */
     id: 'make/selsyn-brush-block',
-    name: '自整角机电刷与刷握制造',
+    name: 'Selsyn Brush and Brush Holder Manufacturing', name_zh: '自整角机电刷与刷握制造',
     produces: [{ item: 'std/selsyn-general/brush-block', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(1) }] },

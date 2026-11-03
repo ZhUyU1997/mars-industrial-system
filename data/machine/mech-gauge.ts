@@ -52,7 +52,7 @@ export const MECH_GAUGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/surface-plate-300',
-    name: '300 × 300 铸铁表面平板',
+    name: '300 × 300 Cast Iron Surface Plate', name_zh: '300 × 300 铸铁表面平板',
     unit: '件',
     category: 'part',
     props: [
@@ -81,7 +81,7 @@ export const MECH_GAUGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/dial-indicator-001',
-    name: '千分表',
+    name: 'Dial Indicator', name_zh: '千分表',
     unit: '把',
     category: 'part',
     props: [
@@ -110,7 +110,7 @@ export const MECH_GAUGE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/plug-gauge-set',
-    name: '塞规组',
+    name: 'Plug Gauge Set', name_zh: '塞规组',
     unit: '套',
     category: 'part',
     props: [
@@ -145,7 +145,7 @@ export const MECH_GAUGE_ROUTES: readonly Route[] = [
      * 不是某一块的实测值；终检那一步是抽检方法，不是读数入库。
      */
     id: 'make/surface-plate-300',
-    name: '300 × 300 铸铁表面平板制造',
+    name: '300 × 300 Cast Iron Surface Plate Manufacturing', name_zh: '300 × 300 铸铁表面平板制造',
     produces: [
       {
         item: 'plant/surface-plate-300',
@@ -241,7 +241,7 @@ export const MECH_GAUGE_ROUTES: readonly Route[] = [
      * 不是某一台的实测读数；量具能力见条目注释（U ≈ 1.5 µm，k = 2）。
      */
     id: 'make/dial-indicator-001',
-    name: '千分表制造',
+    name: 'Dial Indicator Manufacturing', name_zh: '千分表制造',
     produces: [
       {
         item: 'std/dial-indicator-001',
@@ -320,7 +320,7 @@ export const MECH_GAUGE_ROUTES: readonly Route[] = [
      * 量具能力见条目注释（U ≈ 0.6 µm，k = 2）。
      */
     id: 'make/plug-gauge-set',
-    name: '塞规组制造',
+    name: 'Plug Gauge Set Manufacturing', name_zh: '塞规组制造',
     produces: [
       {
         item: 'std/plug-gauge-set',

@@ -142,7 +142,7 @@ export const CAR_RESIST_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/acetalized-pva',
-    name: '缩醛化 PVA',
+    name: 'Acetalized PVA', name_zh: '缩醛化 PVA',
     unit: 'kg',
     category: 'material',
     props: [
@@ -167,7 +167,7 @@ export const CAR_RESIST_ROUTES: readonly Route[] = [
      * ⚠️ 平衡反应：水多了回头。抽水速率没有在线量具（缺口④）。
      */
     id: 'make/acetalized-pva',
-    name: '缩醛化 PVA 制备',
+    name: 'Acetalized PVA Production', name_zh: '缩醛化 PVA 制备',
     produces: [
       {
         item: 'mat/acetalized-pva',
@@ -241,7 +241,7 @@ export const CAR_RESIST_ROUTES: readonly Route[] = [
      * 3 wt% PAG 是"够酸、又不把膜变成盐"的那一档；`gives` 的五格见文件头 §四。
      */
     id: 'make/car-resist',
-    name: 'CAR 胶制备',
+    name: 'CAR Resist Production', name_zh: 'CAR 胶制备',
     produces: [
       {
         item: 'mat/car-resist',

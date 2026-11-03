@@ -117,7 +117,7 @@ export const CS_SB_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cesium',
-    name: '铯',
+    name: 'Caesium', name_zh: '铯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -146,7 +146,7 @@ export const CS_SB_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/antimony',
-    name: '锑',
+    name: 'Antimony', name_zh: '锑',
     unit: 'kg',
     category: 'material',
     props: [

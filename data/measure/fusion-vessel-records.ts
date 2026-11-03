@@ -15,7 +15,7 @@ export const FUSION_VESSEL_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-vessel-leak-record',
-    name: '真空室扇区漏率记录',
+    name: 'Vacuum Vessel Sector Leak Rate Record', name_zh: '真空室扇区漏率记录',
     unit: '份',
     category: 'part',
     props: [
@@ -31,7 +31,7 @@ export const FUSION_VESSEL_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-vessel-mass-record',
-    name: '真空室扇区质量记录',
+    name: 'Vacuum Vessel Sector Mass Record', name_zh: '真空室扇区质量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -47,7 +47,7 @@ export const FUSION_VESSEL_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-shield-thickness-record',
-    name: '屏蔽壁厚记录',
+    name: 'Shield Wall Thickness Record', name_zh: '屏蔽壁厚记录',
     unit: '份',
     category: 'part',
     props: [
@@ -65,7 +65,7 @@ export const FUSION_VESSEL_RECORD_ROUTES: readonly Route[] = [
      * assumed：检漏仪未标定，1e-9 是设计。
      */
     id: 'measure/fusion-vessel-leak',
-    name: '真空室扇区漏率测量',
+    name: 'Vacuum Vessel Sector Leak Rate Measurement', name_zh: '真空室扇区漏率测量',
     produces: [
       {
         item: 'mat/fusion-vessel-leak-record',
@@ -88,7 +88,7 @@ export const FUSION_VESSEL_RECORD_ROUTES: readonly Route[] = [
      * calculated：5,200 t / 9 扇区，不是称重。
      */
     id: 'measure/fusion-vessel-mass',
-    name: '真空室扇区质量测量',
+    name: 'Vacuum Vessel Sector Mass Measurement', name_zh: '真空室扇区质量测量',
     produces: [
       {
         item: 'mat/fusion-vessel-mass-record',
@@ -111,7 +111,7 @@ export const FUSION_VESSEL_RECORD_ROUTES: readonly Route[] = [
      * assumed：超声测厚未标定，1–3 m 标准块未建。
      */
     id: 'measure/fusion-shield-thickness',
-    name: '屏蔽壁厚测量',
+    name: 'Shield Wall Thickness Measurement', name_zh: '屏蔽壁厚测量',
     produces: [
       {
         item: 'mat/fusion-shield-thickness-record',

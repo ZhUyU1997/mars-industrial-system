@@ -163,7 +163,7 @@ export const PAG_ACTIVATOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/diphenyl-sulfoxide',
-    name: '二苯亚砜',
+    name: 'Diphenyl Sulfoxide', name_zh: '二苯亚砜',
     unit: 'kg',
     category: 'material',
     props: [
@@ -183,7 +183,7 @@ export const PAG_ACTIVATOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/phosphorus-pentoxide',
-    name: '五氧化二磷',
+    name: 'Phosphorus Pentoxide', name_zh: '五氧化二磷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -203,7 +203,7 @@ export const PAG_ACTIVATOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/triflic-anhydride',
-    name: '三氟甲磺酸酐',
+    name: 'Triflic Anhydride', name_zh: '三氟甲磺酸酐',
     unit: 'kg',
     category: 'material',
     props: [
@@ -228,7 +228,7 @@ export const PAG_ACTIVATOR_ROUTES: readonly Route[] = [
      * 工业靠钨酸钠/钛硅分子筛催化，本层两样都没有 ⇒ 只能按投料比卡（缺口①）。
      */
     id: 'make/diphenyl-sulfoxide',
-    name: '二苯亚砜制备',
+    name: 'Diphenyl Sulfoxide Production', name_zh: '二苯亚砜制备',
     produces: [
       {
         item: 'mat/diphenyl-sulfoxide',
@@ -305,7 +305,7 @@ export const PAG_ACTIVATOR_ROUTES: readonly Route[] = [
      * ⚠️ 产物吸潮即失效（P₄O₁₀ + H₂O → 2 HPO₃），所以出料要密闭、现做现用（缺口③）。
      */
     id: 'make/phosphorus-pentoxide',
-    name: '五氧化二磷制备',
+    name: 'Phosphorus Pentoxide Production', name_zh: '五氧化二磷制备',
     produces: [
       {
         item: 'mat/phosphorus-pentoxide',
@@ -357,7 +357,7 @@ export const PAG_ACTIVATOR_ROUTES: readonly Route[] = [
      * ⚠️ 全干：塔顶或接收瓶有一点水，酸酐就在冷凝器里变回酸（缺口②）。
      */
     id: 'make/triflic-anhydride',
-    name: '三氟甲磺酸酐制备',
+    name: 'Triflic Anhydride Production', name_zh: '三氟甲磺酸酐制备',
     produces: [
       {
         item: 'mat/triflic-anhydride',
@@ -441,7 +441,7 @@ export const PAG_ACTIVATOR_ROUTES: readonly Route[] = [
      * ⚠️ 淬灭要慢、要冷：未反应的 Tf₂O 遇水剧烈水解（缺口②）。
      */
     id: 'make/resist-pag-pummerer',
-    name: '三苯基锍三氟甲磺酸盐制备',
+    name: 'Triphenylsulfonium Triflate Production', name_zh: '三苯基锍三氟甲磺酸盐制备',
     produces: [
       {
         item: 'mat/pag-triphenylsulfonium-otf',

@@ -26,14 +26,14 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const GROUND_SWITCH_PARTS: readonly Item[] = [
-  { id: 'plant/pd-test-cell/ground-switch/blade', name: 'PD 铜闸刀', unit: '件', category: 'part' },
-  { id: 'plant/pd-test-cell/ground-switch/busbar', name: 'PD 铜排', unit: '件', category: 'part' },
-  { id: 'plant/pd-test-cell/ground-switch/braid', name: 'PD 接地编织带', unit: '件', category: 'part' },
-  { id: 'plant/pd-test-cell/ground-switch/contact-set', name: 'PD 银触点与端子组', unit: '套', category: 'part' },
-  { id: 'plant/pd-test-cell/ground-switch/hinge', name: '45 钢铰链', unit: '件', category: 'part' },
-  { id: 'plant/pd-test-cell/ground-switch/operating-rod', name: 'PD 酚醛操作杆', unit: '件', category: 'part' },
-  { id: 'plant/pd-test-cell/ground-switch/base-frame', name: 'PD 钢底座与框架', unit: '件', category: 'part' },
-  { id: 'plant/pd-test-cell/ground-switch/fastener-set', name: 'PD 不锈钢紧固件组', unit: '套', category: 'part' },
+  { id: 'plant/pd-test-cell/ground-switch/blade', name: 'PD Copper Blade', name_zh: 'PD 铜闸刀', unit: '件', category: 'part' },
+  { id: 'plant/pd-test-cell/ground-switch/busbar', name: 'PD Copper Busbar', name_zh: 'PD 铜排', unit: '件', category: 'part' },
+  { id: 'plant/pd-test-cell/ground-switch/braid', name: 'PD Grounding Braid', name_zh: 'PD 接地编织带', unit: '件', category: 'part' },
+  { id: 'plant/pd-test-cell/ground-switch/contact-set', name: 'PD Silver Contact and Terminal Set', name_zh: 'PD 银触点与端子组', unit: '套', category: 'part' },
+  { id: 'plant/pd-test-cell/ground-switch/hinge', name: '45 Steel Hinge', name_zh: '45 钢铰链', unit: '件', category: 'part' },
+  { id: 'plant/pd-test-cell/ground-switch/operating-rod', name: 'PD Phenolic Operating Rod', name_zh: 'PD 酚醛操作杆', unit: '件', category: 'part' },
+  { id: 'plant/pd-test-cell/ground-switch/base-frame', name: 'PD Steel Base and Frame', name_zh: 'PD 钢底座与框架', unit: '件', category: 'part' },
+  { id: 'plant/pd-test-cell/ground-switch/fastener-set', name: 'PD Stainless Steel Fastener Set', name_zh: 'PD 不锈钢紧固件组', unit: '套', category: 'part' },
 ];
 
 const GROUND_SWITCH_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -42,7 +42,7 @@ const GROUND_SWITCH_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 铜闸刀：30×6×400 mm，0.64 kg，铣刀口与银触点槽。 */
     id: 'make/ground-switch-blade',
-    name: 'PD 铜闸刀制造',
+    name: 'PD Copper Blade Manufacturing', name_zh: 'PD 铜闸刀制造',
     produces: [{ item: 'plant/pd-test-cell/ground-switch/blade', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(16, 25) }] }],
     performedBy: 'plant/milling-machine',
@@ -50,7 +50,7 @@ const GROUND_SWITCH_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 铜排：0.8 m，1.8 kg，连接闸刀与接地端子。 */
     id: 'make/ground-switch-busbar',
-    name: 'PD 铜排制造',
+    name: 'PD Copper Busbar Manufacturing', name_zh: 'PD 铜排制造',
     produces: [{ item: 'plant/pd-test-cell/ground-switch/busbar', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(9, 5) }] }],
     performedBy: 'plant/milling-machine',
@@ -58,7 +58,7 @@ const GROUND_SWITCH_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 接地编织带：0.45 kg，2 m，软连接。 */
     id: 'make/ground-switch-braid',
-    name: 'PD 接地编织带制造',
+    name: 'PD Grounding Braid Manufacturing', name_zh: 'PD 接地编织带制造',
     produces: [{ item: 'plant/pd-test-cell/ground-switch/braid', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(9, 20) }] }],
     performedBy: 'plant/robot',
@@ -66,7 +66,7 @@ const GROUND_SWITCH_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 银触点与端子组：铜 1.5 kg + 银 0.05 kg，两对触点。 */
     id: 'make/ground-switch-contact-set',
-    name: 'PD 银触点与端子组制造',
+    name: 'PD Silver Contact and Terminal Set Manufacturing', name_zh: 'PD 银触点与端子组制造',
     produces: [{ item: 'plant/pd-test-cell/ground-switch/contact-set', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(3, 2) }] },
@@ -80,7 +80,7 @@ const GROUND_SWITCH_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 45 钢铰链：1.4 kg，销 φ12，与操作杆配钻销孔。 */
     id: 'make/ground-switch-hinge',
-    name: '45 钢铰链制造',
+    name: '45 Steel Hinge Manufacturing', name_zh: '45 钢铰链制造',
     produces: [{ item: 'plant/pd-test-cell/ground-switch/hinge', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(7, 5) }] }],
     steps: [
@@ -91,7 +91,7 @@ const GROUND_SWITCH_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 酚醛操作杆：0.7 kg，φ25/φ15×0.8 m，带手柄与绝缘隔板。 */
     id: 'make/ground-switch-operating-rod',
-    name: 'PD 酚醛操作杆制造',
+    name: 'PD Phenolic Operating Rod Manufacturing', name_zh: 'PD 酚醛操作杆制造',
     produces: [{ item: 'plant/pd-test-cell/ground-switch/operating-rod', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/phenolic-resin', qty: q(7, 10) }] }],
     performedBy: 'lathe',
@@ -99,7 +99,7 @@ const GROUND_SWITCH_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 钢底座与框架：4.5 kg，铣联锁缺口，与门框联锁板配作。 */
     id: 'make/ground-switch-base-frame',
-    name: 'PD 钢底座与框架制造',
+    name: 'PD Steel Base and Frame Manufacturing', name_zh: 'PD 钢底座与框架制造',
     produces: [{ item: 'plant/pd-test-cell/ground-switch/base-frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(9, 2) }] }],
     performedBy: 'plant/milling-machine',
@@ -107,7 +107,7 @@ const GROUND_SWITCH_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 不锈钢紧固件组：2 kg，螺栓、弹簧垫、接地端子。 */
     id: 'make/ground-switch-fastener-set',
-    name: 'PD 不锈钢紧固件组制造',
+    name: 'PD Stainless Steel Fastener Set Manufacturing', name_zh: 'PD 不锈钢紧固件组制造',
     produces: [{ item: 'plant/pd-test-cell/ground-switch/fastener-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(2) }] }],
     performedBy: 'lathe',

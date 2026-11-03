@@ -69,7 +69,7 @@ export const SEED_MACHINE_PART_ROUTES: readonly Route[] = [
      * 本层的自准直仪只到 0.02″ 角度，没有长心棒与桥板，不冒充。
      */
     id: 'measure/lathe-headstock',
-    name: '主轴箱测量',
+    name: 'Headstock Measurement', name_zh: '主轴箱测量',
     produces: [
       {
         item: 'lathe/headstock',
@@ -137,7 +137,7 @@ export const SEED_MACHINE_PART_ROUTES: readonly Route[] = [
      * U(k=2) ≈ 4 µm。
      */
     id: 'measure/lathe-carriage',
-    name: '溜板测量',
+    name: 'Carriage Measurement', name_zh: '溜板测量',
     produces: [
       {
         item: 'lathe/carriage',
@@ -193,7 +193,7 @@ export const SEED_MACHINE_PART_ROUTES: readonly Route[] = [
      * 3 µm 下限与 U 同量级，所以这条只保证 3–6 µm 带，不把 3 µm 当硬线。
      */
     id: 'measure/lathe-tool-post',
-    name: '刀架测量',
+    name: 'Tool Post Measurement', name_zh: '刀架测量',
     produces: [
       {
         item: 'lathe/tool-post',
@@ -254,7 +254,7 @@ export const SEED_MACHINE_PART_ROUTES: readonly Route[] = [
      * 另行判，不在这条窗口里。
      */
     id: 'measure/lathe-feed-gearbox',
-    name: '进给箱测量',
+    name: 'Feed Box Measurement', name_zh: '进给箱测量',
     produces: [
       {
         item: 'lathe/feed-gearbox',
@@ -310,7 +310,7 @@ export const SEED_MACHINE_PART_ROUTES: readonly Route[] = [
      * 不交折弯角度与焊缝强度：本层没有角度尺/拉力机条目。
      */
     id: 'measure/lathe-guard',
-    name: '防护罩测量',
+    name: 'Guard Measurement', name_zh: '防护罩测量',
     produces: [
       {
         item: 'lathe/guard',
@@ -360,7 +360,7 @@ export const SEED_MACHINE_PART_ROUTES: readonly Route[] = [
      * 超速台，本层没有）；φ400 只到 ~1670 r/min（树脂结合剂 35 m/s 上限）。
      */
     id: 'measure/grinder-wheel',
-    name: '磨床砂轮测量',
+    name: 'Grinder Grinding Wheel Measurement', name_zh: '磨床砂轮测量',
     produces: [
       {
         item: 'plant/grinder/wheel',
@@ -409,7 +409,7 @@ export const SEED_MACHINE_PART_ROUTES: readonly Route[] = [
      * U(k=2) ≈ 4 µm。
      */
     id: 'measure/grinder-work-head',
-    name: '磨床工件头架测量',
+    name: 'Grinder Work Headstock Measurement', name_zh: '磨床工件头架测量',
     produces: [
       {
         item: 'plant/grinder/work-head',
@@ -471,7 +471,7 @@ export const SEED_MACHINE_PART_ROUTES: readonly Route[] = [
      * 量块组最长 100 mm，300 mm 是分三段搭接，搭接误差计入 U。
      */
     id: 'measure/grinder-feed-screw',
-    name: '磨床进给丝杠测量',
+    name: 'Grinder Feed Lead Screw Measurement', name_zh: '磨床进给丝杠测量',
     produces: [
       {
         item: 'plant/grinder/feed-screw',
@@ -538,7 +538,7 @@ export const SEED_MACHINE_PART_ROUTES: readonly Route[] = [
      * 没有测功机，不测负载效率与温升。这两项是下一层的缺口。
      */
     id: 'measure/motor-7.5kw-4p',
-    name: '7.5 kW 四极电机测量',
+    name: '7.5 kW Four-Pole Motor Measurement', name_zh: '7.5 kW 四极电机测量',
     produces: [
       {
         item: 'std/motor-7.5kw-4p',

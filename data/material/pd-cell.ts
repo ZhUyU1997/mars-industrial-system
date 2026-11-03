@@ -33,7 +33,7 @@ export const PD_CELL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pd-test-cell/shielded-hall',
-    name: 'PD 屏蔽厅',
+    name: 'PD Shielded Hall', name_zh: 'PD 屏蔽厅',
     unit: '件',
     category: 'part',
     props: [
@@ -48,7 +48,7 @@ export const PD_CELL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pd-test-cell/ground-grid',
-    name: 'PD 接地网',
+    name: 'PD Grounding Grid', name_zh: 'PD 接地网',
     unit: '件',
     category: 'part',
     props: [
@@ -62,7 +62,7 @@ export const PD_CELL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pd-test-cell/line-filter',
-    name: 'PD 三相进线滤波器',
+    name: 'PD Three-Phase Line Filter', name_zh: 'PD 三相进线滤波器',
     unit: '件',
     category: 'part',
     props: [
@@ -80,7 +80,7 @@ export const PD_CELL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pd-test-cell',
-    name: 'PD 试验舱',
+    name: 'PD Test Cell', name_zh: 'PD 试验舱',
     unit: '座',
     category: 'machine',
     props: [
@@ -116,7 +116,7 @@ export const PD_CELL_ROUTES: readonly Route[] = [
      *   钢 1200 + 铜 20 + 铝 10 → 屏蔽厅 1
      */
     id: 'make/pd-shielded-hall',
-    name: 'PD 屏蔽厅制造',
+    name: 'PD Shielded Hall Manufacturing', name_zh: 'PD 屏蔽厅制造',
     produces: [
       {
         item: 'plant/pd-test-cell/shielded-hall',
@@ -157,7 +157,7 @@ export const PD_CELL_ROUTES: readonly Route[] = [
      *   铜 100 + 钢 20 → 接地网 1
      */
     id: 'make/pd-ground-grid',
-    name: 'PD 接地网制造',
+    name: 'PD Grounding Grid Manufacturing', name_zh: 'PD 接地网制造',
     produces: [
       {
         item: 'plant/pd-test-cell/ground-grid',
@@ -185,7 +185,7 @@ export const PD_CELL_ROUTES: readonly Route[] = [
      *   薄膜电容 6 + 铜 10 + 钢 20 → 滤波器 1
      */
     id: 'make/pd-line-filter',
-    name: 'PD 三相进线滤波器制造',
+    name: 'PD Three-Phase Line Filter Manufacturing', name_zh: 'PD 三相进线滤波器制造',
     produces: [
       {
         item: 'plant/pd-test-cell/line-filter',
@@ -221,7 +221,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/pd-test-cell',
-    name: 'PD 试验舱装配',
+    name: 'PD Test Cell Assembly', name_zh: 'PD 试验舱装配',
     produces: [{
       item: 'plant/pd-test-cell',
       qty: q(1),

@@ -251,7 +251,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/glass-frit',
-    name: '玻璃粉',
+    name: 'Glass Frit', name_zh: '玻璃粉',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'd50', kind: 'range', min: 0.3, max: 8, unit: 'µm', dir: 'atMost' }],
@@ -273,7 +273,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/resistor-paste',
-    name: '厚膜电阻浆',
+    name: 'Thick-Film Resistor Paste', name_zh: '厚膜电阻浆',
     unit: 'kg',
     category: 'material',
     props: [
@@ -300,7 +300,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/silver-paste',
-    name: '银浆',
+    name: 'Silver Paste', name_zh: '银浆',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'silverContent', kind: 'range', min: 60, max: 90, unit: '%', dir: 'atLeast' }],
@@ -324,7 +324,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/alumina-substrate-general',
-    name: '氧化铝基板',
+    name: 'Alumina Substrate', name_zh: '氧化铝基板',
     unit: '件',
     category: 'part',
     props: [
@@ -357,7 +357,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/chip-resistor-general',
-    name: '片式厚膜电阻',
+    name: 'Thick-Film Chip Resistor', name_zh: '片式厚膜电阻',
     unit: '件',
     category: 'part',
     props: [
@@ -388,7 +388,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/resistor-network-general',
-    name: '排阻',
+    name: 'Resistor Network', name_zh: '排阻',
     unit: '件',
     category: 'part',
     props: [
@@ -423,7 +423,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ferrite-powder',
-    name: '软磁铁氧体粉',
+    name: 'Soft Ferrite Powder', name_zh: '软磁铁氧体粉',
     unit: 'kg',
     category: 'material',
     props: [
@@ -450,7 +450,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ferrite-tape',
-    name: '流延生片',
+    name: 'Tape Casting Green Sheet', name_zh: '流延生片',
     unit: 'kg',
     category: 'material',
     props: [
@@ -474,7 +474,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fine-copper-wire',
-    name: '细铜线',
+    name: 'Fine Copper Wire', name_zh: '细铜线',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'diameter', kind: 'range', min: 15, max: 200, unit: 'µm' }],
@@ -498,7 +498,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/ferrite-core-general',
-    name: '铁氧体磁芯',
+    name: 'Ferrite Core', name_zh: '铁氧体磁芯',
     unit: '件',
     category: 'part',
     props: [{ param: 'permeability', kind: 'range', min: 20, max: 5000, unit: '1' }],
@@ -518,7 +518,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/chip-bead-general',
-    name: '叠层片式磁珠',
+    name: 'Multilayer Chip Bead', name_zh: '叠层片式磁珠',
     unit: '件',
     category: 'part',
     props: [
@@ -548,7 +548,7 @@ export const CHIPPASSIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/chip-inductor-general',
-    name: '绕线片式电感',
+    name: 'Wire-Wound Chip Inductor', name_zh: '绕线片式电感',
     unit: '件',
     category: 'part',
     props: [
@@ -585,7 +585,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 陶瓷衬里与刚玉球 —— 这是"借设备"的真实代价，写在这里而不是藏起来。
      */
     id: 'make/glass-frit',
-    name: '玻璃粉制备',
+    name: 'Glass Frit Production', name_zh: '玻璃粉制备',
     produces: [
       { item: 'mat/glass-frit', qty: q(1000), gives: [{ param: 'd50', kind: 'range', min: 1, max: 5 }] },
       { item: 'mat/tailings', qty: q(50) },
@@ -639,7 +639,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 那就是 ±300 的 TCR。**这条路线交的每一批 TCR 都不一样，这是它的定义。**
      */
     id: 'make/resistor-paste-tin',
-    name: '锡系电阻浆制备',
+    name: 'Tin Resistor Paste Production', name_zh: '锡系电阻浆制备',
     produces: [
       {
         item: 'mat/resistor-paste',
@@ -703,7 +703,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 质量：250 + 150 + 600 = 1000 ✓
      */
     id: 'make/resistor-paste-carbon',
-    name: '碳系电阻浆制备',
+    name: 'Carbon Resistor Paste Production', name_zh: '碳系电阻浆制备',
     produces: [
       {
         item: 'mat/resistor-paste',
@@ -756,7 +756,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 750 + 100 + 150 = 1000 ✓
      */
     id: 'make/silver-paste',
-    name: '银浆制备',
+    name: 'Silver Paste Production', name_zh: '银浆制备',
     produces: [
       { item: 'mat/silver-paste', qty: q(1000), gives: [{ param: 'silverContent', kind: 'range', min: 70, max: 80 }] },
     ],
@@ -802,7 +802,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 不是纯固相 —— 所以助烧剂是必需的，不是"加一点更好"。
      */
     id: 'make/alumina-substrate',
-    name: '氧化铝基板制造',
+    name: 'Alumina Substrate Manufacturing', name_zh: '氧化铝基板制造',
     produces: [
       {
         item: 'std/alumina-substrate-general',
@@ -903,7 +903,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 所以只能敞炉烧、靠炉口进气，**没有任何氧分压读数**（降级③）。
      */
     id: 'make/chip-resistor',
-    name: '片式厚膜电阻制造',
+    name: 'Thick-Film Chip Resistor Manufacturing', name_zh: '片式厚膜电阻制造',
     produces: [
       {
         item: 'std/chip-resistor-general',
@@ -1000,7 +1000,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 多 8 倍 —— 因为每只排阻有 4 个电阻体 + 3 段内部互连，面积 4 倍以上。
      */
     id: 'make/resistor-network',
-    name: '排阻制造',
+    name: 'Resistor Network Manufacturing', name_zh: '排阻制造',
     produces: [
       {
         item: 'std/resistor-network-general',
@@ -1103,7 +1103,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 它比 Zn 系的 µi 好 5–12 倍，所以这条路线值得留着。
      */
     id: 'make/ferrite-powder-nizn',
-    name: 'NiZn 铁氧体粉制备',
+    name: 'NiZn Ferrite Powder Production', name_zh: 'NiZn 铁氧体粉制备',
     produces: [
       {
         item: 'mat/ferrite-powder',
@@ -1172,7 +1172,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * **电感**（要低频储能）合适 —— 但叠层磁珠还有共烧温度的问题（见下一条）。
      */
     id: 'make/ferrite-powder-zn',
-    name: '锌铁氧体粉制备',
+    name: 'Zinc Ferrite Powder Production', name_zh: '锌铁氧体粉制备',
     produces: [
       {
         item: 'mat/ferrite-powder',
@@ -1244,7 +1244,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 当电感不行（Q 会掉到 20 以下）。
      */
     id: 'make/ferrite-powder-zncu',
-    name: '锌铜铁氧体粉制备',
+    name: 'Zinc-Copper Ferrite Powder Production', name_zh: '锌铜铁氧体粉制备',
     produces: [
       {
         item: 'mat/ferrite-powder',
@@ -1308,7 +1308,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 好 3 倍（能卷起来）。要一条聚乙烯醇链 —— 本层只有酚醛与聚苯乙烯。
      */
     id: 'make/ferrite-tape',
-    name: '流延生片制备',
+    name: 'Tape Casting Green Sheet Production', name_zh: '流延生片制备',
     produces: [
       {
         item: 'mat/ferrite-tape',
@@ -1366,7 +1366,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 那个"分开"就是 `plant/winder` 进这条路线的原因（第 4 道工序）。
      */
     id: 'make/fine-copper-wire',
-    name: '细铜线制备',
+    name: 'Fine Copper Wire Production', name_zh: '细铜线制备',
     produces: [
       { item: 'mat/fine-copper-wire', qty: q(1000), gives: [{ param: 'diameter', kind: 'range', min: 25, max: 120 }] },
     ],
@@ -1421,7 +1421,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 同批粉里烧（一炉埋一炉）—— 这是"用粉换锌"，不是精度问题。
      */
     id: 'make/ferrite-core',
-    name: '铁氧体磁芯制造',
+    name: 'Ferrite Core Manufacturing', name_zh: '铁氧体磁芯制造',
     produces: [
       { item: 'std/ferrite-core-general', qty: q(1000), gives: [{ param: 'permeability', kind: 'range', min: 40, max: 120 }] },
     ],
@@ -1488,7 +1488,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 残碳 0.2 % 就能把 µi 打掉 30 %，而这件事在本层**看不见**。
      */
     id: 'make/chip-bead',
-    name: '叠层片式磁珠制造',
+    name: 'Multilayer Chip Bead Manufacturing', name_zh: '叠层片式磁珠制造',
     produces: [
       {
         item: 'std/chip-bead-general',
@@ -1580,7 +1580,7 @@ export const CHIPPASSIVE_ROUTES: readonly Route[] = [
      * 20 µm 那一档要的不是设备，是**在线测径 + 闭环张力**，本层两样都没有。
      */
     id: 'make/chip-inductor',
-    name: '绕线片式电感制造',
+    name: 'Wire-Wound Chip Inductor Manufacturing', name_zh: '绕线片式电感制造',
     produces: [
       {
         item: 'std/chip-inductor-general',

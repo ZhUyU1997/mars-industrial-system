@@ -126,7 +126,7 @@ export const MARS: Description = {
      * （大气无限多）。模型只有质量、没有体积与时间，把这条账整个吞掉了 ——
      * 数字写在这里，就是那个"记住"。
      */
-    { id: 'mars/atmosphere', name: '大气', unit: 'kg', category: 'material' },
+    { id: 'mars/atmosphere', name: 'Atmosphere', name_zh: '大气', unit: 'kg', category: 'material' },
 
     /**
      * 风化层。覆盖全球，厚 3–10 m，成分见文件头。
@@ -134,7 +134,7 @@ export const MARS: Description = {
      * 一座露天的、到哪都能挖的矿。铁、铝、镁、钙、硫、钛、钠、钾全在里面，
      * 但都是氧化物与硅酸盐的结合态 —— 把元素从氧和硅里拽出来，就是冶金。
      */
-    { id: 'mars/regolith', name: '风化层', unit: 'kg', category: 'material',
+    { id: 'mars/regolith', name: 'Regolith', name_zh: '风化层', unit: 'kg', category: 'material',
     // 氟含量三个口径差 17 倍（50 / 447 / 833）。解法不是删掉两个数，
     // 是把它变成属性窗口：区间 50–833，取哪个由路线声明。
     props: [{ param: 'fluorine', kind: 'range', min: 50, max: 833, unit: 'ppm' }, { param: 'alumina', kind: 'range', min: 8, max: 10, unit: '%' }] },
@@ -145,7 +145,7 @@ export const MARS: Description = {
      * **选址第一原则是水，不是矿。** 水是氢氧来源、化工溶剂、生命维持，
      * 也是把风化层里那些氧化物还原掉的前提 —— 有氢才有还原剂。
      */
-    { id: 'mars/water-ice', name: '水冰', unit: 'kg', category: 'material' },
+    { id: 'mars/water-ice', name: 'Water Ice', name_zh: '水冰', unit: 'kg', category: 'material' },
 
     /**
      * 石膏。CaSO₄·2H₂O，结晶水占 21 wt%，在硫酸盐矿相里分布最广。
@@ -155,7 +155,7 @@ export const MARS: Description = {
      * 磷肥都从这里起步 —— 但硫全锁在硫酸盐里，要热分解成 SO₂（900 °C 以上）
      * 才拿得到，这一步在 data/material/chain.ts 的 make/so2 里。
      */
-    { id: 'mars/gypsum', name: '石膏', unit: 'kg', category: 'material' },
+    { id: 'mars/gypsum', name: 'Gypsum', name_zh: '石膏', unit: 'kg', category: 'material' },
 
     /**
      * 高氯酸盐。风化层里 Cl 占 0.5–1%，主要以 ClO₄⁻ 形式存在。
@@ -164,7 +164,7 @@ export const MARS: Description = {
      * 接触有机物会烧起来，所以任何用土的地方都得先洗掉它。
      * 洗下来反而是原料：ClO₄⁻ + 4H₂ → Cl⁻ + 4H₂O。
      */
-    { id: 'mars/perchlorate', name: '高氯酸盐', unit: 'kg', category: 'material' },
+    { id: 'mars/perchlorate', name: 'Perchlorate', name_zh: '高氯酸盐', unit: 'kg', category: 'material' },
 
     /**
      * 卤水。部分区域的氯化物／高氯酸盐卤水，可直接抽采。
@@ -172,7 +172,7 @@ export const MARS: Description = {
      * 溶解态、已浓缩，比风化的矿物更容易处理 —— 蒸发、结晶、电解都用得上。
      * 也是水的一处来源，代价是盐负荷高。
      */
-    { id: 'mars/brine', name: '卤水', unit: 'kg', category: 'material' },
+    { id: 'mars/brine', name: 'Brine', name_zh: '卤水', unit: 'kg', category: 'material' },
   ],
 
   // 没有路线不是缺失，是定义：行星给的东西挖就有，不用造。

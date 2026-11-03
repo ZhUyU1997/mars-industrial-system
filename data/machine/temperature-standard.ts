@@ -17,7 +17,7 @@ export const TEMPERATURE_STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/temperature-standard',
-    name: '温度标准',
+    name: 'Temperature Standard', name_zh: '温度标准',
     unit: '台',
     category: 'machine',
     // 单件标准：恒温槽、热偶、读数按整台装配，不再拆独立零件，标 monolithic。
@@ -38,7 +38,7 @@ export const TEMPERATURE_STANDARD_ROUTES: readonly Route[] = [
      * 0–1100 °C 是设计；冰点/沸点未在火星复现，不是实测。
      */
     id: 'make/temperature-standard',
-    name: '温度标准制造',
+    name: 'Temperature Standard Manufacturing', name_zh: '温度标准制造',
     produces: [
       {
         item: 'plant/temperature-standard',

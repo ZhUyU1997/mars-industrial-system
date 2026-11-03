@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const RTA_ZONED_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/rta-zoned-measure-record',
-    name: '九区 RTA 测量记录',
+    name: 'Nine-Zone RTA Measurement Record', name_zh: '九区 RTA 测量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -21,7 +21,7 @@ export const RTA_ZONED_MEASURE_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/rta-zone-control-local-measure-record',
-    name: '8 区本地控制记录',
+    name: '8-Zone Local Control Record', name_zh: '8 区本地控制记录',
     unit: '份',
     category: 'part',
     props: [
@@ -37,7 +37,7 @@ export const RTA_ZONED_MEASURE_ROUTES: readonly Route[] = [
      * **9 区 zoned：49 点片读片内均匀性 2–3 K。**
      */
     id: 'measure/rta-zoned-uniformity-measure',
-    name: '九区 RTA 测量',
+    name: 'Nine-Zone RTA Measurement', name_zh: '九区 RTA 测量',
     produces: [{
       item: 'mat/rta-zoned-measure-record',
       qty: q(1),
@@ -67,7 +67,7 @@ export const RTA_ZONED_MEASURE_ROUTES: readonly Route[] = [
      * **8 区本地控制：49 点片按 8 区归并，读区间均匀性 0–8 K。**
      */
     id: 'measure/rta-zone-control-local-uniformity',
-    name: '8 区本地控制测量',
+    name: '8-Zone Local Control Measurement', name_zh: '8 区本地控制测量',
     produces: [{
       item: 'mat/rta-zone-control-local-measure-record',
       qty: q(1),

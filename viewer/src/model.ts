@@ -1,5 +1,6 @@
 import type { LinkKind } from './theme.ts';
 import { itemColor, routeColor } from './theme.ts';
+import { t } from './i18n.ts';
 
 export interface PropLite {
   p: string;
@@ -29,8 +30,10 @@ export interface ComponentRaw {
 
 export interface ItemRaw {
   id: string;
-  /** 中文展示名。旧 graph.json 没有这个字段时退回 id 尾段。 */
+  /** 英文展示名。旧 graph.json 没有这个字段时退回 id 尾段。 */
   name?: string;
+  /** 中文展示名。旧 graph.json 没有这个字段时退回 `name`。 */
+  name_zh?: string;
   cat: string;
   unit?: string;
   mass?: number;
@@ -60,8 +63,10 @@ export interface OptionRaw {
 
 export interface RouteRaw {
   id: string;
-  /** 中文展示名。旧 graph.json 没有这个字段时退回 id 尾段。 */
+  /** 英文展示名。旧 graph.json 没有这个字段时退回 id 尾段。 */
   name?: string;
+  /** 中文展示名。旧 graph.json 没有这个字段时退回 `name`。 */
+  name_zh?: string;
   kind: 'make' | 'measure';
   p: TermRaw[];
   u: { anyOf: OptionRaw[] }[];
@@ -97,7 +102,10 @@ export interface GraphFile {
 export interface ViewerNode {
   id: string;
   kind: 'item' | 'route';
+  /** 当前英文展示名。 */
   label: string;
+  /** 中文展示名，切换语言时使用。 */
+  labelZh: string;
   cat: string;
   color: string;
   r: number;
@@ -183,6 +191,7 @@ export function buildModel(file: GraphFile): ViewerModel {
       id: it.id,
       kind: 'item',
       label: it.name || labelOf(it.id),
+      labelZh: it.name_zh || it.name || labelOf(it.id),
       cat,
       color: itemColor(it.cat, Boolean(it.iface)),
       r: 3,
@@ -205,6 +214,7 @@ export function buildModel(file: GraphFile): ViewerModel {
       id: r.id,
       kind: 'route',
       label: r.name || (r.id.startsWith('measure/') ? r.id.slice(8) : labelOf(r.id)),
+      labelZh: r.name_zh || r.name || (r.id.startsWith('measure/') ? r.id.slice(8) : labelOf(r.id)),
       cat: r.kind === 'measure' ? 'measure' : 'route',
       color: routeColor(r.kind),
       r: 2,
@@ -335,7 +345,7 @@ export async function loadModel(): Promise<ViewerModel> {
   const url = `${import.meta.env.BASE_URL}graph.json`;
   const res = await fetch(url, { cache: 'no-store' });
   if (!res.ok) {
-    throw new Error(`${url} 读取失败（HTTP ${res.status}）。先运行 pnpm data 生成。`);
+    throw new Error(t('error.graph', { url, status: res.status }));
   }
   const file = (await res.json()) as GraphFile;
   return buildModel(file);

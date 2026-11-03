@@ -571,7 +571,7 @@ export const UNBLOCK_RAD_HEADER_ROUTES: readonly Route[] = [
      *     "差多少"变成读数（对研 0.02、孔距、孔径）。
      */
     id: 'make/radiator-header-cast',
-    name: '散热器集管与分配器制造',
+    name: 'Radiator Header and Manifold Manufacturing', name_zh: '散热器集管与分配器制造',
     produces: [{ item: 'plant/radiator/header', qty: q(1) }],
     /**
      * 进 5 034.5 kg，出 1 件（3 150.7 kg）。每一笔的用途与算式写在下面。

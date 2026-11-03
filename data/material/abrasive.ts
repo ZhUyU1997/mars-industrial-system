@@ -57,7 +57,7 @@ export const ABRASIVE_ITEMS: readonly Item[] = [
    * 它是这套体系里唯一能把钢磨到微米级的材料 —— 而磨削又是轴承、主轴、
    * 量块的必经工序。**没有它，前面那些"精度"全是空话。**
    */
-  { id: 'mat/fused-alumina', name: '刚玉', unit: 'kg', category: 'material' },
+  { id: 'mat/fused-alumina', name: 'Corundum', name_zh: '刚玉', unit: 'kg', category: 'material' },
 
   /**
    * 碳化硅（绿）。**这是磨硬质合金的那个。**
@@ -73,7 +73,7 @@ export const ABRASIVE_ITEMS: readonly Item[] = [
    * 不是工业的 99% 绿碳化硅（那要 2200–2500 °C 的艾奇逊炉）。磨削慢、损耗大，
    * 但比刚玉强。
    */
-  { id: 'mat/silicon-carbide', name: '碳化硅', unit: 'kg', category: 'material' },
+  { id: 'mat/silicon-carbide', name: 'Silicon Carbide', name_zh: '碳化硅', unit: 'kg', category: 'material' },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -88,7 +88,7 @@ export const ARC_FURNACE_PARTS: readonly Item[] = [
    * 所以炉壳要水冷 —— 不冷，壳会被熔穿；太冷，壳太厚、有效容积太小。
    * 这个平衡是这台炉子唯一的手艺。
    */
-  { id: 'plant/arc-furnace/shell', name: '电弧炉炉壳', unit: '件', category: 'part' },
+  { id: 'plant/arc-furnace/shell', name: 'Arc Furnace Shell', name_zh: '电弧炉炉壳', unit: '件', category: 'part' },
 
   /**
    * 导电臂与母线。把几万安的电流送到电极上，臂要水冷、要能升降。
@@ -102,20 +102,20 @@ export const ARC_FURNACE_PARTS: readonly Item[] = [
    * 所以在短网这件上，`unblock-arc-busbar.ts` 选了**铜叠片**，不是铝。
    * 这个条目的注释没删 —— 那条判断在"不大挠动、不高温"的母线上仍然成立。
    */
-  { id: 'plant/arc-furnace/busbar', name: '电弧炉导电臂与母线', unit: '件', category: 'part' },
+  { id: 'plant/arc-furnace/busbar', name: 'Arc Furnace Conducting Arm and Busbar', name_zh: '电弧炉导电臂与母线', unit: '件', category: 'part' },
 
   /** 倾动机构。炉体要能倾倒出料，几吨的铰座与液压缸。 */
-  { id: 'plant/arc-furnace/tilting', name: '电弧炉倾动机构', unit: '件', category: 'part' },
+  { id: 'plant/arc-furnace/tilting', name: 'Arc Furnace Tilting Mechanism', name_zh: '电弧炉倾动机构', unit: '件', category: 'part' },
 
   /** 烟罩。熔炼冒的是 CO 与烟尘，罩住抽走 —— 它同时挡辐射热。 */
-  { id: 'plant/arc-furnace/hood', name: '电弧炉烟罩', unit: '件', category: 'part' },
+  { id: 'plant/arc-furnace/hood', name: 'Arc Furnace Hood', name_zh: '电弧炉烟罩', unit: '件', category: 'part' },
 ];
 
 export const ARC_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 炉壳。钢板卷焊成夹套，水冷通道焊在外面；内壁不处理，反正要挂渣。 */
     id: 'make/arc-furnace-shell',
-    name: '电弧炉炉壳制造',
+    name: 'Arc Furnace Shell Manufacturing', name_zh: '电弧炉炉壳制造',
     produces: [{ item: 'plant/arc-furnace/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -124,7 +124,7 @@ export const ARC_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 导电臂。铝排焊接 + 水冷管，末端夹持电极的铜瓦。 */
     id: 'make/arc-furnace-busbar',
-    name: '电弧炉导电臂与母线制造',
+    name: 'Arc Furnace Conducting Arm and Busbar Manufacturing', name_zh: '电弧炉导电臂与母线制造',
     produces: [{ item: 'plant/arc-furnace/busbar', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/aluminium', qty: q(1) }] },
@@ -136,7 +136,7 @@ export const ARC_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 倾动机构。40Cr 铰座 + 液压缸 + 齿圈，车镗磨。 */
     id: 'make/arc-furnace-tilting',
-    name: '电弧炉倾动机构制造',
+    name: 'Arc Furnace Tilting Mechanism Manufacturing', name_zh: '电弧炉倾动机构制造',
     produces: [{ item: 'plant/arc-furnace/tilting', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] },
@@ -148,7 +148,7 @@ export const ARC_FURNACE_ROUTES: readonly Route[] = [
   {
     /** 烟罩。薄板折弯焊成，接排烟管；内衬矿棉挡辐射热。 */
     id: 'make/arc-furnace-hood',
-    name: '电弧炉烟罩制造',
+    name: 'Arc Furnace Hood Manufacturing', name_zh: '电弧炉烟罩制造',
     produces: [{ item: 'plant/arc-furnace/hood', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -168,7 +168,7 @@ export const ARC_FURNACE_ROUTES: readonly Route[] = [
  */
 export const ARC_FURNACE: Item = {
   id: 'plant/arc-furnace',
-  name: '电弧炉',
+  name: 'Arc Furnace', name_zh: '电弧炉',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 1900, max: 2200 }],
@@ -196,7 +196,7 @@ export const ABRASIVE_ROUTES: readonly Route[] = [
      * 910 进、1030 出 —— 差额是氧被碳带走成 CO，本链未建条目，声明不平衡。
      */
     id: 'make/fused-alumina',
-    name: '熔融氧化铝制备',
+    name: 'Fused Alumina Production', name_zh: '熔融氧化铝制备',
     produces: [
       { item: 'mat/fused-alumina', qty: q(900) },
       { item: 'mat/co', qty: q(47), gives: [{ param: 'purity', kind: 'range', min: 90, max: 99 }] },
@@ -241,7 +241,7 @@ export const ABRASIVE_ROUTES: readonly Route[] = [
      *   留作缺口。）
      */
     id: 'make/silicon-carbide',
-    name: '碳化硅制备',
+    name: 'Silicon Carbide Production', name_zh: '碳化硅制备',
     produces: [
       { item: 'mat/silicon-carbide', qty: q(1000) },
       { item: 'mat/co', qty: q(1398), gives: [{ param: 'purity', kind: 'range', min: 40, dir: 'atLeast' }] },
@@ -268,7 +268,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/arc-furnace',
-    name: '电弧炉装配',
+    name: 'Arc Furnace Assembly', name_zh: '电弧炉装配',
     produces: [{
       item: 'plant/arc-furnace',
       qty: q(1),

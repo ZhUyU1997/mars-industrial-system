@@ -233,7 +233,7 @@ export const SOLDER_ITEMS: readonly Item[] = [
    * `oxygen` 这一项是本层最诚实的一处：工业无铅焊料锭 ≤20 ppm，本层 30–90 ppm
    *   （无氧分析仪）。
    */
-  { id: 'mat/solder-sac305', name: 'SAC305 无铅焊料锭', unit: 'kg', category: 'material',
+  { id: 'mat/solder-sac305', name: 'SAC305 Lead-Free Solder Ingot', name_zh: 'SAC305 无铅焊料锭', unit: 'kg', category: 'material',
     props: [
       { param: 'meltingPoint', kind: 'range', min: 200, max: 240, unit: '°C' },
       { param: 'oxygen', kind: 'range', min: 0, max: 300, unit: 'ppm', dir: 'atMost' },
@@ -250,7 +250,7 @@ export const SOLDER_ITEMS: readonly Item[] = [
    * 拉拔是**干拉**：本层没有油脂、没有皂液（unblock-comparator-lapping.ts:229），
    * 所以导线表面有撕裂痕、模具寿命掉一个量级 —— 见降级②的同一句话。
    */
-  { id: 'mat/solder-wire', name: '焊锡丝', unit: 'kg', category: 'material',
+  { id: 'mat/solder-wire', name: 'Solder Wire', name_zh: '焊锡丝', unit: 'kg', category: 'material',
     props: [{ param: 'diameter', kind: 'range', min: 0.15, max: 1.5, unit: 'mm' }] },
 
   /**
@@ -261,7 +261,7 @@ export const SOLDER_ITEMS: readonly Item[] = [
    * 预成型片只要"轧 + 冲"两件现成的设备。工业上它本来就用在两处：大功率器件的
    * 厚焊层，以及**BGA 返修的补球**。
    */
-  { id: 'mat/solder-preform', name: '预成型焊片', unit: 'kg', category: 'material',
+  { id: 'mat/solder-preform', name: 'Solder Preform', name_zh: '预成型焊片', unit: 'kg', category: 'material',
     props: [{ param: 'thickness', kind: 'range', min: 0.03, max: 0.30, unit: 'mm' }] },
 
   /**
@@ -276,7 +276,7 @@ export const SOLDER_ITEMS: readonly Item[] = [
    * 表面张力自己成球，球形度 88–95 %（雾化的球是 99 %）。这段路**不需要雾化塔**，
    * 只需要一台能到 250 °C 的炉子 —— 这是本层能给出 BGA 的真正原因。
    */
-  { id: 'mat/solder-ball', name: '焊球', unit: 'kg', category: 'material',
+  { id: 'mat/solder-ball', name: 'Solder Ball', name_zh: '焊球', unit: 'kg', category: 'material',
     props: [
       { param: 'diameter', kind: 'range', min: 0.1, max: 0.8, unit: 'mm' },
       { param: 'sphericity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' },
@@ -289,7 +289,7 @@ export const SOLDER_ITEMS: readonly Item[] = [
    * Hall 流动不流。所以 `sphericity` 这一项在这里不是"品质指标"，是**这一层做不到**
    * 的那个数。
    */
-  { id: 'mat/solder-powder', name: '焊粉', unit: 'kg', category: 'material',
+  { id: 'mat/solder-powder', name: 'Solder Powder', name_zh: '焊粉', unit: 'kg', category: 'material',
     props: [
       { param: 'particleSize', kind: 'range', min: 5, max: 200, unit: 'µm', dir: 'atMost' },
       { param: 'sphericity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' },
@@ -302,7 +302,7 @@ export const SOLDER_ITEMS: readonly Item[] = [
    * 少 5 个点的直接后果：同样开口印出来的**焊料体积少 5 %**，而 BGA 的球高
    * 公差是 ±10 % ⇒ 把 5 % 的配比误差叠上去，余量只剩一半。
    */
-  { id: 'mat/solder-paste', name: '焊膏', unit: 'kg', category: 'material',
+  { id: 'mat/solder-paste', name: 'Solder Paste', name_zh: '焊膏', unit: 'kg', category: 'material',
     props: [
       { param: 'metalLoad', kind: 'range', min: 60, max: 95, unit: '%' },
       { param: 'particleSize', kind: 'range', min: 5, max: 200, unit: 'µm', dir: 'atMost' },
@@ -315,7 +315,7 @@ export const SOLDER_ITEMS: readonly Item[] = [
    * 潮解这件事在火星上格外糟：舱内湿度低，但一遇到焊膏里的水它就吸到饱和，
    * 所以只能**配成溶液直接用**（`mat/flux-zinc-chloride`），不存干粉。
    */
-  { id: 'mat/zinc-chloride', name: '氯化锌', unit: 'kg', category: 'material',
+  { id: 'mat/zinc-chloride', name: 'Zinc Chloride', name_zh: '氯化锌', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 80, max: 99.9, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -330,7 +330,7 @@ export const SOLDER_ITEMS: readonly Item[] = [
    * 所以本层的助焊剂熔融温度是 **290 °C**，而回流峰值只有 235–245 ——
    * 助焊剂从来没有熔成液体，它是在**固态下靠水解出的 HCl 干活**（见降级④）。
    */
-  { id: 'mat/flux-zinc-chloride', name: '氯化锌助焊剂', unit: 'kg', category: 'material',
+  { id: 'mat/flux-zinc-chloride', name: 'Zinc Chloride Flux', name_zh: '氯化锌助焊剂', unit: 'kg', category: 'material',
     props: [{ param: 'concentration', kind: 'range', min: 5, max: 45, unit: '%' }] },
 
   /**
@@ -346,7 +346,7 @@ export const SOLDER_ITEMS: readonly Item[] = [
    * 寿命：低碳钢 HV 120 vs 304 的 HV 200 ⇒ 约 **500 次印刷就要换网**（不锈钢 5 000 次），
    * 差 10 倍。而且它会锈，只能干存。
    */
-  { id: 'std/solder-stencil-general', name: '印刷钢网', unit: '套', category: 'part',
+  { id: 'std/solder-stencil-general', name: 'Printing Stencil', name_zh: '印刷钢网', unit: '套', category: 'part',
     props: [
       { param: 'thickness', kind: 'range', min: 0.05, max: 0.30, unit: 'mm' },
       { param: 'aperture', kind: 'range', min: 0.1, max: 5, unit: 'mm', dir: 'atLeast' },
@@ -371,7 +371,7 @@ export const SOLDER_ROUTES: readonly Route[] = [
      * 直接后果，渣率按 2–3 % 记。
      */
     id: 'make/solder-sac305',
-    name: 'SAC305 合金锭制备',
+    name: 'SAC305 Alloy Ingot Production', name_zh: 'SAC305 合金锭制备',
     produces: [{
       item: 'mat/solder-sac305',
       qty: q(1000),
@@ -415,7 +415,7 @@ export const SOLDER_ROUTES: readonly Route[] = [
      * 工业用皂液/矿物油，两者本层都没有。
      */
     id: 'make/solder-wire',
-    name: '焊锡丝制备',
+    name: 'Solder Wire Production', name_zh: '焊锡丝制备',
     produces: [
       { item: 'mat/solder-wire', qty: q(980), gives: [{ param: 'diameter', kind: 'range', min: 0.2, max: 1.2 }] },
       {
@@ -450,7 +450,7 @@ export const SOLDER_ROUTES: readonly Route[] = [
      * 回流时熔成一块。BGA 返修补球用的也是它 —— 一片 φ0.45 的片，回熔后是 φ0.46 的球。
      */
     id: 'make/solder-preform',
-    name: '预成型焊片制备',
+    name: 'Solder Preform Production', name_zh: '预成型焊片制备',
     produces: [
       { item: 'mat/solder-preform', qty: q(950), gives: [{ param: 'thickness', kind: 'range', min: 0.10, max: 0.12 }] },
       {
@@ -487,7 +487,7 @@ export const SOLDER_ROUTES: readonly Route[] = [
      * 靠筛分与滚圆筛不掉，只能目视挑。
      */
     id: 'make/solder-ball',
-    name: '焊球制备',
+    name: 'Solder Ball Production', name_zh: '焊球制备',
     produces: [{
       item: 'mat/solder-ball',
       qty: q(960),
@@ -527,7 +527,7 @@ export const SOLDER_ROUTES: readonly Route[] = [
      * 的 0.1 T 滚筒过两遍（铁 <50 ppm）。
      */
     id: 'make/solder-powder',
-    name: '焊粉制备',
+    name: 'Solder Powder Production', name_zh: '焊粉制备',
     produces: [{
       item: 'mat/solder-powder',
       qty: q(620),
@@ -563,7 +563,7 @@ export const SOLDER_ROUTES: readonly Route[] = [
      * 把空气卷进去。空气在焊膏里就是**印刷时的空洞**，那是 BGA 第一大缺陷。
      */
     id: 'make/solder-paste',
-    name: '焊膏制备',
+    name: 'Solder Paste Production', name_zh: '焊膏制备',
     produces: [{
       item: 'mat/solder-paste',
       qty: q(1000),
@@ -602,7 +602,7 @@ export const SOLDER_ROUTES: readonly Route[] = [
      * 且会水解出 HCl，得不偿失。所以下一步配助焊剂时直接用水溶液计量。
      */
     id: 'make/zinc-chloride',
-    name: '氯化锌制备',
+    name: 'Zinc Chloride Production', name_zh: '氯化锌制备',
     produces: [{ item: 'mat/zinc-chloride', qty: q(1000), gives: [{ param: 'purity', kind: 'range', min: 96, max: 99 }] }],
     uses: [
       { anyOf: [{ item: 'mat/zinc', qty: q(480) }] },
@@ -635,7 +635,7 @@ export const SOLDER_ROUTES: readonly Route[] = [
      * 那才需要醇洗；本层没有松香，这条限制反而不咬人（见文件头③）。
      */
     id: 'make/flux-zinc-chloride',
-    name: '氯化锌助焊剂制备',
+    name: 'Zinc Chloride Flux Production', name_zh: '氯化锌助焊剂制备',
     produces: [{ item: 'mat/flux-zinc-chloride', qty: q(1000), gives: [{ param: 'concentration', kind: 'range', min: 28, max: 32 }] }],
     uses: [
       { anyOf: [{ item: 'mat/zinc-chloride', qty: q(300) }] },
@@ -664,7 +664,7 @@ export const SOLDER_ROUTES: readonly Route[] = [
      * 张力不匀，网就会在刮刀下"鼓"，一鼓就是一块板的厚度不均。
      */
     id: 'make/solder-stencil',
-    name: '印刷钢网制造',
+    name: 'Printing Stencil Manufacturing', name_zh: '印刷钢网制造',
     produces: [{
       item: 'std/solder-stencil-general',
       qty: q(1),

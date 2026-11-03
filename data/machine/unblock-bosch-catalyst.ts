@@ -245,7 +245,7 @@ export const UNBLOCK_BOSCH_CAT_ROUTES: readonly Route[] = [
      *    车刀的毛刺会把磨出来的面又划伤。
      */
     id: 'make/bosch-catalyst-iron',
-    name: 'Bosch 催化剂制造',
+    name: 'Bosch Catalyst Manufacturing', name_zh: 'Bosch 催化剂制造',
     produces: [{ item: 'plant/bosch-reactor/catalyst', qty: q(1) }],
     uses: [
       /**

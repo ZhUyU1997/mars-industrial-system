@@ -341,7 +341,7 @@ export const UNBLOCK_ORE_MILL_ROUTES: readonly Route[] = [
      * 加热是上一段的事（file.ts 的六段工序同一个写法）。
      */
     id: 'make/ore-mill-cast',
-    name: '选矿厂球磨机制造',
+    name: 'Ore Beneficiation Plant Ball Mill Manufacturing', name_zh: '选矿厂球磨机制造',
     produces: [{ item: 'plant/ore-beneficiary/mill', qty: q(1) }],
     uses: [
       {

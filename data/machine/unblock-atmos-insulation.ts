@@ -440,7 +440,7 @@ export const UNBLOCK_ATMOS_INSUL_ROUTES: readonly Route[] = [
      * 发热体（缺口②）、以及 193 kg 的装配与吊装（缺口⑥）。
      */
     id: 'make/atmos-insulation-brick',
-    name: '气氛炉石墨毡保温层制造',
+    name: 'Atmosphere Furnace Graphite Felt Insulation Manufacturing', name_zh: '气氛炉石墨毡保温层制造',
     produces: [{ item: 'plant/atmosphere-furnace/insulation', qty: q(1) }],
     /**
      * 进 571 kg，出 1 件（193 kg）。

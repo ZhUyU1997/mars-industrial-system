@@ -22,7 +22,7 @@ export const BATCH3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/he-leak-detector',
-    name: '氦检漏仪',
+    name: 'Helium Leak Detector', name_zh: '氦检漏仪',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：真空腔、质谱接口、泵组按整台装配，不再拆独立零件，标 monolithic。
@@ -41,7 +41,7 @@ export const BATCH3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/thermostat-80-100k',
-    name: '80–100 K 恒温台',
+    name: '80–100 K Temperature-Controlled Stage', name_zh: '80–100 K 恒温台',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：恒温腔、冷屏、控温按整台装配，不再拆独立零件，标 monolithic。
@@ -61,7 +61,7 @@ export const BATCH3_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/heat-flux-rig-10mw',
-    name: '10 MW/m² 热流试验台',
+    name: '10 MW/m² Heat Flux Rig', name_zh: '10 MW/m² 热流试验台',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：靶座、热沉、量热按整台装配，不再拆独立零件，标 monolithic。
@@ -84,7 +84,7 @@ export const BATCH3_ROUTES: readonly Route[] = [
      * 1e-9 量级是设计；现有 GC-MS 灵敏度差 2–3 个量级；1e-9 级校准漏孔未建。
      */
     id: 'make/he-leak-detector',
-    name: '氦检漏仪制造',
+    name: 'Helium Leak Detector Manufacturing', name_zh: '氦检漏仪制造',
     produces: [
       {
         item: 'plant/he-leak-detector',
@@ -119,7 +119,7 @@ export const BATCH3_ROUTES: readonly Route[] = [
      * T 型热偶在 80–100 K 区间未标。
      */
     id: 'make/thermostat-80-100k',
-    name: '80–100 K 恒温台制造',
+    name: '80–100 K Temperature-Controlled Stage Manufacturing', name_zh: '80–100 K 恒温台制造',
     produces: [
       {
         item: 'plant/thermostat-80-100k',
@@ -159,7 +159,7 @@ export const BATCH3_ROUTES: readonly Route[] = [
      * 只能用 20 kW 级源做小样。
      */
     id: 'make/heat-flux-rig-10mw',
-    name: '10 MW/m² 热流试验台制造',
+    name: '10 MW/m² Heat Flux Rig Manufacturing', name_zh: '10 MW/m² 热流试验台制造',
     produces: [
       {
         item: 'plant/heat-flux-rig-10mw',

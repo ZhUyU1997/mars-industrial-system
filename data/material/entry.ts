@@ -79,7 +79,7 @@ export const SEPARATOR_PARTS: readonly Item[] = [
    * 材质必须是**非磁性**的：用普通钢，矿粉会粘在筒上，整台机器就成了
    * 一块吸铁石。这是这个零件唯一的讲究，也是它贵的原因。
    */
-  { id: 'plant/magnetic-separator/drum', name: '磁选机磁选滚筒', unit: '件', category: 'part' },
+  { id: 'plant/magnetic-separator/drum', name: 'Magnetic Separator Drum', name_zh: '磁选机磁选滚筒', unit: '件', category: 'part' },
 
   /**
    * 电磁线圈与铁芯。**不是永磁体 —— 是绕出来的电磁铁。**
@@ -95,7 +95,7 @@ export const SEPARATOR_PARTS: readonly Item[] = [
    * 上一版把这一件标成 `deferred`，判"三条路都缺一条化学链"。那是把
    * "永磁"当成了唯一解 —— 加一条线圈，环就通了。
    */
-  { id: 'plant/magnetic-separator/magnet', name: '磁选机电磁线圈与铁芯', unit: '件', category: 'part' },
+  { id: 'plant/magnetic-separator/magnet', name: 'Magnetic Separator Electromagnetic Coil and Core', name_zh: '磁选机电磁线圈与铁芯', unit: '件', category: 'part' },
 
   /**
    * 励磁电源。可调直流（旋转变流机）+ 串电阻调流 + 合闸开关。
@@ -103,16 +103,16 @@ export const SEPARATOR_PARTS: readonly Item[] = [
    * 磁选机的磁场是"通电才有"的：合闸通、断料停 —— 这一点与永磁相反，
    * 也是它的好处：**不带料时不耗电，也不会吸住工具。**
    */
-  { id: 'plant/magnetic-separator/excitation', name: '磁选机励磁电源', unit: '件', category: 'part' },
+  { id: 'plant/magnetic-separator/excitation', name: 'Magnetic Separator Excitation Power Supply', name_zh: '磁选机励磁电源', unit: '件', category: 'part' },
 
   /** 机架。HT250 浇成，承滚筒、料斗与传动。不导磁也不受力，是最普通的一件。 */
-  { id: 'plant/magnetic-separator/frame', name: '磁选机机架', unit: '件', category: 'part' },
+  { id: 'plant/magnetic-separator/frame', name: 'Magnetic Separator Frame', name_zh: '磁选机机架', unit: '件', category: 'part' },
 
   /** 传动。皮带轮 + 轴 + 轴承座。只把滚筒带起来，没有调速要求。 */
-  { id: 'plant/magnetic-separator/drive', name: '磁选机传动', unit: '件', category: 'part' },
+  { id: 'plant/magnetic-separator/drive', name: 'Magnetic Separator Drive', name_zh: '磁选机传动', unit: '件', category: 'part' },
 
   /** 料斗与给料槽。冷轧板折弯焊成，靠重力下料，不承力。 */
-  { id: 'plant/magnetic-separator/hopper', name: '磁选机料斗与给料槽', unit: '件', category: 'part' },
+  { id: 'plant/magnetic-separator/hopper', name: 'Magnetic Separator Hopper and Feed Chute', name_zh: '磁选机料斗与给料槽', unit: '件', category: 'part' },
 ];
 
 /**
@@ -135,7 +135,7 @@ export const SEPARATOR_ROUTES: readonly Route[] = [
      * 铁芯在铣镗床上铣出极面。
      */
     id: 'make/separator-magnet',
-    name: '磁选机电磁线圈与铁芯制造',
+    name: 'Magnetic Separator Electromagnetic Coil and Core Manufacturing', name_zh: '磁选机电磁线圈与铁芯制造',
     produces: [{ item: 'plant/magnetic-separator/magnet', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(60) }] },
@@ -153,7 +153,7 @@ export const SEPARATOR_ROUTES: readonly Route[] = [
      * 而实际上**没有直流就没有磁**，磁选机停工的那一处从来不是线圈，是电源。
      */
     id: 'make/separator-excitation',
-    name: '磁选机励磁电源制造',
+    name: 'Magnetic Separator Excitation Power Supply Manufacturing', name_zh: '磁选机励磁电源制造',
     produces: [{ item: 'plant/magnetic-separator/excitation', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/rectifier-rotary-general', qty: q(1) }] },
@@ -166,7 +166,7 @@ export const SEPARATOR_ROUTES: readonly Route[] = [
   {
     /** 滚筒。不锈钢板卷圆 → 纵缝焊 → 车端面 → 磨外圆（矿粉要走得顺）。 */
     id: 'make/separator-drum',
-    name: '磁选机磁选滚筒制造',
+    name: 'Magnetic Separator Drum Manufacturing', name_zh: '磁选机磁选滚筒制造',
     produces: [{ item: 'plant/magnetic-separator/drum', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe', 'plant/grinder'],
@@ -175,7 +175,7 @@ export const SEPARATOR_ROUTES: readonly Route[] = [
   {
     /** 机架。HT250 浇 → 结合面铣 → 轴承座孔镗。 */
     id: 'make/separator-frame',
-    name: '磁选机机架制造',
+    name: 'Magnetic Separator Frame Manufacturing', name_zh: '磁选机机架制造',
     produces: [{ item: 'plant/magnetic-separator/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     needs: ['lathe', 'plant/milling-machine'],
@@ -185,7 +185,7 @@ export const SEPARATOR_ROUTES: readonly Route[] = [
   {
     /** 传动。45 钢车轴颈 → 淬 → 磨；皮带轮车 V 槽。 */
     id: 'make/separator-drive',
-    name: '磁选机传动制造',
+    name: 'Magnetic Separator Drive Manufacturing', name_zh: '磁选机传动制造',
     produces: [{ item: 'plant/magnetic-separator/drive', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/grinder'],
@@ -194,7 +194,7 @@ export const SEPARATOR_ROUTES: readonly Route[] = [
   {
     /** 料斗。冷轧板剪切 → 折弯 → 焊。没有精度要求，是工位最轻松的活。 */
     id: 'make/separator-hopper',
-    name: '磁选机料斗与给料槽制造',
+    name: 'Magnetic Separator Hopper and Feed Chute Manufacturing', name_zh: '磁选机料斗与给料槽制造',
     produces: [{ item: 'plant/magnetic-separator/hopper', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: [],
@@ -217,7 +217,7 @@ export const SEPARATOR_ROUTES: readonly Route[] = [
  */
 export const REDUCTION_PARTS: readonly Item[] = [
   /** 炉壳。钢板卷筒焊成，承炉衬、承料柱，不直接接触高温。 */
-  { id: 'plant/reduction-furnace/shell', name: '还原炉炉壳', unit: '件', category: 'part' },
+  { id: 'plant/reduction-furnace/shell', name: 'Reduction Furnace Shell', name_zh: '还原炉炉壳', unit: '件', category: 'part' },
 
   /**
    * 炉衬。耐火打结料捣实，第一次升温时自己烧结成型。
@@ -225,7 +225,7 @@ export const REDUCTION_PARTS: readonly Item[] = [
    * 它同时是**简体**与**保温层**：竖炉的炉衬要挡住 850 °C 的氢气，
    * 还要让外壳摸上去不烫手。
    */
-  { id: 'plant/reduction-furnace/lining', name: '还原炉炉衬', unit: '件', category: 'part' },
+  { id: 'plant/reduction-furnace/lining', name: 'Reduction Furnace Lining', name_zh: '还原炉炉衬', unit: '件', category: 'part' },
 
   /**
    * 蓄热式气体加热器。耐火格子砖 + 燃烧室 + 换向阀。
@@ -234,7 +234,7 @@ export const REDUCTION_PARTS: readonly Item[] = [
    * 最古典的办法 —— 燃烧氢氧把格子砖烧热，再让氢气从热砖里穿过。
    * 除了耐火砖与钢管，什么特殊材料都不要。
    */
-  { id: 'plant/reduction-furnace/heater', name: '还原炉蓄热式气体加热器', unit: '件', category: 'part' },
+  { id: 'plant/reduction-furnace/heater', name: 'Reduction Furnace Regenerative Gas Heater', name_zh: '还原炉蓄热式气体加热器', unit: '件', category: 'part' },
 
   /**
    * 布料器。把精矿均匀撒进炉口，同时不漏气。
@@ -242,7 +242,7 @@ export const REDUCTION_PARTS: readonly Item[] = [
    * 800 °C 下的转动密封，橡胶与 PTFE 都撑不住。用不锈钢钟罩 + 石墨盘根：
    * 石墨在高温下是干的润滑剂，而且不需要有机原料。
    */
-  { id: 'plant/reduction-furnace/feeder', name: '还原炉布料器', unit: '件', category: 'part' },
+  { id: 'plant/reduction-furnace/feeder', name: 'Reduction Furnace Charging Distributor', name_zh: '还原炉布料器', unit: '件', category: 'part' },
 
   /**
    * 排料阀。水冷铸铁阀体 + 45 钢阀板。
@@ -250,7 +250,7 @@ export const REDUCTION_PARTS: readonly Item[] = [
    * 水冷不是为了降温，是为了让**铸铁**能用在 800 °C：不水冷就一定要
    * 耐热合金，而耐热合金要铬镍钴。这是同一件事的两种代价，选了便宜的那种。
    */
-  { id: 'plant/reduction-furnace/discharge', name: '还原炉排料阀', unit: '件', category: 'part' },
+  { id: 'plant/reduction-furnace/discharge', name: 'Reduction Furnace Discharge Valve', name_zh: '还原炉排料阀', unit: '件', category: 'part' },
 ];
 
 /**
@@ -264,7 +264,7 @@ export const REDUCTION_ROUTES: readonly Route[] = [
   {
     /** 炉壳。钢板卷筒 → 焊 → 法兰加工 → 与炉衬一起烘炉。 */
     id: 'make/reduction-shell',
-    name: '还原炉炉壳制造',
+    name: 'Reduction Furnace Shell Manufacturing', name_zh: '还原炉炉壳制造',
     produces: [{ item: 'plant/reduction-furnace/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -273,7 +273,7 @@ export const REDUCTION_ROUTES: readonly Route[] = [
   {
     /** 炉衬。耐火打结料捣实，烘炉时自烧结 —— 捣实是机器人干的。 */
     id: 'make/reduction-lining',
-    name: '还原炉炉衬制造',
+    name: 'Reduction Furnace Lining Manufacturing', name_zh: '还原炉炉衬制造',
     produces: [{ item: 'plant/reduction-furnace/lining', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(1) }] }],
     needs: [],
@@ -282,7 +282,7 @@ export const REDUCTION_ROUTES: readonly Route[] = [
   {
     /** 加热器。燃烧室与格子砖体焊接 → 砌砖 → 换向阀配作。 */
     id: 'make/reduction-heater',
-    name: '还原炉蓄热式气体加热器制造',
+    name: 'Reduction Furnace Regenerative Gas Heater Manufacturing', name_zh: '还原炉蓄热式气体加热器制造',
     produces: [{ item: 'plant/reduction-furnace/heater', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/refractory', qty: q(1) }] },
@@ -294,7 +294,7 @@ export const REDUCTION_ROUTES: readonly Route[] = [
   {
     /** 布料器。不锈钢钟罩车成 → 石墨盘根填料 → 与炉口配作。 */
     id: 'make/reduction-feeder',
-    name: '还原炉布料器制造',
+    name: 'Reduction Furnace Charging Distributor Manufacturing', name_zh: '还原炉布料器制造',
     produces: [{ item: 'plant/reduction-furnace/feeder', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe', 'plant/grinder'],
@@ -303,7 +303,7 @@ export const REDUCTION_ROUTES: readonly Route[] = [
   {
     /** 排料阀。HT250 阀体浇成后镗孔，45 钢阀板车磨；水套要试压。 */
     id: 'make/reduction-discharge',
-    name: '还原炉排料阀制造',
+    name: 'Reduction Furnace Discharge Valve Manufacturing', name_zh: '还原炉排料阀制造',
     produces: [{ item: 'plant/reduction-furnace/discharge', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] },
@@ -337,19 +337,19 @@ export const AIR_SEPARATOR_PARTS: readonly Item[] = [
    * 第一级不是"压缩机"，更像一台大风扇。它的叶轮形状与动平衡是
    * 这台设备唯一需要磨的地方。
    */
-  { id: 'plant/air-separator/compressor', name: '空分压缩机', unit: '件', category: 'part' },
+  { id: 'plant/air-separator/compressor', name: 'Air Separation Compressor', name_zh: '空分压缩机', unit: '件', category: 'part' },
 
   /** 换热器。铜管束 + 钢壳，把压缩热带走，也是冷凝 CO₂ 的地方。 */
-  { id: 'plant/air-separator/heat-exchanger', name: '空分换热器', unit: '件', category: 'part' },
+  { id: 'plant/air-separator/heat-exchanger', name: 'Air Separation Heat Exchanger', name_zh: '空分换热器', unit: '件', category: 'part' },
 
   /** 分离罐。冷凝下来的 CO₂ 液体在这里与氮氩分开，底部排液。 */
-  { id: 'plant/air-separator/separator-vessel', name: '空分分离罐', unit: '件', category: 'part' },
+  { id: 'plant/air-separator/separator-vessel', name: 'Air Separation Separator Vessel', name_zh: '空分分离罐', unit: '件', category: 'part' },
 
   /** 节流阀。高压气体经它降压降温 —— 冷量就是在这里自己产生的。 */
-  { id: 'plant/air-separator/throttle-valve', name: '空分节流阀', unit: '件', category: 'part' },
+  { id: 'plant/air-separator/throttle-valve', name: 'Air Separation Throttle Valve', name_zh: '空分节流阀', unit: '件', category: 'part' },
 
   /** 机架与管路。钢型材焊接，配法兰与阀门。 */
-  { id: 'plant/air-separator/frame', name: '空分机架与管路', unit: '件', category: 'part' },
+  { id: 'plant/air-separator/frame', name: 'Air Separation Frame and Piping', name_zh: '空分机架与管路', unit: '件', category: 'part' },
 ];
 
 /** 气体分离装置零件的制造路线。 */
@@ -362,7 +362,7 @@ export const AIR_SEPARATOR_ROUTES: readonly Route[] = [
      * 转得快的机器，绕不开它。
      */
     id: 'make/airsep-compressor',
-    name: '空分压缩机制造',
+    name: 'Air Separation Compressor Manufacturing', name_zh: '空分压缩机制造',
     produces: [{ item: 'plant/air-separator/compressor', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/milling-machine', 'plant/grinder'],
@@ -371,7 +371,7 @@ export const AIR_SEPARATOR_ROUTES: readonly Route[] = [
   {
     /** 换热器。铜管胀接进钢壳，壳侧走冷却水；要试压。 */
     id: 'make/airsep-heat-exchanger',
-    name: '空分换热器制造',
+    name: 'Air Separation Heat Exchanger Manufacturing', name_zh: '空分换热器制造',
     produces: [{ item: 'plant/air-separator/heat-exchanger', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -383,7 +383,7 @@ export const AIR_SEPARATOR_ROUTES: readonly Route[] = [
   {
     /** 分离罐。不锈钢板卷焊 → 封头 → 法兰 → 试压。 */
     id: 'make/airsep-vessel',
-    name: '空分分离罐制造',
+    name: 'Air Separation Separator Vessel Manufacturing', name_zh: '空分分离罐制造',
     produces: [{ item: 'plant/air-separator/separator-vessel', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -392,7 +392,7 @@ export const AIR_SEPARATOR_ROUTES: readonly Route[] = [
   {
     /** 节流阀。不锈钢阀体 → 阀芯配作 → 研磨密封面。 */
     id: 'make/airsep-throttle',
-    name: '空分节流阀制造',
+    name: 'Air Separation Throttle Valve Manufacturing', name_zh: '空分节流阀制造',
     produces: [{ item: 'plant/air-separator/throttle-valve', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe', 'plant/grinder'],
@@ -401,7 +401,7 @@ export const AIR_SEPARATOR_ROUTES: readonly Route[] = [
   {
     /** 机架与管路。型材与薄板焊接，法兰车成。 */
     id: 'make/airsep-frame',
-    name: '空分机架与管路制造',
+    name: 'Air Separation Frame and Piping Manufacturing', name_zh: '空分机架与管路制造',
     produces: [{ item: 'plant/air-separator/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -424,7 +424,7 @@ export const AIR_SEPARATOR_ROUTES: readonly Route[] = [
  */
 export const BOSCH_PARTS: readonly Item[] = [
   /** 壳体。不锈钢，承压 100 kPa 量级、承 700 °C。 */
-  { id: 'plant/bosch-reactor/shell', name: 'Bosch 壳体', unit: '件', category: 'part' },
+  { id: 'plant/bosch-reactor/shell', name: 'Bosch Shell', name_zh: 'Bosch 壳体', unit: '件', category: 'part' },
 
   /**
    * 催化剂。镍载在氧化铝载体上，浸渍后焙烧。
@@ -432,10 +432,10 @@ export const BOSCH_PARTS: readonly Item[] = [
    * 镍从电解镍来（250:1 的富集），载体用高铝耐火料磨粉 —— 两样都是
    * 现成的材料，所以这条链是通的。它是这个文件里唯一一条"催化剂"路线。
    */
-  { id: 'plant/bosch-reactor/catalyst', name: 'Bosch 催化剂', unit: '件', category: 'part' },
+  { id: 'plant/bosch-reactor/catalyst', name: 'Bosch Catalyst', name_zh: 'Bosch 催化剂', unit: '件', category: 'part' },
 
   /** 除水器。把生成的水蒸气冷凝下来，同时不让氢跟着跑掉。 */
-  { id: 'plant/bosch-reactor/condenser', name: 'Bosch 除水器', unit: '件', category: 'part' },
+  { id: 'plant/bosch-reactor/condenser', name: 'Bosch Water Trap', name_zh: 'Bosch 除水器', unit: '件', category: 'part' },
 
   /**
    * 卸碳机构。螺旋输送 + 闸阀，把积在催化剂上的碳连续刮出去。
@@ -443,10 +443,10 @@ export const BOSCH_PARTS: readonly Item[] = [
    * 它要在 700 °C、氢气气氛下动，所以螺旋用 45 钢、轴端水冷。碳本身
    * 是干粉，不需要润滑 —— 这一处比布料器好办。
    */
-  { id: 'plant/bosch-reactor/carbon-removal', name: 'Bosch 卸碳机构', unit: '件', category: 'part' },
+  { id: 'plant/bosch-reactor/carbon-removal', name: 'Bosch Carbon Removal Mechanism', name_zh: 'Bosch 卸碳机构', unit: '件', category: 'part' },
 
   /** 加热夹套。耐火砖砌在壳体外，靠电热或氢氧燃烧维持 500–700 °C。 */
-  { id: 'plant/bosch-reactor/heater', name: 'Bosch 加热夹套', unit: '件', category: 'part' },
+  { id: 'plant/bosch-reactor/heater', name: 'Bosch Heating Jacket', name_zh: 'Bosch 加热夹套', unit: '件', category: 'part' },
 ];
 
 /** Bosch 反应器零件的制造路线。 */
@@ -454,7 +454,7 @@ export const BOSCH_ROUTES: readonly Route[] = [
   {
     /** 壳体。不锈钢板卷焊 → 法兰 → 试压。 */
     id: 'make/bosch-shell',
-    name: 'Bosch 壳体制造',
+    name: 'Bosch Shell Manufacturing', name_zh: 'Bosch 壳体制造',
     produces: [{ item: 'plant/bosch-reactor/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -463,7 +463,7 @@ export const BOSCH_ROUTES: readonly Route[] = [
   {
     /** 催化剂。氧化铝载体浸硝酸镍 → 干燥 → 焙烧 → 还原。焙烧要窑。 */
     id: 'make/bosch-catalyst',
-    name: 'Bosch 催化剂制造',
+    name: 'Bosch Catalyst Manufacturing', name_zh: 'Bosch 催化剂制造',
     produces: [{ item: 'plant/bosch-reactor/catalyst', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/nickel', qty: q(1) }] },
@@ -474,7 +474,7 @@ export const BOSCH_ROUTES: readonly Route[] = [
   {
     /** 除水器。铜管束 + 不锈钢壳，颠倒过来当冷凝器用。 */
     id: 'make/bosch-condenser',
-    name: 'Bosch 除水器制造',
+    name: 'Bosch Water Trap Manufacturing', name_zh: 'Bosch 除水器制造',
     produces: [{ item: 'plant/bosch-reactor/condenser', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -486,7 +486,7 @@ export const BOSCH_ROUTES: readonly Route[] = [
   {
     /** 卸碳机构。45 钢螺旋车成 → 铣螺旋面 → 轴端配水冷套。 */
     id: 'make/bosch-carbon-removal',
-    name: 'Bosch 卸碳机构制造',
+    name: 'Bosch Carbon Removal Mechanism Manufacturing', name_zh: 'Bosch 卸碳机构制造',
     produces: [{ item: 'plant/bosch-reactor/carbon-removal', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/milling-machine', 'plant/grinder'],
@@ -495,7 +495,7 @@ export const BOSCH_ROUTES: readonly Route[] = [
   {
     /** 加热夹套。耐火砖砌体 + 薄板外壳，与壳体一起装配。 */
     id: 'make/bosch-heater',
-    name: 'Bosch 加热夹套制造',
+    name: 'Bosch Heating Jacket Manufacturing', name_zh: 'Bosch 加热夹套制造',
     produces: [{ item: 'plant/bosch-reactor/heater', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/refractory', qty: q(1) }] },
@@ -518,7 +518,7 @@ export const BOSCH_ROUTES: readonly Route[] = [
  */
 export const MAGNETIC_SEPARATOR: Item = {
   id: 'plant/magnetic-separator',
-  name: '磁选机',
+  name: 'Magnetic Separator', name_zh: '磁选机',
   unit: '台',
   category: 'machine',
   composedOf: [...SEPARATOR_PARTS.map((p) => ({ item: p.id, qty: q(1) })), { item: 'std/motor-7.5kw-4p', qty: q(1) }],
@@ -531,7 +531,7 @@ export const MAGNETIC_SEPARATOR: Item = {
  */
 export const REDUCTION_FURNACE: Item = {
   id: 'plant/reduction-furnace',
-  name: '还原炉',
+  name: 'Reduction Furnace', name_zh: '还原炉',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 650, max: 900 }],
@@ -547,7 +547,7 @@ export const REDUCTION_FURNACE: Item = {
  */
 export const AIR_SEPARATOR: Item = {
   id: 'plant/air-separator',
-  name: '空分装置',
+  name: 'Air Separation Plant', name_zh: '空分装置',
   unit: '套',
   category: 'machine',
   composedOf: [...AIR_SEPARATOR_PARTS.map((p) => ({ item: p.id, qty: q(1) })), { item: 'std/motor-7.5kw-4p', qty: q(1) }],
@@ -593,7 +593,7 @@ export const AIR_SEPARATOR: Item = {
  */
 export const BOSCH_REACTOR: Item = {
   id: 'plant/bosch-reactor',
-  name: 'Bosch 反应器',
+  name: 'Bosch Reactor', name_zh: 'Bosch 反应器',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 150, max: 750 }],
@@ -612,7 +612,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/air-separator',
-    name: '空分装置装配',
+    name: 'Air Separation Plant Assembly', name_zh: '空分装置装配',
     produces: [{
       item: 'plant/air-separator',
       qty: q(1),
@@ -624,7 +624,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/bosch-reactor',
-    name: 'Bosch 反应器装配',
+    name: 'Bosch Reactor Assembly', name_zh: 'Bosch 反应器装配',
     produces: [{
       item: 'plant/bosch-reactor',
       qty: q(1),
@@ -636,7 +636,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/magnetic-separator',
-    name: '磁选机装配',
+    name: 'Magnetic Separator Assembly', name_zh: '磁选机装配',
     produces: [{
       item: 'plant/magnetic-separator',
       qty: q(1),
@@ -648,7 +648,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/reduction-furnace',
-    name: '还原炉装配',
+    name: 'Reduction Furnace Assembly', name_zh: '还原炉装配',
     produces: [{
       item: 'plant/reduction-furnace',
       qty: q(1),

@@ -342,7 +342,7 @@ export const DAMASCENE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cu-plating-bath',
-    name: '电镀铜液',
+    name: 'Copper Plating Solution', name_zh: '电镀铜液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -362,7 +362,7 @@ export const DAMASCENE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/device-wafer',
-    name: '前道完成片',
+    name: 'Front-End Completed Wafer', name_zh: '前道完成片',
     unit: '片',
     category: 'part',
     props: [{ param: 'node', kind: 'range', min: 1, max: 400, unit: 'nm', dir: 'atMost' }],
@@ -380,7 +380,7 @@ export const DAMASCENE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/trench-wafer',
-    name: '开好沟槽',
+    name: 'Trench-Opened Wafer', name_zh: '开好沟槽',
     unit: '片',
     category: 'part',
     props: [
@@ -402,7 +402,7 @@ export const DAMASCENE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/barrier-wafer',
-    name: '阻挡层籽晶片',
+    name: 'Barrier Layer Seed Wafer', name_zh: '阻挡层籽晶片',
     unit: '片',
     category: 'part',
     props: [
@@ -422,7 +422,7 @@ export const DAMASCENE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/plated-wafer',
-    name: '电镀铜片',
+    name: 'Copper-Plated Wafer', name_zh: '电镀铜片',
     unit: '片',
     category: 'part',
     props: [
@@ -451,7 +451,7 @@ export const DAMASCENE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/damascene-layer',
-    name: '单层铜互连片',
+    name: 'Single-Layer Copper Interconnect Wafer', name_zh: '单层铜互连片',
     unit: '片',
     category: 'part',
     props: [
@@ -477,7 +477,7 @@ export const DAMASCENE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/mcu-3um-general',
-    name: '3–5 µm 互连的 MCU',
+    name: '3–5 µm Interconnect MCU', name_zh: '3–5 µm 互连的 MCU',
     unit: '片',
     category: 'part',
     props: [
@@ -501,7 +501,7 @@ export const DAMASCENE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/soc-3um-general',
-    name: '3–5 µm 互连的 SoC',
+    name: '3–5 µm Interconnect SoC', name_zh: '3–5 µm 互连的 SoC',
     unit: '片',
     category: 'part',
     props: [
@@ -538,7 +538,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      * 这一条与 `deprocess.ts:757` 是同一个缺口。
      */
     id: 'make/cu-plating-bath',
-    name: '电镀铜液制备',
+    name: 'Copper Plating Solution Production', name_zh: '电镀铜液制备',
     produces: [
       {
         item: 'mat/cu-plating-bath',
@@ -585,7 +585,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      *    这 30–50 nm 直接进 CMP 的去除量，也就是直接进 dishing。
      */
     id: 'make/damascene-trench',
-    name: '开好沟槽制造',
+    name: 'Trench-Opened Wafer Manufacturing', name_zh: '开好沟槽制造',
     produces: [
       {
         item: 'mat/trench-wafer',
@@ -666,7 +666,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      * —— 那时离子束买到的是**深度**（AR 0.13 → 0.5，金属厚 4 倍），不是宽度。
      */
     id: 'make/damascene-trench-ion',
-    name: '开好沟槽制造',
+    name: 'Trench-Opened Wafer Manufacturing', name_zh: '开好沟槽制造',
     produces: [
       {
         item: 'mat/trench-wafer',
@@ -744,7 +744,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      * 化学镀铜种子层，最后也是退到石墨浆。
      */
     id: 'make/damascene-barrier',
-    name: '阻挡层籽晶片制造',
+    name: 'Barrier Layer Seed Wafer Manufacturing', name_zh: '阻挡层籽晶片制造',
     produces: [
       {
         item: 'mat/barrier-wafer',
@@ -809,7 +809,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      *   CMP 因此要多去 1–2 倍的铜 —— 这也是 dishing 变大的一个来源。
      */
     id: 'make/damascene-plate',
-    name: '电镀铜片制造',
+    name: 'Copper-Plated Wafer Manufacturing', name_zh: '电镀铜片制造',
     produces: [
       {
         item: 'mat/plated-wafer',
@@ -852,7 +852,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      * 上游两条沟槽路线（3–5 µm 与 1–2 µm）的并集 —— 0.08–1.6。这不是懒，是事实。
      */
     id: 'make/damascene-cmp',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -935,7 +935,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      * 那时 √10 × 29.8 = 94.2 nm，对 40 nm 节点的 13 nm 仍差 7.2 倍（见 R8 表第⑧行）。
      */
     id: 'make/damascene-stack',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -1045,7 +1045,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      * 3–5 µm 互连件的规格。交付与要求分开两行，读的人一眼能看出差在哪。
      */
     id: 'make/mcu-3um-damascene',
-    name: '3–5 µm 互连的 MCU 制造',
+    name: '3–5 µm Interconnect MCU Manufacturing', name_zh: '3–5 µm 互连的 MCU 制造',
     produces: [
       {
         item: 'std/mcu-3um-general',
@@ -1120,7 +1120,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      * die 数 3 000–8 000 与焊盘 200–400 来自 `make/soc-3um-damascene` 的注释。
      */
     id: 'make/soc-3um-stack',
-    name: '3–5 µm 互连的 SoC 制造',
+    name: '3–5 µm Interconnect SoC Manufacturing', name_zh: '3–5 µm 互连的 SoC 制造',
     produces: [
       {
         item: 'std/soc-3um-general',
@@ -1195,7 +1195,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      * 10–20 % 面积）是设计估算，不是实测。
      */
     id: 'make/soc-3um-damascene',
-    name: '3–5 µm 互连的 SoC 制造',
+    name: '3–5 µm Interconnect SoC Manufacturing', name_zh: '3–5 µm 互连的 SoC 制造',
     produces: [
       {
         item: 'std/soc-3um-general',
@@ -1261,7 +1261,7 @@ export const DAMASCENE_ROUTES: readonly Route[] = [
      * “100–300 nm 后道混合件”口径已不成立；两件事分开记。
      */
     id: 'make/mcu-3um-stack',
-    name: '3–5 µm 互连的 MCU 制造',
+    name: '3–5 µm Interconnect MCU Manufacturing', name_zh: '3–5 µm 互连的 MCU 制造',
     produces: [
       {
         item: 'std/mcu-3um-general',

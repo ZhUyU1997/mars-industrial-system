@@ -25,11 +25,11 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const CMP_SCAN_STAGE_PARTS: readonly Item[] = [
-  { id: 'plant/cmp-uniformity-kit/scan-stage/base', name: 'CMP 底座', unit: '件', category: 'part' },
-  { id: 'plant/cmp-uniformity-kit/scan-stage/slide', name: 'CMP 滑板', unit: '件', category: 'part' },
-  { id: 'plant/cmp-uniformity-kit/scan-stage/lead-screw', name: 'φ16 丝杠', unit: '件', category: 'part' },
-  { id: 'plant/cmp-uniformity-kit/scan-stage/index-plate', name: '9 位分度盘', unit: '件', category: 'part' },
-  { id: 'plant/cmp-uniformity-kit/scan-stage/probe-clamp', name: 'CMP 探头夹持座', unit: '件', category: 'part' },
+  { id: 'plant/cmp-uniformity-kit/scan-stage/base', name: 'CMP Base', name_zh: 'CMP 底座', unit: '件', category: 'part' },
+  { id: 'plant/cmp-uniformity-kit/scan-stage/slide', name: 'CMP Slide', name_zh: 'CMP 滑板', unit: '件', category: 'part' },
+  { id: 'plant/cmp-uniformity-kit/scan-stage/lead-screw', name: 'φ16 Lead Screw', name_zh: 'φ16 丝杠', unit: '件', category: 'part' },
+  { id: 'plant/cmp-uniformity-kit/scan-stage/index-plate', name: '9-Position Index Plate', name_zh: '9 位分度盘', unit: '件', category: 'part' },
+  { id: 'plant/cmp-uniformity-kit/scan-stage/probe-clamp', name: 'CMP Probe Clamp', name_zh: 'CMP 探头夹持座', unit: '件', category: 'part' },
 ];
 
 const CMP_SCAN_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -38,7 +38,7 @@ const CMP_SCAN_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 底座：HT250 4 kg，铣 300×250 底座、导轨槽与轴承座孔。 */
     id: 'make/cmp-scan-base',
-    name: 'CMP 底座制造',
+    name: 'CMP Base Manufacturing', name_zh: 'CMP 底座制造',
     produces: [{ item: 'plant/cmp-uniformity-kit/scan-stage/base', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(4) }] }],
     steps: [
@@ -49,7 +49,7 @@ const CMP_SCAN_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 滑板：45 钢 3 kg，磨导轨面并刮研配作。 */
     id: 'make/cmp-scan-slide',
-    name: 'CMP 滑板制造',
+    name: 'CMP Slide Manufacturing', name_zh: 'CMP 滑板制造',
     produces: [{ item: 'plant/cmp-uniformity-kit/scan-stage/slide', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3) }] }],
     steps: [
@@ -60,7 +60,7 @@ const CMP_SCAN_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** φ16 丝杠：45 钢 3 kg，Tr16×2，行程 120 mm。 */
     id: 'make/cmp-scan-lead-screw',
-    name: 'φ16 丝杠制造',
+    name: 'φ16 Lead Screw Manufacturing', name_zh: 'φ16 丝杠制造',
     produces: [{ item: 'plant/cmp-uniformity-kit/scan-stage/lead-screw', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3) }] }],
     performedBy: 'lathe',
@@ -68,7 +68,7 @@ const CMP_SCAN_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 9 位分度盘：酚醛 0.25 kg，40° 一格 × 9 格。 */
     id: 'make/cmp-scan-index-plate',
-    name: '9 位分度盘制造',
+    name: '9-Position Index Plate Manufacturing', name_zh: '9 位分度盘制造',
     produces: [{ item: 'plant/cmp-uniformity-kit/scan-stage/index-plate', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/phenolic-resin', qty: q(1, 4) }] }],
     performedBy: 'plant/milling-machine',
@@ -76,7 +76,7 @@ const CMP_SCAN_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 探头夹持座：铜 0.35 kg，带 0.1 mm 垫片组调 0.3 mm 抬升。 */
     id: 'make/cmp-scan-probe-clamp',
-    name: 'CMP 探头夹持座制造',
+    name: 'CMP Probe Clamp Manufacturing', name_zh: 'CMP 探头夹持座制造',
     produces: [{ item: 'plant/cmp-uniformity-kit/scan-stage/probe-clamp', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(7, 20) }] }],
     performedBy: 'plant/milling-machine',

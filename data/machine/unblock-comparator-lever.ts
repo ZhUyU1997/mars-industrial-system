@@ -291,7 +291,7 @@ export const UNBLOCK_COMPARATOR_LEVER_ROUTES: readonly Route[] = [
   {
     /** HT250 浇基座与支架 → 退火 → 车镜座与测杆 → 剪弹簧 → 磨 → 渗碳淬火 → 装配量 d。 */
     id: 'make/comparator-lever-cast',
-    name: '量块比较仪杠杆机构制造',
+    name: 'Gauge Block Comparator Lever Mechanism Manufacturing', name_zh: '量块比较仪杠杆机构制造',
     produces: [{ item: 'plant/comparator/lever', qty: q(1) }],
     uses: [
       // 基座与支架的毛坯（第六节：386 g 净重 + 30% 余量 → 0.5 kg）。

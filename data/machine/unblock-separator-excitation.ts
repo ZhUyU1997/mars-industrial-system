@@ -276,7 +276,7 @@ export const UNBLOCK_EXCITATION_ITEMS: readonly Item[] = [];
 export const UNBLOCK_EXCITATION_ROUTES: readonly Route[] = [
   {
     id: 'make/separator-excitation-dc',
-    name: '磁选机励磁电源制造',
+    name: 'Magnetic Separator Excitation Power Supply Manufacturing', name_zh: '磁选机励磁电源制造',
     produces: [{ item: 'plant/magnetic-separator/excitation', qty: q(1) }],
     uses: [
       {

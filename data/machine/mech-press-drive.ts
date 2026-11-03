@@ -20,10 +20,10 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const PRESS_DRIVE_PARTS: readonly Item[] = [
-  { id: 'plant/press/drive/flywheel', name: '飞轮', unit: '件', category: 'part' },
-  { id: 'plant/press/drive/crankshaft', name: '曲轴', unit: '件', category: 'part' },
-  { id: 'plant/press/drive/connecting-rod', name: '连杆', unit: '件', category: 'part' },
-  { id: 'plant/press/drive/brake-band', name: '制动带', unit: '件', category: 'part' },
+  { id: 'plant/press/drive/flywheel', name: 'Flywheel', name_zh: '飞轮', unit: '件', category: 'part' },
+  { id: 'plant/press/drive/crankshaft', name: 'Crankshaft', name_zh: '曲轴', unit: '件', category: 'part' },
+  { id: 'plant/press/drive/connecting-rod', name: 'Connecting Rod', name_zh: '连杆', unit: '件', category: 'part' },
+  { id: 'plant/press/drive/brake-band', name: 'Brake Band', name_zh: '制动带', unit: '件', category: 'part' },
 ];
 
 const PRESS_DRIVE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -32,7 +32,7 @@ const PRESS_DRIVE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 飞轮：HT200 铸铁盘，车削 + 动平衡。 */
     id: 'make/press-flywheel',
-    name: '飞轮制造',
+    name: 'Flywheel Manufacturing', name_zh: '飞轮制造',
     produces: [{ item: 'plant/press/drive/flywheel', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(1) }] }],
     steps: [
@@ -43,7 +43,7 @@ const PRESS_DRIVE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 曲轴：40Cr，偏心 30 mm，车削后磨轴颈。 */
     id: 'make/press-crankshaft',
-    name: '曲轴制造',
+    name: 'Crankshaft Manufacturing', name_zh: '曲轴制造',
     produces: [{ item: 'plant/press/drive/crankshaft', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(3, 5) }] }],
     steps: [
@@ -54,7 +54,7 @@ const PRESS_DRIVE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 连杆：40Cr 锻坯，车铣两端孔。 */
     id: 'make/press-connecting-rod',
-    name: '连杆制造',
+    name: 'Connecting Rod Manufacturing', name_zh: '连杆制造',
     produces: [{ item: 'plant/press/drive/connecting-rod', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1, 5) }] }],
     steps: [
@@ -65,7 +65,7 @@ const PRESS_DRIVE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 制动带：40Cr 带料，按飞轮外圆配作。 */
     id: 'make/press-brake-band',
-    name: '制动带制造',
+    name: 'Brake Band Manufacturing', name_zh: '制动带制造',
     produces: [{ item: 'plant/press/drive/brake-band', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1, 5) }] }],
     performedBy: 'plant/forge',

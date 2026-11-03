@@ -52,7 +52,7 @@ export const CAPACITOR_ITEMS: readonly Item[] = [
    * 薄膜电容、电解电容、电阻、继电器、接插件；这一条只做其中能做的那个。
    * 所以它是一条新条目，不是给旧条目补路线 —— 旧条目里的电解电容仍在外购清单上。
    */
-  { id: 'std/capacitor-film-general', name: '薄膜电容', unit: '件', category: 'part',
+  { id: 'std/capacitor-film-general', name: 'Film Capacitor', name_zh: '薄膜电容', unit: '件', category: 'part',
     props: [{ param: 'capacitance', kind: 'range', min: 0.01, max: 100, unit: 'µF' }, { param: 'ratedVoltage', kind: 'range', min: 100, max: 1000, unit: 'V' }] },
 ];
 
@@ -70,7 +70,7 @@ export const CAPACITOR_ROUTES: readonly Route[] = [
      * **这是"能造"和"造得好"之间最宽的一条缝**：结构上成立，一致性靠手。
      */
     id: 'make/capacitor-film',
-    name: '薄膜电容制造',
+    name: 'Film Capacitor Manufacturing', name_zh: '薄膜电容制造',
     produces: [{ item: 'std/capacitor-film-general', qty: q(1), gives: [{ param: 'capacitance', kind: 'range', min: 0.1, max: 10 }, { param: 'ratedVoltage', kind: 'range', min: 200, max: 630 }] }],
     uses: [
       { anyOf: [{ item: 'mat/aluminium', qty: q(1) }] },

@@ -521,7 +521,7 @@ export const UNBLOCK_RESF_DOOR_ROUTES: readonly Route[] = [
      *     就错了：靠的是挡热环把绳退出了热区（第六节②）
      */
     id: 'make/resf-door-cast',
-    name: '电阻炉炉门与料筐制造',
+    name: 'Resistance Furnace Door and Charge Basket Manufacturing', name_zh: '电阻炉炉门与料筐制造',
     produces: [{ item: 'plant/resistance-furnace/door', qty: q(1) }],
     /**
      * 进 98.6 kg，出 1 件（80.8 kg）。每一笔的用途与算式写在各条下面。

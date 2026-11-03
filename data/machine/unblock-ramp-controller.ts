@@ -266,7 +266,7 @@ export const UNBLOCK_RAMP_CTRL_ROUTES: readonly Route[] = [
      *    一个手抖就是一根丝）
      */
     id: 'make/ramp-controller-cam',
-    name: '机械式凸轮程序升温控制器制造',
+    name: 'Mechanical Cam-Programmed Temperature Controller Manufacturing', name_zh: '机械式凸轮程序升温控制器制造',
     produces: [{ item: 'std/ramp-controller-general', qty: q(1) }],
     uses: [
       /**

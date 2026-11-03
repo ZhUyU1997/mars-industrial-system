@@ -95,7 +95,7 @@ export const MANGANESE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pyrolusite-concentrate',
-    name: '软锰矿精矿',
+    name: 'Pyrolusite Concentrate', name_zh: '软锰矿精矿',
     unit: 'kg',
     category: 'material',
     props: [
@@ -113,7 +113,7 @@ export const MANGANESE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ferromanganese',
-    name: '高碳锰铁',
+    name: 'High-Carbon Ferromanganese', name_zh: '高碳锰铁',
     unit: 'kg',
     category: 'material',
     props: [
@@ -130,7 +130,7 @@ export const MANGANESE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/steel-65mn',
-    name: '65Mn 弹簧钢',
+    name: '65Mn Spring Steel', name_zh: '65Mn 弹簧钢',
     unit: 'kg',
     category: 'material',
     props: [
@@ -155,7 +155,7 @@ export const MANGANESE_ROUTES: readonly Route[] = [
      * 药剂，所以不受浮选药剂的选择性限制。
      */
     id: 'make/pyrolusite-concentrate',
-    name: '风化层重选到软锰矿精矿制备',
+    name: 'Regolith Gravity Separation to Pyrolusite Concentrate Production', name_zh: '风化层重选到软锰矿精矿制备',
     produces: [
       {
         item: 'mat/pyrolusite-concentrate',
@@ -183,7 +183,7 @@ export const MANGANESE_ROUTES: readonly Route[] = [
      * 否则硅被还原进合金，锰铁的硅超标。
      */
     id: 'make/ferromanganese',
-    name: '碳热还原到高碳锰铁制备',
+    name: 'Carbothermic Reduction to High-Carbon Ferromanganese', name_zh: '碳热还原到高碳锰铁制备',
     produces: [
       {
         item: 'mat/ferromanganese',
@@ -222,7 +222,7 @@ export const MANGANESE_ROUTES: readonly Route[] = [
      * `hardness` 交空窗口：交货是退火态，淬火回火在抱闸那一条做。
      */
     id: 'make/steel-65mn',
-    name: '65Mn 弹簧钢制备',
+    name: '65Mn Spring Steel Production', name_zh: '65Mn 弹簧钢制备',
     produces: [
       {
         item: 'mat/steel-65mn',

@@ -17,7 +17,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/pellistor-h2-sensor-calibration',
-    name: 'Pellistor 校准',
+    name: 'Pellistor Calibration', name_zh: 'Pellistor 校准',
     produces: [
       {
         item: 'mat/h2-sensor-record',

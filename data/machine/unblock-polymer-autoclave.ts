@@ -470,7 +470,7 @@ export const UNBLOCK_POLY_AUTOCLAVE_ROUTES: readonly Route[] = [
      *    全文所有粘壁的账都从这一句长出来（第八节）。
      */
     id: 'make/polymer-autoclave-cast',
-    name: '聚合物聚合釜制造',
+    name: 'Polymer Polymerization Reactor Manufacturing', name_zh: '聚合物聚合釜制造',
     produces: [{ item: 'plant/polymer-plant/autoclave', qty: q(1) }],
     uses: [
       /**

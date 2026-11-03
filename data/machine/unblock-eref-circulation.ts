@@ -350,7 +350,7 @@ export const UNBLOCK_EREF_CIRC_ROUTES: readonly Route[] = [
      * 一年一换的节奏里。
      */
     id: 'make/eref-circulation-cast',
-    name: '电解精炼槽电解液循环制造',
+    name: 'Electrorefining Cell Electrolyte Circulation Manufacturing', name_zh: '电解精炼槽电解液循环制造',
     produces: [{ item: 'plant/electrorefining/circulation', qty: q(1) }],
     uses: [
       /**

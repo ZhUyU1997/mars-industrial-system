@@ -18,7 +18,7 @@ export const STI_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/sti-cross-section-record',
-    name: 'STI 破坏性截面记录',
+    name: 'STI Destructive Cross-Section Record', name_zh: 'STI 破坏性截面记录',
     unit: '份',
     category: 'part',
     props: [
@@ -43,7 +43,7 @@ export const STI_MEASURE_ROUTES: readonly Route[] = [
      * rate 4 h；performedBy `plant/fib-tem`。
      */
     id: 'measure/sti-fill-cross-section',
-    name: 'STI 破坏性截面测量',
+    name: 'STI Destructive Cross-Section Measurement', name_zh: 'STI 破坏性截面测量',
     produces: [
       {
         item: 'mat/sti-cross-section-record',

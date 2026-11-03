@@ -195,7 +195,7 @@ export const C4F6_STEP_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/c4f6-adduct',
-    name: '1,2-加成物',
+    name: '1,2-Adduct', name_zh: '1,2-加成物',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'yield', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }],
@@ -212,7 +212,7 @@ export const C4F6_STEP_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/c4f6-hftcb',
-    name: 'HFTCB（六氟四氯丁烷）',
+    name: 'HFTCB (Hexafluorotetrachlorobutane)', name_zh: 'HFTCB（六氟四氯丁烷）',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'yield', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }],
@@ -237,7 +237,7 @@ export const C4F6_STEP_ROUTES: readonly Route[] = [
      * 主/次两种 1,2-加成物都进②（文件头缺口③）。
      */
     id: 'make/c4f6-adduct',
-    name: '1,2-加成物制备',
+    name: '1,2-Adduct Production', name_zh: '1,2-加成物制备',
     produces: [
       {
         item: 'mat/c4f6-adduct',
@@ -307,7 +307,7 @@ export const C4F6_STEP_ROUTES: readonly Route[] = [
      * **ICl 显式化需要重推①的 I₂/Cl₂ 进料，属独立工艺提案**。
      */
     id: 'make/c4f6-hftcb',
-    name: 'HFTCB（六氟四氯丁烷） 制备',
+    name: 'HFTCB (Hexafluorotetrachlorobutane) Production', name_zh: 'HFTCB（六氟四氯丁烷） 制备',
     produces: [
       {
         item: 'mat/c4f6-hftcb',

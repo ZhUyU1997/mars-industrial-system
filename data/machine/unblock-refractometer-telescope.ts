@@ -277,7 +277,7 @@ export const UNBLOCK_REFR_TEL_ROUTES: readonly Route[] = [
      *  ④ 铜镜锈了，这一件**不进标定** —— 维护从"3 个月"放宽到"看不清再抛"
      */
     id: 'make/refractometer-telescope-mirror',
-    name: '折射仪准直管与望远镜制造',
+    name: 'Refractometer Collimator and Telescope Manufacturing', name_zh: '折射仪准直管与望远镜制造',
     produces: [{ item: 'plant/refractometer/telescope', qty: q(1) }],
     /**
      * 进 1.97 kg，出 1 件（0.708 kg）。每一笔的算式写在下面。

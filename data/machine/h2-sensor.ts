@@ -117,7 +117,7 @@ export const H2_SENSOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/h2-sensor',
-    name: '氢气传感器',
+    name: 'Hydrogen Sensor', name_zh: '氢气传感器',
     unit: '台',
     category: 'machine',
     props: [
@@ -145,7 +145,7 @@ export const H2_SENSOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/h2-sensor/flame-arrestor',
-    name: '烧结不锈钢火焰捕获器',
+    name: 'Sintered Stainless Steel Flame Arrestor', name_zh: '烧结不锈钢火焰捕获器',
     unit: '件',
     category: 'part',
     props: [
@@ -163,7 +163,7 @@ export const H2_SENSOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/h2-sensor/flameproof-housing',
-    name: '氢气传感器防爆壳',
+    name: 'Hydrogen Sensor Explosion-Proof Housing', name_zh: '氢气传感器防爆壳',
     unit: '件',
     category: 'part',
     props: [
@@ -182,7 +182,7 @@ export const H2_SENSOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/h2-sensor/oven',
-    name: 'TCD 加热块',
+    name: 'TCD Heater Block', name_zh: 'TCD 加热块',
     unit: '件',
     category: 'part',
     props: [
@@ -200,7 +200,7 @@ export const H2_SENSOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/h2-sensor/bridge',
-    name: '氢气传感器桥路',
+    name: 'Hydrogen Sensor Bridge Circuit', name_zh: '氢气传感器桥路',
     unit: '件',
     category: 'part',
     props: [
@@ -227,7 +227,7 @@ export const H2_SENSOR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/h2-flame-arrestor',
-    name: '烧结不锈钢火焰捕获器制造',
+    name: 'Sintered Stainless Steel Flame Arrestor Manufacturing', name_zh: '烧结不锈钢火焰捕获器制造',
     produces: [
       {
         item: 'plant/h2-sensor/flame-arrestor',
@@ -262,7 +262,7 @@ export const H2_SENSOR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/h2-flameproof-housing',
-    name: '氢气传感器防爆壳制造',
+    name: 'Hydrogen Sensor Explosion-Proof Housing Manufacturing', name_zh: '氢气传感器防爆壳制造',
     produces: [
       {
         item: 'plant/h2-sensor/flameproof-housing',
@@ -297,7 +297,7 @@ export const H2_SENSOR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/h2-oven',
-    name: 'TCD 加热块制造',
+    name: 'TCD Heater Block Manufacturing', name_zh: 'TCD 加热块制造',
     produces: [
       {
         item: 'plant/h2-sensor/oven',
@@ -330,7 +330,7 @@ export const H2_SENSOR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/h2-bridge',
-    name: '氢气传感器桥路制造',
+    name: 'Hydrogen Sensor Bridge Circuit Manufacturing', name_zh: '氢气传感器桥路制造',
     produces: [
       {
         item: 'plant/h2-sensor/bridge',
@@ -375,7 +375,7 @@ export const H2_SENSOR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/h2-sensor',
-    name: '氢气传感器装配',
+    name: 'Hydrogen Sensor Assembly', name_zh: '氢气传感器装配',
     produces: [
       {
         item: 'plant/h2-sensor',
@@ -445,7 +445,7 @@ export const AIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/air',
-    name: '压缩空气',
+    name: 'Compressed Air', name_zh: '压缩空气',
     unit: 'kg',
     category: 'material',
     props: [
@@ -466,7 +466,7 @@ export const AIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/air-compressor',
-    name: '压缩空气机组',
+    name: 'Compressed Air Unit', name_zh: '压缩空气机组',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'pressure', min: 0.6, max: 1.0 }],
@@ -484,7 +484,7 @@ export const AIR_ITEMS: readonly Item[] = [
   /** 压缩机。两级活塞/螺杆，0.6–1.0 MPa、20–100 m³/h、7.5–11 kW。 */
   {
     id: 'plant/air-compressor/compressor',
-    name: '压缩空气机组压缩机',
+    name: 'Compressed Air Unit Compressor', name_zh: '压缩空气机组压缩机',
     unit: '件',
     category: 'part',
     props: [
@@ -497,7 +497,7 @@ export const AIR_ITEMS: readonly Item[] = [
   /** 冷冻/吸附干燥器。露点 −50…−45 °C、20–100 m³/h。 */
   {
     id: 'plant/air-compressor/dryer',
-    name: '压缩空气机组冷冻/吸附干燥器',
+    name: 'Compressed Air Unit Refrigerated/Adsorption Dryer', name_zh: '压缩空气机组冷冻/吸附干燥器',
     unit: '件',
     category: 'part',
     props: [
@@ -509,7 +509,7 @@ export const AIR_ITEMS: readonly Item[] = [
   /** 除油过滤器。活性炭 + 玻璃纤维，油 0.01–0.1 mg/m³、THC 0.1–1 ppm。 */
   {
     id: 'plant/air-compressor/oil-filter',
-    name: '压缩空气机组除油过滤器',
+    name: 'Compressed Air Unit Oil Removal Filter', name_zh: '压缩空气机组除油过滤器',
     unit: '件',
     category: 'part',
     props: [
@@ -521,7 +521,7 @@ export const AIR_ITEMS: readonly Item[] = [
   /** 储气罐。0.5–1.0 m³、1.2–1.6 MPa，带安全阀与排水阀。 */
   {
     id: 'plant/air-compressor/receiver',
-    name: '压缩空气机组储气罐',
+    name: 'Compressed Air Unit Air Receiver', name_zh: '压缩空气机组储气罐',
     unit: '件',
     category: 'part',
     props: [
@@ -531,7 +531,7 @@ export const AIR_ITEMS: readonly Item[] = [
   },
 
   /** 机架与管路。型材焊接 + 法兰 + 阀门。 */
-  { id: 'plant/air-compressor/frame', name: '压缩空气机组机架与管路', unit: '件', category: 'part' },
+  { id: 'plant/air-compressor/frame', name: 'Compressed Air Unit Frame and Piping', name_zh: '压缩空气机组机架与管路', unit: '件', category: 'part' },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -546,7 +546,7 @@ export const AIR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/air-compressor-compressor',
-    name: '压缩空气机组压缩机制造',
+    name: 'Compressed Air Unit Compressor Manufacturing', name_zh: '压缩空气机组压缩机制造',
     produces: [
       {
         item: 'plant/air-compressor/compressor',
@@ -582,7 +582,7 @@ export const AIR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/air-compressor-dryer',
-    name: '压缩空气机组冷冻/吸附干燥器制造',
+    name: 'Compressed Air Unit Refrigerated/Adsorption Dryer Manufacturing', name_zh: '压缩空气机组冷冻/吸附干燥器制造',
     produces: [
       {
         item: 'plant/air-compressor/dryer',
@@ -612,7 +612,7 @@ export const AIR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/air-compressor-oil-filter',
-    name: '压缩空气机组除油过滤器制造',
+    name: 'Compressed Air Unit Oil Removal Filter Manufacturing', name_zh: '压缩空气机组除油过滤器制造',
     produces: [
       {
         item: 'plant/air-compressor/oil-filter',
@@ -642,7 +642,7 @@ export const AIR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/air-compressor-receiver',
-    name: '压缩空气机组储气罐制造',
+    name: 'Compressed Air Unit Air Receiver Manufacturing', name_zh: '压缩空气机组储气罐制造',
     produces: [
       {
         item: 'plant/air-compressor/receiver',
@@ -670,7 +670,7 @@ export const AIR_ROUTES: readonly Route[] = [
   /** 机架与管路：型材焊接 + 法兰 + 阀门。 */
   {
     id: 'make/air-compressor-frame',
-    name: '压缩空气机组机架与管路制造',
+    name: 'Compressed Air Unit Frame and Piping Manufacturing', name_zh: '压缩空气机组机架与管路制造',
     produces: [{ item: 'plant/air-compressor/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(30) }] }],
     needs: [],
@@ -687,7 +687,7 @@ export const AIR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/air-compressor',
-    name: '压缩空气机组装配',
+    name: 'Compressed Air Unit Assembly', name_zh: '压缩空气机组装配',
     produces: [
       {
         item: 'plant/air-compressor',
@@ -744,7 +744,7 @@ export const AIR_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/compressed-air',
-    name: '压缩空气制备',
+    name: 'Compressed Air Production', name_zh: '压缩空气制备',
     produces: [
       {
         item: 'mat/air',

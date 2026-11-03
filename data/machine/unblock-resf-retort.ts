@@ -458,7 +458,7 @@ export const UNBLOCK_RESF_RETORT_ROUTES: readonly Route[] = [
      *     这三样的去处是缺口③，不是这里的数量
      */
     id: 'make/resf-retort-ceramic',
-    name: '电阻炉密封罐制造',
+    name: 'Resistance Furnace Retort Manufacturing', name_zh: '电阻炉密封罐制造',
     produces: [{ item: 'plant/resistance-furnace/retort', qty: q(1) }],
     /**
      * 进 30.95 kg，出 1 件（13.94 kg）。每一笔的用途与算式写在各条下面。

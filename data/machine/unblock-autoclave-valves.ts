@@ -440,7 +440,7 @@ export const UNBLOCK_AUTOCLAVE_VALVE_ROUTES: readonly Route[] = [
      *    压力账全部写在注释里 —— 与壳体、密封、搅拌、加热四条路线同一处理。
      */
     id: 'make/autoclave-valves-cast',
-    name: '高压釜高压阀与安全阀制造',
+    name: 'Autoclave High-Pressure Valve and Safety Valve Manufacturing', name_zh: '高压釜高压阀与安全阀制造',
     produces: [{ item: 'plant/autoclave/valves', qty: q(1) }],
     uses: [
       /**

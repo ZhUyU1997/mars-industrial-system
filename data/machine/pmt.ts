@@ -195,7 +195,7 @@ export const PMT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pmt-assembly/chamber',
-    name: 'UHV 工艺腔',
+    name: 'UHV Process Chamber', name_zh: 'UHV 工艺腔',
     unit: '件',
     category: 'part',
     props: [
@@ -215,7 +215,7 @@ export const PMT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pmt-assembly/photocathode',
-    name: 'Cs₃Sb 光阴极',
+    name: 'Cs₃Sb Photocathode', name_zh: 'Cs₃Sb 光阴极',
     unit: '件',
     category: 'part',
     props: [
@@ -235,7 +235,7 @@ export const PMT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pmt-assembly/dynode',
-    name: 'PMT 打拿极',
+    name: 'PMT Dynode', name_zh: 'PMT 打拿极',
     unit: '件',
     category: 'part',
     props: [
@@ -255,7 +255,7 @@ export const PMT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pmt-assembly/envelope',
-    name: 'PMT 真空封管',
+    name: 'PMT Vacuum Envelope', name_zh: 'PMT 真空封管',
     unit: '件',
     category: 'part',
     props: [
@@ -276,7 +276,7 @@ export const PMT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pmt-assembly/divider',
-    name: 'PMT 分压器',
+    name: 'PMT Voltage Divider', name_zh: 'PMT 分压器',
     unit: '件',
     category: 'part',
     props: [
@@ -300,7 +300,7 @@ export const PMT_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/pmt-general',
-    name: 'PMT 管',
+    name: 'PMT Tube', name_zh: 'PMT 管',
     unit: '件',
     category: 'part',
     props: [
@@ -322,7 +322,7 @@ export const PMT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pmt-assembly',
-    name: 'PMT 组件',
+    name: 'PMT Assembly', name_zh: 'PMT 组件',
     unit: '套',
     category: 'part',
     props: [
@@ -356,7 +356,7 @@ export const PMT_ROUTES: readonly Route[] = [
      * 真空由 `plant/euv-vacuum` 抽，温度由电阻炉的加热带维持。
      */
     id: 'make/pmt-chamber',
-    name: 'UHV 工艺腔制造',
+    name: 'UHV Process Chamber Manufacturing', name_zh: 'UHV 工艺腔制造',
     produces: [
       {
         item: 'plant/pmt-assembly/chamber',
@@ -401,7 +401,7 @@ export const PMT_ROUTES: readonly Route[] = [
      * 灵敏度 50–75 µA/lm、QE 20–24 %；膜厚 12–28 nm。
      */
     id: 'make/pmt-photocathode',
-    name: 'Cs₃Sb 光阴极制造',
+    name: 'Cs₃Sb Photocathode Manufacturing', name_zh: 'Cs₃Sb 光阴极制造',
     produces: [
       {
         item: 'plant/pmt-assembly/photocathode',
@@ -447,7 +447,7 @@ export const PMT_ROUTES: readonly Route[] = [
      * 每套 12–14 级；Ag-Mg 表面 MgO 的二次发射 3.5–4.5 倍。
      */
     id: 'make/pmt-dynode',
-    name: 'PMT 打拿极制造',
+    name: 'PMT Dynode Manufacturing', name_zh: 'PMT 打拿极制造',
     produces: [
       {
         item: 'plant/pmt-assembly/dynode',
@@ -486,7 +486,7 @@ export const PMT_ROUTES: readonly Route[] = [
      * 玻璃焊不用铟封；漏率 ≤1×10⁻¹⁰ Pa·L/s。
      */
     id: 'make/pmt-envelope',
-    name: 'PMT 真空封管制造',
+    name: 'PMT Vacuum Envelope Manufacturing', name_zh: 'PMT 真空封管制造',
     produces: [
       {
         item: 'plant/pmt-assembly/envelope',
@@ -524,7 +524,7 @@ export const PMT_ROUTES: readonly Route[] = [
      * 每只 10 级、每级 100 kΩ–1 MΩ（总 1–10 MΩ）；1500 V 下 150 µA–1.5 mA。
      */
     id: 'make/pmt-divider',
-    name: 'PMT 分压器制造',
+    name: 'PMT Voltage Divider Manufacturing', name_zh: 'PMT 分压器制造',
     produces: [
       {
         item: 'plant/pmt-assembly/divider',
@@ -567,7 +567,7 @@ export const PMT_ROUTES: readonly Route[] = [
      * 上升 1.8–2.5 ns、φ18–22 mm、300–650 nm。
      */
     id: 'make/pmt-general',
-    name: 'PMT 管总装',
+    name: 'PMT Tube Final Assembly', name_zh: 'PMT 管总装',
     produces: [
       {
         item: 'std/pmt-general',
@@ -616,7 +616,7 @@ export const PMT_ROUTES: readonly Route[] = [
      * 铁屏蔽壳把地磁 50 µT 压到增益漂 1–3 %；分压器 10 级。
      */
     id: 'make/pmt-assembly',
-    name: 'PMT 组件制造',
+    name: 'PMT Assembly Manufacturing', name_zh: 'PMT 组件制造',
     produces: [
       {
         item: 'plant/pmt-assembly',
@@ -664,7 +664,7 @@ export const PMT_ROUTES: readonly Route[] = [
      * 落在 femto 前端 1 µA 以内。
      */
     id: 'make/fpd-pmt',
-    name: 'FPD 整机制造',
+    name: 'FPD System Manufacturing', name_zh: 'FPD 整机制造',
     produces: [
       {
         item: 'plant/fpd',

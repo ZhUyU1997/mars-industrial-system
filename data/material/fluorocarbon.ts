@@ -336,7 +336,7 @@ export const FCGAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/c4f8',
-    name: '八氟环丁烷',
+    name: 'Octafluorocyclobutane', name_zh: '八氟环丁烷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -369,7 +369,7 @@ export const FCGAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/chf3',
-    name: '三氟甲烷',
+    name: 'Trifluoromethane', name_zh: '三氟甲烷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -402,7 +402,7 @@ export const FCGAS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/c4f6',
-    name: '六氟丁二烯',
+    name: 'Hexafluorobutadiene', name_zh: '六氟丁二烯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -472,7 +472,7 @@ export const FCGAS_ROUTES: readonly Route[] = [
      *   ⑤ **没有塔顶冷阱** ⇒ 放空带走的 0.3–0.5 % C₄F₈ 收不回来（每批 0.3–0.5 kg）。
      */
     id: 'make/c4f8',
-    name: '八氟环丁烷制备',
+    name: 'Octafluorocyclobutane Production', name_zh: '八氟环丁烷制备',
     produces: [
       {
         item: 'mat/c4f8',
@@ -650,7 +650,7 @@ export const FCGAS_ROUTES: readonly Route[] = [
      *   这一条不是选择，是 CHF₃ 的 Tc 定的。
      */
     id: 'make/chf3',
-    name: '三氟甲烷制备',
+    name: 'Trifluoromethane Production', name_zh: '三氟甲烷制备',
     produces: [
       {
         item: 'mat/chf3',

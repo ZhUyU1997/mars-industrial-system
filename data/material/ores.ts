@@ -38,7 +38,7 @@ export const ORE_ITEMS: readonly Item[] = [
    * 它自己不是产品，是两段制酸中间的那一段 —— 分开记的理由只有一个：
    * 转化要 420–450 °C，吸收要低于 120 °C。
    */
-  { id: 'mat/so3', name: '三氧化硫', unit: 'kg', category: 'material' },
+  { id: 'mat/so3', name: 'Sulfur Trioxide', name_zh: '三氧化硫', unit: 'kg', category: 'material' },
 
   /**
    * 聚合引发剂。过硫酸钠。
@@ -47,7 +47,7 @@ export const ORE_ITEMS: readonly Item[] = [
    * 见 data/material/reagents.ts 的 make/initiator：硫酸钠是碱加硫酸中和来的，
    * 电解时阳极把 SO₄²⁻ 氧化成 S₂O₈²⁻，阴极出氢与碱。
    */
-  { id: 'mat/polymerization-initiator', name: '聚合引发剂', unit: 'kg', category: 'consumable' },
+  { id: 'mat/polymerization-initiator', name: 'Polymerization Initiator', name_zh: '聚合引发剂', unit: 'kg', category: 'consumable' },
 ];
 
 export const ORE_ROUTES: readonly Route[] = [
@@ -61,7 +61,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 全表里最贵的一次富集。
        */
       id: 'make/chromite-concentrate',
-      name: '铬铁矿重选制备',
+      name: 'Chromite Gravity Separation Production', name_zh: '铬铁矿重选制备',
       produces: [
         { item: 'mat/chromite-concentrate', qty: q(2261) },
         { item: 'mat/tailings', qty: q(314279) },
@@ -78,7 +78,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 出 700 kg 一氧化碳 + 861 kg 炉渣。
        */
       id: 'make/ferrochrome',
-      name: '铬铁制备',
+      name: 'Ferrochrome Production', name_zh: '铬铁制备',
       produces: [
         { item: 'mat/ferrochrome', qty: q(1000) },
         { item: 'mat/co', qty: q(700), gives: [{ param: 'purity', kind: 'range', min: 40, dir: 'atLeast' }] },
@@ -106,7 +106,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 药剂 1 kg 随尾矿排走，所以按不平衡声明。
        */
       id: 'make/copper-concentrate',
-      name: '风化层浮选到铜精矿制备',
+      name: 'Regolith Flotation to Copper Concentrate Production', name_zh: '风化层浮选到铜精矿制备',
       produces: [
         { item: 'mat/copper-concentrate', qty: q(1000) },
         { item: 'mat/tailings', qty: q(8332334) },
@@ -138,7 +138,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * ⚠️ 造渣熔剂（硅石 237 kg）还没建条目，所以这里按不进熔剂算平衡。
        */
       id: 'make/blister-copper',
-      name: '铜精矿熔炼与吹炼制备',
+      name: 'Copper Concentrate Smelting and Converting', name_zh: '铜精矿熔炼与吹炼制备',
       produces: [
         { item: 'mat/blister-copper', qty: q(250) },
         { item: 'mat/so2', qty: q(504) },
@@ -161,7 +161,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 阳极里 245 kg 铜，阴极收 240 —— 回收 98%，其余 5 kg 随阳极泥与电解液走掉。
        */
       id: 'make/copper',
-      name: '电解精炼',
+      name: 'Electrolytic Refining', name_zh: '电解精炼',
       produces: [
         // 电解精炼的阴极铜按 99.95–99.99 记（工业阴极铜的常规档；`copper-fire.ts` 文件头也写着
         // “电解铜 99.99 %”）。原来这里写 99–99.9，与同文件三条路线的过程描述不符 ——
@@ -185,7 +185,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 浮选药剂已有 `make/flotation-reagent`；这一步不再是断点，成本仍在富集比。
        */
       id: 'make/nickel-concentrate',
-      name: '风化层浮选到镍精矿制备',
+      name: 'Regolith Flotation to Nickel Concentrate Production', name_zh: '风化层浮选到镍精矿制备',
       produces: [
         { item: 'mat/nickel-concentrate', qty: q(1000) },
         { item: 'mat/tailings', qty: q(249001) },
@@ -202,7 +202,7 @@ export const ORE_ROUTES: readonly Route[] = [
     {
       /** 精矿 → 镍铁。矿热炉还原，1600 °C：1000 进，400 镍铁 + 600 炉渣。 */
       id: 'make/ferronickel',
-      name: '精矿制备',
+      name: 'Concentrate Production', name_zh: '精矿制备',
       produces: [
         { item: 'mat/ferronickel', qty: q(400) },
         { item: 'mat/slag', qty: q(600) },
@@ -223,7 +223,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 差两个数量级 —— 那是为了让账平，不是为了说清过程。
        */
       id: 'make/nickel',
-      name: '镍铁电解精炼',
+      name: 'Ferronickel Electrolytic Refining', name_zh: '镍铁电解精炼',
       produces: [
         { item: 'mat/nickel', qty: q(100) },
         { item: 'mat/anode-sludge', qty: q(10) },
@@ -245,7 +245,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 磷灰石是四条链路里唯一可以走正浮选的，但它同样要药剂。
        */
       id: 'make/apatite-concentrate',
-      name: '风化层浮选到磷灰石精矿制备',
+      name: 'Regolith Flotation to Apatite Concentrate Production', name_zh: '风化层浮选到磷灰石精矿制备',
       produces: [
         { item: 'mat/apatite-concentrate', qty: q(1000) },
         { item: 'mat/tailings', qty: q(29001) },
@@ -273,7 +273,7 @@ export const ORE_ROUTES: readonly Route[] = [
        *   SO₂ 372 · 石灰 326 · 氧 93 · 水 209 —— 加起来正好 1000。
        */
       id: 'make/so2',
-      name: '石膏热分解制备',
+      name: 'Gypsum Thermal Decomposition', name_zh: '石膏热分解制备',
       produces: [
         { item: 'mat/so2', qty: q(372) },
         { item: 'mat/lime', qty: q(326) },
@@ -295,7 +295,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 吸收要低于 120。压在一条路线里，就说不清"在哪一度做"了。
        */
       id: 'make/so3',
-      name: '催化转化制备',
+      name: 'Sulfur Trioxide Production', name_zh: '催化转化制备',
       produces: [{ item: 'mat/so3', qty: q(1250) }],
       uses: [
         { anyOf: [{ item: 'mat/so2', qty: q(1000) }] },
@@ -315,7 +315,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 实际是用 98% 的浓酸循环淋洗，不是用水直接吸 —— 用水吸会起酸雾。
        */
       id: 'make/sulfuric-acid',
-      name: '吸收制备',
+      name: 'Absorption', name_zh: '吸收制备',
       produces: [
       { item: 'mat/sulfuric-acid', qty: q(1531), gives: [{ param: 'concentration', kind: 'range', min: 96, max: 98 }] },
     ],
@@ -340,7 +340,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 副产的三样都还没有条目，所以这条按不平衡声明，不硬凑一个出口。
        */
       id: 'make/hf',
-      name: '磷灰石加硫酸蒸出氢氟酸制备',
+      name: 'Hydrofluoric Acid Production from Apatite by Sulfuric Acid Distillation', name_zh: '磷灰石加硫酸蒸出氢氟酸制备',
       produces: [
         { item: 'mat/hf', qty: q(26), gives: [{ param: 'concentration', kind: 'range', min: 60, max: 70 }] },
         // 磷石膏与磷酸跟氟化氢是**同一个反应的三股产物**（氟磷灰石 + 硫酸）。
@@ -370,7 +370,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 85% 那一段见下一条，给 `make/deprocess-nitride` 的 160–180 °C 热磷酸。
        */
       id: 'make/phosphoric-acid-75',
-      name: '磷酸浓缩',
+      name: 'Phosphoric Acid Concentration', name_zh: '磷酸浓缩',
       produces: [
         { item: 'mat/phosphoric-acid', qty: q(300), gives: [{ param: 'concentration', kind: 'range', min: 70, max: 85 }] },
         { item: 'mat/water', qty: q(700), gives: [{ param: 'conductivity', kind: 'range', min: 1, max: 100 }] },
@@ -395,7 +395,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * 85% 是 `make/deprocess-nitride` 的下限：热磷酸 160–180 °C 溶氮化硅。
        */
       id: 'make/phosphoric-acid-85',
-      name: '磷酸浓缩',
+      name: 'Phosphoric Acid Concentration', name_zh: '磷酸浓缩',
       produces: [
         { item: 'mat/phosphoric-acid', qty: q(294), gives: [{ param: 'concentration', kind: 'range', min: 85, max: 85 }] },
       ],
@@ -425,7 +425,7 @@ export const ORE_ROUTES: readonly Route[] = [
        * ⚠️ 引发剂 2 kg 进了链端：不算杂质，但也不再是产品 —— 声明为不平衡。
        */
       id: 'make/ptfe',
-      name: '聚四氟乙烯制备',
+      name: 'PTFE Production', name_zh: '聚四氟乙烯制备',
       produces: [
         {
           item: 'mat/ptfe',

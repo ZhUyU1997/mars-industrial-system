@@ -26,7 +26,7 @@ export const EUV_FIRST_ARTICLE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/first-article-record',
-    name: '8 nm 首片的 CD/Vt/方阻记录',
+    name: '8 nm First Article CD/Vt/Sheet Resistance Record', name_zh: '8 nm 首片的 CD/Vt/方阻记录',
     unit: '份',
     category: 'part',
     props: [
@@ -44,7 +44,7 @@ export const EUV_FIRST_ARTICLE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ler-record',
-    name: '线条边缘粗糙度记录',
+    name: 'Line Edge Roughness Record', name_zh: '线条边缘粗糙度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -64,7 +64,7 @@ export const EUV_FIRST_ARTICLE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gate-stack-record',
-    name: '首片栅极叠层的截面记录',
+    name: 'First Article Gate Stack Cross-Section Record', name_zh: '首片栅极叠层的截面记录',
     unit: '份',
     category: 'part',
     props: [
@@ -83,7 +83,7 @@ export const EUV_FIRST_ARTICLE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/first-article-electrical-record',
-    name: '首片电学记录',
+    name: 'First Article Electrical Record', name_zh: '首片电学记录',
     unit: '份',
     category: 'part',
     props: [
@@ -103,7 +103,7 @@ export const EUV_FIRST_ARTICLE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/first-article-defect-record',
-    name: '首片缺陷图记录',
+    name: 'First Article Defect Map Record', name_zh: '首片缺陷图记录',
     unit: '份',
     category: 'part',
     props: [
@@ -123,7 +123,7 @@ export const EUV_FIRST_ARTICLE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/first-article-ebeam-record',
-    name: '首片电子束缺陷图记录',
+    name: 'First Article Electron Beam Defect Map Record', name_zh: '首片电子束缺陷图记录',
     unit: '份',
     category: 'part',
     props: [
@@ -144,7 +144,7 @@ export const EUV_FIRST_ARTICLE_ROUTES: readonly Route[] = [
      * `points 10`；不是 8–10 nm 的读数。LER 明确不测：没有 LER 量具。
      */
     id: 'measure/euv-hina-first-article',
-    name: '8 nm 首片的 CD/Vt/方阻测量',
+    name: '8 nm First Article CD/Vt/Sheet Resistance Measurement', name_zh: '8 nm 首片的 CD/Vt/方阻测量',
     produces: [
       {
         item: 'mat/first-article-record',
@@ -191,7 +191,7 @@ export const EUV_FIRST_ARTICLE_ROUTES: readonly Route[] = [
      * 能力域 `ler 0–10 nm`、`points 500`、`method sem-edge`。
      */
     id: 'measure/ler-sem-edge',
-    name: 'LER 的降级测量',
+    name: 'LER Degradation Measurement', name_zh: 'LER 的降级测量',
     produces: [
       {
         item: 'mat/ler-record',
@@ -239,7 +239,7 @@ export const EUV_FIRST_ARTICLE_ROUTES: readonly Route[] = [
      * 加宽边缘，低能终抛 0.5–2 kV 把损伤压到 2–5 nm。
      */
     id: 'measure/ler-tem-plan-view',
-    name: '线条边缘粗糙度测量',
+    name: 'Line Edge Roughness Measurement', name_zh: '线条边缘粗糙度测量',
     produces: [
       {
         item: 'mat/ler-record',
@@ -294,7 +294,7 @@ export const EUV_FIRST_ARTICLE_ROUTES: readonly Route[] = [
      * 带 FIB 损伤层修正后再收窄。首片切完不可再用。
      */
     id: 'measure/gate-stack-tem',
-    name: '首片栅极叠层的截面测量',
+    name: 'First Article Gate Stack Cross-Section Measurement', name_zh: '首片栅极叠层的截面测量',
     produces: [
       {
         item: 'mat/gate-stack-record',
@@ -351,7 +351,7 @@ export const EUV_FIRST_ARTICLE_ROUTES: readonly Route[] = [
      * 就没了。
      */
     id: 'measure/first-article-electrical',
-    name: '首片电学测量',
+    name: 'First Article Electrical Measurement', name_zh: '首片电学测量',
     produces: [
       {
         item: 'mat/first-article-electrical-record',
@@ -398,7 +398,7 @@ export const EUV_FIRST_ARTICLE_ROUTES: readonly Route[] = [
      * 全片图仍要更高分辨率的电子束巡检，本层没有。
      */
     id: 'measure/first-article-defect-map',
-    name: '首片缺陷图测量',
+    name: 'First Article Defect Map Measurement', name_zh: '首片缺陷图测量',
     produces: [
       {
         item: 'mat/first-article-defect-record',
@@ -444,7 +444,7 @@ export const EUV_FIRST_ARTICLE_ROUTES: readonly Route[] = [
      * `pixel 2–10 nm`、`points 100`；不是 8 nm 良率，也不是全片图。
      */
     id: 'measure/first-article-ebeam-map',
-    name: '首片电子束缺陷图测量',
+    name: 'First Article Electron Beam Defect Map Measurement', name_zh: '首片电子束缺陷图测量',
     produces: [
       {
         item: 'mat/first-article-ebeam-record',

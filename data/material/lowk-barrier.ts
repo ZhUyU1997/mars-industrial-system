@@ -446,7 +446,7 @@ export const LOWK_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/methyl-chloride',
-    name: '氯甲烷',
+    name: 'Methyl Chloride', name_zh: '氯甲烷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -466,7 +466,7 @@ export const LOWK_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/dimethyl-ether',
-    name: '二甲醚',
+    name: 'Dimethyl Ether', name_zh: '二甲醚',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }],
@@ -483,7 +483,7 @@ export const LOWK_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/methyl-trichlorosilane',
-    name: '甲基三氯硅烷',
+    name: 'Methyltrichlorosilane', name_zh: '甲基三氯硅烷',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }],
@@ -499,7 +499,7 @@ export const LOWK_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/dimethyl-dichlorosilane',
-    name: '二甲基二氯硅烷',
+    name: 'Dimethyldichlorosilane', name_zh: '二甲基二氯硅烷',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }],
@@ -518,7 +518,7 @@ export const LOWK_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/mtms',
-    name: '甲基三甲氧基硅烷',
+    name: 'Methyltrimethoxysilane', name_zh: '甲基三甲氧基硅烷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -540,7 +540,7 @@ export const LOWK_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/teos',
-    name: '正硅酸乙酯',
+    name: 'Tetraethyl Orthosilicate', name_zh: '正硅酸乙酯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -567,7 +567,7 @@ export const LOWK_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/dimethyl-dimethoxysilane',
-    name: '二甲基二甲氧基硅烷',
+    name: 'Dimethyldimethoxysilane', name_zh: '二甲基二甲氧基硅烷',
     unit: 'kg',
     category: 'material',
     props: [
@@ -597,7 +597,7 @@ export const LOWK_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/sico-h-wafer',
-    name: '长了 SiCOH 膜的片',
+    name: 'Wafer with SiCOH Film', name_zh: '长了 SiCOH 膜的片',
     unit: '片',
     category: 'part',
     props: [
@@ -622,7 +622,7 @@ export const LOWK_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/porous-sico-h-wafer',
-    name: '多孔 SiCOH 片',
+    name: 'Porous SiCOH Wafer', name_zh: '多孔 SiCOH 片',
     unit: '片',
     category: 'part',
     props: [
@@ -658,7 +658,7 @@ export const LOWK_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/lowk-barrier-wafer',
-    name: '低 k 介质镀 TiN 片',
+    name: 'Low-k Dielectric TiN-Coated Wafer', name_zh: '低 k 介质镀 TiN 片',
     unit: '片',
     category: 'part',
     props: [
@@ -707,7 +707,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      * ⚠️ 冷凝 −30 °C 没有设备 hold 得住（缺口③）⇒ 这一步不写 `under`。
      */
     id: 'make/methyl-chloride',
-    name: '氯甲烷制备',
+    name: 'Methyl Chloride Production', name_zh: '氯甲烷制备',
     produces: [
       {
         item: 'mat/methyl-chloride',
@@ -770,7 +770,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      *    没有 Zn/Sn/P 助剂 ⇒ MTS 只剩 5–15 %（R8 ⑫，用再分配绕开）。
      */
     id: 'make/methyl-trichlorosilane',
-    name: '甲基氯硅烷制备',
+    name: 'Methylchlorosilane Production', name_zh: '甲基氯硅烷制备',
     produces: [
       {
         item: 'mat/methyl-trichlorosilane',
@@ -881,7 +881,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      *    90–99 % 正好够（本路线要 ≥90）。
      */
     id: 'make/mts-redistribution',
-    name: '再分配制备',
+    name: 'Redistribution Production', name_zh: '再分配制备',
     produces: [
       {
         item: 'mat/methyl-trichlorosilane',
@@ -934,7 +934,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      *    按 HCl 的净含量记，溶液里的水不计（与 `make/trichlorosilane` 的 782 kg 同一口径）。
      */
     id: 'make/mtms',
-    name: '甲基三甲氧基硅烷制备',
+    name: 'Methyltrimethoxysilane Production', name_zh: '甲基三甲氧基硅烷制备',
     produces: [
       {
         item: 'mat/mtms',
@@ -984,7 +984,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      * 收率 85–92 %（SiCl₄ 的两个氯比 MTS 的三个氯难换，要过量乙醇与更长的停留）。
      */
     id: 'make/teos',
-    name: '正硅酸乙酯制备',
+    name: 'Tetraethyl Orthosilicate Production', name_zh: '正硅酸乙酯制备',
     produces: [
       {
         item: 'mat/teos',
@@ -1041,7 +1041,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      * 收率 90–95 %（与 MTMS 同档；DDS 只有两个氯，比 MTS 好换）。
      */
     id: 'make/dmdms',
-    name: '二甲基二甲氧基硅烷制备',
+    name: 'Dimethyldimethoxysilane Production', name_zh: '二甲基二甲氧基硅烷制备',
     produces: [
       {
         item: 'mat/dimethyl-dimethoxysilane',
@@ -1107,7 +1107,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      *   甲基：测不出（没有 FTIR）⇒ 55–75 % 是按 O₂ 比与功率密度推的（缺口⑤）。
      */
     id: 'make/sico-h-pecvd',
-    name: '长了 SiCOH 膜的片制造',
+    name: 'Wafer with SiCOH Film Manufacturing', name_zh: '长了 SiCOH 膜的片制造',
     produces: [
       {
         item: 'mat/sico-h-wafer',
@@ -1242,7 +1242,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      *    UV/EB 固化、HMDS、scCO₂ 干燥、低 k 硬罩；见文件头 R8 ⑰。本路线数值不改。
      */
     id: 'make/sico-h-2p5',
-    name: '长了 SiCOH 膜的片制造',
+    name: 'Wafer with SiCOH Film Manufacturing', name_zh: '长了 SiCOH 膜的片制造',
     produces: [
       {
         item: 'mat/sico-h-wafer',
@@ -1360,7 +1360,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      * 不是填充），而 SOG 那条老路（硅溶胶，k 4.0–4.3）已经做到了这一层的"能用"。
      */
     id: 'make/sico-h-spinon',
-    name: '长了 SiCOH 膜的片制造',
+    name: 'Wafer with SiCOH Film Manufacturing', name_zh: '长了 SiCOH 膜的片制造',
     produces: [
       {
         item: 'mat/sico-h-wafer',
@@ -1452,7 +1452,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      * 没有下游：接 3 nm TiN 也救不回来（漏电在介质里，不在界面）。
      */
     id: 'make/sico-h-porous',
-    name: '多孔 SiCOH 片制造',
+    name: 'Porous SiCOH Wafer Manufacturing', name_zh: '多孔 SiCOH 片制造',
     produces: [
       {
         item: 'mat/porous-sico-h-wafer',
@@ -1536,7 +1536,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      *   所以起镀前的 10 nm Cu strike 层（`fine-damascene.ts` 第⑤段）不能省。
      */
     id: 'make/tin-3nm-ald',
-    name: '低 k 介质镀 TiN 片制造',
+    name: 'Low-k Dielectric TiN-Coated Wafer Manufacturing', name_zh: '低 k 介质镀 TiN 片制造',
     produces: [
       {
         item: 'mat/lowk-barrier-wafer',
@@ -1674,7 +1674,7 @@ export const LOWK_ROUTES: readonly Route[] = [
      *     不是"厚度"。
      */
     id: 'make/tin-2nm-ald',
-    name: '低 k 介质镀 TiN 片制造',
+    name: 'Low-k Dielectric TiN-Coated Wafer Manufacturing', name_zh: '低 k 介质镀 TiN 片制造',
     produces: [
       {
         item: 'mat/lowk-barrier-wafer',

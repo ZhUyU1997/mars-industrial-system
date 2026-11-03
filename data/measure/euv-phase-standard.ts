@@ -13,7 +13,7 @@ import { q } from '../../src/index.ts';
 export const EUV_PHASE_STANDARD_ITEMS: readonly Item[] = [
   {
     id: 'std/euv-phase-standard',
-    name: 'EUV 相位标准件',
+    name: 'EUV Phase Standard', name_zh: 'EUV 相位标准件',
     unit: '件',
     category: 'part',
     props: [
@@ -25,7 +25,7 @@ export const EUV_PHASE_STANDARD_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/euv-interferometer-resolution-calculated-record',
-    name: '旧 calculated 路线保留记录',
+    name: 'Legacy Calculated Route Retention Record', name_zh: '旧 calculated 路线保留记录',
     unit: '份',
     category: 'part',
     props: [
@@ -36,7 +36,7 @@ export const EUV_PHASE_STANDARD_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/euv-interferometer-resolution-measured-record',
-    name: 'EUV 干涉仪分辨率实测记录',
+    name: 'EUV Interferometer Resolution Measurement Record', name_zh: 'EUV 干涉仪分辨率实测记录',
     unit: '份',
     category: 'part',
     props: [
@@ -53,7 +53,7 @@ export const EUV_PHASE_STANDARD_ROUTES: readonly Route[] = [
      * **calculated 相位台阶：coater 多层 + XRR 周期 + EUV 反射率。**
      */
     id: 'make/euv-phase-standard',
-    name: 'EUV 相位标准件制造',
+    name: 'EUV Phase Standard Manufacturing', name_zh: 'EUV 相位标准件制造',
     produces: [{
       item: 'std/euv-phase-standard',
       qty: q(1),
@@ -80,7 +80,7 @@ export const EUV_PHASE_STANDARD_ROUTES: readonly Route[] = [
      * **EUV 干涉仪：用 measured 相位台阶读 10 点 resolution。**
      */
     id: 'measure/euv-interferometer-resolution-measured',
-    name: 'EUV 干涉仪分辨率实测',
+    name: 'EUV Interferometer Resolution Measurement', name_zh: 'EUV 干涉仪分辨率实测',
     produces: [{
       item: 'mat/euv-interferometer-resolution-measured-record',
       qty: q(1),
@@ -105,7 +105,7 @@ export const EUV_PHASE_STANDARD_ROUTES: readonly Route[] = [
      * **旧 calculated 路线保留：用 calculated 相位台阶读 10 点 resolution。**
      */
     id: 'measure/euv-interferometer-resolution',
-    name: '旧 calculated 路线保留测量',
+    name: 'Legacy Calculated Route Retention Measurement', name_zh: '旧 calculated 路线保留测量',
     produces: [{
       item: 'mat/euv-interferometer-resolution-calculated-record',
       qty: q(1),

@@ -48,7 +48,7 @@ export const LOCALIZE_ROUTES: readonly Route[] = [
      * 所以它做的逆变器是方波、不是正弦。
      */
     id: 'make/power-device',
-    name: '功率器件制造',
+    name: 'Power Device Manufacturing', name_zh: '功率器件制造',
     produces: [{ item: 'std/power-device-general', qty: q(1), gives: [{ param: 'ratedCurrent', kind: 'range', min: 10, max: 200, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'std/thyristor-general', qty: q(1) }] },
@@ -74,7 +74,7 @@ export const LOCALIZE_ROUTES: readonly Route[] = [
      * 缺点是个头大、有电感 —— **绕线电阻在高频下不是电阻。**
      */
     id: 'make/passive-component',
-    name: '无源件制造',
+    name: 'Passive Component Manufacturing', name_zh: '无源件制造',
     produces: [{ item: 'std/passive-component-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/resistance-wire', qty: q(1) }] },
@@ -100,7 +100,7 @@ export const LOCALIZE_ROUTES: readonly Route[] = [
      * 而工业上的传感器是"一个信号输出、一个说明书"的黑盒 —— 差别在这里。
      */
     id: 'make/sensor-assembly',
-    name: '传感器制造',
+    name: 'Sensor Manufacturing', name_zh: '传感器制造',
     produces: [{ item: 'std/sensor-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/thermocouple-t-general', qty: q(1) }] },

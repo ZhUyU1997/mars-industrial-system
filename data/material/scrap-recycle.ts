@@ -24,7 +24,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 氧化把 Zn/Sn 赶进渣，硼砂造渣；1100–1200 °C 的高温炉够用。
      */
     id: 'make/copper-from-scrap',
-    name: '废铜重熔制备',
+    name: 'Copper Production from Scrap', name_zh: '废铜重熔制备',
     produces: [
       {
         item: 'mat/copper',
@@ -55,7 +55,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 电阻率与主棒差一档，所以这条路线交的是"回炉料"，不冒充电子级。
      */
     id: 'make/silicon-from-crop',
-    name: '硅头尾料回炉制备',
+    name: 'Silicon Top and Tail Scrap Remelting Production', name_zh: '硅头尾料回炉制备',
     produces: [{ item: 'mat/silicon-single', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-crop-end', qty: q(21, 20) }] },
@@ -92,7 +92,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * WC 粉，不保证直接压回刀片。
      */
     id: 'make/tungsten-carbide-from-scrap',
-    name: '硬质合金回收',
+    name: 'Cemented Carbide Recovery', name_zh: '硬质合金回收',
     produces: [{ item: 'mat/tungsten-carbide', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/tungsten-carbide-scrap', qty: q(11, 10) }] },
@@ -131,7 +131,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 碳 1.0 → 0.45 靠吹氧脱碳；石灰造渣去硫/磷。硬度按正火 170–220 HB。
      */
     id: 'make/steel-from-esr-crop',
-    name: 'ESR 轴承钢头尾料回炉制备',
+    name: 'Bearing Steel Production from ESR Crop Remelting', name_zh: 'ESR 轴承钢头尾料回炉制备',
     produces: [
       {
         item: 'mat/steel-45',
@@ -164,7 +164,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 800–900 °C 氢还原；氧化皮里的金属铁 10–40 % 不参与反应，直接进产品。
      */
     id: 'make/iron-from-scale',
-    name: '氧化铁皮还原',
+    name: 'Iron from Scale Reduction', name_zh: '氧化铁皮还原',
     produces: [{ item: 'mat/iron', qty: q(4, 5) }],
     uses: [
       { anyOf: [{ item: 'mat/oxidation-scale', qty: q(3, 2) }] },
@@ -187,7 +187,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 1200–1300 °C 碳还原 + 纯碱造渣；粗锡再进 `make/tin` 电解精炼。
      */
     id: 'make/crude-tin-from-dross',
-    name: '锡渣回收',
+    name: 'Tin Dross Recovery', name_zh: '锡渣回收',
     produces: [
       {
         item: 'mat/crude-tin',
@@ -218,7 +218,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 过量碳吃掉。CO 去尾气，余碳回配料。
      */
     id: 'make/silicon-carbide-from-residue',
-    name: '碳化硅炉底料回炉制备',
+    name: 'Silicon Carbide from Recycled Furnace Bottom Material', name_zh: '碳化硅炉底料回炉制备',
     produces: [{ item: 'mat/silicon-carbide', qty: q(3, 5) }],
     uses: [
       { anyOf: [{ item: 'mat/unreacted-silica-carbon', qty: q(3, 2) }] },
@@ -241,7 +241,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 置换：Cu²⁺ + Fe → Cu + Fe²⁺；20–60 °C 搅拌 1 h，铜粉沉降、洗涤、干燥。
      */
     id: 'make/copper-from-nitrate',
-    name: '硝酸铜废液提铜制备',
+    name: 'Copper Recovery from Copper Nitrate Waste Solution', name_zh: '硝酸铜废液提铜制备',
     produces: [
       {
         item: 'mat/copper',
@@ -270,7 +270,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 破碎后水浸去 NaF，过滤、干燥；冰晶石不溶，留在滤饼里。
      */
     id: 'make/cryolite-from-spent-bath',
-    name: '铝电解废阴极/槽衬回收冰晶石制备',
+    name: 'Cryolite Production from Spent Aluminium Cathode/Bath Lining', name_zh: '铝电解废阴极/槽衬回收冰晶石制备',
     produces: [{ item: 'mat/cryolite', qty: q(13, 20) }],
     uses: [
       { anyOf: [{ item: 'mat/spent-bath', qty: q(1) }] },
@@ -309,7 +309,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * 不另做还原。
      */
     id: 'make/iron-from-alumina-slag',
-    name: '刚玉渣回收铁制备',
+    name: 'Iron Recovery from Corundum Slag Production', name_zh: '刚玉渣回收铁制备',
     produces: [{ item: 'mat/iron', qty: q(3, 5) }],
     uses: [
       { anyOf: [{ item: 'mat/fused-alumina-slag', qty: q(3, 2) }] },

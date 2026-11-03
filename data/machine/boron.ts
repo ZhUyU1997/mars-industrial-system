@@ -135,7 +135,7 @@ export const BORON_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/boron-selective-resin',
-    name: '硼专用螯合树脂',
+    name: 'Boron-Selective Chelating Resin', name_zh: '硼专用螯合树脂',
     unit: 'kg',
     category: 'material',
     props: [
@@ -156,7 +156,7 @@ export const BORON_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-free-bench/plenum',
-    name: '无硼超净台无硼台面',
+    name: 'Boron-Free Clean Bench Boron-Free Worktop', name_zh: '无硼超净台无硼台面',
     unit: '件',
     category: 'part',
     props: [
@@ -175,7 +175,7 @@ export const BORON_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-free-bench/frame',
-    name: '无硼超净台无硼台架',
+    name: 'Boron-Free Clean Bench Boron-Free Frame', name_zh: '无硼超净台无硼台架',
     unit: '件',
     category: 'part',
     props: [
@@ -197,7 +197,7 @@ export const BORON_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-free-bench',
-    name: '无硼超净台',
+    name: 'Boron-Free Clean Bench', name_zh: '无硼超净台',
     unit: '台',
     category: 'machine',
     props: [
@@ -219,7 +219,7 @@ export const BORON_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hr-icp-ms/magnet',
-    name: '常导 90° 磁扇',
+    name: 'Normal-Conducting 90° Magnetic Sector', name_zh: '常导 90° 磁扇',
     unit: '件',
     category: 'part',
     props: [
@@ -241,7 +241,7 @@ export const BORON_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hr-icp-ms/esa',
-    name: 'HR-ICP-MS 静电分析器',
+    name: 'HR-ICP-MS Electrostatic Analyzer', name_zh: 'HR-ICP-MS 静电分析器',
     unit: '件',
     category: 'part',
     props: [
@@ -261,7 +261,7 @@ export const BORON_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hr-icp-ms/slits',
-    name: 'HR-ICP-MS 入射/出射缝',
+    name: 'HR-ICP-MS Entrance/Exit Slit', name_zh: 'HR-ICP-MS 入射/出射缝',
     unit: '件',
     category: 'part',
     props: [
@@ -281,7 +281,7 @@ export const BORON_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hr-icp-ms/flight-tube',
-    name: 'HR-ICP-MS 飞行管',
+    name: 'HR-ICP-MS Flight Tube', name_zh: 'HR-ICP-MS 飞行管',
     unit: '件',
     category: 'part',
     props: [
@@ -309,7 +309,7 @@ export const BORON_HW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hr-icp-ms',
-    name: 'HR-ICP-MS 整机',
+    name: 'HR-ICP-MS System', name_zh: 'HR-ICP-MS 整机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -351,7 +351,7 @@ export const BORON_HW_ROUTES: readonly Route[] = [
      *   ⑤ 酸洗（0.5 M 亚沸 HCl ×3）、水洗到中性、筛分、测容量与硼本底
      */
     id: 'make/boron-selective-resin',
-    name: '硼专用树脂制备',
+    name: 'Boron-Selective Resin Production', name_zh: '硼专用树脂制备',
     produces: [
       {
         item: 'mat/boron-selective-resin',
@@ -394,7 +394,7 @@ export const BORON_HW_ROUTES: readonly Route[] = [
      *   PTFE 0.5 → 台面 1 件（0.8–1.2 m²、4–6 mm）。
      */
     id: 'make/boron-free-bench-plenum',
-    name: '无硼超净台无硼台面制造',
+    name: 'Boron-Free Clean Bench Boron-Free Worktop Manufacturing', name_zh: '无硼超净台无硼台面制造',
     produces: [
       {
         item: 'plant/boron-free-bench/plenum',
@@ -421,7 +421,7 @@ export const BORON_HW_ROUTES: readonly Route[] = [
      * **无硼台架：316L 方管切割 → 焊 → 装地脚。**
      */
     id: 'make/boron-free-bench-frame',
-    name: '无硼超净台无硼台架制造',
+    name: 'Boron-Free Clean Bench Boron-Free Frame Manufacturing', name_zh: '无硼超净台无硼台架制造',
     produces: [
       {
         item: 'plant/boron-free-bench/frame',
@@ -447,7 +447,7 @@ export const BORON_HW_ROUTES: readonly Route[] = [
      *   台面 1 + 台架 1 + `plant/clean-room/ffu` 2 + 接触器 1 + PTFE 风管 0.3 → 1 台
      */
     id: 'make/boron-free-bench',
-    name: '无硼超净台装配',
+    name: 'Boron-Free Clean Bench Assembly', name_zh: '无硼超净台装配',
     produces: [
       {
         item: 'plant/boron-free-bench',
@@ -486,7 +486,7 @@ export const BORON_HW_ROUTES: readonly Route[] = [
      * B = sqrt(2mV/q)/r：m/z 11、8 kV、r=0.3 ⇒ 0.14 T；m/z 260 ⇒ 0.69 T；上限 1.0 T。
      */
     id: 'make/hr-icp-ms-magnet',
-    name: '常导 90° 磁扇制造',
+    name: 'Normal-Conducting 90° Magnetic Sector Manufacturing', name_zh: '常导 90° 磁扇制造',
     produces: [
       {
         item: 'plant/hr-icp-ms/magnet',
@@ -525,7 +525,7 @@ export const BORON_HW_ROUTES: readonly Route[] = [
      *   70°、r = 0.25 m、极板 1 000–1 500 V。
      */
     id: 'make/hr-icp-ms-esa',
-    name: 'HR-ICP-MS 静电分析器制造',
+    name: 'HR-ICP-MS Electrostatic Analyzer Manufacturing', name_zh: 'HR-ICP-MS 静电分析器制造',
     produces: [
       {
         item: 'plant/hr-icp-ms/esa',
@@ -557,7 +557,7 @@ export const BORON_HW_ROUTES: readonly Route[] = [
      *   钼粉 0.05 + 316L 0.1 + 氧化铝 2 → 缝组件 1 套。
      */
     id: 'make/hr-icp-ms-slits',
-    name: 'HR-ICP-MS 入射/出射缝制造',
+    name: 'HR-ICP-MS Entrance/Exit Slit Manufacturing', name_zh: 'HR-ICP-MS 入射/出射缝制造',
     produces: [
       {
         item: 'plant/hr-icp-ms/slits',
@@ -590,7 +590,7 @@ export const BORON_HW_ROUTES: readonly Route[] = [
      *   316L 0.6 + 铁 0.3 + 铜 0.05 → 飞行管 1 件。
      */
     id: 'make/hr-icp-ms-flight-tube',
-    name: 'HR-ICP-MS 飞行管制造',
+    name: 'HR-ICP-MS Flight Tube Manufacturing', name_zh: 'HR-ICP-MS 飞行管制造',
     produces: [
       {
         item: 'plant/hr-icp-ms/flight-tube',
@@ -630,7 +630,7 @@ export const BORON_HW_ROUTES: readonly Route[] = [
      * `condition_cycle`（与 `make/icp-ms` 同一条边界）。
      */
     id: 'make/hr-icp-ms',
-    name: 'HR-ICP-MS 装配',
+    name: 'HR-ICP-MS Assembly', name_zh: 'HR-ICP-MS 装配',
     produces: [
       {
         item: 'plant/hr-icp-ms',

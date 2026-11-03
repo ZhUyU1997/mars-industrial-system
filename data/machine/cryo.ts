@@ -134,7 +134,7 @@ export const CRYO_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dry-ice-trap/vessel',
-    name: '干冰冷阱阱体',
+    name: 'Dry Ice Trap Vessel', name_zh: '干冰冷阱阱体',
     unit: '件',
     category: 'part',
     props: [
@@ -153,7 +153,7 @@ export const CRYO_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dry-ice-trap/cold-finger',
-    name: '干冰冷阱铜冷指',
+    name: 'Dry Ice Trap Copper Cold Finger', name_zh: '干冰冷阱铜冷指',
     unit: '件',
     category: 'part',
     props: [
@@ -172,7 +172,7 @@ export const CRYO_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dry-ice-trap/bath',
-    name: '干冰冷阱浴槽',
+    name: 'Dry Ice Trap Bath', name_zh: '干冰冷阱浴槽',
     unit: '件',
     category: 'part',
     props: [
@@ -193,7 +193,7 @@ export const CRYO_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dry-ice-trap',
-    name: '干冰冷阱整机',
+    name: 'Dry Ice Trap System', name_zh: '干冰冷阱整机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: -90, max: -60 }],
@@ -221,7 +221,7 @@ export const CRYO_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gm-cryocooler/compressor',
-    name: 'GM 压缩机',
+    name: 'GM Compressor', name_zh: 'GM 压缩机',
     unit: '件',
     category: 'part',
     props: [
@@ -241,7 +241,7 @@ export const CRYO_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gm-cryocooler/cold-head',
-    name: 'GM 冷头',
+    name: 'GM Cold Head', name_zh: 'GM 冷头',
     unit: '件',
     category: 'part',
     props: [
@@ -261,7 +261,7 @@ export const CRYO_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gm-cryocooler/regenerator',
-    name: 'GM 蓄冷器',
+    name: 'GM Regenerator', name_zh: 'GM 蓄冷器',
     unit: '件',
     category: 'part',
     props: [
@@ -279,7 +279,7 @@ export const CRYO_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gm-cryocooler/valve',
-    name: 'GM 配气旋转阀',
+    name: 'GM Gas Distribution Rotary Valve', name_zh: 'GM 配气旋转阀',
     unit: '件',
     category: 'part',
     props: [
@@ -300,7 +300,7 @@ export const CRYO_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gm-cryocooler',
-    name: 'GM 制冷机整机',
+    name: 'GM Cryocooler System', name_zh: 'GM 制冷机整机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -331,7 +331,7 @@ export const CRYO_ROUTES: readonly Route[] = [
      *   316L 0.5 → 阱体 1 件（0.5–2 L、0.1–0.3 m²）。
      */
     id: 'make/dry-ice-trap-vessel',
-    name: '干冰冷阱阱体制造',
+    name: 'Dry Ice Trap Vessel Manufacturing', name_zh: '干冰冷阱阱体制造',
     produces: [
       {
         item: 'plant/dry-ice-trap/vessel',
@@ -357,7 +357,7 @@ export const CRYO_ROUTES: readonly Route[] = [
      *   铜 0.6 → 冷指 1 件（0.15–0.25 m²、8–15 W/K）。
      */
     id: 'make/dry-ice-trap-cold-finger',
-    name: '干冰冷阱铜冷指制造',
+    name: 'Dry Ice Trap Copper Cold Finger Manufacturing', name_zh: '干冰冷阱铜冷指制造',
     produces: [
       {
         item: 'plant/dry-ice-trap/cold-finger',
@@ -383,7 +383,7 @@ export const CRYO_ROUTES: readonly Route[] = [
      *   PTFE 0.5 + 矿棉 0.3 + 316L 0.2 → 浴槽 1 件（2–5 L、6–10 h）。
      */
     id: 'make/dry-ice-trap-bath',
-    name: '干冰冷阱浴槽制造',
+    name: 'Dry Ice Trap Bath Manufacturing', name_zh: '干冰冷阱浴槽制造',
     produces: [
       {
         item: 'plant/dry-ice-trap/bath',
@@ -413,7 +413,7 @@ export const CRYO_ROUTES: readonly Route[] = [
      *   阱体 1 + 冷指 1 + 浴槽 1 + 热电偶 2 + 接触器 1 → 1 台
      */
     id: 'make/dry-ice-trap',
-    name: '干冰冷阱装配',
+    name: 'Dry Ice Trap Assembly', name_zh: '干冰冷阱装配',
     produces: [
       {
         item: 'plant/dry-ice-trap',
@@ -455,7 +455,7 @@ export const CRYO_ROUTES: readonly Route[] = [
      *   45 钢 60 + 铸铁 30 + 铜线 8 + 铜 5 → 压缩机 1 台
      */
     id: 'make/gm-cryocooler-compressor',
-    name: 'GM 压缩机制造',
+    name: 'GM Compressor Manufacturing', name_zh: 'GM 压缩机制造',
     produces: [
       {
         item: 'plant/gm-cryocooler/compressor',
@@ -490,7 +490,7 @@ export const CRYO_ROUTES: readonly Route[] = [
      *   316L 8 + 铜 3 + 铅 0.8 → 冷头 1 件（8–15 kg、1.5–4 W @20 K）。
      */
     id: 'make/gm-cryocooler-cold-head',
-    name: 'GM 冷头制造',
+    name: 'GM Cold Head Manufacturing', name_zh: 'GM 冷头制造',
     produces: [
       {
         item: 'plant/gm-cryocooler/cold-head',
@@ -525,7 +525,7 @@ export const CRYO_ROUTES: readonly Route[] = [
      *   铅 1 kg → 蓄冷器 1 件（0.5–2 kg 球、0.2–0.5 mm）。
      */
     id: 'make/gm-cryocooler-regenerator',
-    name: 'GM 蓄冷器制造',
+    name: 'GM Regenerator Manufacturing', name_zh: 'GM 蓄冷器制造',
     produces: [
       {
         item: 'plant/gm-cryocooler/regenerator',
@@ -553,7 +553,7 @@ export const CRYO_ROUTES: readonly Route[] = [
      *   316L 0.3 + PTFE 0.02 + 伺服 1 → 阀 1 件。
      */
     id: 'make/gm-cryocooler-valve',
-    name: 'GM 配气旋转阀制造',
+    name: 'GM Gas Distribution Rotary Valve Manufacturing', name_zh: 'GM 配气旋转阀制造',
     produces: [
       {
         item: 'plant/gm-cryocooler/valve',
@@ -586,7 +586,7 @@ export const CRYO_ROUTES: readonly Route[] = [
      * 装配的最后一步是充氦到 1.8 MPa 并静置 24 h 查漏。
      */
     id: 'make/gm-cryocooler',
-    name: 'GM 制冷机装配',
+    name: 'GM Cryocooler Assembly', name_zh: 'GM 制冷机装配',
     produces: [
       {
         item: 'plant/gm-cryocooler',

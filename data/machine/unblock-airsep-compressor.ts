@@ -129,7 +129,7 @@ export const UNBLOCK_AIRSEP_COMP_ITEMS: readonly Item[] = [];
 export const UNBLOCK_AIRSEP_COMP_ROUTES: readonly Route[] = [
   {
     id: 'make/airsep-compressor-lathe',
-    name: '空分压缩机制造',
+    name: 'Air Separation Compressor Manufacturing', name_zh: '空分压缩机制造',
     produces: [{ item: 'plant/air-separator/compressor', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(150) }] },

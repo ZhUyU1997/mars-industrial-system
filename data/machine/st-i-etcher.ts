@@ -73,7 +73,7 @@ export const ST_I_ETCHER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/st-i-etcher',
-    name: 'STI 槽高温刻蚀机',
+    name: 'STI Trench High-Temperature Etcher', name_zh: 'STI 槽高温刻蚀机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -95,7 +95,7 @@ export const ST_I_ETCHER_ITEMS: readonly Item[] = [
   /** 热卡盘：150–300 °C、3 区、±3 % 深度均匀性的热源；不是 RIE 的 80 °C 水冷卡盘。 */
   {
     id: 'plant/st-i-etcher/hot-chuck',
-    name: 'STI 热卡盘',
+    name: 'STI Hot Chuck', name_zh: 'STI 热卡盘',
     unit: '件',
     category: 'part',
     props: [
@@ -107,7 +107,7 @@ export const ST_I_ETCHER_ITEMS: readonly Item[] = [
   /** HBr 线：316L/PTFE、150 °C 保温；`mat/hbr` 已有路线，`hbrFlow` 由 `plant/mfc` 供。 */
   {
     id: 'plant/st-i-etcher/hbr-line',
-    name: 'HBr 线',
+    name: 'HBr Line', name_zh: 'HBr 线',
     unit: '件',
     category: 'part',
     props: [
@@ -125,7 +125,7 @@ export const ST_I_ETCHER_ROUTES: readonly Route[] = [
      * 腔体/电极/RF/气盘沿用；所以 BOM 里 11 件是 RIE 的、2 件是本机的。
      */
     id: 'make/st-i-etcher',
-    name: '*整机装配',
+    name: '*Full System Assembly', name_zh: '*整机装配',
     produces: [
       {
         item: 'plant/st-i-etcher',
@@ -187,7 +187,7 @@ export const ST_I_ETCHER_ROUTES: readonly Route[] = [
   {
     /** 热卡盘：3 区、300 °C、±3 %；镍丝绕氧化铝骨架 + 水冷背板。 */
     id: 'make/st-i-etcher-hot-chuck',
-    name: 'STI 热卡盘制造',
+    name: 'STI Hot Chuck Manufacturing', name_zh: 'STI 热卡盘制造',
     produces: [
       {
         item: 'plant/st-i-etcher/hot-chuck',
@@ -222,7 +222,7 @@ export const ST_I_ETCHER_ROUTES: readonly Route[] = [
   {
     /** HBr 线：316L/PTFE、150 °C 保温；`mat/hbr` 已由 `make/hbr` 产出，`hbrFlow` 由 `plant/mfc` 供。 */
     id: 'make/st-i-etcher-hbr-line',
-    name: 'HBr 线制造',
+    name: 'HBr Line Manufacturing', name_zh: 'HBr 线制造',
     produces: [
       {
         item: 'plant/st-i-etcher/hbr-line',
@@ -263,7 +263,7 @@ export const ST_I_ETCHER_ROUTES: readonly Route[] = [
      * 胶侧壁退角就是 86–89° 而不是 90° 的原因。
      */
     id: 'make/car-sti-trench-hbr',
-    name: 'CAR 刻蚀并去胶后的硅片制造',
+    name: 'Silicon Wafer after CAR Etch and Resist Strip Manufacturing', name_zh: 'CAR 刻蚀并去胶后的硅片制造',
     produces: [
       {
         item: 'mat/car-stripped-wafer',

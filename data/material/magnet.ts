@@ -49,7 +49,7 @@ export const MAGNET_ITEMS: readonly Item[] = [
    * 形状随磁路走（马蹄形、条形、环形），所以规格只写"一档" ——
    * 与电机只造 7.5 kW 一种同理：备件统一比逐台匹配更要紧。
    */
-  { id: 'std/permanent-magnet-general', name: '永久磁体', unit: '件', category: 'part',
+  { id: 'std/permanent-magnet-general', name: 'Permanent Magnet', name_zh: '永久磁体', unit: '件', category: 'part',
     props: [{ param: 'grade', kind: 'enum', values: ['ferrite', 'alnico', 'ndfeb'] }, { param: 'coercivity', kind: 'range', min: 100, max: 1000, unit: 'kA/m' }] },
 ];
 
@@ -66,7 +66,7 @@ export const MAGNET_ROUTES: readonly Route[] = [
      * 这是本层第一次"电生磁"，也是第一次不靠外来磁体。
      */
     id: 'make/permanent-magnet',
-    name: '永久磁体制造',
+    name: 'Permanent Magnet Manufacturing', name_zh: '永久磁体制造',
     produces: [{ item: 'std/permanent-magnet-general', qty: q(1), gives: [{ param: 'grade', kind: 'enum', oneOf: ['ferrite'] }, { param: 'coercivity', kind: 'range', min: 100, max: 250, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'mat/iron-concentrate', qty: q(1) }] },

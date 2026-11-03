@@ -34,7 +34,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 660 mm at-wavelength 干涉仪资格记录：分辨率/重复性。 */
   {
     id: 'mat/gate-euv-interferometer-record',
-    name: 'EUV 干涉仪验收记录',
+    name: 'EUV Interferometer Acceptance Record', name_zh: 'EUV 干涉仪验收记录',
     unit: '份',
     category: 'part',
     props: [
@@ -45,7 +45,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 快速 EUV 探测器资格记录：量子效率/时间常数。 */
   {
     id: 'mat/gate-euv-detector-fast-record',
-    name: '快速 EUV 探测器资格记录',
+    name: 'Fast EUV Detector Qualification Record', name_zh: '快速 EUV 探测器资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -56,7 +56,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** EUV 光栅资格记录：衍射效率。 */
   {
     id: 'mat/gate-euv-grating-record',
-    name: 'EUV 光栅资格记录',
+    name: 'EUV Grating Qualification Record', name_zh: 'EUV 光栅资格记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'efficiency', kind: 'range', min: 0.15, max: 0.3, unit: '1' }],
@@ -64,7 +64,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** EUV 光谱仪资格记录：光谱分辨率。 */
   {
     id: 'mat/gate-euv-spectrometer-record',
-    name: 'EUV 光谱仪资格记录',
+    name: 'EUV Spectrometer Qualification Record', name_zh: 'EUV 光谱仪资格记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'resolution', kind: 'range', min: 0.2, max: 0.5, unit: 'nm' }],
@@ -72,7 +72,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 液滴成像仪资格记录：空间分辨率/同步抖动。 */
   {
     id: 'mat/gate-euv-droplet-imager-record',
-    name: '液滴成像仪资格记录',
+    name: 'Droplet Imager Qualification Record', name_zh: '液滴成像仪资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -83,7 +83,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 660 mm 双层台资格记录：位置误差/读数分辨。 */
   {
     id: 'mat/gate-euv-stage-660-record',
-    name: '660 mm 双层台资格记录',
+    name: '660 mm Dual-Layer Stage Qualification Record', name_zh: '660 mm 双层台资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -94,7 +94,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 绝对平晶资格记录：面形/粗糙度。 */
   {
     id: 'mat/gate-euv-absolute-flat-record',
-    name: '绝对平晶资格记录',
+    name: 'Absolute Optical Flat Qualification Record', name_zh: '绝对平晶资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -105,7 +105,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 660 mm 多层膜镜资格记录：周期/反射率（子孔径拼接）。 */
   {
     id: 'mat/gate-euv-hina-mirror-record',
-    name: '660 mm 多层膜镜资格记录',
+    name: '660 mm Multilayer Mirror Qualification Record', name_zh: '660 mm 多层膜镜资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -116,7 +116,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 10.6 µm 铜镜资格记录：粗糙度/面形/反射率。 */
   {
     id: 'mat/gate-copper-mirror-10.6-record',
-    name: '10.6 µm 铜镜资格记录',
+    name: '10.6 µm Copper Mirror Qualification Record', name_zh: '10.6 µm 铜镜资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -128,7 +128,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 10.6 µm 离轴抛物镜资格记录：同铜镜三项。 */
   {
     id: 'mat/gate-copper-oap-10.6-record',
-    name: '10.6 µm 离轴抛物镜资格记录',
+    name: '10.6 µm Off-Axis Parabolic Mirror Qualification Record', name_zh: '10.6 µm 离轴抛物镜资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -140,7 +140,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 10.6 µm 输出耦合镜资格记录：反射率/粗糙度。 */
   {
     id: 'mat/gate-copper-output-coupler-record',
-    name: '10.6 µm 输出耦合镜资格记录',
+    name: '10.6 µm Output Coupler Qualification Record', name_zh: '10.6 µm 输出耦合镜资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -151,7 +151,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** ZnSe 窗口资格记录：透射/吸收/粗糙度/平面度。 */
   {
     id: 'mat/gate-znse-window-record',
-    name: 'ZnSe 窗口资格记录',
+    name: 'ZnSe Window Qualification Record', name_zh: 'ZnSe 窗口资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -164,7 +164,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 20 kW 板条 CO₂ 激光器资格记录：输出功率。 */
   {
     id: 'mat/gate-slab-laser-20kw-record',
-    name: '20 kW 板条 CO₂ 激光器资格记录',
+    name: '20 kW Slab CO₂ Laser Qualification Record', name_zh: '20 kW 板条 CO₂ 激光器资格记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'power', kind: 'range', min: 18000, max: 22000, unit: 'W' }],
@@ -172,7 +172,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 20 kW/27 MHz RF 发生器资格记录：功率/效率/稳定度。 */
   {
     id: 'mat/gate-rf-generator-20kw-record',
-    name: '20 kW/27 MHz RF 发生器资格记录',
+    name: '20 kW/27 MHz RF Generator Qualification Record', name_zh: '20 kW/27 MHz RF 发生器资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -184,7 +184,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 14:1 RF 合成器资格记录：插入损耗。 */
   {
     id: 'mat/gate-rf-combiner-record',
-    name: '14:1 RF 合成器资格记录',
+    name: '14:1 RF Combiner Qualification Record', name_zh: '14:1 RF 合成器资格记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'insertionLoss', kind: 'range', min: 0.3, max: 0.8, unit: 'dB' }],
@@ -192,7 +192,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 10.6 µm 光束质量分析仪资格记录：焦斑/指向。 */
   {
     id: 'mat/gate-laser-beam-profiler-record',
-    name: '10.6 µm 光束质量分析仪资格记录',
+    name: '10.6 µm Beam Profiler Qualification Record', name_zh: '10.6 µm 光束质量分析仪资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -203,7 +203,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 20 kW 量热器资格记录：功率测量准确度。 */
   {
     id: 'mat/gate-laser-calorimeter-record',
-    name: '20 kW 量热器资格记录',
+    name: '20 kW Calorimeter Qualification Record', name_zh: '20 kW 量热器资格记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'accuracy', kind: 'range', min: 0.5, max: 1, unit: '%' }],
@@ -211,7 +211,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 激光气体循环资格记录：温度稳定度。 */
   {
     id: 'mat/gate-laser-gas-loop-record',
-    name: '激光气体循环资格记录',
+    name: 'Laser Gas Circulation Qualification Record', name_zh: '激光气体循环资格记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'tempStability', kind: 'range', min: 0.5, max: 2, unit: 'K' }],
@@ -219,7 +219,7 @@ export const GATE_EUV_OPTICS_ITEMS: readonly Item[] = [
   /** 快刀伺服资格记录：闭环分辨率。 */
   {
     id: 'mat/gate-fast-tool-servo-record',
-    name: '快刀伺服资格记录',
+    name: 'Fast Tool Servo Qualification Record', name_zh: '快刀伺服资格记录',
     unit: '份',
     category: 'part',
     props: [{ param: 'resolution', kind: 'range', min: 1, max: 10, unit: 'nm' }],
@@ -230,7 +230,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 干涉仪资格：绝对平晶 + CGH 零位 + 八帧移相，读分辨率与重复性。 */
     id: 'qual/gate-euv-interferometer',
-    name: 'EUV 干涉仪验收',
+    name: 'EUV Interferometer Acceptance', name_zh: 'EUV 干涉仪验收',
     produces: [{
       item: 'mat/gate-euv-interferometer-record',
       qty: q(1),
@@ -264,7 +264,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 探测器资格：EUV 源下参考探测器比对 QE，示波器读时间常数。 */
     id: 'qual/gate-euv-detector-fast',
-    name: '快速 EUV 探测器资格验收',
+    name: 'Fast EUV Detector Qualification', name_zh: '快速 EUV 探测器资格验收',
     produces: [{
       item: 'mat/gate-euv-detector-fast-record',
       qty: q(1),
@@ -285,7 +285,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 光栅资格：13.5 nm 0/1 级衍射功率比。 */
     id: 'qual/gate-euv-grating',
-    name: 'EUV 光栅资格验收',
+    name: 'EUV Grating Qualification', name_zh: 'EUV 光栅资格验收',
     produces: [{
       item: 'mat/gate-euv-grating-record',
       qty: q(1),
@@ -303,7 +303,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 光谱仪资格：13.5 nm 线宽（FWHM）。 */
     id: 'qual/gate-euv-spectrometer',
-    name: 'EUV 光谱仪资格验收',
+    name: 'EUV Spectrometer Qualification', name_zh: 'EUV 光谱仪资格验收',
     produces: [{
       item: 'mat/gate-euv-spectrometer-record',
       qty: q(1),
@@ -331,7 +331,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 液滴成像仪资格：刻线尺标定像素，频闪测抖动。 */
     id: 'qual/gate-euv-droplet-imager',
-    name: '液滴成像仪资格验收',
+    name: 'Droplet Imager Qualification', name_zh: '液滴成像仪资格验收',
     produces: [{
       item: 'mat/gate-euv-droplet-imager-record',
       qty: q(1),
@@ -365,7 +365,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 660 mm 台资格：激光干涉仪逐点测位置误差与读数。 */
     id: 'qual/gate-euv-stage-660',
-    name: '660 mm 双层台资格验收',
+    name: '660 mm Dual-Layer Stage Qualification', name_zh: '660 mm 双层台资格验收',
     produces: [{
       item: 'mat/gate-euv-stage-660-record',
       qty: q(1),
@@ -386,7 +386,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 绝对平晶资格：三平晶绝对法 + AFM。 */
     id: 'qual/gate-euv-absolute-flat',
-    name: '绝对平晶资格验收',
+    name: 'Absolute Optical Flat Qualification', name_zh: '绝对平晶资格验收',
     produces: [{
       item: 'mat/gate-euv-absolute-flat-record',
       qty: q(1),
@@ -407,7 +407,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 660 mm 多层膜镜资格：子孔径拼接读周期/反射率。 */
     id: 'qual/gate-euv-hina-mirror',
-    name: '660 mm 多层膜镜资格验收',
+    name: '660 mm Multilayer Mirror Qualification', name_zh: '660 mm 多层膜镜资格验收',
     produces: [{
       item: 'mat/gate-euv-hina-mirror-record',
       qty: q(1),
@@ -428,7 +428,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 10.6 µm 铜镜资格：AFM + 干涉仪 + FTIR。 */
     id: 'qual/gate-copper-mirror-10.6',
-    name: '10.6 µm 铜镜资格验收',
+    name: '10.6 µm Copper Mirror Qualification', name_zh: '10.6 µm 铜镜资格验收',
     produces: [{
       item: 'mat/gate-copper-mirror-10.6-record',
       qty: q(1),
@@ -450,7 +450,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 10.6 µm 离轴抛物镜资格：同铜镜三项。 */
     id: 'qual/gate-copper-oap-10.6',
-    name: '10.6 µm 离轴抛物镜资格验收',
+    name: '10.6 µm Off-Axis Parabolic Mirror Qualification', name_zh: '10.6 µm 离轴抛物镜资格验收',
     produces: [{
       item: 'mat/gate-copper-oap-10.6-record',
       qty: q(1),
@@ -472,7 +472,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 输出耦合镜资格：反射率/粗糙度。 */
     id: 'qual/gate-copper-output-coupler',
-    name: '10.6 µm 输出耦合镜资格验收',
+    name: '10.6 µm Output Coupler Qualification', name_zh: '10.6 µm 输出耦合镜资格验收',
     produces: [{
       item: 'mat/gate-copper-output-coupler-record',
       qty: q(1),
@@ -493,7 +493,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** ZnSe 窗口资格：FTIR + AFM + 干涉仪四项。 */
     id: 'qual/gate-znse-window',
-    name: 'ZnSe 窗口资格验收',
+    name: 'ZnSe Window Qualification', name_zh: 'ZnSe 窗口资格验收',
     produces: [{
       item: 'mat/gate-znse-window-record',
       qty: q(1),
@@ -516,7 +516,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 板条激光器资格：量热器 + 光束分析仪表。 */
     id: 'qual/gate-slab-laser-20kw',
-    name: '20 kW 板条 CO₂ 激光器资格验收',
+    name: '20 kW Slab CO₂ Laser Qualification', name_zh: '20 kW 板条 CO₂ 激光器资格验收',
     produces: [{
       item: 'mat/gate-slab-laser-20kw-record',
       qty: q(1),
@@ -534,7 +534,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** RF 发生器资格：量热计/示波器读功率、效率、稳定度。 */
     id: 'qual/gate-rf-generator-20kw',
-    name: '20 kW/27 MHz RF 发生器资格验收',
+    name: '20 kW/27 MHz RF Generator Qualification', name_zh: '20 kW/27 MHz RF 发生器资格验收',
     produces: [{
       item: 'mat/gate-rf-generator-20kw-record',
       qty: q(1),
@@ -556,7 +556,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** RF 合成器资格：插损（14 路合 1）。 */
     id: 'qual/gate-rf-combiner',
-    name: '14:1 RF 合成器资格验收',
+    name: '14:1 RF Combiner Qualification', name_zh: '14:1 RF 合成器资格验收',
     produces: [{
       item: 'mat/gate-rf-combiner-record',
       qty: q(1),
@@ -574,7 +574,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 光束分析仪资格：焦斑/指向。 */
     id: 'qual/gate-laser-beam-profiler',
-    name: '10.6 µm 光束质量分析仪资格验收',
+    name: '10.6 µm Beam Profiler Qualification', name_zh: '10.6 µm 光束质量分析仪资格验收',
     produces: [{
       item: 'mat/gate-laser-beam-profiler-record',
       qty: q(1),
@@ -609,7 +609,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 量热器资格：电加热标定准确度。 */
     id: 'qual/gate-laser-calorimeter',
-    name: '20 kW 量热器资格验收',
+    name: '20 kW Calorimeter Qualification', name_zh: '20 kW 量热器资格验收',
     produces: [{
       item: 'mat/gate-laser-calorimeter-record',
       qty: q(1),
@@ -638,7 +638,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 气体循环资格：温度稳定度。 */
     id: 'qual/gate-laser-gas-loop',
-    name: '激光气体循环资格验收',
+    name: 'Laser Gas Circulation Qualification', name_zh: '激光气体循环资格验收',
     produces: [{
       item: 'mat/gate-laser-gas-loop-record',
       qty: q(1),
@@ -656,7 +656,7 @@ export const GATE_EUV_OPTICS_ROUTES: readonly Route[] = [
   {
     /** 快刀伺服资格：闭环分辨率。 */
     id: 'qual/gate-fast-tool-servo',
-    name: '快刀伺服资格验收',
+    name: 'Fast Tool Servo Qualification', name_zh: '快刀伺服资格验收',
     produces: [{
       item: 'mat/gate-fast-tool-servo-record',
       qty: q(1),

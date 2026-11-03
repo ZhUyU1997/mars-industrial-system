@@ -23,7 +23,7 @@ export const ADAPTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cycle-time-adapter',
-    name: '控制周期转接夹具',
+    name: 'Control Period Adapter Fixture', name_zh: '控制周期转接夹具',
     unit: '台',
     category: 'machine',
     // 单件转接夹具：接口、整形、计数按整台装配，不再拆独立零件，标 monolithic。
@@ -43,7 +43,7 @@ export const ADAPTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pressure-adapter',
-    name: '真空/压力转接',
+    name: 'Vacuum/Pressure Adapter', name_zh: '真空/压力转接',
     unit: '台',
     category: 'machine',
     // 单件转接夹具：法兰、规管接口、放大按整台装配，不再拆独立零件，标 monolithic。
@@ -63,7 +63,7 @@ export const ADAPTER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/boron-assay-adapter',
-    name: '硼含量消解/稀释夹具',
+    name: 'Boron Content Digestion/Dilution Fixture', name_zh: '硼含量消解/稀释夹具',
     unit: '台',
     category: 'machine',
     // 单件转接夹具：取芯、消解、稀释按整台装配，不再拆独立零件，标 monolithic。
@@ -85,7 +85,7 @@ export const ADAPTER_ROUTES: readonly Route[] = [
      * 夹具把阶跃响应变成周期读数；0.5–1 ms 是设计，不是读数。
      */
     id: 'make/cycle-time-adapter',
-    name: '控制周期转接夹具制造',
+    name: 'Control Period Adapter Fixture Manufacturing', name_zh: '控制周期转接夹具制造',
     produces: [
       {
         item: 'plant/cycle-time-adapter',
@@ -118,7 +118,7 @@ export const ADAPTER_ROUTES: readonly Route[] = [
      * he-leak-detector 的 1e-6–1e-2 Pa；没有标准真空计，比对不是标定。
      */
     id: 'make/pressure-adapter',
-    name: '真空/压力转接制造',
+    name: 'Vacuum/Pressure Adapter Manufacturing', name_zh: '真空/压力转接制造',
     produces: [
       {
         item: 'plant/pressure-adapter',
@@ -152,7 +152,7 @@ export const ADAPTER_ROUTES: readonly Route[] = [
      * 1e4–1e5 倍；没有混凝土基体标样，曲线是外标。
      */
     id: 'make/boron-assay-adapter',
-    name: '硼含量消解/稀释夹具制造',
+    name: 'Boron Content Digestion/Dilution Fixture Manufacturing', name_zh: '硼含量消解/稀释夹具制造',
     produces: [
       {
         item: 'plant/boron-assay-adapter',

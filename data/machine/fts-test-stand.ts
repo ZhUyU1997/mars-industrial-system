@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const FTS_TEST_STAND_ITEMS: readonly Item[] = [
   {
     id: 'plant/fts-test-stand/isolation',
-    name: '快速刀具伺服测试台隔振',
+    name: 'Fast Tool Servo Test Bench Vibration Isolation', name_zh: '快速刀具伺服测试台隔振',
     unit: '件',
     category: 'part',
     props: [
@@ -21,7 +21,7 @@ export const FTS_TEST_STAND_ITEMS: readonly Item[] = [
   },
   {
     id: 'plant/fts-test-stand/frame',
-    name: '快速刀具伺服测试台机架',
+    name: 'Fast Tool Servo Test Bench Frame', name_zh: '快速刀具伺服测试台机架',
     unit: '件',
     category: 'part',
     props: [
@@ -31,7 +31,7 @@ export const FTS_TEST_STAND_ITEMS: readonly Item[] = [
   },
   {
     id: 'plant/fts-test-stand',
-    name: '快速刀具伺服测试台',
+    name: 'Fast Tool Servo Test Bench', name_zh: '快速刀具伺服测试台',
     unit: '台',
     category: 'machine',
     props: [
@@ -49,7 +49,7 @@ export const FTS_TEST_STAND_ITEMS: readonly Item[] = [
 export const FTS_TEST_STAND_ROUTES: readonly Route[] = [
   {
     id: 'make/fts-test-stand-isolation',
-    name: '快速刀具伺服测试台隔振制造',
+    name: 'Fast Tool Servo Test Bench Vibration Isolation Manufacturing', name_zh: '快速刀具伺服测试台隔振制造',
     produces: [{
       item: 'plant/fts-test-stand/isolation',
       qty: q(1),
@@ -65,7 +65,7 @@ export const FTS_TEST_STAND_ROUTES: readonly Route[] = [
   },
   {
     id: 'make/fts-test-stand-frame',
-    name: '快速刀具伺服测试台机架制造',
+    name: 'Fast Tool Servo Test Bench Frame Manufacturing', name_zh: '快速刀具伺服测试台机架制造',
     produces: [{
       item: 'plant/fts-test-stand/frame',
       qty: q(1),
@@ -84,7 +84,7 @@ export const FTS_TEST_STAND_ROUTES: readonly Route[] = [
      * **装配：隔振/台架 + 台阶标准 + 探头，标定 1–10 nm 台阶读数。**
      */
     id: 'make/fts-test-stand',
-    name: '快速刀具伺服测试台装配',
+    name: 'Fast Tool Servo Test Bench Assembly', name_zh: '快速刀具伺服测试台装配',
     produces: [{
       item: 'plant/fts-test-stand',
       qty: q(1),

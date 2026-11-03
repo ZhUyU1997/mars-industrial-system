@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const ZNSE_WINDOW_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/znse-window-measure-record',
-    name: 'ZnSe 窗口透射率测量记录',
+    name: 'ZnSe Window Transmittance Measurement Record', name_zh: 'ZnSe 窗口透射率测量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -30,7 +30,7 @@ export const ZNSE_WINDOW_MEASURE_ROUTES: readonly Route[] = [
      * **ZnSe 窗口：FTIR 透射/吸收 + AFM 粗糙度 + 干涉仪面形。**
      */
     id: 'measure/znse-window-measure',
-    name: 'ZnSe 窗口透射率测量',
+    name: 'ZnSe Window Transmittance Measurement', name_zh: 'ZnSe 窗口透射率测量',
     produces: [
       {
         item: 'mat/znse-window-measure-record',

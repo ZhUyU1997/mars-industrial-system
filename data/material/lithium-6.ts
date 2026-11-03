@@ -76,7 +76,7 @@ export const LI6_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/lithium-carbonate',
-    name: '碳酸锂',
+    name: 'Lithium Carbonate', name_zh: '碳酸锂',
     unit: 'kg',
     category: 'material',
     props: [
@@ -94,7 +94,7 @@ export const LI6_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/li-electrolysis-cell/vessel',
-    name: '熔盐电解槽内衬与电极',
+    name: 'Molten Salt Electrolysis Cell Lining and Electrodes', name_zh: '熔盐电解槽内衬与电极',
     unit: '件',
     category: 'part',
     props: [
@@ -114,7 +114,7 @@ export const LI6_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/li-electrolysis-cell',
-    name: '锂熔盐电解槽',
+    name: 'Lithium Molten Salt Electrolyser', name_zh: '锂熔盐电解槽',
     unit: '台',
     category: 'machine',
     holds: [
@@ -135,7 +135,7 @@ export const LI6_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/li-6-cascade/column',
-    name: '⁶Li 蒸馏级联蒸馏塔段',
+    name: '⁶Li Distillation Cascade Column Section', name_zh: '⁶Li 蒸馏级联蒸馏塔段',
     unit: '件',
     category: 'part',
     props: [
@@ -154,7 +154,7 @@ export const LI6_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/li-6-cascade',
-    name: '⁶Li 蒸馏级联',
+    name: '⁶Li Distillation Cascade', name_zh: '⁶Li 蒸馏级联',
     unit: '台',
     category: 'machine',
     holds: [
@@ -178,7 +178,7 @@ export const LI6_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/lithium-6-enriched',
-    name: '⁶Li 富集标样',
+    name: '⁶Li Enriched Standard', name_zh: '⁶Li 富集标样',
     unit: 'kg',
     category: 'material',
     props: [
@@ -198,7 +198,7 @@ export const LI6_ROUTES: readonly Route[] = [
      *   → Li₂CO₃ 0.05 kg
      */
     id: 'make/lithium-carbonate',
-    name: '碳酸锂制备',
+    name: 'Lithium Carbonate Production', name_zh: '碳酸锂制备',
     produces: [
       {
         item: 'mat/lithium-carbonate',
@@ -235,7 +235,7 @@ export const LI6_ROUTES: readonly Route[] = [
      *   45 钢 50 + 石墨 20 + 氧化铝 4 + 316L 10 → 内衬 1 套
      */
     id: 'make/li-electrolysis-cell-vessel',
-    name: '熔盐电解槽内衬与电极制造',
+    name: 'Molten Salt Electrolysis Cell Lining and Electrodes Manufacturing', name_zh: '熔盐电解槽内衬与电极制造',
     produces: [
       {
         item: 'plant/li-electrolysis-cell/vessel',
@@ -265,7 +265,7 @@ export const LI6_ROUTES: readonly Route[] = [
      * **电解槽装配：内衬 + 电极 + 保温 + 控温。**
      */
     id: 'make/li-electrolysis-cell',
-    name: '电解槽装配',
+    name: 'Electrolyser Assembly', name_zh: '电解槽装配',
     produces: [
       {
         item: 'plant/li-electrolysis-cell',
@@ -298,7 +298,7 @@ export const LI6_ROUTES: readonly Route[] = [
      * **蒸馏塔段：316L 填料塔 5 m、40–80 块理论板。**
      */
     id: 'make/li-6-cascade-column',
-    name: '⁶Li 蒸馏级联蒸馏塔段制造',
+    name: '⁶Li Distillation Cascade Column Section Manufacturing', name_zh: '⁶Li 蒸馏级联蒸馏塔段制造',
     produces: [
       {
         item: 'plant/li-6-cascade/column',
@@ -331,7 +331,7 @@ export const LI6_ROUTES: readonly Route[] = [
      * 会撞 `condition_cycle`（级联自己 holds 1e-2–1 Pa）。
      */
     id: 'make/li-6-cascade',
-    name: '级联装配',
+    name: 'Cascade Assembly', name_zh: '级联装配',
     produces: [
       {
         item: 'plant/li-6-cascade',
@@ -372,7 +372,7 @@ export const LI6_ROUTES: readonly Route[] = [
      * 产品 0.012 kg（⁶Li 11 g，回收 65 %）。
      */
     id: 'make/lithium-6-enriched',
-    name: '⁶Li 富集',
+    name: '⁶Li Enrichment', name_zh: '⁶Li 富集',
     produces: [
       {
         item: 'mat/lithium-6-enriched',

@@ -406,7 +406,7 @@ export const UNBLOCK_AUTOCLAVE_AGI_ROUTES: readonly Route[] = [
      *    压力账全部写在注释里 —— 与壳体、密封两条路线同一处理。
      */
     id: 'make/autoclave-agitator-cast',
-    name: '高压釜搅拌制造',
+    name: 'Autoclave Agitator Manufacturing', name_zh: '高压釜搅拌制造',
     produces: [{ item: 'plant/autoclave/agitator', qty: q(1) }],
     uses: [
       /**

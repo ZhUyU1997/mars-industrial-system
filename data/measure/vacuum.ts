@@ -27,7 +27,7 @@ export const VACUUM_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/evaporator-base-pressure-record',
-    name: '蒸发台粗抽本底记录',
+    name: 'Evaporator Rough-Pump Base Pressure Record', name_zh: '蒸发台粗抽本底记录',
     unit: '份',
     category: 'part',
     props: [
@@ -55,7 +55,7 @@ export const VACUUM_MEASURE_ROUTES: readonly Route[] = [
      * 写成可核对的数，而不是让镀膜窗口一直挂着 design。
      */
     id: 'measure/evaporator-base-pressure',
-    name: '蒸发台粗抽本底测量',
+    name: 'Evaporator Rough-Pump Base Pressure Measurement', name_zh: '蒸发台粗抽本底测量',
     produces: [
       {
         item: 'mat/evaporator-base-pressure-record',

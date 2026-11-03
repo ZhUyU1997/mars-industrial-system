@@ -153,7 +153,7 @@ export const EUV_ATW_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/atw-figure-record',
-    name: '13.5 nm at-wavelength 面形验收记录',
+    name: '13.5 nm At-Wavelength Surface Figure Acceptance Record', name_zh: '13.5 nm at-wavelength 面形验收记录',
     unit: '份',
     category: 'part',
     props: [
@@ -196,7 +196,7 @@ export const EUV_ATW_ROUTES: readonly Route[] = [
      * 「10 组重装夹」与拼接上 —— 那两笔正是这份记录的不确定度来源。
      */
     id: 'measure/euv-hina-atw-figure-record',
-    name: '13.5 nm at-wavelength 面形验收测量',
+    name: '13.5 nm At-Wavelength Surface Figure Acceptance Measurement', name_zh: '13.5 nm at-wavelength 面形验收测量',
     produces: [
       {
         item: 'mat/atw-figure-record',

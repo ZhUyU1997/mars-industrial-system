@@ -18,7 +18,7 @@ export const EUV_HINA_OPTICS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/euv-interferometer-cal-record',
-    name: '干涉仪自校准记录',
+    name: 'Interferometer Self-Calibration Record', name_zh: '干涉仪自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -37,7 +37,7 @@ export const EUV_HINA_OPTICS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/euv-mirror-figure-record',
-    name: 'EUV 镜面形记录',
+    name: 'EUV Mirror Surface Figure Record', name_zh: 'EUV 镜面形记录',
     unit: '份',
     category: 'part',
     props: [
@@ -54,7 +54,7 @@ export const EUV_HINA_OPTICS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/euv-absolute-flat-record',
-    name: 'EUV 三平晶绝对校准记录',
+    name: 'EUV Three-Flat Absolute Calibration Record', name_zh: 'EUV 三平晶绝对校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -70,7 +70,7 @@ export const EUV_HINA_OPTICS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cgh-phase-record',
-    name: 'CGH 相位误差记录',
+    name: 'CGH Phase Error Record', name_zh: 'CGH 相位误差记录',
     unit: '份',
     category: 'part',
     props: [
@@ -91,7 +91,7 @@ export const EUV_HINA_OPTICS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/collector-figure-record',
-    name: '收集镜 at-wavelength 面形记录',
+    name: 'Collector Mirror At-Wavelength Figure Record', name_zh: '收集镜 at-wavelength 面形记录',
     unit: '份',
     category: 'part',
     props: [
@@ -114,7 +114,7 @@ export const EUV_HINA_OPTICS_ROUTES: readonly Route[] = [
      * `std/euv-mirror-300` 做粗校准；0.1 nm 仍是设计，不是本条读数。
      */
     id: 'measure/euv-interferometer-cal',
-    name: '干涉仪自校准',
+    name: 'Interferometer Self-Calibration', name_zh: '干涉仪自校准',
     produces: [
       {
         item: 'mat/euv-interferometer-cal-record',
@@ -158,7 +158,7 @@ export const EUV_HINA_OPTICS_ROUTES: readonly Route[] = [
      * 本条只到 0.2–1 nm 档。
      */
     id: 'measure/euv-mirror-figure',
-    name: 'EUV 镜面形测量',
+    name: 'EUV Mirror Surface Figure Measurement', name_zh: 'EUV 镜面形测量',
     produces: [
       {
         item: 'mat/euv-mirror-figure-record',
@@ -201,7 +201,7 @@ export const EUV_HINA_OPTICS_ROUTES: readonly Route[] = [
      * 0.1 nm 是设计，不是本条读数。三块必须同炉镀、同批装夹。
      */
     id: 'measure/euv-three-flat-absolute',
-    name: 'EUV 三平晶绝对校准',
+    name: 'EUV Three-Flat Absolute Calibration', name_zh: 'EUV 三平晶绝对校准',
     produces: [
       {
         item: 'mat/euv-absolute-flat-record',
@@ -245,7 +245,7 @@ export const EUV_HINA_OPTICS_ROUTES: readonly Route[] = [
      * 不是 0.1 nm 读数。CGH 与平晶都是 300 mm 口径内的子孔径。
      */
     id: 'measure/cgh-phase',
-    name: 'CGH 相位误差测量',
+    name: 'CGH Phase Error Measurement', name_zh: 'CGH 相位误差测量',
     produces: [
       {
         item: 'mat/cgh-phase-record',
@@ -287,7 +287,7 @@ export const EUV_HINA_OPTICS_ROUTES: readonly Route[] = [
      * CGH 相位误差先标定（`measure/cgh-phase`），再拼接。
      */
     id: 'measure/collector-figure',
-    name: '收集镜 at-wavelength 面形测量',
+    name: 'Collector Mirror At-Wavelength Figure Measurement', name_zh: '收集镜 at-wavelength 面形测量',
     produces: [
       {
         item: 'mat/collector-figure-record',

@@ -31,15 +31,15 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const ELLIPSOID_STAGE_PARTS: readonly Item[] = [
-  { id: 'plant/ellipsoid-stitch/stage/bed', name: '椭球拼接台床身', unit: '件', category: 'part' },
-  { id: 'plant/ellipsoid-stitch/stage/guide-rail', name: 'X/Y 导轨', unit: '件', category: 'part' },
-  { id: 'plant/ellipsoid-stitch/stage/slide', name: 'X/Y 滑板', unit: '件', category: 'part' },
-  { id: 'plant/ellipsoid-stitch/stage/lead-screw', name: 'X/Y 丝杠', unit: '件', category: 'part' },
-  { id: 'plant/ellipsoid-stitch/stage/anti-backlash-nut', name: '椭球拼接台消隙螺母', unit: '件', category: 'part' },
-  { id: 'plant/ellipsoid-stitch/stage/rotary-shaft', name: '椭球拼接台转轴', unit: '件', category: 'part' },
-  { id: 'plant/ellipsoid-stitch/stage/worm-wheel', name: '椭球拼接台蜗轮', unit: '件', category: 'part' },
-  { id: 'plant/ellipsoid-stitch/stage/piezo-tilt', name: '椭球拼接台压电倾摆', unit: '件', category: 'part' },
-  { id: 'plant/ellipsoid-stitch/stage/readout', name: '椭球拼接台角度读出', unit: '件', category: 'part' },
+  { id: 'plant/ellipsoid-stitch/stage/bed', name: 'Ellipsoid Stitching Stage Bed', name_zh: '椭球拼接台床身', unit: '件', category: 'part' },
+  { id: 'plant/ellipsoid-stitch/stage/guide-rail', name: 'X/Y Guideway', name_zh: 'X/Y 导轨', unit: '件', category: 'part' },
+  { id: 'plant/ellipsoid-stitch/stage/slide', name: 'X/Y Slide', name_zh: 'X/Y 滑板', unit: '件', category: 'part' },
+  { id: 'plant/ellipsoid-stitch/stage/lead-screw', name: 'X/Y Lead Screw', name_zh: 'X/Y 丝杠', unit: '件', category: 'part' },
+  { id: 'plant/ellipsoid-stitch/stage/anti-backlash-nut', name: 'Ellipsoid Stitching Stage Anti-Backlash Nut', name_zh: '椭球拼接台消隙螺母', unit: '件', category: 'part' },
+  { id: 'plant/ellipsoid-stitch/stage/rotary-shaft', name: 'Ellipsoid Stitching Stage Rotary Shaft', name_zh: '椭球拼接台转轴', unit: '件', category: 'part' },
+  { id: 'plant/ellipsoid-stitch/stage/worm-wheel', name: 'Ellipsoid Stitching Stage Worm Wheel', name_zh: '椭球拼接台蜗轮', unit: '件', category: 'part' },
+  { id: 'plant/ellipsoid-stitch/stage/piezo-tilt', name: 'Ellipsoid Stitching Stage Piezo Tilt', name_zh: '椭球拼接台压电倾摆', unit: '件', category: 'part' },
+  { id: 'plant/ellipsoid-stitch/stage/readout', name: 'Ellipsoid Stitching Stage Angle Readout', name_zh: '椭球拼接台角度读出', unit: '件', category: 'part' },
 ];
 
 const ELLIPSOID_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -48,7 +48,7 @@ const ELLIPSOID_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 床身：HT250 150 kg，一次浇成，自然时效 8 周。 */
     id: 'make/ellipsoid-stage-bed',
-    name: '椭球拼接台床身制造',
+    name: 'Ellipsoid Stitching Stage Bed Manufacturing', name_zh: '椭球拼接台床身制造',
     produces: [{ item: 'plant/ellipsoid-stitch/stage/bed', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(150) }] }],
     steps: [
@@ -59,7 +59,7 @@ const ELLIPSOID_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** X/Y 导轨 2 根：45 钢 6 kg，刮研（25 mm² 20 点）。 */
     id: 'make/ellipsoid-stage-guide-rail',
-    name: 'X/Y 导轨制造',
+    name: 'X/Y Guideway Manufacturing', name_zh: 'X/Y 导轨制造',
     produces: [{ item: 'plant/ellipsoid-stitch/stage/guide-rail', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(6) }] }],
     steps: [
@@ -70,7 +70,7 @@ const ELLIPSOID_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** X/Y 滑板 2 件：45 钢 4 kg，与导轨配刮。 */
     id: 'make/ellipsoid-stage-slide',
-    name: 'X/Y 滑板制造',
+    name: 'X/Y Slide Manufacturing', name_zh: 'X/Y 滑板制造',
     produces: [{ item: 'plant/ellipsoid-stitch/stage/slide', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(4) }] }],
     steps: [
@@ -81,7 +81,7 @@ const ELLIPSOID_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** X/Y 丝杠 2 根：45 钢 3 kg，导程按 350 mm 行程。 */
     id: 'make/ellipsoid-stage-lead-screw',
-    name: 'X/Y 丝杠制造',
+    name: 'X/Y Lead Screw Manufacturing', name_zh: 'X/Y 丝杠制造',
     produces: [{ item: 'plant/ellipsoid-stitch/stage/lead-screw', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3) }] }],
     steps: [
@@ -92,7 +92,7 @@ const ELLIPSOID_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 消隙螺母 2 只：45 钢 2 kg，与丝杠配作。 */
     id: 'make/ellipsoid-stage-anti-backlash-nut',
-    name: '椭球拼接台消隙螺母制造',
+    name: 'Ellipsoid Stitching Stage Anti-Backlash Nut Manufacturing', name_zh: '椭球拼接台消隙螺母制造',
     produces: [{ item: 'plant/ellipsoid-stitch/stage/anti-backlash-nut', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(2) }] }],
     steps: [
@@ -103,7 +103,7 @@ const ELLIPSOID_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 转轴 2 根：45 钢 3 kg，俯仰/方位各一。 */
     id: 'make/ellipsoid-stage-rotary-shaft',
-    name: '椭球拼接台转轴制造',
+    name: 'Ellipsoid Stitching Stage Rotary Shaft Manufacturing', name_zh: '椭球拼接台转轴制造',
     produces: [{ item: 'plant/ellipsoid-stitch/stage/rotary-shaft', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3) }] }],
     steps: [
@@ -114,7 +114,7 @@ const ELLIPSOID_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 蜗轮 2 只：45 钢 2 kg，俯仰/方位各一，空回 ≤2 µrad。 */
     id: 'make/ellipsoid-stage-worm-wheel',
-    name: '椭球拼接台蜗轮制造',
+    name: 'Ellipsoid Stitching Stage Worm Wheel Manufacturing', name_zh: '椭球拼接台蜗轮制造',
     produces: [{ item: 'plant/ellipsoid-stitch/stage/worm-wheel', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(2) }] }],
     steps: [
@@ -125,7 +125,7 @@ const ELLIPSOID_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 压电倾摆：石英堆 1 只，λ/8 一档。 */
     id: 'make/ellipsoid-stage-piezo-tilt',
-    name: '椭球拼接台压电倾摆制造',
+    name: 'Ellipsoid Stitching Stage Piezo Tilt Manufacturing', name_zh: '椭球拼接台压电倾摆制造',
     produces: [{ item: 'plant/ellipsoid-stitch/stage/piezo-tilt', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'plant/phase-shifter/stack', qty: q(1) }] }],
     needs: ['plant/metrology-room'],
@@ -137,7 +137,7 @@ const ELLIPSOID_STAGE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 角度读出：100 mm 校准尺 1 + 计数芯片 2 + 玻璃刻度 0.1 kg。 */
     id: 'make/ellipsoid-stage-readout',
-    name: '椭球拼接台角度读出制造',
+    name: 'Ellipsoid Stitching Stage Angle Readout Manufacturing', name_zh: '椭球拼接台角度读出制造',
     produces: [{ item: 'plant/ellipsoid-stitch/stage/readout', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/calibrated-scale-100', qty: q(1) }] },

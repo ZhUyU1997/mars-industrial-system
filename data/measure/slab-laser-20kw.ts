@@ -10,7 +10,7 @@ import { q } from '../../src/index.ts';
 export const SLAB_LASER_20KW_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/slab-laser-20kw-measure-record',
-    name: '20 kW 板条激光记录',
+    name: '20 kW Slab Laser Record', name_zh: '20 kW 板条激光记录',
     unit: '份',
     category: 'part',
     props: [
@@ -26,7 +26,7 @@ export const SLAB_LASER_20KW_MEASURE_ROUTES: readonly Route[] = [
      * **20 kW 板条激光：量热器读 10 点输出功率。**
      */
     id: 'measure/slab-laser-20kw-power',
-    name: '20 kW 板条激光测量',
+    name: '20 kW Slab Laser Measurement', name_zh: '20 kW 板条激光测量',
     produces: [
       {
         item: 'mat/slab-laser-20kw-measure-record',

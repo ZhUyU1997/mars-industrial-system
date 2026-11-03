@@ -145,11 +145,26 @@ const BEARING_FAMILY_NAMES: Record<string, string> = {
   'std/bearing-crossed-roller-p5': 'P5 交叉滚子轴承',
 };
 
+const BEARING_FAMILY_NAMES_EN: Record<string, string> = {
+  'std/bearing-general-p0': 'P0 Deep Groove Ball Bearing',
+  'std/bearing-spindle-p5': 'P5 Angular Contact Spindle Bearing',
+  'std/bearing-taper-roller-p0': 'P0 Tapered Roller Bearing',
+  'std/bearing-cylinder-roller-p0': 'P0 Cylindrical Roller Bearing',
+  'std/bearing-crossed-roller-p5': 'P5 Crossed Roller Bearing',
+};
+
 const BEARING_SUBPART_NAMES: Record<string, string> = {
   'inner-ring': '内圈',
   'outer-ring': '外圈',
   'rolling-element': '滚动体',
   cage: '保持架',
+};
+
+const BEARING_SUBPART_NAMES_EN: Record<string, string> = {
+  'inner-ring': 'Inner Ring',
+  'outer-ring': 'Outer Ring',
+  'rolling-element': 'Rolling Element',
+  cage: 'Cage',
 };
 
 const bearingPart = (id: string): Item => {
@@ -158,7 +173,8 @@ const bearingPart = (id: string): Item => {
   const leaf = id.slice(at + 1);
   return {
     id,
-    name: (BEARING_FAMILY_NAMES[family] ?? '') + (BEARING_SUBPART_NAMES[leaf] ?? leaf),
+    name: `${BEARING_FAMILY_NAMES_EN[family] ?? ''} ${BEARING_SUBPART_NAMES_EN[leaf] ?? leaf}`,
+    name_zh: (BEARING_FAMILY_NAMES[family] ?? '') + (BEARING_SUBPART_NAMES[leaf] ?? leaf),
     unit: '件',
     category: 'part',
   };
@@ -188,7 +204,8 @@ const ringRoute = (
   steel: Qty,
 ): Route => ({
   id: `make/${familyId.slice('std/'.length)}-${leaf}`,
-  name: `${BEARING_FAMILY_NAMES[familyId] ?? ''}${BEARING_SUBPART_NAMES[leaf] ?? leaf}制造`,
+  name: `${BEARING_FAMILY_NAMES_EN[familyId] ?? ''} ${BEARING_SUBPART_NAMES_EN[leaf] ?? leaf} Manufacturing`,
+  name_zh: `${BEARING_FAMILY_NAMES[familyId] ?? ''}${BEARING_SUBPART_NAMES[leaf] ?? leaf}制造`,
   produces: [{ item: `${familyId}/${leaf}`, qty: q(1) }],
   uses: [{ anyOf: [{ item: 'mat/bearing-steel', qty: steel }] }],
   needs: [],
@@ -206,7 +223,8 @@ const ringRoute = (
 
 const rollingRoute = (f: BearingFamily): Route => ({
   id: `make/${f.id.slice('std/'.length)}-rolling-element`,
-  name: `${BEARING_FAMILY_NAMES[f.id] ?? ''}滚动体制造`,
+  name: `${BEARING_FAMILY_NAMES_EN[f.id] ?? ''} Rolling Element Manufacturing`,
+  name_zh: `${BEARING_FAMILY_NAMES[f.id] ?? ''}滚动体制造`,
   produces: [{ item: `${f.id}/rolling-element`, qty: q(f.rollingQty) }],
   uses: [{ anyOf: [{ item: 'mat/bearing-steel', qty: q(1, 5) }] }],
   needs: [],
@@ -226,7 +244,8 @@ const rollingRoute = (f: BearingFamily): Route => ({
 
 const cageRoute = (f: BearingFamily): Route => ({
   id: `make/${f.id.slice('std/'.length)}-cage`,
-  name: `${BEARING_FAMILY_NAMES[f.id] ?? ''}保持架制造`,
+  name: `${BEARING_FAMILY_NAMES_EN[f.id] ?? ''} Cage Manufacturing`,
+  name_zh: `${BEARING_FAMILY_NAMES[f.id] ?? ''}保持架制造`,
   produces: [{ item: `${f.id}/cage`, qty: q(1) }],
   uses: [{ anyOf: [{ item: f.cageMaterial, qty: q(1) }] }],
   needs: [],
@@ -264,7 +283,7 @@ export const BEARING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/bearing-steel',
-    name: '轴承钢 GCr15',
+    name: 'Bearing Steel GCr15', name_zh: '轴承钢 GCr15',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'hardness', kind: 'range', min: 60, max: 65, unit: 'HRC', dir: 'atLeast' }],
@@ -276,7 +295,7 @@ export const BEARING_ITEMS: readonly Item[] = [
    * 风机、泵、传动轴、电机 —— 凡是"转起来就行"的地方都用它。
    * 它也是全表消耗量最大的一件标准件：一台设备少则两个，多则十几个。
    */
-  { id: 'std/bearing-general-p0', name: '通用轴承', unit: '套', category: 'part',
+  { id: 'std/bearing-general-p0', name: 'General-Purpose Bearing', name_zh: '通用轴承', unit: '套', category: 'part',
     composedOf: bearingBom('std/bearing-general-p0', 8),
     props: [{ param: 'precision', kind: 'enum', values: ['P0', 'P5', 'P4'] }, { param: 'bore', kind: 'range', min: 3, max: 500, unit: 'mm' }], },
 
@@ -289,7 +308,7 @@ export const BEARING_ITEMS: readonly Item[] = [
    * P5 与 P0 的差别不在材料，在**加工**：套圈圆度、滚道粗糙度、滚珠的球度，
    * 每一样都要多磨几道、多检几遍。
    */
-  { id: 'std/bearing-spindle-p5', name: '主轴轴承', unit: '套', category: 'part',
+  { id: 'std/bearing-spindle-p5', name: 'Spindle Bearing', name_zh: '主轴轴承', unit: '套', category: 'part',
     composedOf: bearingBom('std/bearing-spindle-p5', 10),
     props: [{ param: 'precision', kind: 'enum', values: ['P0', 'P5', 'P4'] }, { param: 'bore', kind: 'range', min: 3, max: 500, unit: 'mm' }], },
 
@@ -303,7 +322,7 @@ export const BEARING_ITEMS: readonly Item[] = [
    * 必须成对用（面对面或背靠背），单只没有轴向定位能力 —— 装的时候要预紧，
    * 而预紧量决定刚度与发热，这一条模型说不出来。
    */
-  { id: 'std/bearing-taper-roller-p0', name: '圆锥滚子轴承', unit: '套', category: 'part',
+  { id: 'std/bearing-taper-roller-p0', name: 'Tapered Roller Bearing', name_zh: '圆锥滚子轴承', unit: '套', category: 'part',
     composedOf: bearingBom('std/bearing-taper-roller-p0', 12),
     props: [{ param: 'precision', kind: 'enum', values: ['P0', 'P5', 'P4'] }, { param: 'bore', kind: 'range', min: 3, max: 500, unit: 'mm' }], },
 
@@ -317,7 +336,7 @@ export const BEARING_ITEMS: readonly Item[] = [
    * 所以真件磨成对数曲线（凸度）。本层只能做直母线 —— 又一次降级，
    * 与轴承钢纯净度那一条同型：**形状对了，寿命短一截。**
    */
-  { id: 'std/bearing-cylinder-roller-p0', name: '圆柱滚子轴承', unit: '套', category: 'part',
+  { id: 'std/bearing-cylinder-roller-p0', name: 'Cylindrical Roller Bearing', name_zh: '圆柱滚子轴承', unit: '套', category: 'part',
     composedOf: bearingBom('std/bearing-cylinder-roller-p0', 10),
     props: [{ param: 'precision', kind: 'enum', values: ['P0', 'P5', 'P4'] }, { param: 'bore', kind: 'range', min: 3, max: 500, unit: 'mm' }], },
 
@@ -335,7 +354,7 @@ export const BEARING_ITEMS: readonly Item[] = [
    * 交叉滚子的型号由载荷定，不随机器变（关节、回转台、雷达座都用它）；
    * 只是这个描述里目前只有一处用它。
    */
-  { id: 'std/bearing-crossed-roller-p5', name: '交叉滚子轴承', unit: '套', category: 'part',
+  { id: 'std/bearing-crossed-roller-p5', name: 'Crossed Roller Bearing', name_zh: '交叉滚子轴承', unit: '套', category: 'part',
     composedOf: bearingBom('std/bearing-crossed-roller-p5', 16),
     props: [{ param: 'precision', kind: 'enum', values: ['P0', 'P5', 'P4'] }, { param: 'bore', kind: 'range', min: 3, max: 500, unit: 'mm' }], },
 
@@ -354,7 +373,7 @@ export const BEARING_ROUTES: readonly Route[] = [
      * 那个温度对球化退火太热，滑过去就成奥氏体化了）。
      */
     id: 'make/bearing-steel',
-    name: '轴承钢制备',
+    name: 'Bearing Steel Production', name_zh: '轴承钢制备',
     produces: [
       {
         item: 'mat/bearing-steel',
@@ -382,7 +401,7 @@ export const BEARING_ROUTES: readonly Route[] = [
      * -rolling-element / -cage。总装只做配对、装球、铆保持架。
      */
     id: 'make/bearing-general',
-    name: '通用轴承总装',
+    name: 'General-Purpose Bearing Final Assembly', name_zh: '通用轴承总装',
     produces: [{ item: 'std/bearing-general-p0', qty: q(1), gives: [{ param: 'precision', kind: 'enum', oneOf: ['P0', 'P5', 'P4'] }, { param: 'bore', kind: 'range', min: 3, max: 500 }] }],
     uses: [],
     needs: [],
@@ -395,7 +414,7 @@ export const BEARING_ROUTES: readonly Route[] = [
      * 子件路线见 make/bearing-spindle-p5-inner-ring 等；总装后按 P5 配对预紧。
      */
     id: 'make/bearing-spindle',
-    name: '主轴轴承总装',
+    name: 'Spindle Bearing Final Assembly', name_zh: '主轴轴承总装',
     produces: [{ item: 'std/bearing-spindle-p5', qty: q(1), gives: [{ param: 'precision', kind: 'enum', oneOf: ['P0', 'P5', 'P4'] }, { param: 'bore', kind: 'range', min: 3, max: 500 }] }],
     uses: [],
     needs: ['std/gauge-block-working'],
@@ -409,7 +428,7 @@ export const BEARING_ROUTES: readonly Route[] = [
      * 滚子锥面与滚道同角度在子件磨削时保证。
      */
     id: 'make/bearing-taper-roller',
-    name: '圆锥滚子轴承总装',
+    name: 'Tapered Roller Bearing Final Assembly', name_zh: '圆锥滚子轴承总装',
     produces: [{ item: 'std/bearing-taper-roller-p0', qty: q(1), gives: [{ param: 'precision', kind: 'enum', oneOf: ['P0', 'P5', 'P4'] }, { param: 'bore', kind: 'range', min: 3, max: 500 }] }],
     uses: [],
     needs: ['std/gauge-block-working'],
@@ -423,7 +442,7 @@ export const BEARING_ROUTES: readonly Route[] = [
      * 子件路线里完成，总装只装保持架与配对。
      */
     id: 'make/bearing-cylinder-roller',
-    name: '圆柱滚子轴承总装',
+    name: 'Cylindrical Roller Bearing Final Assembly', name_zh: '圆柱滚子轴承总装',
     produces: [{ item: 'std/bearing-cylinder-roller-p0', qty: q(1), gives: [{ param: 'precision', kind: 'enum', oneOf: ['P0', 'P5', 'P4'] }, { param: 'bore', kind: 'range', min: 3, max: 500 }] }],
     uses: [],
     needs: [],
@@ -437,7 +456,7 @@ export const BEARING_ROUTES: readonly Route[] = [
      * V 形滚道在子件磨削后按比较仪配作，总装交叉装滚子。
      */
     id: 'make/bearing-crossed-roller',
-    name: '交叉滚子轴承总装',
+    name: 'Crossed Roller Bearing Final Assembly', name_zh: '交叉滚子轴承总装',
     produces: [{ item: 'std/bearing-crossed-roller-p5', qty: q(1), gives: [{ param: 'precision', kind: 'enum', oneOf: ['P0', 'P5', 'P4'] }, { param: 'bore', kind: 'range', min: 3, max: 500 }] }],
     uses: [],
     needs: ['std/gauge-block-working'],

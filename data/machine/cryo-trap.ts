@@ -192,7 +192,7 @@ export const CRYO_TRAP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cryo-trap-80k/cold-finger',
-    name: '80 K 冷阱铜冷指',
+    name: '80 K Cold Trap Copper Cold Finger', name_zh: '80 K 冷阱铜冷指',
     unit: '件',
     category: 'part',
     props: [
@@ -214,7 +214,7 @@ export const CRYO_TRAP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cryo-trap-80k/baffle',
-    name: '80 K 挡板',
+    name: '80 K Baffle', name_zh: '80 K 挡板',
     unit: '件',
     category: 'part',
     props: [
@@ -236,7 +236,7 @@ export const CRYO_TRAP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cryo-trap-80k/regen-heater',
-    name: '80 K 冷阱再生加热器',
+    name: '80 K Cold Trap Regeneration Heater', name_zh: '80 K 冷阱再生加热器',
     unit: '件',
     category: 'part',
     props: [
@@ -258,7 +258,7 @@ export const CRYO_TRAP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cryo-trap-80k/valve',
-    name: '80 K 冷阱切换阀',
+    name: '80 K Cold Trap Switchover Valve', name_zh: '80 K 冷阱切换阀',
     unit: '件',
     category: 'part',
     props: [
@@ -287,7 +287,7 @@ export const CRYO_TRAP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cryo-trap-80k/desorption-loop',
-    name: '80 K 冷阱预浓缩定容环',
+    name: '80 K Cold Trap Preconcentration Fixed-Volume Loop', name_zh: '80 K 冷阱预浓缩定容环',
     unit: '件',
     category: 'part',
     props: [
@@ -314,7 +314,7 @@ export const CRYO_TRAP_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cryo-trap-80k',
-    name: '80 K 冷阱整机',
+    name: '80 K Cold Trap System', name_zh: '80 K 冷阱整机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 70, max: 80 }],
@@ -342,7 +342,7 @@ export const CRYO_TRAP_ROUTES: readonly Route[] = [
      * 车铜棒 φ20、铣 12 片径向翅（厚 2 mm、间距 5 mm），银钎到 CF63 法兰。
      */
     id: 'make/cryo-trap-cold-finger',
-    name: '80 K 冷阱铜冷指制造',
+    name: '80 K Cold Trap Copper Cold Finger Manufacturing', name_zh: '80 K 冷阱铜冷指制造',
     produces: [
       {
         item: 'plant/cryo-trap-80k/cold-finger',
@@ -370,7 +370,7 @@ export const CRYO_TRAP_ROUTES: readonly Route[] = [
      * 百叶：20 片铜板 45° 叠成，开孔率 30–40 %；外框 316L，压降 <50 Pa。
      */
     id: 'make/cryo-trap-baffle',
-    name: '80 K 挡板制造',
+    name: '80 K Baffle Manufacturing', name_zh: '80 K 挡板制造',
     produces: [
       {
         item: 'plant/cryo-trap-80k/baffle',
@@ -401,7 +401,7 @@ export const CRYO_TRAP_ROUTES: readonly Route[] = [
      * 镍铬丝绕在氧化铝骨架上、316L 护套管保护；100 K 下 150 W。
      */
     id: 'make/cryo-trap-regen-heater',
-    name: '80 K 冷阱再生加热器制造',
+    name: '80 K Cold Trap Regeneration Heater Manufacturing', name_zh: '80 K 冷阱再生加热器制造',
     produces: [
       {
         item: 'plant/cryo-trap-80k/regen-heater',
@@ -434,7 +434,7 @@ export const CRYO_TRAP_ROUTES: readonly Route[] = [
      * 两通球阀 + 自整角机驱动；PTFE 阀座在 100 K 下仍软（脆化点 −100 °C 以下）。
      */
     id: 'make/cryo-trap-valve',
-    name: '80 K 冷阱切换阀制造',
+    name: '80 K Cold Trap Switchover Valve Manufacturing', name_zh: '80 K 冷阱切换阀制造',
     produces: [
       {
         item: 'plant/cryo-trap-80k/valve',
@@ -467,7 +467,7 @@ export const CRYO_TRAP_ROUTES: readonly Route[] = [
      * 减少水吸附）；体积用称水法标定（0.1 L ±1 %）。
      */
     id: 'make/cryo-trap-desorption-loop',
-    name: '80 K 冷阱预浓缩定容环制造',
+    name: '80 K Cold Trap Preconcentration Fixed-Volume Loop Manufacturing', name_zh: '80 K 冷阱预浓缩定容环制造',
     produces: [
       {
         item: 'plant/cryo-trap-80k/desorption-loop',
@@ -504,7 +504,7 @@ export const CRYO_TRAP_ROUTES: readonly Route[] = [
      * `needs` 里的 `plant/gm-cryocooler`（holds 45–80 K），条件写在注释里。
      */
     id: 'make/cryo-trap-80k',
-    name: '80 K 冷阱装配',
+    name: '80 K Cold Trap Assembly', name_zh: '80 K 冷阱装配',
     produces: [
       {
         item: 'plant/cryo-trap-80k',

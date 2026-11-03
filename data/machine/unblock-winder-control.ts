@@ -195,7 +195,7 @@ export const UNBLOCK_WINDER_CTRL_ITEMS: readonly Item[] = [];
 export const UNBLOCK_WINDER_CTRL_ROUTES: readonly Route[] = [
   {
     id: 'make/winder-control-board',
-    name: '绕线机计数与排线控制制造',
+    name: 'Winder Counting and Traverse Control Manufacturing', name_zh: '绕线机计数与排线控制制造',
     produces: [{ item: 'plant/winder/control', qty: q(1) }],
     uses: [
       {

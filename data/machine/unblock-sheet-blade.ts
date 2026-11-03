@@ -298,7 +298,7 @@ export const UNBLOCK_SHEET_BLADE_ITEMS: readonly Item[] = [];
 export const UNBLOCK_SHEET_BLADE_ROUTES: readonly Route[] = [
   {
     id: 'make/sheet-blade-45steel',
-    name: '钣金与焊接工位剪板刀片制造',
+    name: 'Sheet Metal and Welding Workstation Shear Blade Manufacturing', name_zh: '钣金与焊接工位剪板刀片制造',
     produces: [{ item: 'plant/sheet-shop/blade', qty: q(1) }],
     uses: [
       {

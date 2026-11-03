@@ -63,7 +63,7 @@ export const PHOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/phosphorus-record',
-    name: '磷记录',
+    name: 'Phosphorus Record', name_zh: '磷记录',
     unit: '份',
     category: 'part',
     props: [
@@ -90,7 +90,7 @@ export const PHOS_MEASURE_ROUTES: readonly Route[] = [
      *   ⑤ 外标与判读：0.02/0.1/1/10 ppb P；回收 95–105 %；31 与 47 差 <20 %
      */
     id: 'measure/trace-phosphorus',
-    name: '磷测量',
+    name: 'Phosphorus Measurement', name_zh: '磷测量',
     produces: [
       {
         item: 'mat/phosphorus-record',

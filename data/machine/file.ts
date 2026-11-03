@@ -38,7 +38,7 @@ export const FILE_ITEMS: readonly Item[] = [
    *
    * 它是**工具**：一把锉刀锉几公斤铁就钝，要换。所以进 needs 不进 uses。
    */
-  { id: 'std/file-general', name: '锉刀', unit: '件', category: 'part' },
+  { id: 'std/file-general', name: 'Hand File', name_zh: '锉刀', unit: '件', category: 'part' },
 ];
 
 export const FILE_ROUTES: readonly Route[] = [
@@ -52,7 +52,7 @@ export const FILE_ROUTES: readonly Route[] = [
      * 而**剁纹用的錾子也是手工剁出来的** —— 这一层的手艺是从最下面开始的。
      */
     id: 'make/file',
-    name: '锉刀制造',
+    name: 'Hand File Manufacturing', name_zh: '锉刀制造',
     produces: [{ item: 'std/file-general', qty: q(20) }],
     uses: [
       // 本层没有专门的碳素工具钢条目：轴承钢是现成的 1% C 高碳钢，代用。

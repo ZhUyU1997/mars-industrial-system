@@ -73,7 +73,7 @@ export const RTA_UNIFORMITY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/zone-control',
-    name: '16 区功率控制',
+    name: '16-Zone Power Control', name_zh: '16 区功率控制',
     unit: '件',
     category: 'part',
     props: [
@@ -92,7 +92,7 @@ export const RTA_UNIFORMITY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/lamp-trim',
-    name: '逐灯微调机构',
+    name: 'Per-Lamp Trim Mechanism', name_zh: '逐灯微调机构',
     unit: '件',
     category: 'part',
     props: [
@@ -110,7 +110,7 @@ export const RTA_UNIFORMITY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/edge-ring',
-    name: 'RTA 炉边缘补偿环',
+    name: 'RTA Furnace Edge Compensation Ring', name_zh: 'RTA 炉边缘补偿环',
     unit: '件',
     category: 'part',
     props: [
@@ -128,7 +128,7 @@ export const RTA_UNIFORMITY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/rotation-stage',
-    name: 'RTA 炉片自转台',
+    name: 'RTA Furnace Wafer Rotation Stage', name_zh: 'RTA 炉片自转台',
     unit: '件',
     category: 'part',
     props: [
@@ -152,7 +152,7 @@ export const RTA_UNIFORMITY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rta/slip-ring-98',
-    name: '98 路滑环',
+    name: '98-Channel Slip Ring', name_zh: '98 路滑环',
     unit: '件',
     category: 'part',
     props: [
@@ -173,7 +173,7 @@ export const RTA_UNIFORMITY_ROUTES: readonly Route[] = [
      *   控制板 1 + 可控硅 16 + 运放 2 + 铜线 0.1 + 铝 0.5 → 16 区控制 1
      */
     id: 'make/rta-zone-control',
-    name: '16 区功率控制制造',
+    name: '16-Zone Power Control Manufacturing', name_zh: '16 区功率控制制造',
     produces: [
       {
         item: 'plant/rta/zone-control',
@@ -206,7 +206,7 @@ export const RTA_UNIFORMITY_ROUTES: readonly Route[] = [
      *   电阻丝 0.5 + 氧化铝 1 + 铜线 0.2 + 运放 2 → 微调板 1
      */
     id: 'make/rta-lamp-trim',
-    name: '逐灯微调机构制造',
+    name: 'Per-Lamp Trim Mechanism Manufacturing', name_zh: '逐灯微调机构制造',
     produces: [
       {
         item: 'plant/rta/lamp-trim',
@@ -237,7 +237,7 @@ export const RTA_UNIFORMITY_ROUTES: readonly Route[] = [
      *   石英 0.5 + 铝 0.2 + 金 0.005 → 边缘环 1
      */
     id: 'make/rta-edge-ring',
-    name: 'RTA 炉边缘补偿环制造',
+    name: 'RTA Furnace Edge Compensation Ring Manufacturing', name_zh: 'RTA 炉边缘补偿环制造',
     produces: [
       {
         item: 'plant/rta/edge-ring',
@@ -267,7 +267,7 @@ export const RTA_UNIFORMITY_ROUTES: readonly Route[] = [
      *   伺服 1 + 45 钢 2 + 铝 1 + 轴承 2 → 自转台 1
      */
     id: 'make/rta-rotation-stage',
-    name: 'RTA 炉片自转台制造',
+    name: 'RTA Furnace Wafer Rotation Stage Manufacturing', name_zh: 'RTA 炉片自转台制造',
     produces: [
       {
         item: 'plant/rta/rotation-stage',
@@ -305,7 +305,7 @@ export const RTA_UNIFORMITY_ROUTES: readonly Route[] = [
      * 这一档不成立；所以先做滑环，再谈 2–3 K。
      */
     id: 'make/rta-slip-ring-98',
-    name: '98 路滑环制造',
+    name: '98-Channel Slip Ring Manufacturing', name_zh: '98 路滑环制造',
     produces: [
       {
         item: 'plant/rta/slip-ring-98',
@@ -362,7 +362,7 @@ export const RTA_UNIFORMITY_ROUTES: readonly Route[] = [
      * 程序升温曲线只能按段恒功率走，没有按区闭环。这不是等价替代，是低一档。
      */
     id: 'make/rta-zone-control-local',
-    name: '16 区功率控制制造',
+    name: '16-Zone Power Control Manufacturing', name_zh: '16 区功率控制制造',
     produces: [
       {
         item: 'plant/rta/zone-control',

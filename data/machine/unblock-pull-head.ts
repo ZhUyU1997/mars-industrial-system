@@ -613,7 +613,7 @@ export const UNBLOCK_PULL_HEAD_ROUTES: readonly Route[] = [
      *  · 称重 **±0.2 kg**（满棒 14.1 kg 上），梁的挠度 2.06 mm = 0.4–0.8 mm 的直径企图
      */
     id: 'make/pull-head-cast',
-    name: '直拉单晶炉提拉头制造',
+    name: 'Czochralski Single-Crystal Furnace Pull Head Manufacturing', name_zh: '直拉单晶炉提拉头制造',
     produces: [{ item: 'plant/cz-puller/pull-head', qty: q(1) }],
     uses: [
       /**

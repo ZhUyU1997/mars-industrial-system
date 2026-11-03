@@ -25,20 +25,20 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const MVM_PARTS: readonly Item[] = [
-  { id: 'std/millivoltmeter-general/case', name: '可动磁体式毫伏表表壳', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/base', name: '可动磁体式毫伏表底座', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/scale', name: '可动磁体式毫伏表刻度盘', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/magnet', name: '可动磁体式毫伏表钙铁氧体磁体', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/magnet-clamp', name: '可动磁体式毫伏表磁体箍', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/fixed-coil', name: '可动磁体式毫伏表固定线圈', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/coil-skeleton', name: '可动磁体式毫伏表线圈骨架', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/magnetic-shield', name: '可动磁体式毫伏表磁屏蔽筒', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/suspension', name: '可动磁体式毫伏表悬丝', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/pointer', name: '可动磁体式毫伏表碳旗指针', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/counterweight', name: '可动磁体式毫伏表配重', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/terminal', name: '可动磁体式毫伏表接线柱', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/zero-adjust-screw', name: '可动磁体式毫伏表调零螺钉', unit: '件', category: 'part' },
-  { id: 'std/millivoltmeter-general/dust-felt', name: '可动磁体式毫伏表防尘毡', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/case', name: 'Moving-Magnet Millivoltmeter Case', name_zh: '可动磁体式毫伏表表壳', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/base', name: 'Moving-Magnet Millivoltmeter Base', name_zh: '可动磁体式毫伏表底座', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/scale', name: 'Moving-Magnet Millivoltmeter Dial', name_zh: '可动磁体式毫伏表刻度盘', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/magnet', name: 'Moving-Magnet Millivoltmeter Calcium Ferrite Magnet', name_zh: '可动磁体式毫伏表钙铁氧体磁体', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/magnet-clamp', name: 'Moving-Magnet Millivoltmeter Magnet Clamp', name_zh: '可动磁体式毫伏表磁体箍', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/fixed-coil', name: 'Moving-Magnet Millivoltmeter Fixed Coil', name_zh: '可动磁体式毫伏表固定线圈', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/coil-skeleton', name: 'Moving-Magnet Millivoltmeter Coil Former', name_zh: '可动磁体式毫伏表线圈骨架', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/magnetic-shield', name: 'Moving-Magnet Millivoltmeter Magnetic Shield Tube', name_zh: '可动磁体式毫伏表磁屏蔽筒', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/suspension', name: 'Moving-Magnet Millivoltmeter Suspension Wire', name_zh: '可动磁体式毫伏表悬丝', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/pointer', name: 'Moving-Magnet Millivoltmeter Carbon Flag Pointer', name_zh: '可动磁体式毫伏表碳旗指针', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/counterweight', name: 'Moving-Magnet Millivoltmeter Counterweight', name_zh: '可动磁体式毫伏表配重', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/terminal', name: 'Moving-Magnet Millivoltmeter Terminal Post', name_zh: '可动磁体式毫伏表接线柱', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/zero-adjust-screw', name: 'Moving-Magnet Millivoltmeter Zero-Adjust Screw', name_zh: '可动磁体式毫伏表调零螺钉', unit: '件', category: 'part' },
+  { id: 'std/millivoltmeter-general/dust-felt', name: 'Moving-Magnet Millivoltmeter Dust Felt', name_zh: '可动磁体式毫伏表防尘毡', unit: '件', category: 'part' },
 ];
 
 const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -47,7 +47,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 表壳：φ120×60、壁 6，前后两开口；铸铁浇成。 */
     id: 'make/millivoltmeter-case',
-    name: '可动磁体式毫伏表表壳制造',
+    name: 'Moving-Magnet Millivoltmeter Case Manufacturing', name_zh: '可动磁体式毫伏表表壳制造',
     produces: [{ item: 'std/millivoltmeter-general/case', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(6, 5) }] }],
     performedBy: 'plant/melting-furnace',
@@ -56,7 +56,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 底座：130×90×12，铸铁。 */
     id: 'make/millivoltmeter-base',
-    name: '可动磁体式毫伏表底座制造',
+    name: 'Moving-Magnet Millivoltmeter Base Manufacturing', name_zh: '可动磁体式毫伏表底座制造',
     produces: [{ item: 'std/millivoltmeter-general/base', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(1, 5) }] }],
     performedBy: 'plant/melting-furnace',
@@ -65,7 +65,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 刻度盘：φ95×3 铸铁，100 条线沿 60° 弧径向刻，线距按 sin 修正。 */
     id: 'make/millivoltmeter-scale',
-    name: '可动磁体式毫伏表刻度盘制造',
+    name: 'Moving-Magnet Millivoltmeter Dial Manufacturing', name_zh: '可动磁体式毫伏表刻度盘制造',
     produces: [{ item: 'std/millivoltmeter-general/scale', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(1, 5) }] }],
     steps: [
@@ -81,7 +81,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 1300–1350 烧结、磨面、充磁。Br 0.38 T，Hc 150 kA/m。
      */
     id: 'make/millivoltmeter-magnet',
-    name: '可动磁体式毫伏表钙铁氧体磁体制造',
+    name: 'Moving-Magnet Millivoltmeter Calcium Ferrite Magnet Manufacturing', name_zh: '可动磁体式毫伏表钙铁氧体磁体制造',
     produces: [{ item: 'std/millivoltmeter-general/magnet', qty: q(2) }],
     uses: [
       { anyOf: [{ item: 'mat/iron', qty: q(33, 1000) }] },
@@ -102,7 +102,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 磁体箍：45 钢，3 g，箍住两块磁体。 */
     id: 'make/millivoltmeter-magnet-clamp',
-    name: '可动磁体式毫伏表磁体箍制造',
+    name: 'Moving-Magnet Millivoltmeter Magnet Clamp Manufacturing', name_zh: '可动磁体式毫伏表磁体箍制造',
     produces: [{ item: 'std/millivoltmeter-general/magnet-clamp', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 1000) }] }],
     performedBy: 'lathe',
@@ -110,7 +110,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 固定线圈：200 匝 φ1.0 铜线，展开 19 m，0.42 Ω。 */
     id: 'make/millivoltmeter-fixed-coil',
-    name: '可动磁体式毫伏表固定线圈制造',
+    name: 'Moving-Magnet Millivoltmeter Fixed Coil Manufacturing', name_zh: '可动磁体式毫伏表固定线圈制造',
     produces: [{ item: 'std/millivoltmeter-general/fixed-coil', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper-wire', qty: q(13, 100) }] },
@@ -121,7 +121,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 线圈骨架：45 钢开口杯 φ35×25，开 4 条缝切断涡流。 */
     id: 'make/millivoltmeter-coil-skeleton',
-    name: '可动磁体式毫伏表线圈骨架制造',
+    name: 'Moving-Magnet Millivoltmeter Coil Former Manufacturing', name_zh: '可动磁体式毫伏表线圈骨架制造',
     produces: [{ item: 'std/millivoltmeter-general/coil-skeleton', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 50) }] }],
     performedBy: 'lathe',
@@ -129,7 +129,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 磁屏蔽筒：φ100×0.8×50 软铁筒，屏蔽系数约 5。 */
     id: 'make/millivoltmeter-magnetic-shield',
-    name: '可动磁体式毫伏表磁屏蔽筒制造',
+    name: 'Moving-Magnet Millivoltmeter Magnetic Shield Tube Manufacturing', name_zh: '可动磁体式毫伏表磁屏蔽筒制造',
     produces: [{ item: 'std/millivoltmeter-general/magnetic-shield', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron', qty: q(1, 4) }] }],
     performedBy: 'plant/sheet-shop',
@@ -141,7 +141,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 纱从玻包线上剥，只受拉；回零刚度 k = W·d²/(4L)，不靠纱的扭转。
      */
     id: 'make/millivoltmeter-suspension',
-    name: '可动磁体式毫伏表悬丝制造',
+    name: 'Moving-Magnet Millivoltmeter Suspension Wire Manufacturing', name_zh: '可动磁体式毫伏表悬丝制造',
     produces: [{ item: 'std/millivoltmeter-general/suspension', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/glass-covered-wire', qty: q(1, 1000) }] }],
     performedBy: 'plant/robot',
@@ -149,7 +149,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 碳旗指针：3×8×0.3 碳片 + 玻璃纱杆。 */
     id: 'make/millivoltmeter-pointer',
-    name: '可动磁体式毫伏表碳旗指针制造',
+    name: 'Moving-Magnet Millivoltmeter Carbon Flag Pointer Manufacturing', name_zh: '可动磁体式毫伏表碳旗指针制造',
     produces: [{ item: 'std/millivoltmeter-general/pointer', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(3, 1000) }] },
@@ -160,7 +160,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 配重：5 g 铜屑压铆，把可动件拉到竖直中轴。 */
     id: 'make/millivoltmeter-counterweight',
-    name: '可动磁体式毫伏表配重制造',
+    name: 'Moving-Magnet Millivoltmeter Counterweight Manufacturing', name_zh: '可动磁体式毫伏表配重制造',
     produces: [{ item: 'std/millivoltmeter-general/counterweight', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(1, 200) }] }],
     performedBy: 'lathe',
@@ -168,7 +168,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 接线柱 2 只：铜车成，接被测电压。 */
     id: 'make/millivoltmeter-terminal',
-    name: '可动磁体式毫伏表接线柱制造',
+    name: 'Moving-Magnet Millivoltmeter Terminal Post Manufacturing', name_zh: '可动磁体式毫伏表接线柱制造',
     produces: [{ item: 'std/millivoltmeter-general/terminal', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(9, 200) }] }],
     performedBy: 'lathe',
@@ -176,7 +176,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 调零螺钉：45 钢，带偏心轮，吃掉磁体对铁壳的固定偏转。 */
     id: 'make/millivoltmeter-zero-adjust-screw',
-    name: '可动磁体式毫伏表调零螺钉制造',
+    name: 'Moving-Magnet Millivoltmeter Zero-Adjust Screw Manufacturing', name_zh: '可动磁体式毫伏表调零螺钉制造',
     produces: [{ item: 'std/millivoltmeter-general/zero-adjust-screw', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 100) }] }],
     performedBy: 'lathe',
@@ -184,7 +184,7 @@ const MVM_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 防尘毡：矿棉，垫在线圈骨架两端与呼吸孔。 */
     id: 'make/millivoltmeter-dust-felt',
-    name: '可动磁体式毫伏表防尘毡制造',
+    name: 'Moving-Magnet Millivoltmeter Dust Felt Manufacturing', name_zh: '可动磁体式毫伏表防尘毡制造',
     produces: [{ item: 'std/millivoltmeter-general/dust-felt', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/mineral-wool', qty: q(1, 200) }] }],
     performedBy: 'plant/robot',

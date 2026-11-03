@@ -100,7 +100,7 @@ export const OES_CAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/oes-cal-record',
-    name: 'OES 870 nm 波长/线宽/稳定度记录',
+    name: 'OES 870 nm Wavelength/Linewidth/Stability Record', name_zh: 'OES 870 nm 波长/线宽/稳定度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -132,7 +132,7 @@ export const OES_CAL_ROUTES: readonly Route[] = [
      * 不把“设计 0.2”写成“实测 0.2”。
      */
     id: 'measure/oes-wavelength-cal',
-    name: '870 nm 标定',
+    name: '870 nm Standardization', name_zh: '870 nm 标定',
     rate: { hours: q(5) },
     produces: [
       {

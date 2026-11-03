@@ -325,7 +325,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nitrogen-characterized',
-    name: '已判定过的一批氮气',
+    name: 'Characterized Nitrogen Batch', name_zh: '已判定过的一批氮气',
     unit: 'kg',
     category: 'material',
     props: [
@@ -358,7 +358,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/oxygen-probe/electrolyte',
-    name: '氧化锆氧电池固体电解质管',
+    name: 'Zirconia Oxygen Cell Solid Electrolyte Tube', name_zh: '氧化锆氧电池固体电解质管',
     unit: '件',
     category: 'part',
     props: [
@@ -390,7 +390,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/oxygen-probe/electrode',
-    name: '氧化锆氧电池多孔银电极',
+    name: 'Zirconia Oxygen Cell Porous Silver Electrode', name_zh: '氧化锆氧电池多孔银电极',
     unit: '件',
     category: 'part',
     props: [
@@ -413,7 +413,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/oxygen-probe/cell-body',
-    name: '氧化锆氧电池座',
+    name: 'Zirconia Oxygen Cell Body', name_zh: '氧化锆氧电池座',
     unit: '件',
     category: 'part',
     props: [
@@ -436,7 +436,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/oxygen-probe/sample-line',
-    name: '氧化锆氧电池取样与参比气路',
+    name: 'Zirconia Oxygen Cell Sample and Reference Gas Line', name_zh: '氧化锆氧电池取样与参比气路',
     unit: '件',
     category: 'part',
     props: [
@@ -459,7 +459,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/oxygen-probe/readout',
-    name: '氧化锆氧电池指零读数头',
+    name: 'Zirconia Oxygen Cell Null Readout Head', name_zh: '氧化锆氧电池指零读数头',
     unit: '件',
     category: 'part',
     props: [
@@ -496,7 +496,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/inert-gas-fusion-analyzer/crucible',
-    name: '惰气熔融-红外氧分析仪石墨坩埚',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Graphite Crucible', name_zh: '惰气熔融-红外氧分析仪石墨坩埚',
     unit: '件',
     category: 'part',
     props: [
@@ -517,7 +517,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/inert-gas-fusion-analyzer/electrode',
-    name: '惰气熔融-红外氧分析仪上下电极与坩埚托',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Upper/Lower Electrode and Crucible Support', name_zh: '惰气熔融-红外氧分析仪上下电极与坩埚托',
     unit: '件',
     category: 'part',
     props: [
@@ -546,7 +546,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/inert-gas-fusion-analyzer/chamber',
-    name: '惰气熔融-红外氧分析仪炉膛与气路',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Furnace Chamber and Gas Path', name_zh: '惰气熔融-红外氧分析仪炉膛与气路',
     unit: '件',
     category: 'part',
     props: [
@@ -573,7 +573,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/inert-gas-fusion-analyzer/ir-detector',
-    name: '惰气熔融-红外氧分析仪红外检测器',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Infrared Detector', name_zh: '惰气熔融-红外氧分析仪红外检测器',
     unit: '件',
     category: 'part',
     props: [
@@ -595,7 +595,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/inert-gas-fusion-analyzer/readout',
-    name: '惰气熔融-红外氧分析仪读数与斩波同步',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Readout and Chopper Synchronization', name_zh: '惰气熔融-红外氧分析仪读数与斩波同步',
     unit: '件',
     category: 'part',
     props: [
@@ -627,7 +627,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dew-point-meter/electrolytic-cell',
-    name: 'P₂O₅ 电解池',
+    name: 'P₂O₅ Electrolytic Cell', name_zh: 'P₂O₅ 电解池',
     unit: '件',
     category: 'part',
     props: [
@@ -657,7 +657,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dew-point-meter/mirror-head',
-    name: '露点仪冷镜头',
+    name: 'Dew-Point Meter Chilled Mirror Head', name_zh: '露点仪冷镜头',
     unit: '件',
     category: 'part',
     props: [
@@ -679,7 +679,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dew-point-meter/sample-panel',
-    name: '露点仪取样板',
+    name: 'Dew-Point Meter Sample Panel', name_zh: '露点仪取样板',
     unit: '件',
     category: 'part',
     props: [
@@ -701,7 +701,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dew-point-meter/guard-column',
-    name: '露点仪保护柱',
+    name: 'Dew-Point Meter Guard Column', name_zh: '露点仪保护柱',
     unit: '件',
     category: 'part',
     props: [
@@ -721,7 +721,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dew-point-meter/readout',
-    name: '露点仪读数头',
+    name: 'Dew-Point Meter Readout Head', name_zh: '露点仪读数头',
     unit: '件',
     category: 'part',
     props: [
@@ -751,7 +751,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/oxygen-probe',
-    name: '氧化锆氧电池',
+    name: 'Zirconia Oxygen Cell', name_zh: '氧化锆氧电池',
     unit: '台',
     category: 'machine',
     props: [
@@ -787,7 +787,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/inert-gas-fusion-analyzer',
-    name: '惰气熔融-红外氧分析仪',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer', name_zh: '惰气熔融-红外氧分析仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -826,7 +826,7 @@ export const OXY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dew-point-meter',
-    name: '露点仪',
+    name: 'Dew-Point Meter', name_zh: '露点仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -874,7 +874,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *   ③ 检漏：一头闭口、内壁涂皂液，外壁加压 0.1 MPa，30 min 无泡
      */
     id: 'make/oxygen-probe-electrolyte',
-    name: '氧化锆氧电池固体电解质管制造',
+    name: 'Zirconia Oxygen Cell Solid Electrolyte Tube Manufacturing', name_zh: '氧化锆氧电池固体电解质管制造',
     rate: { hours: q(72) },
     produces: [
       {
@@ -941,7 +941,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *   ③ 方阻 ≤5 mΩ/□（交付窗口，工艺保证）
      */
     id: 'make/oxygen-probe-electrode',
-    name: '氧化锆氧电池多孔银电极制造',
+    name: 'Zirconia Oxygen Cell Porous Silver Electrode Manufacturing', name_zh: '氧化锆氧电池多孔银电极制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -998,7 +998,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *   ③ 漏率 ≤10⁻⁶ Pa·m³/s：没有氦质谱，用**保压法**：内腔 0.1 MPa，30 min 压降 ≤1 %
      */
     id: 'make/oxygen-probe-cell-body',
-    name: '氧化锆氧电池座制造',
+    name: 'Zirconia Oxygen Cell Body Manufacturing', name_zh: '氧化锆氧电池座制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -1054,7 +1054,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *      0.3 K × 0.05 mV/K ≈ 15 µV ≈ 0.0003 个数量级（可忽略，但**不相等就有**，所以等长）
      */
     id: 'make/oxygen-probe-sample-line',
-    name: '氧化锆氧电池取样与参比气路制造',
+    name: 'Zirconia Oxygen Cell Sample and Reference Gas Line Manufacturing', name_zh: '氧化锆氧电池取样与参比气路制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -1111,7 +1111,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *   ③ 漂 ≤30 µV/h：齐纳进 45 °C 恒温盒（自热恒温，`clock.ts:110` 同一招）
      */
     id: 'make/oxygen-probe-readout',
-    name: '氧化锆氧电池指零读数头制造',
+    name: 'Zirconia Oxygen Cell Null Readout Head Manufacturing', name_zh: '氧化锆氧电池指零读数头制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1189,7 +1189,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *      的工序里做，每次分析前空烧 30 s）
      */
     id: 'make/fusion-crucible',
-    name: '惰气熔融-红外氧分析仪石墨坩埚制造',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Graphite Crucible Manufacturing', name_zh: '惰气熔融-红外氧分析仪石墨坩埚制造',
     rate: { hours: q(48) },
     produces: [
       {
@@ -1249,7 +1249,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *   ③ 锥面 30° 配坩埚：锥面接触是"自对中"，平面对接要靠压紧力，而 3000 °C 上压紧力会松
      */
     id: 'make/fusion-electrode',
-    name: '惰气熔融-红外氧分析仪上下电极与坩埚托制造',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Upper/Lower Electrode and Crucible Support Manufacturing', name_zh: '惰气熔融-红外氧分析仪上下电极与坩埚托制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1294,7 +1294,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *   ③ 刚玉衬与石墨毡之间留 2 mm 缝（石墨毡在 3000 °C 上热膨胀 0.3 %，顶死刚玉就裂）
      */
     id: 'make/fusion-chamber',
-    name: '惰气熔融-红外氧分析仪炉膛与气路制造',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Furnace Chamber and Gas Path Manufacturing', name_zh: '惰气熔融-红外氧分析仪炉膛与气路制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -1357,7 +1357,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *   ③ 1 m 光程用两面金镜折返 5 次（金不氧化 —— `precious.ts:38` 的"金是最后手段"第四次兑现）
      */
     id: 'make/fusion-ir-detector',
-    name: '惰气熔融-红外氧分析仪红外检测器制造',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Infrared Detector Manufacturing', name_zh: '惰气熔融-红外氧分析仪红外检测器制造',
     rate: { hours: q(80) },
     produces: [
       {
@@ -1427,7 +1427,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *   ③ 时间常数 1–30 s，与脉冲释放的 30 s 匹配（太快噪声大，太慢拖不住峰）
      */
     id: 'make/fusion-readout',
-    name: '惰气熔融-红外氧分析仪读数与斩波同步制造',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Readout and Chopper Synchronization Manufacturing', name_zh: '惰气熔融-红外氧分析仪读数与斩波同步制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1494,7 +1494,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *   ③ 空白 ≤0.05 ppm（跑合后的残余电流折算）
      */
     id: 'make/dewpoint-electrolytic-cell',
-    name: 'P₂O₅ 电解池制造',
+    name: 'P₂O₅ Electrolytic Cell Manufacturing', name_zh: 'P₂O₅ 电解池制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -1570,7 +1570,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *      偶丝不均匀性给 ±1.0 K —— D8）
      */
     id: 'make/dewpoint-mirror-head',
-    name: '露点仪冷镜头制造',
+    name: 'Dew-Point Meter Chilled Mirror Head Manufacturing', name_zh: '露点仪冷镜头制造',
     rate: { hours: q(50) },
     produces: [
       {
@@ -1642,7 +1642,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *      "倒 20.00 kg 水划一道线"那一招）：量的是单位时间的气泡数，不是质量
      */
     id: 'make/dewpoint-sample-panel',
-    name: '露点仪取样板制造',
+    name: 'Dew-Point Meter Sample Panel Manufacturing', name_zh: '露点仪取样板制造',
     rate: { hours: q(30) },
     produces: [
       {
@@ -1699,7 +1699,7 @@ export const OXY_ROUTES: readonly Route[] = [
      * 否则"分辨 0.05 ppm"就成了没有分母的宣传。
      */
     id: 'make/dewpoint-guard-column',
-    name: '露点仪保护柱制造',
+    name: 'Dew-Point Meter Guard Column Manufacturing', name_zh: '露点仪保护柱制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -1752,7 +1752,7 @@ export const OXY_ROUTES: readonly Route[] = [
      *   ③ 限流 2 mA/档（跑合时会过流，没有限流就烧金丝）
      */
     id: 'make/dewpoint-readout',
-    name: '露点仪读数头制造',
+    name: 'Dew-Point Meter Readout Head Manufacturing', name_zh: '露点仪读数头制造',
     rate: { hours: q(36) },
     produces: [
       {
@@ -1819,7 +1819,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/oxygen-probe',
-    name: '氧化锆氧电池装配',
+    name: 'Zirconia Oxygen Cell Assembly', name_zh: '氧化锆氧电池装配',
     produces: [{
       item: 'plant/oxygen-probe',
       qty: q(1),
@@ -1838,7 +1838,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/inert-gas-fusion-analyzer',
-    name: '惰气熔融-红外氧分析仪装配',
+    name: 'Inert Gas Fusion-Infrared Oxygen Analyzer Assembly', name_zh: '惰气熔融-红外氧分析仪装配',
     produces: [{
       item: 'plant/inert-gas-fusion-analyzer',
       qty: q(1),
@@ -1857,7 +1857,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/dew-point-meter',
-    name: '露点仪装配',
+    name: 'Dew-Point Meter Assembly', name_zh: '露点仪装配',
     produces: [{
       item: 'plant/dew-point-meter',
       qty: q(1),

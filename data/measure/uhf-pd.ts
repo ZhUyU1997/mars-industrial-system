@@ -19,7 +19,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/uhf-pd-sensitivity-record',
-    name: 'UHF 分析仪灵敏度/PRPD 记录',
+    name: 'UHF Analyzer Sensitivity/PRPD Record', name_zh: 'UHF 分析仪灵敏度/PRPD 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -42,7 +42,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pd-free-source-pd-record',
-    name: '无局放源验收记录',
+    name: 'Partial-Discharge-Free Source Acceptance Record', name_zh: '无局放源验收记录',
     unit: '份',
     category: 'part',
     props: [
@@ -65,7 +65,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/uhf-pd-sensitivity',
-    name: 'UHF 灵敏度/PRPD 测量',
+    name: 'UHF Sensitivity/PRPD Measurement', name_zh: 'UHF 灵敏度/PRPD 测量',
     produces: [
       {
         item: 'mat/uhf-pd-sensitivity-record',
@@ -124,7 +124,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/pd-free-source-pd',
-    name: '无局放源验收测量',
+    name: 'Partial-Discharge-Free Source Acceptance Measurement', name_zh: '无局放源验收测量',
     produces: [
       {
         item: 'mat/pd-free-source-pd-record',

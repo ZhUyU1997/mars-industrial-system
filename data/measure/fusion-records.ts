@@ -17,7 +17,7 @@ export const FUSION_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-control-cycle-record',
-    name: '控制周期记录',
+    name: 'Control Period Record', name_zh: '控制周期记录',
     unit: '份',
     category: 'part',
     props: [
@@ -33,7 +33,7 @@ export const FUSION_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-cryostat-vacuum-record',
-    name: '恒温器真空记录',
+    name: 'Thermostat Vacuum Record', name_zh: '恒温器真空记录',
     unit: '份',
     category: 'part',
     props: [
@@ -49,7 +49,7 @@ export const FUSION_RECORD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fusion-shield-boron-record',
-    name: '屏蔽硼含量记录',
+    name: 'Shield Boron Content Record', name_zh: '屏蔽硼含量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -67,7 +67,7 @@ export const FUSION_RECORD_ROUTES: readonly Route[] = [
      * assumed：量具已建但只做设计值假设，不是实测。
      */
     id: 'measure/fusion-control-cycle',
-    name: '控制周期测量',
+    name: 'Control Period Measurement', name_zh: '控制周期测量',
     produces: [
       {
         item: 'mat/fusion-control-cycle-record',
@@ -93,7 +93,7 @@ export const FUSION_RECORD_ROUTES: readonly Route[] = [
      * assumed：压力转接未标定，不是实测。
      */
     id: 'measure/fusion-cryostat-vacuum',
-    name: '恒温器真空测量',
+    name: 'Thermostat Vacuum Measurement', name_zh: '恒温器真空测量',
     produces: [
       {
         item: 'mat/fusion-cryostat-vacuum-record',
@@ -119,7 +119,7 @@ export const FUSION_RECORD_ROUTES: readonly Route[] = [
      * calculated：按 40 kg B₂O₃/1000 kg 配比算 1.24 % B，不是实测。
      */
     id: 'measure/fusion-shield-boron',
-    name: '屏蔽硼含量测量',
+    name: 'Shield Boron Content Measurement', name_zh: '屏蔽硼含量测量',
     produces: [
       {
         item: 'mat/fusion-shield-boron-record',

@@ -42,7 +42,7 @@ export const NITRIC_ITEMS: readonly Item[] = [
    *
    * 本层把它按 100% 计（含水已在路线里扣）：修版液、腐蚀液、钝化液都要它。
    */
-  { id: 'mat/nitric-acid', name: '硝酸', unit: 'kg', category: 'material' },
+  { id: 'mat/nitric-acid', name: 'Nitric Acid', name_zh: '硝酸', unit: 'kg', category: 'material' },
 ];
 
 export const NITRIC_ROUTES: readonly Route[] = [
@@ -58,7 +58,7 @@ export const NITRIC_ROUTES: readonly Route[] = [
      * 空气的量要命。**
      */
     id: 'make/nitric-acid',
-    name: '硝酸制备',
+    name: 'Nitric Acid Production', name_zh: '硝酸制备',
     produces: [{ item: 'mat/nitric-acid', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/nitrogen', qty: q(780) }] },

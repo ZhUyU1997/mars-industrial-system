@@ -45,7 +45,7 @@ export const CERAMIC_ITEMS: readonly Item[] = [
    * 与电机一样只造一档：备件统一比逐台匹配要紧 —— 炉子的功率靠串并联与抽头调，
    * 不靠换型号。
    */
-  { id: 'std/sic-heating-element-general', name: '硅碳棒', unit: '件', category: 'part',
+  { id: 'std/sic-heating-element-general', name: 'Silicon Carbide Rod', name_zh: '硅碳棒', unit: '件', category: 'part',
     props: [{ param: 'maxTemp', kind: 'range', min: 1200, max: 1600, unit: '°C' }] },
 
   /**
@@ -54,7 +54,7 @@ export const CERAMIC_ITEMS: readonly Item[] = [
    * 它是"电"与"热"同时在场的地方唯一能用的材料：接触器的灭弧罩、炉子的棒座、
    * 电热元件的支撑 —— 凡是要绝缘又要耐几百度以上的，只有陶瓷。
    */
-  { id: 'std/alumina-insulator-general', name: '氧化铝瓷件', unit: '件', category: 'part' },
+  { id: 'std/alumina-insulator-general', name: 'Alumina Ceramic Part', name_zh: '氧化铝瓷件', unit: '件', category: 'part' },
 ];
 
 export const CERAMIC_ROUTES: readonly Route[] = [
@@ -69,7 +69,7 @@ export const CERAMIC_ROUTES: readonly Route[] = [
      * **第一次烧结用电弧炉**：那时还没有硅碳棒，电弧炉也不靠它 —— 母机环从这儿过。
      */
     id: 'make/sic-heating-element',
-    name: '硅碳棒制造',
+    name: 'Silicon Carbide Rod Manufacturing', name_zh: '硅碳棒制造',
     produces: [{ item: 'std/sic-heating-element-general', qty: q(1), gives: [{ param: 'maxTemp', kind: 'range', min: 1300, max: 1450, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-carbide', qty: q(1) }] },
@@ -96,7 +96,7 @@ export const CERAMIC_ROUTES: readonly Route[] = [
      * 可以用电阻炉（1100）先烧一炉凑合的 —— 试验件，寿命短但能开始。
      */
     id: 'make/alumina-insulator',
-    name: '氧化铝瓷件制造',
+    name: 'Alumina Ceramic Part Manufacturing', name_zh: '氧化铝瓷件制造',
     produces: [{ item: 'std/alumina-insulator-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/fused-alumina', qty: q(1) }] },

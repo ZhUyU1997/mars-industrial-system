@@ -47,26 +47,26 @@ export const FORGE_PARTS: readonly Item[] = [
    * 它不承力也不传动，功能只有一个：吸收锤头的动能。**全表最重的零件
    * 是一块不干活的铁。**
    */
-  { id: 'plant/forge/anvil', name: '锻造砧座', unit: '件', category: 'part' },
+  { id: 'plant/forge/anvil', name: 'Forging Anvil', name_zh: '锻造砧座', unit: '件', category: 'part' },
 
   /** 锤头（落下部分）。铸钢件，下平面装模具；它自己也要够重才有动能。 */
-  { id: 'plant/forge/tup', name: '锻造锤头', unit: '件', category: 'part' },
+  { id: 'plant/forge/tup', name: 'Forging Tup', name_zh: '锻造锤头', unit: '件', category: 'part' },
 
   /** 机身。两立柱加横梁，铸成一体；锤头在里面上下走。 */
-  { id: 'plant/forge/frame', name: '锻造机身', unit: '件', category: 'part' },
+  { id: 'plant/forge/frame', name: 'Forging Frame', name_zh: '锻造机身', unit: '件', category: 'part' },
 
   /** 压缩缸与活塞。空气锤的动力：活塞往下推，锤头才落得比自由落体快。 */
-  { id: 'plant/forge/cylinder', name: '锻造压缩缸与活塞', unit: '件', category: 'part' },
+  { id: 'plant/forge/cylinder', name: 'Forging Compression Cylinder and Piston', name_zh: '锻造压缩缸与活塞', unit: '件', category: 'part' },
 
   /** 传动与操纵。电机带曲柄，曲柄推活塞；操纵阀决定打击轻重。 */
-  { id: 'plant/forge/drive', name: '锻造传动与操纵', unit: '件', category: 'part' },
+  { id: 'plant/forge/drive', name: 'Forging Drive and Control', name_zh: '锻造传动与操纵', unit: '件', category: 'part' },
 ];
 
 export const FORGE_ROUTES: readonly Route[] = [
   {
     /** 砧座。HT250 一次浇成，几十吨 —— 本层熔炼炉最勉强的一次。 */
     id: 'make/forge-anvil',
-    name: '锻造砧座制造',
+    name: 'Forging Anvil Manufacturing', name_zh: '锻造砧座制造',
     produces: [{ item: 'plant/forge/anvil', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     // 砧座只有上平面与侧面要加工：车床花盘上装铣头就能铣平。
@@ -79,7 +79,7 @@ export const FORGE_ROUTES: readonly Route[] = [
   {
     /** 锤头。铸钢件（本层只有铸铁，用 HT300 代）+ 下平面铣平装模具。 */
     id: 'make/forge-tup',
-    name: '锻造锤头制造',
+    name: 'Forging Tup Manufacturing', name_zh: '锻造锤头制造',
     produces: [{ item: 'plant/forge/tup', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht300', qty: q(1) }] }],
     // 下平面：车床铣头 + 磨床磨平。同上，不写铣镗床。
@@ -90,7 +90,7 @@ export const FORGE_ROUTES: readonly Route[] = [
   {
     /** 机身。HT250 浇成，立柱导轨面要磨 —— 锤头在里面走，间隙大了就晃。 */
     id: 'make/forge-frame',
-    name: '锻造机身制造',
+    name: 'Forging Frame Manufacturing', name_zh: '锻造机身制造',
     produces: [{ item: 'plant/forge/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     // 立柱导轨面要磨，其余面不加工 —— 不需要铣镗床。
@@ -101,7 +101,7 @@ export const FORGE_ROUTES: readonly Route[] = [
   {
     /** 压缩缸。铸铁缸筒镗磨 + 活塞配作；漏气就没劲。 */
     id: 'make/forge-cylinder',
-    name: '锻造压缩缸与活塞制造',
+    name: 'Forging Compression Cylinder and Piston Manufacturing', name_zh: '锻造压缩缸与活塞制造',
     produces: [{ item: 'plant/forge/cylinder', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     // 缸筒内孔在车床花盘上镗（与铣床头主轴孔同一个办法），不写铣镗床。
@@ -117,7 +117,7 @@ export const FORGE_ROUTES: readonly Route[] = [
      * 而它本该装进每一台设备（见 data/machine/motor.ts 的缺口说明）。
      */
     id: 'make/forge-drive',
-    name: '锻造传动与操纵制造',
+    name: 'Forging Drive and Control Manufacturing', name_zh: '锻造传动与操纵制造',
     produces: [{ item: 'plant/forge/drive', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     // 曲轴车磨、阀体在车床上钻镗配作 —— 同样不需要铣镗床。
@@ -135,7 +135,7 @@ export const FORGE_ROUTES: readonly Route[] = [
  */
 export const FORGE: Item = {
   id: 'plant/forge',
-  name: '锻造设备',
+  name: 'Forging Equipment', name_zh: '锻造设备',
   unit: '台',
   category: 'machine',
   composedOf: [...FORGE_PARTS.map((p) => ({ item: p.id, qty: q(1) })), { item: 'std/motor-7.5kw-4p', qty: q(1) }],
@@ -153,7 +153,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/forge',
-    name: '锻造设备装配',
+    name: 'Forging Equipment Assembly', name_zh: '锻造设备装配',
     produces: [{
       item: 'plant/forge',
       qty: q(1),

@@ -527,7 +527,7 @@ export const UNBLOCK_RAD_PIPING_ROUTES: readonly Route[] = [
      *     变成读数（对研 0.02、阀座 30°、砣的 38 kg 靠体积算）。
      */
     id: 'make/radiator-piping-cast',
-    name: '散热器管路与阀制造',
+    name: 'Radiator Piping and Valves Manufacturing', name_zh: '散热器管路与阀制造',
     produces: [{ item: 'plant/radiator/piping', qty: q(1) }],
     /**
      * 进 6 707 kg，出 1 件（4 390 kg）。每一笔的用途与算式写在下面。

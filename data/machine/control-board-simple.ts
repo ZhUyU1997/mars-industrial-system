@@ -122,7 +122,7 @@ export const CONTROL_BOARD_SIMPLE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/control-board-simple-general',
-    name: '二层简版控制板',
+    name: 'Two-Layer Simplified Control Board', name_zh: '二层简版控制板',
     unit: '件',
     category: 'part',
     props: [
@@ -147,7 +147,7 @@ export const CONTROL_BOARD_SIMPLE_ROUTES: readonly Route[] = [
      * 不是“另一台一模一样的板子”，是更低层数/更低密度/更低成本的第二档。
      */
     id: 'make/control-board-simple-general',
-    name: '二层简版控制板制造',
+    name: 'Two-Layer Simplified Control Board Manufacturing', name_zh: '二层简版控制板制造',
     produces: [
       {
         item: 'std/control-board-simple-general',

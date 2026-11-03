@@ -20,7 +20,7 @@ export const DATA_ITEMS: readonly Item[] = [
   /** 32 nm 掩模 CD/定位资格记录：CD-SEM + overlay 10 点。 */
   {
     id: 'mat/euv-mask-32nm-cal-record',
-    name: '32 nm 掩模 CD/定位资格记录',
+    name: '32 nm Mask CD/Registration Qualification Record', name_zh: '32 nm 掩模 CD/定位资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -32,7 +32,7 @@ export const DATA_ITEMS: readonly Item[] = [
   /** 掩模坯 flatness/roughness 资格记录：干涉仪 + AFM。 */
   {
     id: 'mat/euv-mask-blank-cal-record',
-    name: '掩模坯面形与粗糙度资格记录',
+    name: 'Mask Blank Surface Figure and Roughness Qualification Record', name_zh: '掩模坯面形与粗糙度资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -45,7 +45,7 @@ export const DATA_ITEMS: readonly Item[] = [
   /** 掩模写机束斑/定位/束流/台程/漂移资格记录。 */
   {
     id: 'mat/euv-mask-writer-cal-record',
-    name: '掩模写机束斑/定位/束流/台程/漂移资格记录',
+    name: 'Mask Writer Beam Spot/Positioning/Beam Current/Stage Travel/Drift Qualification Record', name_zh: '掩模写机束斑/定位/束流/台程/漂移资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -60,7 +60,7 @@ export const DATA_ITEMS: readonly Item[] = [
   /** 反射率计反射率/准确度/角度误差资格记录：反射率标准片。 */
   {
     id: 'mat/euv-reflectometer-cal-record',
-    name: '反射率计反射率/准确度/角度误差资格记录',
+    name: 'Reflectometer Reflectance/Accuracy/Angular Error Qualification Record', name_zh: '反射率计反射率/准确度/角度误差资格记录',
     unit: '份',
     category: 'part',
     props: [
@@ -80,7 +80,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/euv-mask-32nm-metrology',
-    name: '32 nm 掩模 CD/定位资格测量',
+    name: '32 nm Mask CD/Registration Qualification Measurement', name_zh: '32 nm 掩模 CD/定位资格测量',
     rate: { hours: q(8) },
     produces: [
       {
@@ -135,7 +135,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/euv-mask-blank-metrology',
-    name: '掩模坯面形与粗糙度资格测量',
+    name: 'Mask Blank Surface Figure and Roughness Qualification Measurement', name_zh: '掩模坯面形与粗糙度资格测量',
     rate: { hours: q(6) },
     produces: [
       {
@@ -188,7 +188,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/euv-mask-writer-cal',
-    name: '掩模写机束斑/定位/束流/台程/漂移资格测量',
+    name: 'Mask Writer Beam Spot/Positioning/Beam Current/Stage Travel/Drift Qualification Measurement', name_zh: '掩模写机束斑/定位/束流/台程/漂移资格测量',
     rate: { hours: q(12) },
     produces: [
       {
@@ -264,7 +264,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/euv-reflectometer-cal',
-    name: '反射率计反射率/准确度/角度误差资格测量',
+    name: 'Reflectometer Reflectance/Accuracy/Angular Error Qualification Measurement', name_zh: '反射率计反射率/准确度/角度误差资格测量',
     rate: { hours: q(8) },
     produces: [
       {

@@ -152,7 +152,7 @@ export const UNBLOCK_DRUM_ITEMS: readonly Item[] = [];
 export const UNBLOCK_DRUM_ROUTES: readonly Route[] = [
   {
     id: 'make/magnet-drum-copper',
-    name: '磁选机磁选滚筒制造',
+    name: 'Magnetic Separator Drum Manufacturing', name_zh: '磁选机磁选滚筒制造',
     produces: [{ item: 'plant/magnetic-separator/drum', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht200', qty: q(200) }] },

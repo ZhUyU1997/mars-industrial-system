@@ -81,7 +81,7 @@ export const LCR_LR_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/inductor-standard',
-    name: '电感标准',
+    name: 'Inductance Standard', name_zh: '电感标准',
     unit: '件',
     category: 'part',
     props: [
@@ -103,7 +103,7 @@ export const LCR_LR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/lcr-resistance-arm',
-    name: '四端对电阻桥臂',
+    name: 'Four-Terminal-Pair Resistance Arm', name_zh: '四端对电阻桥臂',
     unit: '件',
     category: 'part',
     props: [
@@ -123,7 +123,7 @@ export const LCR_LR_ROUTES: readonly Route[] = [
      *   铁氧体磁芯 1 + 铜线 0.2 + 酚醛骨架 0.02 → 电感标准 1 只
      */
     id: 'make/inductor-standard',
-    name: '电感标准制造',
+    name: 'Inductance Standard Manufacturing', name_zh: '电感标准制造',
     produces: [
       {
         item: 'std/inductor-standard',
@@ -165,7 +165,7 @@ export const LCR_LR_ROUTES: readonly Route[] = [
      *   标准电阻 1 + 电阻网络 2 + 片阻 4 + 铜 0.5 + 钢板 1 → 桥臂 1 件
      */
     id: 'make/lcr-resistance-arm',
-    name: '四端对电阻桥臂制造',
+    name: 'Four-Terminal-Pair Resistance Arm Manufacturing', name_zh: '四端对电阻桥臂制造',
     produces: [
       {
         item: 'plant/lcr-resistance-arm',

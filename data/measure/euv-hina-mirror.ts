@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const EUV_HINA_MIRROR_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/euv-hina-mirror-measure-record',
-    name: 'EUV 光刻机镜面测量记录',
+    name: 'EUV Stepper Mirror Surface Measurement Record', name_zh: 'EUV 光刻机镜面测量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -28,7 +28,7 @@ export const EUV_HINA_MIRROR_MEASURE_ROUTES: readonly Route[] = [
      * **660 mm 镜：反射率计读 13.5 nm 反射率，X 射线衍射仪读多层周期。**
      */
     id: 'measure/euv-hina-mirror-measure',
-    name: 'EUV 光刻机镜面测量',
+    name: 'EUV Stepper Mirror Surface Measurement', name_zh: 'EUV 光刻机镜面测量',
     produces: [
       {
         item: 'mat/euv-hina-mirror-measure-record',

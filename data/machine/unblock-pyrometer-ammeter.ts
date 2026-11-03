@@ -270,7 +270,7 @@ export const UNBLOCK_PYRO_AMM_ROUTES: readonly Route[] = [
      *  ③ 串联压降 0.12 V = 灯丝 1.5 V 的 8%：标定必须在"表已接入"的回路里做
      */
     id: 'make/pyrometer-ammeter-coil',
-    name: '高温计动铁式电流表制造',
+    name: 'Pyrometer Moving-Iron Ammeter Manufacturing', name_zh: '高温计动铁式电流表制造',
     produces: [{ item: 'plant/pyrometer/ammeter', qty: q(1) }],
     uses: [
       /**

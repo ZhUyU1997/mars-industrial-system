@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const RTA_ZONE_LAMP_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/rta-zone-lamp-measure-record',
-    name: '9 区灯阵记录',
+    name: '9-Zone Lamp Array Record', name_zh: '9 区灯阵记录',
     unit: '份',
     category: 'part',
     props: [
@@ -28,7 +28,7 @@ export const RTA_ZONE_LAMP_MEASURE_ROUTES: readonly Route[] = [
      * **9 区灯阵：9 只高温计对黑体标定后读区间相对偏差。**
      */
     id: 'measure/rta-zone-lamp-measure',
-    name: '9 区灯阵测量',
+    name: '9-Zone Lamp Array Measurement', name_zh: '9 区灯阵测量',
     produces: [{
       item: 'mat/rta-zone-lamp-measure-record',
       qty: q(1),

@@ -37,14 +37,14 @@ import { q } from '../../src/index.ts';
 
 export const CZ_PULLER_PARTS: readonly Item[] = [
   /** 炉体。双层水冷不锈钢腔，上法兰装提拉头，下法兰装坩埚升降，侧开观察窗。 */
-  { id: 'plant/cz-puller/chamber', name: '直拉单晶炉炉体', unit: '件', category: 'part' },
+  { id: 'plant/cz-puller/chamber', name: 'Czochralski Single-Crystal Furnace Body', name_zh: '直拉单晶炉炉体', unit: '件', category: 'part' },
 
   /**
    * 坩埚托与升降旋转机构。石墨托（承石英坩埚）+ 丝杠升降 + 独立旋转轴。
    *
    * 石墨托要托住 400 kg 级的一锅熔体，还要在 1450 °C 不软化 —— 只有石墨。
    */
-  { id: 'plant/cz-puller/crucible-drive', name: '坩埚托与升降旋转机构', unit: '件', category: 'part' },
+  { id: 'plant/cz-puller/crucible-drive', name: 'Crucible Support and Lift-Rotation Mechanism', name_zh: '坩埚托与升降旋转机构', unit: '件', category: 'part' },
 
   /**
    * 提拉头。籽晶夹头 + 称重的弹性梁 + 丝杠 + 蜗轮减速 + 反向旋转轴。
@@ -52,14 +52,14 @@ export const CZ_PULLER_PARTS: readonly Item[] = [
    * 它是这台机器最精的一件：拉速要稳到 ±5%，而整根棒要十几小时。
    * 蜗轮减速与丝杠都在本层的现成工艺里（滚齿、磨丝杠）。
    */
-  { id: 'plant/cz-puller/pull-head', name: '直拉单晶炉提拉头', unit: '件', category: 'part' },
+  { id: 'plant/cz-puller/pull-head', name: 'Czochralski Single-Crystal Furnace Pull Head', name_zh: '直拉单晶炉提拉头', unit: '件', category: 'part' },
 
   /**
    * 石墨加热器与保温。圆筒开槽的石墨发热体（电流穿过筒壁），外面包碳毡。
    *
    * 它要几百千瓦，靠石墨电极引入 —— 与矿热炉同一套电极（`std/carbon-electrode-300`）。
    */
-  { id: 'plant/cz-puller/heater', name: '直拉单晶炉石墨加热器与保温', unit: '件', category: 'part' },
+  { id: 'plant/cz-puller/heater', name: 'Czochralski Single-Crystal Furnace Graphite Heater and Insulation', name_zh: '直拉单晶炉石墨加热器与保温', unit: '件', category: 'part' },
 
   /**
    * 光电测径头。**闭环的那只眼睛。**
@@ -73,7 +73,7 @@ export const CZ_PULLER_PARTS: readonly Item[] = [
    * 为什么不用摄像头：没有荧光粉、没有感光胶片、也没有阵列器件。
    * 单点光电池 + 机械扫描是这一层唯一能做出的"成像"。
    */
-  { id: 'plant/cz-puller/diameter-sensor', name: '直拉单晶炉光电测径头', unit: '件', category: 'part' },
+  { id: 'plant/cz-puller/diameter-sensor', name: 'Czochralski Single-Crystal Furnace Optical Diameter Measuring Head', name_zh: '直拉单晶炉光电测径头', unit: '件', category: 'part' },
 ];
 
 export const CZ_PULLER_ROUTES: readonly Route[] = [
@@ -87,7 +87,7 @@ export const CZ_PULLER_ROUTES: readonly Route[] = [
      * 看，窗口本身也在发红，要靠一片滤光片把炉膛的辐射挡掉，只留弯月面的亮环。
      */
     id: 'make/cz-diameter-sensor',
-    name: '直拉单晶炉光电测径头制造',
+    name: 'Czochralski Single-Crystal Furnace Optical Diameter Measuring Head Manufacturing', name_zh: '直拉单晶炉光电测径头制造',
     produces: [{ item: 'plant/cz-puller/diameter-sensor', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -107,7 +107,7 @@ export const CZ_PULLER_ROUTES: readonly Route[] = [
   {
     /** 炉体。双层筒卷焊 → 水冷夹套 → 上下法兰配作 → 观察窗。 */
     id: 'make/cz-chamber',
-    name: '直拉单晶炉炉体制造',
+    name: 'Czochralski Single-Crystal Furnace Body Manufacturing', name_zh: '直拉单晶炉炉体制造',
     produces: [{ item: 'plant/cz-puller/chamber', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -120,7 +120,7 @@ export const CZ_PULLER_ROUTES: readonly Route[] = [
   {
     /** 坩埚托与升降旋转。石墨托车成 → 丝杠磨 → 两套轴承座 → 与炉体配作。 */
     id: 'make/cz-crucible-drive',
-    name: '坩埚托与升降旋转机构制造',
+    name: 'Crucible Support and Lift-Rotation Mechanism Manufacturing', name_zh: '坩埚托与升降旋转机构制造',
     produces: [{ item: 'plant/cz-puller/crucible-drive', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(1) }] },
@@ -133,7 +133,7 @@ export const CZ_PULLER_ROUTES: readonly Route[] = [
   {
     /** 提拉头。蜗轮副滚齿 → 丝杠磨 → 夹头与弹性梁配作 → 反向旋转轴装配。 */
     id: 'make/cz-pull-head',
-    name: '直拉单晶炉提拉头制造',
+    name: 'Czochralski Single-Crystal Furnace Pull Head Manufacturing', name_zh: '直拉单晶炉提拉头制造',
     produces: [{ item: 'plant/cz-puller/pull-head', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] },
@@ -150,7 +150,7 @@ export const CZ_PULLER_ROUTES: readonly Route[] = [
   {
     /** 石墨加热器。石墨筒开槽 → 电极接口 → 碳毡保温层 → 与炉体绝缘装配。 */
     id: 'make/cz-heater',
-    name: '直拉单晶炉石墨加热器与保温制造',
+    name: 'Czochralski Single-Crystal Furnace Graphite Heater and Insulation Manufacturing', name_zh: '直拉单晶炉石墨加热器与保温制造',
     produces: [{ item: 'plant/cz-puller/heater', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(1) }] },
@@ -170,7 +170,7 @@ export const CZ_PULLER_ROUTES: readonly Route[] = [
  */
 export const CZ_PULLER: Item = {
   id: 'plant/cz-puller',
-  name: '直拉单晶炉',
+  name: 'Czochralski Single-Crystal Furnace', name_zh: '直拉单晶炉',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 1410, max: 1480 }],
@@ -202,7 +202,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/cz-puller',
-    name: '直拉单晶炉装配',
+    name: 'Czochralski Single-Crystal Furnace Assembly', name_zh: '直拉单晶炉装配',
     produces: [{
       item: 'plant/cz-puller',
       qty: q(1),

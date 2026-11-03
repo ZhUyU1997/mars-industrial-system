@@ -278,7 +278,7 @@ export const UNBLOCK_SHEET_RAM_ITEMS: readonly Item[] = [];
 export const UNBLOCK_SHEET_RAM_ROUTES: readonly Route[] = [
   {
     id: 'make/sheet-ram-cast',
-    name: '钣金与焊接工位折弯滑块与上模制造',
+    name: 'Sheet Metal and Welding Workstation Bending Ram and Upper Die Manufacturing', name_zh: '钣金与焊接工位折弯滑块与上模制造',
     produces: [{ item: 'plant/sheet-shop/ram', qty: q(1) }],
     uses: [
       {

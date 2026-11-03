@@ -188,7 +188,7 @@ export const SILICON_28_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/silicon-28-enriched',
-    name: '²⁸Si 富集硅',
+    name: '²⁸Si Enriched Silicon', name_zh: '²⁸Si 富集硅',
     unit: 'kg',
     category: 'material',
     props: [
@@ -209,7 +209,7 @@ export const SILICON_28_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/silicon-28-single',
-    name: '²⁸Si 单晶棒',
+    name: '²⁸Si Single-Crystal Ingot', name_zh: '²⁸Si 单晶棒',
     unit: 'kg',
     category: 'material',
     props: [
@@ -237,7 +237,7 @@ export const SILICON_28_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/si-28-sphere',
-    name: '²⁸Si 球',
+    name: '²⁸Si Sphere', name_zh: '²⁸Si 球',
     unit: '件',
     category: 'part',
     props: [
@@ -267,7 +267,7 @@ export const SILICON_28_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sif4-distillation',
-    name: 'SiF₄ 低温精馏塔',
+    name: 'SiF₄ Low-Temperature Rectification Column', name_zh: 'SiF₄ 低温精馏塔',
     unit: '台',
     category: 'machine',
     holds: [
@@ -304,7 +304,7 @@ export const SILICON_28_ROUTES: readonly Route[] = [
      * 保压 30 min + 肥皂水查漏；塔板效率 0.6 与水力学全是设计值。
      */
     id: 'make/sif4-distillation',
-    name: 'SiF₄ 低温精馏塔制造',
+    name: 'SiF₄ Low-Temperature Rectification Column Manufacturing', name_zh: 'SiF₄ 低温精馏塔制造',
     rate: { hours: q(2000) },
     produces: [
       {
@@ -366,7 +366,7 @@ export const SILICON_28_ROUTES: readonly Route[] = [
      * 复叠制冷。异丙醇 1 kg 是干冰浴的介质，回收使用，按 1 kg/批损耗记。
      */
     id: 'make/silicon-28-enriched',
-    name: '²⁸Si 富集',
+    name: '²⁸Si Enrichment', name_zh: '²⁸Si 富集',
     rate: { hours: q(240) },
     produces: [
       {
@@ -446,7 +446,7 @@ export const SILICON_28_ROUTES: readonly Route[] = [
      * 这一批的投料。
      */
     id: 'make/silicon-28-single',
-    name: '²⁸Si 直拉单晶制备',
+    name: '²⁸Si Czochralski Single-Crystal Production', name_zh: '²⁸Si 直拉单晶制备',
     rate: { hours: q(60) },
     produces: [
       {
@@ -510,7 +510,7 @@ export const SILICON_28_ROUTES: readonly Route[] = [
      * 极差 >0.2 µm 就退回重抛。
      */
     id: 'make/si-28-sphere',
-    name: '²⁸Si 球制造',
+    name: '²⁸Si Sphere Manufacturing', name_zh: '²⁸Si 球制造',
     rate: { hours: q(72) },
     produces: [
       {

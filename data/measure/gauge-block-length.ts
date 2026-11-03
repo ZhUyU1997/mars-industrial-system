@@ -26,7 +26,7 @@ export const GAUGE_BLOCK_LENGTH_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gauge-block-length-intercomparison-record',
-    name: '量块长度互检记录',
+    name: 'Gauge Block Length Intercomparison Record', name_zh: '量块长度互检记录',
     unit: '份',
     category: 'part',
     props: [
@@ -50,7 +50,7 @@ export const GAUGE_BLOCK_LENGTH_ROUTES: readonly Route[] = [
      *   ④ 判 |ΔL| ≤ 2·uDiff；记录差、不确定度、块数、方法与结论。
      */
     id: 'measure/gauge-block-length-intercomparison',
-    name: '量块长度互检测量',
+    name: 'Gauge Block Length Intercomparison Measurement', name_zh: '量块长度互检测量',
     rate: { hours: q(6) },
     produces: [
       {

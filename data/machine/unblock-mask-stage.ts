@@ -539,7 +539,7 @@ export const UNBLOCK_MASK_STAGE_ROUTES: readonly Route[] = [
   {
     /** 浇九副铸件 → 退火 → 粗铣 → 露天半年 → 车丝杠 → 刻线 → 淬回火 → 磨 → 刮研 → 抛镜 → 装配 → 终检。 */
     id: 'make/mask-stage-cast',
-    name: '掩模对准曝光机掩模架与对准台制造',
+    name: 'Mask Aligner Mask Holder and Alignment Stage Manufacturing', name_zh: '掩模对准曝光机掩模架与对准台制造',
     produces: [{ item: 'plant/mask-aligner/stage', qty: q(1) }],
     uses: [
       // 底板、x/y 滑板、两根立柱的毛坯：净 69.1 kg + 30% 余量（第十一节）。

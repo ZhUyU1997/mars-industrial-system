@@ -27,7 +27,7 @@ export const PD_SHIELD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-shield-cage',
-    name: 'PD 屏蔽笼',
+    name: 'PD Shield Cage', name_zh: 'PD 屏蔽笼',
     unit: '件',
     category: 'part',
     props: [
@@ -46,7 +46,7 @@ export const PD_SHIELD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/hv-filter-100k',
-    name: '100 kV 滤波器',
+    name: '100 kV Filter', name_zh: '100 kV 滤波器',
     unit: '件',
     category: 'part',
     props: [
@@ -65,7 +65,7 @@ export const PD_SHIELD_ROUTES: readonly Route[] = [
      *   铝 20 + 铜 10 + 钢 50 → 屏蔽笼 1
      */
     id: 'make/pd-shield-cage',
-    name: 'PD 屏蔽笼制造',
+    name: 'PD Shield Cage Manufacturing', name_zh: 'PD 屏蔽笼制造',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-shield-cage',
@@ -106,7 +106,7 @@ export const PD_SHIELD_ROUTES: readonly Route[] = [
      *   电阻丝 0.1 + 耦合电容 1 + 氧化铝 2 + SF₆ 1 + 铝 2 → 滤波器 1
      */
     id: 'make/hv-filter-100k',
-    name: '100 kV 滤波器制造',
+    name: '100 kV Filter Manufacturing', name_zh: '100 kV 滤波器制造',
     produces: [
       {
         item: 'plant/hv-test-bench/hv-filter-100k',

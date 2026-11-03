@@ -339,7 +339,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/nebulizer',
-    name: 'ICP-MS 同心雾化器',
+    name: 'ICP-MS Concentric Nebulizer', name_zh: 'ICP-MS 同心雾化器',
     unit: '件',
     category: 'part',
     props: [
@@ -361,7 +361,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/spray-chamber',
-    name: 'ICP-MS 双通道雾化室',
+    name: 'ICP-MS Dual-Channel Spray Chamber', name_zh: 'ICP-MS 双通道雾化室',
     unit: '件',
     category: 'part',
     props: [
@@ -383,7 +383,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/peristaltic-pump',
-    name: 'ICP-MS 蠕动泵',
+    name: 'ICP-MS Peristaltic Pump', name_zh: 'ICP-MS 蠕动泵',
     unit: '台',
     category: 'part',
     props: [
@@ -410,7 +410,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/torch',
-    name: 'ICP 炬',
+    name: 'ICP Torch', name_zh: 'ICP 炬',
     unit: '件',
     category: 'part',
     props: [
@@ -432,7 +432,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/load-coil',
-    name: 'ICP-MS 负载线圈',
+    name: 'ICP-MS Load Coil', name_zh: 'ICP-MS 负载线圈',
     unit: '件',
     category: 'part',
     props: [
@@ -460,7 +460,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/rf-generator',
-    name: '27.12 MHz 发生器',
+    name: '27.12 MHz Generator', name_zh: '27.12 MHz 发生器',
     unit: '台',
     category: 'part',
     props: [
@@ -484,7 +484,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/sampler-cone',
-    name: 'ICP-MS 采样锥',
+    name: 'ICP-MS Sampler Cone', name_zh: 'ICP-MS 采样锥',
     unit: '件',
     category: 'part',
     props: [
@@ -505,7 +505,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/skimmer-cone',
-    name: 'ICP-MS 截取锥',
+    name: 'ICP-MS Skimmer Cone', name_zh: 'ICP-MS 截取锥',
     unit: '件',
     category: 'part',
     props: [
@@ -524,7 +524,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/interface-housing',
-    name: 'ICP-MS 接口腔',
+    name: 'ICP-MS Interface Chamber', name_zh: 'ICP-MS 接口腔',
     unit: '件',
     category: 'part',
     props: [
@@ -546,7 +546,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/ion-lens',
-    name: 'ICP-MS 离子透镜',
+    name: 'ICP-MS Ion Lens', name_zh: 'ICP-MS 离子透镜',
     unit: '件',
     category: 'part',
     props: [
@@ -572,7 +572,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/collision-cell',
-    name: 'ICP-MS 碰撞/反应池',
+    name: 'ICP-MS Collision/Reaction Cell', name_zh: 'ICP-MS 碰撞/反应池',
     unit: '件',
     category: 'part',
     props: [
@@ -598,7 +598,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/gas-panel',
-    name: 'ICP-MS 氩气路板',
+    name: 'ICP-MS Argon Gas Panel', name_zh: 'ICP-MS 氩气路板',
     unit: '件',
     category: 'part',
     props: [
@@ -620,7 +620,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms/enclosure',
-    name: '1 atm 箱体',
+    name: '1 atm Enclosure', name_zh: '1 atm 箱体',
     unit: '件',
     category: 'part',
     props: [
@@ -658,7 +658,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/icp-ms',
-    name: 'ICP-MS 整机',
+    name: 'ICP-MS System', name_zh: 'ICP-MS 整机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -692,7 +692,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-ms/injector',
-    name: 'GC-MS 进样口',
+    name: 'GC-MS Injector', name_zh: 'GC-MS 进样口',
     unit: '件',
     category: 'part',
     props: [
@@ -719,7 +719,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-ms/capillary-column',
-    name: 'GC-MS 毛细管柱',
+    name: 'GC-MS Capillary Column', name_zh: 'GC-MS 毛细管柱',
     unit: '件',
     category: 'part',
     props: [
@@ -741,7 +741,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-ms/column-oven',
-    name: 'GC-MS 柱温箱',
+    name: 'GC-MS Column Oven', name_zh: 'GC-MS 柱温箱',
     unit: '件',
     category: 'part',
     composedOf: [
@@ -759,9 +759,9 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
     ],
   },
 
-  { id: 'plant/gc-ms/column-oven/shell', name: '柱箱炉壳', unit: '件', category: 'part' },
-  { id: 'plant/gc-ms/column-oven/insulation', name: '柱箱保温', unit: '件', category: 'part' },
-  { id: 'plant/gc-ms/column-oven/heater', name: '柱箱加热丝', unit: '件', category: 'part' },
+  { id: 'plant/gc-ms/column-oven/shell', name: 'Column Oven Shell', name_zh: '柱箱炉壳', unit: '件', category: 'part' },
+  { id: 'plant/gc-ms/column-oven/insulation', name: 'Column Oven Insulation', name_zh: '柱箱保温', unit: '件', category: 'part' },
+  { id: 'plant/gc-ms/column-oven/heater', name: 'Column Oven Heating Element', name_zh: '柱箱加热丝', unit: '件', category: 'part' },
 
   /**
    * **EI 源：70 eV 电子轰击、10–100 µA 发射、源温 220–260 °C。**
@@ -776,7 +776,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-ms/ei-source',
-    name: 'EI 源',
+    name: 'EI Source', name_zh: 'EI 源',
     unit: '件',
     category: 'part',
     props: [
@@ -796,7 +796,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-ms/transfer-line',
-    name: 'GC-MS 传输线',
+    name: 'GC-MS Transfer Line', name_zh: 'GC-MS 传输线',
     unit: '件',
     category: 'part',
     props: [
@@ -817,7 +817,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-ms/analyzer-adapter',
-    name: 'GC-MS 四极杆适配器',
+    name: 'GC-MS Quadrupole Adapter', name_zh: 'GC-MS 四极杆适配器',
     unit: '件',
     category: 'part',
     props: [
@@ -844,7 +844,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gc-ms-adsorbent-tube',
-    name: '活性炭吸附管',
+    name: 'Activated Carbon Adsorption Tube', name_zh: '活性炭吸附管',
     unit: '支',
     category: 'consumable',
     props: [
@@ -878,7 +878,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gc-ms',
-    name: 'GC-MS 整机',
+    name: 'GC-MS System', name_zh: 'GC-MS 整机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -910,7 +910,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sub-boiling-still/flask',
-    name: '亚沸蒸馏器亚沸瓶',
+    name: 'Sub-Boiling Still Flask', name_zh: '亚沸蒸馏器亚沸瓶',
     unit: '件',
     category: 'part',
     props: [
@@ -930,7 +930,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sub-boiling-still/condenser',
-    name: '亚沸蒸馏器冷凝柱',
+    name: 'Sub-Boiling Still Condenser Column', name_zh: '亚沸蒸馏器冷凝柱',
     unit: '件',
     category: 'part',
     props: [
@@ -950,7 +950,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sub-boiling-still/ir-heater',
-    name: '亚沸蒸馏器红外加热器',
+    name: 'Sub-Boiling Still IR Heater', name_zh: '亚沸蒸馏器红外加热器',
     unit: '件',
     category: 'part',
     props: [
@@ -968,7 +968,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sub-boiling-still/receiver',
-    name: '亚沸蒸馏器接收瓶',
+    name: 'Sub-Boiling Still Receiver', name_zh: '亚沸蒸馏器接收瓶',
     unit: '件',
     category: 'part',
     props: [
@@ -990,7 +990,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/sub-boiling-still',
-    name: '亚沸蒸馏器',
+    name: 'Sub-Boiling Still', name_zh: '亚沸蒸馏器',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 40, max: 120 }],
@@ -1016,7 +1016,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nitric-acid-subboiled',
-    name: '亚沸硝酸',
+    name: 'Sub-Boiled Nitric Acid', name_zh: '亚沸硝酸',
     unit: 'kg',
     category: 'material',
     props: [
@@ -1034,7 +1034,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/hcl-subboiled',
-    name: '亚沸盐酸',
+    name: 'Sub-Boiled Hydrochloric Acid', name_zh: '亚沸盐酸',
     unit: 'kg',
     category: 'material',
     props: [
@@ -1058,7 +1058,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/icp-single-element-standard',
-    name: '单元素标准溶液',
+    name: 'Single-Element Standard Solution', name_zh: '单元素标准溶液',
     unit: '瓶',
     category: 'material',
     props: [
@@ -1081,7 +1081,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/icp-tuning-solution',
-    name: '调谐液',
+    name: 'Tuning Solution', name_zh: '调谐液',
     unit: '瓶',
     category: 'material',
     props: [
@@ -1106,7 +1106,7 @@ export const TRACE_ANALYSIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/gcms-calibration-standard',
-    name: 'GC-MS 五点标准',
+    name: 'GC-MS Five-Point Standard', name_zh: 'GC-MS 五点标准',
     unit: '瓶',
     category: 'material',
     props: [
@@ -1143,7 +1143,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * PTFE 毛细管 φ0.15/φ0.3 冷压进锥孔，偏心 ≤0.05 mm。
      */
     id: 'make/icp-ms-nebulizer',
-    name: 'ICP-MS 同心雾化器制造',
+    name: 'ICP-MS Concentric Nebulizer Manufacturing', name_zh: 'ICP-MS 同心雾化器制造',
     produces: [
       {
         item: 'plant/icp-ms/nebulizer',
@@ -1175,7 +1175,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      *   传输效率 2–3.5 %（不冷却的那一档）。
      */
     id: 'make/icp-ms-spray-chamber',
-    name: 'ICP-MS 双通道雾化室制造',
+    name: 'ICP-MS Dual-Channel Spray Chamber Manufacturing', name_zh: 'ICP-MS 双通道雾化室制造',
     produces: [
       {
         item: 'plant/icp-ms/spray-chamber',
@@ -1203,7 +1203,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 可调；7.5 kW 的 `std/motor-7.5kw-4p` 推蠕动泵是 100 倍余量。
      */
     id: 'make/icp-ms-peristaltic-pump',
-    name: 'ICP-MS 蠕动泵制造',
+    name: 'ICP-MS Peristaltic Pump Manufacturing', name_zh: 'ICP-MS 蠕动泵制造',
     produces: [
       {
         item: 'plant/icp-ms/peristaltic-pump',
@@ -1238,7 +1238,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      *   采样锥吃不到轴心的离子）。
      */
     id: 'make/icp-ms-torch',
-    name: 'ICP 炬制造',
+    name: 'ICP Torch Manufacturing', name_zh: 'ICP 炬制造',
     produces: [
       {
         item: 'plant/icp-ms/torch',
@@ -1267,7 +1267,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      *   线圈会慢慢变形，等离子体的位置跟着漂。
      */
     id: 'make/icp-ms-load-coil',
-    name: 'ICP-MS 负载线圈制造',
+    name: 'ICP-MS Load Coil Manufacturing', name_zh: 'ICP-MS 负载线圈制造',
     produces: [
       {
         item: 'plant/icp-ms/load-coil',
@@ -1297,7 +1297,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 功率 1.2–1.6 kW、稳定度 0.05–0.1 %。
      */
     id: 'make/icp-ms-rf-generator',
-    name: '27.12 MHz 发生器制造',
+    name: '27.12 MHz Generator Manufacturing', name_zh: '27.12 MHz 发生器制造',
     produces: [
       {
         item: 'plant/icp-ms/rf-generator',
@@ -1336,7 +1336,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 信号掉 30 %、氧化物比涨 1 个百分点。磨完在比较仪上看孔口的圆度（≤2 µm）。
      */
     id: 'make/icp-ms-sampler-cone',
-    name: 'ICP-MS 采样锥制造',
+    name: 'ICP-MS Sampler Cone Manufacturing', name_zh: 'ICP-MS 采样锥制造',
     produces: [
       {
         item: 'plant/icp-ms/sampler-cone',
@@ -1369,7 +1369,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 截取锥的孔口毛刺是「信号抖 ±30 %」的常见原因。
      */
     id: 'make/icp-ms-skimmer-cone',
-    name: 'ICP-MS 截取锥制造',
+    name: 'ICP-MS Skimmer Cone Manufacturing', name_zh: 'ICP-MS 截取锥制造',
     produces: [
       {
         item: 'plant/icp-ms/skimmer-cone',
@@ -1402,7 +1402,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 本层没有氦检漏（与 `euv-source.ts` 缺口⑥同一条）。
      */
     id: 'make/icp-ms-interface-housing',
-    name: 'ICP-MS 接口腔制造',
+    name: 'ICP-MS Interface Chamber Manufacturing', name_zh: 'ICP-MS 接口腔制造',
     produces: [
       {
         item: 'plant/icp-ms/interface-housing',
@@ -1439,7 +1439,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 电极全部退磁（μr ≤1.01），座用氧化铝 —— 与 `sims.ts` 的柱同一条手艺。
      */
     id: 'make/icp-ms-ion-lens',
-    name: 'ICP-MS 离子透镜制造',
+    name: 'ICP-MS Ion Lens Manufacturing', name_zh: 'ICP-MS 离子透镜制造',
     produces: [
       {
         item: 'plant/icp-ms/ion-lens',
@@ -1473,7 +1473,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 杆间绝缘用氧化铝环，偏心 ≤0.05 mm。
      */
     id: 'make/icp-ms-collision-cell',
-    name: 'ICP-MS 碰撞/反应池制造',
+    name: 'ICP-MS Collision/Reaction Cell Manufacturing', name_zh: 'ICP-MS 碰撞/反应池制造',
     produces: [
       {
         item: 'plant/icp-ms/collision-cell',
@@ -1507,7 +1507,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 所以这一件必须另做（不是重复，是量程差两个数量级）。
      */
     id: 'make/icp-ms-gas-panel',
-    name: 'ICP-MS 氩气路板制造',
+    name: 'ICP-MS Argon Gas Panel Manufacturing', name_zh: 'ICP-MS 氩气路板制造',
     produces: [
       {
         item: 'plant/icp-ms/gas-panel',
@@ -1542,7 +1542,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 本层没有氦检漏，1e-4 这一档是「压降法 + 酒精气泡」能给到的最好值。
      */
     id: 'make/icp-ms-enclosure',
-    name: '1 atm 箱体制造',
+    name: '1 atm Enclosure Manufacturing', name_zh: '1 atm 箱体制造',
     produces: [
       {
         item: 'plant/icp-ms/enclosure',
@@ -1592,7 +1592,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 「装配路线 + gives」，所以把 1e-4 Pa 写在注释里（§六 也说了）。
      */
     id: 'make/icp-ms',
-    name: 'ICP-MS 装配',
+    name: 'ICP-MS Assembly', name_zh: 'ICP-MS 装配',
     produces: [
       {
         item: 'plant/icp-ms',
@@ -1660,7 +1660,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * ⚠️ 气体样的阀片用**镍**不用 PTFE：NH₃ 会溶胀 PTFE、把阀粘住。
      */
     id: 'make/gc-ms-injector',
-    name: 'GC-MS 进样口制造',
+    name: 'GC-MS Injector Manufacturing', name_zh: 'GC-MS 进样口制造',
     produces: [
       {
         item: 'plant/gc-ms/injector',
@@ -1698,7 +1698,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 9×10⁴ 板、柱效 3000 板/m；膜厚 0.2–0.3 µm。
      */
     id: 'make/gc-ms-column',
-    name: 'GC-MS 毛细管柱制造',
+    name: 'GC-MS Capillary Column Manufacturing', name_zh: 'GC-MS 毛细管柱制造',
     produces: [
       {
         item: 'plant/gc-ms/capillary-column',
@@ -1729,7 +1729,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 柱温箱炉体：钢板箱体，8 kg 薄板剪折焊。
      */
     id: 'make/gc-ms-oven-shell',
-    name: '柱箱炉壳制造',
+    name: 'Column Oven Shell Manufacturing', name_zh: '柱箱炉壳制造',
     produces: [{ item: 'plant/gc-ms/column-oven/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(8) }] }],
     needs: [],
@@ -1743,7 +1743,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 柱温箱保温层：矿棉 1 kg，填在炉体与内胆之间。
      */
     id: 'make/gc-ms-oven-insulation',
-    name: '柱箱保温制造',
+    name: 'Column Oven Insulation Manufacturing', name_zh: '柱箱保温制造',
     produces: [{ item: 'plant/gc-ms/column-oven/insulation', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/mineral-wool', qty: q(1) }] }],
     needs: [],
@@ -1757,7 +1757,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 柱温箱加热器：铜线 0.3 kg 绕在炉体内壁。
      */
     id: 'make/gc-ms-oven-heater',
-    name: '柱箱加热丝制造',
+    name: 'Column Oven Heating Element Manufacturing', name_zh: '柱箱加热丝制造',
     produces: [{ item: 'plant/gc-ms/column-oven/heater', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper-wire', qty: q(3, 10) }] }],
     needs: [],
@@ -1774,7 +1774,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 子件路线见 make/gc-ms-oven-shell / -insulation / -heater。
      */
     id: 'make/gc-ms-oven',
-    name: 'GC-MS 柱温箱制造',
+    name: 'GC-MS Column Oven Manufacturing', name_zh: 'GC-MS 柱温箱制造',
     produces: [
       {
         item: 'plant/gc-ms/column-oven',
@@ -1803,7 +1803,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 灯丝是 φ0.15 钨丝绕成 1.5 mm 螺旋；寿命 800–1500 h（与 SIMS 一次源同一笔账）。
      */
     id: 'make/gc-ms-ei-source',
-    name: 'EI 源制造',
+    name: 'EI Source Manufacturing', name_zh: 'EI 源制造',
     produces: [
       {
         item: 'plant/gc-ms/ei-source',
@@ -1839,7 +1839,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      *   200–300 mm、内径 0.25–0.3 mm（死体积 <1 µL）、260–300 °C。
      */
     id: 'make/gc-ms-transfer-line',
-    name: 'GC-MS 传输线制造',
+    name: 'GC-MS Transfer Line Manufacturing', name_zh: 'GC-MS 传输线制造',
     produces: [
       {
         item: 'plant/gc-ms/transfer-line',
@@ -1873,7 +1873,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * （r0 4 mm）经这一件转到 GC-MS 的 CF100 法兰上，杆轴与入口光阑 φ3 mm 同轴。
      */
     id: 'make/gc-ms-analyzer-adapter',
-    name: 'GC-MS 四极杆适配器制造',
+    name: 'GC-MS Quadrupole Adapter Manufacturing', name_zh: 'GC-MS 四极杆适配器制造',
     produces: [
       {
         item: 'plant/gc-ms/analyzer-adapter',
@@ -1906,7 +1906,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 「一炉多件」同一个批量逻辑。玻璃车床收 φ6 管、两端塞石英棉。
      */
     id: 'make/gc-ms-adsorbent-tube',
-    name: '活性炭吸附管制造',
+    name: 'Activated Carbon Adsorption Tube Manufacturing', name_zh: '活性炭吸附管制造',
     produces: [
       {
         item: 'mat/gc-ms-adsorbent-tube',
@@ -1951,7 +1951,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * `condition_cycle`（§六）。
      */
     id: 'make/gc-ms',
-    name: 'GC-MS 装配',
+    name: 'GC-MS Assembly', name_zh: 'GC-MS 装配',
     produces: [
       {
         item: 'plant/gc-ms',
@@ -2005,7 +2005,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      *   参考 1.5–2 L、壁厚 3–4 mm。
      */
     id: 'make/sub-boiling-still-flask',
-    name: '亚沸蒸馏器亚沸瓶制造',
+    name: 'Sub-Boiling Still Flask Manufacturing', name_zh: '亚沸蒸馏器亚沸瓶制造',
     produces: [
       {
         item: 'plant/sub-boiling-still/flask',
@@ -2029,7 +2029,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      *   400–600 mm、冷凝面 0.15–0.25 m²（内壁拉毛增加凝结核）。
      */
     id: 'make/sub-boiling-still-condenser',
-    name: '亚沸蒸馏器冷凝柱制造',
+    name: 'Sub-Boiling Still Condenser Column Manufacturing', name_zh: '亚沸蒸馏器冷凝柱制造',
     produces: [
       {
         item: 'plant/sub-boiling-still/condenser',
@@ -2053,7 +2053,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      *   150–300 W、辐射峰 1.2–2.5 µm。
      */
     id: 'make/sub-boiling-still-ir-heater',
-    name: '亚沸蒸馏器红外加热器制造',
+    name: 'Sub-Boiling Still IR Heater Manufacturing', name_zh: '亚沸蒸馏器红外加热器制造',
     produces: [
       {
         item: 'plant/sub-boiling-still/ir-heater',
@@ -2081,7 +2081,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * **接收瓶：PTFE 瓶 + 磨口 + 0.2 µm 排气过滤。**
      */
     id: 'make/sub-boiling-still-receiver',
-    name: '亚沸蒸馏器接收瓶制造',
+    name: 'Sub-Boiling Still Receiver Manufacturing', name_zh: '亚沸蒸馏器接收瓶制造',
     produces: [
       {
         item: 'plant/sub-boiling-still/receiver',
@@ -2109,7 +2109,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 装配完要**试漏与试蒸**：装 1 L 水、60 °C 蒸 4 h，看馏出 30–50 mL/h。
      */
     id: 'make/sub-boiling-still',
-    name: '亚沸蒸馏器装配',
+    name: 'Sub-Boiling Still Assembly', name_zh: '亚沸蒸馏器装配',
     produces: [
       {
         item: 'plant/sub-boiling-still',
@@ -2153,7 +2153,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 回 `make/nitric-acid` 的工业酸罐）。
      */
     id: 'make/nitric-acid-subboiled',
-    name: '亚沸硝酸制备',
+    name: 'Sub-Boiled Nitric Acid Production', name_zh: '亚沸硝酸制备',
     produces: [
       {
         item: 'mat/nitric-acid-subboiled',
@@ -2185,7 +2185,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 40–60 °C：HCl 37 % 沸点 48 °C，再高就把 HCl 赶光（馏出液稀到 20 % 以下）。
      */
     id: 'make/hcl-subboiled',
-    name: '亚沸盐酸制备',
+    name: 'Sub-Boiled Hydrochloric Acid Production', name_zh: '亚沸盐酸制备',
     produces: [
       {
         item: 'mat/hcl-subboiled',
@@ -2228,7 +2228,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * 产物按「瓶」计，不做质量账，所以这一条不会被 `unbalanced` 拦。
      */
     id: 'make/icp-single-element-standard',
-    name: '单元素标液制备',
+    name: 'Single-Element Standard Solution Production', name_zh: '单元素标液制备',
     produces: [
       {
         item: 'mat/icp-single-element-standard',
@@ -2290,7 +2290,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * `make/lanthanum-oxide`、`make/barium-carbonate`）。
      */
     id: 'make/icp-tuning-solution',
-    name: '调谐液制备',
+    name: 'Tuning Solution Production', name_zh: '调谐液制备',
     produces: [
       {
         item: 'mat/icp-tuning-solution',
@@ -2325,7 +2325,7 @@ export const TRACE_ANALYSIS_ROUTES: readonly Route[] = [
      * （异丙醇把橡胶里的增塑剂洗出来，那就是假峰）。
      */
     id: 'make/gcms-calibration-standard',
-    name: 'GC-MS 五点标准制备',
+    name: 'GC-MS Five-Point Standard Production', name_zh: 'GC-MS 五点标准制备',
     produces: [
       {
         item: 'mat/gcms-calibration-standard',

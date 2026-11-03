@@ -30,7 +30,7 @@ export const FUEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/deuterium',
-    name: '氘',
+    name: 'Deuterium', name_zh: '氘',
     unit: 'kg',
     category: 'consumable',
   },
@@ -43,7 +43,7 @@ export const FUEL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tritium',
-    name: '氚',
+    name: 'Tritium', name_zh: '氚',
     unit: 'kg',
     category: 'consumable',
   },
@@ -63,7 +63,7 @@ export const FUEL_ROUTES: readonly Route[] = [
      * 做最后冷凝纯化，制冷量 1–5 W，处理量放大未建模。
      */
     id: 'make/deuterium',
-    name: '氘制造',
+    name: 'Deuterium Manufacturing', name_zh: '氘制造',
     produces: [{ item: 'mat/deuterium', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/water', qty: q(120000) }] }],
     needs: [],
@@ -107,7 +107,7 @@ export const FUEL_ROUTES: readonly Route[] = [
      * 冷凝；两段都是借用现有设备，处理量未建模。
      */
     id: 'make/tritium',
-    name: '氚制造',
+    name: 'Tritium Manufacturing', name_zh: '氚制造',
     produces: [
       { item: 'mat/tritium', qty: q(1) },
       { item: 'mat/helium', qty: q(4, 3) },

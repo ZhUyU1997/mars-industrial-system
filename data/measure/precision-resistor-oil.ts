@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const PRECISION_RESISTOR_OIL_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/precision-resistor-oil-measure-record',
-    name: '油浸电阻记录',
+    name: 'Oil-Immersed Resistance Record', name_zh: '油浸电阻记录',
     unit: '份',
     category: 'part',
     props: [
@@ -28,7 +28,7 @@ export const PRECISION_RESISTOR_OIL_MEASURE_ROUTES: readonly Route[] = [
      * **油浸电阻：三点油浴 + 七位半/比例桥，拟合 TCR 与准确度。**
      */
     id: 'measure/precision-resistor-oil-measure',
-    name: '油浸电阻测量',
+    name: 'Oil-Immersed Resistance Measurement', name_zh: '油浸电阻测量',
     produces: [
       {
         item: 'mat/precision-resistor-oil-measure-record',

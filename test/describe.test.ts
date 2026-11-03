@@ -13,21 +13,21 @@ describe('能写出真实形状的描述', () => {
    */
   const d: Description = {
     items: [
-      { id: 'ore', name: 'ore' },
-      { id: 'flux', name: 'flux' },
-      { id: 'metal', name: 'metal' },
-      { id: 'scrap', name: 'scrap' },
-      { id: 'tool', name: 'tool' },
-      { id: 'part', name: 'part' },
+      { id: 'ore', name: 'ore', name_zh: 'ore' },
+      { id: 'flux', name: 'flux', name_zh: 'flux' },
+      { id: 'metal', name: 'metal', name_zh: 'metal' },
+      { id: 'scrap', name: 'scrap', name_zh: 'scrap' },
+      { id: 'tool', name: 'tool', name_zh: 'tool' },
+      { id: 'part', name: 'part', name_zh: 'part' },
     ],
     routes: [
       // metal 有两条做法：从矿，或从废料
-      { id: 'metal_from_ore', name: 'metal_from_ore', produces: [{ item: 'metal', qty: q(1) }], uses: [{ anyOf: [{ item: 'ore', qty: q(2) }] }, { anyOf: [{ item: 'flux', qty: q(1) }] }], needs: [] },
-      { id: 'metal_from_scrap', name: 'metal_from_scrap', produces: [{ item: 'metal', qty: q(1) }], uses: [{ anyOf: [{ item: 'scrap', qty: q(3) }] }], needs: [] },
+      { id: 'metal_from_ore', name: 'metal_from_ore', name_zh: 'metal_from_ore', produces: [{ item: 'metal', qty: q(1) }], uses: [{ anyOf: [{ item: 'ore', qty: q(2) }] }, { anyOf: [{ item: 'flux', qty: q(1) }] }], needs: [] },
+      { id: 'metal_from_scrap', name: 'metal_from_scrap', name_zh: 'metal_from_scrap', produces: [{ item: 'metal', qty: q(1) }], uses: [{ anyOf: [{ item: 'scrap', qty: q(3) }] }], needs: [] },
       // tool 自指：用它自己才能做它自己
-      { id: 'tool', name: 'tool', produces: [{ item: 'tool', qty: q(1) }], uses: [{ anyOf: [{ item: 'metal', qty: q(1) }] }], needs: ['tool'] },
+      { id: 'tool', name: 'tool', name_zh: 'tool', produces: [{ item: 'tool', qty: q(1) }], uses: [{ anyOf: [{ item: 'metal', qty: q(1) }] }], needs: ['tool'] },
       // part：金属 + 任选一种助剂
-      { id: 'part', name: 'part', produces: [{ item: 'part', qty: q(1) }], uses: [{ anyOf: [{ item: 'metal', qty: q(1) }] }, { anyOf: [{ item: 'flux', qty: q(1) }, { item: 'scrap', qty: q(1) }] }], needs: ['tool'] },
+      { id: 'part', name: 'part', name_zh: 'part', produces: [{ item: 'part', qty: q(1) }], uses: [{ anyOf: [{ item: 'metal', qty: q(1) }] }, { anyOf: [{ item: 'flux', qty: q(1) }, { item: 'scrap', qty: q(1) }] }], needs: ['tool'] },
     ],
   };
 
@@ -63,14 +63,14 @@ describe('能写出真实形状的描述', () => {
 
 describe('描述写错时能指出来', () => {
   const base = (over: Partial<Description>): Description => ({
-    items: [{ id: 'a', name: 'a' }, { id: 'b', name: 'b' }],
-    routes: [{ id: 'r', name: 'r', produces: [{ item: 'b', qty: q(1) }], uses: [{ anyOf: [{ item: 'a', qty: q(1) }] }], needs: [] }],
+    items: [{ id: 'a', name: 'a', name_zh: 'a' }, { id: 'b', name: 'b', name_zh: 'b' }],
+    routes: [{ id: 'r', name: 'r', name_zh: 'r', produces: [{ item: 'b', qty: q(1) }], uses: [{ anyOf: [{ item: 'a', qty: q(1) }] }], needs: [] }],
     ...over,
   });
 
   it('引用了未声明的东西', () => {
     const d = base({
-      routes: [{ id: 'r', name: 'r', produces: [{ item: 'b', qty: q(1) }], uses: [{ anyOf: [{ item: 'ghost', qty: q(1) }] }], needs: [] }],
+      routes: [{ id: 'r', name: 'r', name_zh: 'r', produces: [{ item: 'b', qty: q(1) }], uses: [{ anyOf: [{ item: 'ghost', qty: q(1) }] }], needs: [] }],
     });
     assert.deepEqual(codes(d), ['unknown_item']);
   });
@@ -86,26 +86,26 @@ describe('描述写错时能指出来', () => {
     // q() 本身拒绝非法输入；这里绕过构造器，模拟"手写数据时写错"
     const bad = { num: 0, den: 1 } as unknown as ReturnType<typeof q>;
     const d = base({
-      routes: [{ id: 'r', name: 'r', produces: [{ item: 'b', qty: bad }], uses: [{ anyOf: [{ item: 'a', qty: q(1) }] }], needs: [] }],
+      routes: [{ id: 'r', name: 'r', name_zh: 'r', produces: [{ item: 'b', qty: bad }], uses: [{ anyOf: [{ item: 'a', qty: q(1) }] }], needs: [] }],
     });
     assert.ok(codes(d).includes('bad_quantity'));
   });
 
   it('id 重复', () => {
-    const d = base({ items: [{ id: 'a', name: 'a' }, { id: 'a', name: 'a' }, { id: 'b', name: 'b' }] });
+    const d = base({ items: [{ id: 'a', name: 'a', name_zh: 'a' }, { id: 'a', name: 'a', name_zh: 'a' }, { id: 'b', name: 'b', name_zh: 'b' }] });
     assert.ok(codes(d).includes('duplicate_id'));
   });
 
   it('空子句', () => {
     const d = base({
-      routes: [{ id: 'r', name: 'r', produces: [{ item: 'b', qty: q(1) }], uses: [{ anyOf: [] }], needs: [] }],
+      routes: [{ id: 'r', name: 'r', name_zh: 'r', produces: [{ item: 'b', qty: q(1) }], uses: [{ anyOf: [] }], needs: [] }],
     });
     assert.ok(codes(d).includes('empty_clause'));
   });
 
   it('既不产出也不消耗', () => {
     const d = base({
-      routes: [{ id: 'r', name: 'r', produces: [], uses: [], needs: [] }, { id: 'r2', name: 'r2', produces: [{ item: 'b', qty: q(1) }], uses: [{ anyOf: [{ item: 'a', qty: q(1) }] }], needs: [] }],
+      routes: [{ id: 'r', name: 'r', name_zh: 'r', produces: [], uses: [], needs: [] }, { id: 'r2', name: 'r2', name_zh: 'r2', produces: [{ item: 'b', qty: q(1) }], uses: [{ anyOf: [{ item: 'a', qty: q(1) }] }], needs: [] }],
     });
     assert.ok(codes(d).includes('empty_route'));
   });

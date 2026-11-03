@@ -65,7 +65,7 @@ export const STI_ITEMS: readonly Item[] = [
    *   sidewallAngle  85–90°（衬里很薄，角度基本不变；只做继承/复核）
    */
   {
-    id: 'mat/sti-lined-wafer', name: '长完衬里氧化',
+    id: 'mat/sti-lined-wafer', name: 'Wafer with Grown Liner Oxide', name_zh: '长完衬里氧化',
     unit: '片',
     category: 'part',
     props: [
@@ -83,7 +83,7 @@ export const STI_ITEMS: readonly Item[] = [
    *   overburden   100–300 nm（场上过填层；CMP 的去除量由它定）
    */
   {
-    id: 'mat/sti-filled-wafer', name: 'TEOS 填充片',
+    id: 'mat/sti-filled-wafer', name: 'TEOS Filled Wafer', name_zh: 'TEOS 填充片',
     unit: '片',
     category: 'part',
     props: [
@@ -102,7 +102,7 @@ export const STI_ITEMS: readonly Item[] = [
    *   oxideThickness 200–300 nm（槽内剩余氧化物；从 250–300 nm 槽深来）
    */
   {
-    id: 'mat/sti-wafer', name: 'CMP 完的 STI 成品片',
+    id: 'mat/sti-wafer', name: 'STI Finished Wafer after CMP', name_zh: 'CMP 完的 STI 成品片',
     unit: '片',
     category: 'part',
     props: [
@@ -127,7 +127,7 @@ export const STI_ROUTES: readonly Route[] = [
      * 为什么衬里要有：TEOS 直接填在裸硅槽壁上，界面态与固定电荷不可控；
      * 一层 10 nm 热氧化把槽壁“钝化”后再填。它也是 HF 的停止层/缓冲层。
      */
-    id: 'make/sti-liner', name: '长完衬里氧化制造',
+    id: 'make/sti-liner', name: 'Wafer with Grown Liner Oxide Manufacturing', name_zh: '长完衬里氧化制造',
     produces: [
       {
         item: 'mat/sti-lined-wafer',
@@ -181,7 +181,7 @@ export const STI_ROUTES: readonly Route[] = [
      * 会出空洞/seam。本文件写 void 5–20 %、seam 10–50 nm，是**估算**，
      * 没有截面量具（FIB-TEM 有但破坏性，见 data/machine/fib 那类）。
      */
-    id: 'make/sti-fill-teos', name: 'TEOS 填充片制造',
+    id: 'make/sti-fill-teos', name: 'TEOS Filled Wafer Manufacturing', name_zh: 'TEOS 填充片制造',
     produces: [
       {
         item: 'mat/sti-filled-wafer',
@@ -257,7 +257,7 @@ export const STI_ROUTES: readonly Route[] = [
      * `make/wafer-level-cmp` 的 40–150 nm 与 `make/damascene-cmp` 的
      * 200–230 nm 都不是这个图形。升级要硬垫 + 分区 + 终点（P2/P3）。
      */
-    id: 'make/sti-cmp', name: 'CMP 完的 STI 成品片制造',
+    id: 'make/sti-cmp', name: 'STI Finished Wafer after CMP Manufacturing', name_zh: 'CMP 完的 STI 成品片制造',
     produces: [
       {
         item: 'mat/sti-wafer',
@@ -314,7 +314,7 @@ export const STI_ROUTES: readonly Route[] = [
      * ⚠️ 重铬酸钠是 Cr(VI)：废浆是危废，冲洗水不能直排；本层没有
      * Cr(VI) 还原/沉淀线。硬垫的沟槽/分区匹配也没有实测。
      */
-    id: 'make/sti-cmp-hard', name: 'CMP 完的 STI 成品片制造',
+    id: 'make/sti-cmp-hard', name: 'STI Finished Wafer after CMP Manufacturing', name_zh: 'CMP 完的 STI 成品片制造',
     produces: [
       {
         item: 'mat/sti-wafer',
@@ -367,7 +367,7 @@ export const STI_ROUTES: readonly Route[] = [
      * overburden 50–150 nm 是**设计值**，没有截面量具。O₃ 由 O₂ 在
      * 喷淋头前的无声放电管生成；没有臭氧浓度计。
      */
-    id: 'make/sti-fill-ald', name: 'TEOS 填充片制造',
+    id: 'make/sti-fill-ald', name: 'TEOS Filled Wafer Manufacturing', name_zh: 'TEOS 填充片制造',
     produces: [
       {
         item: 'mat/sti-filled-wafer',

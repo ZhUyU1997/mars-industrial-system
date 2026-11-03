@@ -83,7 +83,7 @@ export const ASSAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pt-assay-record',
-    name: '铂纯度化验记录',
+    name: 'Platinum Purity Assay Record', name_zh: '铂纯度化验记录',
     unit: '份',
     category: 'part',
     props: [
@@ -105,7 +105,7 @@ export const ASSAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pt-cupellation-loss-record',
-    name: '灰吹损失记录',
+    name: 'Cupellation Loss Record', name_zh: '灰吹损失记录',
     unit: '份',
     category: 'part',
     props: [
@@ -128,7 +128,7 @@ export const ASSAY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pt-assay-corrected-record',
-    name: 'Pt 纯度修正记录',
+    name: 'Pt Purity Correction Record', name_zh: 'Pt 纯度修正记录',
     unit: '份',
     category: 'part',
     props: [
@@ -161,7 +161,7 @@ export const ASSAY_ROUTES: readonly Route[] = [
      * 吸收 5–6 g PbO 就饱和 —— 所以灰皿要浅、面积大，分两次灰吹。
      */
     id: 'measure/pt-assay',
-    name: '铂纯度化验测量',
+    name: 'Platinum Purity Assay Measurement', name_zh: '铂纯度化验测量',
     produces: [
       {
         item: 'mat/pt-assay-record',
@@ -247,7 +247,7 @@ export const ASSAY_ROUTES: readonly Route[] = [
      *   + MgO 14 g + 王水 0.13 kg + 水 2 kg → 记录 1 份。
      */
     id: 'measure/pt-cupellation-loss',
-    name: '灰吹损失测量',
+    name: 'Cupellation Loss Measurement', name_zh: '灰吹损失测量',
     produces: [
       {
         item: 'mat/pt-cupellation-loss-record',
@@ -329,7 +329,7 @@ export const ASSAY_ROUTES: readonly Route[] = [
      *   = 0.005–0.015 %，与微天平 0.00002 %、旧重复性合成；0.01 % 是下限。
      */
     id: 'measure/pt-assay-corrected',
-    name: 'Pt 纯度修正测量',
+    name: 'Pt Purity Correction Measurement', name_zh: 'Pt 纯度修正测量',
     produces: [
       {
         item: 'mat/pt-assay-corrected-record',

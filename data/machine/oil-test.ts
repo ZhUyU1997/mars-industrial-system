@@ -48,7 +48,7 @@ export const OIL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/oil-breakdown-tester',
-    name: '油击穿试验机',
+    name: 'Oil Breakdown Tester', name_zh: '油击穿试验机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'voltage', min: 0, max: 80 }],
@@ -73,7 +73,7 @@ export const OIL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/karl-fischer-titrator',
-    name: '库仑法卡尔·费休水分滴定仪',
+    name: 'Coulometric Karl Fischer Moisture Titrator', name_zh: '库仑法卡尔·费休水分滴定仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -95,7 +95,7 @@ export const OIL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/tan-delta-bridge',
-    name: '介损/电容桥',
+    name: 'Dielectric Loss / Capacitance Bridge', name_zh: '介损/电容桥',
     unit: '台',
     category: 'machine',
     holds: [
@@ -121,7 +121,7 @@ export const OIL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/oil-aging-oven',
-    name: '油老化烘箱',
+    name: 'Oil Aging Oven', name_zh: '油老化烘箱',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 80, max: 100 }],
@@ -140,7 +140,7 @@ export const OIL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/flash-point-tester',
-    name: '闭杯闪点仪',
+    name: 'Closed-Cup Flash Point Tester', name_zh: '闭杯闪点仪',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 0, max: 300 }],
@@ -159,7 +159,7 @@ export const OIL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pour-point-tester',
-    name: '倾点仪',
+    name: 'Pour Point Tester', name_zh: '倾点仪',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: -60, max: 50 }],
@@ -177,7 +177,7 @@ export const OIL_TEST_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/kinematic-viscosity-bath',
-    name: '运动粘度恒温浴',
+    name: 'Kinematic Viscosity Constant-Temperature Bath', name_zh: '运动粘度恒温浴',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 40, max: 40 }],
@@ -201,7 +201,7 @@ export const OIL_TEST_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/oil-breakdown-tester',
-    name: '油击穿试验机制造',
+    name: 'Oil Breakdown Tester Manufacturing', name_zh: '油击穿试验机制造',
     produces: [
       {
         item: 'plant/oil-breakdown-tester',
@@ -257,7 +257,7 @@ export const OIL_TEST_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/karl-fischer-titrator',
-    name: '库仑法卡尔·费休水分滴定仪制造',
+    name: 'Coulometric Karl Fischer Moisture Titrator Manufacturing', name_zh: '库仑法卡尔·费休水分滴定仪制造',
     produces: [
       {
         item: 'plant/karl-fischer-titrator',
@@ -306,7 +306,7 @@ export const OIL_TEST_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/tan-delta-bridge',
-    name: '介损/电容桥制造',
+    name: 'Dielectric Loss / Capacitance Bridge Manufacturing', name_zh: '介损/电容桥制造',
     produces: [
       {
         item: 'plant/tan-delta-bridge',
@@ -352,7 +352,7 @@ export const OIL_TEST_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/oil-aging-oven',
-    name: '油老化烘箱制造',
+    name: 'Oil Aging Oven Manufacturing', name_zh: '油老化烘箱制造',
     produces: [
       {
         item: 'plant/oil-aging-oven',
@@ -396,7 +396,7 @@ export const OIL_TEST_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/flash-point-tester',
-    name: '闭杯闪点仪制造',
+    name: 'Closed-Cup Flash Point Tester Manufacturing', name_zh: '闭杯闪点仪制造',
     produces: [
       {
         item: 'plant/flash-point-tester',
@@ -435,7 +435,7 @@ export const OIL_TEST_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pour-point-tester',
-    name: '倾点仪制造',
+    name: 'Pour Point Tester Manufacturing', name_zh: '倾点仪制造',
     produces: [
       {
         item: 'plant/pour-point-tester',
@@ -473,7 +473,7 @@ export const OIL_TEST_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/kinematic-viscosity-bath',
-    name: '运动粘度恒温浴制造',
+    name: 'Kinematic Viscosity Constant-Temperature Bath Manufacturing', name_zh: '运动粘度恒温浴制造',
     produces: [
       {
         item: 'plant/kinematic-viscosity-bath',

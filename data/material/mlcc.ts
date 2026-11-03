@@ -255,7 +255,7 @@ export const MLCC_ITEMS: readonly Item[] = [
    * 真实的重晶石矿含 BaSO₄ 85–98 %、重选后 95 % 以上 —— 火星没有这种矿，
    * 只有 300 ppm 的散装钡（问一）。
    */
-  { id: 'mat/barium-sulfate', name: '硫酸钡', unit: 'kg', category: 'material',
+  { id: 'mat/barium-sulfate', name: 'Barium Sulfate', name_zh: '硫酸钡', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 80, max: 99, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -266,11 +266,11 @@ export const MLCC_ITEMS: readonly Item[] = [
    *
    * purity 只有 55–90 %：黑灰里混着未反应的 BaSO₄、过量碳、灰分。
    */
-  { id: 'mat/barium-sulfide', name: '硫化钡', unit: 'kg', category: 'material',
+  { id: 'mat/barium-sulfide', name: 'Barium Sulfide', name_zh: '硫化钡', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 50, max: 95, unit: '%', dir: 'atLeast' }] },
 
   /** 碳酸钡。碳化的产物：BaS + CO₂ + H₂O → BaCO₃↓ + H₂S。钛酸钡的钡源。 */
-  { id: 'mat/barium-carbonate', name: '碳酸钡', unit: 'kg', category: 'material',
+  { id: 'mat/barium-carbonate', name: 'Barium Carbonate', name_zh: '碳酸钡', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99.9, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -287,7 +287,7 @@ export const MLCC_ITEMS: readonly Item[] = [
    * 不建这个条目，两条路线就只能在两边各挂一句 unbalanced_zh —— 那等于把一笔
    * 算得清的账推给注释。
    */
-  { id: 'mat/kiln-gas', name: '窑气', unit: 'kg', category: 'material',
+  { id: 'mat/kiln-gas', name: 'Kiln Gas', name_zh: '窑气', unit: 'kg', category: 'material',
     props: [{ param: 'co2', kind: 'range', min: 40, max: 99, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -301,7 +301,7 @@ export const MLCC_ITEMS: readonly Item[] = [
    * 升级路线见文件头 ⑩ 之前那一条：`mat/ilmenite`（TiO₂ 47.4 %）有条目，
    * 走硫酸法能把这个数降到 1/5 —— 但它不在本轮 uses 白名单里。
    */
-  { id: 'mat/titanium-dioxide', name: '二氧化钛', unit: 'kg', category: 'material',
+  { id: 'mat/titanium-dioxide', name: 'Titania', name_zh: '二氧化钛', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 95, max: 99.9, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -314,7 +314,7 @@ export const MLCC_ITEMS: readonly Item[] = [
    *
    * d50 1.5–4 µm：固相反应出来的是**烧结块**，要磨细才轮到介质粉那一步。
    */
-  { id: 'mat/barium-titanate', name: '钛酸钡', unit: 'kg', category: 'material',
+  { id: 'mat/barium-titanate', name: 'Barium Titanate', name_zh: '钛酸钡', unit: 'kg', category: 'material',
     props: [
       { param: 'purity', kind: 'range', min: 90, max: 99.5, unit: '%', dir: 'atLeast' },
       { param: 'd50', kind: 'range', min: 0.1, max: 10, unit: 'µm', dir: 'atMost' },
@@ -328,7 +328,7 @@ export const MLCC_ITEMS: readonly Item[] = [
    * CaTiO₃ 4 % 能把 125 °C 的居里峰削平并挪到 100 °C 附近 —— 温度特性好一档，
    * 但仍不是 X7R（±15 %），是 Y5V（−55~+85 °C 内 −82/+22 %）。
    */
-  { id: 'mat/mlcc-dielectric-powder', name: 'MLCC 介质粉', unit: 'kg', category: 'material',
+  { id: 'mat/mlcc-dielectric-powder', name: 'MLCC Dielectric Powder', name_zh: 'MLCC 介质粉', unit: 'kg', category: 'material',
     props: [{ param: 'd50', kind: 'range', min: 0.1, max: 2, unit: 'µm', dir: 'atMost' }] },
 
   /**
@@ -341,14 +341,14 @@ export const MLCC_ITEMS: readonly Item[] = [
    * 这是"没有乙醇/甲苯"下唯一能做成载体的东西。代价两条：热固性（生带一固化就脆）、
    * 残碳 40–50 %（排胶排不干净，见 `make/mlcc-green-tape`）。
    */
-  { id: 'mat/mlcc-vehicle', name: '有机载体', unit: 'kg', category: 'material',
+  { id: 'mat/mlcc-vehicle', name: 'Organic Vehicle', name_zh: '有机载体', unit: 'kg', category: 'material',
     props: [{ param: 'solid', kind: 'range', min: 30, max: 60, unit: '%', dir: 'atLeast' }] },
 
   /**
    * 流延浆料。粉 45 % + 载体 + 水。**固含量只有 45 %，工业是 55–65 %**
    * —— 没有分散剂，粉在水里絮凝，稀了才流得动。
    */
-  { id: 'mat/mlcc-slurry', name: '流延浆料', unit: 'kg', category: 'material',
+  { id: 'mat/mlcc-slurry', name: 'Tape Casting Slurry', name_zh: '流延浆料', unit: 'kg', category: 'material',
     props: [{ param: 'solidLoading', kind: 'range', min: 35, max: 70, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -358,7 +358,7 @@ export const MLCC_ITEMS: readonly Item[] = [
    * 酚醛载体脆 + 没有分散剂 + 没有真空脱泡（`plant/wet-bench` 是正压 100–500 kPa，
    * 抽不了真空）→ 膜薄了就有针孔，一烧结就是个洞。
    */
-  { id: 'mat/mlcc-green-tape', name: '生带', unit: 'kg', category: 'material',
+  { id: 'mat/mlcc-green-tape', name: 'Green Tape', name_zh: '生带', unit: 'kg', category: 'material',
     props: [{ param: 'thickness', kind: 'range', min: 2, max: 100, unit: 'µm' }] },
 
   /**
@@ -367,14 +367,14 @@ export const MLCC_ITEMS: readonly Item[] = [
    * 两者是同一个条目、两条路线 —— 与 `mat/sulfuric-acid` 的 98 % 与 30–50 % 同型：
    * 条目只说"有金属这个属性"，值在路线上。
    */
-  { id: 'mat/mlcc-electrode-paste', name: '内电极浆料', unit: 'kg', category: 'material',
+  { id: 'mat/mlcc-electrode-paste', name: 'Internal Electrode Paste', name_zh: '内电极浆料', unit: 'kg', category: 'material',
     props: [
       { param: 'metal', kind: 'enum', values: ['Ag', 'Ni'] },
       { param: 'solidLoading', kind: 'range', min: 50, max: 90, unit: '%', dir: 'atLeast' },
     ] },
 
   /** 端浆。银 80 %、固含量 80 % —— 端头要厚、要快干、要能烧成连着的一层壳。 */
-  { id: 'mat/mlcc-terminal-paste', name: '端浆', unit: 'kg', category: 'material',
+  { id: 'mat/mlcc-terminal-paste', name: 'Terminal Paste', name_zh: '端浆', unit: 'kg', category: 'material',
     props: [
       { param: 'metal', kind: 'enum', values: ['Ag', 'Cu'] },
       { param: 'solidLoading', kind: 'range', min: 50, max: 95, unit: '%', dir: 'atLeast' },
@@ -398,7 +398,7 @@ export const MLCC_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/mlcc-general',
-    name: '片式多层陶瓷电容',
+    name: 'Multilayer Ceramic Chip Capacitor', name_zh: '片式多层陶瓷电容',
     unit: '件',
     category: 'part',
     props: [
@@ -443,7 +443,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 80 °C 的水直接开）。
      */
     id: 'make/barium-sulfate',
-    name: '硫酸钡制备',
+    name: 'Barium Sulfate Production', name_zh: '硫酸钡制备',
     produces: [
       { item: 'mat/barium-sulfate', qty: q(1183), gives: [{ param: 'purity', kind: 'range', min: 92, max: 96 }] },
       { item: 'mat/tailings', qty: q(4662) },
@@ -491,7 +491,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 这条前提在本项目里成立。
      */
     id: 'make/barium-sulfate-lime-sinter',
-    name: '硫酸钡制备',
+    name: 'Barium Sulfate Production', name_zh: '硫酸钡制备',
     produces: [
       { item: 'mat/barium-sulfate', qty: q(1183), gives: [{ param: 'purity', kind: 'range', min: 90, max: 95 }] },
       { item: 'mat/tailings', qty: q(4955) },
@@ -543,7 +543,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 不是配方** —— 升级路线是把它搬进气氛炉，见下一条。
      */
     id: 'make/barium-sulfide',
-    name: '硫化钡制备',
+    name: 'Barium Sulfide Production', name_zh: '硫化钡制备',
     produces: [
       { item: 'mat/barium-sulfide', qty: q(1015), gives: [{ param: 'purity', kind: 'range', min: 55, max: 75 }] },
       { item: 'mat/kiln-gas', qty: q(290), gives: [{ param: 'co2', kind: 'range', min: 70, max: 95 }] },
@@ -576,7 +576,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 而且这条路线**同样踩在 #23 上**：那 0–50 ppm 是能力声明，没人测过。
      */
     id: 'make/barium-sulfide-reduced',
-    name: '硫化钡制备',
+    name: 'Barium Sulfide Production', name_zh: '硫化钡制备',
     produces: [
       { item: 'mat/barium-sulfide', qty: q(920), gives: [{ param: 'purity', kind: 'range', min: 80, max: 90 }] },
       { item: 'mat/kiln-gas', qty: q(403), gives: [{ param: 'co2', kind: 'range', min: 85, max: 99 }] },
@@ -612,7 +612,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 它是真损失，不是记账缺口。
      */
     id: 'make/barium-carbonate',
-    name: '碳酸钡制备',
+    name: 'Barium Carbonate Production', name_zh: '碳酸钡制备',
     produces: [
       { item: 'mat/barium-carbonate', qty: q(1000), gives: [{ param: 'purity', kind: 'range', min: 92, max: 96 }] },
       { item: 'mat/tailings', qty: q(189) },
@@ -672,7 +672,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 硫酸法能把 TiO₂ 的成本降一个数量级，而 ilmenite 不在本轮白名单里。
      */
     id: 'make/titanium-dioxide',
-    name: '二氧化钛制备',
+    name: 'Titania Production', name_zh: '二氧化钛制备',
     produces: [
       { item: 'mat/titanium-dioxide', qty: q(1000), gives: [{ param: 'purity', kind: 'range', min: 96, max: 98 }] },
     ],
@@ -715,7 +715,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 车床是唯一能连续转 8 h 的现成主轴。罐里 45 钢球，磨介污染见下一条。
      */
     id: 'make/barium-titanate',
-    name: '钛酸钡制备',
+    name: 'Barium Titanate Production', name_zh: '钛酸钡制备',
     produces: [
       {
         item: 'mat/barium-titanate',
@@ -767,7 +767,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 会把绝缘电阻拉下来一档。这是"能磨细"与"磨得干净"之间那条缝。
      */
     id: 'make/mlcc-dielectric-powder',
-    name: '介质粉制备',
+    name: 'Dielectric Powder Production', name_zh: '介质粉制备',
     produces: [
       { item: 'mat/mlcc-dielectric-powder', qty: q(1000), gives: [{ param: 'd50', kind: 'range', min: 0.3, max: 1.0 }] },
     ],
@@ -802,7 +802,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 两条代价写在后面两条路线上：热固性（生带一固化就脆）、残碳 40–50 %。
      */
     id: 'make/mlcc-vehicle',
-    name: '有机载体制备',
+    name: 'Organic Vehicle Production', name_zh: '有机载体制备',
     produces: [
       { item: 'mat/mlcc-vehicle', qty: q(1000), gives: [{ param: 'solid', kind: 'range', min: 38, max: 42 }] },
     ],
@@ -827,7 +827,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 浆料里的气泡就是生带上的针孔，针孔就是烧结后的击穿点。
      */
     id: 'make/mlcc-slurry',
-    name: '流延浆料制备',
+    name: 'Tape Casting Slurry Production', name_zh: '流延浆料制备',
     produces: [
       { item: 'mat/mlcc-slurry', qty: q(2200), gives: [{ param: 'solidLoading', kind: 'range', min: 43, max: 47 }] },
     ],
@@ -861,7 +861,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * **介质薄不下去，容量就上不去**（问二）。
      */
     id: 'make/mlcc-green-tape',
-    name: '生带制备',
+    name: 'Green Tape Production', name_zh: '生带制备',
     produces: [
       { item: 'mat/mlcc-green-tape', qty: q(1280), gives: [{ param: 'thickness', kind: 'range', min: 20, max: 30 }] },
     ],
@@ -895,7 +895,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 片状叠起来接触点多，2 µm 的印刷膜才能烧成连续导体。
      */
     id: 'make/mlcc-electrode-paste-ag',
-    name: '内电极银浆制备',
+    name: 'Internal Electrode Silver Paste Production', name_zh: '内电极银浆制备',
     produces: [
       {
         item: 'mat/mlcc-electrode-paste',
@@ -934,7 +934,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * **"缺什么"因此可以被校验出来，而不是只写在注释里。**
      */
     id: 'make/mlcc-electrode-paste-ni',
-    name: '内电极镍浆制备',
+    name: 'Internal Electrode Nickel Paste Production', name_zh: '内电极镍浆制备',
     produces: [
       {
         item: 'mat/mlcc-electrode-paste',
@@ -969,7 +969,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 与镍同一个病，只是轻三个数量级。声明 Cu 是留一个类型位，不是留一条路线。
      */
     id: 'make/mlcc-terminal-paste',
-    name: '端浆制备',
+    name: 'Terminal Paste Production', name_zh: '端浆制备',
     produces: [
       {
         item: 'mat/mlcc-terminal-paste',
@@ -1037,7 +1037,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 厚度/结合力量具 —— 数据上只能让两档并存，不能判哪一档真的合格。
      */
     id: 'make/mlcc-ag-fired',
-    name: '片式多层陶瓷电容制造',
+    name: 'Multilayer Ceramic Chip Capacitor Manufacturing', name_zh: '片式多层陶瓷电容制造',
     produces: [{
       item: 'std/mlcc-general',
       qty: q(100000),
@@ -1131,7 +1131,7 @@ export const MLCC_ROUTES: readonly Route[] = [
      * 文件头第三节第 ① 条专门说了这件事 —— 模型过了，工艺没过。
      */
     id: 'make/mlcc-ni-sintered',
-    name: '片式多层陶瓷电容制造',
+    name: 'Multilayer Ceramic Chip Capacitor Manufacturing', name_zh: '片式多层陶瓷电容制造',
     produces: [{
       item: 'std/mlcc-general',
       qty: q(100000),

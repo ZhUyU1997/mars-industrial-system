@@ -16,7 +16,7 @@ export const EUV_HINA_COATING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/copper-mirror-record',
-    name: '铜镜记录',
+    name: 'Copper Mirror Record', name_zh: '铜镜记录',
     unit: '份',
     category: 'part',
     props: [
@@ -32,7 +32,7 @@ export const EUV_HINA_COATING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/oap-record',
-    name: 'OAP 记录',
+    name: 'OAP Record', name_zh: 'OAP 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -49,7 +49,7 @@ export const EUV_HINA_COATING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/znse-window-record',
-    name: 'ZnSe 窗口传输/吸收记录',
+    name: 'ZnSe Window Transmission/Absorption Record', name_zh: 'ZnSe 窗口传输/吸收记录',
     unit: '份',
     category: 'part',
     props: [
@@ -66,7 +66,7 @@ export const EUV_HINA_COATING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/output-coupler-record',
-    name: '输出耦合镜记录',
+    name: 'Output Coupler Record', name_zh: '输出耦合镜记录',
     unit: '份',
     category: 'part',
     props: [
@@ -82,7 +82,7 @@ export const EUV_HINA_COATING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ibf-beam-record',
-    name: 'IBF 束流记录',
+    name: 'IBF Beam Current Record', name_zh: 'IBF 束流记录',
     unit: '份',
     category: 'part',
     props: [
@@ -105,7 +105,7 @@ export const EUV_HINA_COATING_ROUTES: readonly Route[] = [
      * 不是 0.98/10 nm 的实测读数。
      */
     id: 'measure/copper-mirror-10.6',
-    name: '铜镜测量',
+    name: 'Copper Mirror Measurement', name_zh: '铜镜测量',
     produces: [
       {
         item: 'mat/copper-mirror-record',
@@ -144,7 +144,7 @@ export const EUV_HINA_COATING_ROUTES: readonly Route[] = [
      * **OAP 记录：AFM 粗糙度 + 干涉仪面形 + 10.6 µm 反射率。**
      */
     id: 'measure/copper-oap-10.6',
-    name: 'OAP 测量',
+    name: 'OAP Measurement', name_zh: 'OAP 测量',
     produces: [
       {
         item: 'mat/oap-record',
@@ -178,7 +178,7 @@ export const EUV_HINA_COATING_ROUTES: readonly Route[] = [
      * **ZnSe 窗口记录：FTIR 透射/吸收 + AFM 粗糙度 + 干涉仪面形。**
      */
     id: 'measure/znse-window',
-    name: 'ZnSe 窗口传输/吸收测量',
+    name: 'ZnSe Window Transmission/Absorption Measurement', name_zh: 'ZnSe 窗口传输/吸收测量',
     produces: [
       {
         item: 'mat/znse-window-record',
@@ -213,7 +213,7 @@ export const EUV_HINA_COATING_ROUTES: readonly Route[] = [
      * **输出耦合镜记录：孔 + 反射率 + 粗糙度。**
      */
     id: 'measure/copper-output-coupler',
-    name: '输出耦合镜测量',
+    name: 'Output Coupler Measurement', name_zh: '输出耦合镜测量',
     produces: [
       {
         item: 'mat/output-coupler-record',
@@ -250,7 +250,7 @@ export const EUV_HINA_COATING_ROUTES: readonly Route[] = [
      * `points 10`；不是 0.1 nm 去除函数的实测。
      */
     id: 'measure/ibf-beam',
-    name: 'IBF 束流测量',
+    name: 'IBF Beam Current Measurement', name_zh: 'IBF 束流测量',
     produces: [
       {
         item: 'mat/ibf-beam-record',

@@ -449,7 +449,7 @@ export const UNBLOCK_AIRSEP_VESSEL_ROUTES: readonly Route[] = [
      *   ④ 冷态预紧         差异收缩 0.085 mm > 弹性伸长 0.051 mm，−83 °C 归零
      */
     id: 'make/airsep-vessel-cast',
-    name: '空分分离罐制造',
+    name: 'Air Separation Separator Vessel Manufacturing', name_zh: '空分分离罐制造',
     produces: [{ item: 'plant/air-separator/separator-vessel', qty: q(1) }],
     uses: [
       {

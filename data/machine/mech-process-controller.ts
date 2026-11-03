@@ -25,36 +25,36 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const PROC_CTRL_PARTS: readonly Item[] = [
-  { id: 'std/process-controller-general/base', name: '机械式过程控制器底座', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/weight', name: '机械式过程控制器重锤', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/cam-disc', name: '机械式过程控制器程序盘', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/angle-brace', name: '机械式过程控制器角撑', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/lever-seat', name: '机械式过程控制器杠杆座', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/dial-bracket', name: '机械式过程控制器表盘支架', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/follower-guide', name: '机械式过程控制器从动件导轨', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/toothed-wheel-set', name: '机械式过程控制器齿轮组', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/micrometer-screw', name: '机械式过程控制器千分螺丝', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/lever-set', name: '机械式过程控制器刀口杠杆', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/spring-set', name: '机械式过程控制器拉簧', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/gear-set', name: '机械式过程控制器齿轮', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/escapement-fork', name: '机械式过程控制器擒纵叉', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/shaft-pin-set', name: '机械式过程控制器轴与销', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/dial-pointer', name: '机械式过程控制器刻度刀口与指针', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/clamp-key-set', name: '机械式过程控制器卡子与键', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/weight-rod-drum', name: '机械式过程控制器重锤吊杆与鼓轮', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/cam-roller', name: '机械式过程控制器凸轮滚子', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/contact-set', name: '机械式过程控制器触点', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/busbar-set', name: '机械式过程控制器导电排', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/terminal-set', name: '机械式过程控制器接线柱', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/copper-bushing-set', name: '机械式过程控制器铜轴套', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/ceramic-case-set', name: '机械式过程控制器陶壳', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/guide-set', name: '机械式过程控制器导向件组', unit: '套', category: 'part' },
-  { id: 'std/process-controller-general/sensor-rod', name: '机械式过程控制器感温棒', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/quartz-reference-rod', name: '机械式过程控制器石英参考棒', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/recording-disk', name: '机械式过程控制器记录盘', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/observation-window', name: '机械式过程控制器观察窗', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/arc-chute', name: '机械式过程控制器灭弧栅', unit: '件', category: 'part' },
-  { id: 'std/process-controller-general/case-hardware-set', name: '机械式过程控制器表壳紧固件组', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/base', name: 'Mechanical Process Controller Base', name_zh: '机械式过程控制器底座', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/weight', name: 'Mechanical Process Controller Weight', name_zh: '机械式过程控制器重锤', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/cam-disc', name: 'Mechanical Process Controller Program Disc', name_zh: '机械式过程控制器程序盘', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/angle-brace', name: 'Mechanical Process Controller Corner Brace', name_zh: '机械式过程控制器角撑', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/lever-seat', name: 'Mechanical Process Controller Lever Seat', name_zh: '机械式过程控制器杠杆座', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/dial-bracket', name: 'Mechanical Process Controller Dial Bracket', name_zh: '机械式过程控制器表盘支架', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/follower-guide', name: 'Mechanical Process Controller Follower Guide', name_zh: '机械式过程控制器从动件导轨', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/toothed-wheel-set', name: 'Mechanical Process Controller Gear Set', name_zh: '机械式过程控制器齿轮组', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/micrometer-screw', name: 'Mechanical Process Controller Micrometer Screw', name_zh: '机械式过程控制器千分螺丝', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/lever-set', name: 'Mechanical Process Controller Knife-Edge Lever', name_zh: '机械式过程控制器刀口杠杆', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/spring-set', name: 'Mechanical Process Controller Tension Spring', name_zh: '机械式过程控制器拉簧', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/gear-set', name: 'Mechanical Process Controller Gear', name_zh: '机械式过程控制器齿轮', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/escapement-fork', name: 'Mechanical Process Controller Pallet Fork', name_zh: '机械式过程控制器擒纵叉', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/shaft-pin-set', name: 'Mechanical Process Controller Shaft and Pin', name_zh: '机械式过程控制器轴与销', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/dial-pointer', name: 'Mechanical Process Controller Scale Knife Edge and Pointer', name_zh: '机械式过程控制器刻度刀口与指针', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/clamp-key-set', name: 'Mechanical Process Controller Clip and Key', name_zh: '机械式过程控制器卡子与键', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/weight-rod-drum', name: 'Mechanical Process Controller Weight Suspension Rod and Drum', name_zh: '机械式过程控制器重锤吊杆与鼓轮', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/cam-roller', name: 'Mechanical Process Controller Cam Roller', name_zh: '机械式过程控制器凸轮滚子', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/contact-set', name: 'Mechanical Process Controller Contact', name_zh: '机械式过程控制器触点', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/busbar-set', name: 'Mechanical Process Controller Busbar', name_zh: '机械式过程控制器导电排', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/terminal-set', name: 'Mechanical Process Controller Terminal Post', name_zh: '机械式过程控制器接线柱', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/copper-bushing-set', name: 'Mechanical Process Controller Copper Bushing', name_zh: '机械式过程控制器铜轴套', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/ceramic-case-set', name: 'Mechanical Process Controller Ceramic Shell', name_zh: '机械式过程控制器陶壳', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/guide-set', name: 'Mechanical Process Controller Guide Set', name_zh: '机械式过程控制器导向件组', unit: '套', category: 'part' },
+  { id: 'std/process-controller-general/sensor-rod', name: 'Mechanical Process Controller Temperature Sensing Rod', name_zh: '机械式过程控制器感温棒', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/quartz-reference-rod', name: 'Mechanical Process Controller Quartz Reference Rod', name_zh: '机械式过程控制器石英参考棒', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/recording-disk', name: 'Mechanical Process Controller Recording Disc', name_zh: '机械式过程控制器记录盘', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/observation-window', name: 'Mechanical Process Controller Viewing Window', name_zh: '机械式过程控制器观察窗', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/arc-chute', name: 'Mechanical Process Controller Arc Chute', name_zh: '机械式过程控制器灭弧栅', unit: '件', category: 'part' },
+  { id: 'std/process-controller-general/case-hardware-set', name: 'Mechanical Process Controller Case Fastener Set', name_zh: '机械式过程控制器表壳紧固件组', unit: '套', category: 'part' },
 ];
 
 const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -63,7 +63,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 底座：180×140×20 铸铁，灌矿渣浆配重。 */
     id: 'make/process-controller-base',
-    name: '机械式过程控制器底座制造',
+    name: 'Mechanical Process Controller Base Manufacturing', name_zh: '机械式过程控制器底座制造',
     produces: [{ item: 'std/process-controller-general/base', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(9, 2) }] }],
     performedBy: 'plant/melting-furnace',
@@ -72,7 +72,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 重锤：1.0 kg 设计质量，浇成 φ60×120。 */
     id: 'make/process-controller-weight',
-    name: '机械式过程控制器重锤制造',
+    name: 'Mechanical Process Controller Weight Manufacturing', name_zh: '机械式过程控制器重锤制造',
     produces: [{ item: 'std/process-controller-general/weight', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(5, 4) }] }],
     performedBy: 'plant/melting-furnace',
@@ -85,7 +85,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 盘坯立浇，浇口开在盘缘；轮廓铣掉三分之二，出成只有 0.30。
      */
     id: 'make/process-controller-cam-disc',
-    name: '机械式过程控制器程序盘制造',
+    name: 'Mechanical Process Controller Program Disc Manufacturing', name_zh: '机械式过程控制器程序盘制造',
     produces: [{ item: 'std/process-controller-general/cam-disc', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(181, 100) }] }],
     steps: [
@@ -96,7 +96,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/process-controller-angle-brace',
-    name: '机械式过程控制器角撑制造',
+    name: 'Mechanical Process Controller Corner Brace Manufacturing', name_zh: '机械式过程控制器角撑制造',
     produces: [{ item: 'std/process-controller-general/angle-brace', qty: q(4) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(1, 5) }] }],
     performedBy: 'plant/melting-furnace',
@@ -104,7 +104,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/process-controller-lever-seat',
-    name: '机械式过程控制器杠杆座制造',
+    name: 'Mechanical Process Controller Lever Seat Manufacturing', name_zh: '机械式过程控制器杠杆座制造',
     produces: [{ item: 'std/process-controller-general/lever-seat', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(2, 5) }] }],
     performedBy: 'plant/melting-furnace',
@@ -112,7 +112,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/process-controller-dial-bracket',
-    name: '机械式过程控制器表盘支架制造',
+    name: 'Mechanical Process Controller Dial Bracket Manufacturing', name_zh: '机械式过程控制器表盘支架制造',
     produces: [{ item: 'std/process-controller-general/dial-bracket', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(11, 25) }] }],
     performedBy: 'plant/melting-furnace',
@@ -120,7 +120,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/process-controller-follower-guide',
-    name: '机械式过程控制器从动件导轨制造',
+    name: 'Mechanical Process Controller Follower Guide Manufacturing', name_zh: '机械式过程控制器从动件导轨制造',
     produces: [{ item: 'std/process-controller-general/follower-guide', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(11, 20) }] }],
     performedBy: 'plant/melting-furnace',
@@ -129,7 +129,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 8 齿星轮 + 擒纵轮 15 齿 + 45 齿棘轮，HT300 白口齿面。 */
     id: 'make/process-controller-toothed-wheel-set',
-    name: '机械式过程控制器齿轮组制造',
+    name: 'Mechanical Process Controller Gear Set Manufacturing', name_zh: '机械式过程控制器齿轮组制造',
     produces: [{ item: 'std/process-controller-general/toothed-wheel-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht300', qty: q(16, 25) }] }],
     performedBy: 'plant/melting-furnace',
@@ -138,7 +138,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 千分螺丝：M10×0.5、长 120、螺纹段 40；2.0 K/格。 */
     id: 'make/process-controller-micrometer-screw',
-    name: '机械式过程控制器千分螺丝制造',
+    name: 'Mechanical Process Controller Micrometer Screw Manufacturing', name_zh: '机械式过程控制器千分螺丝制造',
     produces: [{ item: 'std/process-controller-general/micrometer-screw', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 25) }] }],
     performedBy: 'lathe',
@@ -146,7 +146,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 刀口杠杆 2 根：80×12×6，5:1，刀口 0.005。 */
     id: 'make/process-controller-lever-set',
-    name: '机械式过程控制器刀口杠杆制造',
+    name: 'Mechanical Process Controller Knife-Edge Lever Manufacturing', name_zh: '机械式过程控制器刀口杠杆制造',
     produces: [{ item: 'std/process-controller-general/lever-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 10) }] }],
     steps: [
@@ -157,7 +157,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 拉簧 4 只：φ0.2 钢丝冷绕。 */
     id: 'make/process-controller-spring-set',
-    name: '机械式过程控制器拉簧制造',
+    name: 'Mechanical Process Controller Tension Spring Manufacturing', name_zh: '机械式过程控制器拉簧制造',
     produces: [{ item: 'std/process-controller-general/spring-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(4, 25) }] }],
     performedBy: 'plant/winder',
@@ -165,14 +165,14 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 齿轮 3 对：模数 0.5，20/40、20/60、20/45。 */
     id: 'make/process-controller-gear-set',
-    name: '机械式过程控制器齿轮制造',
+    name: 'Mechanical Process Controller Gear Manufacturing', name_zh: '机械式过程控制器齿轮制造',
     produces: [{ item: 'std/process-controller-general/gear-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(18, 25) }] }],
     performedBy: 'plant/milling-machine',
   },
   {
     id: 'make/process-controller-escapement-fork',
-    name: '机械式过程控制器擒纵叉制造',
+    name: 'Mechanical Process Controller Pallet Fork Manufacturing', name_zh: '机械式过程控制器擒纵叉制造',
     produces: [{ item: 'std/process-controller-general/escapement-fork', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(2, 25) }] }],
     performedBy: 'plant/milling-machine',
@@ -180,7 +180,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 轴与销 12 根，φ4–φ8，H7/g6。 */
     id: 'make/process-controller-shaft-pin-set',
-    name: '机械式过程控制器轴与销制造',
+    name: 'Mechanical Process Controller Shaft and Pin Manufacturing', name_zh: '机械式过程控制器轴与销制造',
     produces: [{ item: 'std/process-controller-general/shaft-pin-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(7, 20) }] }],
     performedBy: 'lathe',
@@ -188,7 +188,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 刻度刀口与指针：两圈刻线，外圈 0–1600、内圈 0–600。 */
     id: 'make/process-controller-dial-pointer',
-    name: '机械式过程控制器刻度刀口与指针制造',
+    name: 'Mechanical Process Controller Scale Knife Edge and Pointer Manufacturing', name_zh: '机械式过程控制器刻度刀口与指针制造',
     produces: [{ item: 'std/process-controller-general/dial-pointer', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 5) }] }],
     performedBy: 'plant/milling-machine',
@@ -196,7 +196,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 卡子与键：45 钢，固定陶壳、凸轮盘与表盘。 */
     id: 'make/process-controller-clamp-key-set',
-    name: '机械式过程控制器卡子与键制造',
+    name: 'Mechanical Process Controller Clip and Key Manufacturing', name_zh: '机械式过程控制器卡子与键制造',
     produces: [{ item: 'std/process-controller-general/clamp-key-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(2, 5) }] }],
     performedBy: 'plant/forge',
@@ -204,14 +204,14 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 重锤吊杆与鼓轮：1 kg 走 4 h。 */
     id: 'make/process-controller-weight-rod-drum',
-    name: '机械式过程控制器重锤吊杆与鼓轮制造',
+    name: 'Mechanical Process Controller Weight Suspension Rod and Drum Manufacturing', name_zh: '机械式过程控制器重锤吊杆与鼓轮制造',
     produces: [{ item: 'std/process-controller-general/weight-rod-drum', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 5) }] }],
     performedBy: 'lathe',
   },
   {
     id: 'make/process-controller-cam-roller',
-    name: '机械式过程控制器凸轮滚子制造',
+    name: 'Mechanical Process Controller Cam Roller Manufacturing', name_zh: '机械式过程控制器凸轮滚子制造',
     produces: [{ item: 'std/process-controller-general/cam-roller', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(7, 100) }] }],
     performedBy: 'lathe',
@@ -219,7 +219,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 触点 4 对：2 A 一对 + 20 A 一对，各带备用；铜对铜、擦动。 */
     id: 'make/process-controller-contact-set',
-    name: '机械式过程控制器触点制造',
+    name: 'Mechanical Process Controller Contact Manufacturing', name_zh: '机械式过程控制器触点制造',
     produces: [{ item: 'std/process-controller-general/contact-set', qty: q(4) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(3, 25) }] }],
     performedBy: 'plant/robot',
@@ -227,7 +227,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 导电排 2 条：20 A 那一路的铜排。 */
     id: 'make/process-controller-busbar-set',
-    name: '机械式过程控制器导电排制造',
+    name: 'Mechanical Process Controller Busbar Manufacturing', name_zh: '机械式过程控制器导电排制造',
     produces: [{ item: 'std/process-controller-general/busbar-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(1, 2) }] }],
     performedBy: 'plant/milling-machine',
@@ -235,7 +235,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 接线柱 8 只：φ8×20，车成。 */
     id: 'make/process-controller-terminal-set',
-    name: '机械式过程控制器接线柱制造',
+    name: 'Mechanical Process Controller Terminal Post Manufacturing', name_zh: '机械式过程控制器接线柱制造',
     produces: [{ item: 'std/process-controller-general/terminal-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(13, 100) }] }],
     performedBy: 'lathe',
@@ -243,7 +243,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 铜轴套 2 只（凸轮盘轴瓦）+ 表盘轴套 1 只。 */
     id: 'make/process-controller-copper-bushing-set',
-    name: '机械式过程控制器铜轴套制造',
+    name: 'Mechanical Process Controller Copper Bushing Manufacturing', name_zh: '机械式过程控制器铜轴套制造',
     produces: [{ item: 'std/process-controller-general/copper-bushing-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(7, 25) }] }],
     performedBy: 'lathe',
@@ -256,7 +256,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 300 mm 的陶板在 1100 上烧会翘，六块里能用的不到四块，出成 0.6。
      */
     id: 'make/process-controller-ceramic-case-set',
-    name: '机械式过程控制器陶壳制造',
+    name: 'Mechanical Process Controller Ceramic Shell Manufacturing', name_zh: '机械式过程控制器陶壳制造',
     produces: [{ item: 'std/process-controller-general/ceramic-case-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(581, 50) }] }],
     performedBy: 'plant/earth-kiln',
@@ -265,7 +265,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 导向环 2 只 + 瓷套管 4 只：按棒实测外径铰，差 0.05。 */
     id: 'make/process-controller-guide-set',
-    name: '机械式过程控制器导向件组制造',
+    name: 'Mechanical Process Controller Guide Set Manufacturing', name_zh: '机械式过程控制器导向件组制造',
     produces: [{ item: 'std/process-controller-general/guide-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(103, 100) }] }],
     performedBy: 'plant/earth-kiln',
@@ -274,7 +274,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 感温棒：φ10×600 莫来石-刚玉棒，1450 烧结 2 h。 */
     id: 'make/process-controller-sensor-rod',
-    name: '机械式过程控制器感温棒制造',
+    name: 'Mechanical Process Controller Temperature Sensing Rod Manufacturing', name_zh: '机械式过程控制器感温棒制造',
     produces: [{ item: 'std/process-controller-general/sensor-rod', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/refractory', qty: q(23, 100) }] }],
     performedBy: 'plant/brick-kiln',
@@ -283,7 +283,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 石英参考棒：φ12×300 熔融石英，浇成，不拉。 */
     id: 'make/process-controller-quartz-reference-rod',
-    name: '机械式过程控制器石英参考棒制造',
+    name: 'Mechanical Process Controller Quartz Reference Rod Manufacturing', name_zh: '机械式过程控制器石英参考棒制造',
     produces: [{ item: 'std/process-controller-general/quartz-reference-rod', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/silica', qty: q(3, 20) }] }],
     performedBy: 'plant/brick-kiln',
@@ -292,7 +292,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 记录盘：φ120×3 玻璃，随程序盘转，烟熏后指针划线。 */
     id: 'make/process-controller-recording-disk',
-    name: '机械式过程控制器记录盘制造',
+    name: 'Mechanical Process Controller Recording Disc Manufacturing', name_zh: '机械式过程控制器记录盘制造',
     produces: [{ item: 'std/process-controller-general/recording-disk', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/silica', qty: q(3, 20) }] }],
     performedBy: 'plant/brick-kiln',
@@ -301,7 +301,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 观察窗 2 块：40×40×4。 */
     id: 'make/process-controller-observation-window',
-    name: '机械式过程控制器观察窗制造',
+    name: 'Mechanical Process Controller Viewing Window Manufacturing', name_zh: '机械式过程控制器观察窗制造',
     produces: [{ item: 'std/process-controller-general/observation-window', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/silica', qty: q(1, 20) }] }],
     performedBy: 'plant/brick-kiln',
@@ -310,7 +310,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 灭弧栅 4 片：20×15×3 无定形碳，装在 20 A 触点上方。 */
     id: 'make/process-controller-arc-chute',
-    name: '机械式过程控制器灭弧栅制造',
+    name: 'Mechanical Process Controller Arc Chute Manufacturing', name_zh: '机械式过程控制器灭弧栅制造',
     produces: [{ item: 'std/process-controller-general/arc-chute', qty: q(4) }],
     uses: [{ anyOf: [{ item: 'mat/carbon', qty: q(1, 10) }] }],
     performedBy: 'plant/milling-machine',
@@ -318,7 +318,7 @@ const PROC_CTRL_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 表壳紧固件组：铸铁箍、螺栓、铰链。 */
     id: 'make/process-controller-case-hardware-set',
-    name: '机械式过程控制器表壳紧固件组制造',
+    name: 'Mechanical Process Controller Case Fastener Set Manufacturing', name_zh: '机械式过程控制器表壳紧固件组制造',
     produces: [{ item: 'std/process-controller-general/case-hardware-set', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 10) }] }],
     steps: [

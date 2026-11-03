@@ -19,8 +19,8 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const SPINDLE_FIXTURE_PARTS: readonly Item[] = [
-  { id: 'plant/spindle-error-analyzer/fixture/body', name: '主轴周期误差分析仪夹具本体', unit: '件', category: 'part' },
-  { id: 'plant/spindle-error-analyzer/fixture/locating-pin', name: '主轴周期误差分析仪定位销', unit: '件', category: 'part' },
+  { id: 'plant/spindle-error-analyzer/fixture/body', name: 'Spindle Periodic Error Analyzer Fixture Body', name_zh: '主轴周期误差分析仪夹具本体', unit: '件', category: 'part' },
+  { id: 'plant/spindle-error-analyzer/fixture/locating-pin', name: 'Spindle Periodic Error Analyzer Locating Pin', name_zh: '主轴周期误差分析仪定位销', unit: '件', category: 'part' },
 ];
 
 const SPINDLE_FIXTURE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -29,7 +29,7 @@ const SPINDLE_FIXTURE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 夹具本体：45 钢 2 kg，车定心锥面，一次装夹钻四个销孔。 */
     id: 'make/spindle-fixture-body',
-    name: '主轴周期误差分析仪夹具本体制造',
+    name: 'Spindle Periodic Error Analyzer Fixture Body Manufacturing', name_zh: '主轴周期误差分析仪夹具本体制造',
     produces: [{ item: 'plant/spindle-error-analyzer/fixture/body', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(2) }] }],
     steps: [
@@ -40,7 +40,7 @@ const SPINDLE_FIXTURE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 定位销 4 只：轴承钢 0.5 kg，磨到与销孔配作。 */
     id: 'make/spindle-fixture-pin',
-    name: '主轴周期误差分析仪定位销制造',
+    name: 'Spindle Periodic Error Analyzer Locating Pin Manufacturing', name_zh: '主轴周期误差分析仪定位销制造',
     produces: [{ item: 'plant/spindle-error-analyzer/fixture/locating-pin', qty: q(4) }],
     uses: [{ anyOf: [{ item: 'mat/bearing-steel', qty: q(1, 2) }] }],
     steps: [

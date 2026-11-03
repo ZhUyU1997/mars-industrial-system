@@ -57,7 +57,7 @@ export const METER_ITEMS: readonly Item[] = [
    * T 型是标准件（量程 0–350 °C，工业上一模一样的一只），只是这个描述里
    * 目前只有一处需要"能连续读的低温柔温度"。
    */
-  { id: 'std/thermocouple-t-general', name: '热电偶', unit: '件', category: 'part',
+  { id: 'std/thermocouple-t-general', name: 'Thermocouple', name_zh: '热电偶', unit: '件', category: 'part',
     props: [{ param: 'rangeMin', kind: 'range', min: -200, max: 0, unit: '°C' }, { param: 'rangeMax', kind: 'range', min: 350, max: 400, unit: '°C' }] },
 
   /**
@@ -70,7 +70,7 @@ export const METER_ITEMS: readonly Item[] = [
    * `measure/thermocouple-cal` 必须逐支在 Zn/Al/Cu 三点上标定，不能按标准
    * K 的分度表互换。这是 R8 降级：升级路线是低碳酸性铬源 + 90/10 丝。
    */
-  { id: 'std/thermocouple-nicr-nial-general', name: '高温热电偶', unit: '件', category: 'part',
+  { id: 'std/thermocouple-nicr-nial-general', name: 'High-Temperature Thermocouple', name_zh: '高温热电偶', unit: '件', category: 'part',
     props: [
       { param: 'rangeMin', kind: 'range', min: -200, max: 0, unit: '°C' },
       { param: 'rangeMax', kind: 'range', min: 1300, max: 1372, unit: '°C' },
@@ -85,7 +85,7 @@ export const METER_ITEMS: readonly Item[] = [
    * 它现在是毫伏表的零件之一（见下）—— 一只裸检流计读不了热电偶的微伏，
    * 前面得加一级放大。
    */
-  { id: 'std/galvanometer-general', name: '动圈检流计', unit: '件', category: 'part',
+  { id: 'std/galvanometer-general', name: 'Moving-Coil Galvanometer', name_zh: '动圈检流计', unit: '件', category: 'part',
     props: [{ param: 'sensitivity', kind: 'range', min: 0.01, max: 100, unit: 'µA/格' }] },
 
   /**
@@ -95,7 +95,7 @@ export const METER_ITEMS: readonly Item[] = [
    * 双线悬丝代替游丝。整机由表壳、底座、刻度盘、磁体、固定线圈、屏蔽筒、
    * 悬丝、碳旗指针等件装配；零件与零件路线见 `data/machine/mech-millivoltmeter.ts`。
    */
-  { id: 'std/millivoltmeter-general', name: '可动磁体式毫伏表', unit: '台', category: 'part',
+  { id: 'std/millivoltmeter-general', name: 'Moving-Magnet Millivoltmeter', name_zh: '可动磁体式毫伏表', unit: '台', category: 'part',
     composedOf: [
       { item: 'std/millivoltmeter-general/case', qty: q(1) },
       { item: 'std/millivoltmeter-general/base', qty: q(1) },
@@ -124,7 +124,7 @@ export const METER_ITEMS: readonly Item[] = [
    *
    * 放大级为焊接/装配，属于不可逆加工；零件输入写在路线 uses，不写 composedOf。
    */
-  { id: 'std/millivoltmeter-electronic', name: '电子式毫伏表', unit: '台', category: 'part' },
+  { id: 'std/millivoltmeter-electronic', name: 'Electronic Millivoltmeter', name_zh: '电子式毫伏表', unit: '台', category: 'part' },
 ];
 
 export const METER_ROUTES: readonly Route[] = [
@@ -138,7 +138,7 @@ export const METER_ROUTES: readonly Route[] = [
      *   穿套管   PTFE 管绝缘，冷端留接线          plant/robot
      */
     id: 'make/thermocouple',
-    name: '热电偶制造',
+    name: 'Thermocouple Manufacturing', name_zh: '热电偶制造',
     produces: [{ item: 'std/thermocouple-t-general', qty: q(1), gives: [{ param: 'rangeMin', kind: 'range', min: -200, max: -50 }, { param: 'rangeMax', kind: 'range', min: 350, max: 400 }] }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -166,7 +166,7 @@ export const METER_ROUTES: readonly Route[] = [
      * 弹性差一档，用久了会疲劳，指针回不到零。**这是它寿命短的原因。**
      */
     id: 'make/galvanometer',
-    name: '动圈检流计制造',
+    name: 'Moving-Coil Galvanometer Manufacturing', name_zh: '动圈检流计制造',
     produces: [{ item: 'std/galvanometer-general', qty: q(1), gives: [{ param: 'sensitivity', kind: 'range', min: 1, max: 30 }] }],
     uses: [
       { anyOf: [{ item: 'std/permanent-magnet-general', qty: q(2) }] },
@@ -196,7 +196,7 @@ export const METER_ROUTES: readonly Route[] = [
      * 标定仍在恒温间里做：定点法（冰点、锡、锌）。
      */
     id: 'make/millivoltmeter',
-    name: '电子式毫伏表制造',
+    name: 'Electronic Millivoltmeter Manufacturing', name_zh: '电子式毫伏表制造',
     produces: [{ item: 'std/millivoltmeter-electronic', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/galvanometer-general', qty: q(1) }] },
@@ -238,7 +238,7 @@ export const METER_ROUTES: readonly Route[] = [
      * 热偶路线取的估算，不是实测节拍。
      */
     id: 'make/thermocouple-nicr-nial-general',
-    name: '高温热电偶制造',
+    name: 'High-Temperature Thermocouple Manufacturing', name_zh: '高温热电偶制造',
     produces: [
       {
         item: 'std/thermocouple-nicr-nial-general',

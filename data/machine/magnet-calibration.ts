@@ -22,7 +22,7 @@ export const MAGNET_CALIBRATION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dc-source-60ka',
-    name: '60 kA 直流校准源',
+    name: '60 kA DC Calibration Source', name_zh: '60 kA 直流校准源',
     unit: '台',
     category: 'machine',
     // 单件校准设备：变压器、整流、busbar 在整机内不再拆独立零件，标 monolithic。
@@ -42,7 +42,7 @@ export const MAGNET_CALIBRATION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/standard-field-magnet-12t',
-    name: '10–13 T 标准场磁体',
+    name: '10–13 T Standard-Field Magnet', name_zh: '10–13 T 标准场磁体',
     unit: '台',
     category: 'machine',
     // 单件校准设备：线圈、恒温器、支撑在整机内不再拆独立零件，标 monolithic。
@@ -62,7 +62,7 @@ export const MAGNET_CALIBRATION_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/dump-load-45gj',
-    name: '45 GJ 泄放/量热负载',
+    name: '45 GJ Dump/Calorimetric Load', name_zh: '45 GJ 泄放/量热负载',
     unit: '台',
     category: 'machine',
     // 单件校准设备：电阻堆、水冷、开关在整机内不再拆独立零件，标 monolithic。
@@ -85,7 +85,7 @@ export const MAGNET_CALIBRATION_ROUTES: readonly Route[] = [
      * 纹波与温漂未测。
      */
     id: 'make/dc-source-60ka',
-    name: '60 kA 直流校准源制造',
+    name: '60 kA DC Calibration Source Manufacturing', name_zh: '60 kA 直流校准源制造',
     produces: [
       {
         item: 'plant/dc-source-60ka',
@@ -121,7 +121,7 @@ export const MAGNET_CALIBRATION_ROUTES: readonly Route[] = [
      * 不是独立标准；溯源缺口未解。4 K 由 jt-cooler 的 3.8–4.5 K 窗口承担。
      */
     id: 'make/standard-field-magnet-12t',
-    name: '10–13 T 标准场磁体制造',
+    name: '10–13 T Standard-Field Magnet Manufacturing', name_zh: '10–13 T 标准场磁体制造',
     produces: [
       {
         item: 'plant/standard-field-magnet-12t',
@@ -175,7 +175,7 @@ export const MAGNET_CALIBRATION_ROUTES: readonly Route[] = [
      * 水冷与量热未标定。
      */
     id: 'make/dump-load-45gj',
-    name: '45 GJ 泄放/量热负载制造',
+    name: '45 GJ Dump/Calorimetric Load Manufacturing', name_zh: '45 GJ 泄放/量热负载制造',
     produces: [
       {
         item: 'plant/dump-load-45gj',

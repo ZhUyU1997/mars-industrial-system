@@ -49,7 +49,7 @@ export const PLANAR_ITEMS: readonly Item[] = [
    *
    * 它是本层第一只"参数由图形决定"的器件 —— 也就是说，第一只**可以批量做**的器件。
    */
-  { id: 'std/planar-transistor-general', name: '平面晶体管', unit: '件', category: 'part' },
+  { id: 'std/planar-transistor-general', name: 'Planar Transistor', name_zh: '平面晶体管', unit: '件', category: 'part' },
 ];
 
 export const PLANAR_ROUTES: readonly Route[] = [
@@ -65,7 +65,7 @@ export const PLANAR_ROUTES: readonly Route[] = [
      * 也就是图形与要留的区域互补。这是负胶最容易搞反的一处）。
      */
     id: 'make/planar-transistor',
-    name: '平面晶体管制造',
+    name: 'Planar Transistor Manufacturing', name_zh: '平面晶体管制造',
     produces: [{ item: 'std/planar-transistor-general', qty: q(20) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },

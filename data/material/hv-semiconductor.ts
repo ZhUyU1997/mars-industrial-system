@@ -295,7 +295,7 @@ export const HV_SEMI_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/transformer',
-    name: '高压测试台高压试验变压器',
+    name: 'High-Voltage Test Bench High-Voltage Test Transformer', name_zh: '高压测试台高压试验变压器',
     unit: '件',
     category: 'part',
     props: [{ param: 'voltage', kind: 'range', min: 0, max: 10000, unit: 'V', dir: 'atLeast' }],
@@ -316,7 +316,7 @@ export const HV_SEMI_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/divider',
-    name: '高压测试台水电阻分压器',
+    name: 'High-Voltage Test Bench Water Resistor Voltage Divider', name_zh: '高压测试台水电阻分压器',
     unit: '件',
     category: 'part',
     props: [{ param: 'voltage', kind: 'range', min: 0, max: 10000, unit: 'V', dir: 'atLeast' }],
@@ -336,7 +336,7 @@ export const HV_SEMI_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/fixture',
-    name: '高压测试台压接夹具',
+    name: 'High-Voltage Test Bench Crimping Fixture', name_zh: '高压测试台压接夹具',
     unit: '件',
     category: 'part',
     props: [{ param: 'clampForce', kind: 'range', min: 0, max: 50000, unit: 'N', dir: 'atLeast' }],
@@ -355,7 +355,7 @@ export const HV_SEMI_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/source-100k',
-    name: '100 kV 独立源',
+    name: '100 kV Independent Source', name_zh: '100 kV 独立源',
     unit: '件',
     category: 'part',
     props: [
@@ -373,7 +373,7 @@ export const HV_SEMI_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/divider-100k',
-    name: '100 kV 分压器',
+    name: '100 kV Voltage Divider', name_zh: '100 kV 分压器',
     unit: '件',
     category: 'part',
     props: [
@@ -411,7 +411,7 @@ export const HV_SEMI_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/hv-rectifier-general',
-    name: '高压整流二极管',
+    name: 'High-Voltage Rectifier Diode', name_zh: '高压整流二极管',
     unit: '件',
     category: 'part',
     props: [
@@ -440,7 +440,7 @@ export const HV_SEMI_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/hv-thyristor-general',
-    name: '高压晶闸管',
+    name: 'High-Voltage Thyristor', name_zh: '高压晶闸管',
     unit: '件',
     category: 'part',
     props: [
@@ -466,7 +466,7 @@ export const HV_SEMI_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/rc-thyristor-general',
-    name: '逆导晶闸管',
+    name: 'Reverse-Conducting Thyristor', name_zh: '逆导晶闸管',
     unit: '件',
     category: 'part',
     props: [
@@ -494,7 +494,7 @@ export const HV_SEMI_ROUTES: readonly Route[] = [
      * 那台 1:20 脉冲变压器同一个"用大件干小事"，在这里连损耗都算不上。
      */
     id: 'make/hv-test-transformer',
-    name: '高压测试台高压试验变压器制造',
+    name: 'High-Voltage Test Bench High-Voltage Test Transformer Manufacturing', name_zh: '高压测试台高压试验变压器制造',
     produces: [
       {
         item: 'plant/hv-test-bench/transformer',
@@ -539,7 +539,7 @@ export const HV_SEMI_ROUTES: readonly Route[] = [
      * 所以这是**相对**标定：分压比的不确定度 = 变比（±2 %）+ 水温（±20 %）。
      */
     id: 'make/hv-test-divider',
-    name: '高压测试台水电阻分压器制造',
+    name: 'High-Voltage Test Bench Water Resistor Voltage Divider Manufacturing', name_zh: '高压测试台水电阻分压器制造',
     produces: [
       {
         item: 'plant/hv-test-bench/divider',
@@ -583,7 +583,7 @@ export const HV_SEMI_ROUTES: readonly Route[] = [
      * 力的核对不用测力计（没有）：用铸铁砝码 100 kg × 5 吊在杠杆上，量碟簧压缩量对照。
      */
     id: 'make/hv-test-fixture',
-    name: '高压测试台压接夹具制造',
+    name: 'High-Voltage Test Bench Crimping Fixture Manufacturing', name_zh: '高压测试台压接夹具制造',
     produces: [
       {
         item: 'plant/hv-test-bench/fixture',
@@ -646,7 +646,7 @@ export const HV_SEMI_ROUTES: readonly Route[] = [
      * **机械的斜面比工艺的环便宜**，这是本层与 2000 年以后工业做法最不一样的地方。
      */
     id: 'make/hv-rectifier',
-    name: '高压整流二极管制造',
+    name: 'High-Voltage Rectifier Diode Manufacturing', name_zh: '高压整流二极管制造',
     produces: [
       {
         item: 'std/hv-rectifier-general',
@@ -762,7 +762,7 @@ export const HV_SEMI_ROUTES: readonly Route[] = [
      * 第十二节"工装不进 uses"的口径相反，这里如实记，因为它真的会被磷吃掉。
      */
     id: 'make/hv-thyristor',
-    name: '高压晶闸管制造',
+    name: 'High-Voltage Thyristor Manufacturing', name_zh: '高压晶闸管制造',
     produces: [
       {
         item: 'std/hv-thyristor-general',
@@ -887,7 +887,7 @@ export const HV_SEMI_ROUTES: readonly Route[] = [
      * 这一点不写清楚，下一个人会把它当成 GTO。
      */
     id: 'make/rc-thyristor',
-    name: '逆导晶闸管制造',
+    name: 'Reverse-Conducting Thyristor Manufacturing', name_zh: '逆导晶闸管制造',
     produces: [
       {
         item: 'std/rc-thyristor-general',
@@ -990,7 +990,7 @@ export const HV_SEMI_ROUTES: readonly Route[] = [
      * 140 kg 石英是 34 组 × 36 片 φ200 × 1.5 mm 的叠片 —— 这是本件最重的一笔。
      */
     id: 'make/hv-test-source-100k',
-    name: '100 kV 独立源制造',
+    name: '100 kV Independent Source Manufacturing', name_zh: '100 kV 独立源制造',
     produces: [
       {
         item: 'plant/hv-test-bench/source-100k',
@@ -1026,7 +1026,7 @@ export const HV_SEMI_ROUTES: readonly Route[] = [
      * 这里用电阻丝绕氧化铝骨架，SF₆ 里绝缘，精度 1–2 %。
      */
     id: 'make/hv-test-divider-100k',
-    name: '100 kV 分压器制造',
+    name: '100 kV Voltage Divider Manufacturing', name_zh: '100 kV 分压器制造',
     produces: [
       {
         item: 'plant/hv-test-bench/divider-100k',
@@ -1064,7 +1064,7 @@ export const SEED_ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/hv-test-bench',
-    name: '高压器件测试台装配',
+    name: 'High-Voltage Device Test Bench Assembly', name_zh: '高压器件测试台装配',
     produces: [{
       item: 'plant/hv-test-bench',
       qty: q(1),

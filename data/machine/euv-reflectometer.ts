@@ -336,7 +336,7 @@ export const EUV_REFL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-reflectometer/chamber',
-    name: '真空腔',
+    name: 'Vacuum Chamber', name_zh: '真空腔',
     unit: '件',
     category: 'part',
     props: [
@@ -368,7 +368,7 @@ export const EUV_REFL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-reflectometer/feedthrough',
-    name: '波纹管旋转馈通',
+    name: 'Bellows Rotary Feedthrough', name_zh: '波纹管旋转馈通',
     unit: '件',
     category: 'part',
     props: [
@@ -394,7 +394,7 @@ export const EUV_REFL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-reflectometer/goniometer',
-    name: '测角台',
+    name: 'Goniometer Stage', name_zh: '测角台',
     unit: '件',
     category: 'part',
     props: [
@@ -416,7 +416,7 @@ export const EUV_REFL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-reflectometer/sample-stage',
-    name: '样品台',
+    name: 'Sample Stage', name_zh: '样品台',
     unit: '件',
     category: 'part',
     props: [
@@ -438,7 +438,7 @@ export const EUV_REFL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-reflectometer/aperture',
-    name: '入射光阑',
+    name: 'Entrance Aperture', name_zh: '入射光阑',
     unit: '件',
     category: 'part',
     props: [
@@ -461,7 +461,7 @@ export const EUV_REFL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-reflectometer/shutter',
-    name: '光闸',
+    name: 'Optical Shutter', name_zh: '光闸',
     unit: '件',
     category: 'part',
     props: [
@@ -489,7 +489,7 @@ export const EUV_REFL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-reflectometer/detector',
-    name: '探测器',
+    name: 'Detector', name_zh: '探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -518,7 +518,7 @@ export const EUV_REFL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-reflectometer/roughness-standard',
-    name: '粗糙度计量标准',
+    name: 'Roughness Metrology Standard', name_zh: '粗糙度计量标准',
     unit: '套',
     category: 'part',
     props: [
@@ -550,7 +550,7 @@ export const EUV_REFL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-reflectometer',
-    name: '13.5 nm 测角反射率计',
+    name: '13.5 nm Goniometric Reflectometer', name_zh: '13.5 nm 测角反射率计',
     unit: '台',
     category: 'machine',
     holds: [
@@ -610,7 +610,7 @@ export const EUV_REFL_ROUTES: readonly Route[] = [
      * 所以这道工序真正的判据是**烘烤后的压升**，不是保压法。
      */
     id: 'make/euv-reflectometer-chamber',
-    name: '真空腔制造',
+    name: 'Vacuum Chamber Manufacturing', name_zh: '真空腔制造',
     produces: [
       {
         item: 'plant/euv-reflectometer/chamber',
@@ -654,7 +654,7 @@ export const EUV_REFL_ROUTES: readonly Route[] = [
      * 弯 10⁵ 次之后针孔最先出现在波峰内侧。
      */
     id: 'make/euv-reflectometer-feedthrough',
-    name: '波纹管旋转馈通制造',
+    name: 'Bellows Rotary Feedthrough Manufacturing', name_zh: '波纹管旋转馈通制造',
     produces: [
       {
         item: 'plant/euv-reflectometer/feedthrough',
@@ -700,7 +700,7 @@ export const EUV_REFL_ROUTES: readonly Route[] = [
      * 角度标准（量块给的是长度，正弦尺要 250 mm 的基座 —— 那反而是另一条路）。
      */
     id: 'make/euv-reflectometer-goniometer',
-    name: '测角台制造',
+    name: 'Goniometer Stage Manufacturing', name_zh: '测角台制造',
     produces: [
       {
         item: 'plant/euv-reflectometer/goniometer',
@@ -748,7 +748,7 @@ export const EUV_REFL_ROUTES: readonly Route[] = [
      * 弹簧压紧的限位块，不靠丝杠 —— 因为要的不是"走到哪"，是"每次都回同一处"。
      */
     id: 'make/euv-reflectometer-sample-stage',
-    name: '样品台制造',
+    name: 'Sample Stage Manufacturing', name_zh: '样品台制造',
     produces: [
       {
         item: 'plant/euv-reflectometer/sample-stage',
@@ -793,7 +793,7 @@ export const EUV_REFL_ROUTES: readonly Route[] = [
      * 让孔壁的散射往腔壁上打。
      */
     id: 'make/euv-reflectometer-aperture',
-    name: '入射光阑制造',
+    name: 'Entrance Aperture Manufacturing', name_zh: '入射光阑制造',
     produces: [
       {
         item: 'plant/euv-reflectometer/aperture',
@@ -833,7 +833,7 @@ export const EUV_REFL_ROUTES: readonly Route[] = [
      * 这一条很重要：**本底的大小不重要，本底"关得住"才重要**（问题四的漂移项）。
      */
     id: 'make/euv-reflectometer-shutter',
-    name: '光闸制造',
+    name: 'Optical Shutter Manufacturing', name_zh: '光闸制造',
     produces: [
       {
         item: 'plant/euv-reflectometer/shutter',
@@ -882,7 +882,7 @@ export const EUV_REFL_ROUTES: readonly Route[] = [
      * 而不是"焊"。
      */
     id: 'make/euv-reflectometer-detector',
-    name: '探测器制造',
+    name: 'Detector Manufacturing', name_zh: '探测器制造',
     produces: [
       {
         item: 'plant/euv-reflectometer/detector',
@@ -940,7 +940,7 @@ export const EUV_REFL_ROUTES: readonly Route[] = [
      * 只能间接支撑"这一片是 0.3 nm"。文件头那条降级点就是为这句话写的。
      */
     id: 'make/euv-reflectometer-roughness-standard',
-    name: '粗糙度计量标准制造',
+    name: 'Roughness Metrology Standard Manufacturing', name_zh: '粗糙度计量标准制造',
     produces: [
       {
         item: 'plant/euv-reflectometer/roughness-standard',
@@ -994,7 +994,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/euv-reflectometer',
-    name: '13.5 nm 测角反射率计装配',
+    name: '13.5 nm Goniometric Reflectometer Assembly', name_zh: '13.5 nm 测角反射率计装配',
     produces: [{
       item: 'plant/euv-reflectometer',
       qty: q(1),

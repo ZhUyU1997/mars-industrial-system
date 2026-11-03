@@ -45,7 +45,7 @@ export const CO_HIGH_PURITY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/methyl-formate',
-    name: '甲酸甲酯',
+    name: 'Methyl Formate', name_zh: '甲酸甲酯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -61,7 +61,7 @@ export const CO_HIGH_PURITY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/formic-acid',
-    name: '甲酸',
+    name: 'Formic Acid', name_zh: '甲酸',
     unit: 'kg',
     category: 'material',
     props: [
@@ -79,7 +79,7 @@ export const CO_HIGH_PURITY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/co-high-purity',
-    name: '高纯 CO',
+    name: 'High-Purity CO', name_zh: '高纯 CO',
     unit: 'kg',
     category: 'material',
     props: [
@@ -101,7 +101,7 @@ export const CO_HIGH_PURITY_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/methyl-formate',
-    name: '甲酸甲酯制备',
+    name: 'Methyl Formate Production', name_zh: '甲酸甲酯制备',
     produces: [
       {
         item: 'mat/methyl-formate',
@@ -136,7 +136,7 @@ export const CO_HIGH_PURITY_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/formic-acid',
-    name: '甲酸制备',
+    name: 'Formic Acid Production', name_zh: '甲酸制备',
     produces: [
       {
         item: 'mat/formic-acid',
@@ -174,7 +174,7 @@ export const CO_HIGH_PURITY_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/co-high-purity',
-    name: '高纯 CO 制备',
+    name: 'High-Purity CO Production', name_zh: '高纯 CO 制备',
     produces: [
       {
         item: 'mat/co-high-purity',

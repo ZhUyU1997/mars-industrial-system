@@ -398,7 +398,7 @@ const STABILIZED_LASER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/stabilized-laser/tube',
-    name: '稳频激光器放电管',
+    name: 'Frequency-Stabilized Laser Discharge Tube', name_zh: '稳频激光器放电管',
     unit: '件',
     category: 'part',
     props: [
@@ -429,7 +429,7 @@ const STABILIZED_LASER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/stabilized-laser/resonator',
-    name: '稳频激光器谐振腔',
+    name: 'Frequency-Stabilized Laser Resonator', name_zh: '稳频激光器谐振腔',
     unit: '件',
     category: 'part',
     props: [
@@ -455,7 +455,7 @@ const STABILIZED_LASER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/stabilized-laser/prism',
-    name: '稳频激光器棱镜-缝选线器',
+    name: 'Frequency-Stabilized Laser Prism-Slit Line Selector', name_zh: '稳频激光器棱镜-缝选线器',
     unit: '件',
     category: 'part',
     props: [
@@ -486,7 +486,7 @@ const STABILIZED_LASER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/stabilized-laser/filter',
-    name: '稳频激光器腔外单频滤波器',
+    name: 'Frequency-Stabilized Laser External-Cavity Single-Frequency Filter', name_zh: '稳频激光器腔外单频滤波器',
     unit: '件',
     category: 'part',
     props: [
@@ -516,7 +516,7 @@ const STABILIZED_LASER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/stabilized-laser/actuator',
-    name: '稳频激光器腔长调谐器',
+    name: 'Frequency-Stabilized Laser Cavity Length Tuner', name_zh: '稳频激光器腔长调谐器',
     unit: '件',
     category: 'part',
     props: [
@@ -549,7 +549,7 @@ const STABILIZED_LASER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/stabilized-laser/power',
-    name: '稳频激光器放电电源',
+    name: 'Frequency-Stabilized Laser Discharge Power Supply', name_zh: '稳频激光器放电电源',
     unit: '台',
     category: 'part',
     props: [
@@ -582,7 +582,7 @@ const STABILIZED_LASER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/stabilized-laser/servo',
-    name: '稳频激光器跟踪伺服',
+    name: 'Frequency-Stabilized Laser Tracking Servo', name_zh: '稳频激光器跟踪伺服',
     unit: '台',
     category: 'part',
     props: [
@@ -609,7 +609,7 @@ const STABILIZED_LASER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/stabilized-laser/housing',
-    name: '稳频激光器罩与底座',
+    name: 'Frequency-Stabilized Laser Cover and Base', name_zh: '稳频激光器罩与底座',
     unit: '件',
     category: 'part',
     props: [
@@ -647,7 +647,7 @@ const STABILIZED_LASER_PARTS: readonly Item[] = [
  */
 const CALIBRATED_SCALE: Item = {
   id: 'std/calibrated-scale-100',
-  name: '100 mm 校准标尺',
+  name: '100 mm Calibrated Scale', name_zh: '100 mm 校准标尺',
   unit: '件',
   category: 'part',
   props: [
@@ -693,7 +693,7 @@ const CALIBRATED_SCALE: Item = {
  */
 const STABILIZED_LASER: Item = {
   id: 'plant/stabilized-laser',
-  name: '稳频激光器',
+  name: 'Frequency-Stabilized Laser', name_zh: '稳频激光器',
   unit: '台',
   category: 'machine',
   props: [
@@ -754,7 +754,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * 那是本层唯一能给出的漏率判据。
      */
     id: 'make/stabilized-laser-tube',
-    name: '稳频激光器放电管制造',
+    name: 'Frequency-Stabilized Laser Discharge Tube Manufacturing', name_zh: '稳频激光器放电管制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -864,7 +864,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * 里能看到 2 个峰，够判 600 ± 6 MHz。
      */
     id: 'make/stabilized-laser-resonator',
-    name: '稳频激光器谐振腔制造',
+    name: 'Frequency-Stabilized Laser Resonator Manufacturing', name_zh: '稳频激光器谐振腔制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -932,7 +932,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * 而真正的判据是"缝挡得住 514.5"——那要靠装调后在缝后量两条线的强度比（>100:1）。
      */
     id: 'make/stabilized-laser-prism',
-    name: '稳频激光器棱镜-缝选线器制造',
+    name: 'Frequency-Stabilized Laser Prism-Slit Line Selector Manufacturing', name_zh: '稳频激光器棱镜-缝选线器制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -998,7 +998,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * 这一句要留着：**量与算是两件事，这里必须说清哪个是哪个。**
      */
     id: 'make/stabilized-laser-filter',
-    name: '稳频激光器腔外单频滤波器制造',
+    name: 'Frequency-Stabilized Laser External-Cavity Single-Frequency Filter Manufacturing', name_zh: '稳频激光器腔外单频滤波器制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1065,7 +1065,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * 所以两条路线并存，配方差 40 %、指标差 14 dB。**读的人要知道自己买的是哪一种。**
      */
     id: 'make/stabilized-laser-filter-single',
-    name: '稳频激光器腔外单频滤波器制造',
+    name: 'Frequency-Stabilized Laser External-Cavity Single-Frequency Filter Manufacturing', name_zh: '稳频激光器腔外单频滤波器制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -1132,7 +1132,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * 投料清单里，所以这里用 `mat/glass` 自己做：壁厚 1 mm、10 kV/mm）。
      */
     id: 'make/stabilized-laser-actuator',
-    name: '稳频激光器腔长调谐器制造',
+    name: 'Frequency-Stabilized Laser Cavity Length Tuner Manufacturing', name_zh: '稳频激光器腔长调谐器制造',
     rate: { hours: q(30) },
     produces: [
       {
@@ -1203,7 +1203,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * 不是"纹波精确到多少"** —— 反正放电自己会把电压拉回来。
      */
     id: 'make/stabilized-laser-power',
-    name: '稳频激光器放电电源制造',
+    name: 'Frequency-Stabilized Laser Discharge Power Supply Manufacturing', name_zh: '稳频激光器放电电源制造',
     rate: { hours: q(80) },
     produces: [
       {
@@ -1276,7 +1276,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * 且噪声 ≤0.2 %（30 s 平均）。**这一步做不成，整台机器只是一台"多模蓝激光"。**
      */
     id: 'make/stabilized-laser-servo',
-    name: '稳频激光器跟踪伺服制造',
+    name: 'Frequency-Stabilized Laser Tracking Servo Manufacturing', name_zh: '稳频激光器跟踪伺服制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -1347,7 +1347,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * （与 `make/phase-shifter-platen` 的注释同一句）。
      */
     id: 'make/stabilized-laser-housing',
-    name: '稳频激光器罩与底座制造',
+    name: 'Frequency-Stabilized Laser Cover and Base Manufacturing', name_zh: '稳频激光器罩与底座制造',
     rate: { hours: q(30) },
     produces: [
       {
@@ -1407,7 +1407,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * 做成 100 mm 真空参考臂 —— `plant/euv-vacuum` 在 `needs` 里就是为了它。
      */
     id: 'make/calibrated-scale-100',
-    name: '100 mm 校准标尺制造',
+    name: '100 mm Calibrated Scale Manufacturing', name_zh: '100 mm 校准标尺制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -1478,7 +1478,7 @@ export const STABILIZED_LASER_ROUTES: readonly Route[] = [
      * 而**要求 10 nm 的地方会把这一条自动筛掉**：`accuracy` 的 `dir: 'atMost'` 会判它不够。
      */
     id: 'make/calibrated-scale-100-transfer',
-    name: '100 mm 校准标尺制造',
+    name: '100 mm Calibrated Scale Manufacturing', name_zh: '100 mm 校准标尺制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -1528,7 +1528,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/stabilized-laser',
-    name: '稳频激光器装配',
+    name: 'Frequency-Stabilized Laser Assembly', name_zh: '稳频激光器装配',
     produces: [{
       item: 'plant/stabilized-laser',
       qty: q(1),

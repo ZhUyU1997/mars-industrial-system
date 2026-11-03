@@ -319,7 +319,7 @@ export const UNBLOCK_ESR_ROUTES: readonly Route[] = [
   {
     /** 造型 → 熔铜浇注 → 打箱 → 车 → 钣金焊水套 → 磨内孔 → 装配 → 试压。 */
     id: 'make/esr-mold-cast',
-    name: '电渣重熔炉水冷铜结晶器制造',
+    name: 'Electroslag Remelting Furnace Water-Cooled Copper Mold Manufacturing', name_zh: '电渣重熔炉水冷铜结晶器制造',
     produces: [{ item: 'plant/esr-furnace/mold', qty: q(1) }],
     uses: [
       // 铜内套 + 底水箱铜板 + 浇冒口。铜是这条路线的全部代价：

@@ -442,7 +442,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-autoclave',
-    name: '中压釜',
+    name: 'Medium-Pressure Autoclave', name_zh: '中压釜',
     unit: '台',
     category: 'machine',
     holds: [
@@ -481,7 +481,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-line',
-    name: '中压管道回路',
+    name: 'Medium-Pressure Piping Loop', name_zh: '中压管道回路',
     unit: '套',
     category: 'machine',
     holds: [
@@ -527,7 +527,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-uniformity-kit',
-    name: 'CMP 片内均匀性闭环工装',
+    name: 'CMP Within-Wafer Uniformity Closed-Loop Fixture', name_zh: 'CMP 片内均匀性闭环工装',
     unit: '台',
     category: 'machine',
     holds: [
@@ -571,7 +571,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-autoclave/shell',
-    name: '中压釜筒体与封头',
+    name: 'Medium-Pressure Autoclave Shell and Head', name_zh: '中压釜筒体与封头',
     unit: '件',
     category: 'part',
     props: [
@@ -598,7 +598,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-autoclave/liner',
-    name: '中压釜铜内衬',
+    name: 'Medium-Pressure Autoclave Copper Liner', name_zh: '中压釜铜内衬',
     unit: '件',
     category: 'part',
     props: [
@@ -623,7 +623,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-autoclave/flange-seal',
-    name: '中压釜法兰与静密封组',
+    name: 'Medium-Pressure Autoclave Flange and Static Seal Set', name_zh: '中压釜法兰与静密封组',
     unit: '套',
     category: 'part',
     props: [
@@ -649,7 +649,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-autoclave/burst-disc',
-    name: '中压釜爆破片',
+    name: 'Medium-Pressure Autoclave Burst Disc', name_zh: '中压釜爆破片',
     unit: '件',
     category: 'part',
     props: [
@@ -678,7 +678,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-autoclave/gauge',
-    name: '中压釜弹簧管',
+    name: 'Medium-Pressure Autoclave Bourdon Tube', name_zh: '中压釜弹簧管',
     unit: '件',
     category: 'part',
     props: [
@@ -703,7 +703,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-autoclave/safety-valve',
-    name: '中压釜弹簧式安全阀',
+    name: 'Medium-Pressure Autoclave Spring-Loaded Safety Valve', name_zh: '中压釜弹簧式安全阀',
     unit: '件',
     category: 'part',
     props: [
@@ -730,7 +730,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-autoclave/heater',
-    name: '中压釜电加热夹套',
+    name: 'Medium-Pressure Autoclave Electric Heating Jacket', name_zh: '中压釜电加热夹套',
     unit: '件',
     category: 'part',
     props: [
@@ -757,7 +757,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-line/pipe',
-    name: '中压管道回路卷焊管',
+    name: 'Medium-Pressure Piping Loop Roll-Welded Pipe', name_zh: '中压管道回路卷焊管',
     unit: '件',
     category: 'part',
     props: [
@@ -778,7 +778,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-line/flange-pair',
-    name: '中压管道回路法兰对',
+    name: 'Medium-Pressure Piping Loop Flange Pair', name_zh: '中压管道回路法兰对',
     unit: '套',
     category: 'part',
     props: [
@@ -802,7 +802,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-line/valve',
-    name: '中压管道回路中压针阀',
+    name: 'Medium-Pressure Piping Loop Medium-Pressure Needle Valve', name_zh: '中压管道回路中压针阀',
     unit: '件',
     category: 'part',
     props: [
@@ -830,7 +830,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mid-pressure-line/insulation',
-    name: '中压管道回路硅酸钙保温块',
+    name: 'Medium-Pressure Piping Loop Calcium Silicate Insulation Block', name_zh: '中压管道回路硅酸钙保温块',
     unit: '件',
     category: 'part',
     props: [
@@ -862,7 +862,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-uniformity-kit/zone-sensor',
-    name: 'CMP 两区压力传感器',
+    name: 'CMP Two-Zone Pressure Sensor', name_zh: 'CMP 两区压力传感器',
     unit: '件',
     category: 'part',
     props: [
@@ -891,7 +891,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-uniformity-kit/actuator',
-    name: 'CMP 气动执行',
+    name: 'CMP Pneumatic Actuator', name_zh: 'CMP 气动执行',
     unit: '套',
     category: 'part',
     props: [
@@ -920,7 +920,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-uniformity-kit/backing-film',
-    name: 'CMP 柔性背膜',
+    name: 'CMP Flexible Backing Film', name_zh: 'CMP 柔性背膜',
     unit: '件',
     category: 'part',
     props: [
@@ -946,7 +946,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-uniformity-kit/scan-stage',
-    name: '9/49 点扫描台',
+    name: '9/49-Point Scanning Stage', name_zh: '9/49 点扫描台',
     unit: '件',
     category: 'part',
     props: [
@@ -980,7 +980,7 @@ export const PU_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmp-uniformity-kit/bridge',
-    name: 'CMP 电容桥与读数',
+    name: 'CMP Capacitance Bridge and Readout', name_zh: 'CMP 电容桥与读数',
     unit: '件',
     category: 'part',
     props: [
@@ -1027,7 +1027,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 而石灰在本文件的投料白名单里，煤油不在。
      */
     id: 'make/midp-autoclave-shell',
-    name: '中压釜筒体与封头制造',
+    name: 'Medium-Pressure Autoclave Shell and Head Manufacturing', name_zh: '中压釜筒体与封头制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -1104,7 +1104,7 @@ export const PU_ROUTES: readonly Route[] = [
      *      不能焊**：铜-钢焊要镍中间层，本层没有镍）
      */
     id: 'make/midp-autoclave-liner',
-    name: '中压釜铜内衬制造',
+    name: 'Medium-Pressure Autoclave Copper Liner Manufacturing', name_zh: '中压釜铜内衬制造',
     rate: { hours: q(10) },
     produces: [
       {
@@ -1167,7 +1167,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 压紧判据是**"绳出 1 mm"**，不是扭矩 —— 本层没有力矩扳手。
      */
     id: 'make/midp-autoclave-flange-seal',
-    name: '中压釜法兰与静密封组制造',
+    name: 'Medium-Pressure Autoclave Flange and Static Seal Set Manufacturing', name_zh: '中压釜法兰与静密封组制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -1236,7 +1236,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 3.2 MPa 那一档换 φ2 的通径（同一个夹持环，只换中间环）。
      */
     id: 'make/midp-burst-disc',
-    name: '中压釜爆破片制造',
+    name: 'Medium-Pressure Autoclave Burst Disc Manufacturing', name_zh: '中压釜爆破片制造',
     rate: { hours: q(6) },
     produces: [
       {
@@ -1302,7 +1302,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 指针与扇齿的传动比 1:10 —— **表的精度一半在扇齿，一半在标定**，管子只是原动机。
      */
     id: 'make/midp-gauge',
-    name: '中压釜弹簧管制造',
+    name: 'Medium-Pressure Autoclave Bourdon Tube Manufacturing', name_zh: '中压釜弹簧管制造',
     rate: { hours: q(10) },
     produces: [
       {
@@ -1365,7 +1365,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 回火 480–520 °C 是为了把淬火马氏体变成回火屈氏体（弹性极限最高的一档）。
      */
     id: 'make/midp-safety-valve',
-    name: '中压釜弹簧式安全阀制造',
+    name: 'Medium-Pressure Autoclave Spring-Loaded Safety Valve Manufacturing', name_zh: '中压釜弹簧式安全阀制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -1423,7 +1423,7 @@ export const PU_ROUTES: readonly Route[] = [
      * + 矿棉外保温**。石墨在空气里 400 °C 起氧化，而夹套内壁就是 300 °C —— 三者缺一不可。
      */
     id: 'make/midp-heater',
-    name: '中压釜电加热夹套制造',
+    name: 'Medium-Pressure Autoclave Electric Heating Jacket Manufacturing', name_zh: '中压釜电加热夹套制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -1486,7 +1486,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 纵缝一条（0.5 m）+ 弯头冷弯 R = 3D = 75 mm（砂填冷弯，热弯本层做不干净）。
      */
     id: 'make/midp-pipe',
-    name: '中压管道回路卷焊管制造',
+    name: 'Medium-Pressure Piping Loop Roll-Welded Pipe Manufacturing', name_zh: '中压管道回路卷焊管制造',
     rate: { hours: q(6) },
     produces: [
       {
@@ -1535,7 +1535,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 但**数量级不同**，写在这里免得被当成同一个数）。
      */
     id: 'make/midp-flange-pair',
-    name: '中压管道回路法兰对制造',
+    name: 'Medium-Pressure Piping Loop Flange Pair Manufacturing', name_zh: '中压管道回路法兰对制造',
     rate: { hours: q(6) },
     produces: [
       {
@@ -1589,7 +1589,7 @@ export const PU_ROUTES: readonly Route[] = [
      * **填料函漏与座面漏是两件事**：前者在阀杆上、关不关阀都在漏；后者只在关闭时判。
      */
     id: 'make/midp-valve',
-    name: '中压管道回路中压针阀制造',
+    name: 'Medium-Pressure Piping Loop Medium-Pressure Needle Valve Manufacturing', name_zh: '中压管道回路中压针阀制造',
     rate: { hours: q(10) },
     produces: [
       {
@@ -1660,7 +1660,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 工业的蒸压釜是 10–50 m³ 的卧式（釜门是齿啮式快开，本层做不了，见 §八 表外）。
      */
     id: 'make/midp-calcium-silicate-insulation',
-    name: '中压管道回路硅酸钙保温块制造',
+    name: 'Medium-Pressure Piping Loop Calcium Silicate Insulation Block Manufacturing', name_zh: '中压管道回路硅酸钙保温块制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -1731,7 +1731,7 @@ export const PU_ROUTES: readonly Route[] = [
      * **这一格就是 `cmp-integration.ts` R8 ⑩ "闭环 ±2 %" 缺的那只表**（§4.2）。
      */
     id: 'make/cmp-uniformity-zone-sensor',
-    name: 'CMP 两区压力传感器制造',
+    name: 'CMP Two-Zone Pressure Sensor Manufacturing', name_zh: 'CMP 两区压力传感器制造',
     rate: { hours: q(14) },
     produces: [
       {
@@ -1808,7 +1808,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 氮气管直接怼进去会把 0.18 mm 的膜片压塌（这一句是设计，不是提醒）。
      */
     id: 'make/cmp-uniformity-actuator',
-    name: 'CMP 气动执行制造',
+    name: 'CMP Pneumatic Actuator Manufacturing', name_zh: 'CMP 气动执行制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -1884,7 +1884,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 降到 0.05 mm/300 片。
      */
     id: 'make/cmp-uniformity-backing-film',
-    name: 'CMP 柔性背膜制造',
+    name: 'CMP Flexible Backing Film Manufacturing', name_zh: 'CMP 柔性背膜制造',
     rate: { hours: q(4) },
     produces: [
       {
@@ -1948,7 +1948,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 不构成限制（`cmp-integration.ts:130` 同一个数）——但**要能调**，所以夹持座带 0.1 mm 的垫片组。
      */
     id: 'make/cmp-uniformity-scan-stage',
-    name: '9/49 点扫描台制造',
+    name: '9/49-Point Scanning Stage Manufacturing', name_zh: '9/49 点扫描台制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -2005,7 +2005,7 @@ export const PU_ROUTES: readonly Route[] = [
      * 而 ΔC/C₀ = w/d 是绝对量 —— 频率漂 1 % 就是 1 % 的读数误差）。
      */
     id: 'make/cmp-uniformity-bridge',
-    name: 'CMP 电容桥与读数制造',
+    name: 'CMP Capacitance Bridge and Readout Manufacturing', name_zh: 'CMP 电容桥与读数制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -2077,7 +2077,7 @@ export const PU_ROUTES: readonly Route[] = [
      * `plant/oxygen-probe`（±26 % 的精度，判 1 % 级够）—— 这条写法。
      */
     id: 'make/cmp-hard-pad-pressurized',
-    name: 'CMP 硬垫制造',
+    name: 'CMP Hard Pad Manufacturing', name_zh: 'CMP 硬垫制造',
     rate: { hours: q(5) },
     produces: [
       {
@@ -2146,7 +2146,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/mid-pressure-autoclave',
-    name: '中压釜装配',
+    name: 'Medium-Pressure Autoclave Assembly', name_zh: '中压釜装配',
     produces: [{
       item: 'plant/mid-pressure-autoclave',
       qty: q(1),
@@ -2166,7 +2166,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/mid-pressure-line',
-    name: '中压管道回路装配',
+    name: 'Medium-Pressure Piping Loop Assembly', name_zh: '中压管道回路装配',
     produces: [{
       item: 'plant/mid-pressure-line',
       qty: q(1),
@@ -2184,7 +2184,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/cmp-uniformity-kit',
-    name: 'CMP 片内均匀性闭环工装装配',
+    name: 'CMP Within-Wafer Uniformity Closed-Loop Fixture Assembly', name_zh: 'CMP 片内均匀性闭环工装装配',
     produces: [{
       item: 'plant/cmp-uniformity-kit',
       qty: q(1),

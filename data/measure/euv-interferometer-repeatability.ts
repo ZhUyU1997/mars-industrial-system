@@ -12,7 +12,7 @@ import { q } from '../../src/index.ts';
 export const EUV_INTERFEROMETER_REPEATABILITY_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/euv-interferometer-repeatability-measure-record',
-    name: 'EUV 干涉仪重复性测量记录',
+    name: 'EUV Interferometer Repeatability Measurement Record', name_zh: 'EUV 干涉仪重复性测量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -28,7 +28,7 @@ export const EUV_INTERFEROMETER_REPEATABILITY_MEASURE_ROUTES: readonly Route[] =
      * **EUV 干涉仪：300 mm 绝对平晶重复 10 次，算 repeatability。**
      */
     id: 'measure/euv-interferometer-repeatability',
-    name: 'EUV 干涉仪重复性测量',
+    name: 'EUV Interferometer Repeatability Measurement', name_zh: 'EUV 干涉仪重复性测量',
     produces: [{
       item: 'mat/euv-interferometer-repeatability-measure-record',
       qty: q(1),

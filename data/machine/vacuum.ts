@@ -35,10 +35,10 @@ import { q } from '../../src/index.ts';
 
 export const VACUUM_PARTS: readonly Item[] = [
   /** 水环泵体。偏心泵壳 + 叶轮 + 水环补水口 —— 靠水封，不要油。 */
-  { id: 'plant/evaporator/pump/water-ring', name: '蒸发器水环泵体', unit: '件', category: 'part' },
+  { id: 'plant/evaporator/pump/water-ring', name: 'Evaporator Water-Ring Pump Body', name_zh: '蒸发器水环泵体', unit: '件', category: 'part' },
 
   /** 罗茨转子对。8 字形转子两只、同步齿轮一对、间隙 0.1 mm（不接触、不磨损）。 */
-  { id: 'plant/evaporator/pump/roots', name: '蒸发器罗茨转子对', unit: '件', category: 'part',
+  { id: 'plant/evaporator/pump/roots', name: 'Evaporator Roots Rotor Pair', name_zh: '蒸发器罗茨转子对', unit: '件', category: 'part',
     composedOf: [
       { item: 'plant/evaporator/pump/roots/rotor', qty: q(2) },
       { item: 'plant/evaporator/pump/roots/shaft', qty: q(2) },
@@ -47,20 +47,20 @@ export const VACUUM_PARTS: readonly Item[] = [
     ] },
 
   /** 真空计。热偶计（1–100 Pa）与皮拉尼计（0.1–100 Pa）各一只。 */
-  { id: 'plant/evaporator/pump/gauge', name: '蒸发器真空计', unit: '件', category: 'part' },
+  { id: 'plant/evaporator/pump/gauge', name: 'Evaporator Vacuum Gauge', name_zh: '蒸发器真空计', unit: '件', category: 'part' },
 
   /** 蒸镀钟罩。石英或玻璃钟罩 + 上下法兰 + 电极 + 观察窗 + 挡板。 */
-  { id: 'plant/evaporator/bell', name: '蒸发器蒸镀钟罩', unit: '件', category: 'part' },
+  { id: 'plant/evaporator/bell', name: 'Evaporator Deposition Bell Jar', name_zh: '蒸发器蒸镀钟罩', unit: '件', category: 'part' },
 
   /** 蒸发舟与电极。钨丝篮（装铝丝）或钼舟，通大电流加热。 */
-  { id: 'plant/evaporator/boat', name: '蒸发器蒸发舟与电极', unit: '件', category: 'part' },
+  { id: 'plant/evaporator/boat', name: 'Evaporator Boat and Electrode', name_zh: '蒸发器蒸发舟与电极', unit: '件', category: 'part' },
 ];
 
 export const VACUUM_ROUTES: readonly Route[] = [
   {
     /** 水环泵：泵壳铸造 + 叶轮 + 轴封 + 补水接管。 */
     id: 'make/water-ring-pump',
-    name: '蒸发器水环泵体制造',
+    name: 'Evaporator Water-Ring Pump Body Manufacturing', name_zh: '蒸发器水环泵体制造',
     produces: [{ item: 'plant/evaporator/pump/water-ring', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht200', qty: q(1) }] },
@@ -73,7 +73,7 @@ export const VACUUM_ROUTES: readonly Route[] = [
   {
     /** 罗茨转子对：8 字形型线铣削 + 同步齿轮（滚齿）+ 动平衡。 */
     id: 'make/roots-rotor',
-    name: '蒸发器罗茨转子对制造',
+    name: 'Evaporator Roots Rotor Pair Manufacturing', name_zh: '蒸发器罗茨转子对制造',
     produces: [{ item: 'plant/evaporator/pump/roots', qty: q(1) }],
     // 转子、轴、同步齿轮、轴承在条目 composedOf 上；这里只写总装。
     uses: [],
@@ -87,7 +87,7 @@ export const VACUUM_ROUTES: readonly Route[] = [
   {
     /** 真空计：热偶计（热电偶 + 加热丝）与皮拉尼计（惠斯通电桥 + 热丝）。 */
     id: 'make/vacuum-gauge',
-    name: '蒸发器真空计制造',
+    name: 'Evaporator Vacuum Gauge Manufacturing', name_zh: '蒸发器真空计制造',
     produces: [{ item: 'plant/evaporator/pump/gauge', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/thermocouple-t-general', qty: q(1) }] },
@@ -101,7 +101,7 @@ export const VACUUM_ROUTES: readonly Route[] = [
   {
     /** 钟罩：石英管/玻璃罩成形 + 法兰 + 电极封接（玻璃-金属封接，那套）。 */
     id: 'make/evaporator-bell',
-    name: '蒸发器蒸镀钟罩制造',
+    name: 'Evaporator Deposition Bell Jar Manufacturing', name_zh: '蒸发器蒸镀钟罩制造',
     produces: [{ item: 'plant/evaporator/bell', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/quartz-pure', qty: q(1) }] },
@@ -114,7 +114,7 @@ export const VACUUM_ROUTES: readonly Route[] = [
   {
     /** 蒸发舟：钨丝绕成篮，或钼片压成舟 —— 通电到 1200 °C 把铝蒸出去。 */
     id: 'make/evaporator-boat',
-    name: '蒸发器蒸发舟与电极制造',
+    name: 'Evaporator Boat and Electrode Manufacturing', name_zh: '蒸发器蒸发舟与电极制造',
     produces: [{ item: 'plant/evaporator/boat', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/tungsten-powder', qty: q(1) }] },
@@ -136,7 +136,7 @@ export const VACUUM_ROUTES: readonly Route[] = [
  */
 export const VACUUM_PUMP: Item = {
   id: 'plant/evaporator/pump',
-  name: '蒸发器泵',
+  name: 'Evaporator Pump', name_zh: '蒸发器泵',
   unit: '套',
   category: 'part',
   composedOf: [
@@ -150,7 +150,7 @@ export const VACUUM_PUMP: Item = {
 
 export const EVAPORATOR: Item = {
   id: 'plant/evaporator',
-  name: '蒸发器',
+  name: 'Evaporator', name_zh: '蒸发器',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'pressure', min: 0.001, max: 10 }],
@@ -175,7 +175,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/evaporator',
-    name: '蒸发器装配',
+    name: 'Evaporator Assembly', name_zh: '蒸发器装配',
     produces: [{
       item: 'plant/evaporator',
       qty: q(1),
@@ -188,7 +188,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/evaporator-pump',
-    name: '蒸发器泵装配',
+    name: 'Evaporator Pump Assembly', name_zh: '蒸发器泵装配',
     produces: [{
       item: 'plant/evaporator/pump',
       qty: q(1),

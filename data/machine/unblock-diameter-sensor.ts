@@ -461,7 +461,7 @@ export const UNBLOCK_DIA_SENSOR_ROUTES: readonly Route[] = [
      *  · 闭环 = **核对液位斜率 0.07 mm/14.6 min**（就是坩埚那件"一格"的节拍）
      */
     id: 'make/diameter-sensor-optical',
-    name: '直拉单晶炉光电测径头制造',
+    name: 'Czochralski Single-Crystal Furnace Optical Diameter Measuring Head Manufacturing', name_zh: '直拉单晶炉光电测径头制造',
     produces: [{ item: 'plant/cz-puller/diameter-sensor', qty: q(1) }],
     uses: [
       /**

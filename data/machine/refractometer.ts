@@ -53,13 +53,13 @@ export const REFRACTOMETER_PARTS: readonly Item[] = [
    * 玻璃的折射率要**已知**：同一批熔制的玻璃，用已知液体（水，1.333）
    * 标定过。所以这台仪器的精度一半靠棱镜，一半靠标定。
    */
-  { id: 'plant/refractometer/prism', name: '折射仪测量棱镜', unit: '件', category: 'part' },
+  { id: 'plant/refractometer/prism', name: 'Refractometer Measuring Prism', name_zh: '折射仪测量棱镜', unit: '件', category: 'part' },
 
   /** 分度盘。玻璃圆盘上刻 0–90°，读到 1″（弧秒），与比较仪的刻度尺同一工艺。 */
-  { id: 'plant/refractometer/circle', name: '折射仪分度盘', unit: '件', category: 'part' },
+  { id: 'plant/refractometer/circle', name: 'Refractometer Graduated Circle', name_zh: '折射仪分度盘', unit: '件', category: 'part' },
 
   /** 准直管与望远镜。一个把光变平行，一个把边界像放大到能对准刻度。 */
-  { id: 'plant/refractometer/telescope', name: '折射仪准直管与望远镜', unit: '件', category: 'part' },
+  { id: 'plant/refractometer/telescope', name: 'Refractometer Collimator and Telescope', name_zh: '折射仪准直管与望远镜', unit: '件', category: 'part' },
 
   /**
    * 可调狭缝。5–100 µm，两片不锈钢刀口 + 千分尺推一边。
@@ -86,7 +86,7 @@ export const REFRACTOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/refractometer/slit',
-    name: '折射仪可调狭缝',
+    name: 'Refractometer Adjustable Slit', name_zh: '折射仪可调狭缝',
     unit: '件',
     category: 'part',
     props: [
@@ -104,7 +104,7 @@ export const REFRACTOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/refractometer/detector',
-    name: '折射仪光电探测头',
+    name: 'Refractometer Photodetector Head', name_zh: '折射仪光电探测头',
     unit: '件',
     category: 'part',
     props: [
@@ -120,7 +120,7 @@ export const REFRACTOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/refractometer/chopper',
-    name: '折射仪斩波器',
+    name: 'Refractometer Chopper', name_zh: '折射仪斩波器',
     unit: '件',
     category: 'part',
     props: [
@@ -134,7 +134,7 @@ export const REFRACTOMETER_ROUTES: readonly Route[] = [
   {
     /** 棱镜。玻璃切块 → 粗磨 → 三面抛光到 λ/2 → 直角误差 < 10″。 */
     id: 'make/refractometer-prism',
-    name: '折射仪测量棱镜制造',
+    name: 'Refractometer Measuring Prism Manufacturing', name_zh: '折射仪测量棱镜制造',
     produces: [{ item: 'plant/refractometer/prism', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -146,7 +146,7 @@ export const REFRACTOMETER_ROUTES: readonly Route[] = [
   {
     /** 分度盘。玻璃涂蜡 → 刻线（车床丝杠带分度头）→ 氢氟酸轻蚀 → 去蜡。 */
     id: 'make/refractometer-circle',
-    name: '折射仪分度盘制造',
+    name: 'Refractometer Graduated Circle Manufacturing', name_zh: '折射仪分度盘制造',
     produces: [{ item: 'plant/refractometer/circle', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -158,7 +158,7 @@ export const REFRACTOMETER_ROUTES: readonly Route[] = [
   {
     /** 镜筒。两片透镜 + 黄铜/钢筒，与望远镜同一工艺。 */
     id: 'make/refractometer-telescope',
-    name: '折射仪准直管与望远镜制造',
+    name: 'Refractometer Collimator and Telescope Manufacturing', name_zh: '折射仪准直管与望远镜制造',
     produces: [{ item: 'plant/refractometer/telescope', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -176,7 +176,7 @@ export const REFRACTOMETER_ROUTES: readonly Route[] = [
      * 5 µm 那一档没有直接量具，只能靠千分尺 10 µm 分度 + 衍射条纹估。
      */
     id: 'make/refractometer-slit',
-    name: '折射仪可调狭缝制造',
+    name: 'Refractometer Adjustable Slit Manufacturing', name_zh: '折射仪可调狭缝制造',
     produces: [
       {
         item: 'plant/refractometer/slit',
@@ -205,7 +205,7 @@ export const REFRACTOMETER_ROUTES: readonly Route[] = [
      *   二极管 1 + 运放 1 + 铜线 0.05 + 铝 0.1 → 探测头 1
      */
     id: 'make/refractometer-detector',
-    name: '折射仪光电探测头制造',
+    name: 'Refractometer Photodetector Head Manufacturing', name_zh: '折射仪光电探测头制造',
     produces: [
       {
         item: 'plant/refractometer/detector',
@@ -234,7 +234,7 @@ export const REFRACTOMETER_ROUTES: readonly Route[] = [
      *   伺服 1 + 铝 0.1 + 45 钢 0.02 → 斩波器 1
      */
     id: 'make/refractometer-chopper',
-    name: '折射仪斩波器制造',
+    name: 'Refractometer Chopper Manufacturing', name_zh: '折射仪斩波器制造',
     produces: [
       {
         item: 'plant/refractometer/chopper',
@@ -269,7 +269,7 @@ export const REFRACTOMETER_ROUTES: readonly Route[] = [
  */
 export const REFRACTOMETER: Item = {
   id: 'plant/refractometer',
-  name: '折射仪',
+  name: 'Refractometer', name_zh: '折射仪',
   unit: '台',
   category: 'machine',
   composedOf: [
@@ -292,7 +292,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/refractometer',
-    name: '折射仪装配',
+    name: 'Refractometer Assembly', name_zh: '折射仪装配',
     produces: [{
       item: 'plant/refractometer',
       qty: q(1),

@@ -21,9 +21,9 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const FREQUENCY_CONVERTER_PARTS: readonly Item[] = [
-  { id: 'std/frequency-converter-general/frame', name: '中频发电机组机座', unit: '件', category: 'part' },
-  { id: 'std/frequency-converter-general/stator', name: '中频发电机组定子', unit: '件', category: 'part' },
-  { id: 'std/frequency-converter-general/rotor', name: '中频发电机组凸极转子', unit: '件', category: 'part' },
+  { id: 'std/frequency-converter-general/frame', name: 'Medium-Frequency Generator Set Frame', name_zh: '中频发电机组机座', unit: '件', category: 'part' },
+  { id: 'std/frequency-converter-general/stator', name: 'Medium-Frequency Generator Set Stator', name_zh: '中频发电机组定子', unit: '件', category: 'part' },
+  { id: 'std/frequency-converter-general/rotor', name: 'Medium-Frequency Generator Set Salient-Pole Rotor', name_zh: '中频发电机组凸极转子', unit: '件', category: 'part' },
 ];
 
 const FREQUENCY_CONVERTER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -32,7 +32,7 @@ const FREQUENCY_CONVERTER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 机座：HT200 铸铁，含磁极，极面磨平。 */
     id: 'make/frequency-converter-frame',
-    name: '中频发电机组机座制造',
+    name: 'Medium-Frequency Generator Set Frame Manufacturing', name_zh: '中频发电机组机座制造',
     produces: [{ item: 'std/frequency-converter-general/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(1) }] }],
     steps: [
@@ -43,7 +43,7 @@ const FREQUENCY_CONVERTER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 定子：硅钢叠片 0.6 kg + 漆包线 1 kg，嵌绕组。 */
     id: 'make/frequency-converter-stator',
-    name: '中频发电机组定子制造',
+    name: 'Medium-Frequency Generator Set Stator Manufacturing', name_zh: '中频发电机组定子制造',
     produces: [{ item: 'std/frequency-converter-general/stator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(3, 5) }] },
@@ -54,7 +54,7 @@ const FREQUENCY_CONVERTER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 凸极转子：硅钢 0.4 kg，铣槽、压轴、动平衡；无绕组。 */
     id: 'make/frequency-converter-rotor',
-    name: '中频发电机组凸极转子制造',
+    name: 'Medium-Frequency Generator Set Salient-Pole Rotor Manufacturing', name_zh: '中频发电机组凸极转子制造',
     produces: [{ item: 'std/frequency-converter-general/rotor', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/silicon-steel-3si', qty: q(2, 5) }] }],
     steps: [

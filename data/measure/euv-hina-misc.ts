@@ -17,7 +17,7 @@ export const EUV_HINA_MISC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ibf-removal-record',
-    name: 'IBF 去除函数记录',
+    name: 'IBF Removal Function Record', name_zh: 'IBF 去除函数记录',
     unit: '份',
     category: 'part',
     props: [
@@ -33,7 +33,7 @@ export const EUV_HINA_MISC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ccp-cal-record',
-    name: '抛光机校准记录',
+    name: 'Polishing Machine Calibration Record', name_zh: '抛光机校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -49,7 +49,7 @@ export const EUV_HINA_MISC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rotary-table-record',
-    name: '转台记录',
+    name: 'Rotary Table Record', name_zh: '转台记录',
     unit: '份',
     category: 'part',
     props: [
@@ -65,7 +65,7 @@ export const EUV_HINA_MISC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/spindle-runout-record',
-    name: '主轴跳动记录',
+    name: 'Spindle Runout Record', name_zh: '主轴跳动记录',
     unit: '份',
     category: 'part',
     props: [
@@ -86,7 +86,7 @@ export const EUV_HINA_MISC_ROUTES: readonly Route[] = [
      * `points 10`；不是 0.1 nm 面形的实测。
      */
     id: 'measure/ibf-removal',
-    name: 'IBF 去除函数测量',
+    name: 'IBF Removal Function Measurement', name_zh: 'IBF 去除函数测量',
     produces: [
       {
         item: 'mat/ibf-removal-record',
@@ -128,7 +128,7 @@ export const EUV_HINA_MISC_ROUTES: readonly Route[] = [
      * **抛光机校准：位置/压力/转速。**
      */
     id: 'measure/ccp-calibration',
-    name: '抛光机校准',
+    name: 'Polishing Machine Calibration', name_zh: '抛光机校准',
     produces: [
       {
         item: 'mat/ccp-cal-record',
@@ -174,7 +174,7 @@ export const EUV_HINA_MISC_ROUTES: readonly Route[] = [
      * **转台校准：轴向/径向/角。**
      */
     id: 'measure/rotary-table-cal',
-    name: '转台校准',
+    name: 'Rotary Table Calibration', name_zh: '转台校准',
     produces: [
       {
         item: 'mat/rotary-table-record',
@@ -209,7 +209,7 @@ export const EUV_HINA_MISC_ROUTES: readonly Route[] = [
      * **主轴跳动：电容传感器 + 千分表。**
      */
     id: 'measure/spindle-runout',
-    name: '主轴跳动测量',
+    name: 'Spindle Runout Measurement', name_zh: '主轴跳动测量',
     produces: [
       {
         item: 'mat/spindle-runout-record',

@@ -73,7 +73,7 @@ export const RESISTANCE_ALLOY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/manganese',
-    name: '电解锰',
+    name: 'Electrolytic Manganese', name_zh: '电解锰',
     unit: 'kg',
     category: 'material',
     props: [
@@ -97,7 +97,7 @@ export const RESISTANCE_ALLOY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/manganin',
-    name: '锰铜',
+    name: 'Manganin', name_zh: '锰铜',
     unit: 'kg',
     category: 'material',
     props: [
@@ -125,7 +125,7 @@ export const RESISTANCE_ALLOY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/constantan',
-    name: '康铜',
+    name: 'Constantan', name_zh: '康铜',
     unit: 'kg',
     category: 'material',
     props: [
@@ -150,7 +150,7 @@ export const RESISTANCE_ALLOY_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/precision-resistor-manganin',
-    name: '精密 manganin 标准电阻',
+    name: 'Precision Manganin Standard Resistor', name_zh: '精密 manganin 标准电阻',
     unit: '件',
     category: 'part',
     props: [
@@ -175,7 +175,7 @@ export const RESISTANCE_ALLOY_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/manganese-electrolytic',
-    name: '电解锰制备',
+    name: 'Electrolytic Manganese Production', name_zh: '电解锰制备',
     rate: { hours: q(48) },
     produces: [
       {
@@ -243,7 +243,7 @@ export const RESISTANCE_ALLOY_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/manganin',
-    name: '锰铜制备',
+    name: 'Manganin Production', name_zh: '锰铜制备',
     rate: { hours: q(72) },
     produces: [
       {
@@ -313,7 +313,7 @@ export const RESISTANCE_ALLOY_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/constantan',
-    name: '康铜制备',
+    name: 'Constantan Production', name_zh: '康铜制备',
     rate: { hours: q(48) },
     produces: [
       {
@@ -381,7 +381,7 @@ export const RESISTANCE_ALLOY_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/thermocouple-constantan',
-    name: '热电偶制造',
+    name: 'Thermocouple Manufacturing', name_zh: '热电偶制造',
     rate: { hours: q(4) },
     produces: [
       {
@@ -416,7 +416,7 @@ export const RESISTANCE_ALLOY_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/precision-resistor-manganin',
-    name: '精密 manganin 标准电阻制造',
+    name: 'Precision Manganin Standard Resistor Manufacturing', name_zh: '精密 manganin 标准电阻制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -478,7 +478,7 @@ export const RESISTANCE_ALLOY_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/lcr-resistance-arm-manganin',
-    name: '四端对电阻桥臂制造',
+    name: 'Four-Terminal-Pair Resistance Arm Manufacturing', name_zh: '四端对电阻桥臂制造',
     rate: { hours: q(24) },
     produces: [
       {

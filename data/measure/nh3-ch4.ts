@@ -71,7 +71,7 @@ export const NH3_CH4_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/nh3-ch4-h2s-record',
-    name: '氨中 CH₄ / 总烃 / H₂S记录',
+    name: 'Ammonia CH₄ / Total Hydrocarbons / H₂S Record', name_zh: '氨中 CH₄ / 总烃 / H₂S记录',
     unit: '份',
     category: 'part',
     props: [
@@ -110,7 +110,7 @@ export const NH3_CH4_MEASURE_ROUTES: readonly Route[] = [
      *   ⑥ 积分与外标（1/10/100 ppm 动态配气）
      */
     id: 'measure/nh3-sulfur-and-hydrocarbon',
-    name: '氨中 CH₄ / 总烃 / H₂S 测量',
+    name: 'Ammonia CH₄ / Total Hydrocarbons / H₂S Measurement', name_zh: '氨中 CH₄ / 总烃 / H₂S 测量',
     produces: [
       {
         item: 'mat/nh3-ch4-h2s-record',

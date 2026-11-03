@@ -452,7 +452,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher',
-    name: 'RIE 反应离子刻蚀机',
+    name: 'RIE Reactive Ion Etcher', name_zh: 'RIE 反应离子刻蚀机',
     unit: '台',
     category: 'machine',
     holds: [
@@ -505,7 +505,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/chamber',
-    name: 'RIE 真空腔',
+    name: 'RIE Vacuum Chamber', name_zh: 'RIE 真空腔',
     unit: '件',
     category: 'part',
     props: [
@@ -530,7 +530,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/electrode-lower',
-    name: 'RIE 下电极',
+    name: 'RIE Lower Electrode', name_zh: 'RIE 下电极',
     unit: '件',
     category: 'part',
     props: [
@@ -556,7 +556,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/electrode-upper',
-    name: 'RIE 上电极',
+    name: 'RIE Upper Electrode', name_zh: 'RIE 上电极',
     unit: '件',
     category: 'part',
     props: [
@@ -585,7 +585,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/rf-tank',
-    name: 'RF 振荡槽路',
+    name: 'RF Oscillator Tank Circuit', name_zh: 'RF 振荡槽路',
     unit: '件',
     category: 'part',
     props: [
@@ -610,7 +610,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/hv-charger',
-    name: 'RIE 充电电源',
+    name: 'RIE Charging Power Supply', name_zh: 'RIE 充电电源',
     unit: '件',
     category: 'part',
     props: [
@@ -634,7 +634,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/match-network',
-    name: 'RIE 匹配网络',
+    name: 'RIE Matching Network', name_zh: 'RIE 匹配网络',
     unit: '件',
     category: 'part',
     props: [
@@ -653,7 +653,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/gas-panel',
-    name: 'RIE 四路气路',
+    name: 'RIE Four-Line Gas Panel', name_zh: 'RIE 四路气路',
     unit: '件',
     category: 'part',
     props: [
@@ -677,7 +677,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/cl2-line',
-    name: 'RIE 第 5 路',
+    name: 'RIE Fifth Line', name_zh: 'RIE 第 5 路',
     unit: '件',
     category: 'part',
     props: [{ param: 'flowAccuracy', kind: 'range', min: 1, max: 50, unit: '%', dir: 'atMost' }],
@@ -694,7 +694,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/throttle',
-    name: 'RIE 节流阀',
+    name: 'RIE Throttle Valve', name_zh: 'RIE 节流阀',
     unit: '件',
     category: 'part',
     props: [
@@ -715,7 +715,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/chuck-clamp',
-    name: 'RIE 压环与导热',
+    name: 'RIE Clamp Ring and Thermal Conduction', name_zh: 'RIE 压环与导热',
     unit: '件',
     category: 'part',
     props: [
@@ -738,7 +738,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rie-etcher/endpoint-head',
-    name: 'RIE 激光干涉终点头',
+    name: 'RIE Laser Interferometric Endpoint Head', name_zh: 'RIE 激光干涉终点头',
     unit: '件',
     category: 'part',
     props: [
@@ -764,7 +764,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cf4',
-    name: '四氟化碳',
+    name: 'Carbon Tetrafluoride', name_zh: '四氟化碳',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99.9, unit: '%', dir: 'atLeast' }],
@@ -781,7 +781,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/sf6',
-    name: '六氟化硫',
+    name: 'Sulfur Hexafluoride', name_zh: '六氟化硫',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99.5, unit: '%', dir: 'atLeast' }],
@@ -811,7 +811,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rie-si-wafer',
-    name: '硅刻蚀片',
+    name: 'Etched Silicon Wafer', name_zh: '硅刻蚀片',
     unit: '片',
     category: 'part',
     props: [
@@ -841,7 +841,7 @@ export const RIE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rie-trench-wafer',
-    name: '介质沟槽刻蚀片',
+    name: 'Dielectric Trench Etched Wafer', name_zh: '介质沟槽刻蚀片',
     unit: '片',
     category: 'part',
     props: [
@@ -880,7 +880,7 @@ export const RIE_ROUTES: readonly Route[] = [
      * 检漏手段的缺乏与 `euv-source.ts` 的腔体是同一条（本层没有氦检漏）。
      */
     id: 'make/rie-chamber',
-    name: 'RIE 真空腔制造',
+    name: 'RIE Vacuum Chamber Manufacturing', name_zh: 'RIE 真空腔制造',
     produces: [
       {
         item: 'plant/rie-etcher/chamber',
@@ -949,7 +949,7 @@ export const RIE_ROUTES: readonly Route[] = [
      *      而铝溶得非常快 —— 锡箔就是掩模）。
      */
     id: 'make/rie-electrode-lower',
-    name: 'RIE 下电极制造',
+    name: 'RIE Lower Electrode Manufacturing', name_zh: 'RIE 下电极制造',
     produces: [
       {
         item: 'plant/rie-etcher/electrode-lower',
@@ -1010,7 +1010,7 @@ export const RIE_ROUTES: readonly Route[] = [
      * 50 mm 的极间距里会形成"喷流"，把片上的局部刻蚀速率打出 ±20 % 的斑。
      */
     id: 'make/rie-electrode-upper',
-    name: 'RIE 上电极制造',
+    name: 'RIE Upper Electrode Manufacturing', name_zh: 'RIE 上电极制造',
     produces: [
       {
         item: 'plant/rie-etcher/electrode-upper',
@@ -1070,7 +1070,7 @@ export const RIE_ROUTES: readonly Route[] = [
      *   （这是本机"点火电压"的唯一控制手段 —— 没有触发电路）。
      */
     id: 'make/rie-rf-tank',
-    name: 'RF 振荡槽路制造',
+    name: 'RF Oscillator Tank Circuit Manufacturing', name_zh: 'RF 振荡槽路制造',
     produces: [
       {
         item: 'plant/rie-etcher/rf-tank',
@@ -1167,7 +1167,7 @@ export const RIE_ROUTES: readonly Route[] = [
      * 的"配组"是同一个道理在电容上）。
      */
     id: 'make/rie-hv-charger',
-    name: 'RIE 充电电源制造',
+    name: 'RIE Charging Power Supply Manufacturing', name_zh: 'RIE 充电电源制造',
     produces: [
       {
         item: 'plant/rie-etcher/hv-charger',
@@ -1256,7 +1256,7 @@ export const RIE_ROUTES: readonly Route[] = [
      * 本层做不出（要陶瓷管 + 镀膜，那是另一条链）** ⇒ 只在小信号下标定。
      */
     id: 'make/rie-match-network',
-    name: 'RIE 匹配网络制造',
+    name: 'RIE Matching Network Manufacturing', name_zh: 'RIE 匹配网络制造',
     produces: [
       {
         item: 'plant/rie-etcher/match-network',
@@ -1331,7 +1331,7 @@ export const RIE_ROUTES: readonly Route[] = [
      * 这就是"±20 %"这个数字的物理出处，不是"大概估的"。
      */
     id: 'make/rie-gas-panel',
-    name: 'RIE 四路气路制造',
+    name: 'RIE Four-Line Gas Panel Manufacturing', name_zh: 'RIE 四路气路制造',
     produces: [
       {
         item: 'plant/rie-etcher/gas-panel',
@@ -1391,7 +1391,7 @@ export const RIE_ROUTES: readonly Route[] = [
      * 玻璃管与碳座之间用**磨口 + 石墨绳**（没有 PTFE 垫）。
      */
     id: 'make/rie-cl2-line',
-    name: 'RIE 第 5 路制造',
+    name: 'RIE Fifth Line Manufacturing', name_zh: 'RIE 第 5 路制造',
     produces: [
       {
         item: 'plant/rie-etcher/cl2-line',
@@ -1437,7 +1437,7 @@ export const RIE_ROUTES: readonly Route[] = [
      * 那 120 ppm 的一半。工业上用波纹管能到 1e-7，**差 5 个量级**。
      */
     id: 'make/rie-throttle',
-    name: 'RIE 节流阀制造',
+    name: 'RIE Throttle Valve Manufacturing', name_zh: 'RIE 节流阀制造',
     produces: [
       {
         item: 'plant/rie-etcher/throttle',
@@ -1482,7 +1482,7 @@ export const RIE_ROUTES: readonly Route[] = [
      * 这里只写"剪与铺"，**不假装本文件会轧锡箔**（缺口 ⑨ 的同类处理）。
      */
     id: 'make/rie-chuck-clamp',
-    name: 'RIE 压环与导热制造',
+    name: 'RIE Clamp Ring and Thermal Conduction Manufacturing', name_zh: 'RIE 压环与导热制造',
     produces: [
       {
         item: 'plant/rie-etcher/chuck-clamp',
@@ -1539,7 +1539,7 @@ export const RIE_ROUTES: readonly Route[] = [
      * 这与 `gate-stack.ts` "厚度测不了" 是同一个病，只是这里还有一条间接的路。
      */
     id: 'make/rie-endpoint-head',
-    name: 'RIE 激光干涉终点头制造',
+    name: 'RIE Laser Interferometric Endpoint Head Manufacturing', name_zh: 'RIE 激光干涉终点头制造',
     produces: [
       {
         item: 'plant/rie-etcher/endpoint-head',
@@ -1623,7 +1623,7 @@ export const RIE_ROUTES: readonly Route[] = [
      *   一个 100 kg 的批次装 **83 只瓶**。
      */
     id: 'make/cf4',
-    name: '四氟化碳制备',
+    name: 'Carbon Tetrafluoride Production', name_zh: '四氟化碳制备',
     produces: [{ item: 'mat/cf4', qty: q(100), gives: [{ param: 'purity', kind: 'range', min: 98, max: 99.5, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(341, 25) }] },
@@ -1706,7 +1706,7 @@ export const RIE_ROUTES: readonly Route[] = [
      *   两者是 OR 关系，不是替代 —— 所以两条路线都写。
      */
     id: 'make/sf6',
-    name: '六氟化硫制备',
+    name: 'Sulfur Hexafluoride Production', name_zh: '六氟化硫制备',
     produces: [{ item: 'mat/sf6', qty: q(100), gives: [{ param: 'purity', kind: 'range', min: 97, max: 98.5, dir: 'atLeast' }] }],
     uses: [
       { anyOf: [{ item: 'mat/sulfur', qty: q(219, 10) }] },
@@ -1799,7 +1799,7 @@ export const RIE_ROUTES: readonly Route[] = [
      *   抬高气压，就丢各向异性。**
      */
     id: 'make/rie-si-cl2',
-    name: '硅的各向异性刻蚀',
+    name: 'Anisotropic Etching of Silicon', name_zh: '硅的各向异性刻蚀',
     produces: [
       {
         item: 'mat/rie-si-wafer',
@@ -1892,7 +1892,7 @@ export const RIE_ROUTES: readonly Route[] = [
      *   要深度/速率 ⇒ SF₆（快、钝）—— 深硅槽、或者刻掉不重要的场区
      */
     id: 'make/rie-si-sf6',
-    name: '硅的各向异性刻蚀',
+    name: 'Anisotropic Etching of Silicon', name_zh: '硅的各向异性刻蚀',
     produces: [
       {
         item: 'mat/rie-si-wafer',
@@ -1995,7 +1995,7 @@ export const RIE_ROUTES: readonly Route[] = [
      *   这一道的工时比刻蚀本身长 8 倍。这是"RIE 的工时不在 RIE 上"的一个例子。
      */
     id: 'make/rie-oxide-trench',
-    name: '介质沟槽刻蚀片制造',
+    name: 'Dielectric Trench Etched Wafer Manufacturing', name_zh: '介质沟槽刻蚀片制造',
     produces: [
       {
         item: 'mat/rie-trench-wafer',
@@ -2094,7 +2094,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/rie-etcher',
-    name: 'RIE 反应离子刻蚀机装配',
+    name: 'RIE Reactive Ion Etcher Assembly', name_zh: 'RIE 反应离子刻蚀机装配',
     produces: [{
       item: 'plant/rie-etcher',
       qty: q(1),

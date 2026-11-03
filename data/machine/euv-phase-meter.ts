@@ -12,7 +12,7 @@ import { q } from '../../src/index.ts';
 export const EUV_PHASE_METER_ITEMS: readonly Item[] = [
   {
     id: 'plant/euv-phase-meter',
-    name: 'EUV 相位计',
+    name: 'EUV Phase Meter', name_zh: 'EUV 相位计',
     unit: '台',
     category: 'machine',
     props: [
@@ -30,7 +30,7 @@ export const EUV_PHASE_METER_ITEMS: readonly Item[] = [
 export const EUV_PHASE_METER_ROUTES: readonly Route[] = [
   {
     id: 'make/euv-phase-meter',
-    name: 'EUV 相位计制造',
+    name: 'EUV Phase Meter Manufacturing', name_zh: 'EUV 相位计制造',
     produces: [{
       item: 'plant/euv-phase-meter',
       qty: q(1),

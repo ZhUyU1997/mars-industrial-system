@@ -310,7 +310,7 @@ export const TITANIUM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ilmenite',
-    name: '钛铁矿精矿',
+    name: 'Ilmenite Concentrate', name_zh: '钛铁矿精矿',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'tio2', kind: 'range', min: 45, max: 50, unit: '%', dir: 'atLeast' }],
@@ -331,7 +331,7 @@ export const TITANIUM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/titanium-slag',
-    name: '高钛渣',
+    name: 'High-Titanium Slag', name_zh: '高钛渣',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'tio2', kind: 'range', min: 75, max: 85, unit: '%', dir: 'atLeast' }],
@@ -347,7 +347,7 @@ export const TITANIUM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ticl4-crude',
-    name: '粗四氯化钛',
+    name: 'Crude Titanium Tetrachloride', name_zh: '粗四氯化钛',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99, unit: '%', dir: 'atLeast' }],
@@ -365,7 +365,7 @@ export const TITANIUM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ticl4',
-    name: '四氯化钛',
+    name: 'Titanium Tetrachloride', name_zh: '四氯化钛',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 99, max: 99.9, unit: '%', dir: 'atLeast' }],
@@ -383,7 +383,7 @@ export const TITANIUM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/magnesium-chloride',
-    name: '无水氯化镁',
+    name: 'Anhydrous Magnesium Chloride', name_zh: '无水氯化镁',
     unit: 'kg',
     category: 'material',
     props: [
@@ -406,7 +406,7 @@ export const TITANIUM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/magnesium',
-    name: '镁',
+    name: 'Magnesium', name_zh: '镁',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 99, max: 99.9, unit: '%', dir: 'atLeast' }],
@@ -449,7 +449,7 @@ export const TITANIUM_ROUTES: readonly Route[] = [
      * （mat/tailings 的条目注释就是这么说的）。
      */
     id: 'make/ilmenite-concentrate',
-    name: '富集',
+    name: 'Enrichment', name_zh: '富集',
     rate: { hours: q(48) },
     produces: [
       {
@@ -507,7 +507,7 @@ export const TITANIUM_ROUTES: readonly Route[] = [
      * 所以炉衬寿命只有三炉 —— 这一项不在本文件的允许料表内，记在这里。
      */
     id: 'make/titanium-slag',
-    name: '钛渣制备',
+    name: 'Titanium Slag Production', name_zh: '钛渣制备',
     rate: { hours: q(24) },
     produces: [
       {
@@ -587,7 +587,7 @@ export const TITANIUM_ROUTES: readonly Route[] = [
      * 这里净进 1360 kg，其中 3.18 kg/kg Ti 会在镁电解那里回来。
      */
     id: 'make/ticl4-crude',
-    name: '沸腾氯化制备',
+    name: 'Titanium Tetrachloride Production by Fluidized-Bed Chlorination', name_zh: '沸腾氯化制备',
     rate: { hours: q(48) },
     produces: [
       {
@@ -655,7 +655,7 @@ export const TITANIUM_ROUTES: readonly Route[] = [
      * 本层没有湿度计，只能靠"先抽真空再进料"这一个动作（与 #23 同一种间接判据）。
      */
     id: 'make/ticl4-pure',
-    name: '精制',
+    name: 'Refining', name_zh: '精制',
     rate: { hours: q(36) },
     produces: [
       {
@@ -735,7 +735,7 @@ export const TITANIUM_ROUTES: readonly Route[] = [
      * `make/nitrogen` 每 2050 kg 混合气副产 1050 kg 氩 —— 氩在本层不稀缺。
      */
     id: 'make/titanium-kroll',
-    name: '钛制备',
+    name: 'Titanium Production', name_zh: '钛制备',
     rate: { hours: q(72) },
     produces: [
       {
@@ -865,7 +865,7 @@ export const TITANIUM_ROUTES: readonly Route[] = [
      "能续不能起"那条分界：循环能自己转，第一次要有人推。
      */
     id: 'make/magnesium-chloride',
-    name: 'MgO 氯化制备',
+    name: 'MgO Chlorination Production', name_zh: 'MgO 氯化制备',
     rate: { hours: q(36) },
     produces: [
       {
@@ -920,7 +920,7 @@ export const TITANIUM_ROUTES: readonly Route[] = [
      * 记在第七节。
      */
     id: 'make/magnesium-electrolysis',
-    name: 'MgCl₂ 电解',
+    name: 'MgCl₂ Electrolysis', name_zh: 'MgCl₂ 电解',
     rate: { hours: q(24) },
     produces: [
       {
@@ -994,7 +994,7 @@ export const TITANIUM_ROUTES: readonly Route[] = [
      * （第五问）。3N 靶 + 氧化物支深处 + 600 °C 退火给出来的 k 是 1e-3 那一档。
      */
     id: 'make/titanium-target',
-    name: '钛靶制备',
+    name: 'Titanium Target Production', name_zh: '钛靶制备',
     rate: { hours: q(120) },
     produces: [
       {

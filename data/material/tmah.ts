@@ -42,7 +42,7 @@ export const TMAH_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/trimethylamine',
-    name: '三甲胺',
+    name: 'Trimethylamine', name_zh: '三甲胺',
     unit: 'kg',
     category: 'material',
     props: [
@@ -58,7 +58,7 @@ export const TMAH_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tetramethylammonium-chloride',
-    name: '四甲基氯化铵',
+    name: 'Tetramethylammonium Chloride', name_zh: '四甲基氯化铵',
     unit: 'kg',
     category: 'material',
     props: [
@@ -76,7 +76,7 @@ export const TMAH_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tmah',
-    name: '四甲基氢氧化铵 25 % 水溶液',
+    name: 'Tetramethylammonium Hydroxide 25 % Aqueous Solution', name_zh: '四甲基氢氧化铵 25 % 水溶液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -99,7 +99,7 @@ export const TMAH_ROUTES: readonly Route[] = [
      * 循环与分离损失写在 `unbalanced_zh` 里，不假装 100 % 选择性。
      */
     id: 'make/trimethylamine',
-    name: '三甲胺制备',
+    name: 'Trimethylamine Production', name_zh: '三甲胺制备',
     produces: [
       {
         item: 'mat/trimethylamine',
@@ -162,7 +162,7 @@ export const TMAH_ROUTES: readonly Route[] = [
      * 浓缩结晶、过滤、真空干燥（本层没有真空干燥器，用 80–100 °C 常压烘）。
      */
     id: 'make/tetramethylammonium-chloride',
-    name: '四甲基氯化铵制备',
+    name: 'Tetramethylammonium Chloride Production', name_zh: '四甲基氯化铵制备',
     produces: [
       {
         item: 'mat/tetramethylammonium-chloride',
@@ -219,7 +219,7 @@ export const TMAH_ROUTES: readonly Route[] = [
      * **不用电解、不用离子交换膜** —— 这是本链绕开“没有阳离子膜”的办法。
      */
     id: 'make/tmah',
-    name: '四甲基氢氧化铵 25 % 水溶液制备',
+    name: 'Tetramethylammonium Hydroxide 25 % Aqueous Solution Production', name_zh: '四甲基氢氧化铵 25 % 水溶液制备',
     produces: [
       {
         item: 'mat/tmah',

@@ -32,7 +32,7 @@ export const SOURCE_RETROFIT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/source-100k-retrofit',
-    name: '100 kV 源 PD retrofit 套件',
+    name: '100 kV Source PD Retrofit Kit', name_zh: '100 kV 源 PD retrofit 套件',
     unit: '套',
     category: 'part',
     props: [
@@ -50,7 +50,7 @@ export const SOURCE_RETROFIT_ROUTES: readonly Route[] = [
      *   铝 5 + 铜 2 + PTFE 1 + 不锈钢 1 + SF₆ 5 → retrofit 1
      */
     id: 'make/source-100k-retrofit',
-    name: '100 kV 源 PD retrofit 套件制造',
+    name: '100 kV Source PD Retrofit Kit Manufacturing', name_zh: '100 kV 源 PD retrofit 套件制造',
     produces: [
       {
         item: 'plant/hv-test-bench/source-100k-retrofit',

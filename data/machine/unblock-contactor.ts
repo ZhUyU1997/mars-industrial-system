@@ -427,7 +427,7 @@ export const UNBLOCK_CONTACTOR_ROUTES: readonly Route[] = [
      * 三个没有字段的位置。
      */
     id: 'make/contactor-cast',
-    name: '交流接触器制造',
+    name: 'AC Contactor Manufacturing', name_zh: '交流接触器制造',
     produces: [{ item: 'std/contactor-general', qty: q(1), gives: [{ param: 'ratedCurrent', kind: 'range', min: 10, max: 60, dir: 'atLeast' }] }],
     uses: [
       {

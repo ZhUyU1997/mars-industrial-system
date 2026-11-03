@@ -349,7 +349,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/source-bench',
-    name: '椭偏仪光源台',
+    name: 'Ellipsometer Light Source Bench', name_zh: '椭偏仪光源台',
     unit: '件',
     category: 'part',
     props: [
@@ -376,7 +376,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/filter-wheel',
-    name: '椭偏仪滤光片轮',
+    name: 'Ellipsometer Filter Wheel', name_zh: '椭偏仪滤光片轮',
     unit: '件',
     category: 'part',
     props: [
@@ -404,7 +404,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/chopper',
-    name: '椭偏仪斩波器',
+    name: 'Ellipsometer Chopper', name_zh: '椭偏仪斩波器',
     unit: '件',
     category: 'part',
     props: [
@@ -429,7 +429,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/polarizer',
-    name: '椭偏仪起偏器',
+    name: 'Ellipsometer Polarizer', name_zh: '椭偏仪起偏器',
     unit: '件',
     category: 'part',
     props: [
@@ -459,7 +459,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/compensator',
-    name: '椭偏仪补偿器',
+    name: 'Ellipsometer Compensator', name_zh: '椭偏仪补偿器',
     unit: '件',
     category: 'part',
     props: [
@@ -484,7 +484,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/analyzer',
-    name: '椭偏仪检偏器',
+    name: 'Ellipsometer Analyzer', name_zh: '椭偏仪检偏器',
     unit: '件',
     category: 'part',
     props: [
@@ -510,7 +510,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/rotary-head',
-    name: '椭偏仪旋转头',
+    name: 'Ellipsometer Rotary Head', name_zh: '椭偏仪旋转头',
     unit: '件',
     category: 'part',
     props: [
@@ -536,7 +536,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/goniometer',
-    name: '椭偏仪变角臂',
+    name: 'Ellipsometer Variable-Angle Arm', name_zh: '椭偏仪变角臂',
     unit: '件',
     category: 'part',
     props: [
@@ -565,7 +565,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/sample-stage',
-    name: '椭偏仪样品台',
+    name: 'Ellipsometer Sample Stage', name_zh: '椭偏仪样品台',
     unit: '件',
     category: 'part',
     props: [
@@ -604,7 +604,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/detector',
-    name: '椭偏仪探测器',
+    name: 'Ellipsometer Detector', name_zh: '椭偏仪探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -628,7 +628,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/inverter',
-    name: '椭偏仪反演单元',
+    name: 'Ellipsometer Inversion Unit', name_zh: '椭偏仪反演单元',
     unit: '件',
     category: 'part',
     props: [
@@ -655,7 +655,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/standard-wafer',
-    name: '椭偏仪标准片',
+    name: 'Ellipsometer Standard Wafer', name_zh: '椭偏仪标准片',
     unit: '片',
     category: 'part',
     props: [
@@ -678,7 +678,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/ellipsometer/aperture',
-    name: '椭偏仪光阑组',
+    name: 'Ellipsometer Aperture Set', name_zh: '椭偏仪光阑组',
     unit: '件',
     category: 'part',
     props: [
@@ -714,7 +714,7 @@ export const ELLIPSOMETER_PARTS: readonly Item[] = [
  */
 export const ELLIPSOMETER: Item = {
   id: 'plant/ellipsometer',
-  name: '椭偏仪',
+  name: 'Ellipsometer', name_zh: '椭偏仪',
   unit: '台',
   category: 'machine',
   props: [
@@ -765,7 +765,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * 相对走 20 µm（800 mm × 23 µm/(m·K)）—— 那是 0.05° 的角度漂。
      */
     id: 'make/ellipsometer-source-bench',
-    name: '椭偏仪光源台制造',
+    name: 'Ellipsometer Light Source Bench Manufacturing', name_zh: '椭偏仪光源台制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -816,7 +816,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * 因此在报告里只会是一条 `prop_unfilled`，而不是一条能落地的路线）。
      */
     id: 'make/ellipsometer-filter-wheel',
-    name: '椭偏仪滤光片轮制造',
+    name: 'Ellipsometer Filter Wheel Manufacturing', name_zh: '椭偏仪滤光片轮制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -870,7 +870,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * 交流档读峰谷比** —— 这一层的仪器就这些，够用。
      */
     id: 'make/ellipsometer-chopper',
-    name: '椭偏仪斩波器制造',
+    name: 'Ellipsometer Chopper Manufacturing', name_zh: '椭偏仪斩波器制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -924,7 +924,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * 要的是"消光比稳"** —— 这一条与 `laser-stage` 的 2.4 nm 插值误差是同一个道理。
      */
     id: 'make/ellipsometer-polarizer',
-    name: '椭偏仪起偏器制造',
+    name: 'Ellipsometer Polarizer Manufacturing', name_zh: '椭偏仪起偏器制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -981,7 +981,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * 这是"缺料换来更薄"，不是"做不到"（`laser-stage.ts` 第一节① 同一句）。
      */
     id: 'make/ellipsometer-compensator',
-    name: '椭偏仪补偿器制造',
+    name: 'Ellipsometer Compensator Manufacturing', name_zh: '椭偏仪补偿器制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -1047,7 +1047,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * **真正要求严的是"角度的均匀性"（时间），不是"位置"。**
      */
     id: 'make/ellipsometer-analyzer',
-    name: '椭偏仪检偏器制造',
+    name: 'Ellipsometer Analyzer Manufacturing', name_zh: '椭偏仪检偏器制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1101,7 +1101,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * 速度环，**不够用来定角度**（§三）。角度由时基给。
      */
     id: 'make/ellipsometer-rotary-head',
-    name: '椭偏仪旋转头制造',
+    name: 'Ellipsometer Rotary Head Manufacturing', name_zh: '椭偏仪旋转头制造',
     rate: { hours: q(30) },
     produces: [
       {
@@ -1156,7 +1156,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * 是为了**把工作点挪到陡的地方**（75° 上 dΔ/dd = 9.13，是 70° 的 2.9 倍）。
      */
     id: 'make/ellipsometer-goniometer',
-    name: '椭偏仪变角臂制造',
+    name: 'Ellipsometer Variable-Angle Arm Manufacturing', name_zh: '椭偏仪变角臂制造',
     rate: { hours: q(36) },
     produces: [
       {
@@ -1208,7 +1208,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * ⇒ 0.1° 就是 0.55 µm，比标尺的 100 nm 差 5 倍；而且它没有"绝对零"。
      */
     id: 'make/ellipsometer-sample-stage',
-    name: '椭偏仪样品台制造',
+    name: 'Ellipsometer Sample Stage Manufacturing', name_zh: '椭偏仪样品台制造',
     rate: { hours: q(48) },
     produces: [
       {
@@ -1264,7 +1264,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      *   channels 2（信号 + 参考）—— 参考那一路把源的漂移除掉，是 1 % → 0.1 % 的第二步
      */
     id: 'make/ellipsometer-detector',
-    name: '椭偏仪探测器制造',
+    name: 'Ellipsometer Detector Manufacturing', name_zh: '椭偏仪探测器制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -1321,7 +1321,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * 两条算法装在两段程序里，是这台机器"能当量具、也能当传感器"的全部秘密。
      */
     id: 'make/ellipsometer-inverter',
-    name: '椭偏仪反演单元制造',
+    name: 'Ellipsometer Inversion Unit Manufacturing', name_zh: '椭偏仪反演单元制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -1384,7 +1384,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * 前提是设备）。
      */
     id: 'make/ellipsometer-standard-wafer',
-    name: '椭偏仪标准片制造',
+    name: 'Ellipsometer Standard Wafer Manufacturing', name_zh: '椭偏仪标准片制造',
     rate: { hours: q(2) },
     produces: [
       {
@@ -1438,7 +1438,7 @@ export const ELLIPSOMETER_ROUTES: readonly Route[] = [
      * 而抠到 0.1 mm 时衍射（λ/0.1 mm = 5 mrad）与孔边的散射会把 Ψ/Δ 拖走（D7）。
      */
     id: 'make/ellipsometer-aperture',
-    name: '椭偏仪光阑组制造',
+    name: 'Ellipsometer Aperture Set Manufacturing', name_zh: '椭偏仪光阑组制造',
     rate: { hours: q(10) },
     produces: [
       {
@@ -1491,7 +1491,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/ellipsometer',
-    name: '椭偏仪装配',
+    name: 'Ellipsometer Assembly', name_zh: '椭偏仪装配',
     produces: [{
       item: 'plant/ellipsometer',
       qty: q(1),

@@ -23,7 +23,7 @@ export const MAGNET_STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/shunt-50ka-standard',
-    name: '50 kA 电流标准分流器',
+    name: '50 kA Current Standard Shunt', name_zh: '50 kA 电流标准分流器',
     unit: '台',
     category: 'machine',
     // 单件一级标准：锰铜板、busbar、水冷按整台装配，不再拆独立零件，标 monolithic。
@@ -43,7 +43,7 @@ export const MAGNET_STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/field-mapping-standard-12t',
-    name: '10–13 T 场图/NMR 标准',
+    name: '10–13 T Field Map/NMR Standard', name_zh: '10–13 T 场图/NMR 标准',
     unit: '台',
     category: 'machine',
     // 单件一级标准：三轴台、探头夹持、采集按整台装配，不再拆独立零件，标 monolithic。
@@ -63,7 +63,7 @@ export const MAGNET_STANDARD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/calorimeter-45gj',
-    name: '30–45 GJ 量热标准',
+    name: '30–45 GJ Calorimetric Standard', name_zh: '30–45 GJ 量热标准',
     unit: '台',
     category: 'machine',
     // 单件一级标准：水箱、换热器、测温阵列按整台装配，不再拆独立零件，标 monolithic。
@@ -88,7 +88,7 @@ export const MAGNET_STANDARD_ROUTES: readonly Route[] = [
      * 无 50 kA 初级标准。
      */
     id: 'make/shunt-50ka-standard',
-    name: '50 kA 电流标准分流器制造',
+    name: '50 kA Current Standard Shunt Manufacturing', name_zh: '50 kA 电流标准分流器制造',
     produces: [
       {
         item: 'plant/shunt-50ka-standard',
@@ -124,7 +124,7 @@ export const MAGNET_STANDARD_ROUTES: readonly Route[] = [
      * 12 T 磁体本身是计算场，不是独立标准。
      */
     id: 'make/field-mapping-standard-12t',
-    name: '10–13 T 场图/NMR 标准制造',
+    name: '10–13 T Field Map/NMR Standard Manufacturing', name_zh: '10–13 T 场图/NMR 标准制造',
     produces: [
       {
         item: 'plant/field-mapping-standard-12t',
@@ -159,7 +159,7 @@ export const MAGNET_STANDARD_ROUTES: readonly Route[] = [
      * 41 GJ 满能量试验未做；电能-热量标定未做。
      */
     id: 'make/calorimeter-45gj',
-    name: '30–45 GJ 量热标准制造',
+    name: '30–45 GJ Calorimetric Standard Manufacturing', name_zh: '30–45 GJ 量热标准制造',
     produces: [
       {
         item: 'plant/calorimeter-45gj',

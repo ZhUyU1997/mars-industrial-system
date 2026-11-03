@@ -43,7 +43,7 @@ export const PD_CALIBRATOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/cal-capacitor',
-    name: '100 pF 空气电容',
+    name: '100 pF Air Capacitor', name_zh: '100 pF 空气电容',
     unit: '件',
     category: 'part',
     props: [
@@ -61,7 +61,7 @@ export const PD_CALIBRATOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-calibrator',
-    name: '高压测试台标准校准脉冲源',
+    name: 'High-Voltage Test Bench Standard Calibration Pulse Source', name_zh: '高压测试台标准校准脉冲源',
     unit: '件',
     category: 'part',
     props: [
@@ -79,7 +79,7 @@ export const PD_CALIBRATOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/charge-amp',
-    name: '高压测试台电荷放大器',
+    name: 'High-Voltage Test Bench Charge Amplifier', name_zh: '高压测试台电荷放大器',
     unit: '件',
     category: 'part',
     props: [
@@ -98,7 +98,7 @@ export const PD_CALIBRATOR_ROUTES: readonly Route[] = [
      *   铝 0.1 + PTFE 0.02 + 铜 0.02 → 电容 1
      */
     id: 'make/cal-capacitor',
-    name: '100 pF 空气电容制造',
+    name: '100 pF Air Capacitor Manufacturing', name_zh: '100 pF 空气电容制造',
     produces: [
       {
         item: 'plant/hv-test-bench/cal-capacitor',
@@ -127,7 +127,7 @@ export const PD_CALIBRATOR_ROUTES: readonly Route[] = [
      *   电容 1 + 晶闸管 1 + 基准 1 + 电阻丝 0.01 + 铝 0.2 + 铜 0.05 → 校准源 1
      */
     id: 'make/pd-calibrator',
-    name: '高压测试台标准校准脉冲源制造',
+    name: 'High-Voltage Test Bench Standard Calibration Pulse Source Manufacturing', name_zh: '高压测试台标准校准脉冲源制造',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-calibrator',
@@ -160,7 +160,7 @@ export const PD_CALIBRATOR_ROUTES: readonly Route[] = [
      *   电容 2 + 运放 2 + 电阻丝 0.01 + 铝 0.2 + 铜 0.05 → 电荷放大器 1
      */
     id: 'make/charge-amp',
-    name: '高压测试台电荷放大器制造',
+    name: 'High-Voltage Test Bench Charge Amplifier Manufacturing', name_zh: '高压测试台电荷放大器制造',
     produces: [
       {
         item: 'plant/hv-test-bench/charge-amp',

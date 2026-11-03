@@ -424,7 +424,7 @@ export const SUBNM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/titanium',
-    name: '钛',
+    name: 'Titanium', name_zh: '钛',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 98, max: 99.9, unit: '%', dir: 'atLeast' }],
@@ -451,7 +451,7 @@ export const SUBNM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-coater/reactive-manifold',
-    name: 'EUV 反应溅射混气歧管',
+    name: 'EUV Reactive Sputtering Gas Mixing Manifold', name_zh: 'EUV 反应溅射混气歧管',
     unit: '件',
     category: 'part',
     props: [
@@ -477,7 +477,7 @@ export const SUBNM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/subnm-thermostat/jacket',
-    name: '相变恒温测量腔相变恒温套',
+    name: 'Phase-Change Thermostatic Measurement Chamber Phase-Change Thermostatic Jacket', name_zh: '相变恒温测量腔相变恒温套',
     unit: '件',
     category: 'part',
     props: [
@@ -503,7 +503,7 @@ export const SUBNM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/subnm-thermostat/chamber',
-    name: '相变恒温测量腔干燥冷壁腔',
+    name: 'Phase-Change Thermostatic Measurement Chamber Dry Cold-Wall Chamber', name_zh: '相变恒温测量腔干燥冷壁腔',
     unit: '件',
     category: 'part',
     props: [
@@ -524,7 +524,7 @@ export const SUBNM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/subnm-thermostat/base',
-    name: '相变恒温测量腔三点支撑座',
+    name: 'Phase-Change Thermostatic Measurement Chamber 3-Point Support Base', name_zh: '相变恒温测量腔三点支撑座',
     unit: '件',
     category: 'part',
     props: [
@@ -557,7 +557,7 @@ export const SUBNM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/subnm-thermostat',
-    name: '相变恒温测量腔',
+    name: 'Phase-Change Thermostatic Measurement Chamber', name_zh: '相变恒温测量腔',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 0, max: 0.02 }],
@@ -606,7 +606,7 @@ export const SUBNM_ROUTES: readonly Route[] = [
      * + 装电路 4 h + 保压检漏 2 h = **24 h**
      */
     id: 'make/euv-coater-reactive-manifold',
-    name: 'EUV 反应溅射混气歧管制造',
+    name: 'EUV Reactive Sputtering Gas Mixing Manifold Manufacturing', name_zh: 'EUV 反应溅射混气歧管制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -707,7 +707,7 @@ export const SUBNM_ROUTES: readonly Route[] = [
      *   抵消不掉的是**方位向的不均匀**（≤0.02 %，估的）→ ≤0.015 nm。
      */
     id: 'make/ref-flat-hr-reference',
-    name: 'λ/1000 参考面元件制造',
+    name: 'λ/1000 Reference Flat Element Manufacturing', name_zh: 'λ/1000 参考面元件制造',
     rate: { hours: q(18) },
     produces: [
       {
@@ -817,7 +817,7 @@ export const SUBNM_ROUTES: readonly Route[] = [
      * 的"三块必须同一炉玻璃"是同一类约束，模型里没有"同一炉"这个概念，只能写在注释里。
      */
     id: 'make/ref-flat-hr-mirror',
-    name: 'F-P 对面板制造',
+    name: 'F-P Opposing Plate Manufacturing', name_zh: 'F-P 对面板制造',
     rate: { hours: q(18) },
     produces: [
       {
@@ -917,7 +917,7 @@ export const SUBNM_ROUTES: readonly Route[] = [
      * —— 那才是这条路的终点。
      */
     id: 'make/ref-flat-hr-oxide',
-    name: 'λ/1000 参考面元件制造',
+    name: 'λ/1000 Reference Flat Element Manufacturing', name_zh: 'λ/1000 参考面元件制造',
     rate: { hours: q(14) },
     produces: [
       {
@@ -1021,7 +1021,7 @@ export const SUBNM_ROUTES: readonly Route[] = [
      * 所以不结霜"是同一类红利）。
      */
     id: 'make/subnm-thermostat-jacket',
-    name: '相变恒温测量腔相变恒温套制造',
+    name: 'Phase-Change Thermostatic Measurement Chamber Phase-Change Thermostatic Jacket Manufacturing', name_zh: '相变恒温测量腔相变恒温套制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1099,7 +1099,7 @@ export const SUBNM_ROUTES: readonly Route[] = [
      * 而 0.5 kg CaO 能吸它自己的 30 % 重量 —— 一劳永逸。**这是本层唯一一种干燥剂。**
      */
     id: 'make/subnm-thermostat-chamber',
-    name: '相变恒温测量腔干燥冷壁腔制造',
+    name: 'Phase-Change Thermostatic Measurement Chamber Dry Cold-Wall Chamber Manufacturing', name_zh: '相变恒温测量腔干燥冷壁腔制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -1165,7 +1165,7 @@ export const SUBNM_ROUTES: readonly Route[] = [
      * 不是被测量的对象；它的膨胀只是把三个窝一起挪，不改变三点的相对高度。
      */
     id: 'make/subnm-thermostat-base',
-    name: '相变恒温测量腔三点支撑座制造',
+    name: 'Phase-Change Thermostatic Measurement Chamber 3-Point Support Base Manufacturing', name_zh: '相变恒温测量腔三点支撑座制造',
     rate: { hours: q(80) },
     produces: [
       {
@@ -1230,7 +1230,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/subnm-thermostat',
-    name: '相变恒温测量腔装配',
+    name: 'Phase-Change Thermostatic Measurement Chamber Assembly', name_zh: '相变恒温测量腔装配',
     produces: [{
       item: 'plant/subnm-thermostat',
       qty: q(1),

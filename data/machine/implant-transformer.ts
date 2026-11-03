@@ -44,7 +44,7 @@ export const IMPLANT_TRANSFORMER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-implanter/hv-transformer',
-    name: '100 kV 级 SF₆ 干式变压器',
+    name: '100 kV Class SF₆ Dry-Type Transformer', name_zh: '100 kV 级 SF₆ 干式变压器',
     unit: '件',
     category: 'part',
     props: [
@@ -69,7 +69,7 @@ export const IMPLANT_TRANSFORMER_ROUTES: readonly Route[] = [
      * 那一档是**设计值与绝缘距离算出来的**，不是打出来的（缺口①）。
      */
     id: 'make/implant-hv-transformer',
-    name: '100 kV 级 SF₆ 干式变压器制造',
+    name: '100 kV Class SF₆ Dry-Type Transformer Manufacturing', name_zh: '100 kV 级 SF₆ 干式变压器制造',
     produces: [
       {
         item: 'plant/ion-implanter/hv-transformer',

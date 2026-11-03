@@ -429,7 +429,7 @@ export const UNBLOCK_FLOTATION_ROUTES: readonly Route[] = [
      * 槽体是常温件，没有一处要烧到 1300。**不是忘了它，是不需要它。**
      */
     id: 'make/flotation-cells-cast',
-    name: '选矿厂浮选槽制造',
+    name: 'Ore Beneficiation Plant Flotation Cells Manufacturing', name_zh: '选矿厂浮选槽制造',
     produces: [{ item: 'plant/ore-beneficiary/flotation-cells', qty: q(1) }],
     uses: [
       {

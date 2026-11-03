@@ -56,7 +56,7 @@ import { q } from '../../src/index.ts';
  */
 export const EARTH_KILN_BODY: Item = {
   id: 'plant/earth-kiln/body',
-  name: '土窑窑体',
+  name: 'Earth Kiln Body', name_zh: '土窑窑体',
   unit: '件',
   category: 'part',
 };
@@ -68,7 +68,7 @@ export const EARTH_KILN_BODY: Item = {
  */
 export const EARTH_KILN: Item = {
   id: 'plant/earth-kiln',
-  name: '土窑',
+  name: 'Earth Kiln', name_zh: '土窑',
   unit: '座',
   category: 'machine',
   holds: [
@@ -90,7 +90,7 @@ export const EARTH_KILN_ROUTES: readonly Route[] = [
      * 夯筑与首烧都是机器人手上的活 —— **这是全模型里第一件"只用手和土"造出来的东西。**
      */
     id: 'make/earth-kiln-body',
-    name: '土窑窑体制造',
+    name: 'Earth Kiln Body Manufacturing', name_zh: '土窑窑体制造',
     produces: [{ item: 'plant/earth-kiln/body', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mars/regolith', qty: q(10000) }] },
@@ -119,7 +119,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/earth-kiln',
-    name: '土窑装配',
+    name: 'Earth Kiln Assembly', name_zh: '土窑装配',
     produces: [{
       item: 'plant/earth-kiln',
       qty: q(1),

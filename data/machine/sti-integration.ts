@@ -68,7 +68,7 @@ export const STI_INTEGRATION_ROUTES: readonly Route[] = [
      * 所以 eot 是开环记账；thickness 是物理厚度，不是 eot。
      */
     id: 'make/sti-gate-oxide',
-    name: '栅氧化片制造',
+    name: 'Gate Oxide Wafer Manufacturing', name_zh: '栅氧化片制造',
     produces: [
       {
         item: 'mat/gate-oxide-wafer',

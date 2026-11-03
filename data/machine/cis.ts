@@ -340,7 +340,7 @@ export const CIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cis-array',
-    name: '钉扎光电二极管阵列片',
+    name: 'Pinned Photodiode Array Wafer', name_zh: '钉扎光电二极管阵列片',
     unit: '片',
     category: 'part',
     props: [
@@ -369,7 +369,7 @@ export const CIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cis-bsi',
-    name: '背照减薄并键合到支撑片上的片',
+    name: 'Backside-Thinned Wafer Bonded to Carrier Wafer', name_zh: '背照减薄并键合到支撑片上的片',
     unit: '片',
     category: 'part',
     props: [
@@ -393,7 +393,7 @@ export const CIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cis-cfa',
-    name: '彩色滤光片阵列片',
+    name: 'Color Filter Array Wafer', name_zh: '彩色滤光片阵列片',
     unit: '片',
     category: 'part',
     props: [
@@ -415,7 +415,7 @@ export const CIS_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cis-microlens',
-    name: '加了微透镜阵列的片',
+    name: 'Wafer with Microlens Array', name_zh: '加了微透镜阵列的片',
     unit: '片',
     category: 'part',
     props: [
@@ -478,7 +478,7 @@ export const CIS_ROUTES: readonly Route[] = [
      *   本路线层数少但因为要三次高温，时长反而长）。
      */
     id: 'make/cis-array-diffusion',
-    name: '钉扎光电二极管阵列片制造',
+    name: 'Pinned Photodiode Array Wafer Manufacturing', name_zh: '钉扎光电二极管阵列片制造',
     produces: [
       {
         item: 'mat/cis-array',
@@ -607,7 +607,7 @@ export const CIS_ROUTES: readonly Route[] = [
      * 其余热预算/腐蚀/蒸铝与 `make/cis-array-diffusion` 同一套数，不重复推导。
      */
     id: 'make/cis-array-arf',
-    name: '钉扎光电二极管阵列片制造',
+    name: 'Pinned Photodiode Array Wafer Manufacturing', name_zh: '钉扎光电二极管阵列片制造',
     produces: [
       {
         item: 'mat/cis-array',
@@ -731,7 +731,7 @@ export const CIS_ROUTES: readonly Route[] = [
      *   代价直接进良率：2 MP 在 2.0 µm 上是 0.0824 cm² → **44 %**。
      */
     id: 'make/cis-array-schottky',
-    name: '钉扎光电二极管阵列片制造',
+    name: 'Pinned Photodiode Array Wafer Manufacturing', name_zh: '钉扎光电二极管阵列片制造',
     produces: [
       {
         item: 'mat/cis-array',
@@ -848,7 +848,7 @@ export const CIS_ROUTES: readonly Route[] = [
      *   + CMP 1 h（23 µm，0.5 µm/min）+ 检验 1 h + 装夹与清洗 5 h = **12 h**
      */
     id: 'make/cis-bsi',
-    name: '背照减薄',
+    name: 'Backside Illumination Thinning', name_zh: '背照减薄',
     produces: [
       {
         item: 'mat/cis-bsi',
@@ -948,7 +948,7 @@ export const CIS_ROUTES: readonly Route[] = [
      *   ⇒ 3 色 = 49.5 h，取 **48 h**。
      */
     id: 'make/cis-cfa-interference',
-    name: '彩色滤光片阵列片制造',
+    name: 'Color Filter Array Wafer Manufacturing', name_zh: '彩色滤光片阵列片制造',
     produces: [
       {
         item: 'mat/cis-cfa',
@@ -1060,7 +1060,7 @@ export const CIS_ROUTES: readonly Route[] = [
      *   旋涂 + 固化 2 h + 2 次光刻 24 h + 2 次刻蚀 2 h + 检验 2 h = **30 h**
      */
     id: 'make/cis-microlens-step',
-    name: '加了微透镜阵列的片制造',
+    name: 'Wafer with Microlens Array Manufacturing', name_zh: '加了微透镜阵列的片制造',
     produces: [
       {
         item: 'mat/cis-microlens',
@@ -1180,7 +1180,7 @@ export const CIS_ROUTES: readonly Route[] = [
      *   —— 全部算式在文件头第五节。
      */
     id: 'make/cis-2mp',
-    name: '机器人的相机制造',
+    name: 'Robot Camera Manufacturing', name_zh: '机器人的相机制造',
     produces: [
       {
         item: 'plant/robot/camera',

@@ -184,7 +184,7 @@ export const UNBLOCK_BOSCH_SHELL_ROUTES: readonly Route[] = [
      *    粉尘不能落在砖缝里（砖缝里的砂一沾油就再也封不住）。
      */
     id: 'make/bosch-shell-brick',
-    name: 'Bosch 壳体制造',
+    name: 'Bosch Shell Manufacturing', name_zh: 'Bosch 壳体制造',
     produces: [{ item: 'plant/bosch-reactor/shell', qty: q(1) }],
     uses: [
       /**

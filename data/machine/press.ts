@@ -44,10 +44,10 @@ import { q } from '../../src/index.ts';
 
 export const PRESS_PARTS: readonly Item[] = [
   /** 机身与滑块。铸铁机身 + 导轨 + 滑块（滑块与导轨的间隙 0.05 mm，靠刮研配）。 */
-  { id: 'plant/press/frame', name: '压机机身与滑块', unit: '件', category: 'part' },
+  { id: 'plant/press/frame', name: 'Press Frame and Slide', name_zh: '压机机身与滑块', unit: '件', category: 'part' },
 
   /** 传动组。飞轮 + 曲轴 + 连杆 + 制动器（皮带轮与车床同族）。 */
-  { id: 'plant/press/drive', name: '压机传动组', unit: '件', category: 'part',
+  { id: 'plant/press/drive', name: 'Press Drive Assembly', name_zh: '压机传动组', unit: '件', category: 'part',
     composedOf: [
       { item: 'plant/press/drive/flywheel', qty: q(1) },
       { item: 'plant/press/drive/crankshaft', qty: q(1) },
@@ -57,14 +57,14 @@ export const PRESS_PARTS: readonly Item[] = [
     ] },
 
   /** 刚性牙嵌离合器。两片带牙的 40Cr，淬火到 HRC 50，弹簧压紧、拨叉脱开。 */
-  { id: 'plant/press/clutch', name: '压机刚性牙嵌离合器', unit: '件', category: 'part' },
+  { id: 'plant/press/clutch', name: 'Press Rigid Jaw Clutch', name_zh: '压机刚性牙嵌离合器', unit: '件', category: 'part' },
 ];
 
 export const PRESS_ROUTES: readonly Route[] = [
   {
     /** 机身与滑块：HT250 浇注 + 时效 + 导轨刮研。 */
     id: 'make/press-frame',
-    name: '压机机身与滑块制造',
+    name: 'Press Frame and Slide Manufacturing', name_zh: '压机机身与滑块制造',
     produces: [{ item: 'plant/press/frame', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] },
@@ -76,7 +76,7 @@ export const PRESS_ROUTES: readonly Route[] = [
   {
     /** 传动组：飞轮（铸铁盘车削 + 配重）、曲轴（40Cr 车磨）、连杆、制动带。 */
     id: 'make/press-drive',
-    name: '压机传动组制造',
+    name: 'Press Drive Assembly Manufacturing', name_zh: '压机传动组制造',
     produces: [{ item: 'plant/press/drive', qty: q(1) }],
     // 飞轮、曲轴、连杆、制动带、轴承在条目 composedOf 上；这里只写总装。
     uses: [],
@@ -90,7 +90,7 @@ export const PRESS_ROUTES: readonly Route[] = [
   {
     /** 牙嵌离合器：两片带牙的 40Cr，铣牙 + 淬火 + 磨端面。 */
     id: 'make/press-clutch',
-    name: '压机刚性牙嵌离合器制造',
+    name: 'Press Rigid Jaw Clutch Manufacturing', name_zh: '压机刚性牙嵌离合器制造',
     produces: [{ item: 'plant/press/clutch', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] },
@@ -114,7 +114,7 @@ export const PRESS_ROUTES: readonly Route[] = [
  */
 export const PRESS: Item = {
   id: 'plant/press',
-  name: '压机',
+  name: 'Press', name_zh: '压机',
   unit: '台',
   category: 'machine',
   composedOf: [
@@ -138,7 +138,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/press',
-    name: '压机装配',
+    name: 'Press Assembly', name_zh: '压机装配',
     produces: [{
       item: 'plant/press',
       qty: q(1),

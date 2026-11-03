@@ -34,7 +34,7 @@ export const WF6_REACTOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/wf6-reactor',
-    name: '低压镍内衬 WF₆ 反应器',
+    name: 'Low-Pressure Nickel-Lined WF₆ Reactor', name_zh: '低压镍内衬 WF₆ 反应器',
     unit: '台',
     category: 'machine',
     holds: [
@@ -51,7 +51,7 @@ export const WF6_REACTOR_ITEMS: readonly Item[] = [
   /** 不锈钢壳体（只承压，不接 F₂；内衬隔开）。 */
   {
     id: 'plant/wf6-reactor/shell',
-    name: '不锈钢壳体',
+    name: 'Stainless Steel Shell', name_zh: '不锈钢壳体',
     unit: '件',
     category: 'part',
   },
@@ -59,7 +59,7 @@ export const WF6_REACTOR_ITEMS: readonly Item[] = [
   /** 镍内衬（2–3 mm 镍板卷焊；不胀接，与镍法兰焊死）。 */
   {
     id: 'plant/wf6-reactor/liner',
-    name: '镍内衬',
+    name: 'Nickel Liner', name_zh: '镍内衬',
     unit: '件',
     category: 'part',
   },
@@ -67,7 +67,7 @@ export const WF6_REACTOR_ITEMS: readonly Item[] = [
   /** 镍法兰（车削；金属垫密封面）。 */
   {
     id: 'plant/wf6-reactor/flange',
-    name: '镍法兰',
+    name: 'Nickel Flange', name_zh: '镍法兰',
     unit: '件',
     category: 'part',
   },
@@ -75,7 +75,7 @@ export const WF6_REACTOR_ITEMS: readonly Item[] = [
   /** 镍截止阀（铣阀体 + 车阀座；石墨/镍丝填料）。 */
   {
     id: 'plant/wf6-reactor/valve',
-    name: '镍截止阀',
+    name: 'Nickel Globe Valve', name_zh: '镍截止阀',
     unit: '件',
     category: 'part',
   },
@@ -83,7 +83,7 @@ export const WF6_REACTOR_ITEMS: readonly Item[] = [
   /** 加热夹套（不锈钢；外面包矿棉，不接 F₂）。 */
   {
     id: 'plant/wf6-reactor/heating-jacket',
-    name: '加热夹套',
+    name: 'Heating Jacket', name_zh: '加热夹套',
     unit: '件',
     category: 'part',
   },
@@ -91,7 +91,7 @@ export const WF6_REACTOR_ITEMS: readonly Item[] = [
   /** 镍套管热电偶（K 型芯 + 镍套管；F₂ 接液面是镍）。 */
   {
     id: 'plant/wf6-reactor/thermocouple',
-    name: '镍套管热电偶',
+    name: 'Nickel Sheathed Thermocouple', name_zh: '镍套管热电偶',
     unit: '件',
     category: 'part',
   },
@@ -99,7 +99,7 @@ export const WF6_REACTOR_ITEMS: readonly Item[] = [
   /** 镍金属垫（车削/冲切；不用 PTFE/弹性体）。 */
   {
     id: 'plant/wf6-reactor/gasket',
-    name: '镍金属垫',
+    name: 'Nickel Metal Gasket', name_zh: '镍金属垫',
     unit: '件',
     category: 'part',
   },
@@ -109,7 +109,7 @@ export const WF6_REACTOR_ROUTES: readonly Route[] = [
   {
     /** 壳体：304 不锈钢板卷圆 + 纵缝焊 + 封头。 */
     id: 'make/wf6-reactor-shell',
-    name: '不锈钢壳体制造',
+    name: 'Stainless Steel Shell Manufacturing', name_zh: '不锈钢壳体制造',
     produces: [{ item: 'plant/wf6-reactor/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(8) }] }],
     needs: ['plant/clean-room'],
@@ -121,7 +121,7 @@ export const WF6_REACTOR_ROUTES: readonly Route[] = [
   {
     /** 镍内衬：2–3 mm 镍板卷圆 + 纵缝焊；与镍法兰焊死，不胀接。 */
     id: 'make/wf6-reactor-liner',
-    name: '镍内衬制造',
+    name: 'Nickel Liner Manufacturing', name_zh: '镍内衬制造',
     produces: [{ item: 'plant/wf6-reactor/liner', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/nickel', qty: q(3) }] }],
     needs: ['plant/clean-room'],
@@ -133,7 +133,7 @@ export const WF6_REACTOR_ROUTES: readonly Route[] = [
   {
     /** 法兰：镍棒车削，密封面 Ra ≤1.6 µm。 */
     id: 'make/wf6-reactor-flange',
-    name: '镍法兰制造',
+    name: 'Nickel Flange Manufacturing', name_zh: '镍法兰制造',
     produces: [{ item: 'plant/wf6-reactor/flange', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/nickel', qty: q(1) }] }],
     needs: ['plant/clean-room'],
@@ -145,7 +145,7 @@ export const WF6_REACTOR_ROUTES: readonly Route[] = [
   {
     /** 阀：镍阀体铣削 + 阀座车削；石墨/镍丝填料。 */
     id: 'make/wf6-reactor-valve',
-    name: '镍截止阀制造',
+    name: 'Nickel Globe Valve Manufacturing', name_zh: '镍截止阀制造',
     produces: [{ item: 'plant/wf6-reactor/valve', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/nickel', qty: q(1) }] }],
     needs: ['lathe', 'plant/clean-room'],
@@ -157,7 +157,7 @@ export const WF6_REACTOR_ROUTES: readonly Route[] = [
   {
     /** 加热夹套：不锈钢板卷焊 + 矿棉保温。 */
     id: 'make/wf6-reactor-jacket',
-    name: '加热夹套制造',
+    name: 'Heating Jacket Manufacturing', name_zh: '加热夹套制造',
     produces: [{ item: 'plant/wf6-reactor/heating-jacket', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(2) }] },
@@ -172,7 +172,7 @@ export const WF6_REACTOR_ROUTES: readonly Route[] = [
   {
     /** 热电偶：K 型芯 + 镍套管，车削/装配。 */
     id: 'make/wf6-reactor-thermocouple',
-    name: '镍套管热电偶制造',
+    name: 'Nickel Sheathed Thermocouple Manufacturing', name_zh: '镍套管热电偶制造',
     produces: [{ item: 'plant/wf6-reactor/thermocouple', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/thermocouple-t-general', qty: q(1) }] },
@@ -187,7 +187,7 @@ export const WF6_REACTOR_ROUTES: readonly Route[] = [
   {
     /** 金属垫：镍板冲切/车削，不用 PTFE/弹性体。 */
     id: 'make/wf6-reactor-gasket',
-    name: '镍金属垫制造',
+    name: 'Nickel Metal Gasket Manufacturing', name_zh: '镍金属垫制造',
     produces: [{ item: 'plant/wf6-reactor/gasket', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/nickel', qty: q(1, 5) }] }],
     needs: ['lathe', 'plant/clean-room'],
@@ -199,7 +199,7 @@ export const WF6_REACTOR_ROUTES: readonly Route[] = [
   {
     /** 总装：内衬装入壳体、法兰/阀/热电偶/夹套装配、煤油渗透。 */
     id: 'make/wf6-reactor',
-    name: '低压镍内衬 WF₆ 反应器装配',
+    name: 'Low-Pressure Nickel-Lined WF₆ Reactor Assembly', name_zh: '低压镍内衬 WF₆ 反应器装配',
     produces: [
       {
         item: 'plant/wf6-reactor',

@@ -477,7 +477,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mfc',
-    name: '质量流量控制器',
+    name: 'Mass Flow Controller', name_zh: '质量流量控制器',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 19, max: 21 }],
@@ -511,7 +511,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rf-13m56',
-    name: '13.56 MHz 级射频功率源',
+    name: '13.56 MHz Class RF Power Source', name_zh: '13.56 MHz 级射频功率源',
     unit: '台',
     category: 'machine',
     props: [
@@ -544,7 +544,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ir-endpoint',
-    name: '870 nm 准单色终点检测头',
+    name: '870 nm Quasi-Monochromatic Endpoint Detection Head', name_zh: '870 nm 准单色终点检测头',
     unit: '台',
     category: 'machine',
     props: [
@@ -581,7 +581,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mfc/element',
-    name: '质量流量控制器层流元件',
+    name: 'Mass Flow Controller Laminar Flow Element', name_zh: '质量流量控制器层流元件',
     unit: '件',
     category: 'part',
     props: [
@@ -603,7 +603,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mfc/capillary',
-    name: '质量流量控制器旁通毛细管',
+    name: 'Mass Flow Controller Bypass Capillary', name_zh: '质量流量控制器旁通毛细管',
     unit: '件',
     category: 'part',
     props: [
@@ -629,7 +629,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mfc/dp-cell',
-    name: '膜片电容差压传感器',
+    name: 'Diaphragm Capacitance Differential Pressure Sensor', name_zh: '膜片电容差压传感器',
     unit: '件',
     category: 'part',
     props: [
@@ -657,7 +657,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mfc/rtd-pair',
-    name: '质量流量控制器镍薄膜电阻对',
+    name: 'Mass Flow Controller Nickel Thin-Film Resistor Pair', name_zh: '质量流量控制器镍薄膜电阻对',
     unit: '件',
     category: 'part',
     props: [
@@ -684,7 +684,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mfc/valve',
-    name: '质量流量控制器动圈挡板比例阀',
+    name: 'Mass Flow Controller Moving-Coil Baffle Proportional Valve', name_zh: '质量流量控制器动圈挡板比例阀',
     unit: '件',
     category: 'part',
     props: [
@@ -710,7 +710,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mfc/board',
-    name: '电容桥与 PI 控制板',
+    name: 'Capacitance Bridge and PI Control Board', name_zh: '电容桥与 PI 控制板',
     unit: '件',
     category: 'part',
     props: [
@@ -752,7 +752,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rf-13m56/tube',
-    name: '三极管',
+    name: 'Triode', name_zh: '三极管',
     unit: '件',
     category: 'part',
     props: [
@@ -777,7 +777,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rf-13m56/tank-coil',
-    name: '槽路线圈',
+    name: 'Tank Coil', name_zh: '槽路线圈',
     unit: '件',
     category: 'part',
     props: [
@@ -804,7 +804,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rf-13m56/tank-cap',
-    name: '空气可变电容',
+    name: 'Air Variable Capacitor', name_zh: '空气可变电容',
     unit: '件',
     category: 'part',
     props: [
@@ -826,7 +826,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rf-13m56/anode-supply',
-    name: '阳极电源',
+    name: 'Anode Power Supply', name_zh: '阳极电源',
     unit: '件',
     category: 'part',
     props: [
@@ -852,7 +852,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rf-13m56/filament-supply',
-    name: '灯丝电源',
+    name: 'Filament Power Supply', name_zh: '灯丝电源',
     unit: '件',
     category: 'part',
     props: [
@@ -877,7 +877,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rf-13m56/match',
-    name: '匹配网络与假负载',
+    name: 'Matching Network and Dummy Load', name_zh: '匹配网络与假负载',
     unit: '件',
     category: 'part',
     props: [
@@ -908,7 +908,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ir-endpoint/lamp',
-    name: '钨丝灯',
+    name: 'Tungsten Filament Lamp', name_zh: '钨丝灯',
     unit: '件',
     category: 'part',
     props: [
@@ -939,7 +939,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ir-endpoint/filter',
-    name: '多层介质带通滤光片',
+    name: 'Multilayer Dielectric Bandpass Filter', name_zh: '多层介质带通滤光片',
     unit: '件',
     category: 'part',
     props: [
@@ -966,7 +966,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ir-endpoint/chopper',
-    name: '簧片斩波器',
+    name: 'Reed Chopper', name_zh: '簧片斩波器',
     unit: '件',
     category: 'part',
     props: [
@@ -993,7 +993,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ir-endpoint/optics',
-    name: '熔石英光学头',
+    name: 'Fused Silica Optical Head', name_zh: '熔石英光学头',
     unit: '件',
     category: 'part',
     props: [
@@ -1020,7 +1020,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ir-endpoint/preamp',
-    name: '同步检波前放',
+    name: 'Synchronous Detection Preamplifier', name_zh: '同步检波前放',
     unit: '件',
     category: 'part',
     props: [
@@ -1049,7 +1049,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/orifice-cal-50sccm',
-    name: '标定过的定流孔板',
+    name: 'Calibrated Fixed-Flow Orifice Plate', name_zh: '标定过的定流孔板',
     unit: '件',
     category: 'part',
     props: [
@@ -1073,7 +1073,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/rf-load-500w-50ohm',
-    name: '500 W 水冷 50 Ω 假负载',
+    name: '500 W Water-Cooled 50 Ω Dummy Load', name_zh: '500 W 水冷 50 Ω 假负载',
     unit: '件',
     category: 'part',
     props: [
@@ -1100,7 +1100,7 @@ export const FLOWRF_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/step-standard-100nm',
-    name: '100 nm 台阶标准片',
+    name: '100 nm Step Height Standard Wafer', name_zh: '100 nm 台阶标准片',
     unit: '片',
     category: 'part',
     props: [
@@ -1138,7 +1138,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 在 50 sccm 上量压差，±2 % 的进，±2 % 的出。
      */
     id: 'make/mfc-element',
-    name: '质量流量控制器层流元件制造',
+    name: 'Mass Flow Controller Laminar Flow Element Manufacturing', name_zh: '质量流量控制器层流元件制造',
     produces: [
       {
         item: 'plant/mfc/element',
@@ -1195,7 +1195,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 因为它只影响"小流量那一段的灵敏度分配"，会被标定吸收。
      */
     id: 'make/mfc-capillary',
-    name: '质量流量控制器旁通毛细管制造',
+    name: 'Mass Flow Controller Bypass Capillary Manufacturing', name_zh: '质量流量控制器旁通毛细管制造',
     produces: [
       {
         item: 'plant/mfc/capillary',
@@ -1255,7 +1255,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 是直流表）。
      */
     id: 'make/mfc-dp-cell',
-    name: '膜片电容差压传感器制造',
+    name: 'Diaphragm Capacitance Differential Pressure Sensor Manufacturing', name_zh: '膜片电容差压传感器制造',
     produces: [
       {
         item: 'plant/mfc/dp-cell',
@@ -1326,7 +1326,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * （那是让它稳定，本层放弃了这个稳定化，代价是 0.1 °C/年的漂移）。缺口 ①。
      */
     id: 'make/mfc-rtd-pair',
-    name: '质量流量控制器镍薄膜电阻对制造',
+    name: 'Mass Flow Controller Nickel Thin-Film Resistor Pair Manufacturing', name_zh: '质量流量控制器镍薄膜电阻对制造',
     produces: [
       {
         item: 'plant/mfc/rtd-pair',
@@ -1385,7 +1385,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 的代价，记在 §九 R8 第 ⑧ 行。**
      */
     id: 'make/mfc-valve',
-    name: '质量流量控制器动圈挡板比例阀制造',
+    name: 'Mass Flow Controller Moving-Coil Baffle Proportional Valve Manufacturing', name_zh: '质量流量控制器动圈挡板比例阀制造',
     produces: [
       {
         item: 'plant/mfc/valve',
@@ -1443,7 +1443,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 真正的限制是**振荡幅度的稳定度**（要 0.1 %）—— 靠齐纳基准 + 运放的负反馈。
      */
     id: 'make/mfc-board',
-    name: '电容桥与 PI 控制板制造',
+    name: 'Capacitance Bridge and PI Control Board Manufacturing', name_zh: '电容桥与 PI 控制板制造',
     produces: [
       {
         item: 'plant/mfc/board',
@@ -1514,7 +1514,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 量不到的是**寿命**（只能靠 860 h 的钛容量算）。
      */
     id: 'make/rf-tube',
-    name: '三极管制造',
+    name: 'Triode Manufacturing', name_zh: '三极管制造',
     produces: [
       {
         item: 'plant/rf-13m56/tube',
@@ -1615,7 +1615,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 通 2.19 A 的 13.6 MHz 电流 10 min，量铜管的温升 ⇒ R = P/I² ⇒ Q。精度 ±30 %。
      */
     id: 'make/rf-tank-coil',
-    name: '槽路线圈制造',
+    name: 'Tank Coil Manufacturing', name_zh: '槽路线圈制造',
     produces: [
       {
         item: 'plant/rf-13m56/tank-coil',
@@ -1672,7 +1672,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 空气的 1/3，安全**）。
      */
     id: 'make/rf-tank-cap',
-    name: '空气可变电容制造',
+    name: 'Air Variable Capacitor Manufacturing', name_zh: '空气可变电容制造',
     produces: [
       {
         item: 'plant/rf-13m56/tank-cap',
@@ -1723,7 +1723,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 这是这一件唯一的安全功能。
      */
     id: 'make/rf-anode-supply',
-    name: '阳极电源制造',
+    name: 'Anode Power Supply Manufacturing', name_zh: '阳极电源制造',
     produces: [
       {
         item: 'plant/rf-13m56/anode-supply',
@@ -1772,7 +1772,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 分解物，然后击穿。⇒ 规程：每 500 h 换一次 SF6。记在 §九 R8 第 ⑨ 行。
      */
     id: 'make/rf-filament-supply',
-    name: '灯丝电源制造',
+    name: 'Filament Power Supply Manufacturing', name_zh: '灯丝电源制造',
     produces: [
       {
         item: 'plant/rf-13m56/filament-supply',
@@ -1818,7 +1818,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 精度 ±30 %，只够看"有没有输出"。
      */
     id: 'make/rf-match',
-    name: '匹配网络与假负载制造',
+    name: 'Matching Network and Dummy Load Manufacturing', name_zh: '匹配网络与假负载制造',
     produces: [
       {
         item: 'plant/rf-13m56/match',
@@ -1880,7 +1880,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * **不然它们会在 50 h 内把石英壳内壁镀黑**（黑化让亮度掉 40 %）。
      */
     id: 'make/ir-lamp',
-    name: '钨丝灯制造',
+    name: 'Tungsten Filament Lamp Manufacturing', name_zh: '钨丝灯制造',
     produces: [
       {
         item: 'plant/ir-endpoint/lamp',
@@ -1945,7 +1945,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 的验收要 1 片 —— 勉强够。**所以这一件的良品率就是整条链的产能瓶颈。**
      */
     id: 'make/ir-filter',
-    name: '多层介质带通滤光片制造',
+    name: 'Multilayer Dielectric Bandpass Filter Manufacturing', name_zh: '多层介质带通滤光片制造',
     produces: [
       {
         item: 'plant/ir-endpoint/filter',
@@ -2008,7 +2008,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 半波驱动（一只二极管削掉半周）—— 这是"同步电机"的原始形态。
      */
     id: 'make/ir-chopper',
-    name: '簧片斩波器制造',
+    name: 'Reed Chopper Manufacturing', name_zh: '簧片斩波器制造',
     produces: [
       {
         item: 'plant/ir-endpoint/chopper',
@@ -2069,7 +2069,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 变成 8 %→0 %），但 s/p 的反射率差 15 % 会让条纹深度随等离子体的偏振漂。
      */
     id: 'make/ir-optics',
-    name: '熔石英光学头制造',
+    name: 'Fused Silica Optical Head Manufacturing', name_zh: '熔石英光学头制造',
     produces: [
       {
         item: 'plant/ir-endpoint/optics',
@@ -2127,7 +2127,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * （τ = 3.3 ms ⇒ 在 50 Hz 上移 6°，差 84° 才归零 ⇒ 相位的容差很宽）。
      */
     id: 'make/ir-preamp',
-    name: '同步检波前放制造',
+    name: 'Synchronous Detection Preamplifier Manufacturing', name_zh: '同步检波前放制造',
     produces: [
       {
         item: 'plant/ir-endpoint/preamp',
@@ -2190,7 +2190,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * （刃口不许倒圆）。浇 6 出 4，与 `unblock-gas-panel.ts` 的"浇六出三"同一处出成。
      */
     id: 'cal/flow-transfer',
-    name: '标定过的定流孔板',
+    name: 'Calibrated Fixed-Flow Orifice Plate', name_zh: '标定过的定流孔板',
     produces: [
       {
         item: 'std/orifice-cal-50sccm',
@@ -2245,7 +2245,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 的恒温是同一个思路（一个控温、一个配系数）。
      */
     id: 'cal/rf-power',
-    name: '500 W 水冷 50 Ω 假负载',
+    name: '500 W Water-Cooled 50 Ω Dummy Load', name_zh: '500 W 水冷 50 Ω 假负载',
     produces: [
       {
         item: 'std/rf-load-500w-50ohm',
@@ -2304,7 +2304,7 @@ export const FLOWRF_ROUTES: readonly Route[] = [
      * 这一条是缺口 ③ 的第三处后果。
      */
     id: 'cal/step-standard',
-    name: '100 nm 台阶标准片',
+    name: '100 nm Step Height Standard Wafer', name_zh: '100 nm 台阶标准片',
     produces: [
       {
         item: 'std/step-standard-100nm',
@@ -2360,7 +2360,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/mfc',
-    name: '质量流量控制器装配',
+    name: 'Mass Flow Controller Assembly', name_zh: '质量流量控制器装配',
     produces: [{
       item: 'plant/mfc',
       qty: q(1),
@@ -2377,7 +2377,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/rf-13m56',
-    name: '13.56 MHz 级射频功率源装配',
+    name: '13.56 MHz Class RF Power Source Assembly', name_zh: '13.56 MHz 级射频功率源装配',
     produces: [{
       item: 'plant/rf-13m56',
       qty: q(1),
@@ -2393,7 +2393,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/ir-endpoint',
-    name: '870 nm 准单色终点检测头装配',
+    name: '870 nm Quasi-Monochromatic Endpoint Detection Head Assembly', name_zh: '870 nm 准单色终点检测头装配',
     produces: [{
       item: 'plant/ir-endpoint',
       qty: q(1),

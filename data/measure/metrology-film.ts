@@ -58,7 +58,7 @@ export const METROLOGY_FILM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/film-stress-record',
-    name: '膜应力记录',
+    name: 'Film Stress Record', name_zh: '膜应力记录',
     unit: '份',
     category: 'part',
     props: [
@@ -83,7 +83,7 @@ export const METROLOGY_FILM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/sin-h-record',
-    name: 'SiN 氢含量记录',
+    name: 'SiN Hydrogen Content Record', name_zh: 'SiN 氢含量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -116,7 +116,7 @@ export const METROLOGY_FILM_ROUTES: readonly Route[] = [
      *    降级，不写成已覆盖 —— 与 `plant/film-stress-meter` 的注释同一条。
      */
     id: 'measure/film-stress',
-    name: '膜应力测量',
+    name: 'Film Stress Measurement', name_zh: '膜应力测量',
     produces: [
       {
         item: 'mat/film-stress-record',
@@ -199,7 +199,7 @@ export const METROLOGY_FILM_ROUTES: readonly Route[] = [
      * FTIR 原理的极限；0.5 at% 要 1024 次累加（约 4 h）。
      */
     id: 'measure/sin-h-content',
-    name: 'SiN 氢含量测量',
+    name: 'SiN Hydrogen Content Measurement', name_zh: 'SiN 氢含量测量',
     produces: [
       {
         item: 'mat/sin-h-record',

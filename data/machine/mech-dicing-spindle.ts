@@ -20,7 +20,7 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const DICING_SPINDLE_PARTS: readonly Item[] = [
-  { id: 'plant/dicing-saw/spindle/shaft', name: '划片机主轴轴', unit: '件', category: 'part' },
+  { id: 'plant/dicing-saw/spindle/shaft', name: 'Dicing Saw Spindle Shaft', name_zh: '划片机主轴轴', unit: '件', category: 'part' },
 ];
 
 const DICING_SPINDLE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -29,7 +29,7 @@ const DICING_SPINDLE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 主轴轴：45 钢 φ40 h5，轴承位磨到 Ra ≤0.4 µm。 */
     id: 'make/dicing-spindle-shaft',
-    name: '划片机主轴轴制造',
+    name: 'Dicing Saw Spindle Shaft Manufacturing', name_zh: '划片机主轴轴制造',
     produces: [{ item: 'plant/dicing-saw/spindle/shaft', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(5) }] }],
     steps: [

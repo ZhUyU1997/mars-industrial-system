@@ -54,25 +54,25 @@ export const ESR_ITEMS: readonly Item[] = [
    * 熔点 1400 °C 起、1800 °C 流动性够用。工业用 CaF₂ 系的理由是"熔点低、黏度小、
    * 除杂快"—— 本层用氧化钙氧化铝系，慢一档。
    */
-  { id: 'mat/esr-slag', name: '重熔渣料', unit: 'kg', category: 'material' },
+  { id: 'mat/esr-slag', name: 'Remelted Slag', name_zh: '重熔渣料', unit: 'kg', category: 'material' },
 ];
 
 export const ESR_PARTS: readonly Item[] = [
   /** 水冷铜结晶器。铜壁 + 水套，内径决定钢锭直径（φ200）。 */
-  { id: 'plant/esr-furnace/mold', name: '电渣重熔炉水冷铜结晶器', unit: '件', category: 'part' },
+  { id: 'plant/esr-furnace/mold', name: 'Electroslag Remelting Furnace Water-Cooled Copper Mold', name_zh: '电渣重熔炉水冷铜结晶器', unit: '件', category: 'part' },
 
   /** 电极升降机构。丝杠 + 立柱 + 夹持，速度 5–20 mm/min，要稳。 */
-  { id: 'plant/esr-furnace/feed', name: '电渣重熔炉电极升降机构', unit: '件', category: 'part' },
+  { id: 'plant/esr-furnace/feed', name: 'Electroslag Remelting Furnace Electrode Lifting Mechanism', name_zh: '电渣重熔炉电极升降机构', unit: '件', category: 'part' },
 
   /** 短网与电源接口。大电流（几千安）铜排 + 抽头变压器。 */
-  { id: 'plant/esr-furnace/busbar', name: '电渣重熔炉短网与电源接口', unit: '件', category: 'part' },
+  { id: 'plant/esr-furnace/busbar', name: 'Electroslag Remelting Furnace Short Network and Power Interface', name_zh: '电渣重熔炉短网与电源接口', unit: '件', category: 'part' },
 ];
 
 export const ESR_ROUTES: readonly Route[] = [
   {
     /** 渣料：氧化铝 + 石灰（不要萤石），磨细混匀、预熔。 */
     id: 'make/esr-slag',
-    name: '渣料制备',
+    name: 'Slag Production', name_zh: '渣料制备',
     produces: [{ item: 'mat/esr-slag', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/alumina', qty: q(700) }] },
@@ -84,7 +84,7 @@ export const ESR_ROUTES: readonly Route[] = [
   {
     /** 结晶器：铜板卷筒 + 水套 + 底水箱（可升降，决定锭长）。 */
     id: 'make/esr-mold',
-    name: '电渣重熔炉水冷铜结晶器制造',
+    name: 'Electroslag Remelting Furnace Water-Cooled Copper Mold Manufacturing', name_zh: '电渣重熔炉水冷铜结晶器制造',
     produces: [{ item: 'plant/esr-furnace/mold', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -97,7 +97,7 @@ export const ESR_ROUTES: readonly Route[] = [
   {
     /** 电极升降：立柱 + 丝杠 + 夹持 —— 与直拉炉的提拉头同一套手艺。 */
     id: 'make/esr-feed',
-    name: '电渣重熔炉电极升降机构制造',
+    name: 'Electroslag Remelting Furnace Electrode Lifting Mechanism Manufacturing', name_zh: '电渣重熔炉电极升降机构制造',
     produces: [{ item: 'plant/esr-furnace/feed', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -110,7 +110,7 @@ export const ESR_ROUTES: readonly Route[] = [
   {
     /** 短网与电源：铜排 + 抽头变压器（与焊机、中频电源同一族）。 */
     id: 'make/esr-busbar',
-    name: '电渣重熔炉短网与电源接口制造',
+    name: 'Electroslag Remelting Furnace Short Network and Power Interface Manufacturing', name_zh: '电渣重熔炉短网与电源接口制造',
     produces: [{ item: 'plant/esr-furnace/busbar', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -131,7 +131,7 @@ export const ESR_ROUTES: readonly Route[] = [
      * 只是氧含量低了。化学成分没变，性能变了一截。
      */
     id: 'make/bearing-steel-esr',
-    name: '电渣重熔制备',
+    name: 'Bearing Steel Production by Electroslag Remelting', name_zh: '电渣重熔制备',
     produces: [
       {
         item: 'mat/bearing-steel',
@@ -167,7 +167,7 @@ export const ESR_ROUTES: readonly Route[] = [
  */
 export const ESR_FURNACE: Item = {
   id: 'plant/esr-furnace',
-  name: '电渣重熔炉',
+  name: 'Electroslag Remelting Furnace', name_zh: '电渣重熔炉',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 1750, max: 1850 }],
@@ -190,7 +190,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/esr-furnace',
-    name: '电渣重熔炉装配',
+    name: 'Electroslag Remelting Furnace Assembly', name_zh: '电渣重熔炉装配',
     produces: [{
       item: 'plant/esr-furnace',
       qty: q(1),

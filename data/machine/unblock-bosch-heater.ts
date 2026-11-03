@@ -378,7 +378,7 @@ export const UNBLOCK_BOSCH_HEATER_ROUTES: readonly Route[] = [
      *    150 K。都不是"大概留一点"。
      */
     id: 'make/bosch-heater-brick',
-    name: 'Bosch 加热夹套制造',
+    name: 'Bosch Heating Jacket Manufacturing', name_zh: 'Bosch 加热夹套制造',
     produces: [{ item: 'plant/bosch-reactor/heater', qty: q(1) }],
     uses: [
       /**

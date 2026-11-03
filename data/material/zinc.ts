@@ -182,7 +182,7 @@ export const ZINC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/zinc-concentrate',
-    name: '锌精矿',
+    name: 'Zinc Concentrate', name_zh: '锌精矿',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'zn', kind: 'range', min: 40, max: 65, unit: '%', dir: 'atLeast' }],
@@ -197,7 +197,7 @@ export const ZINC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/zinc-oxide',
-    name: '焙砂',
+    name: 'Calcine', name_zh: '焙砂',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'zno', kind: 'range', min: 60, max: 100, unit: '%', dir: 'atLeast' }],
@@ -211,7 +211,7 @@ export const ZINC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/zinc-sulfate',
-    name: '硫酸锌溶液',
+    name: 'Zinc Sulfate Solution', name_zh: '硫酸锌溶液',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'zn', kind: 'range', min: 80, max: 160, unit: 'g/L', dir: 'atLeast' }],
@@ -227,7 +227,7 @@ export const ZINC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/zinc',
-    name: '锌',
+    name: 'Zinc', name_zh: '锌',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99.995, unit: '%', dir: 'atLeast' }],
@@ -243,7 +243,7 @@ export const ZINC_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/zinc-sulfide',
-    name: '硫化锌',
+    name: 'Zinc Sulfide', name_zh: '硫化锌',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 95, max: 99.99, unit: '%', dir: 'atLeast' }],
@@ -271,7 +271,7 @@ export const ZINC_ROUTES: readonly Route[] = [
      * 所以这条路线**质量是平的**：5 000 000 进，5 000 000 出。
      */
     id: 'make/zinc-concentrate',
-    name: '富集',
+    name: 'Enrichment', name_zh: '富集',
     produces: [
       {
         item: 'mat/zinc-concentrate',
@@ -309,7 +309,7 @@ export const ZINC_ROUTES: readonly Route[] = [
      * 所以这台设备在本条上只跑到区间的下三分之一。
      */
     id: 'make/zinc-oxide',
-    name: '焙烧制备',
+    name: 'Zinc Oxide Production', name_zh: '焙烧制备',
     produces: [
       {
         item: 'mat/zinc-oxide',
@@ -350,7 +350,7 @@ export const ZINC_ROUTES: readonly Route[] = [
      * 浸出渣 180 kg 是焙砂里那 18 % 的脉石与铁，走 `mat/tailings`。
      */
     id: 'make/zinc-sulfate',
-    name: '浸出',
+    name: 'Leaching', name_zh: '浸出',
     produces: [
       {
         item: 'mat/zinc-sulfate',
@@ -408,7 +408,7 @@ export const ZINC_ROUTES: readonly Route[] = [
      * 质量差 0.01 kg：铝阴极是**永久件**，不随批次出料，声明为不平衡。
      */
     id: 'make/zinc',
-    name: '电积制备',
+    name: 'Zinc Production by Electrowinning', name_zh: '电积制备',
     produces: [
       {
         item: 'mat/zinc',
@@ -465,7 +465,7 @@ export const ZINC_ROUTES: readonly Route[] = [
      * 冷凝铸锭并量断面与气孔（`plant/robot`；纯度只能靠投料对账反推，见缺口①）。
      */
     id: 'make/zinc-thermal',
-    name: '火法的第二步制备',
+    name: 'Pyrometallurgical Second-Step Production', name_zh: '火法的第二步制备',
     produces: [
       {
         item: 'mat/zinc',
@@ -526,7 +526,7 @@ export const ZINC_ROUTES: readonly Route[] = [
      * 只到 99.5 % 的理由见文件头（降级③）：残碳 0.3–0.5 % 洗不干净。
      */
     id: 'make/zinc-sulfide',
-    name: '硫化锌制备',
+    name: 'Zinc Sulfide Production', name_zh: '硫化锌制备',
     produces: [
       {
         item: 'mat/zinc-sulfide',

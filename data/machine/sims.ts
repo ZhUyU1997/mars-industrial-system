@@ -382,7 +382,7 @@ export const SIMS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/sims/primary-source',
-    name: '二次离子质谱仪一次离子源',
+    name: 'Secondary Ion Mass Spectrometer Primary Ion Source', name_zh: '二次离子质谱仪一次离子源',
     unit: '件',
     category: 'part',
     props: [
@@ -421,7 +421,7 @@ export const SIMS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/sims/primary-column',
-    name: '二次离子质谱仪一次柱',
+    name: 'Secondary Ion Mass Spectrometer Primary Column', name_zh: '二次离子质谱仪一次柱',
     unit: '件',
     category: 'part',
     props: [
@@ -458,7 +458,7 @@ export const SIMS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/sims/sample-chamber',
-    name: '二次离子质谱仪样品室',
+    name: 'Secondary Ion Mass Spectrometer Sample Chamber', name_zh: '二次离子质谱仪样品室',
     unit: '件',
     category: 'part',
     props: [
@@ -497,7 +497,7 @@ export const SIMS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/sims/quadrupole',
-    name: '二次离子质谱仪四极杆',
+    name: 'Secondary Ion Mass Spectrometer Quadrupole', name_zh: '二次离子质谱仪四极杆',
     unit: '组',
     category: 'part',
     props: [
@@ -530,7 +530,7 @@ export const SIMS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/sims/rf-driver',
-    name: '二次离子质谱仪射频驱动',
+    name: 'Secondary Ion Mass Spectrometer RF Driver', name_zh: '二次离子质谱仪射频驱动',
     unit: '台',
     category: 'part',
     props: [
@@ -560,7 +560,7 @@ export const SIMS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/sims/faraday-cup',
-    name: '二次离子质谱仪法拉第杯',
+    name: 'Secondary Ion Mass Spectrometer Faraday Cup', name_zh: '二次离子质谱仪法拉第杯',
     unit: '只',
     category: 'part',
     props: [
@@ -596,7 +596,7 @@ export const SIMS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/sims/electron-multiplier',
-    name: '二次离子质谱仪电子倍增器',
+    name: 'Secondary Ion Mass Spectrometer Electron Multiplier', name_zh: '二次离子质谱仪电子倍增器',
     unit: '只',
     category: 'part',
     props: [
@@ -622,7 +622,7 @@ export const SIMS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/sims/pulse-counter',
-    name: '二次离子质谱仪计数链',
+    name: 'Secondary Ion Mass Spectrometer Counting Chain', name_zh: '二次离子质谱仪计数链',
     unit: '台',
     category: 'part',
     props: [
@@ -646,7 +646,7 @@ export const SIMS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/sims/load-lock',
-    name: '二次离子质谱仪进样室',
+    name: 'Secondary Ion Mass Spectrometer Load-Lock Chamber', name_zh: '二次离子质谱仪进样室',
     unit: '套',
     category: 'part',
     props: [
@@ -674,7 +674,7 @@ export const SIMS_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/sims/rsf-standard',
-    name: 'RSF 标准片',
+    name: 'RSF Standard Wafer', name_zh: 'RSF 标准片',
     unit: '片',
     category: 'part',
     props: [
@@ -707,7 +707,7 @@ export const SIMS_SAMPLES: readonly Item[] = [
    */
   {
     id: 'mat/sims-profiled-wafer',
-    name: '剖面样品片',
+    name: 'Cross-Section Sample Wafer', name_zh: '剖面样品片',
     unit: '片',
     category: 'part',
     props: [
@@ -749,7 +749,7 @@ export const SIMS_SAMPLES: readonly Item[] = [
  */
 export const SIMS: Item = {
   id: 'plant/sims',
-  name: '二次离子质谱仪',
+  name: 'Secondary Ion Mass Spectrometer', name_zh: '二次离子质谱仪',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'pressure', min: 1e-6, max: 1e-5 }],
@@ -811,7 +811,7 @@ export const SIMS_ROUTES: readonly Route[] = [
      *     **这就是 φ0.5 的来源：不是束流不够，是气太多。**
      */
     id: 'make/sims-primary-source',
-    name: '二次离子质谱仪一次离子源制造',
+    name: 'Secondary Ion Mass Spectrometer Primary Ion Source Manufacturing', name_zh: '二次离子质谱仪一次离子源制造',
     rate: { hours: q(34) },
     produces: [
       {
@@ -904,7 +904,7 @@ export const SIMS_ROUTES: readonly Route[] = [
      *   用钼不用 45 钢是同一个理由的两面。
      */
     id: 'make/sims-primary-column',
-    name: '二次离子质谱仪一次柱制造',
+    name: 'Secondary Ion Mass Spectrometer Primary Column Manufacturing', name_zh: '二次离子质谱仪一次柱制造',
     rate: { hours: q(42) },
     produces: [
       {
@@ -970,7 +970,7 @@ export const SIMS_ROUTES: readonly Route[] = [
      * ⇒ 枪的阴极在 −650 V。这一条决定了高压引线要三组（提取、泛射、抑制）。
      */
     id: 'make/sims-sample-chamber',
-    name: '二次离子质谱仪样品室制造',
+    name: 'Secondary Ion Mass Spectrometer Sample Chamber Manufacturing', name_zh: '二次离子质谱仪样品室制造',
     rate: { hours: q(70) },
     produces: [
       {
@@ -1051,7 +1051,7 @@ export const SIMS_ROUTES: readonly Route[] = [
      *      与 `make/cd-sem-aperture` 的钼片是同一炉料
      */
     id: 'make/sims-quadrupole',
-    name: '二次离子质谱仪四极杆制造',
+    name: 'Secondary Ion Mass Spectrometer Quadrupole Manufacturing', name_zh: '二次离子质谱仪四极杆制造',
     rate: { hours: q(56) },
     produces: [
       {
@@ -1131,7 +1131,7 @@ export const SIMS_ROUTES: readonly Route[] = [
      * rf-13m56 只借晶振与频率计数（它在这里是"频率的标准"，不是"功率的源"）。
      */
     id: 'make/sims-rf-driver',
-    name: '二次离子质谱仪射频驱动制造',
+    name: 'Secondary Ion Mass Spectrometer RF Driver Manufacturing', name_zh: '二次离子质谱仪射频驱动制造',
     rate: { hours: q(38) },
     produces: [
       {
@@ -1207,7 +1207,7 @@ export const SIMS_ROUTES: readonly Route[] = [
      * 是同一笔账，只是这里的信号大 4 个量级，所以 1 GΩ 就够（那边要 1e9 + 小片）。
      */
     id: 'make/sims-faraday-cup',
-    name: '二次离子质谱仪法拉第杯制造',
+    name: 'Secondary Ion Mass Spectrometer Faraday Cup Manufacturing', name_zh: '二次离子质谱仪法拉第杯制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -1282,7 +1282,7 @@ export const SIMS_ROUTES: readonly Route[] = [
      * δ 比阳极氧化的低 20 %，这一笔算进 3.7e6 里了（否则是 4.7e6）。
      */
     id: 'make/sims-electron-multiplier',
-    name: '二次离子质谱仪电子倍增器制造',
+    name: 'Secondary Ion Mass Spectrometer Electron Multiplier Manufacturing', name_zh: '二次离子质谱仪电子倍增器制造',
     rate: { hours: q(26) },
     produces: [
       {
@@ -1358,7 +1358,7 @@ export const SIMS_ROUTES: readonly Route[] = [
      *   100 s —— 低浓度的尾巴（1e17 cm⁻³ 以下），**一晚上只够 30 个点**
      */
     id: 'make/sims-pulse-counter',
-    name: '二次离子质谱仪计数链制造',
+    name: 'Secondary Ion Mass Spectrometer Counting Chain Manufacturing', name_zh: '二次离子质谱仪计数链制造',
     rate: { hours: q(22) },
     produces: [
       {
@@ -1423,7 +1423,7 @@ export const SIMS_ROUTES: readonly Route[] = [
      * 在 SIMS 里就是 C⁻ 与 C₂H₃⁺ 的假峰，比氢化物干扰更糟。
      */
     id: 'make/sims-load-lock',
-    name: '二次离子质谱仪进样室制造',
+    name: 'Secondary Ion Mass Spectrometer Load-Lock Chamber Manufacturing', name_zh: '二次离子质谱仪进样室制造',
     rate: { hours: q(30) },
     produces: [
       {
@@ -1491,7 +1491,7 @@ export const SIMS_ROUTES: readonly Route[] = [
      *      这一句必须写在这里，否则 ±8 % 就是假的。
      */
     id: 'make/sims-rsf-standard',
-    name: 'RSF 标准片制造',
+    name: 'RSF Standard Wafer Manufacturing', name_zh: 'RSF 标准片制造',
     rate: { hours: q(3) },
     produces: [
       {
@@ -1574,7 +1574,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/sims',
-    name: '二次离子质谱仪装配',
+    name: 'Secondary Ion Mass Spectrometer Assembly', name_zh: '二次离子质谱仪装配',
     produces: [{
       item: 'plant/sims',
       qty: q(1),

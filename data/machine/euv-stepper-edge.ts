@@ -41,7 +41,7 @@ import { q } from '../../src/index.ts';
 export const EDGE_CONFIG_ITEMS: readonly Item[] = [
   {
     id: 'plant/euv-stepper/edge-head',
-    name: 'EUV 光刻机边缘对准头',
+    name: 'EUV Stepper Edge Alignment Head', name_zh: 'EUV 光刻机边缘对准头',
     unit: '件',
     category: 'part',
     // 边缘对准头：照明 + 刀口狭缝 + 光栅读头。装到基座台的载台上。
@@ -53,7 +53,7 @@ export const EDGE_CONFIG_ROUTES: readonly Route[] = [
   {
     /** 边缘对准头：不锈钢壳体 + 石英刀口 + 光栅 + 照明 LED。 */
     id: 'make/euv-stepper-edge-head',
-    name: 'EUV 光刻机边缘对准头制造',
+    name: 'EUV Stepper Edge Alignment Head Manufacturing', name_zh: 'EUV 光刻机边缘对准头制造',
     produces: [
       {
         item: 'plant/euv-stepper/edge-head',
@@ -76,7 +76,7 @@ export const EDGE_CONFIG_ROUTES: readonly Route[] = [
      * 除了 overlay，其余与基座台一致。
      */
     id: 'make/euv-stepper-edge',
-    name: 'EUV 扫描机整机制造',
+    name: 'EUV Scanner System Manufacturing', name_zh: 'EUV 扫描机整机制造',
     produces: [
       {
         item: 'plant/euv-stepper',

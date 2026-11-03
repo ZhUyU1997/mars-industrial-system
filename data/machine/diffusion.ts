@@ -58,20 +58,20 @@ export const GATE8_PARTS: readonly Item[] = [
  * 旧路线与本条注释都没改数字，只把矛盾记下来 —— 改数字会牵动熔制、拉管、法兰三处，
  * 而这三处在本层都还没有可算的尺寸链。
  */
-  { id: 'plant/diffusion-furnace/tube', name: '扩散炉石英炉管与法兰', unit: '件', category: 'part' },
+  { id: 'plant/diffusion-furnace/tube', name: 'Diffusion Furnace Quartz Tube and Flange', name_zh: '扩散炉石英炉管与法兰', unit: '件', category: 'part' },
 
   /** 加热体与炉膛。硅碳棒三段加热 + 氧化铝空心球砖保温（与高温炉同一套）。 */
-  { id: 'plant/diffusion-furnace/heater', name: '扩散炉加热体与炉膛', unit: '件', category: 'part' },
+  { id: 'plant/diffusion-furnace/heater', name: 'Diffusion Furnace Heating Element and Chamber', name_zh: '扩散炉加热体与炉膛', unit: '件', category: 'part' },
 
   /** 气路与源瓶。氮气鼓泡瓶（POCl₃）+ 氧气支路 + 流量阀 + 尾气处理（碱液吸收）。 */
-  { id: 'plant/diffusion-furnace/gas-panel', name: '扩散炉气路与源瓶', unit: '件', category: 'part' },
+  { id: 'plant/diffusion-furnace/gas-panel', name: 'Diffusion Furnace Gas Line and Source Bottle', name_zh: '扩散炉气路与源瓶', unit: '件', category: 'part' },
 ];
 
 export const GATE8_ROUTES: readonly Route[] = [
   {
     /** 石英管。高纯石英砂 → 电弧熔制成管（拉管）→ 切定长 → 磨口 → 法兰配作。 */
     id: 'make/diffusion-tube',
-    name: '扩散炉石英炉管与法兰制造',
+    name: 'Diffusion Furnace Quartz Tube and Flange Manufacturing', name_zh: '扩散炉石英炉管与法兰制造',
     produces: [{ item: 'plant/diffusion-furnace/tube', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/quartz-pure', qty: q(1) }] },
@@ -88,7 +88,7 @@ export const GATE8_ROUTES: readonly Route[] = [
   {
     /** 加热体。硅碳棒三段 + 氧化铝砖 + 热电偶孔（用毫伏表读）。 */
     id: 'make/diffusion-heater',
-    name: '扩散炉加热体与炉膛制造',
+    name: 'Diffusion Furnace Heating Element and Chamber Manufacturing', name_zh: '扩散炉加热体与炉膛制造',
     produces: [{ item: 'plant/diffusion-furnace/heater', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/sic-heating-element-general', qty: q(3) }] },
@@ -101,7 +101,7 @@ export const GATE8_ROUTES: readonly Route[] = [
   {
     /** 气路与源瓶。不锈钢阀件 + 玻璃瓶 + 碱液尾气吸收塔（防 POCl₃ 水解的酸雾）。 */
     id: 'make/diffusion-gas-panel',
-    name: '扩散炉气路与源瓶制造',
+    name: 'Diffusion Furnace Gas Line and Source Bottle Manufacturing', name_zh: '扩散炉气路与源瓶制造',
     produces: [{ item: 'plant/diffusion-furnace/gas-panel', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -121,7 +121,7 @@ export const GATE8_ROUTES: readonly Route[] = [
  */
 export const DIFFUSION_FURNACE: Item = {
   id: 'plant/diffusion-furnace',
-  name: '扩散炉',
+  name: 'Diffusion Furnace', name_zh: '扩散炉',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 900, max: 1200 }],
@@ -140,14 +140,14 @@ export const GATE8_ITEMS: readonly Item[] = [
    * 它是磷扩散的液体源：用氮气鼓泡带进炉管 —— **液体源不用高压钢瓶**，
    * 这是本层能碰扩散工艺的原因之一。
    */
-  { id: 'mat/pocl3', name: '三氯氧磷', unit: 'kg', category: 'material' },
+  { id: 'mat/pocl3', name: 'Phosphorus Oxychloride', name_zh: '三氯氧磷', unit: 'kg', category: 'material' },
 
   /**
    * 光电二极管。一整片硅片上的大 p-n 结，正面一个环电极、背面整面电极。
    *
    * 它**不需要光刻**：结是整面的，电极靠掩模挡着蒸镀 —— 精度 0.1 mm 级就够。
    */
-  { id: 'std/photodiode-general', name: '光电二极管', unit: '件', category: 'part' },
+  { id: 'std/photodiode-general', name: 'Photodiode', name_zh: '光电二极管', unit: '件', category: 'part' },
 
   /**
    * 隐灭式光学高温计，本层基线设计。
@@ -156,7 +156,7 @@ export const GATE8_ITEMS: readonly Item[] = [
    * 红滤光片、动铁式电流表、刻度盘与铸铁镜筒等件装配。零件与零件路线见
    * `data/machine/mech-pyrometer.ts`。
    */
-  { id: 'std/photoelectric-pyrometer-general', name: '隐灭式光学高温计', unit: '台', category: 'part',
+  { id: 'std/photoelectric-pyrometer-general', name: 'Disappearing-Filament Optical Pyrometer', name_zh: '隐灭式光学高温计', unit: '台', category: 'part',
     composedOf: [
       { item: 'std/photoelectric-pyrometer-general/tube', qty: q(1) },
       { item: 'std/photoelectric-pyrometer-general/case', qty: q(1) },
@@ -185,7 +185,7 @@ export const GATE8_ITEMS: readonly Item[] = [
    *
    * 光电二极管与表头为装配/接线关系；半导体结属于不可逆加工，零件输入写在路线 uses。
    */
-  { id: 'std/photoelectric-pyrometer-electronic', name: '光电式高温计', unit: '台', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-electronic', name: 'Photoelectric Pyrometer', name_zh: '光电式高温计', unit: '台', category: 'part' },
 ];
 
 export const GATE8_ITEM_ROUTES: readonly Route[] = [
@@ -202,7 +202,7 @@ export const GATE8_ITEM_ROUTES: readonly Route[] = [
      * 产物见水就水解，所以**蒸馏塔与储罐必须干燥** —— 与精馏三氯氢硅同一条纪律。
      */
     id: 'make/pocl3',
-    name: '三氯氧磷制备',
+    name: 'Phosphorus Oxychloride Production', name_zh: '三氯氧磷制备',
     produces: [{ item: 'mat/pocl3', qty: q(508) }],
     uses: [
       { anyOf: [{ item: 'mat/phosphorus', qty: q(100) }] },
@@ -223,7 +223,7 @@ export const GATE8_ITEM_ROUTES: readonly Route[] = [
      * 正面电极用**掩模挡着**蒸铝 —— 掩模是一块开了窗的薄铁片，不是光刻版。
      */
     id: 'make/photodiode',
-    name: '光电二极管制造',
+    name: 'Photodiode Manufacturing', name_zh: '光电二极管制造',
     produces: [{ item: 'std/photodiode-general', qty: q(20) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },
@@ -258,7 +258,7 @@ export const GATE8_ITEM_ROUTES: readonly Route[] = [
      *   （锡、锌、铝、银的凝固点 + 黑体炉 = 电阻炉加一个碳管靶）。
      */
     id: 'make/photoelectric-pyrometer',
-    name: '光电式高温计制造',
+    name: 'Photoelectric Pyrometer Manufacturing', name_zh: '光电式高温计制造',
     produces: [{ item: 'std/photoelectric-pyrometer-electronic', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/photodiode-general', qty: q(1) }] },
@@ -283,7 +283,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/diffusion-furnace',
-    name: '扩散炉装配',
+    name: 'Diffusion Furnace Assembly', name_zh: '扩散炉装配',
     produces: [{
       item: 'plant/diffusion-furnace',
       qty: q(1),

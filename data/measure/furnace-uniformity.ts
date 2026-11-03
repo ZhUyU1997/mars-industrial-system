@@ -44,7 +44,7 @@ import { q } from '../../src/index.ts';
 export const FURNACE_UNIFORMITY_ITEMS: readonly Item[] = [
   {
     id: 'mat/furnace-uniformity-record',
-    name: '炉温均匀性测量记录',
+    name: 'Furnace Temperature Uniformity Measurement Record', name_zh: '炉温均匀性测量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -54,7 +54,7 @@ export const FURNACE_UNIFORMITY_ITEMS: readonly Item[] = [
   },
   {
     id: 'mat/furnace-cooling-record',
-    name: '降温曲线测量记录',
+    name: 'Cooling Curve Measurement Record', name_zh: '降温曲线测量记录',
     unit: '份',
     category: 'part',
     props: [
@@ -63,7 +63,7 @@ export const FURNACE_UNIFORMITY_ITEMS: readonly Item[] = [
     ],
   },  {
     id: 'mat/furnace-coil-record',
-    name: '感应线圈的水压记录',
+    name: 'Induction Coil Water Pressure Record', name_zh: '感应线圈的水压记录',
     unit: '份',
     category: 'part',
     props: [
@@ -81,7 +81,7 @@ export const FURNACE_UNIFORMITY_ROUTES: readonly Route[] = [
      * 交出去：`uniformity ≤10 °C`、`controlBand ≤5 °C`（1 300 °C 那一档）。
      */
     id: 'measure/furnace-uniformity',
-    name: '炉温均匀性测量',
+    name: 'Furnace Temperature Uniformity Measurement', name_zh: '炉温均匀性测量',
     produces: [
       {
         item: 'mat/furnace-uniformity-record',
@@ -119,7 +119,7 @@ export const FURNACE_UNIFORMITY_ROUTES: readonly Route[] = [
      * 本层没有"开盖状态"这个参数，只能记"全程关炉门"。
      */
     id: 'measure/furnace-cooling-curve',
-    name: '降温曲线测量',
+    name: 'Cooling Curve Measurement', name_zh: '降温曲线测量',
     produces: [
       {
         item: 'mat/furnace-cooling-record',
@@ -155,7 +155,7 @@ export const FURNACE_UNIFORMITY_ROUTES: readonly Route[] = [
      * 的电阻随温度漂（铜 0.4 %/K），只能在热态下标定；③ 没有连续记录，全是人工读。
      */
     id: 'measure/furnace-coil',
-    name: '感应线圈的水压测量',
+    name: 'Induction Coil Water Pressure Measurement', name_zh: '感应线圈的水压测量',
     produces: [
       {
         item: 'mat/furnace-coil-record',

@@ -36,7 +36,7 @@ import { q } from '../../src/index.ts';
  */
 export const PERCHLORATE_OXYGEN_ROUTE: Route = {
   id: 'make/oxygen-perchlorate',
-  name: '氧制备',
+  name: 'Oxygen Production', name_zh: '氧制备',
   produces: [
     { item: 'mat/oxygen', qty: q(520), gives: [{ param: 'purity', kind: 'range', min: 90, max: 99, dir: 'atLeast' }] },
     { item: 'mat/salt', qty: q(477) },

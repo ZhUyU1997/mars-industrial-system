@@ -112,7 +112,7 @@ export const C4F6_ROUTES: readonly Route[] = [
      * 是 92–96，只写在文件头与 `unbalanced_zh` 里，不写进 `gives`。
      */
     id: 'make/c4f6',
-    name: 'C4F6 第三步制备',
+    name: 'C4F6 Third-Step Production', name_zh: 'C4F6 第三步制备',
     produces: [
       {
         item: 'mat/c4f6',

@@ -109,7 +109,7 @@ export const GONIOMETER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/goniometer-theta2theta',
-    name: 'θ/2θ 测角仪',
+    name: 'θ/2θ Goniometer', name_zh: 'θ/2θ 测角仪',
     unit: '套',
     category: 'machine',
     props: [
@@ -126,12 +126,12 @@ export const GONIOMETER_ITEMS: readonly Item[] = [
    * 底座与光学平台。HT250 铸铁，时效后铣/磨；两轴安装面平行度 ≤0.02 mm。
    * 它决定两轴的交点与水平：交点偏 0.1 mm 在 200 mm 臂上是 0.03°。
    */
-  { id: 'plant/goniometer-theta2theta/base', name: '测角仪底座与光学平台', unit: '件', category: 'part' },
+  { id: 'plant/goniometer-theta2theta/base', name: 'Goniometer Base and Optical Table', name_zh: '测角仪底座与光学平台', unit: '件', category: 'part' },
 
   /** 样品台。φ50–100 铝台 + 三顶一拉调平 + PTFE 垫；台面跳动 ≤0.01 mm。 */
   {
     id: 'plant/goniometer-theta2theta/sample-stage',
-    name: '测角仪样品台',
+    name: 'Goniometer Sample Stage', name_zh: '测角仪样品台',
     unit: '件',
     category: 'part',
     props: [{ param: 'diameter', kind: 'range', min: 50, max: 100, unit: 'mm' }],
@@ -140,7 +140,7 @@ export const GONIOMETER_ITEMS: readonly Item[] = [
   /** 2θ 探测器臂。200–400 mm 臂长、φ20 光阑、可换探测器座；臂端跳动 ≤0.02 mm。 */
   {
     id: 'plant/goniometer-theta2theta/detector-arm',
-    name: '2θ 探测器臂',
+    name: '2θ Detector Arm', name_zh: '2θ 探测器臂',
     unit: '件',
     category: 'part',
     props: [{ param: 'armLength', kind: 'range', min: 200, max: 400, unit: 'mm' }],
@@ -152,7 +152,7 @@ export const GONIOMETER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/goniometer-theta2theta/detector',
-    name: '测角仪三探测器组',
+    name: 'Goniometer Triple-Detector Assembly', name_zh: '测角仪三探测器组',
     unit: '件',
     category: 'part',
     props: [
@@ -173,7 +173,7 @@ export const GONIOMETER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/goniometer-theta2theta/autocollimator',
-    name: '测角仪自准直光管',
+    name: 'Goniometer Autocollimator', name_zh: '测角仪自准直光管',
     unit: '件',
     category: 'part',
     props: [{ param: 'angularAccuracy', kind: 'range', min: 0, max: 0.05, unit: '°', dir: 'atMost' }],
@@ -188,7 +188,7 @@ export const GONIOMETER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/goniometer-theta2theta/source-collimator',
-    name: '测角仪光源准直组件',
+    name: 'Goniometer Source Collimation Assembly', name_zh: '测角仪光源准直组件',
     unit: '件',
     category: 'part',
     props: [
@@ -210,7 +210,7 @@ export const GONIOMETER_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/reflectance-standard',
-    name: '绝对反射率标准',
+    name: 'Absolute Reflectance Standard', name_zh: '绝对反射率标准',
     unit: '件',
     category: 'part',
     props: [
@@ -226,7 +226,7 @@ export const GONIOMETER_ROUTES: readonly Route[] = [
   {
     /** 底座：HT250 浇 → 时效 → 铣 → 磨两轴安装面（平行度 ≤0.02 mm）。 */
     id: 'make/goniometer-base',
-    name: '测角仪底座与光学平台制造',
+    name: 'Goniometer Base and Optical Table Manufacturing', name_zh: '测角仪底座与光学平台制造',
     produces: [{ item: 'plant/goniometer-theta2theta/base', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] },
@@ -245,7 +245,7 @@ export const GONIOMETER_ROUTES: readonly Route[] = [
   {
     /** 样品台：铝台 φ50–100 + 三顶一拉调平 + PTFE 垫；台面跳动 ≤0.01 mm。 */
     id: 'make/goniometer-sample-stage',
-    name: '测角仪样品台制造',
+    name: 'Goniometer Sample Stage Manufacturing', name_zh: '测角仪样品台制造',
     produces: [
       {
         item: 'plant/goniometer-theta2theta/sample-stage',
@@ -270,7 +270,7 @@ export const GONIOMETER_ROUTES: readonly Route[] = [
   {
     /** 2θ 臂：45 钢臂 200–400 mm + 铝光阑座 + 铜配重；臂端跳动 ≤0.02 mm。 */
     id: 'make/goniometer-detector-arm',
-    name: '2θ 探测器臂制造',
+    name: '2θ Detector Arm Manufacturing', name_zh: '2θ 探测器臂制造',
     produces: [
       {
         item: 'plant/goniometer-theta2theta/detector-arm',
@@ -300,7 +300,7 @@ export const GONIOMETER_ROUTES: readonly Route[] = [
      *   线性 0.5–1 %（用双光路/衰减片法量）
      */
     id: 'make/goniometer-detector',
-    name: '测角仪三探测器组制造',
+    name: 'Goniometer Triple-Detector Assembly Manufacturing', name_zh: '测角仪三探测器组制造',
     produces: [
       {
         item: 'plant/goniometer-theta2theta/detector',
@@ -335,7 +335,7 @@ export const GONIOMETER_ROUTES: readonly Route[] = [
      *   望远镜 1 + 分光板 1 + 参考平晶 1 + 照明丝 1 + 玻璃/氢氟酸（十字分划）
      */
     id: 'make/goniometer-autocollimator',
-    name: '测角仪自准直光管制造',
+    name: 'Goniometer Autocollimator Manufacturing', name_zh: '测角仪自准直光管制造',
     produces: [
       {
         item: 'plant/goniometer-theta2theta/autocollimator',
@@ -368,7 +368,7 @@ export const GONIOMETER_ROUTES: readonly Route[] = [
      *   望远镜 1 + 狭缝 1 + 偏振器 1 + 斩波器 1 + 铝/钢座
      */
     id: 'make/goniometer-source-collimator',
-    name: '测角仪光源准直组件制造',
+    name: 'Goniometer Source Collimation Assembly Manufacturing', name_zh: '测角仪光源准直组件制造',
     produces: [
       {
         item: 'plant/goniometer-theta2theta/source-collimator',
@@ -412,7 +412,7 @@ export const GONIOMETER_ROUTES: readonly Route[] = [
      * `plant/xenon-lamp` 是 200–2500 nm 的光源。
      */
     id: 'make/goniometer-theta2theta',
-    name: 'θ/2θ 测角仪制造',
+    name: 'θ/2θ Goniometer Manufacturing', name_zh: 'θ/2θ 测角仪制造',
     produces: [
       {
         item: 'plant/goniometer-theta2theta',
@@ -459,7 +459,7 @@ export const GONIOMETER_ROUTES: readonly Route[] = [
      *   波长 400–1100 nm（Si 到 1.1 µm 透明；再长吸收，不能当镜面标准）。
      */
     id: 'make/reflectance-standard-si',
-    name: '绝对反射率标准制造',
+    name: 'Absolute Reflectance Standard Manufacturing', name_zh: '绝对反射率标准制造',
     produces: [
       {
         item: 'std/reflectance-standard',
@@ -500,7 +500,7 @@ export const GONIOMETER_ROUTES: readonly Route[] = [
      * 的白板，只作旁证，不作绝对锚）。
      */
     id: 'make/reflectance-standard-ptfe',
-    name: '绝对反射率标准制造',
+    name: 'Absolute Reflectance Standard Manufacturing', name_zh: '绝对反射率标准制造',
     produces: [
       {
         item: 'std/reflectance-standard',

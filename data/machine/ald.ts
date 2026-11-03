@@ -565,7 +565,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor',
-    name: 'ALD 原子层沉积反应器',
+    name: 'ALD Atomic Layer Deposition Reactor', name_zh: 'ALD 原子层沉积反应器',
     unit: '台',
     category: 'machine',
     holds: [
@@ -615,7 +615,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/chamber',
-    name: 'ALD 真空腔',
+    name: 'ALD Vacuum Chamber', name_zh: 'ALD 真空腔',
     unit: '件',
     category: 'part',
     props: [
@@ -637,7 +637,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/quartz-liner',
-    name: 'ALD 熔石英内衬',
+    name: 'ALD Fused Quartz Liner', name_zh: 'ALD 熔石英内衬',
     unit: '件',
     category: 'part',
     props: [{ param: 'maxTemperature', kind: 'range', min: 200, max: 800, unit: '°C', dir: 'atLeast' }],
@@ -662,7 +662,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/heater-jacket',
-    name: 'ALD 加热套',
+    name: 'ALD Heater Jacket', name_zh: 'ALD 加热套',
     unit: '件',
     category: 'part',
     props: [
@@ -684,7 +684,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/wafer-boat',
-    name: 'ALD 装片舟',
+    name: 'ALD Wafer Boat', name_zh: 'ALD 装片舟',
     unit: '件',
     category: 'part',
     props: [
@@ -710,7 +710,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/source-cell',
-    name: 'ALD 前驱体源',
+    name: 'ALD Precursor Source', name_zh: 'ALD 前驱体源',
     unit: '件',
     category: 'part',
     props: [
@@ -733,7 +733,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/hot-manifold',
-    name: 'ALD 加热管路与阀块',
+    name: 'ALD Heated Manifold and Valve Block', name_zh: 'ALD 加热管路与阀块',
     unit: '件',
     category: 'part',
     props: [
@@ -758,7 +758,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/valve-block',
-    name: 'ALD 阀块',
+    name: 'ALD Valve Block', name_zh: 'ALD 阀块',
     unit: '件',
     category: 'part',
     props: [
@@ -782,7 +782,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/dosing-volume',
-    name: 'ALD 定量腔',
+    name: 'ALD Dosing Volume', name_zh: 'ALD 定量腔',
     unit: '件',
     category: 'part',
     props: [
@@ -809,7 +809,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/purge-panel',
-    name: 'ALD 吹扫/载气板',
+    name: 'ALD Purge/Carrier Gas Panel', name_zh: 'ALD 吹扫/载气板',
     unit: '件',
     category: 'part',
     props: [
@@ -849,7 +849,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/h2-line',
-    name: 'ALD H₂ 支路',
+    name: 'ALD H₂ Branch Line', name_zh: 'ALD H₂ 支路',
     unit: '件',
     category: 'part',
     props: [
@@ -874,7 +874,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/rf-electrode',
-    name: 'ALD 喷淋电极',
+    name: 'ALD Showerhead Electrode', name_zh: 'ALD 喷淋电极',
     unit: '件',
     category: 'part',
     props: [
@@ -899,7 +899,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/qcm-port',
-    name: 'ALD 原位膜厚头',
+    name: 'ALD In-Situ Film Thickness Head', name_zh: 'ALD 原位膜厚头',
     unit: '件',
     category: 'part',
     props: [
@@ -922,7 +922,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ald-reactor/throttle',
-    name: 'ALD 尾气节流阀',
+    name: 'ALD Exhaust Throttle Valve', name_zh: 'ALD 尾气节流阀',
     unit: '件',
     category: 'part',
     props: [
@@ -961,7 +961,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ald-barrier-wafer',
-    name: '镀完 TiN 保形阻挡层的沟槽片',
+    name: 'Trench Wafer with Conformal TiN Barrier', name_zh: '镀完 TiN 保形阻挡层的沟槽片',
     unit: '片',
     category: 'part',
     props: [
@@ -988,7 +988,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/hfo2-wafer',
-    name: '镀完 HfO₂ 高 k 的片',
+    name: 'HfO₂ High-k Coated Wafer', name_zh: '镀完 HfO₂ 高 k 的片',
     unit: '片',
     category: 'part',
     props: [
@@ -1014,7 +1014,7 @@ export const ALD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ald-tio2-wafer',
-    name: '镀完 TiO₂ 的片',
+    name: 'TiO₂-Coated Wafer', name_zh: '镀完 TiO₂ 的片',
     unit: '片',
     category: 'part',
     props: [
@@ -1054,7 +1054,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * 里走的其实是**加压水**，`plant/water-polisher` 的 0.4 MPa 那一路）。
      */
     id: 'make/ald-chamber',
-    name: 'ALD 真空腔制造',
+    name: 'ALD Vacuum Chamber Manufacturing', name_zh: 'ALD 真空腔制造',
     produces: [
       {
         item: 'plant/ald-reactor/chamber',
@@ -1111,7 +1111,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * 每 50 批一洗 ⇒ **10 000–20 000 批**，比镍加热丝长得多，所以它不是耗材。
      */
     id: 'make/ald-quartz-liner',
-    name: 'ALD 熔石英内衬制造',
+    name: 'ALD Fused Quartz Liner Manufacturing', name_zh: 'ALD 熔石英内衬制造',
     produces: [
       {
         item: 'plant/ald-reactor/quartz-liner',
@@ -1160,7 +1160,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * 所以要 300 °C × 2 h → 450 °C × 2 h 分两段升，把热点烧出来再换。
      */
     id: 'make/ald-heater-jacket',
-    name: 'ALD 加热套制造',
+    name: 'ALD Heater Jacket Manufacturing', name_zh: 'ALD 加热套制造',
     produces: [
       {
         item: 'plant/ald-reactor/heater-jacket',
@@ -1218,7 +1218,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * 爪子坐在槽里焊 —— 胎具的槽距由铣床保证（0.05 mm），比手工对位好 6 倍。
      */
     id: 'make/ald-wafer-boat',
-    name: 'ALD 装片舟制造',
+    name: 'ALD Wafer Boat Manufacturing', name_zh: 'ALD 装片舟制造',
     produces: [
       {
         item: 'plant/ald-reactor/wafer-boat',
@@ -1272,7 +1272,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * 换成一块挡板让载气掠过粉床（§零件注释）。
      */
     id: 'make/ald-source-cell',
-    name: 'ALD 前驱体源制造',
+    name: 'ALD Precursor Source Manufacturing', name_zh: 'ALD 前驱体源制造',
     produces: [
       {
         item: 'plant/ald-reactor/source-cell',
@@ -1335,7 +1335,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * "管路漏"的那一半（另一半是阀座）。
      */
     id: 'make/ald-hot-manifold',
-    name: 'ALD 加热管路与阀块制造',
+    name: 'ALD Heated Manifold and Valve Block Manufacturing', name_zh: 'ALD 加热管路与阀块制造',
     produces: [
       {
         item: 'plant/ald-reactor/hot-manifold',
@@ -1401,7 +1401,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * "160 % 的寄生剂量"回到 **1.6 %**，周期只从 11 涨到 13 s。
      */
     id: 'make/ald-valve-block',
-    name: 'ALD 阀块制造',
+    name: 'ALD Valve Block Manufacturing', name_zh: 'ALD 阀块制造',
     produces: [
       {
         item: 'plant/ald-reactor/valve-block',
@@ -1468,7 +1468,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * （热偶规对 N₂ ±10 %，对 TiCl₄ 的系数未知 ⇒ 5 % 是乐观的）。
      */
     id: 'make/ald-dosing-volume',
-    name: 'ALD 定量腔制造',
+    name: 'ALD Dosing Volume Manufacturing', name_zh: 'ALD 定量腔制造',
     produces: [
       {
         item: 'plant/ald-reactor/dosing-volume',
@@ -1518,7 +1518,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * 所以 3 % 是两者相加（保守取 ±3 %），而不是"这一件做得好"。
      */
     id: 'make/ald-purge-panel',
-    name: 'ALD 吹扫/载气板制造',
+    name: 'ALD Purge/Carrier Gas Panel Manufacturing', name_zh: 'ALD 吹扫/载气板制造',
     produces: [
       {
         item: 'plant/ald-reactor/purge-panel',
@@ -1587,7 +1587,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * 钯膜/铜床；这一条记在 §九 ⑪，不算气路缺失。
      */
     id: 'make/ald-h2-line',
-    name: 'ALD H₂ 支路制造',
+    name: 'ALD H₂ Branch Line Manufacturing', name_zh: 'ALD H₂ 支路制造',
     produces: [
       {
         item: 'plant/ald-reactor/h2-line',
@@ -1673,7 +1673,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * 反射功率 20–40 % 是常态（§4.6 ③）。
      */
     id: 'make/ald-rf-electrode',
-    name: 'ALD 喷淋电极制造',
+    name: 'ALD Showerhead Electrode Manufacturing', name_zh: 'ALD 喷淋电极制造',
     produces: [
       {
         item: 'plant/ald-reactor/rf-electrode',
@@ -1732,7 +1732,7 @@ export const ALD_ROUTES: readonly Route[] = [
      *   ② 1 MHz 晶片 5 次泛音 11.5 Hz/nm ⇒ 0.1 nm = 1.15 Hz，而门控 1 s 的量化就是 1 Hz。
      */
     id: 'make/ald-qcm-port',
-    name: 'ALD 原位膜厚头制造',
+    name: 'ALD In-Situ Film Thickness Head Manufacturing', name_zh: 'ALD 原位膜厚头制造',
     produces: [
       {
         item: 'plant/ald-reactor/qcm-port',
@@ -1790,7 +1790,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * 所以压盖要能每周紧一次 —— 这也是"每班一次破空"的来源之一（§九 ⑦）。
      */
     id: 'make/ald-throttle',
-    name: 'ALD 尾气节流阀制造',
+    name: 'ALD Exhaust Throttle Valve Manufacturing', name_zh: 'ALD 尾气节流阀制造',
     produces: [
       {
         item: 'plant/ald-reactor/throttle',
@@ -1871,7 +1871,7 @@ export const ALD_ROUTES: readonly Route[] = [
      *   ⇒ 一批够 **20 万片次**。**前驱体的产能从来不是 ALD 的瓶颈。**
      */
     id: 'make/ticl4',
-    name: '四氯化钛制备',
+    name: 'Titanium Tetrachloride Production', name_zh: '四氯化钛制备',
     produces: [
       {
         item: 'mat/ticl4',
@@ -1975,7 +1975,7 @@ export const ALD_ROUTES: readonly Route[] = [
      *   （这就是 §3.5 里那个"17–24 倍"的分子）。
      */
     id: 'make/ald-tin-barrier',
-    name: '镀完 TiN 保形阻挡层的沟槽片制造',
+    name: 'Trench Wafer with Conformal TiN Barrier Manufacturing', name_zh: '镀完 TiN 保形阻挡层的沟槽片制造',
     produces: [
       {
         item: 'mat/ald-barrier-wafer',
@@ -2101,7 +2101,7 @@ export const ALD_ROUTES: readonly Route[] = [
      *   ⇒ **"k 的替代"不等于"绝缘的替代"**，这是可降级/不可降级的一个正例。
      */
     id: 'make/ald-tio2',
-    name: '镀完 TiO₂ 的片制造',
+    name: 'TiO₂-Coated Wafer Manufacturing', name_zh: '镀完 TiO₂ 的片制造',
     produces: [
       {
         item: 'mat/ald-tio2-wafer',
@@ -2181,7 +2181,7 @@ export const ALD_ROUTES: readonly Route[] = [
      * 所以单片 HfO₂ 是 **16 s/周期 × 56 = 15 min 镀膜**，加抽真空与升温约 1.5 h/批。
      */
     id: 'make/ald-hfo2',
-    name: '镀完 HfO₂ 高 k 的片制造',
+    name: 'HfO₂ High-k Coated Wafer Manufacturing', name_zh: '镀完 HfO₂ 高 k 的片制造',
     produces: [
       {
         item: 'mat/hfo2-wafer',
@@ -2227,7 +2227,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/ald-reactor',
-    name: 'ALD 原子层沉积反应器装配',
+    name: 'ALD Atomic Layer Deposition Reactor Assembly', name_zh: 'ALD 原子层沉积反应器装配',
     produces: [{
       item: 'plant/ald-reactor',
       qty: q(1),

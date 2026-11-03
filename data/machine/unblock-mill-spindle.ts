@@ -165,7 +165,7 @@ export const UNBLOCK_MILL_SPINDLE_ITEMS: readonly Item[] = [];
 export const UNBLOCK_MILL_SPINDLE_ROUTES: readonly Route[] = [
   {
     id: 'make/mill-spindle-45steel',
-    name: '铣镗床主轴制造',
+    name: 'Milling and Boring Machine Spindle Manufacturing', name_zh: '铣镗床主轴制造',
     produces: [{ item: 'plant/milling-machine/spindle', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     // 量块是唯一的长度基准：没有它，"φ80" 只是个数，不是尺寸（降级 ④）。

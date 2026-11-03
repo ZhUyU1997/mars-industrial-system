@@ -26,7 +26,7 @@ export const PRECIOUS_USE_ROUTES: readonly Route[] = [
      *   镀银板：50/50 分光，条纹对比度好得多 —— 但镀层会氧化，半年要重镀
      */
     id: 'make/splitter-silvered',
-    name: '干涉仪分光板制造',
+    name: 'Interferometer Beamsplitter Manufacturing', name_zh: '干涉仪分光板制造',
     produces: [{ item: 'plant/interferometer/splitter', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1), need: [{ param: 'type', kind: 'enum', oneOf: ['soda-lime'] }], onRelax: 'functional-kept' }] },
@@ -53,7 +53,7 @@ export const PRECIOUS_USE_ROUTES: readonly Route[] = [
      * 量极小（一只表 20 mg），但它是**唯一**能把 µV 级测量做稳的手段。
      */
     id: 'make/galvanometer-gold-contact',
-    name: '动圈检流计制造',
+    name: 'Moving-Coil Galvanometer Manufacturing', name_zh: '动圈检流计制造',
     produces: [
       { item: 'std/galvanometer-general', qty: q(1), gives: [{ param: 'sensitivity', kind: 'range', min: 1, max: 30, dir: 'atMost' }] },
     ],
@@ -82,7 +82,7 @@ export const PRECIOUS_USE_ROUTES: readonly Route[] = [
      * 硒堆是它的第二条来路：没有转动件，寿命长，但要用掉贵金属。
      */
     id: 'make/selenium-rectifier',
-    name: '旋转变流机制造',
+    name: 'Rotary Converter Manufacturing', name_zh: '旋转变流机制造',
     produces: [{ item: 'std/rectifier-rotary-general', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/selenium', qty: q(1, 2), need: [{ param: 'purity', kind: 'range', min: 95 }], onRelax: 'functional-kept' }] },

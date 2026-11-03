@@ -192,7 +192,7 @@ export const PCB_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/fr4-prepreg',
-    name: '半固化片',
+    name: 'Prepreg', name_zh: '半固化片',
     unit: 'kg',
     category: 'material',
     props: [
@@ -212,7 +212,7 @@ export const PCB_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/copper-foil',
-    name: '铜箔',
+    name: 'Copper Foil', name_zh: '铜箔',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'thickness', kind: 'range', min: 30, max: 60, unit: 'µm', dir: 'atMost' }],
@@ -226,7 +226,7 @@ export const PCB_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ferric-chloride',
-    name: '三氯化铁蚀刻液',
+    name: 'Ferric Chloride Etchant', name_zh: '三氯化铁蚀刻液',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'concentration', kind: 'range', min: 30, max: 45, unit: '%' }],
@@ -241,7 +241,7 @@ export const PCB_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/carbon-paste',
-    name: '石墨导电浆',
+    name: 'Graphite Conductive Paste', name_zh: '石墨导电浆',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'sheetResistance', kind: 'range', min: 5, max: 100, unit: 'Ω/□', dir: 'atMost' }],
@@ -255,7 +255,7 @@ export const PCB_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/solder-mask',
-    name: '阻焊剂',
+    name: 'Solder Mask', name_zh: '阻焊剂',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'cureTemperature', kind: 'range', min: 120, max: 180, unit: '°C' }],
@@ -271,7 +271,7 @@ export const PCB_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/copper-clad',
-    name: '覆铜板',
+    name: 'Copper-Clad Laminate', name_zh: '覆铜板',
     unit: 'kg',
     category: 'material',
     props: [
@@ -288,7 +288,7 @@ export const PCB_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pcb-2layer',
-    name: '双面板',
+    name: 'Double-Sided PCB', name_zh: '双面板',
     unit: 'kg',
     category: 'material',
     props: [
@@ -309,7 +309,7 @@ export const PCB_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/multilayer-pcb',
-    name: '四层板',
+    name: 'Four-Layer PCB', name_zh: '四层板',
     unit: 'kg',
     category: 'material',
     props: [
@@ -337,7 +337,7 @@ export const PCB_ROUTES: readonly Route[] = [
      * 没有凝胶时间测定仪，靠手感与"撕一小条看断面"。
      */
     id: 'make/fr4-prepreg',
-    name: '半固化片制备',
+    name: 'Prepreg Production', name_zh: '半固化片制备',
     produces: [
       {
         item: 'mat/fr4-prepreg',
@@ -398,7 +398,7 @@ export const PCB_ROUTES: readonly Route[] = [
      * 本层两样都没有。升到电解铜箔是本条路线的上限之外。
      */
     id: 'make/copper-foil',
-    name: '铜箔制备',
+    name: 'Copper Foil Production', name_zh: '铜箔制备',
     produces: [
       { item: 'mat/copper-foil', qty: q(1000), gives: [{ param: 'thickness', kind: 'range', min: 50, max: 50 }] },
       {
@@ -448,7 +448,7 @@ export const PCB_ROUTES: readonly Route[] = [
      * 它买到的不是线宽而是**侧蚀**：75 µm → 52 µm。
      */
     id: 'make/copper-foil-thin',
-    name: '薄铜箔制备',
+    name: 'Thin Copper Foil Production', name_zh: '薄铜箔制备',
     produces: [
       { item: 'mat/copper-foil', qty: q(1000), gives: [{ param: 'thickness', kind: 'range', min: 35, max: 35 }] },
       {
@@ -494,7 +494,7 @@ export const PCB_ROUTES: readonly Route[] = [
      * 用铁而不是钢：铁屑（`mat/iron` 生铁）在盐酸里溶得快，碳不溶、沉底，滤掉就行。
      */
     id: 'make/ferric-chloride',
-    name: '三氯化铁蚀刻液制备',
+    name: 'Ferric Chloride Etchant Production', name_zh: '三氯化铁蚀刻液制备',
     produces: [
       {
         item: 'mat/ferric-chloride',
@@ -544,7 +544,7 @@ export const PCB_ROUTES: readonly Route[] = [
      * 而碳越细越难润湿，胶少了是干的、胶多了方阻高。判据是"涂在玻璃上对光看，无颗粒"。
      */
     id: 'make/carbon-paste',
-    name: '石墨导电浆制备',
+    name: 'Graphite Conductive Paste Production', name_zh: '石墨导电浆制备',
     produces: [
       {
         item: 'mat/carbon-paste',
@@ -576,7 +576,7 @@ export const PCB_ROUTES: readonly Route[] = [
      * 它是本层最弱的一环：耐不住焊锡，所以印在 HASL 之后（文件头）。
      */
     id: 'make/solder-mask',
-    name: '阻焊剂制备',
+    name: 'Solder Mask Production', name_zh: '阻焊剂制备',
     produces: [
       {
         item: 'mat/solder-mask',
@@ -616,7 +616,7 @@ export const PCB_ROUTES: readonly Route[] = [
      * 一次压一层：单层压机，产能是工业多层压机的 1/20（工业一次 20 层）。
      */
     id: 'make/copper-clad',
-    name: '覆铜板制备',
+    name: 'Copper-Clad Laminate Production', name_zh: '覆铜板制备',
     produces: [
       {
         item: 'mat/copper-clad',
@@ -680,7 +680,7 @@ export const PCB_ROUTES: readonly Route[] = [
      * 它是 `make/pcb-4layer-fine` 的前提：0.15 mm 的线要薄箔，否则侧蚀就吃掉了。
      */
     id: 'make/copper-clad-thin',
-    name: '薄覆铜板制备',
+    name: 'Thin Copper-Clad Laminate Production', name_zh: '薄覆铜板制备',
     produces: [
       {
         item: 'mat/copper-clad',
@@ -755,7 +755,7 @@ export const PCB_ROUTES: readonly Route[] = [
      *   ③ 侧蚀 75 µm（50 µm 箔的 1.5 倍）
      */
     id: 'make/pcb-2layer',
-    name: '双面板制备',
+    name: 'Double-Sided PCB Production', name_zh: '双面板制备',
     produces: [
       {
         item: 'mat/pcb-2layer',
@@ -894,7 +894,7 @@ export const PCB_ROUTES: readonly Route[] = [
      * 剥离强度低 —— 判据仍是手撕。
      */
     id: 'make/pcb-4layer',
-    name: '四层板制备',
+    name: 'Four-Layer PCB Production', name_zh: '四层板制备',
     produces: [
       {
         item: 'mat/multilayer-pcb',
@@ -1017,7 +1017,7 @@ export const PCB_ROUTES: readonly Route[] = [
      * + 胶的载体 0.004 + 去锡 0.033 + 阻焊溶剂 0.010 + 挤出的胶 0.026。
      */
     id: 'make/pcb-4layer-fine',
-    name: '四层细线板制备',
+    name: 'Four-Layer Fine-Line PCB Production', name_zh: '四层细线板制备',
     produces: [
       {
         item: 'mat/multilayer-pcb',

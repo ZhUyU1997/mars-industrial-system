@@ -29,23 +29,23 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const PYROMETER_PARTS: readonly Item[] = [
-  { id: 'std/photoelectric-pyrometer-general/tube', name: '隐灭式光学高温计镜筒', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/case', name: '隐灭式光学高温计表壳', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/base', name: '隐灭式光学高温计底座', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/mirror', name: '隐灭式光学高温计铜镜坯', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/mirror-frame', name: '隐灭式光学高温计镜框', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/lamp-house', name: '隐灭式光学高温计灯室', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/filter', name: '隐灭式光学高温计铜红玻璃滤光片', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/ammeter', name: '隐灭式光学高温计动铁式电流表', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/scale', name: '隐灭式光学高温计刻度盘', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/sight', name: '隐灭式光学高温计照门与眼罩', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/spacer', name: '隐灭式光学高温计定距套', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/field-stop', name: '隐灭式光学高温计视场光阑', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/lamp-socket', name: '隐灭式光学高温计灯丝座', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/adjusting-screw', name: '隐灭式光学高温计调节螺钉', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/blackbody-cavity', name: '隐灭式光学高温计石墨黑体腔管', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/spider', name: '隐灭式光学高温计灯室蜘蛛架', unit: '件', category: 'part' },
-  { id: 'std/photoelectric-pyrometer-general/filter-retainer', name: '隐灭式光学高温计滤光片压圈', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/tube', name: 'Disappearing-Filament Optical Pyrometer Tube', name_zh: '隐灭式光学高温计镜筒', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/case', name: 'Disappearing-Filament Optical Pyrometer Case', name_zh: '隐灭式光学高温计表壳', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/base', name: 'Disappearing-Filament Optical Pyrometer Base', name_zh: '隐灭式光学高温计底座', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/mirror', name: 'Disappearing-Filament Optical Pyrometer Copper Mirror Blank', name_zh: '隐灭式光学高温计铜镜坯', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/mirror-frame', name: 'Disappearing-Filament Optical Pyrometer Mirror Frame', name_zh: '隐灭式光学高温计镜框', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/lamp-house', name: 'Disappearing-Filament Optical Pyrometer Lamp House', name_zh: '隐灭式光学高温计灯室', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/filter', name: 'Disappearing-Filament Optical Pyrometer Copper-Red Glass Filter', name_zh: '隐灭式光学高温计铜红玻璃滤光片', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/ammeter', name: 'Disappearing-Filament Optical Pyrometer Moving-Iron Ammeter', name_zh: '隐灭式光学高温计动铁式电流表', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/scale', name: 'Disappearing-Filament Optical Pyrometer Scale', name_zh: '隐灭式光学高温计刻度盘', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/sight', name: 'Disappearing-Filament Optical Pyrometer Sight and Eyecup', name_zh: '隐灭式光学高温计照门与眼罩', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/spacer', name: 'Disappearing-Filament Optical Pyrometer Spacer', name_zh: '隐灭式光学高温计定距套', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/field-stop', name: 'Disappearing-Filament Optical Pyrometer Field Stop', name_zh: '隐灭式光学高温计视场光阑', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/lamp-socket', name: 'Disappearing-Filament Optical Pyrometer Lamp Socket', name_zh: '隐灭式光学高温计灯丝座', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/adjusting-screw', name: 'Disappearing-Filament Optical Pyrometer Adjusting Screw', name_zh: '隐灭式光学高温计调节螺钉', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/blackbody-cavity', name: 'Disappearing-Filament Optical Pyrometer Graphite Blackbody Cavity Tube', name_zh: '隐灭式光学高温计石墨黑体腔管', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/spider', name: 'Disappearing-Filament Optical Pyrometer Lamp House Spider', name_zh: '隐灭式光学高温计灯室蜘蛛架', unit: '件', category: 'part' },
+  { id: 'std/photoelectric-pyrometer-general/filter-retainer', name: 'Disappearing-Filament Optical Pyrometer Filter Retainer', name_zh: '隐灭式光学高温计滤光片压圈', unit: '件', category: 'part' },
 ];
 
 const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -54,7 +54,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 镜筒：φ45×4×430 灰铸铁，立浇、干砂芯，两端留 8 mm 加工余量。 */
     id: 'make/pyrometer-tube',
-    name: '隐灭式光学高温计镜筒制造',
+    name: 'Disappearing-Filament Optical Pyrometer Tube Manufacturing', name_zh: '隐灭式光学高温计镜筒制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/tube', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(12, 5) }] }],
     performedBy: 'plant/melting-furnace',
@@ -62,7 +62,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/pyrometer-case',
-    name: '隐灭式光学高温计表壳制造',
+    name: 'Disappearing-Filament Optical Pyrometer Case Manufacturing', name_zh: '隐灭式光学高温计表壳制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/case', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(4, 5) }] }],
     performedBy: 'plant/melting-furnace',
@@ -70,7 +70,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   },
   {
     id: 'make/pyrometer-base',
-    name: '隐灭式光学高温计底座制造',
+    name: 'Disappearing-Filament Optical Pyrometer Base Manufacturing', name_zh: '隐灭式光学高温计底座制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/base', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht200', qty: q(3, 5) }] }],
     performedBy: 'plant/melting-furnace',
@@ -79,7 +79,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 铜镜坯：φ30×12 铜饼，石墨模铸出 R360 球面初形。 */
     id: 'make/pyrometer-mirror',
-    name: '隐灭式光学高温计铜镜坯制造',
+    name: 'Disappearing-Filament Optical Pyrometer Copper Mirror Blank Manufacturing', name_zh: '隐灭式光学高温计铜镜坯制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/mirror', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/copper', qty: q(2, 25) }] }],
     performedBy: 'plant/melting-furnace',
@@ -88,7 +88,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 镜框：45 钢，止口与筒同轴 0.05。 */
     id: 'make/pyrometer-mirror-frame',
-    name: '隐灭式光学高温计镜框制造',
+    name: 'Disappearing-Filament Optical Pyrometer Mirror Frame Manufacturing', name_zh: '隐灭式光学高温计镜框制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/mirror-frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(11, 50) }] }],
     performedBy: 'lathe',
@@ -101,7 +101,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 玻璃管与窗片用硅石、石灰、铜现配；碳电极与灯丝用 Bosch 碳。
      */
     id: 'make/pyrometer-lamp-house',
-    name: '隐灭式光学高温计灯室制造',
+    name: 'Disappearing-Filament Optical Pyrometer Lamp House Manufacturing', name_zh: '隐灭式光学高温计灯室制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/lamp-house', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/silica', qty: q(3, 100) }] },
@@ -119,7 +119,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 铜红玻璃滤光片：φ25×0.6，650 nm 透 45%，550 nm 漏 25%。 */
     id: 'make/pyrometer-optical-filter',
-    name: '隐灭式光学高温计铜红玻璃滤光片制造',
+    name: 'Disappearing-Filament Optical Pyrometer Copper-Red Glass Filter Manufacturing', name_zh: '隐灭式光学高温计铜红玻璃滤光片制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/filter', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/silica', qty: q(1, 50) }] },
@@ -137,7 +137,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 所以盘上刻电流，温度靠标定牌。
      */
     id: 'make/pyrometer-optical-ammeter',
-    name: '隐灭式光学高温计动铁式电流表制造',
+    name: 'Disappearing-Filament Optical Pyrometer Moving-Iron Ammeter Manufacturing', name_zh: '隐灭式光学高温计动铁式电流表制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/ammeter', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper-wire', qty: q(9, 100) }] },
@@ -156,7 +156,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 刻度盘：100 mm 弧、100 条线，每格 0.02 A，刻深 0.3。 */
     id: 'make/pyrometer-scale',
-    name: '隐灭式光学高温计刻度盘制造',
+    name: 'Disappearing-Filament Optical Pyrometer Scale Manufacturing', name_zh: '隐灭式光学高温计刻度盘制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/scale', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 20) }] }],
     performedBy: 'plant/milling-machine',
@@ -164,7 +164,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 照门与眼罩：保证 300 mm 眼距。 */
     id: 'make/pyrometer-sight',
-    name: '隐灭式光学高温计照门与眼罩制造',
+    name: 'Disappearing-Filament Optical Pyrometer Sight and Eyecup Manufacturing', name_zh: '隐灭式光学高温计照门与眼罩制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/sight', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(7, 50) }] }],
     performedBy: 'lathe',
@@ -172,7 +172,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 定距套：灯丝到镜面 180.00 的唯一保证，长度用量块组当场比。 */
     id: 'make/pyrometer-spacer',
-    name: '隐灭式光学高温计定距套制造',
+    name: 'Disappearing-Filament Optical Pyrometer Spacer Manufacturing', name_zh: '隐灭式光学高温计定距套制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/spacer', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 10) }] }],
     performedBy: 'lathe',
@@ -180,7 +180,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 视场光阑：φ8 孔，开在像面上，挡掉炉墙暗边。 */
     id: 'make/pyrometer-field-stop',
-    name: '隐灭式光学高温计视场光阑制造',
+    name: 'Disappearing-Filament Optical Pyrometer Field Stop Manufacturing', name_zh: '隐灭式光学高温计视场光阑制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/field-stop', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 20) }] }],
     performedBy: 'lathe',
@@ -188,7 +188,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 灯丝座 2 只：夹碳带两端，绝缘垫用耐火料。 */
     id: 'make/pyrometer-lamp-socket',
-    name: '隐灭式光学高温计灯丝座制造',
+    name: 'Disappearing-Filament Optical Pyrometer Lamp Socket Manufacturing', name_zh: '隐灭式光学高温计灯丝座制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/lamp-socket', qty: q(2) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 50) }] }],
     performedBy: 'lathe',
@@ -196,7 +196,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 调节螺钉 6 只：镜框、光阑、照门各两只。 */
     id: 'make/pyrometer-adjusting-screw',
-    name: '隐灭式光学高温计调节螺钉制造',
+    name: 'Disappearing-Filament Optical Pyrometer Adjusting Screw Manufacturing', name_zh: '隐灭式光学高温计调节螺钉制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/adjusting-screw', qty: q(6) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(3, 50) }] }],
     performedBy: 'lathe',
@@ -208,7 +208,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 它随仪器走，标定时装铜或铁碳共晶；腔的有效发射率 0.99。
      */
     id: 'make/pyrometer-blackbody-cavity',
-    name: '隐灭式光学高温计石墨黑体腔管制造',
+    name: 'Disappearing-Filament Optical Pyrometer Graphite Blackbody Cavity Tube Manufacturing', name_zh: '隐灭式光学高温计石墨黑体腔管制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/blackbody-cavity', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/carbon', qty: q(3, 100) }] }],
     performedBy: 'lathe',
@@ -216,7 +216,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 灯室蜘蛛架：3 根 1.5×8 辐条，落在 φ8 视场光阑之外。 */
     id: 'make/pyrometer-spider',
-    name: '隐灭式光学高温计灯室蜘蛛架制造',
+    name: 'Disappearing-Filament Optical Pyrometer Lamp House Spider Manufacturing', name_zh: '隐灭式光学高温计灯室蜘蛛架制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/spider', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 50) }] }],
     steps: [
@@ -227,7 +227,7 @@ const PYROMETER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 滤光片压圈：45 钢，压住 φ25 滤光片。 */
     id: 'make/pyrometer-filter-retainer',
-    name: '隐灭式光学高温计滤光片压圈制造',
+    name: 'Disappearing-Filament Optical Pyrometer Filter Retainer Manufacturing', name_zh: '隐灭式光学高温计滤光片压圈制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general/filter-retainer', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1, 20) }] }],
     performedBy: 'lathe',

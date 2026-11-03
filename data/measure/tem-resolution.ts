@@ -40,7 +40,7 @@ export const TEM_RESOLUTION_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/tem-resolution-record',
-    name: 'TEM 分辨率记录',
+    name: 'TEM Resolution Record', name_zh: 'TEM 分辨率记录',
     unit: '份',
     category: 'part',
     props: [
@@ -56,7 +56,7 @@ export const TEM_RESOLUTION_ROUTES: readonly Route[] = [
   {
     /** 分辨率标定：蒸金岛 → 装样抽真空 → 拍点分辨/晶格 → 台阶标准校标尺。 */
     id: 'measure/tem-resolution',
-    name: '分辨率标定',
+    name: 'Resolution Standardization', name_zh: '分辨率标定',
     produces: [
       {
         item: 'mat/tem-resolution-record',

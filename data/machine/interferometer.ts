@@ -59,7 +59,7 @@ export const INTERFEROMETER_PARTS: readonly Item[] = [
    * 它就是三块对研出来的那块 —— **平面度在这里第二次派上用场**：
    * 第一次是研磨量块，第二次是造干涉仪。
    */
-  { id: 'plant/interferometer/flat', name: '干涉仪平晶', unit: '件', category: 'part' },
+  { id: 'plant/interferometer/flat', name: 'Interferometer Optical Flat', name_zh: '干涉仪平晶', unit: '件', category: 'part' },
 
   /**
    * 分光板。一片薄玻璃，把光分成两路（一路去平晶、一路去参考面）。
@@ -67,7 +67,7 @@ export const INTERFEROMETER_PARTS: readonly Item[] = [
    * 不镀半透膜 —— 裸玻璃每面反射 4%，够用。**没有银，也没有镀膜工艺，
    * 所以只能靠这 4%。** 代价是条纹对比度低，要在暗室里看。
    */
-  { id: 'plant/interferometer/splitter', name: '干涉仪分光板', unit: '件', category: 'part' },
+  { id: 'plant/interferometer/splitter', name: 'Interferometer Beamsplitter', name_zh: '干涉仪分光板', unit: '件', category: 'part' },
 
   /**
    * 钠光源。一根蘸盐的灯芯，在火焰里烧。
@@ -75,20 +75,20 @@ export const INTERFEROMETER_PARTS: readonly Item[] = [
    * 火焰要稳（黄焰，不能有碳粒的黑体辐射混进来）—— 用本生式的预混焰：
    * 空气先与燃气混合再烧，火焰几乎无色，撒盐才见黄。
    */
-  { id: 'plant/interferometer/sodium-source', name: '干涉仪钠光源', unit: '件', category: 'part' },
+  { id: 'plant/interferometer/sodium-source', name: 'Interferometer Sodium Light Source', name_zh: '干涉仪钠光源', unit: '件', category: 'part' },
 
   /** 测微目镜。放大 20 倍，带一根可移动的十字线与测微鼓（读条纹的分数级）。 */
-  { id: 'plant/interferometer/eyepiece', name: '干涉仪测微目镜', unit: '件', category: 'part' },
+  { id: 'plant/interferometer/eyepiece', name: 'Interferometer Micrometer Eyepiece', name_zh: '干涉仪测微目镜', unit: '件', category: 'part' },
 
   /** 工作台。三只调节螺钉调平，承平晶与量块；它要求刚性，不要求精度。 */
-  { id: 'plant/interferometer/stage', name: '干涉仪工作台', unit: '件', category: 'part' },
+  { id: 'plant/interferometer/stage', name: 'Interferometer Stage', name_zh: '干涉仪工作台', unit: '件', category: 'part' },
 ];
 
 export const INTERFEROMETER_ROUTES: readonly Route[] = [
   {
     /** 平晶。三块对研到 λ/4，再抛光一面（另一面可以不抛）。 */
     id: 'make/interferometer-flat',
-    name: '干涉仪平晶制造',
+    name: 'Interferometer Optical Flat Manufacturing', name_zh: '干涉仪平晶制造',
     produces: [{ item: 'plant/interferometer/flat', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -100,7 +100,7 @@ export const INTERFEROMETER_ROUTES: readonly Route[] = [
   {
     /** 分光板。薄玻璃两面抛光到平行（不镀膜，靠 4% 反射）。 */
     id: 'make/interferometer-splitter',
-    name: '干涉仪分光板制造',
+    name: 'Interferometer Beamsplitter Manufacturing', name_zh: '干涉仪分光板制造',
     produces: [{ item: 'plant/interferometer/splitter', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -112,7 +112,7 @@ export const INTERFEROMETER_ROUTES: readonly Route[] = [
   {
     /** 钠光源。不锈钢灯芯座 + 石棉绳 + 盐；配一个预混烧嘴。 */
     id: 'make/interferometer-source',
-    name: '干涉仪钠光源制造',
+    name: 'Interferometer Sodium Light Source Manufacturing', name_zh: '干涉仪钠光源制造',
     produces: [{ item: 'plant/interferometer/sodium-source', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/salt', qty: q(1) }] },
@@ -125,7 +125,7 @@ export const INTERFEROMETER_ROUTES: readonly Route[] = [
   {
     /** 测微目镜。两片透镜 + 十字线 + 测微鼓（与比较仪的刻度尺同一工艺）。 */
     id: 'make/interferometer-eyepiece',
-    name: '干涉仪测微目镜制造',
+    name: 'Interferometer Micrometer Eyepiece Manufacturing', name_zh: '干涉仪测微目镜制造',
     produces: [{ item: 'plant/interferometer/eyepiece', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -137,7 +137,7 @@ export const INTERFEROMETER_ROUTES: readonly Route[] = [
   {
     /** 工作台。铸铁台面 + 三只调节螺钉，铣平即可。 */
     id: 'make/interferometer-stage',
-    name: '干涉仪工作台制造',
+    name: 'Interferometer Stage Manufacturing', name_zh: '干涉仪工作台制造',
     produces: [{ item: 'plant/interferometer/stage', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     needs: ['plant/milling-machine'],
@@ -154,7 +154,7 @@ export const INTERFEROMETER_ROUTES: readonly Route[] = [
      * 装完的读数才是判据。
      */
     id: 'make/interferometer',
-    name: '干涉仪装配',
+    name: 'Interferometer Assembly', name_zh: '干涉仪装配',
     produces: [{
       item: 'plant/interferometer',
       qty: q(1),
@@ -178,7 +178,7 @@ export const INTERFEROMETER_ROUTES: readonly Route[] = [
  */
 export const INTERFEROMETER: Item = {
   id: 'plant/interferometer',
-  name: '干涉仪',
+  name: 'Interferometer', name_zh: '干涉仪',
   unit: '台',
   category: 'machine',
   props: [

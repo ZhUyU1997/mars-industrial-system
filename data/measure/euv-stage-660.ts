@@ -12,7 +12,7 @@ import { q } from '../../src/index.ts';
 export const EUV_STAGE_660_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/euv-stage-660-measure-record',
-    name: 'EUV 660 mm 台记录',
+    name: 'EUV 660 mm Stage Record', name_zh: 'EUV 660 mm 台记录',
     unit: '份',
     category: 'part',
     props: [
@@ -29,7 +29,7 @@ export const EUV_STAGE_660_MEASURE_ROUTES: readonly Route[] = [
      * **EUV 660 mm 台：X 射线干涉仪读 10 nm 步进/回零，算 positionError/readout。**
      */
     id: 'measure/euv-stage-660-position',
-    name: 'EUV 660 mm 台测量',
+    name: 'EUV 660 mm Stage Measurement', name_zh: 'EUV 660 mm 台测量',
     produces: [{
       item: 'mat/euv-stage-660-measure-record',
       qty: q(1),

@@ -359,7 +359,7 @@ export const MULTIPAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/mp-mandrel-wafer',
-    name: '芯轴片',
+    name: 'Mandrel Wafer', name_zh: '芯轴片',
     unit: '片',
     category: 'part',
     props: [
@@ -386,7 +386,7 @@ export const MULTIPAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/mp-shell-wafer',
-    name: '保形侧墙片',
+    name: 'Conformal Spacer Wafer', name_zh: '保形侧墙片',
     unit: '片',
     category: 'part',
     props: [
@@ -412,7 +412,7 @@ export const MULTIPAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/mp-spacer-wafer',
-    name: '侧墙回刻片',
+    name: 'Spacer Etch-Back Wafer', name_zh: '侧墙回刻片',
     unit: '片',
     category: 'part',
     props: [
@@ -437,7 +437,7 @@ export const MULTIPAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/mp-line-wafer',
-    name: '芯轴去除片',
+    name: 'Mandrel Removal Wafer', name_zh: '芯轴去除片',
     unit: '片',
     category: 'part',
     props: [
@@ -471,7 +471,7 @@ export const MULTIPAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/mp-gate-wafer',
-    name: '图形转移片',
+    name: 'Pattern Transfer Wafer', name_zh: '图形转移片',
     unit: '片',
     category: 'part',
     props: [
@@ -500,7 +500,7 @@ export const MULTIPAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/mp-saqp-shell-wafer',
-    name: 'SAQP 侧墙片',
+    name: 'SAQP Spacer Wafer', name_zh: 'SAQP 侧墙片',
     unit: '片',
     category: 'part',
     props: [
@@ -525,7 +525,7 @@ export const MULTIPAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/mp-saqp-wafer',
-    name: 'SAQP 转移片',
+    name: 'SAQP Transfer Wafer', name_zh: 'SAQP 转移片',
     unit: '片',
     category: 'part',
     props: [
@@ -583,7 +583,7 @@ export const MULTIPAT_ROUTES: readonly Route[] = [
      *   的"同材质"代价）。所以 HF 只在这一条路线里出现（长侧墙**之前**的清洗）。
      */
     id: 'make/mp-mandrel',
-    name: '芯轴片制造',
+    name: 'Mandrel Wafer Manufacturing', name_zh: '芯轴片制造',
     produces: [
       {
         item: 'mat/mp-mandrel-wafer',
@@ -729,7 +729,7 @@ export const MULTIPAT_ROUTES: readonly Route[] = [
      *   这一笔必须记：L2P 从 120 投到 79.4，方阻 126 Ω/□（R8 ⑤）。
      */
     id: 'make/mp-conformal-shell',
-    name: '保形侧墙片制造',
+    name: 'Conformal Spacer Wafer Manufacturing', name_zh: '保形侧墙片制造',
     produces: [
       {
         item: 'mat/mp-shell-wafer',
@@ -801,7 +801,7 @@ export const MULTIPAT_ROUTES: readonly Route[] = [
      *   硬掩模必须从 40 nm 长到 92 nm。
      */
     id: 'make/mp-spacer-etchback',
-    name: '侧墙回刻片制造',
+    name: 'Spacer Etch-Back Wafer Manufacturing', name_zh: '侧墙回刻片制造',
     produces: [
       {
         item: 'mat/mp-spacer-wafer',
@@ -870,7 +870,7 @@ export const MULTIPAT_ROUTES: readonly Route[] = [
      *   这一句是本文件对"各向异性只能靠离子"的一个反例：**当掩模是闭合的，化学可以各向同性。**
      */
     id: 'make/mp-mandrel-strip',
-    name: '芯轴去除片制造',
+    name: 'Mandrel Removal Wafer Manufacturing', name_zh: '芯轴去除片制造',
     produces: [
       {
         item: 'mat/mp-line-wafer',
@@ -937,7 +937,7 @@ export const MULTIPAT_ROUTES: readonly Route[] = [
      *   这一句必须写在 `gives` 旁边，否则读数据的人会以为 3–4 nm 是量出来的。
      */
     id: 'make/mp-pattern-transfer',
-    name: '图形转移片制造',
+    name: 'Pattern Transfer Wafer Manufacturing', name_zh: '图形转移片制造',
     produces: [
       {
         item: 'mat/mp-gate-wafer',
@@ -1027,7 +1027,7 @@ export const MULTIPAT_ROUTES: readonly Route[] = [
      *   它是 §六 那张表里"SAQP 不是更难、是几何上不许"的那一行数据。
      */
     id: 'make/mp-saqp-shell',
-    name: 'SAQP 侧墙片制造',
+    name: 'SAQP Spacer Wafer Manufacturing', name_zh: 'SAQP 侧墙片制造',
     produces: [
       {
         item: 'mat/mp-saqp-shell-wafer',
@@ -1093,7 +1093,7 @@ export const MULTIPAT_ROUTES: readonly Route[] = [
      *   第一轮的两拍 115/145 到第二轮变成四拍，交替没有变好。
      */
     id: 'make/mp-saqp-transfer',
-    name: 'SAQP 转移片制造',
+    name: 'SAQP Transfer Wafer Manufacturing', name_zh: 'SAQP 转移片制造',
     produces: [
       {
         item: 'mat/mp-saqp-wafer',

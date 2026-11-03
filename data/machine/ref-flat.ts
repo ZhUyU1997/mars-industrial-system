@@ -377,7 +377,7 @@ export const REF_FLAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ule-glass',
-    name: '超低膨胀玻璃',
+    name: 'Ultra-Low Expansion Glass', name_zh: '超低膨胀玻璃',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'cte', kind: 'range', min: 0, max: 0.1, unit: 'ppm/K', dir: 'atMost' }],
@@ -408,7 +408,7 @@ export const REF_FLAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ref-flat-interferometer/blank-300',
-    name: 'φ300 熔石英毛坯',
+    name: 'φ300 Fused Quartz Blank', name_zh: 'φ300 熔石英毛坯',
     unit: '件',
     category: 'part',
     props: [
@@ -439,7 +439,7 @@ export const REF_FLAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ref-flat-interferometer/substrate-300',
-    name: 'φ300 参考面基板',
+    name: 'φ300 Reference Surface Substrate', name_zh: 'φ300 参考面基板',
     unit: '件',
     category: 'part',
     props: [
@@ -463,7 +463,7 @@ export const REF_FLAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ref-flat-interferometer/reference-flat',
-    name: 'λ/1000 参考面元件',
+    name: 'λ/1000 Reference Flat Element', name_zh: 'λ/1000 参考面元件',
     unit: '件',
     category: 'part',
     props: [
@@ -494,7 +494,7 @@ export const REF_FLAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ref-flat-interferometer/mirror',
-    name: 'F-P 对面板',
+    name: 'F-P Opposing Plate', name_zh: 'F-P 对面板',
     unit: '件',
     category: 'part',
     props: [
@@ -527,7 +527,7 @@ export const REF_FLAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ref-flat-interferometer/cavity',
-    name: '参考面干涉仪多次反射腔',
+    name: 'Reference Flat Interferometer Multi-Reflection Cavity', name_zh: '参考面干涉仪多次反射腔',
     unit: '件',
     category: 'part',
     props: [{ param: 'passes', kind: 'range', min: 0, max: 64, unit: '遍', dir: 'atLeast' }],
@@ -555,7 +555,7 @@ export const REF_FLAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ref-flat-interferometer/trough',
-    name: '液面基准槽 φ400',
+    name: 'Liquid Surface Reference Trough φ400', name_zh: '液面基准槽 φ400',
     unit: '件',
     category: 'part',
     props: [{ param: 'aperture', kind: 'range', min: 0, max: 400, unit: 'mm', dir: 'atLeast' }],
@@ -599,7 +599,7 @@ export const REF_FLAT_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ref-flat-interferometer',
-    name: 'λ/1000 绝对检验干涉仪',
+    name: 'λ/1000 Absolute Testing Interferometer', name_zh: 'λ/1000 绝对检验干涉仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -647,7 +647,7 @@ export const REF_FLAT_ROUTES: readonly Route[] = [
      * 校核：砂 13 − 玻璃 9.3 − 屑 3.6 = 0.1 ✓
      */
     id: 'make/ref-flat-blank',
-    name: 'φ300 熔石英毛坯制造',
+    name: 'φ300 Fused Quartz Blank Manufacturing', name_zh: 'φ300 熔石英毛坯制造',
     rate: { hours: q(180) },
     produces: [
       {
@@ -757,7 +757,7 @@ export const REF_FLAT_ROUTES: readonly Route[] = [
      * + 损耗 55.8。见文件头第七节。
      */
     id: 'make/ref-flat-lap',
-    name: 'φ300 参考面基板制造',
+    name: 'φ300 Reference Surface Substrate Manufacturing', name_zh: 'φ300 参考面基板制造',
     rate: { hours: q(4270) },
     produces: [
       {
@@ -889,7 +889,7 @@ export const REF_FLAT_ROUTES: readonly Route[] = [
      * 差 32 - 0.52 = 31.5 nm 全部变成溅射产物被抽走（Ar 0.02 kg 是工作气）。
      */
     id: 'make/ref-flat-figure',
-    name: 'φ300 参考面基板制造',
+    name: 'φ300 Reference Surface Substrate Manufacturing', name_zh: 'φ300 参考面基板制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -987,7 +987,7 @@ export const REF_FLAT_ROUTES: readonly Route[] = [
      * 而之前的现状是**全部 130 nm 都是算的**。**这就是这一件的全部价值。**
      */
     id: 'make/ref-flat-open',
-    name: 'φ300 参考面基板制造',
+    name: 'φ300 Reference Surface Substrate Manufacturing', name_zh: 'φ300 参考面基板制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -1078,7 +1078,7 @@ export const REF_FLAT_ROUTES: readonly Route[] = [
      * 膜应力同理：4.3 nm 的弓形，两块同炉同膜 → 共模。
      */
     id: 'make/ref-flat-element',
-    name: 'λ/1000 参考面元件制造',
+    name: 'λ/1000 Reference Flat Element Manufacturing', name_zh: 'λ/1000 参考面元件制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -1184,7 +1184,7 @@ export const REF_FLAT_ROUTES: readonly Route[] = [
      * 这一条是"三块互研"这条路线的额外红利：它不只给一块基准，给三块同料的板。
      */
     id: 'make/ref-flat-mirror',
-    name: 'F-P 对面板制造',
+    name: 'F-P Opposing Plate Manufacturing', name_zh: 'F-P 对面板制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -1279,7 +1279,7 @@ export const REF_FLAT_ROUTES: readonly Route[] = [
      * 会顶歪 2 µm 的间隙**，所以不用时涂油、放干燥器（石英砂袋）。
      */
     id: 'make/ref-flat-cavity',
-    name: '参考面干涉仪多次反射腔制造',
+    name: 'Reference Flat Interferometer Multi-Reflection Cavity Manufacturing', name_zh: '参考面干涉仪多次反射腔制造',
     rate: { hours: q(70) },
     produces: [
       {
@@ -1382,7 +1382,7 @@ export const REF_FLAT_ROUTES: readonly Route[] = [
      * 这一条与 `unblock-interferometer-flat.ts` 第三节的"水在火星上会开"是同一件事。
      */
     id: 'make/ref-flat-trough',
-    name: '液面基准槽 φ400 制造',
+    name: 'Liquid Surface Reference Trough φ400 Manufacturing', name_zh: '液面基准槽 φ400 制造',
     rate: { hours: q(90) },
     produces: [
       {
@@ -1450,7 +1450,7 @@ export const REF_FLAT_ROUTES: readonly Route[] = [
      * `measure/ref-flat-interferometer-cal`（`data/measure/euv-hina.ts`）。
      */
     id: 'make/ref-flat-interferometer',
-    name: 'λ/1000 绝对检验干涉仪装配 + 校准',
+    name: 'λ/1000 Absolute Testing Interferometer Assembly + Calibration', name_zh: 'λ/1000 绝对检验干涉仪装配 + 校准',
     produces: [
       {
         item: 'plant/ref-flat-interferometer',

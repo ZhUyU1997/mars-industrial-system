@@ -416,7 +416,7 @@ export const LARGE_ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/blank-340',
-    name: 'φ340×60 熔石英大块毛坯',
+    name: 'φ340×60 Fused Quartz Large Block Blank', name_zh: 'φ340×60 熔石英大块毛坯',
     unit: '件',
     category: 'part',
     props: [
@@ -443,7 +443,7 @@ export const LARGE_ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/sphere-320',
-    name: 'φ320 球面片',
+    name: 'φ320 Spherical Element', name_zh: 'φ320 球面片',
     unit: '件',
     category: 'part',
     props: [
@@ -470,7 +470,7 @@ export const LARGE_ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/asphere-320',
-    name: 'φ320 非球面片',
+    name: 'φ320 Asphere', name_zh: 'φ320 非球面片',
     unit: '件',
     category: 'part',
     props: [
@@ -499,7 +499,7 @@ export const LARGE_ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/cell-320',
-    name: 'φ320 镜座',
+    name: 'φ320 Mirror Mount', name_zh: 'φ320 镜座',
     unit: '件',
     category: 'part',
     props: [
@@ -553,7 +553,7 @@ export const LARGE_ASPHERE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/null-test/asphere-150',
-    name: 'φ150/f0.58 非球面片',
+    name: 'φ150/f0.58 Asphere', name_zh: 'φ150/f0.58 非球面片',
     unit: '件',
     category: 'part',
     props: [
@@ -598,7 +598,7 @@ export const LARGE_ASPHERE_ROUTES: readonly Route[] = [
      * 反应）+ 1 kg 耐火料（退火垫片，自由伸缩）+ 挥发 0.1（SiO₂ 在 1 900 上蒸气压可见）。
      */
     id: 'make/large-blank-quartz-340',
-    name: 'φ340×60 熔石英大块毛坯制造',
+    name: 'φ340×60 Fused Quartz Large Block Blank Manufacturing', name_zh: 'φ340×60 熔石英大块毛坯制造',
     rate: { hours: q(210) },
     produces: [
       {
@@ -685,7 +685,7 @@ export const LARGE_ASPHERE_ROUTES: readonly Route[] = [
      * 而紫是看得见的）。与 `make/caf2-blank` 那一格逐字相同。
      */
     id: 'make/large-blank-caf2-120',
-    name: 'φ340×60 熔石英大块毛坯制造',
+    name: 'φ340×60 Fused Quartz Large Block Blank Manufacturing', name_zh: 'φ340×60 熔石英大块毛坯制造',
     rate: { hours: q(170) },
     produces: [
       {
@@ -781,7 +781,7 @@ export const LARGE_ASPHERE_ROUTES: readonly Route[] = [
      * + 粗磨与手抛的玻璃屑 1.2（两片的弧矢与外圆）+ 尾矿 22 + 水 26（全走）+ 酸 0.05。
      */
     id: 'make/large-sphere-320',
-    name: 'φ320 球面片制造',
+    name: 'φ320 Spherical Element Manufacturing', name_zh: 'φ320 球面片制造',
     rate: { hours: q(160) },
     produces: [
       {
@@ -900,7 +900,7 @@ export const LARGE_ASPHERE_ROUTES: readonly Route[] = [
      *   不是"离子束抛得多平"。
      */
     id: 'make/large-asphere-320',
-    name: 'φ320 非球面片制造',
+    name: 'φ320 Asphere Manufacturing', name_zh: 'φ320 非球面片制造',
     rate: { hours: q(280) },
     produces: [
       {
@@ -1011,7 +1011,7 @@ export const LARGE_ASPHERE_ROUTES: readonly Route[] = [
      * 不是强度算的（与 `unblock-comparator-lapping.ts` 的 50 mm 铸铁板同一个理由）。
      */
     id: 'make/large-cell-320',
-    name: 'φ320 镜座制造',
+    name: 'φ320 Mirror Mount Manufacturing', name_zh: 'φ320 镜座制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -1098,7 +1098,7 @@ export const LARGE_ASPHERE_ROUTES: readonly Route[] = [
      *   读出的那张图就是补偿器的标定图，随件走（十年后重标时它是唯一的对照）。
      */
     id: 'assemble/large-null-lens',
-    name: '零位镜组装配',
+    name: 'Null Lens Group Assembly', name_zh: '零位镜组装配',
     rate: { hours: q(80) },
     produces: [
       {

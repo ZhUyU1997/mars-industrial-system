@@ -70,7 +70,7 @@ import { q } from '../../src/index.ts';
 
 export const PYROMETER_PARTS: readonly Item[] = [
   /** 物镜筒。一片凸透镜，把炉膛的光聚到灯丝平面上。 */
-  { id: 'plant/pyrometer/objective', name: '高温计物镜筒', unit: '件', category: 'part' },
+  { id: 'plant/pyrometer/objective', name: 'Pyrometer Objective Tube', name_zh: '高温计物镜筒', unit: '件', category: 'part' },
 
   /**
    * 标准灯丝。钨丝，绕成一个小螺旋，摆在物镜的像面上。
@@ -79,7 +79,7 @@ export const PYROMETER_PARTS: readonly Item[] = [
    * 电阻升高，同一个读数对应的温度就偏了。所以它要**定期重新定标**，
    * 而这次定标又是拿铜凝固点比。
    */
-  { id: 'plant/pyrometer/filament', name: '高温计标准灯丝', unit: '件', category: 'part' },
+  { id: 'plant/pyrometer/filament', name: 'Pyrometer Standard Filament', name_zh: '高温计标准灯丝', unit: '件', category: 'part' },
 
   /**
    * 红色滤光片。铜红玻璃，只让 650 nm 附近的红光通过。
@@ -87,10 +87,10 @@ export const PYROMETER_PARTS: readonly Item[] = [
    * 为什么必须单色：亮度和波长的关系很陡，宽带光下人眼判断会混进色温的干扰。
    * 铜红玻璃是玻璃里掺氧化亚铜（Cu₂O）—— 本层有玻璃、有铜，烧一炉就行。
    */
-  { id: 'plant/pyrometer/filter', name: '高温计红色滤光片', unit: '件', category: 'part' },
+  { id: 'plant/pyrometer/filter', name: 'Pyrometer Red Filter', name_zh: '高温计红色滤光片', unit: '件', category: 'part' },
 
   /** 目镜与刻度盘。把灯丝与炉膛的像一并送进眼睛，旁边有读电流的刻度。 */
-  { id: 'plant/pyrometer/eyepiece', name: '高温计目镜与刻度盘', unit: '件', category: 'part' },
+  { id: 'plant/pyrometer/eyepiece', name: 'Pyrometer Eyepiece and Dial', name_zh: '高温计目镜与刻度盘', unit: '件', category: 'part' },
 
   /**
    * 动铁式电流表。**不用永磁铁。**
@@ -106,14 +106,14 @@ export const PYROMETER_PARTS: readonly Item[] = [
    *
    * 精度比动圈差（±2%），但读数够了 —— 这里要的是重复性，不是绝对准确。
    */
-  { id: 'plant/pyrometer/ammeter', name: '高温计动铁式电流表', unit: '件', category: 'part' },
+  { id: 'plant/pyrometer/ammeter', name: 'Pyrometer Moving-Iron Ammeter', name_zh: '高温计动铁式电流表', unit: '件', category: 'part' },
 ];
 
 export const PYROMETER_ROUTES: readonly Route[] = [
   {
     /** 物镜筒。钢管车成，镜片座与灯丝座同轴到 0.05 mm。 */
     id: 'make/pyrometer-objective',
-    name: '高温计物镜筒制造',
+    name: 'Pyrometer Objective Tube Manufacturing', name_zh: '高温计物镜筒制造',
     produces: [{ item: 'plant/pyrometer/objective', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -131,7 +131,7 @@ export const PYROMETER_ROUTES: readonly Route[] = [
      * 直径不均的灯丝，亮度分布不匀，人眼判断"等亮"时就会偏。
      */
     id: 'make/pyrometer-filament',
-    name: '高温计标准灯丝制造',
+    name: 'Pyrometer Standard Filament Manufacturing', name_zh: '高温计标准灯丝制造',
     produces: [{ item: 'plant/pyrometer/filament', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/tungsten-powder', qty: q(1) }] }],
     needs: ['plant/forge', 'plant/grinder'],
@@ -144,7 +144,7 @@ export const PYROMETER_ROUTES: readonly Route[] = [
   {
     /** 滤光片。玻璃配料加氧化亚铜 → 熔制 → 磨成薄片 → 抛光两面平行。 */
     id: 'make/pyrometer-filter',
-    name: '高温计红色滤光片制造',
+    name: 'Pyrometer Red Filter Manufacturing', name_zh: '高温计红色滤光片制造',
     produces: [{ item: 'plant/pyrometer/filter', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -158,7 +158,7 @@ export const PYROMETER_ROUTES: readonly Route[] = [
   {
     /** 目镜。两片透镜 + 刻度盘（玻璃刻线，与比较仪刻度尺同一工艺）。 */
     id: 'make/pyrometer-eyepiece',
-    name: '高温计目镜与刻度盘制造',
+    name: 'Pyrometer Eyepiece and Dial Manufacturing', name_zh: '高温计目镜与刻度盘制造',
     produces: [{ item: 'plant/pyrometer/eyepiece', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -170,7 +170,7 @@ export const PYROMETER_ROUTES: readonly Route[] = [
   {
     /** 动铁式电流表。线圈绕制 + 软铁片 + 游丝 + 指针，全程不用磁铁。 */
     id: 'make/pyrometer-ammeter',
-    name: '高温计动铁式电流表制造',
+    name: 'Pyrometer Moving-Iron Ammeter Manufacturing', name_zh: '高温计动铁式电流表制造',
     produces: [{ item: 'plant/pyrometer/ammeter', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -193,7 +193,7 @@ export const PYROMETER_ROUTES: readonly Route[] = [
  */
 export const PYROMETER: Item = {
   id: 'plant/pyrometer',
-  name: '高温计',
+  name: 'Pyrometer', name_zh: '高温计',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 1000, max: 2000 }],
@@ -212,7 +212,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/pyrometer',
-    name: '高温计装配',
+    name: 'Pyrometer Assembly', name_zh: '高温计装配',
     produces: [{
       item: 'plant/pyrometer',
       qty: q(1),

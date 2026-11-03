@@ -263,7 +263,7 @@ export const CUSEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cuprous-chloride',
-    name: '氯化亚铜',
+    name: 'Cuprous Chloride', name_zh: '氯化亚铜',
     unit: 'kg',
     category: 'material',
     props: [
@@ -290,7 +290,7 @@ export const CUSEED_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cu-seed-wafer',
-    name: '长了铜籽晶的片',
+    name: 'Wafer with Copper Seed Layer', name_zh: '长了铜籽晶的片',
     unit: '片',
     category: 'part',
     props: [
@@ -335,7 +335,7 @@ export const CUSEED_ROUTES: readonly Route[] = [
      *    其余是回路里的**存量**（50 g 装料循环），存量不消耗、不进 `uses`。
      */
     id: 'make/cuprous-chloride',
-    name: '氯载体制备',
+    name: 'Chlorine Carrier Production', name_zh: '氯载体制备',
     produces: [
       {
         item: 'mat/cuprous-chloride',
@@ -404,7 +404,7 @@ export const CUSEED_ROUTES: readonly Route[] = [
      *   在 200 A/m² 上仍有 0.15–0.34 V 的终端效应（过电位的 0.9–2.3 倍）。
      */
     id: 'make/cu-seed-cvd',
-    name: '长了铜籽晶的片制造',
+    name: 'Wafer with Copper Seed Layer Manufacturing', name_zh: '长了铜籽晶的片制造',
     produces: [
       {
         item: 'mat/cu-seed-wafer',
@@ -540,7 +540,7 @@ export const CUSEED_ROUTES: readonly Route[] = [
      *    腔壁与挡板吃掉 3–5 倍 ⇒ 0.7–0.9 g，取 1 g。
      */
     id: 'make/cu-seed-pvd',
-    name: '长了铜籽晶的片制造',
+    name: 'Wafer with Copper Seed Layer Manufacturing', name_zh: '长了铜籽晶的片制造',
     produces: [
       {
         item: 'mat/cu-seed-wafer',

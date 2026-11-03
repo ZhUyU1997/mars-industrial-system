@@ -191,7 +191,7 @@ export const PAG_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/diphenyl-sulfide',
-    name: '二苯硫醚',
+    name: 'Diphenyl Sulfide', name_zh: '二苯硫醚',
     unit: 'kg',
     category: 'material',
     props: [
@@ -212,7 +212,7 @@ export const PAG_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/triflic-acid',
-    name: '三氟甲磺酸',
+    name: 'Triflic Acid', name_zh: '三氟甲磺酸',
     unit: 'kg',
     category: 'material',
     props: [
@@ -238,7 +238,7 @@ export const PAG_ROUTES: readonly Route[] = [
      * AlCl₃ 是**当量**不是催化量：它与产物成络合物，靠水解才放出来。
      */
     id: 'make/diphenyl-sulfide',
-    name: '二苯硫醚制备',
+    name: 'Diphenyl Sulfide Production', name_zh: '二苯硫醚制备',
     produces: [
       {
         item: 'mat/diphenyl-sulfide',
@@ -306,7 +306,7 @@ export const PAG_ROUTES: readonly Route[] = [
      * 收率按 100 % 记（ECF 电流效率与光化学量子产率**都没有出处**，缺口④）。
      */
     id: 'make/triflic-acid',
-    name: '三氟甲磺酸制备',
+    name: 'Triflic Acid Production', name_zh: '三氟甲磺酸制备',
     produces: [
       {
         item: 'mat/triflic-acid',
@@ -414,7 +414,7 @@ const PAG_BLOCKED_ROUTE: Route = {
      *   ① 氧化偶联 20–60 °C（酸厂）；② 结晶与过滤（湿法槽）；③ 100–120 °C 干燥（电阻炉）
      */
     id: 'make/resist-pag',
-    name: '三苯基锍三氟甲磺酸盐制备',
+    name: 'Triphenylsulfonium Triflate Production', name_zh: '三苯基锍三氟甲磺酸盐制备',
     produces: [
       {
         item: 'mat/pag-triphenylsulfonium-otf',

@@ -50,14 +50,14 @@ export const WAFER_ITEMS: readonly Item[] = [
    *
    * 它是这条链走到现在的产物：**从硅石到镜面，一共过了七道门。**
    */
-  { id: 'mat/silicon-wafer', name: '硅片', unit: '片', category: 'part' },
+  { id: 'mat/silicon-wafer', name: 'Silicon Wafer', name_zh: '硅片', unit: '片', category: 'part' },
 
   /**
    * 点接触晶体管。一只硅片 + 两根钨丝 + 一个酚醛壳。
    *
    * 增益 2–10 倍，寿命几天到几周 —— 它不是"能用"的器件，是"有放大作用"的证据。
    */
-  { id: 'std/point-contact-transistor-general', name: '点接触晶体管', unit: '件', category: 'part' },
+  { id: 'std/point-contact-transistor-general', name: 'Point-Contact Transistor', name_zh: '点接触晶体管', unit: '件', category: 'part' },
 ];
 
 export const WAFER_ROUTES: readonly Route[] = [
@@ -73,7 +73,7 @@ export const WAFER_ROUTES: readonly Route[] = [
      * 但点接触器件不在乎：它要的是"平"，不是"完美"。
      */
     id: 'make/silicon-wafer',
-    name: '硅片制造',
+    name: 'Silicon Wafer Manufacturing', name_zh: '硅片制造',
     produces: [{ item: 'mat/silicon-wafer', qty: q(400) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-single', qty: q(1000) }] },
@@ -100,7 +100,7 @@ export const WAFER_ROUTES: readonly Route[] = [
      * **这是全链最细的手上活**。
      */
     id: 'make/point-contact-transistor',
-    name: '点接触晶体管制造',
+    name: 'Point-Contact Transistor Manufacturing', name_zh: '点接触晶体管制造',
     produces: [{ item: 'std/point-contact-transistor-general', qty: q(20) }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },

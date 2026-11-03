@@ -18,7 +18,7 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const DIVIDING_SPINDLE_PARTS: readonly Item[] = [
-  { id: 'plant/dividing-table/spindle/shaft', name: '分度台主轴轴', unit: '件', category: 'part' },
+  { id: 'plant/dividing-table/spindle/shaft', name: 'Dividing Table Spindle Shaft', name_zh: '分度台主轴轴', unit: '件', category: 'part' },
 ];
 
 const DIVIDING_SPINDLE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -27,7 +27,7 @@ const DIVIDING_SPINDLE_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 主轴轴：轴承钢 1 kg + 45 钢 1 kg，车 φ60 法兰与 φ25 轴颈，磨到 h4。 */
     id: 'make/dividing-spindle-shaft',
-    name: '分度台主轴轴制造',
+    name: 'Dividing Table Spindle Shaft Manufacturing', name_zh: '分度台主轴轴制造',
     produces: [{ item: 'plant/dividing-table/spindle/shaft', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/bearing-steel', qty: q(1) }] },

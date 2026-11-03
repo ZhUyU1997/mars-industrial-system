@@ -417,7 +417,7 @@ export const MASK_REPAIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mask-repair/needle',
-    name: '掩模修复机钼发射针',
+    name: 'Mask Repair System Molybdenum Emitter Needle', name_zh: '掩模修复机钼发射针',
     unit: '件',
     category: 'part',
     props: [
@@ -445,7 +445,7 @@ export const MASK_REPAIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mask-repair/reservoir',
-    name: '掩模修复机共晶储液器',
+    name: 'Mask Repair System Eutectic Reservoir', name_zh: '掩模修复机共晶储液器',
     unit: '件',
     category: 'part',
     props: [
@@ -481,7 +481,7 @@ export const MASK_REPAIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mask-repair/lens',
-    name: '掩模修复机静电透镜',
+    name: 'Mask Repair System Electrostatic Lens', name_zh: '掩模修复机静电透镜',
     unit: '件',
     category: 'part',
     props: [
@@ -515,7 +515,7 @@ export const MASK_REPAIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mask-repair/mass-filter',
-    name: 'Wien 质量过滤器',
+    name: 'Wien Mass Filter', name_zh: 'Wien 质量过滤器',
     unit: '件',
     category: 'part',
     props: [
@@ -545,7 +545,7 @@ export const MASK_REPAIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mask-repair/flood-gun',
-    name: '掩模修复机电子泛射枪',
+    name: 'Mask Repair System Electron Flood Gun', name_zh: '掩模修复机电子泛射枪',
     unit: '件',
     category: 'part',
     props: [
@@ -575,7 +575,7 @@ export const MASK_REPAIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mask-repair/gas-injector',
-    name: '掩模修复机气体喷管',
+    name: 'Mask Repair System Gas Injector', name_zh: '掩模修复机气体喷管',
     unit: '件',
     category: 'part',
     props: [
@@ -597,7 +597,7 @@ export const MASK_REPAIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mask-repair/chamber',
-    name: '掩模修复机真空腔',
+    name: 'Mask Repair System Vacuum Chamber', name_zh: '掩模修复机真空腔',
     unit: '件',
     category: 'part',
     props: [
@@ -619,7 +619,7 @@ export const MASK_REPAIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mask-repair/stage',
-    name: '掩模修复机五轴样品台',
+    name: 'Mask Repair System 5-Axis Sample Stage', name_zh: '掩模修复机五轴样品台',
     unit: '件',
     category: 'part',
     props: [
@@ -649,7 +649,7 @@ export const MASK_REPAIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mask-repair/current-meter',
-    name: '掩模修复机靶电流计',
+    name: 'Mask Repair System Target Current Meter', name_zh: '掩模修复机靶电流计',
     unit: '件',
     category: 'part',
     props: [
@@ -679,7 +679,7 @@ export const MASK_REPAIR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mask-repair',
-    name: '掩模修复机',
+    name: 'Mask Repair System', name_zh: '掩模修复机',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'pressure', min: 1e-6, max: 1e-3 }],
@@ -738,7 +738,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      *   所需测尖手段的来源：**测尖靠本机**。
      */
     id: 'make/mask-repair-needle',
-    name: '掩模修复机钼发射针制造',
+    name: 'Mask Repair System Molybdenum Emitter Needle Manufacturing', name_zh: '掩模修复机钼发射针制造',
     produces: [
       {
         item: 'plant/mask-repair/needle',
@@ -825,7 +825,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      * 从片角上剪一小块、砸成 1 mm 的颗粒就够。
      */
     id: 'make/mask-repair-reservoir',
-    name: '掩模修复机共晶储液器制造',
+    name: 'Mask Repair System Eutectic Reservoir Manufacturing', name_zh: '掩模修复机共晶储液器制造',
     produces: [
       {
         item: 'plant/mask-repair/reservoir',
@@ -898,7 +898,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      *   量同轴     0.02 mm（三片电极的孔要在一条线上，偏了就是横向色差）
      */
     id: 'make/mask-repair-lens',
-    name: '掩模修复机静电透镜制造',
+    name: 'Mask Repair System Electrostatic Lens Manufacturing', name_zh: '掩模修复机静电透镜制造',
     produces: [
       {
         item: 'plant/mask-repair/lens',
@@ -965,7 +965,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      * 铁轭 μ_r 4000），误差 ±20 %。质量选择只能"调到束最亮"，不能标。
      */
     id: 'make/mask-repair-mass-filter',
-    name: 'Wien 质量过滤器制造',
+    name: 'Wien Mass Filter Manufacturing', name_zh: 'Wien 质量过滤器制造',
     produces: [
       {
         item: 'plant/mask-repair/mass-filter',
@@ -1024,7 +1024,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      * 几何把它们散开，这就是栅极要做成 φ30 的球冠的原因。
      */
     id: 'make/mask-repair-flood-gun',
-    name: '掩模修复机电子泛射枪制造',
+    name: 'Mask Repair System Electron Flood Gun Manufacturing', name_zh: '掩模修复机电子泛射枪制造',
     produces: [
       {
         item: 'plant/mask-repair/flood-gun',
@@ -1071,7 +1071,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      * （通量要从 2.7×10¹⁸ 掉到 2.7×10¹⁷，而 50 nm 束斑上的离子通量是 3.2×10¹⁷）。
      */
     id: 'make/mask-repair-gas-injector',
-    name: '掩模修复机气体喷管制造',
+    name: 'Mask Repair System Gas Injector Manufacturing', name_zh: '掩模修复机气体喷管制造',
     produces: [
       {
         item: 'plant/mask-repair/gas-injector',
@@ -1114,7 +1114,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      * 漏率 10⁻⁵ 只贡献 2×10⁻⁸ Pa —— 余量 500 倍，所以这个判据是宽的。
      */
     id: 'make/mask-repair-chamber',
-    name: '掩模修复机真空腔制造',
+    name: 'Mask Repair System Vacuum Chamber Manufacturing', name_zh: '掩模修复机真空腔制造',
     produces: [
       {
         item: 'plant/mask-repair/chamber',
@@ -1164,7 +1164,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      * （`e-beam-column.ts` 问题四同一条）—— 所以台只能给 1 µm，精定位交给束偏转。
      */
     id: 'make/mask-repair-stage',
-    name: '掩模修复机五轴样品台制造',
+    name: 'Mask Repair System 5-Axis Sample Stage Manufacturing', name_zh: '掩模修复机五轴样品台制造',
     produces: [
       {
         item: 'plant/mask-repair/stage',
@@ -1219,7 +1219,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      *      **用电荷标定电流**，绕开了"本层没有 pA 电流源"这件事。
      */
     id: 'make/mask-repair-current-meter',
-    name: '掩模修复机靶电流计制造',
+    name: 'Mask Repair System Target Current Meter Manufacturing', name_zh: '掩模修复机靶电流计制造',
     produces: [
       {
         item: 'plant/mask-repair/current-meter',
@@ -1294,7 +1294,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      * 2 450 片（修 1 次）而不是 2 500。
      */
     id: 'make/mask-repair-absorber',
-    name: '接触式掩模制造',
+    name: 'Contact Mask Manufacturing', name_zh: '接触式掩模制造',
     produces: [
       {
         item: 'std/photomask-general',
@@ -1402,7 +1402,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      * 而选择比 ∝ 氧覆盖度 → 10–20 倍这个数本身有 ±1 倍的误差（R8 ⑧）。
      */
     id: 'make/mask-repair-carbon',
-    name: '接触式掩模制造',
+    name: 'Contact Mask Manufacturing', name_zh: '接触式掩模制造',
     produces: [
       {
         item: 'std/photomask-general',
@@ -1491,7 +1491,7 @@ export const MASK_REPAIR_ROUTES: readonly Route[] = [
      * （`make/photomask-deepsub` 也是机身一个、光源与物镜在 needs）。
      */
     id: 'make/mask-repair-laser',
-    name: '接触式掩模制造',
+    name: 'Contact Mask Manufacturing', name_zh: '接触式掩模制造',
     produces: [
       {
         item: 'std/photomask-general',
@@ -1565,7 +1565,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/mask-repair',
-    name: '掩模修复机装配',
+    name: 'Mask Repair System Assembly', name_zh: '掩模修复机装配',
     produces: [{
       item: 'plant/mask-repair',
       qty: q(1),

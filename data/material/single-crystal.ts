@@ -51,7 +51,7 @@ export const SINGLE_CRYSTAL_ITEMS: readonly Item[] = [
    * 与 `mat/silica`（90%，选出来的）是两种东西：那个是耐火料与玻璃的原料，
    * 这个是坩埚的原料。差别不在矿，在**洗了几遍**。
    */
-  { id: 'mat/quartz-pure', name: '高纯石英砂', unit: 'kg', category: 'material',
+  { id: 'mat/quartz-pure', name: 'High-Purity Quartz Sand', name_zh: '高纯石英砂', unit: 'kg', category: 'material',
     props: [{ param: 'sio2', kind: 'range', min: 95, max: 99.99, unit: '%' }] },
 
   /**
@@ -60,7 +60,7 @@ export const SINGLE_CRYSTAL_ITEMS: readonly Item[] = [
    * 它比多晶硅贵得多，不是因为更纯（一样是 99.9999%），是因为**原子排得整齐** ——
    * 晶界是复合中心，多晶硅做不了器件。
    */
-  { id: 'mat/silicon-single', name: '单晶硅棒', unit: 'kg', category: 'material' },
+  { id: 'mat/silicon-single', name: 'Single-Crystal Silicon Ingot', name_zh: '单晶硅棒', unit: 'kg', category: 'material' },
 
   /**
    * 石英坩埚，φ500 一档。**消耗件，不是零件**（`category: 'consumable'`）。
@@ -70,7 +70,7 @@ export const SINGLE_CRYSTAL_ITEMS: readonly Item[] = [
    *
    * 按只计：形状随炉子定，本层只有一档炉子，所以只有一档坩埚。
    */
-  { id: 'mat/quartz-crucible', name: '石英坩埚', unit: '只', category: 'consumable' },
+  { id: 'mat/quartz-crucible', name: 'Quartz Crucible', name_zh: '石英坩埚', unit: '只', category: 'consumable' },
 ];
 
 export const SINGLE_CRYSTAL_ROUTES: readonly Route[] = [
@@ -91,7 +91,7 @@ export const SINGLE_CRYSTAL_ROUTES: readonly Route[] = [
      * 所以需要高纯石英的那几件（直拉炉观察窗、扩散炉石英管）都另写了绕开的路线。
      */
     id: 'make/quartz-pure',
-    name: '高纯石英砂制备',
+    name: 'High-Purity Quartz Sand Production', name_zh: '高纯石英砂制备',
     produces: [
       { item: 'mat/quartz-pure', qty: q(900), gives: [{ param: 'sio2', kind: 'range', min: 99, max: 99.9, dir: 'atLeast' }] },
       {
@@ -128,7 +128,7 @@ export const SINGLE_CRYSTAL_ROUTES: readonly Route[] = [
      * 而本层没定尺寸。按 `1 kg → 1 只` 的占位写，只证明拓扑。
      */
     id: 'make/quartz-crucible',
-    name: '石英坩埚制造',
+    name: 'Quartz Crucible Manufacturing', name_zh: '石英坩埚制造',
     produces: [{ item: 'mat/quartz-crucible', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/quartz-pure', qty: q(1) }] }],
     needs: [],
@@ -146,7 +146,7 @@ export const SINGLE_CRYSTAL_ROUTES: readonly Route[] = [
      * 拉一根要十几小时 —— **而模型没有时间，所以这条路线只证明"能拉"，不证明"拉多快"。**
      */
     id: 'make/silicon-single',
-    name: '直拉单晶制备',
+    name: 'Czochralski Single-Crystal Production', name_zh: '直拉单晶制备',
     produces: [
       { item: 'mat/silicon-single', qty: q(850) },
       {

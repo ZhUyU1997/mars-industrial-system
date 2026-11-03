@@ -135,7 +135,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/mirror-blank',
-    name: 'φ660×80 低膨胀玻璃镜坯',
+    name: 'φ660×80 Low-Expansion Glass Mirror Blank', name_zh: 'φ660×80 低膨胀玻璃镜坯',
     unit: '件',
     category: 'part',
     props: [
@@ -162,7 +162,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/mirror',
-    name: '镀完 50 对 Mo/Si 的投影镜',
+    name: 'Projection Mirror with 50 Mo/Si Pairs', name_zh: '镀完 50 对 Mo/Si 的投影镜',
     unit: '件',
     category: 'part',
     props: [
@@ -191,7 +191,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/optics-module',
-    name: '8 镜投影物镜',
+    name: '8-Mirror Projection Objective', name_zh: '8 镜投影物镜',
     unit: '件',
     category: 'part',
     props: [
@@ -212,7 +212,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/illuminator',
-    name: 'EUV 光刻机照明镜组',
+    name: 'EUV Stepper Illumination Mirror Assembly', name_zh: 'EUV 光刻机照明镜组',
     unit: '件',
     category: 'part',
     props: [
@@ -241,7 +241,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/atw-interferometer',
-    name: '13.5 nm at-wavelength 面形干涉仪',
+    name: '13.5 nm At-Wavelength Surface Figure Interferometer', name_zh: '13.5 nm at-wavelength 面形干涉仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -273,7 +273,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/stage',
-    name: 'high-NA EUV 光刻机双工件台',
+    name: 'High-NA EUV Stepper Dual Wafer Stage', name_zh: 'high-NA EUV 光刻机双工件台',
     unit: '件',
     category: 'part',
     props: [
@@ -294,7 +294,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/alignment-sensor',
-    name: 'EUV 光刻机套刻对准传感器',
+    name: 'EUV Stepper Overlay Alignment Sensor', name_zh: 'EUV 光刻机套刻对准传感器',
     unit: '件',
     category: 'part',
     props: [
@@ -315,7 +315,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/isolation',
-    name: 'EUV 光刻机减振台',
+    name: 'EUV Stepper Vibration Isolation Table', name_zh: 'EUV 光刻机减振台',
     unit: '件',
     category: 'part',
     props: [
@@ -339,7 +339,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/frame',
-    name: 'high-NA EUV 光刻机整机框架',
+    name: 'High-NA EUV Stepper System Frame', name_zh: 'high-NA EUV 光刻机整机框架',
     unit: '件',
     category: 'part',
     props: [
@@ -359,7 +359,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/chamber',
-    name: 'high-NA EUV 光刻机投影光学真空腔',
+    name: 'High-NA EUV Stepper Projection Optics Vacuum Chamber', name_zh: 'high-NA EUV 光刻机投影光学真空腔',
     unit: '件',
     category: 'part',
     props: [
@@ -388,7 +388,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina/source',
-    name: '250 W / 13.5 nm 光源模块',
+    name: '250 W / 13.5 nm Source Module', name_zh: '250 W / 13.5 nm 光源模块',
     unit: '件',
     category: 'part',
     props: [
@@ -434,7 +434,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stepper-hina',
-    name: 'high-NA EUV 光刻机',
+    name: 'High-NA EUV Stepper', name_zh: 'high-NA EUV 光刻机',
     unit: '台',
     category: 'machine',
     props: [
@@ -467,7 +467,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-mask-blank',
-    name: 'EUV 掩模坯',
+    name: 'EUV Mask Blank', name_zh: 'EUV 掩模坯',
     unit: '件',
     category: 'part',
     props: [
@@ -495,7 +495,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-mask-degraded',
-    name: 'EUV 测试掩模',
+    name: 'EUV Test Mask', name_zh: 'EUV 测试掩模',
     unit: '件',
     category: 'part',
     props: [
@@ -533,7 +533,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-mask-writer',
-    name: '32 nm EUV 掩模写机',
+    name: '32 nm EUV Mask Writer', name_zh: '32 nm EUV 掩模写机',
     unit: '台',
     category: 'machine',
     props: [
@@ -561,7 +561,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-mask-32nm',
-    name: '32 nm EUV 掩模',
+    name: '32 nm EUV Mask', name_zh: '32 nm EUV 掩模',
     unit: '件',
     category: 'part',
     props: [
@@ -593,7 +593,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-pellicle',
-    name: 'EUV 薄膜',
+    name: 'EUV Pellicle', name_zh: 'EUV 薄膜',
     unit: '件',
     category: 'part',
     props: [
@@ -623,7 +623,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-mask-repair',
-    name: '32 nm EUV 掩模修版机',
+    name: '32 nm EUV Mask Repair Tool', name_zh: '32 nm EUV 掩模修版机',
     unit: '台',
     category: 'machine',
     props: [
@@ -648,7 +648,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/device-wafer-first',
-    name: '8 nm 首片',
+    name: '8 nm First Article', name_zh: '8 nm 首片',
     unit: '片',
     category: 'part',
     props: [
@@ -671,7 +671,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/wafer-inspection',
-    name: '晶圆缺陷巡检机',
+    name: 'Wafer Defect Inspection Machine', name_zh: '晶圆缺陷巡检机',
     unit: '台',
     category: 'machine',
     props: [
@@ -695,7 +695,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/e-beam-inspection',
-    name: '电子束巡检机',
+    name: 'Electron Beam Inspection Tool', name_zh: '电子束巡检机',
     unit: '台',
     category: 'machine',
     props: [
@@ -719,7 +719,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-cgh-null',
-    name: 'EUV CGH 零位补偿片',
+    name: 'EUV CGH Null Compensator', name_zh: 'EUV CGH 零位补偿片',
     unit: '件',
     category: 'part',
     props: [
@@ -747,7 +747,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-interferometer',
-    name: 'at-wavelength EUV 干涉仪',
+    name: 'At-Wavelength EUV Interferometer', name_zh: 'at-wavelength EUV 干涉仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -772,7 +772,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-detector-fast',
-    name: '快速 EUV 探测器',
+    name: 'Fast EUV Detector', name_zh: '快速 EUV 探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -793,7 +793,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-pinhole',
-    name: 'EUV 空间滤波针孔',
+    name: 'EUV Spatial Filter Pinhole', name_zh: 'EUV 空间滤波针孔',
     unit: '件',
     category: 'part',
     props: [
@@ -816,7 +816,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-pinhole-mount',
-    name: 'EUV 针孔五维调整架',
+    name: 'EUV Pinhole Five-Axis Adjustable Mount', name_zh: 'EUV 针孔五维调整架',
     unit: '件',
     category: 'part',
     props: [
@@ -837,7 +837,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-stage-660',
-    name: '660 mm 双台串联工件台',
+    name: '660 mm Dual-Stage Tandem Workpiece Stage', name_zh: '660 mm 双台串联工件台',
     unit: '件',
     category: 'part',
     props: [
@@ -859,7 +859,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-absolute-flat',
-    name: 'EUV 绝对参考平晶',
+    name: 'EUV Absolute Reference Flat', name_zh: 'EUV 绝对参考平晶',
     unit: '件',
     category: 'part',
     props: [
@@ -879,7 +879,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/euv-grating',
-    name: 'EUV 变线距光栅',
+    name: 'EUV Variable Line Spacing Grating', name_zh: 'EUV 变线距光栅',
     unit: '件',
     category: 'part',
     props: [
@@ -899,7 +899,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-spectrometer',
-    name: 'EUV 光谱/etendue 量测机',
+    name: 'EUV Spectrum/Etendue Measurement System', name_zh: 'EUV 光谱/etendue 量测机',
     unit: '台',
     category: 'machine',
     props: [
@@ -922,7 +922,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-droplet-imager',
-    name: '液滴频闪成像机',
+    name: 'Droplet Stroboscopic Imager', name_zh: '液滴频闪成像机',
     unit: '台',
     category: 'machine',
     props: [
@@ -942,7 +942,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/laser-beam-profiler',
-    name: '10.6 µm 激光光束质量/聚焦/指向量测机',
+    name: '10.6 µm Laser Beam Quality/Focus/Pointing Measurement System', name_zh: '10.6 µm 激光光束质量/聚焦/指向量测机',
     unit: '台',
     category: 'machine',
     props: [
@@ -958,7 +958,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/water-flow-meter',
-    name: '水流量计',
+    name: 'Water Flowmeter', name_zh: '水流量计',
     unit: '件',
     category: 'part',
     props: [
@@ -974,7 +974,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/water-flow-meter',
-    name: '水流量计量具',
+    name: 'Water Flowmeter Measuring Instrument', name_zh: '水流量计量具',
     unit: '台',
     category: 'machine',
     props: [
@@ -992,7 +992,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/laser-calorimeter',
-    name: '20 kW 水冷量热器',
+    name: '20 kW Water-Cooled Calorimeter', name_zh: '20 kW 水冷量热器',
     unit: '台',
     category: 'machine',
     props: [
@@ -1013,7 +1013,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/rf-combiner',
-    name: '14:1 RF 合成器',
+    name: '14:1 RF Combiner', name_zh: '14:1 RF 合成器',
     unit: '件',
     category: 'part',
     props: [
@@ -1034,7 +1034,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rf-generator-20kw',
-    name: '20 kW RF 发生器',
+    name: '20 kW RF Generator', name_zh: '20 kW RF 发生器',
     unit: '件',
     category: 'part',
     props: [
@@ -1054,7 +1054,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/co2-slab',
-    name: 'CO₂ slab 放电腔',
+    name: 'CO₂ Slab Discharge Chamber', name_zh: 'CO₂ slab 放电腔',
     unit: '件',
     category: 'part',
     props: [
@@ -1073,7 +1073,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/laser-gas-loop',
-    name: 'CO₂ 激光气体循环',
+    name: 'CO₂ Laser Gas Loop', name_zh: 'CO₂ 激光气体循环',
     unit: '件',
     category: 'part',
     props: [
@@ -1092,7 +1092,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/copper-mirror-10.6',
-    name: '10.6 µm 铜镜',
+    name: '10.6 µm Copper Mirror', name_zh: '10.6 µm 铜镜',
     unit: '件',
     category: 'part',
     props: [
@@ -1112,7 +1112,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fast-tool-servo',
-    name: '快刀伺服',
+    name: 'Fast Tool Servo', name_zh: '快刀伺服',
     unit: '件',
     category: 'part',
     props: [
@@ -1131,7 +1131,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/copper-oap-10.6',
-    name: '10.6 µm 铜离轴抛物镜',
+    name: '10.6 µm Copper Off-Axis Parabolic Mirror', name_zh: '10.6 µm 铜离轴抛物镜',
     unit: '件',
     category: 'part',
     props: [
@@ -1152,7 +1152,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/znse-window',
-    name: '10.6 µm ZnSe 输出窗口',
+    name: '10.6 µm ZnSe Output Window', name_zh: '10.6 µm ZnSe 输出窗口',
     unit: '件',
     category: 'part',
     props: [
@@ -1173,7 +1173,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/copper-output-coupler-10.6',
-    name: '10.6 µm 铜输出耦合镜',
+    name: '10.6 µm Copper Output Coupler', name_zh: '10.6 µm 铜输出耦合镜',
     unit: '件',
     category: 'part',
     props: [
@@ -1191,7 +1191,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/faraday-cup',
-    name: '法拉第杯',
+    name: 'Faraday Cup', name_zh: '法拉第杯',
     unit: '件',
     category: 'part',
     props: [
@@ -1208,7 +1208,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ion-beam-profiler',
-    name: 'IBF 束流/均匀性剖面仪',
+    name: 'IBF Beam Current/Uniformity Profiler', name_zh: 'IBF 束流/均匀性剖面仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -1227,7 +1227,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ccp-polisher',
-    name: '660 mm 小盘数控抛光机',
+    name: '660 mm Small-Tool CNC Polisher', name_zh: '660 mm 小盘数控抛光机',
     unit: '台',
     category: 'machine',
     props: [
@@ -1245,7 +1245,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/hydraulic-pump',
-    name: '液压泵',
+    name: 'Hydraulic Pump', name_zh: '液压泵',
     unit: '件',
     category: 'part',
     props: [
@@ -1262,7 +1262,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/hydrostatic-rotary-table-660',
-    name: '660 mm 静压转台',
+    name: '660 mm Hydrostatic Rotary Table', name_zh: '660 mm 静压转台',
     unit: '件',
     category: 'part',
     props: [
@@ -1281,7 +1281,7 @@ export const EUV_HINA_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/precision-spindle',
-    name: '精密小盘主轴',
+    name: 'Precision Small Platen Spindle', name_zh: '精密小盘主轴',
     unit: '件',
     category: 'part',
     props: [
@@ -1322,7 +1322,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 不是读数 —— 这一句与全仓库的 B 类口径一致。
      */
     id: 'make/ule-glass',
-    name: 'ULE 类低膨胀玻璃制备',
+    name: 'ULE-Type Low-Expansion Glass Production', name_zh: 'ULE 类低膨胀玻璃制备',
     produces: [
       {
         item: 'mat/ule-glass',
@@ -1389,7 +1389,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 70 kg 进、60 kg 出：10 kg 是切缝、外圆、非球面去料与磨削泥。
      */
     id: 'make/euv-hina-blank',
-    name: 'φ660×80 低膨胀玻璃镜坯制造',
+    name: 'φ660×80 Low-Expansion Glass Mirror Blank Manufacturing', name_zh: 'φ660×80 低膨胀玻璃镜坯制造',
     produces: [
       {
         item: 'plant/euv-stepper-hina/mirror-blank',
@@ -1461,7 +1461,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 的 0.52 nm 是特例的多光束锐化，不是抛光盘的常态）。
      */
     id: 'make/euv-hina-polish',
-    name: '抛光',
+    name: 'Polishing', name_zh: '抛光',
     produces: [
       {
         item: 'plant/euv-stepper-hina/mirror-blank',
@@ -1538,7 +1538,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 这里写 0.1 不表示「已经量到 0.1」，只表示 IBF 的去除量按 0.1 的目标算。
      */
     id: 'make/euv-hina-ibf',
-    name: 'φ660×80 低膨胀玻璃镜坯制造',
+    name: 'φ660×80 Low-Expansion Glass Mirror Blank Manufacturing', name_zh: 'φ660×80 低膨胀玻璃镜坯制造',
     produces: [
       {
         item: 'plant/euv-stepper-hina/mirror-blank',
@@ -1621,7 +1621,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 一台镀膜机一年能镀 100 台以上，**镀膜不是瓶颈**（与低 NA 那一代同结论）。
      */
     id: 'make/euv-hina-mirror',
-    name: '镀完 50 对 Mo/Si 的投影镜制造',
+    name: 'Projection Mirror with 50 Mo/Si Pairs Manufacturing', name_zh: '镀完 50 对 Mo/Si 的投影镜制造',
     produces: [
       {
         item: 'plant/euv-stepper-hina/mirror',
@@ -1716,7 +1716,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 且均匀性 ≥90 %。3 面镜的选择与低 NA 那台一致 [C]。
      */
     id: 'make/euv-hina-illuminator',
-    name: 'EUV 光刻机照明镜组制造',
+    name: 'EUV Stepper Illumination Mirror Assembly Manufacturing', name_zh: 'EUV 光刻机照明镜组制造',
     produces: [
       {
         item: 'plant/euv-stepper-hina/illuminator',
@@ -1785,7 +1785,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 波前预算：2×0.15×√8 = 0.85，加镀膜 0.6、装调 1.2、热 1.0 → 1.83 → 门 2。
      */
     id: 'make/euv-hina-optics-module',
-    name: '8 镜投影物镜制造',
+    name: '8-Mirror Projection Objective Manufacturing', name_zh: '8 镜投影物镜制造',
     produces: [
       {
         item: 'plant/euv-stepper-hina/optics-module',
@@ -1897,7 +1897,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * `data/measure/euv-hina.ts`。
      */
     id: 'make/euv-hina-alignment-sensor',
-    name: 'EUV 光刻机套刻对准传感器制造',
+    name: 'EUV Stepper Overlay Alignment Sensor Manufacturing', name_zh: 'EUV 光刻机套刻对准传感器制造',
     produces: [
       {
         item: 'plant/euv-stepper-hina/alignment-sensor',
@@ -1949,7 +1949,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 这是本文件工时最贵的一件（300 h）。
      */
     id: 'make/euv-hina-stage',
-    name: 'high-NA EUV 光刻机双工件台制造',
+    name: 'High-NA EUV Stepper Dual Wafer Stage Manufacturing', name_zh: 'high-NA EUV 光刻机双工件台制造',
     produces: [
       {
         item: 'plant/euv-stepper-hina/stage',
@@ -2031,7 +2031,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 但**不是实测**：没有 nm 级振动台，判据只能写「装好后 1 h 内干涉条纹不跳」。
      */
     id: 'make/euv-hina-isolation',
-    name: 'EUV 光刻机减振台制造',
+    name: 'EUV Stepper Vibration Isolation Table Manufacturing', name_zh: 'EUV 光刻机减振台制造',
     produces: [
       {
         item: 'plant/euv-stepper-hina/isolation',
@@ -2088,7 +2088,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 这一句写在这里，免得把「更重」当成「更准」。
      */
     id: 'make/euv-hina-frame',
-    name: 'high-NA EUV 光刻机整机框架装配',
+    name: 'High-NA EUV Stepper System Frame Assembly', name_zh: 'high-NA EUV 光刻机整机框架装配',
     produces: [
       {
         item: 'plant/euv-stepper-hina/frame',
@@ -2135,7 +2135,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 10 mm 厚 → 0.0628 m³ × 7 850 = 493 kg；法兰、接管、水套、支腿再 307 kg。
      */
     id: 'make/euv-hina-chamber',
-    name: 'high-NA EUV 光刻机投影光学真空腔制造',
+    name: 'High-NA EUV Stepper Projection Optics Vacuum Chamber Manufacturing', name_zh: 'high-NA EUV 光刻机投影光学真空腔制造',
     produces: [
       {
         item: 'plant/euv-stepper-hina/chamber',
@@ -2200,7 +2200,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      *     CO₂ 的直流电源不在这一件里，记在 needs。
      */
     id: 'make/euv-hina-laser',
-    name: 'CO₂ 激光头制造',
+    name: 'CO₂ Laser Head Manufacturing', name_zh: 'CO₂ 激光头制造',
     produces: [
       {
         item: 'plant/euv-source/laser',
@@ -2267,7 +2267,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 要 0.1 nm 得加 at-wavelength 拼接，那是另一条路线（R8 升级项）。
      */
     id: 'make/euv-hina-collector',
-    name: 'EUV 收集镜坯制造',
+    name: 'EUV Collector Mirror Blank Manufacturing', name_zh: 'EUV 收集镜坯制造',
     produces: [
       {
         item: 'plant/euv-source/collector',
@@ -2343,7 +2343,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * （`euv-source.ts` 问题 1 的氢账），所以碎屑抑制仍以铜箔百叶为主。
      */
     id: 'make/euv-hina-source',
-    name: '250 W / 13.5 nm 光源模块装配',
+    name: '250 W / 13.5 nm Source Module Assembly', name_zh: '250 W / 13.5 nm 光源模块装配',
     produces: [
       {
         item: 'plant/euv-stepper-hina/source',
@@ -2439,7 +2439,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 的 0.47 nm 读数 —— 差 5.2 倍这一格必须写在 `data/measure/euv-hina.ts`。
      */
     id: 'make/euv-hina-atw-interferometer',
-    name: '13.5 nm at-wavelength 干涉仪装配',
+    name: '13.5 nm At-Wavelength Interferometer Assembly', name_zh: '13.5 nm at-wavelength 干涉仪装配',
     produces: [
       {
         item: 'plant/euv-stepper-hina/atw-interferometer',
@@ -2528,7 +2528,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 不是机器的零件 —— 与 `plant/euv-stepper` 同一个写法。
      */
     id: 'make/euv-hina',
-    name: 'high-NA 整机装配',
+    name: 'High-NA System Assembly', name_zh: 'high-NA 整机装配',
     produces: [
       {
         item: 'plant/euv-stepper-hina',
@@ -2679,7 +2679,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * （`saqp.ts` 缺口①），所以 8–10 是**设计窗口**，不是读数。
      */
     id: 'make/device-wafer-oct',
-    name: '前道完成片制造',
+    name: 'Front-End Completed Wafer Manufacturing', name_zh: '前道完成片制造',
     produces: [
       {
         item: 'mat/device-wafer',
@@ -2755,7 +2755,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * overlay 记录”这一条。首片套刻读出来是多少就是多少，不写设计值。
      */
     id: 'make/device-wafer-oct-first',
-    name: '8 nm 首片制造',
+    name: '8 nm First Article Manufacturing', name_zh: '8 nm 首片制造',
     produces: [
       {
         item: 'mat/device-wafer-first',
@@ -2853,7 +2853,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * `stack-8` 的 7–12 好一档 —— 这一档没有实测，按 B 类记。
      */
     id: 'make/beol-30nm-15layer',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',
@@ -2986,7 +2986,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      *   · 193i 退路：本层没有 193i 浸没扫描机/涂显轨道，见④。
      */
     id: 'make/soc-8nm-damascene',
-    name: '8 nm 制程的 SoC 制造',
+    name: '8 nm Process SoC Manufacturing', name_zh: '8 nm 制程的 SoC 制造',
     produces: [
       {
         item: 'std/soc-8nm-general',
@@ -3206,7 +3206,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 但寿命/缺陷与标准 TaBN 不可比。这是 R8 降级，升级路线是 Ta/B 料链 + TaBN。
      */
     id: 'make/euv-mask-blank',
-    name: 'EUV 掩模坯制造',
+    name: 'EUV Mask Blank Manufacturing', name_zh: 'EUV 掩模坯制造',
     produces: [
       {
         item: 'std/euv-mask-blank',
@@ -3277,7 +3277,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 本条 EUV 100 nm 测试掩模 → 32 nm EUV 掩模（定位 ≤10 nm 的写机，下一步）。
      */
     id: 'make/euv-mask-degraded',
-    name: 'EUV 测试掩模制造',
+    name: 'EUV Test Mask Manufacturing', name_zh: 'EUV 测试掩模制造',
     produces: [
       {
         item: 'std/euv-mask-degraded',
@@ -3347,7 +3347,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 温控 0.02–0.05 K。定位与漂移是设计估算，要写测试标记后用 CD-SEM 复读。
      */
     id: 'make/euv-mask-writer',
-    name: '32 nm EUV 掩模写机制造',
+    name: '32 nm EUV Mask Writer Manufacturing', name_zh: '32 nm EUV 掩模写机制造',
     produces: [
       {
         item: 'plant/euv-mask-writer',
@@ -3416,7 +3416,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 仍缺。这一条只交 32 nm 吸收层图形，不交“可上机的完整掩模”。
      */
     id: 'make/euv-mask-32nm',
-    name: '32 nm EUV 掩模制造',
+    name: '32 nm EUV Mask Manufacturing', name_zh: '32 nm EUV 掩模制造',
     produces: [
       {
         item: 'std/euv-mask-32nm',
@@ -3512,7 +3512,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 反射计相对值。要写成实测，必须加 13.5 nm 光源 + 探测器。
      */
     id: 'make/euv-pellicle',
-    name: 'EUV 薄膜制造',
+    name: 'EUV Pellicle Manufacturing', name_zh: 'EUV 薄膜制造',
     produces: [
       {
         item: 'std/euv-pellicle',
@@ -3588,7 +3588,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 定位/漂移是设计估算；修完必须 CD-SEM 复读，不能只看“补上了”。
      */
     id: 'make/euv-mask-repair',
-    name: '32 nm EUV 掩模修版机制造',
+    name: '32 nm EUV Mask Repair Tool Manufacturing', name_zh: '32 nm EUV 掩模修版机制造',
     produces: [
       {
         item: 'plant/euv-mask-repair',
@@ -3656,7 +3656,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 是设计估算，不是实测。
      */
     id: 'make/wafer-inspection',
-    name: '晶圆缺陷巡检机制造',
+    name: 'Wafer Defect Inspection Machine Manufacturing', name_zh: '晶圆缺陷巡检机制造',
     produces: [
       {
         item: 'plant/wafer-inspection',
@@ -3711,7 +3711,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 不改图形。0.2–1 pA 的束流扫 300 mm 很慢，0.2–0.5 片/h 是设计估算。
      */
     id: 'make/e-beam-inspection',
-    name: '电子束巡检机制造',
+    name: 'Electron Beam Inspection Tool Manufacturing', name_zh: '电子束巡检机制造',
     produces: [
       {
         item: 'plant/e-beam-inspection',
@@ -3768,7 +3768,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 24 h 是估算；CGH 本身必须 CD-SEM 复读，不能只看写没写出来。
      */
     id: 'make/euv-cgh-null',
-    name: 'EUV CGH 零位补偿片制造',
+    name: 'EUV CGH Null Compensator Manufacturing', name_zh: 'EUV CGH 零位补偿片制造',
     produces: [
       {
         item: 'std/euv-cgh-null',
@@ -3834,7 +3834,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 只能做慢测）；④ 0.5 nm 台与隔振；⑤ 660 mm 镜子要 300 mm 子孔径拼接。
      */
     id: 'make/euv-interferometer',
-    name: 'at-wavelength EUV 干涉仪制造',
+    name: 'At-Wavelength EUV Interferometer Manufacturing', name_zh: 'at-wavelength EUV 干涉仪制造',
     produces: [
       {
         item: 'plant/euv-interferometer',
@@ -3901,7 +3901,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 荧光屏颗粒/均匀性会进系统差；它不是 0.1 nm 精度的来源。
      */
     id: 'make/euv-detector-fast',
-    name: '快速 EUV 探测器制造',
+    name: 'Fast EUV Detector Manufacturing', name_zh: '快速 EUV 探测器制造',
     produces: [
       {
         item: 'std/euv-detector-fast',
@@ -3958,7 +3958,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 24 h 是估算；孔的实际尺寸用 CD-SEM 复读。
      */
     id: 'make/euv-pinhole',
-    name: 'EUV 空间滤波针孔制造',
+    name: 'EUV Spatial Filter Pinhole Manufacturing', name_zh: 'EUV 空间滤波针孔制造',
     produces: [
       {
         item: 'std/euv-pinhole',
@@ -4031,7 +4031,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 五只电容传感器闭环是必须的。120 h 是装配/调校估算。
      */
     id: 'make/euv-pinhole-mount',
-    name: 'EUV 针孔五维调整架制造',
+    name: 'EUV Pinhole Five-Axis Adjustable Mount Manufacturing', name_zh: 'EUV 针孔五维调整架制造',
     produces: [
       {
         item: 'std/euv-pinhole-mount',
@@ -4083,7 +4083,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 两级坐标对齐、重叠区切换是难点。300 h 是装配/标定估算。
      */
     id: 'make/euv-stage-660',
-    name: '660 mm 双台串联工件台制造',
+    name: '660 mm Dual-Stage Tandem Workpiece Stage Manufacturing', name_zh: '660 mm 双台串联工件台制造',
     produces: [
       {
         item: 'plant/euv-stage-660',
@@ -4136,7 +4136,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 三平晶互检才有绝对约束（单块没有意义）。
      */
     id: 'make/euv-absolute-flat',
-    name: 'EUV 绝对参考平晶制造',
+    name: 'EUV Absolute Reference Flat Manufacturing', name_zh: 'EUV 绝对参考平晶制造',
     produces: [
       {
         item: 'std/euv-absolute-flat',
@@ -4198,7 +4198,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 可见光 OES 光栅没有 EUV 多层/闪耀，不能直接拿来用。
      */
     id: 'make/euv-grating',
-    name: 'EUV 变线距光栅制造',
+    name: 'EUV Variable Line Spacing Grating Manufacturing', name_zh: 'EUV 变线距光栅制造',
     produces: [
       {
         item: 'std/euv-grating',
@@ -4257,7 +4257,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 但分不清 0.1 nm 的精细结构。120 h 是装配/标定估算。
      */
     id: 'make/euv-spectrometer',
-    name: 'EUV 光谱/etendue 量测机制造',
+    name: 'EUV Spectrum/Etendue Measurement System Manufacturing', name_zh: 'EUV 光谱/etendue 量测机制造',
     produces: [
       {
         item: 'plant/euv-spectrometer',
@@ -4313,7 +4313,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 80 h 是装配/标定估算。
      */
     id: 'make/euv-droplet-imager',
-    name: '液滴频闪成像机制造',
+    name: 'Droplet Stroboscopic Imager Manufacturing', name_zh: '液滴频闪成像机制造',
     produces: [
       {
         item: 'plant/euv-droplet-imager',
@@ -4366,7 +4366,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 是 design，不是实测。
      */
     id: 'make/laser-beam-profiler',
-    name: '10.6 µm 激光光束质量/聚焦/指向量测机制造',
+    name: '10.6 µm Laser Beam Quality/Focus/Pointing Measurement System Manufacturing', name_zh: '10.6 µm 激光光束质量/聚焦/指向量测机制造',
     produces: [
       {
         item: 'plant/laser-beam-profiler',
@@ -4419,7 +4419,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 量热器的 ṁ 项；1–2 % 是资格带（不是读数）。40 h 是加工/标定估算。
      */
     id: 'make/water-flow-meter',
-    name: '水流量计制造',
+    name: 'Water Flowmeter Manufacturing', name_zh: '水流量计制造',
     produces: [
       {
         item: 'std/water-flow-meter',
@@ -4471,7 +4471,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * accuracy 0.5–1 % 是 design。80 h 是加工/标定估算。
      */
     id: 'make/laser-calorimeter',
-    name: '20 kW 水冷量热器制造',
+    name: '20 kW Water-Cooled Calorimeter Manufacturing', name_zh: '20 kW 水冷量热器制造',
     produces: [
       {
         item: 'plant/laser-calorimeter',
@@ -4523,7 +4523,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 插损 0.3–0.8 dB、隔离 20–30 dB 是 design；100 h 是绕制/调试估算。
      */
     id: 'make/rf-combiner',
-    name: '14:1 RF 合成器制造',
+    name: '14:1 RF Combiner Manufacturing', name_zh: '14:1 RF 合成器制造',
     produces: [
       {
         item: 'std/rf-combiner',
@@ -4574,7 +4574,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 模块是同频 27 MHz 的 ICP 射频源，相位锁定后合成。
      */
     id: 'make/rf-generator-20kw',
-    name: '20 kW RF 发生器制造',
+    name: '20 kW RF Generator Manufacturing', name_zh: '20 kW RF 发生器制造',
     produces: [
       {
         item: 'plant/rf-generator-20kw',
@@ -4627,7 +4627,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 200 h 是加工/封接/老炼估算。
      */
     id: 'make/co2-slab',
-    name: 'CO₂ slab 放电腔制造',
+    name: 'CO₂ Slab Discharge Chamber Manufacturing', name_zh: 'CO₂ slab 放电腔制造',
     produces: [
       {
         item: 'std/co2-slab',
@@ -4676,7 +4676,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 100–1000 m³/h、10–100 kPa、0.5–2 K 是 design；100 h 估算。
      */
     id: 'make/laser-gas-loop',
-    name: 'CO₂ 激光气体循环制造',
+    name: 'CO₂ Laser Gas Loop Manufacturing', name_zh: 'CO₂ 激光气体循环制造',
     produces: [
       {
         item: 'plant/laser-gas-loop',
@@ -4721,7 +4721,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * `plant/euv-source/laser` 的升级路线，不是另一台产品。
      */
     id: 'make/slab-laser-20kw',
-    name: 'CO₂ 激光头制造',
+    name: 'CO₂ Laser Head Manufacturing', name_zh: 'CO₂ 激光头制造',
     produces: [
       {
         item: 'plant/euv-source/laser',
@@ -4770,7 +4770,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 80 h 是车削/抛光/镀金估算。20 kW 下 1–2 % 吸收就是 200–400 W 热。
      */
     id: 'make/copper-mirror-10.6',
-    name: '10.6 µm 铜镜制造',
+    name: '10.6 µm Copper Mirror Manufacturing', name_zh: '10.6 µm 铜镜制造',
     produces: [
       {
         item: 'std/copper-mirror-10.6',
@@ -4818,7 +4818,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 10–50 µm 行程、1–10 kHz、1–10 nm 分辨率是 design；80 h 估算。
      */
     id: 'make/fast-tool-servo',
-    name: '快刀伺服制造',
+    name: 'Fast Tool Servo Manufacturing', name_zh: '快刀伺服制造',
     produces: [
       {
         item: 'plant/fast-tool-servo',
@@ -4869,7 +4869,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * roughness 10–20 nm、figure 50–100 nm、reflectivity 0.98–0.99 是 design。
      */
     id: 'make/copper-oap-10.6',
-    name: '10.6 µm 铜离轴抛物镜制造',
+    name: '10.6 µm Copper Off-Axis Parabolic Mirror Manufacturing', name_zh: '10.6 µm 铜离轴抛物镜制造',
     produces: [
       {
         item: 'std/copper-oap-10.6',
@@ -4920,7 +4920,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 合成/退火/切抛/镀膜估算。
      */
     id: 'make/znse-window',
-    name: '10.6 µm ZnSe 输出窗口制造',
+    name: '10.6 µm ZnSe Output Window Manufacturing', name_zh: '10.6 µm ZnSe 输出窗口制造',
     produces: [
       {
         item: 'std/znse-window',
@@ -4978,7 +4978,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 80 h 是钻孔/车削/镀金估算。
      */
     id: 'make/copper-output-coupler',
-    name: '10.6 µm 铜输出耦合镜制造',
+    name: '10.6 µm Copper Output Coupler Manufacturing', name_zh: '10.6 µm 铜输出耦合镜制造',
     produces: [
       {
         item: 'std/copper-output-coupler-10.6',
@@ -5026,7 +5026,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 1–20 mm 孔、0–2 A；40 h 是车/装/标定估算。
      */
     id: 'make/faraday-cup',
-    name: '法拉第杯制造',
+    name: 'Faraday Cup Manufacturing', name_zh: '法拉第杯制造',
     produces: [
       {
         item: 'std/faraday-cup',
@@ -5067,7 +5067,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 束流 0–2 A、均匀性 1–5 %（资格带，不是读数）、能量 300–1500 eV；100 h 估算。
      */
     id: 'make/ion-beam-profiler',
-    name: 'IBF 束流/均匀性剖面仪制造',
+    name: 'IBF Beam Current/Uniformity Profiler Manufacturing', name_zh: 'IBF 束流/均匀性剖面仪制造',
     produces: [
       {
         item: 'plant/ion-beam-profiler',
@@ -5117,7 +5117,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 300 h 是铸造/刮研/装调估算；position 0.5–1 µm 是资格带（不是读数）。
      */
     id: 'make/ccp-polisher',
-    name: '660 mm 小盘数控抛光机制造',
+    name: '660 mm Small-Tool CNC Polisher Manufacturing', name_zh: '660 mm 小盘数控抛光机制造',
     produces: [
       {
         item: 'plant/ccp-polisher',
@@ -5167,7 +5167,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * **液压泵：1–20 MPa、0.1–10 L/min。**
      */
     id: 'make/hydraulic-pump',
-    name: '液压泵制造',
+    name: 'Hydraulic Pump Manufacturing', name_zh: '液压泵制造',
     produces: [
       {
         item: 'std/hydraulic-pump',
@@ -5210,7 +5210,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * axial/radial 0.1–0.5 µm、angle 1–2 角秒 是资格带（不是读数）；200 h 估算。
      */
     id: 'make/hydrostatic-rotary-table-660',
-    name: '660 mm 静压转台制造',
+    name: '660 mm Hydrostatic Rotary Table Manufacturing', name_zh: '660 mm 静压转台制造',
     produces: [
       {
         item: 'std/hydrostatic-rotary-table-660',
@@ -5262,7 +5262,7 @@ export const EUV_HINA_ROUTES: readonly Route[] = [
      * 10–200 rpm、径向/轴向 0.1–0.5 µm 是资格带（不是读数）；120 h 估算。
      */
     id: 'make/precision-spindle',
-    name: '精密小盘主轴制造',
+    name: 'Precision Small Platen Spindle Manufacturing', name_zh: '精密小盘主轴制造',
     produces: [
       {
         item: 'std/precision-spindle',

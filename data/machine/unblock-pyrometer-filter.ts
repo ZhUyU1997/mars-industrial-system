@@ -322,7 +322,7 @@ export const UNBLOCK_PYRO_FILTER_ROUTES: readonly Route[] = [
      *  ② 显色温度 ±10 K → 有效波长 ±4 nm → ±6 K，所以每一片都要重标
      */
     id: 'make/pyrometer-filter-glass',
-    name: '高温计红色滤光片制造',
+    name: 'Pyrometer Red Filter Manufacturing', name_zh: '高温计红色滤光片制造',
     produces: [{ item: 'plant/pyrometer/filter', qty: q(1) }],
     /**
      * 进 1.565 kg，出 1 件（6 片 φ25 × 0.6，共 4.2 g）。每一笔的算式写在下面。
@@ -550,7 +550,7 @@ export const UNBLOCK_PYRO_FILTER_ROUTES: readonly Route[] = [
      *  ② 多两片石英窗 + 4 个密封面，τ 从 0.74 掉到 0.63（−15%），而每一处都是一条会漏的路
      */
     id: 'make/pyrometer-filter-liquid',
-    name: '高温计红色滤光片制造',
+    name: 'Pyrometer Red Filter Manufacturing', name_zh: '高温计红色滤光片制造',
     produces: [{ item: 'plant/pyrometer/filter', qty: q(1) }],
     /**
      * 进 0.816 kg，出 1 件（0.21 kg，含 3.8 cm³ 的溶液）。每一笔的算式写在下面。

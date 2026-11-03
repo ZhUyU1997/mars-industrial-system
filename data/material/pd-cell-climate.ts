@@ -131,7 +131,7 @@ export const PD_CELL_CLIMATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pd-test-cell/hvac',
-    name: 'PD 恒温恒湿机组',
+    name: 'PD Temperature and Humidity Control Unit', name_zh: 'PD 恒温恒湿机组',
     unit: '件',
     category: 'part',
     props: [
@@ -165,7 +165,7 @@ export const PD_CELL_CLIMATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pd-test-cell/interlock',
-    name: 'PD 门联锁',
+    name: 'PD Door Interlock', name_zh: 'PD 门联锁',
     unit: '件',
     category: 'part',
     props: [
@@ -193,7 +193,7 @@ export const PD_CELL_CLIMATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pd-test-cell/discharge-rod',
-    name: 'PD 放电棒',
+    name: 'PD Discharge Rod', name_zh: 'PD 放电棒',
     unit: '支',
     category: 'part',
     props: [
@@ -220,7 +220,7 @@ export const PD_CELL_CLIMATE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pd-test-cell/ground-switch',
-    name: 'PD 接地开关',
+    name: 'PD Grounding Switch', name_zh: 'PD 接地开关',
     unit: '台',
     category: 'part',
     props: [
@@ -261,7 +261,7 @@ export const PD_CELL_CLIMATE_ROUTES: readonly Route[] = [
      * ⚠️ 机组本身是 part，不能 holds；`plant/pd-test-cell` 的 holds 是缺口 G1。
      */
     id: 'make/pd-cell-hvac',
-    name: 'PD 恒温恒湿机组制造',
+    name: 'PD Temperature and Humidity Control Unit Manufacturing', name_zh: 'PD 恒温恒湿机组制造',
     produces: [
       {
         item: 'plant/pd-test-cell/hvac',
@@ -399,7 +399,7 @@ export const PD_CELL_CLIMATE_ROUTES: readonly Route[] = [
      * 三样都有，缺的是合金与轧制）。
      */
     id: 'make/pd-cell-interlock',
-    name: 'PD 门联锁制造',
+    name: 'PD Door Interlock Manufacturing', name_zh: 'PD 门联锁制造',
     produces: [
       {
         item: 'plant/pd-test-cell/interlock',
@@ -482,7 +482,7 @@ export const PD_CELL_CLIMATE_ROUTES: readonly Route[] = [
      * 编织带 0.45 kg 的算法：25 mm² × 2 m × 8960 = 0.448 kg。
      */
     id: 'make/pd-cell-discharge-rod',
-    name: 'PD 放电棒制造',
+    name: 'PD Discharge Rod Manufacturing', name_zh: 'PD 放电棒制造',
     produces: [
       {
         item: 'plant/pd-test-cell/discharge-rod',
@@ -541,7 +541,7 @@ export const PD_CELL_CLIMATE_ROUTES: readonly Route[] = [
      * 空气击穿约 3 kV/mm，有 9 倍余量。
      */
     id: 'make/pd-cell-ground-switch',
-    name: 'PD 接地开关制造',
+    name: 'PD Grounding Switch Manufacturing', name_zh: 'PD 接地开关制造',
     produces: [
       {
         item: 'plant/pd-test-cell/ground-switch',

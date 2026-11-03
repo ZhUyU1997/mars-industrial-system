@@ -54,7 +54,7 @@ export const AUTOCLAVE_PARTS: readonly Item[] = [
    * 30 MPa 下 DN800 的筒体壁厚约 60–80 mm（估）。这么厚的钢不能卷，
    * 只能锻 —— 而锻造设备本表没有（见文件头）。
    */
-  { id: 'plant/autoclave/shell', name: '高压釜筒体与封头', unit: '件', category: 'part' },
+  { id: 'plant/autoclave/shell', name: 'Autoclave Shell and Head', name_zh: '高压釜筒体与封头', unit: '件', category: 'part' },
 
   /**
    * 密封。金属缠绕垫：不锈钢带 + 石墨填料，靠螺栓预紧压紧。
@@ -62,16 +62,16 @@ export const AUTOCLAVE_PARTS: readonly Item[] = [
    * PTFE 垫在 350 °C 会软化流走，所以高温高压只能用金属垫 ——
    * 这是"PTFE 万能"这条经验第一次失效。
    */
-  { id: 'plant/autoclave/seal', name: '高压釜密封', unit: '件', category: 'part' },
+  { id: 'plant/autoclave/seal', name: 'Autoclave Seal', name_zh: '高压釜密封', unit: '件', category: 'part' },
 
   /** 搅拌。轴穿过封头，用磁力耦合或机械密封 —— 转轴穿过压力边界，是第二个漏点。 */
-  { id: 'plant/autoclave/agitator', name: '高压釜搅拌', unit: '件', category: 'part' },
+  { id: 'plant/autoclave/agitator', name: 'Autoclave Agitator', name_zh: '高压釜搅拌', unit: '件', category: 'part' },
 
   /** 夹套与内盘管。350 °C 的加热介质在夹套里走，与 30 MPa 的釜内隔一层钢。 */
-  { id: 'plant/autoclave/heater', name: '高压釜夹套与内盘管', unit: '件', category: 'part' },
+  { id: 'plant/autoclave/heater', name: 'Autoclave Jacket and Inner Coil', name_zh: '高压釜夹套与内盘管', unit: '件', category: 'part' },
 
   /** 高压阀与安全阀。安全阀是最后一道：超压时它先开，不靠人。 */
-  { id: 'plant/autoclave/valves', name: '高压釜高压阀与安全阀', unit: '件', category: 'part' },
+  { id: 'plant/autoclave/valves', name: 'Autoclave High-Pressure Valve and Safety Valve', name_zh: '高压釜高压阀与安全阀', unit: '件', category: 'part' },
 
   /**
    * 观察窗。厚玻璃圆片夹在金属法兰里，两面用 PTFE 垫 —— 是全表**唯一**
@@ -80,14 +80,14 @@ export const AUTOCLAVE_PARTS: readonly Item[] = [
    * 高压容器的窗口要三层：玻璃承压、金属圈承螺栓、垫片密封。
    * 玻璃不能直接对螺栓 —— 应力集中会把它压碎。
    */
-  { id: 'plant/autoclave/sight-glass', name: '高压釜观察窗', unit: '件', category: 'part' },
+  { id: 'plant/autoclave/sight-glass', name: 'Autoclave Sight Glass', name_zh: '高压釜观察窗', unit: '件', category: 'part' },
 ];
 
 export const AUTOCLAVE_ROUTES: readonly Route[] = [
   {
     /** 筒体。40Cr 锻件 → 粗车 → 探伤 → 精镗内孔 → 车法兰密封面。 */
     id: 'make/autoclave-shell',
-    name: '高压釜筒体与封头制造',
+    name: 'Autoclave Shell and Head Manufacturing', name_zh: '高压釜筒体与封头制造',
     produces: [{ item: 'plant/autoclave/shell', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] }],
     needs: ['plant/milling-machine', 'plant/grinder', 'plant/forge'],
@@ -96,7 +96,7 @@ export const AUTOCLAVE_ROUTES: readonly Route[] = [
   {
     /** 金属缠绕垫。不锈钢带压成 V 形，夹石墨填料，绕成环。 */
     id: 'make/autoclave-seal',
-    name: '高压釜密封制造',
+    name: 'Autoclave Seal Manufacturing', name_zh: '高压釜密封制造',
     produces: [{ item: 'plant/autoclave/seal', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -108,7 +108,7 @@ export const AUTOCLAVE_ROUTES: readonly Route[] = [
   {
     /** 搅拌。40Cr 轴车磨 + 桨叶铣 + 磁力耦合器装配。 */
     id: 'make/autoclave-agitator',
-    name: '高压釜搅拌制造',
+    name: 'Autoclave Agitator Manufacturing', name_zh: '高压釜搅拌制造',
     produces: [{ item: 'plant/autoclave/agitator', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] }],
     needs: ['plant/milling-machine', 'plant/grinder'],
@@ -117,7 +117,7 @@ export const AUTOCLAVE_ROUTES: readonly Route[] = [
   {
     /** 加热夹套。不锈钢板卷焊 + 盘管弯制，与筒体焊接后试压。 */
     id: 'make/autoclave-heater',
-    name: '高压釜夹套与内盘管制造',
+    name: 'Autoclave Jacket and Inner Coil Manufacturing', name_zh: '高压釜夹套与内盘管制造',
     produces: [{ item: 'plant/autoclave/heater', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -132,7 +132,7 @@ export const AUTOCLAVE_ROUTES: readonly Route[] = [
      * 有没有分层、液位在哪，都要眼睛。
      */
     id: 'make/autoclave-sight-glass',
-    name: '高压釜观察窗制造',
+    name: 'Autoclave Sight Glass Manufacturing', name_zh: '高压釜观察窗制造',
     produces: [{ item: 'plant/autoclave/sight-glass', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -145,7 +145,7 @@ export const AUTOCLAVE_ROUTES: readonly Route[] = [
   {
     /** 高压阀。不锈钢阀体锻件车成，阀芯与阀座对研磨；安全阀要单独标定。 */
     id: 'make/autoclave-valves',
-    name: '高压釜高压阀与安全阀制造',
+    name: 'Autoclave High-Pressure Valve and Safety Valve Manufacturing', name_zh: '高压釜高压阀与安全阀制造',
     produces: [{ item: 'plant/autoclave/valves', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] },
@@ -165,7 +165,7 @@ export const AUTOCLAVE_ROUTES: readonly Route[] = [
  */
 export const AUTOCLAVE: Item = {
   id: 'plant/autoclave',
-  name: '高压釜',
+  name: 'Autoclave', name_zh: '高压釜',
   unit: '台',
   category: 'machine',
   holds: [
@@ -187,7 +187,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/autoclave',
-    name: '高压釜装配',
+    name: 'Autoclave Assembly', name_zh: '高压釜装配',
     produces: [{
       item: 'plant/autoclave',
       qty: q(1),

@@ -366,7 +366,7 @@ export const ADDITIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/thiourea',
-    name: '硫脲',
+    name: 'Thiourea', name_zh: '硫脲',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 100, unit: '%', dir: 'atLeast' }],
@@ -381,7 +381,7 @@ export const ADDITIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ethylene-oxide',
-    name: '环氧乙烷',
+    name: 'Ethylene Oxide', name_zh: '环氧乙烷',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 80, max: 100, unit: '%', dir: 'atLeast' }],
@@ -399,7 +399,7 @@ export const ADDITIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/peg',
-    name: '聚乙二醇 PEG 4000',
+    name: 'PEG 4000', name_zh: '聚乙二醇 PEG 4000',
     unit: 'kg',
     category: 'material',
     props: [
@@ -435,7 +435,7 @@ export const ADDITIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/superfill-bath',
-    name: '超填充镀液',
+    name: 'Superfill Plating Bath', name_zh: '超填充镀液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -463,7 +463,7 @@ export const ADDITIVE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/plating-ready-wafer',
-    name: '预浸活化',
+    name: 'Pre-Dip Activation', name_zh: '预浸活化',
     unit: '片',
     category: 'part',
     props: [
@@ -512,7 +512,7 @@ export const ADDITIVE_ROUTES: readonly Route[] = [
      * 所以这条路线是"小批量精细化工"，不是大宗 —— 批时 12 h、一批 1 kg 是合适的尺度。
      */
     id: 'make/thiourea',
-    name: '硫脲制备',
+    name: 'Thiourea Production', name_zh: '硫脲制备',
     produces: [
       {
         item: 'mat/thiourea',
@@ -594,7 +594,7 @@ export const ADDITIVE_ROUTES: readonly Route[] = [
      * 但投料白名单只到 `mat/water`。钙镁随水进槽 ⇒ 镀层 10–100 ppm 金属杂质。
      */
     id: 'make/superfill-bath',
-    name: '超填充镀液制备',
+    name: 'Superfill Plating Bath Production', name_zh: '超填充镀液制备',
     produces: [
       {
         item: 'mat/superfill-bath',
@@ -645,7 +645,7 @@ export const ADDITIVE_ROUTES: readonly Route[] = [
      * 才会在报告里被点名（缺口①）。
      */
     id: 'make/plating-prime',
-    name: '预浸活化制造',
+    name: 'Pre-Dip Activation Manufacturing', name_zh: '预浸活化制造',
     produces: [
       {
         item: 'mat/plating-ready-wafer',
@@ -716,7 +716,7 @@ export const ADDITIVE_ROUTES: readonly Route[] = [
      *   别把它算进 void。**
      */
     id: 'make/plating-superfill',
-    name: '电镀铜片制造',
+    name: 'Copper-Plated Wafer Manufacturing', name_zh: '电镀铜片制造',
     produces: [
       {
         item: 'mat/plated-wafer',
@@ -825,7 +825,7 @@ export const ADDITIVE_ROUTES: readonly Route[] = [
      * 而且它要 15–20 bar —— 本层能到 35 MPa 的只有 `plant/autoclave`。
      */
     id: 'make/plating-superfill-peg',
-    name: '电镀铜片制造',
+    name: 'Copper-Plated Wafer Manufacturing', name_zh: '电镀铜片制造',
     produces: [
       {
         item: 'mat/plated-wafer',
@@ -897,7 +897,7 @@ export const ADDITIVE_ROUTES: readonly Route[] = [
      * 温度 220–280 °C 在 autoclave 的 150–550 区间内。
      */
     id: 'make/ethylene-oxide',
-    name: '环氧乙烷制备',
+    name: 'Ethylene Oxide Production', name_zh: '环氧乙烷制备',
     produces: [
       {
         item: 'mat/ethylene-oxide',
@@ -926,7 +926,7 @@ export const ADDITIVE_ROUTES: readonly Route[] = [
   {
     /** PEG 4000：环氧乙烷 + 乙二醇引发，KOH 催化，120–150 °C。 */
     id: 'make/peg',
-    name: '聚乙二醇 PEG 4000 制备',
+    name: 'PEG 4000 Production', name_zh: '聚乙二醇 PEG 4000 制备',
     produces: [
       {
         item: 'mat/peg',

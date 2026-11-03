@@ -18,7 +18,7 @@ import { q } from '../../src/index.ts';
 export const RTA_UNIFORMITY_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/rta-uniformity-record',
-    name: '9 点记录',
+    name: '9-Point Record', name_zh: '9 点记录',
     unit: '份',
     category: 'part',
     props: [
@@ -32,7 +32,7 @@ export const RTA_UNIFORMITY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/thermocouple-wafer-200mm',
-    name: '9 点/200 mm 热电偶片',
+    name: '9-Point/200 mm Thermocouple Wafer', name_zh: '9 点/200 mm 热电偶片',
     unit: '件',
     category: 'part',
     props: [
@@ -51,7 +51,7 @@ export const RTA_UNIFORMITY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/thermocouple-wafer-49',
-    name: '49 点/200 mm 热电偶片',
+    name: '49-Point/200 mm Thermocouple Wafer', name_zh: '49 点/200 mm 热电偶片',
     unit: '件',
     category: 'part',
     props: [
@@ -70,7 +70,7 @@ export const RTA_UNIFORMITY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rta-uniformity-record-49',
-    name: '49 点 RTA 均匀性记录',
+    name: '49-Point RTA Uniformity Record', name_zh: '49 点 RTA 均匀性记录',
     unit: '份',
     category: 'part',
     props: [
@@ -87,7 +87,7 @@ export const RTA_UNIFORMITY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rta-uniformity-record-49-rot',
-    name: '49 点旋转 RTA 均匀性记录',
+    name: '49-Point Rotating RTA Uniformity Record', name_zh: '49 点旋转 RTA 均匀性记录',
     unit: '份',
     category: 'part',
     props: [
@@ -104,7 +104,7 @@ export const RTA_UNIFORMITY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rta-zone-record-16',
-    name: '16 区分区温差记录',
+    name: '16-Zone Temperature Difference Record', name_zh: '16 区分区温差记录',
     unit: '份',
     category: 'part',
     props: [
@@ -122,7 +122,7 @@ export const RTA_UNIFORMITY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rta-zone-record-8',
-    name: '8 区本地版的分区温差记录',
+    name: '8-Zone Local-Version Temperature Difference Record', name_zh: '8 区本地版的分区温差记录',
     unit: '份',
     category: 'part',
     props: [
@@ -141,7 +141,7 @@ export const RTA_UNIFORMITY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rta-pyrometer-record',
-    name: 'RTA 高温计相对准确度记录',
+    name: 'RTA Pyrometer Relative Accuracy Record', name_zh: 'RTA 高温计相对准确度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -159,7 +159,7 @@ export const RTA_UNIFORMITY_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/rta-zoned-record',
-    name: 'zoned RTA 的 2–3 K 档记录',
+    name: 'Zoned RTA 2–3 K Step Record', name_zh: 'zoned RTA 的 2–3 K 档记录',
     unit: '份',
     category: 'part',
     props: [
@@ -180,7 +180,7 @@ export const RTA_UNIFORMITY_MEASURE_ROUTES: readonly Route[] = [
      * 1300–1372。把量程要求写进选项，这一格才按实物判。
      */
     id: 'make/thermocouple-wafer-200mm',
-    name: '9 点/200 mm 热电偶片制造',
+    name: '9-Point/200 mm Thermocouple Wafer Manufacturing', name_zh: '9 点/200 mm 热电偶片制造',
     produces: [
       {
         item: 'std/thermocouple-wafer-200mm',
@@ -219,7 +219,7 @@ export const RTA_UNIFORMITY_MEASURE_ROUTES: readonly Route[] = [
      * `measure/thermocouple-cal` 交，不再借 T 型。
      */
     id: 'measure/rta-uniformity',
-    name: '9 点测量',
+    name: '9-Point Measurement', name_zh: '9 点测量',
     produces: [
       {
         item: 'mat/rta-uniformity-record',
@@ -249,7 +249,7 @@ export const RTA_UNIFORMITY_MEASURE_ROUTES: readonly Route[] = [
      * 点数线性放大的估算，不是实测节拍。
      */
     id: 'make/thermocouple-wafer-49',
-    name: '49 点/200 mm 热电偶片制造',
+    name: '49-Point/200 mm Thermocouple Wafer Manufacturing', name_zh: '49 点/200 mm 热电偶片制造',
     produces: [
       {
         item: 'std/thermocouple-wafer-49',
@@ -296,7 +296,7 @@ export const RTA_UNIFORMITY_MEASURE_ROUTES: readonly Route[] = [
      * 60 rpm 自转（全档）。先降级再升级，48 支偶与 80 根引线是同一批 K 型。
      */
     id: 'measure/rta-uniformity-49',
-    name: '49 点 RTA 均匀性测量',
+    name: '49-Point RTA Uniformity Measurement', name_zh: '49 点 RTA 均匀性测量',
     produces: [
       {
         item: 'mat/rta-uniformity-record-49',
@@ -337,7 +337,7 @@ export const RTA_UNIFORMITY_MEASURE_ROUTES: readonly Route[] = [
      * 5–10 K 会被接触噪声吃掉。历史顺序：9 点 → 49 点静态 → 本条。
      */
     id: 'measure/rta-uniformity-49-rot',
-    name: '49 点旋转 RTA 均匀性测量',
+    name: '49-Point Rotating RTA Uniformity Measurement', name_zh: '49 点旋转 RTA 均匀性测量',
     produces: [
       {
         item: 'mat/rta-uniformity-record-49-rot',
@@ -379,7 +379,7 @@ export const RTA_UNIFORMITY_MEASURE_ROUTES: readonly Route[] = [
      * 测 16 区。8 区的记录要另一轮，不能拿 16 区的数去顶。
      */
     id: 'measure/rta-zone-uniformity-16',
-    name: '16 区分区温差测量',
+    name: '16-Zone Temperature Difference Measurement', name_zh: '16 区分区温差测量',
     produces: [
       {
         item: 'mat/rta-zone-record-16',
@@ -433,7 +433,7 @@ export const RTA_UNIFORMITY_MEASURE_ROUTES: readonly Route[] = [
      * `uniformity 0–8` 仍是 design。
      */
     id: 'measure/rta-zone-uniformity-8',
-    name: '8 区本地版的分区温差测量',
+    name: '8-Zone Local-Version Temperature Difference Measurement', name_zh: '8 区本地版的分区温差测量',
     produces: [
       {
         item: 'mat/rta-zone-record-8',
@@ -497,7 +497,7 @@ export const RTA_UNIFORMITY_MEASURE_ROUTES: readonly Route[] = [
      * 仍是 design。
      */
     id: 'measure/rta-zone-lamp-accuracy',
-    name: 'RTA 高温计相对准确度测量',
+    name: 'RTA Pyrometer Relative Accuracy Measurement', name_zh: 'RTA 高温计相对准确度测量',
     produces: [
       {
         item: 'mat/rta-pyrometer-record',
@@ -553,7 +553,7 @@ export const RTA_UNIFORMITY_MEASURE_ROUTES: readonly Route[] = [
      * 路线（`measure/rta-zone-lamp-accuracy`），两条不互相顶替。
      */
     id: 'measure/rta-zoned-uniformity',
-    name: 'zoned RTA 的 2–3 K 档测量',
+    name: 'Zoned RTA 2–3 K Step Measurement', name_zh: 'zoned RTA 的 2–3 K 档测量',
     produces: [
       {
         item: 'mat/rta-zoned-record',

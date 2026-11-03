@@ -350,7 +350,7 @@ export const HOT_BATH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hot-phosphoric-bath/tank',
-    name: '热磷酸槽石英槽体',
+    name: 'Hot Phosphoric Acid Bath Quartz Tank', name_zh: '热磷酸槽石英槽体',
     unit: '件',
     category: 'part',
     props: [
@@ -369,7 +369,7 @@ export const HOT_BATH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hot-phosphoric-bath/heater',
-    name: '热磷酸槽加热器',
+    name: 'Hot Phosphoric Acid Bath Heater', name_zh: '热磷酸槽加热器',
     unit: '件',
     category: 'part',
     props: [{ param: 'power', kind: 'range', min: 300, max: 3000, unit: 'W', dir: 'atLeast' }],
@@ -384,7 +384,7 @@ export const HOT_BATH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hot-phosphoric-bath/condenser',
-    name: '热磷酸槽回流冷凝器',
+    name: 'Hot Phosphoric Acid Bath Reflux Condenser', name_zh: '热磷酸槽回流冷凝器',
     unit: '件',
     category: 'part',
     props: [{ param: 'area', kind: 'range', min: 0.01, max: 0.5, unit: 'm²', dir: 'atLeast' }],
@@ -399,7 +399,7 @@ export const HOT_BATH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hot-phosphoric-bath/lid',
-    name: '热磷酸槽盖',
+    name: 'Hot Phosphoric Acid Bath Lid', name_zh: '热磷酸槽盖',
     unit: '件',
     category: 'part',
     props: [{ param: 'relief', kind: 'range', min: 2, max: 40, unit: 'kPa', dir: 'atLeast' }],
@@ -413,7 +413,7 @@ export const HOT_BATH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hot-phosphoric-bath/lagging',
-    name: '热磷酸槽保温套',
+    name: 'Hot Phosphoric Acid Bath Insulation Jacket', name_zh: '热磷酸槽保温套',
     unit: '件',
     category: 'part',
     props: [{ param: 'thickness', kind: 'range', min: 10, max: 100, unit: 'mm', dir: 'atLeast' }],
@@ -427,7 +427,7 @@ export const HOT_BATH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hot-phosphoric-bath/gauge',
-    name: '热磷酸槽压力表',
+    name: 'Hot Phosphoric Acid Bath Pressure Gauge', name_zh: '热磷酸槽压力表',
     unit: '件',
     category: 'part',
     props: [
@@ -445,7 +445,7 @@ export const HOT_BATH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hot-phosphoric-bath/level',
-    name: '热磷酸槽液位探尺',
+    name: 'Hot Phosphoric Acid Bath Level Probe', name_zh: '热磷酸槽液位探尺',
     unit: '件',
     category: 'part',
     props: [{ param: 'resolution', kind: 'range', min: 0.2, max: 50, unit: 'mm', dir: 'atMost' }],
@@ -466,7 +466,7 @@ export const HOT_BATH_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hot-phosphoric-bath',
-    name: '热磷酸槽',
+    name: 'Hot Phosphoric Acid Bath', name_zh: '热磷酸槽',
     unit: '台',
     category: 'machine',
     props: [
@@ -524,7 +524,7 @@ export const HOT_BATH_ROUTES: readonly Route[] = [
      * 它是一支炬，握在机器人手里（与 `unblock-atmos-sight` 第 554 行同一个处理）。
      */
     id: 'make/hotbath-tank',
-    name: '热磷酸槽石英槽体制造',
+    name: 'Hot Phosphoric Acid Bath Quartz Tank Manufacturing', name_zh: '热磷酸槽石英槽体制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -589,7 +589,7 @@ export const HOT_BATH_ROUTES: readonly Route[] = [
      * 要更长寿命的正解是 PTFE 衬里（第五节⑧），不是无限加厚。
      */
     id: 'make/hotbath-tank-thick',
-    name: '热磷酸槽石英槽体制造',
+    name: 'Hot Phosphoric Acid Bath Quartz Tank Manufacturing', name_zh: '热磷酸槽石英槽体制造',
     rate: { hours: q(54) },
     produces: [
       {
@@ -659,7 +659,7 @@ export const HOT_BATH_ROUTES: readonly Route[] = [
      * （k_air = 0.03），填碳粉（k ≈ 7）之后是 2 K。这就是 cartridge heater 里镁粉的道理。
      */
     id: 'make/hotbath-heater',
-    name: '热磷酸槽加热器制造',
+    name: 'Hot Phosphoric Acid Bath Heater Manufacturing', name_zh: '热磷酸槽加热器制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -718,7 +718,7 @@ export const HOT_BATH_ROUTES: readonly Route[] = [
      * 再用比较仪校 0.01 mm。
      */
     id: 'make/hotbath-condenser',
-    name: '热磷酸槽回流冷凝器制造',
+    name: 'Hot Phosphoric Acid Bath Reflux Condenser Manufacturing', name_zh: '热磷酸槽回流冷凝器制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -780,7 +780,7 @@ export const HOT_BATH_ROUTES: readonly Route[] = [
      * 第 78 行同一句）：磨口对研 + 矿棉绳 + 石灰泥。
      */
     id: 'make/hotbath-lid',
-    name: '热磷酸槽盖制造',
+    name: 'Hot Phosphoric Acid Bath Lid Manufacturing', name_zh: '热磷酸槽盖制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -847,7 +847,7 @@ export const HOT_BATH_ROUTES: readonly Route[] = [
      * 矿棉不是"最省"，是"唯一"：本层没有硅酸铝纤维、没有气凝胶、没有珍珠岩制品。
      */
     id: 'make/hotbath-lagging',
-    name: '热磷酸槽保温套制造',
+    name: 'Hot Phosphoric Acid Bath Insulation Jacket Manufacturing', name_zh: '热磷酸槽保温套制造',
     rate: { hours: q(4) },
     produces: [
       {
@@ -885,7 +885,7 @@ export const HOT_BATH_ROUTES: readonly Route[] = [
      * 这是本层唯一能造出来的标准压力源 —— 它锚在"质量/面积"上，与配重阀同一招。
      */
     id: 'make/hotbath-gauge',
-    name: '热磷酸槽压力表制造',
+    name: 'Hot Phosphoric Acid Bath Pressure Gauge Manufacturing', name_zh: '热磷酸槽压力表制造',
     rate: { hours: q(10) },
     produces: [
       {
@@ -927,7 +927,7 @@ export const HOT_BATH_ROUTES: readonly Route[] = [
      * "漏了"或"忘了补" —— 这两种都是 10 mm 级的差别，看不出 2 mm 的差别没有损失。
      */
     id: 'make/hotbath-level-a',
-    name: '热磷酸槽液位探尺制造',
+    name: 'Hot Phosphoric Acid Bath Level Probe Manufacturing', name_zh: '热磷酸槽液位探尺制造',
     rate: { hours: q(2) },
     produces: [
       {
@@ -965,7 +965,7 @@ export const HOT_BATH_ROUTES: readonly Route[] = [
      *      所以要在 3 s 内读完，慢了线会走 1–2 mm。**这就是 2 mm 这个数的由来，不是磨出来的。**
      */
     id: 'make/hotbath-level-b',
-    name: '热磷酸槽液位探尺制造',
+    name: 'Hot Phosphoric Acid Bath Level Probe Manufacturing', name_zh: '热磷酸槽液位探尺制造',
     rate: { hours: q(4) },
     produces: [
       {
@@ -1018,7 +1018,7 @@ export const HOT_BATH_ROUTES: readonly Route[] = [
      *    "这片的金属是什么"，不是"还在不在"）。
      */
     id: 'make/deprocess-nitride',
-    name: '开盖后的裸片制造',
+    name: 'Decapped Bare Die Manufacturing', name_zh: '开盖后的裸片制造',
     rate: { hours: q(1, 2) },
     produces: [
       {
@@ -1109,7 +1109,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/hot-phosphoric-bath',
-    name: '热磷酸槽装配',
+    name: 'Hot Phosphoric Acid Bath Assembly', name_zh: '热磷酸槽装配',
     produces: [{
       item: 'plant/hot-phosphoric-bath',
       qty: q(1),

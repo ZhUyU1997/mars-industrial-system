@@ -276,7 +276,7 @@ export const UNBLOCK_ECOOL_ROUTES: readonly Route[] = [
      * 同一种写法），锥座沉入多少决定压紧量，那个量只能拿平板与量块核，摸不出来。
      */
     id: 'make/electrolyzer-cooling-cast',
-    name: '电解槽冷却盘管制造',
+    name: 'Electrolyser Cooling Coil Manufacturing', name_zh: '电解槽冷却盘管制造',
     produces: [{ item: 'plant/electrolyzer/cell-cooling', qty: q(1) }],
     uses: [
       /**

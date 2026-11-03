@@ -89,7 +89,7 @@ export const BORON_HR_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/boron-hr-record',
-    name: '硼高分辨分析记录',
+    name: 'Boron High-Resolution Analysis Record', name_zh: '硼高分辨分析记录',
     unit: '份',
     category: 'part',
     props: [
@@ -121,7 +121,7 @@ export const BORON_HR_MEASURE_ROUTES: readonly Route[] = [
      *   ⑤ 外标 0.01/0.1/1/10 ppb + 空白；报 B、R、AS、空白、回收
      */
     id: 'measure/trace-boron-hr',
-    name: '硼高分辨分析测量',
+    name: 'Boron High-Resolution Analysis Measurement', name_zh: '硼高分辨分析测量',
     produces: [
       {
         item: 'mat/boron-hr-record',

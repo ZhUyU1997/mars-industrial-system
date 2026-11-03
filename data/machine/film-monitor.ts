@@ -345,7 +345,7 @@ export const FILM_MONITOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-monitor/qcm-head',
-    name: '原位膜厚监控仪双晶探头',
+    name: 'In-Situ Film Thickness Monitor Dual-Crystal Probe', name_zh: '原位膜厚监控仪双晶探头',
     unit: '件',
     category: 'part',
     props: [
@@ -370,7 +370,7 @@ export const FILM_MONITOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-monitor/oscillator',
-    name: '原位膜厚监控仪振荡器',
+    name: 'In-Situ Film Thickness Monitor Oscillator', name_zh: '原位膜厚监控仪振荡器',
     unit: '件',
     category: 'part',
     props: [
@@ -400,7 +400,7 @@ export const FILM_MONITOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-monitor/counter',
-    name: '原位膜厚监控仪门控计数器',
+    name: 'In-Situ Film Thickness Monitor Gated Counter', name_zh: '原位膜厚监控仪门控计数器',
     unit: '件',
     category: 'part',
     props: [
@@ -424,7 +424,7 @@ export const FILM_MONITOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-monitor/optical-head',
-    name: '原位膜厚监控仪光学头',
+    name: 'In-Situ Film Thickness Monitor Optical Head', name_zh: '原位膜厚监控仪光学头',
     unit: '件',
     category: 'part',
     props: [
@@ -445,7 +445,7 @@ export const FILM_MONITOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-monitor/feedthrough',
-    name: '原位膜厚监控仪真空信号法兰',
+    name: 'In-Situ Film Thickness Monitor Vacuum Signal Flange', name_zh: '原位膜厚监控仪真空信号法兰',
     unit: '件',
     category: 'part',
     props: [{ param: 'leakRate', kind: 'range', min: 0, max: 1, unit: 'Pa·L/s', dir: 'atMost' }],
@@ -464,7 +464,7 @@ export const FILM_MONITOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-monitor/step-wafer',
-    name: '原位膜厚监控仪标定片',
+    name: 'In-Situ Film Thickness Monitor Calibration Wafer', name_zh: '原位膜厚监控仪标定片',
     unit: '片',
     category: 'part',
     props: [
@@ -505,7 +505,7 @@ export const FILM_MONITOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-monitor',
-    name: '原位膜厚监控仪',
+    name: 'In-Situ Film Thickness Monitor', name_zh: '原位膜厚监控仪',
     unit: '台',
     category: 'machine',
     holds: [{ param: 'temperature', min: 19.5, max: 20.5 }],
@@ -559,7 +559,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * 是这一层的老办法（`make/galvanometer` 也是先做两只、拿好的那只调坏的）。
      */
     id: 'make/film-monitor-qcm-head',
-    name: '原位膜厚监控仪双晶探头制造',
+    name: 'In-Situ Film Thickness Monitor Dual-Crystal Probe Manufacturing', name_zh: '原位膜厚监控仪双晶探头制造',
     produces: [
       {
         item: 'plant/film-monitor/qcm-head',
@@ -644,7 +644,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * 这是降级，不是"换了一个东西"。
      */
     id: 'make/film-monitor-qcm-head-5mhz',
-    name: '原位膜厚监控仪双晶探头制造',
+    name: 'In-Situ Film Thickness Monitor Dual-Crystal Probe Manufacturing', name_zh: '原位膜厚监控仪双晶探头制造',
     produces: [
       {
         item: 'plant/film-monitor/qcm-head',
@@ -726,7 +726,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * 加 0.5 kHz 的起点与 0.9 kHz 的余量。
      */
     id: 'make/film-monitor-oscillator',
-    name: '原位膜厚监控仪振荡器制造',
+    name: 'In-Situ Film Thickness Monitor Oscillator Manufacturing', name_zh: '原位膜厚监控仪振荡器制造',
     produces: [
       {
         item: 'plant/film-monitor/oscillator',
@@ -795,7 +795,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * 而那时候它是好东西（0.1 Hz = 0.0017 nm）。同一个数，两个场合两个答案。
      */
     id: 'make/film-monitor-counter',
-    name: '原位膜厚监控仪门控计数器制造',
+    name: 'In-Situ Film Thickness Monitor Gated Counter Manufacturing', name_zh: '原位膜厚监控仪门控计数器制造',
     produces: [
       {
         item: 'plant/film-monitor/counter',
@@ -863,7 +863,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * 对不上就说明探测器的 1 s 积分里混进了本底（腔壁 300 K 的辐射）。
      */
     id: 'make/film-monitor-optical-head',
-    name: '原位膜厚监控仪光学头制造',
+    name: 'In-Situ Film Thickness Monitor Optical Head Manufacturing', name_zh: '原位膜厚监控仪光学头制造',
     produces: [
       {
         item: 'plant/film-monitor/optical-head',
@@ -931,7 +931,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * 这一句写在镀膜路线的工序里，不是写在这里的。
      */
     id: 'make/film-monitor-feedthrough',
-    name: '原位膜厚监控仪真空信号法兰制造',
+    name: 'In-Situ Film Thickness Monitor Vacuum Signal Flange Manufacturing', name_zh: '原位膜厚监控仪真空信号法兰制造',
     produces: [
       {
         item: 'plant/film-monitor/feedthrough',
@@ -978,7 +978,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * 挡板遮一半，台阶边缘在 1 µm 台的定位下没有影响（台阶高度与边缘在哪无关）。
      */
     id: 'make/film-monitor-step-wafer',
-    name: '原位膜厚监控仪标定片制造',
+    name: 'In-Situ Film Thickness Monitor Calibration Wafer Manufacturing', name_zh: '原位膜厚监控仪标定片制造',
     produces: [
       {
         item: 'plant/film-monitor/step-wafer',
@@ -1033,7 +1033,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * `stepError` 写 0.52 而不是 0.52×√2：两个读数共用一个参考面，误差是共模的。
      */
     id: 'make/film-monitor-step-wafer-fp',
-    name: '原位膜厚监控仪标定片制造',
+    name: 'In-Situ Film Thickness Monitor Calibration Wafer Manufacturing', name_zh: '原位膜厚监控仪标定片制造',
     produces: [
       {
         item: 'plant/film-monitor/step-wafer',
@@ -1119,7 +1119,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * （`euv-mirror.ts` 降级第 2 条），监控厚度不等于监控分布。
      */
     id: 'make/euv-mirror-300-monitored',
-    name: 'EUV 多层膜反射镜制造',
+    name: 'EUV Multilayer Mirror Manufacturing', name_zh: 'EUV 多层膜反射镜制造',
     produces: [
       {
         item: 'std/euv-mirror-300',
@@ -1235,7 +1235,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * 加 0.5 h 装调 —— 缺口 0.05 → 0.03，**1.7 倍**。
      */
     id: 'make/euv-mirror-300-qcm',
-    name: 'EUV 多层膜反射镜制造',
+    name: 'EUV Multilayer Mirror Manufacturing', name_zh: 'EUV 多层膜反射镜制造',
     produces: [
       {
         item: 'std/euv-mirror-300',
@@ -1320,7 +1320,7 @@ export const FILM_MONITOR_ROUTES: readonly Route[] = [
      * 或者只补到"泛音版 QCM" 0.07 → 0.05，**1.4 倍**（那条更便宜，见上一条）。
      */
     id: 'make/euv-mirror-300-optic',
-    name: 'EUV 多层膜反射镜制造',
+    name: 'EUV Multilayer Mirror Manufacturing', name_zh: 'EUV 多层膜反射镜制造',
     produces: [
       {
         item: 'std/euv-mirror-300',
@@ -1399,7 +1399,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/film-monitor',
-    name: '原位膜厚监控仪装配',
+    name: 'In-Situ Film Thickness Monitor Assembly', name_zh: '原位膜厚监控仪装配',
     produces: [{
       item: 'plant/film-monitor',
       qty: q(1),

@@ -339,7 +339,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * 进重选时本来就只有 1–5 % 重矿物，本层是 0.03 %（200 ppm 的锆），
    * **一吨粗精矿要搬 600 吨土**：这不是工艺指标，是品位。
    */
-  { id: 'mat/zircon-preconcentrate', name: '锆粗精矿', unit: 'kg', category: 'material',
+  { id: 'mat/zircon-preconcentrate', name: 'Zircon Preconcentrate', name_zh: '锆粗精矿', unit: 'kg', category: 'material',
     props: [
       { param: 'zro2', kind: 'range', min: 8, max: 12, unit: '%' },
       // 铪锆比在重选里**不变**（同一颗锆石），所以这一段只提品位、不动比值。
@@ -360,7 +360,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    *   铪占金属的 2.0 wt%（= HfO₂ 占氧化物 1.75 wt%、占锆石 1.03 mol%）
    *   —— 落在锆石 1.5–3 % HfO₂ 的区间里，取中值偏下
    */
-  { id: 'mat/zircon-concentrate', name: '锆石精矿', unit: 'kg', category: 'material',
+  { id: 'mat/zircon-concentrate', name: 'Zircon Concentrate', name_zh: '锆石精矿', unit: 'kg', category: 'material',
     props: [
       { param: 'zro2', kind: 'range', min: 60, max: 68, unit: '%' },
       { param: 'hfInZr', kind: 'range', min: 15000, max: 25000, unit: 'ppm', dir: 'atMost' },
@@ -376,7 +376,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * 余 100 就是它），而本文件给它水解成硅石 + 盐酸的出路（⑪）。
    * 真正的解法是氢化成 SiHCl₃，但那要 `mat/silicon-mg`，不在料表里（第六问）。
    */
-  { id: 'mat/silicon-tetrachloride', name: '四氯化硅', unit: 'kg', category: 'material',
+  { id: 'mat/silicon-tetrachloride', name: 'Silicon Tetrachloride', name_zh: '四氯化硅', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -389,7 +389,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * 它与 HfCl₄ 是**固溶体**（同晶型、同结构），所以 2 % 的铪跟着它一路走 ——
    * 化学法分不开它们（这正是⑦⑧两段存在的理由）。
    */
-  { id: 'mat/zirconium-chloride', name: '粗四氯化锆', unit: 'kg', category: 'material',
+  { id: 'mat/zirconium-chloride', name: 'Crude Zirconium Tetrachloride', name_zh: '粗四氯化锆', unit: 'kg', category: 'material',
     props: [
       { param: 'purity', kind: 'range', min: 94, max: 99, unit: '%', dir: 'atLeast' },
       { param: 'hfInZr', kind: 'range', min: 15000, max: 25000, unit: 'ppm', dir: 'atMost' },
@@ -406,7 +406,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * 几乎平行（100 °C 时 56.7 与 39.8 g/100 mL），分步结晶只能靠
    * **热的浓溶液冷到 25 °C** 这一个窗口把钾富集到 96 %。再往上要重结晶两次。
    */
-  { id: 'mat/potassium-chloride', name: '氯化钾', unit: 'kg', category: 'material',
+  { id: 'mat/potassium-chloride', name: 'Potassium Chloride', name_zh: '氯化钾', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99.5, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -417,7 +417,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * 第二处是关键：**氟盐不能直接用盐酸转氯化物**（ZrF₆²⁻ 的稳定常数 ~10³⁰），
    * 必须先碱转成氢氧化物，再煅烧成氧化物，再氯化 —— 多两步，但没有第二条路。
    */
-  { id: 'mat/koh', name: '氢氧化钾', unit: 'kg', category: 'material',
+  { id: 'mat/koh', name: 'Potassium Hydroxide', name_zh: '氢氧化钾', unit: 'kg', category: 'material',
     props: [{ param: 'concentration', kind: 'range', min: 40, max: 55, unit: '%' }] },
 
   /**
@@ -428,7 +428,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * 而这 1.5–2 倍就是整条分离链的全部选择性（见第四节）。
    * 钾盐从 Kroll 时代起就是这条路的标准试剂，而钾在氯碱那一侧顺手就能回收。
    */
-  { id: 'mat/potassium-fluoride', name: '氟化钾', unit: 'kg', category: 'material',
+  { id: 'mat/potassium-fluoride', name: 'Potassium Fluoride', name_zh: '氟化钾', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99.5, unit: '%', dir: 'atLeast' }] },
 
   /**
@@ -444,7 +444,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * 核级锆的上限：Hf ≤ 100 ppm（ASTM 核级口径）。本文件交付 ≤ 50 ppm，
    * 留一倍余量 —— 因为 ⑧ 的 33 级是按 α_eff 1.2 算的，α 再差一点就顶不住。
    */
-  { id: 'mat/potassium-zirconium-fluoride', name: '氟锆酸钾', unit: 'kg', category: 'material',
+  { id: 'mat/potassium-zirconium-fluoride', name: 'Potassium Zirconium Fluoride', name_zh: '氟锆酸钾', unit: 'kg', category: 'material',
     props: [
       { param: 'purity', kind: 'range', min: 90, max: 99.5, unit: '%', dir: 'atLeast' },
       { param: 'hfInZr', kind: 'range', min: 0, max: 30000, unit: 'ppm', dir: 'atMost' },
@@ -456,7 +456,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * 它的量很小 —— 每 1429 kg 粗盐只出 **14 kg**（Hf 6.95 kg）。
    * 这个数就是"铪为什么贵"：**一个 33 级的级联，顶端只有 1 %**。
    */
-  { id: 'mat/potassium-hafnium-fluoride', name: '氟铪酸钾', unit: 'kg', category: 'material',
+  { id: 'mat/potassium-hafnium-fluoride', name: 'Potassium Hafnium Fluoride', name_zh: '氟铪酸钾', unit: 'kg', category: 'material',
     props: [
       { param: 'purity', kind: 'range', min: 90, max: 99.9, unit: '%', dir: 'atLeast' },
       { param: 'zrInHf', kind: 'range', min: 0, max: 2000, unit: 'ppm', dir: 'atMost' },
@@ -469,7 +469,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * 与 TiCl₄ 一样遇潮水解，所以贮运要干燥氩封 —— 本层没有湿度计，
    * 只能靠"先抽真空再进料"这一个动作（与 #23 同一种间接判据）。
    */
-  { id: 'mat/hafnium-chloride', name: '四氯化铪', unit: 'kg', category: 'material',
+  { id: 'mat/hafnium-chloride', name: 'Hafnium Tetrachloride', name_zh: '四氯化铪', unit: 'kg', category: 'material',
     props: [
       { param: 'purity', kind: 'range', min: 99, max: 99.99, unit: '%', dir: 'atLeast' },
       { param: 'zrInHf', kind: 'range', min: 0, max: 5000, unit: 'ppm', dir: 'atMost' },
@@ -487,7 +487,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * kValue 24–25 是致密四方/单斜相的体值；**薄膜的 k 会掉到 20 附近**
    * （界面层与非晶化），那个数不在本文件的判据里 —— 它是 ALD 那一层的事。
    */
-  { id: 'mat/hafnia', name: '二氧化铪', unit: 'kg', category: 'material',
+  { id: 'mat/hafnia', name: 'Hafnia', name_zh: '二氧化铪', unit: 'kg', category: 'material',
     props: [
       { param: 'purity', kind: 'range', min: 98, max: 99.99, unit: '%', dir: 'atLeast' },
       { param: 'zrInHf', kind: 'range', min: 0, max: 20000, unit: 'ppm', dir: 'atMost' },
@@ -504,7 +504,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    * 直接水解粗 ZrCl₄ 出陶瓷级（⑫），把整条分离链跳过去。
    * **只有核级才必须分**（锆的热中子吸收截面 0.185 barn，铪是 105 barn —— 差 570 倍）。
    */
-  { id: 'mat/zirconia', name: '二氧化锆', unit: 'kg', category: 'material',
+  { id: 'mat/zirconia', name: 'Zirconia', name_zh: '二氧化锆', unit: 'kg', category: 'material',
     props: [
       { param: 'purity', kind: 'range', min: 97, max: 99.9, unit: '%', dir: 'atLeast' },
       { param: 'hfInZr', kind: 'range', min: 0, max: 30000, unit: 'ppm', dir: 'atMost' },
@@ -521,7 +521,7 @@ export const HAFNIUM_ITEMS: readonly Item[] = [
    *   oxygen 500–3000 ppm 是**估的**（没有氧分析仪）：
    * 判据（核级/靶材）是 ≤ 1000 ppm，本文件只能说"在同一个量级"。
    */
-  { id: 'mat/hafnium', name: '铪', unit: 'kg', category: 'material',
+  { id: 'mat/hafnium', name: 'Hafnium', name_zh: '铪', unit: 'kg', category: 'material',
     props: [
       { param: 'purity', kind: 'range', min: 98, max: 99.9, unit: '%', dir: 'atLeast' },
       { param: 'zrInHf', kind: 'range', min: 0, max: 2000, unit: 'ppm', dir: 'atMost' },
@@ -557,7 +557,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * 是"土里只有 200 ppm"。
      */
     id: 'make/zircon-preconcentrate',
-    name: '粗选制备',
+    name: 'Preconcentrate Production', name_zh: '粗选制备',
     rate: { hours: q(48) },
     produces: [
       {
@@ -594,7 +594,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * 这是①②两段真正的堵点，不是品位。
      */
     id: 'make/zircon-concentrate',
-    name: '精选制备',
+    name: 'Cleaning Production', name_zh: '精选制备',
     produces: [
       {
         item: 'mat/zircon-concentrate',
@@ -650,7 +650,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * （第一份是 SiHCl₃ 精馏），不是新的设备。
      */
     id: 'make/zirconium-chloride',
-    name: '碳氯化制备',
+    name: 'Carbochlorination', name_zh: '碳氯化制备',
     rate: { hours: q(48) },
     produces: [
       {
@@ -727,7 +727,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * 热的浓溶液冷到 25 °C，先析出来的是钾。一条曲线，一个窗口，96 %。
      */
     id: 'make/potassium-chloride',
-    name: '钾一制备',
+    name: 'Potassium-1 Production', name_zh: '钾一制备',
     rate: { hours: q(72) },
     produces: [
       {
@@ -803,7 +803,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * 它正好够 ④ 号路线的 400 kg：钾与氯在这一对路线里闭环。
      */
     id: 'make/koh',
-    name: '钾二制备',
+    name: 'Potassium-2 Production', name_zh: '钾二制备',
     produces: [
       { item: 'mat/koh', qty: q(1506), gives: [{ param: 'concentration', kind: 'range', min: 45, max: 50 }] },
       { item: 'mat/chlorine', qty: q(476) },
@@ -844,7 +844,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * **这一步不是绕路，是热力学规定的唯一走法。**
      */
     id: 'make/potassium-fluoride',
-    name: '钾三制备',
+    name: 'Potassium-3 Production', name_zh: '钾三制备',
     produces: [
       { item: 'mat/potassium-fluoride', qty: q(1035), gives: [{ param: 'purity', kind: 'range', min: 95, max: 98 }] },
       { item: 'mat/water', qty: q(1474), gives: [{ param: 'conductivity', kind: 'range', min: 500, max: 1000 }] },
@@ -909,7 +909,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * 模型看不见循环，所以这条路线的 HF/KF 记的是**净投入上界**（见第三节末）。
      */
     id: 'make/potassium-zirconium-fluoride',
-    name: '成盐制备',
+    name: 'Potassium Zirconium Fluoride Production', name_zh: '成盐制备',
     produces: [
       {
         item: 'mat/potassium-zirconium-fluoride',
@@ -984,7 +984,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * 若哪天有了 MIBK，8–12 级、分离系数 10，这一段会缩成现在的一个零头。
      */
     id: 'make/zirconium-hafnium-separation',
-    name: '分离',
+    name: 'Separation', name_zh: '分离',
     rate: { hours: q(792) },
     produces: [
       {
@@ -1072,7 +1072,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * D6 的升级路线就是"母液二次沉淀"。
      */
     id: 'make/hafnium-chloride',
-    name: '出铪一制备',
+    name: 'Hafnium Chloride Production', name_zh: '出铪一制备',
     rate: { hours: q(36) },
     produces: [
       {
@@ -1167,7 +1167,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * 100–1000 ppm 的氯与氮），代价是盐酸腐蚀 —— 而盐酸正好回 Deacon 变氯气。
      */
     id: 'make/hafnia',
-    name: '出铪二制备',
+    name: 'Hafnia Production', name_zh: '出铪二制备',
     rate: { hours: q(24) },
     produces: [
       {
@@ -1257,7 +1257,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * ```
      */
     id: 'make/silica-from-silicon-tetrachloride',
-    name: '副产制备',
+    name: 'Byproduct Production', name_zh: '副产制备',
     produces: [
       { item: 'mat/silica', qty: q(354), gives: [{ param: 'sio2', kind: 'range', min: 97, max: 99 }] },
       { item: 'mat/hcl', qty: q(2682), gives: [{ param: 'concentration', kind: 'range', min: 30, max: 33 }] },
@@ -1304,7 +1304,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * 陶瓷不分；栅介质不但要分，还要铪那一头 —— 同一个级联的两端。
      */
     id: 'make/zirconia-ceramic',
-    name: '陶瓷级制备',
+    name: 'Ceramic-Grade Production', name_zh: '陶瓷级制备',
     produces: [
       {
         item: 'mat/zirconia',
@@ -1365,7 +1365,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * **锆的 97 % 走到这里，铪的 75 % 走到 ⑨**。
      */
     id: 'make/zirconia-nuclear',
-    name: '核级制备',
+    name: 'Nuclear-Grade Production', name_zh: '核级制备',
     produces: [
       {
         item: 'mat/zirconia',
@@ -1451,7 +1451,7 @@ export const HAFNIUM_ROUTES: readonly Route[] = [
      * 照实写降级 —— 这一格在报告里必须是"估的"，不能是"达标的"。
      */
     id: 'make/hafnium',
-    name: '出铪三制备',
+    name: 'Hafnium Production', name_zh: '出铪三制备',
     produces: [
       {
         item: 'mat/hafnium',

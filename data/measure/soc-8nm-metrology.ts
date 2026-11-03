@@ -34,7 +34,7 @@ export const SOC_8NM_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/soc-8nm-gate-length-record',
-    name: '8 nm SoC 栅长记录',
+    name: '8 nm SoC Gate Length Record', name_zh: '8 nm SoC 栅长记录',
     unit: '份',
     category: 'part',
     props: [
@@ -60,7 +60,7 @@ export const SOC_8NM_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/robot-npu-benchmark-record',
-    name: 'NPU 模块的模块级基准记录',
+    name: 'NPU Module-Level Benchmark Record', name_zh: 'NPU 模块的模块级基准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -78,7 +78,7 @@ export const SOC_8NM_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/soc-8nm-overlay-record',
-    name: '8 nm SoC 套刻记录',
+    name: '8 nm SoC Overlay Record', name_zh: '8 nm SoC 套刻记录',
     unit: '份',
     category: 'part',
     props: [
@@ -94,7 +94,7 @@ export const SOC_8NM_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/soc-8nm-gate-stack-record',
-    name: '8 nm SoC 栅堆叠记录',
+    name: '8 nm SoC Gate Stack Record', name_zh: '8 nm SoC 栅堆叠记录',
     unit: '份',
     category: 'part',
     props: [
@@ -127,7 +127,7 @@ export const SOC_8NM_MEASURE_ROUTES: readonly Route[] = [
      * 记录的交出窗口是 8–10 nm（读数带），不是某一条栅的单一值。
      */
     id: 'measure/soc-8nm-gate-length',
-    name: '8 nm SoC 栅长测量',
+    name: '8 nm SoC Gate Length Measurement', name_zh: '8 nm SoC 栅长测量',
     produces: [
       {
         item: 'mat/soc-8nm-gate-length-record',
@@ -189,7 +189,7 @@ export const SOC_8NM_MEASURE_ROUTES: readonly Route[] = [
      * 三项都是**验收带**，不是某一次跑分；单次读数待本机跑分收窄。
      */
     id: 'measure/robot-npu-benchmark',
-    name: 'NPU 模块的模块级基准测量',
+    name: 'NPU Module-Level Benchmark Measurement', name_zh: 'NPU 模块的模块级基准测量',
     produces: [
       {
         item: 'mat/robot-npu-benchmark-record',
@@ -246,7 +246,7 @@ export const SOC_8NM_MEASURE_ROUTES: readonly Route[] = [
      * 不是单次实测；门 ≤2–3 nm 与 `make/soc-8nm-damascene` 第⑪步一致。
      */
     id: 'measure/soc-8nm-overlay',
-    name: '8 nm SoC 套刻测量',
+    name: '8 nm SoC Overlay Measurement', name_zh: '8 nm SoC 套刻测量',
     produces: [{
       item: 'mat/soc-8nm-overlay-record',
       qty: q(1),
@@ -297,7 +297,7 @@ export const SOC_8NM_MEASURE_ROUTES: readonly Route[] = [
      * 不是单次实测；0.5 nm 的不确定度在 FIB-TEM 的 0.2 nm 分辨率档内。
      */
     id: 'measure/soc-8nm-gate-stack',
-    name: '8 nm SoC 栅堆叠测量',
+    name: '8 nm SoC Gate Stack Measurement', name_zh: '8 nm SoC 栅堆叠测量',
     produces: [{
       item: 'mat/soc-8nm-gate-stack-record',
       qty: q(1),

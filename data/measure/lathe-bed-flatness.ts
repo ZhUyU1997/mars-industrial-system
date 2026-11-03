@@ -28,7 +28,7 @@ import { q } from '../../src/index.ts';
 export const LATHE_BED_FLATNESS_ITEMS: readonly Item[] = [
   {
     id: 'mat/lathe-bed-flatness-record',
-    name: '床身导轨面平面度记录',
+    name: 'Bed Guideway Surface Flatness Record', name_zh: '床身导轨面平面度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -43,7 +43,7 @@ export const LATHE_BED_FLATNESS_ROUTES: readonly Route[] = [
   {
     /** 床身导轨面平面度：钠光干涉 + φ300 平晶，逐段 300 mm 读条纹。 */
     id: 'measure/lathe-bed-flatness',
-    name: '床身导轨面平面度测量',
+    name: 'Bed Guideway Surface Flatness Measurement', name_zh: '床身导轨面平面度测量',
     produces: [
       {
         item: 'mat/lathe-bed-flatness-record',

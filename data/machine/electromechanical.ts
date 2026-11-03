@@ -50,7 +50,7 @@ export const ELECTROMECH_ITEMS: readonly Item[] = [
    * 同一个位置、同一个单位。同一条 `uses` 子句里的两者必须可通约，
    * 所以这里若写"台"，它就没法和编码器互为替代（`unit_mismatch` 会拦）。
    */
-  { id: 'std/selsyn-general', name: '自整角机', unit: '件', category: 'part',
+  { id: 'std/selsyn-general', name: 'Selsyn', name_zh: '自整角机', unit: '件', category: 'part',
     props: [{ param: 'accuracy', kind: 'range', min: 0.01, max: 1, unit: '°' }],
     composedOf: [
       { item: 'std/selsyn-general/stator', qty: q(1) },
@@ -67,7 +67,7 @@ export const ELECTROMECH_ITEMS: readonly Item[] = [
    *
    * **这是本层唯一会"记住顺序"的东西**（计数器记的是数，它记的是顺序）。
    */
-  { id: 'std/cam-programmer-general', name: '凸轮程序器', unit: '台', category: 'part',
+  { id: 'std/cam-programmer-general', name: 'Cam Programmer', name_zh: '凸轮程序器', unit: '台', category: 'part',
     composedOf: [
       { item: 'std/cam-programmer-general/camshaft', qty: q(1) },
       { item: 'std/cam-programmer-general/cam', qty: q(8) },
@@ -88,7 +88,7 @@ export const ELECTROMECH_ROUTES: readonly Route[] = [
      *   对零     两台同型号接三根线，转发送机、看接收机  plant/robot
      */
     id: 'make/selsyn',
-    name: '自整角机制造',
+    name: 'Selsyn Manufacturing', name_zh: '自整角机制造',
     produces: [{ item: 'std/selsyn-general', qty: q(1), gives: [{ param: 'accuracy', kind: 'range', min: 0.1, max: 0.5 }] }],
     // 定子、转子、电刷、轴承在条目 composedOf 上；这里只写总装与对零。
     uses: [],
@@ -112,7 +112,7 @@ export const ELECTROMECH_ROUTES: readonly Route[] = [
      * 而模型没有角度与时间，所以"程序"只能写在注释里。
      */
     id: 'make/cam-programmer',
-    name: '凸轮程序器制造',
+    name: 'Cam Programmer Manufacturing', name_zh: '凸轮程序器制造',
     produces: [{ item: 'std/cam-programmer-general', qty: q(1) }],
     // 凸轮轴、8 只凸轮、开关组、减速箱、电机在条目 composedOf 上。
     uses: [],

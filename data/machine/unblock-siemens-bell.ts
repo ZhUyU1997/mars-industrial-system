@@ -441,7 +441,7 @@ export const UNBLOCK_SIEMENS_BELL_ROUTES: readonly Route[] = [
      *  · 再加一条硬的：3 个静密封点、45 条螺栓，**检漏 0.3 Pa·m³/s，比氦检漏差 3×10⁵**。
      */
     id: 'make/siemens-bell-brick',
-    name: '西门子反应器还原钟罩制造',
+    name: 'Siemens Reactor Reduction Bell Jar Manufacturing', name_zh: '西门子反应器还原钟罩制造',
     produces: [{ item: 'plant/siemens-reactor/bell', qty: q(1) }],
     uses: [
       /**

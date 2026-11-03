@@ -403,7 +403,7 @@ export const UNBLOCK_SUBLIM_PIPE_ROUTES: readonly Route[] = [
      *     坡度 2°、膨胀节的 ±10 mm，都是**判据**，量块不加工。
      */
     id: 'make/sublimator-piping-cast',
-    name: '升华器管路与阀制造',
+    name: 'Sublimator Piping and Valves Manufacturing', name_zh: '升华器管路与阀制造',
     produces: [{ item: 'plant/sublimator/piping', qty: q(1) }],
     uses: [
       /**

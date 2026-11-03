@@ -74,7 +74,7 @@ export const REACTION_CELL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/reaction-cell',
-    name: 'NH₃ 反应池',
+    name: 'NH₃ Reaction Cell', name_zh: 'NH₃ 反应池',
     unit: '件',
     category: 'part',
     props: [
@@ -97,7 +97,7 @@ export const REACTION_CELL_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/reaction-cell',
-    name: 'NH₃ 反应池制造',
+    name: 'NH₃ Reaction Cell Manufacturing', name_zh: 'NH₃ 反应池制造',
     produces: [
       {
         item: 'plant/reaction-cell',
@@ -140,7 +140,7 @@ export const REACTION_CELL_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/hr-icp-ms-ked',
-    name: 'HR-ICP-MS 整机制造',
+    name: 'HR-ICP-MS System Manufacturing', name_zh: 'HR-ICP-MS 整机制造',
     produces: [
       {
         item: 'plant/hr-icp-ms',

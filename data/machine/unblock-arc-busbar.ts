@@ -380,7 +380,7 @@ export const UNBLOCK_ARC_BUSBAR_ROUTES: readonly Route[] = [
      *     落在电极调节回路的频带里（第六节①）。
      */
     id: 'make/arc-busbar-cast',
-    name: '电弧炉导电臂与母线制造',
+    name: 'Arc Furnace Conducting Arm and Busbar Manufacturing', name_zh: '电弧炉导电臂与母线制造',
     produces: [{ item: 'plant/arc-furnace/busbar', qty: q(1) }],
     uses: [
       /**

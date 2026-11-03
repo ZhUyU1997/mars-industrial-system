@@ -394,7 +394,7 @@ export const PROBE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/probe-station',
-    name: '四探针/C-V 测试台',
+    name: 'Four-Point Probe/C-V Test Station', name_zh: '四探针/C-V 测试台',
     unit: '台',
     category: 'machine',
     props: [
@@ -441,7 +441,7 @@ export const PROBE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/probe-station/needle',
-    name: '四探针钨针',
+    name: 'Four-Point Probe Tungsten Needle', name_zh: '四探针钨针',
     unit: '件',
     category: 'part',
     props: [{ param: 'tipRadius', kind: 'range', min: 15, max: 50, unit: 'µm' }],
@@ -465,7 +465,7 @@ export const PROBE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/probe-station/probe-head',
-    name: '四探针座',
+    name: 'Four-Point Probe Head', name_zh: '四探针座',
     unit: '件',
     category: 'part',
     props: [
@@ -489,7 +489,7 @@ export const PROBE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/probe-station/current-source',
-    name: '恒流源',
+    name: 'Constant Current Source', name_zh: '恒流源',
     unit: '件',
     category: 'part',
     props: [
@@ -514,7 +514,7 @@ export const PROBE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/probe-station/null-detector',
-    name: '指零电位差计',
+    name: 'Null-Indicating Potentiometer', name_zh: '指零电位差计',
     unit: '件',
     category: 'part',
     props: [
@@ -544,7 +544,7 @@ export const PROBE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/probe-station/cv-bridge',
-    name: 'C-V 桥',
+    name: 'C-V Bridge', name_zh: 'C-V 桥',
     unit: '件',
     category: 'part',
     props: [
@@ -566,7 +566,7 @@ export const PROBE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/probe-station/bias-source',
-    name: '偏压源',
+    name: 'Bias Source', name_zh: '偏压源',
     unit: '件',
     category: 'part',
     props: [
@@ -589,7 +589,7 @@ export const PROBE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/probe-station/shield-box',
-    name: '屏蔽箱',
+    name: 'Shield Box', name_zh: '屏蔽箱',
     unit: '件',
     category: 'part',
     props: [
@@ -624,7 +624,7 @@ export const PROBE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/probe-station/rr-standard',
-    name: '探针台方阻标准片',
+    name: 'Probe Station Sheet Resistance Standard Wafer', name_zh: '探针台方阻标准片',
     unit: '片',
     category: 'part',
     props: [
@@ -649,7 +649,7 @@ export const PROBE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/probe-station/cap-standard',
-    name: '探针台电容标准',
+    name: 'Probe Station Capacitance Standard', name_zh: '探针台电容标准',
     unit: '件',
     category: 'part',
     props: [
@@ -716,7 +716,7 @@ export const PROBE_ROUTES: readonly Route[] = [
      *   升级路线见文件头 R8 第 1、2 行。
      */
     id: 'make/probe-needle',
-    name: '四探针钨针制造',
+    name: 'Four-Point Probe Tungsten Needle Manufacturing', name_zh: '四探针钨针制造',
     produces: [
       {
         item: 'plant/probe-station/needle',
@@ -797,7 +797,7 @@ export const PROBE_ROUTES: readonly Route[] = [
      *   1 kV 下玻璃漏 1 pA，对 1 µA 的测量是 1e-6 —— **不需要石英**。
      */
     id: 'make/probe-head',
-    name: '四探针座制造',
+    name: 'Four-Point Probe Head Manufacturing', name_zh: '四探针座制造',
     produces: [
       {
         item: 'plant/probe-station/probe-head',
@@ -876,7 +876,7 @@ export const PROBE_ROUTES: readonly Route[] = [
      *   ⇒ **0.01 % 只在 100 µA 以上成立**（降级④）。1 µA 档只影响 100 kΩ/□ 那一端。
      */
     id: 'make/probe-current-source',
-    name: '恒流源制造',
+    name: 'Constant Current Source Manufacturing', name_zh: '恒流源制造',
     produces: [
       {
         item: 'plant/probe-station/current-source',
@@ -952,7 +952,7 @@ export const PROBE_ROUTES: readonly Route[] = [
      *   这是本层第一次让"两只不同的表看同一个电压"。
      */
     id: 'make/probe-null-detector',
-    name: '指零电位差计制造',
+    name: 'Null-Indicating Potentiometer Manufacturing', name_zh: '指零电位差计制造',
     produces: [
       {
         item: 'plant/probe-station/null-detector',
@@ -1028,7 +1028,7 @@ export const PROBE_ROUTES: readonly Route[] = [
      *   但同一只检流计在那边当乘法器、在这边当零位指示 —— 时间常数没变，用法变了。
      */
     id: 'make/probe-cv-bridge',
-    name: 'C-V 桥制造',
+    name: 'C-V Bridge Manufacturing', name_zh: 'C-V 桥制造',
     produces: [
       {
         item: 'plant/probe-station/cv-bridge',
@@ -1110,7 +1110,7 @@ export const PROBE_ROUTES: readonly Route[] = [
      *   合成到 0.3 %（电流 0.01 % + 电容 0.3 % + 时基 1e-5）。
      */
     id: 'make/probe-bias-source',
-    name: '偏压源制造',
+    name: 'Bias Source Manufacturing', name_zh: '偏压源制造',
     produces: [
       {
         item: 'plant/probe-station/bias-source',
@@ -1179,7 +1179,7 @@ export const PROBE_ROUTES: readonly Route[] = [
      *   ⇒ 定位（50 nm，借激光台）与**停住**（1 µm，本件）是两件事，不能省一件。
      */
     id: 'make/probe-shield-box',
-    name: '屏蔽箱制造',
+    name: 'Shield Box Manufacturing', name_zh: '屏蔽箱制造',
     produces: [
       {
         item: 'plant/probe-station/shield-box',
@@ -1253,7 +1253,7 @@ export const PROBE_ROUTES: readonly Route[] = [
      *   恒温间的 ±1 K 已经把方阻的重复性压在 0.05 %（同一点、同一温度）。
      */
     id: 'make/probe-rr-standard',
-    name: '探针台方阻标准片制造',
+    name: 'Probe Station Sheet Resistance Standard Wafer Manufacturing', name_zh: '探针台方阻标准片制造',
     produces: [
       {
         item: 'plant/probe-station/rr-standard',
@@ -1339,7 +1339,7 @@ export const PROBE_ROUTES: readonly Route[] = [
      *   **这一条不是"更好"，是"能不能用几何"的分水岭。**
      */
     id: 'make/probe-cap-standard',
-    name: '探针台电容标准制造',
+    name: 'Probe Station Capacitance Standard Manufacturing', name_zh: '探针台电容标准制造',
     produces: [
       {
         item: 'plant/probe-station/cap-standard',
@@ -1399,7 +1399,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/probe-station',
-    name: '四探针/C-V 测试台装配',
+    name: 'Four-Point Probe/C-V Test Station Assembly', name_zh: '四探针/C-V 测试台装配',
     produces: [{
       item: 'plant/probe-station',
       qty: q(1),

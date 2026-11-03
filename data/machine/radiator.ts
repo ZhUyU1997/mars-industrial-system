@@ -93,7 +93,7 @@ export const RADIATOR_PARTS: readonly Item[] = [
    * 用铝不用钢：铝的导热是钢的四倍，而辐射板要的是"把热从管壁铺到整个面"。
    * 这也是铝链补上之后最直接的一次兑现 —— 一万平方米的板子，用钢会重三倍。
    */
-  { id: 'plant/radiator/panel', name: '散热器辐射板', unit: '件', category: 'part' },
+  { id: 'plant/radiator/panel', name: 'Radiator Radiating Panel', name_zh: '散热器辐射板', unit: '件', category: 'part' },
 
   /**
    * 循环泵。氨回路，几 bar，流量按每平方米几十克每秒算。
@@ -101,16 +101,16 @@ export const RADIATOR_PARTS: readonly Item[] = [
    * 泵功本身也是热 —— 一万平方米的回路，泵的功耗在百千瓦量级，
    * 而那部分最后也要从板子上走掉。
    */
-  { id: 'plant/radiator/pump', name: '散热器循环泵', unit: '件', category: 'part' },
+  { id: 'plant/radiator/pump', name: 'Radiator Circulation Pump', name_zh: '散热器循环泵', unit: '件', category: 'part' },
 
   /** 集管与分配器。把工质均匀分到几千块并联的板子上，压降要一致。 */
-  { id: 'plant/radiator/header', name: '散热器集管与分配器', unit: '件', category: 'part' },
+  { id: 'plant/radiator/header', name: 'Radiator Header and Manifold', name_zh: '散热器集管与分配器', unit: '件', category: 'part' },
 
   /** 管路与阀。不锈钢管，氨专用阀门（铜在氨里会腐蚀，所以不能用铜阀）。 */
-  { id: 'plant/radiator/piping', name: '散热器管路与阀', unit: '件', category: 'part' },
+  { id: 'plant/radiator/piping', name: 'Radiator Piping and Valves', name_zh: '散热器管路与阀', unit: '件', category: 'part' },
 
   /** 支架与基础。一万平方米的板子要撑在风里，抗风载比承重更难。 */
-  { id: 'plant/radiator/support', name: '散热器支架与基础', unit: '件', category: 'part' },
+  { id: 'plant/radiator/support', name: 'Radiator Support and Foundation', name_zh: '散热器支架与基础', unit: '件', category: 'part' },
 ];
 
 export const RADIATOR_ROUTES: readonly Route[] = [
@@ -128,7 +128,7 @@ export const RADIATOR_ROUTES: readonly Route[] = [
      * 换来的是整个制铝链能开动 —— 因为**散热器是电解铝槽的唯一冷源**。
      */
     id: 'make/radiator-panel',
-    name: '散热器辐射板制造',
+    name: 'Radiator Radiating Panel Manufacturing', name_zh: '散热器辐射板制造',
     produces: [{ item: 'plant/radiator/panel', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     needs: [],
@@ -138,7 +138,7 @@ export const RADIATOR_ROUTES: readonly Route[] = [
   {
     /** 循环泵。45 钢泵体车磨 + PTFE 密封（氨里不能用铜）。泵轴两只球轴承，一万平方米的回路全靠它转。 */
     id: 'make/radiator-pump',
-    name: '散热器循环泵制造',
+    name: 'Radiator Circulation Pump Manufacturing', name_zh: '散热器循环泵制造',
     produces: [{ item: 'plant/radiator/pump', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -151,7 +151,7 @@ export const RADIATOR_ROUTES: readonly Route[] = [
   {
     /** 集管。不锈钢管焊成，支管口等距开孔。 */
     id: 'make/radiator-header',
-    name: '散热器集管与分配器制造',
+    name: 'Radiator Header and Manifold Manufacturing', name_zh: '散热器集管与分配器制造',
     produces: [{ item: 'plant/radiator/header', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -160,7 +160,7 @@ export const RADIATOR_ROUTES: readonly Route[] = [
   {
     /** 管路与阀。不锈钢管 + 不锈钢阀体（铜阀遇氨会烂）。 */
     id: 'make/radiator-piping',
-    name: '散热器管路与阀制造',
+    name: 'Radiator Piping and Valves Manufacturing', name_zh: '散热器管路与阀制造',
     produces: [{ item: 'plant/radiator/piping', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     needs: ['lathe'],
@@ -169,7 +169,7 @@ export const RADIATOR_ROUTES: readonly Route[] = [
   {
     /** 支架。薄板与型钢焊成，按风载设计 —— 火星的风压只有地球的 1%。 */
     id: 'make/radiator-support',
-    name: '散热器支架与基础制造',
+    name: 'Radiator Support and Foundation Manufacturing', name_zh: '散热器支架与基础制造',
     produces: [{ item: 'plant/radiator/support', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: [],
@@ -199,7 +199,7 @@ export const RADIATOR_ROUTES: readonly Route[] = [
  */
 export const RADIATOR: Item = {
   id: 'plant/radiator',
-  name: '散热器',
+  name: 'Radiator', name_zh: '散热器',
   unit: '套',
   category: 'machine',
   composedOf: [...RADIATOR_PARTS.map((p) => ({ item: p.id, qty: q(1) })), { item: 'std/motor-7.5kw-4p', qty: q(1) }],
@@ -217,7 +217,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/radiator',
-    name: '散热器装配',
+    name: 'Radiator Assembly', name_zh: '散热器装配',
     produces: [{
       item: 'plant/radiator',
       qty: q(1),

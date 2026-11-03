@@ -74,7 +74,7 @@ export const ELECTRONICS_ITEMS: readonly Item[] = [
    * 一条路线要几只，取决于功率：中频电源一只模块能顶几百千瓦，而整流器要
    * 六只（三相全控桥）。这里两只都记 1 件 —— **1:1 占位，不装懂。**
    */
-  { id: 'std/power-device-general', name: '功率器件', unit: '件', category: 'part',
+  { id: 'std/power-device-general', name: 'Power Device', name_zh: '功率器件', unit: '件', category: 'part',
     props: [{ param: 'ratedCurrent', kind: 'range', min: 5, max: 1000, unit: 'A' }] },
 
   /**
@@ -84,7 +84,7 @@ export const ELECTRONICS_ITEMS: readonly Item[] = [
    * 解决的是"长度准不准"，而传感器解决的是"机器知不知道自己在哪" ——
    * 伺服电机没有编码器就只是台会转的电机，闭环无从谈起。
    */
-  { id: 'std/sensor-general', name: '传感器', unit: '件', category: 'part' },
+  { id: 'std/sensor-general', name: 'Sensor', name_zh: '传感器', unit: '件', category: 'part' },
 
   /**
    * 无源件：电容、电阻、继电器、接插件、端子。
@@ -95,7 +95,7 @@ export const ELECTRONICS_ITEMS: readonly Item[] = [
    * 它也是四类里最可能有一天自造的一类：电阻是碳膜或丝绕，电容是金属化膜卷绕，
    * 继电器是线圈加触点 —— 都不需要单晶硅。到那一天，这一条单独退出清单即可。
    */
-  { id: 'std/passive-component-general', name: '无源件', unit: '件', category: 'part' },
+  { id: 'std/passive-component-general', name: 'Passive Component', name_zh: '无源件', unit: '件', category: 'part' },
 ];
 
 import type { Route } from '../../src/index.ts';

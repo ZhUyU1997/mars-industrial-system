@@ -318,7 +318,7 @@ export const UNBLOCK_ATMOS_TUBE_ROUTES: readonly Route[] = [
      * 要拿它核（与 make/gauge-block-working 同一种写法）。
      */
     id: 'make/atmos-tube-alumina',
-    name: '气氛炉石墨发热管制造',
+    name: 'Atmosphere Furnace Graphite Heating Tube Manufacturing', name_zh: '气氛炉石墨发热管制造',
     produces: [{ item: 'plant/atmosphere-furnace/tube', qty: q(1) }],
     /**
      * 进 84.5 kg，出 1 件（35.3 kg）。

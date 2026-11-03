@@ -17,7 +17,7 @@ export const SHIELDING_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/borated-concrete',
-    name: '硼化混凝土',
+    name: 'Borated Concrete', name_zh: '硼化混凝土',
     unit: 'kg',
     category: 'material',
   },
@@ -32,7 +32,7 @@ export const SHIELDING_ROUTES: readonly Route[] = [
      * 骨料含水与损耗未计入。搅拌与浇注是人工工序，执行者写机器人。
      */
     id: 'make/borated-concrete',
-    name: '硼化混凝土制备',
+    name: 'Borated Concrete Production', name_zh: '硼化混凝土制备',
     produces: [{ item: 'mat/borated-concrete', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mars/regolith', qty: q(760) }] },

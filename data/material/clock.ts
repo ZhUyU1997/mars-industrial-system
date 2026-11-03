@@ -59,7 +59,7 @@ export const CLOCK_ITEMS: readonly Item[] = [
    * 精度 10⁻⁵（一天差一秒）—— 比 RC 振荡器的 1% 高三个数量级。
    * 切角决定频率温度系数：X 切在室温附近近似零；AT 切在 25 °C 附近是拐点。
    */
-  { id: 'std/quartz-resonator-general', name: '石英谐振器', unit: '件', category: 'part',
+  { id: 'std/quartz-resonator-general', name: 'Quartz Resonator', name_zh: '石英谐振器', unit: '件', category: 'part',
     props: [{ param: 'frequency', kind: 'range', min: 1, max: 100000, unit: 'kHz' }] },
 
   /**
@@ -67,7 +67,7 @@ export const CLOCK_ITEMS: readonly Item[] = [
    *
    * 它不是一个"新器件"，是晶体管的一个用法：击穿是可逆的，电压几乎不随电流变。
    */
-  { id: 'std/zener-reference-general', name: '齐纳基准', unit: '件', category: 'part' },
+  { id: 'std/zener-reference-general', name: 'Zener Reference', name_zh: '齐纳基准', unit: '件', category: 'part' },
 
   /**
    * 补偿式数字毫伏表（铁皮滑线 + 星形检流计），本层基线设计。
@@ -77,7 +77,7 @@ export const CLOCK_ITEMS: readonly Item[] = [
    * 星形检流计、热电堆与换向开关等件装配；零件与零件路线见
    * `data/machine/mech-dvm.ts`。
    */
-  { id: 'std/dvm-general', name: '补偿式数字毫伏表', unit: '台', category: 'part',
+  { id: 'std/dvm-general', name: 'Compensated Digital Millivoltmeter', name_zh: '补偿式数字毫伏表', unit: '台', category: 'part',
     composedOf: [
       { item: 'std/dvm-general/base', qty: q(1) },
       { item: 'std/dvm-general/panel-frame', qty: q(1) },
@@ -108,7 +108,7 @@ export const CLOCK_ITEMS: readonly Item[] = [
    *
    * 元件为焊接/贴装装配，属于不可逆加工；零件输入写在路线 uses，不写 composedOf。
    */
-  { id: 'std/dvm-electronic', name: '电子式数字电压表', unit: '台', category: 'part' },
+  { id: 'std/dvm-electronic', name: 'Electronic Digital Voltmeter', name_zh: '电子式数字电压表', unit: '台', category: 'part' },
 ];
 
 export const CLOCK_ROUTES: readonly Route[] = [
@@ -123,7 +123,7 @@ export const CLOCK_ROUTES: readonly Route[] = [
      * 所以先磨到略厚，再一边测一边磨（测频靠计数器）。
      */
     id: 'make/quartz-resonator',
-    name: '石英谐振器制造',
+    name: 'Quartz Resonator Manufacturing', name_zh: '石英谐振器制造',
     produces: [{ item: 'std/quartz-resonator-general', qty: q(20), gives: [{ param: 'frequency', kind: 'range', min: 32, max: 1000 }] }],
     uses: [
       // 注意：这里要的是**单晶**，不是提纯的砂 —— 砂没有压电性。
@@ -165,7 +165,7 @@ export const CLOCK_ROUTES: readonly Route[] = [
      * 设备、料、批量都与 `make/quartz-resonator` 相同；测频沿用原路线的计数器。
      */
     id: 'make/quartz-resonator-5mhz',
-    name: '石英谐振器制造',
+    name: 'Quartz Resonator Manufacturing', name_zh: '石英谐振器制造',
     produces: [{ item: 'std/quartz-resonator-general', qty: q(20), gives: [{ param: 'frequency', kind: 'range', min: 4900, max: 5100 }] }],
     uses: [
       { anyOf: [{ item: 'mat/quartz-crystal', qty: q(1) }] },
@@ -190,7 +190,7 @@ export const CLOCK_ROUTES: readonly Route[] = [
      * 温度系数靠**恒温**压：装进小恒温盒（本层有恒温间，但这里是盒内自热恒温）。
      */
     id: 'make/zener-reference',
-    name: '齐纳基准制造',
+    name: 'Zener Reference Manufacturing', name_zh: '齐纳基准制造',
     produces: [{ item: 'std/zener-reference-general', qty: q(20) }],
     uses: [
       { anyOf: [{ item: 'std/opamp-chip-general', qty: q(1) }] },
@@ -214,7 +214,7 @@ export const CLOCK_ROUTES: readonly Route[] = [
      * 而时间有石英、基准有齐纳 —— 这两样恰好是这一层做得出来的。
      */
     id: 'make/dvm',
-    name: '电子式数字电压表制造',
+    name: 'Electronic Digital Voltmeter Manufacturing', name_zh: '电子式数字电压表制造',
     produces: [{ item: 'std/dvm-electronic', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/opamp-chip-general', qty: q(2) }] },

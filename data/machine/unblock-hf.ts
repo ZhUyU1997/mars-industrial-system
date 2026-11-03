@@ -373,7 +373,7 @@ export const UNBLOCK_HF_ITEMS: readonly Item[] = [
    *
    * 按 kg 计，与 `mat/apatite-concentrate` 同一口径：氟是"随料走"的，不另立浓度条目。
    */
-  { id: 'mat/fluorite', name: '萤石', unit: 'kg', category: 'material' },
+  { id: 'mat/fluorite', name: 'Fluorite', name_zh: '萤石', unit: 'kg', category: 'material' },
 ];
 
 export const UNBLOCK_HF_ROUTES: readonly Route[] = [
@@ -419,7 +419,7 @@ export const UNBLOCK_HF_ROUTES: readonly Route[] = [
      *    "连续跑 6 h"在数据里长得一模一样 —— 这一处只能写在注释里（缺口⑧）。
      */
     id: 'make/fluorite-synthetic',
-    name: '脱氟焙烧与氟的回收',
+    name: 'Defluorination Roasting and Fluorine Recovery', name_zh: '脱氟焙烧与氟的回收',
     produces: [{ item: 'mat/fluorite', qty: q(71) }],
     uses: [
       {
@@ -637,7 +637,7 @@ export const UNBLOCK_HF_ROUTES: readonly Route[] = [
      *    下一轮补上的一处**，补法是一台压滤机 + 一条返料管。
      */
     id: 'make/hf-kiln',
-    name: '氟化氢的蒸出与冷凝制备',
+    name: 'Hydrogen Fluoride Evaporation and Condensation Production', name_zh: '氟化氢的蒸出与冷凝制备',
     produces: [{ item: 'mat/hf', qty: q(30), gives: [{ param: 'concentration', kind: 'range', min: 60, max: 70 }] }],
     uses: [
       {

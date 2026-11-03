@@ -287,7 +287,7 @@ export const UNBLOCK_COMPARATOR_TABLE_ROUTES: readonly Route[] = [
   {
     /** HT250 浇三块 → 退火 → 粗铣 → 露天一年 → 磨 → 三块互刮 → 配对编号。 */
     id: 'make/comparator-table-cast',
-    name: '量块比较仪升降工作台制造',
+    name: 'Gauge Block Comparator Lifting Table Manufacturing', name_zh: '量块比较仪升降工作台制造',
     produces: [{ item: 'plant/comparator/table', qty: q(3) }],
     uses: [
       // 三块毛坯。台面 4.05 kg/块 + 2.5 mm/面 的余量 = 5.19 kg/块（第五节）。

@@ -411,7 +411,7 @@ export const UNBLOCK_EVAP_BELL_ROUTES: readonly Route[] = [
      *  · 没有氧分析仪：关阀 60 s 的压升 0.0075 Pa，**读不出来**
      */
     id: 'make/evaporator-bell-cast',
-    name: '蒸发器蒸镀钟罩制造',
+    name: 'Evaporator Deposition Bell Jar Manufacturing', name_zh: '蒸发器蒸镀钟罩制造',
     produces: [{ item: 'plant/evaporator/bell', qty: q(1) }],
     /**
      * 进 76.5 kg，出 1 件（52.5 kg）。每一笔的用途与算式在各条下面。

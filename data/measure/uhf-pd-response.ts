@@ -15,7 +15,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/uhf-pd-response-record',
-    name: 'UHF 响应记录',
+    name: 'UHF Response Record', name_zh: 'UHF 响应记录',
     unit: '份',
     category: 'part',
     props: [
@@ -42,7 +42,7 @@ export const DATA_ROUTES: readonly Route[] = [
    */
   {
     id: 'measure/uhf-pd-response',
-    name: 'UHF 响应测量',
+    name: 'UHF Response Measurement', name_zh: 'UHF 响应测量',
     produces: [
       {
         item: 'mat/uhf-pd-response-record',

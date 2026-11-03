@@ -42,7 +42,7 @@ export const SI3N4_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-source-500v',
-    name: '高压小电流扫描源',
+    name: 'High-Voltage Low-Current Scan Source', name_zh: '高压小电流扫描源',
     unit: '台',
     category: 'machine',
     props: [
@@ -54,22 +54,22 @@ export const SI3N4_METROLOGY_ITEMS: readonly Item[] = [
   },
 
   /** 升压变压器。铁芯 + 双绕组，500 V 次级；与 `std/transformer-general` 同一副手艺。 */
-  { id: 'plant/hv-source-500v/transformer', name: '高压小电流扫描源升压变压器', unit: '件', category: 'part' },
+  { id: 'plant/hv-source-500v/transformer', name: 'High-Voltage Low-Current Scan Source Step-Up Transformer', name_zh: '高压小电流扫描源升压变压器', unit: '件', category: 'part' },
 
   /** 桥式整流。4 只高压二极管 + 铝散热片。 */
-  { id: 'plant/hv-source-500v/rectifier', name: '高压小电流扫描源桥式整流', unit: '件', category: 'part' },
+  { id: 'plant/hv-source-500v/rectifier', name: 'High-Voltage Low-Current Scan Source Bridge Rectifier', name_zh: '高压小电流扫描源桥式整流', unit: '件', category: 'part' },
 
   /** 可控硅调压 + 运放误差放大 + 稳压管基准。 */
-  { id: 'plant/hv-source-500v/regulator', name: '高压小电流扫描源可控硅调压', unit: '件', category: 'part' },
+  { id: 'plant/hv-source-500v/regulator', name: 'High-Voltage Low-Current Scan Source SCR Regulator', name_zh: '高压小电流扫描源可控硅调压', unit: '件', category: 'part' },
 
   /** 1 GΩ:10 MΩ 分压器。薄膜电阻网络 + 氧化铝基板。 */
-  { id: 'plant/hv-source-500v/divider', name: '1 GΩ:10 MΩ 分压器', unit: '件', category: 'part' },
+  { id: 'plant/hv-source-500v/divider', name: '1 GΩ:10 MΩ Voltage Divider', name_zh: '1 GΩ:10 MΩ 分压器', unit: '件', category: 'part' },
 
   /** 数字电压表头。4½ 位，0–500 V。 */
-  { id: 'plant/hv-source-500v/meter', name: '高压小电流扫描源数字电压表头', unit: '件', category: 'part' },
+  { id: 'plant/hv-source-500v/meter', name: 'High-Voltage Low-Current Scan Source Digital Voltmeter', name_zh: '高压小电流扫描源数字电压表头', unit: '件', category: 'part' },
 
   /** 屏蔽机箱。1 mm 钢板 + PTFE 绝缘子 + 接地铜排。 */
-  { id: 'plant/hv-source-500v/enclosure', name: '高压小电流扫描源屏蔽机箱', unit: '件', category: 'part' },
+  { id: 'plant/hv-source-500v/enclosure', name: 'High-Voltage Low-Current Scan Source Shielded Enclosure', name_zh: '高压小电流扫描源屏蔽机箱', unit: '件', category: 'part' },
 
   // ═════════════════════════════════════════════════════════════════════════
   // 二、Na RSF 标样
@@ -87,7 +87,7 @@ export const SI3N4_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/sims-na-rsf-standard',
-    name: 'SIMS 的 Na RSF 标样',
+    name: 'SIMS Na RSF Standard Sample', name_zh: 'SIMS 的 Na RSF 标样',
     unit: '片',
     category: 'part',
     props: [
@@ -110,7 +110,7 @@ export const SI3N4_METROLOGY_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mfc-nh3',
-    name: '耐腐蚀 NH₃ 质量流量控制器',
+    name: 'Corrosion-Resistant NH₃ Mass Flow Controller', name_zh: '耐腐蚀 NH₃ 质量流量控制器',
     unit: '台',
     category: 'machine',
     props: [
@@ -135,7 +135,7 @@ export const SI3N4_METROLOGY_ROUTES: readonly Route[] = [
      * 分压器膜片/绝缘子装夹。最终准确度 0.5–1 %。
      */
     id: 'make/hv-source-500v',
-    name: '高压小电流扫描源装配',
+    name: 'High-Voltage Low-Current Scan Source Assembly', name_zh: '高压小电流扫描源装配',
     produces: [
       {
         item: 'plant/hv-source-500v',
@@ -178,7 +178,7 @@ export const SI3N4_METROLOGY_ROUTES: readonly Route[] = [
   {
     /** 升压变压器：绕线 → 浸漆烘干 → 装铁芯。 */
     id: 'make/hv-source-transformer',
-    name: '高压小电流扫描源升压变压器制造',
+    name: 'High-Voltage Low-Current Scan Source Step-Up Transformer Manufacturing', name_zh: '高压小电流扫描源升压变压器制造',
     produces: [{ item: 'plant/hv-source-500v/transformer', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/transformer-general', qty: q(1) }] },
@@ -197,7 +197,7 @@ export const SI3N4_METROLOGY_ROUTES: readonly Route[] = [
   {
     /** 桥式整流：4 只高压二极管 + 铝散热片。 */
     id: 'make/hv-source-rectifier',
-    name: '高压小电流扫描源桥式整流制造',
+    name: 'High-Voltage Low-Current Scan Source Bridge Rectifier Manufacturing', name_zh: '高压小电流扫描源桥式整流制造',
     produces: [{ item: 'plant/hv-source-500v/rectifier', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/hv-rectifier-general', qty: q(1) }] },
@@ -211,7 +211,7 @@ export const SI3N4_METROLOGY_ROUTES: readonly Route[] = [
   {
     /** 可控硅调压：可控硅 + 运放 + 稳压管 + 铝板。 */
     id: 'make/hv-source-regulator',
-    name: '高压小电流扫描源可控硅调压制造',
+    name: 'High-Voltage Low-Current Scan Source SCR Regulator Manufacturing', name_zh: '高压小电流扫描源可控硅调压制造',
     produces: [{ item: 'plant/hv-source-500v/regulator', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/hv-thyristor-general', qty: q(1) }] },
@@ -231,7 +231,7 @@ export const SI3N4_METROLOGY_ROUTES: readonly Route[] = [
   {
     /** 1 GΩ:10 MΩ 分压器：薄膜电阻网络 + 氧化铝基板 + 铜线。 */
     id: 'make/hv-source-divider',
-    name: '1 GΩ:10 MΩ 分压器制造',
+    name: '1 GΩ:10 MΩ Voltage Divider Manufacturing', name_zh: '1 GΩ:10 MΩ 分压器制造',
     produces: [{ item: 'plant/hv-source-500v/divider', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/resistor-network-general', qty: q(1) }] },
@@ -253,7 +253,7 @@ export const SI3N4_METROLOGY_ROUTES: readonly Route[] = [
   {
     /** 数字电压表头：DVM 标准件 + 运放 + 铜线。 */
     id: 'make/hv-source-meter',
-    name: '高压小电流扫描源数字电压表头制造',
+    name: 'High-Voltage Low-Current Scan Source Digital Voltmeter Manufacturing', name_zh: '高压小电流扫描源数字电压表头制造',
     produces: [{ item: 'plant/hv-source-500v/meter', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/dvm-general', qty: q(1) }] },
@@ -268,7 +268,7 @@ export const SI3N4_METROLOGY_ROUTES: readonly Route[] = [
   {
     /** 屏蔽机箱：1 mm 钢板折弯/焊 + PTFE 绝缘子 + 接地铜排。 */
     id: 'make/hv-source-enclosure',
-    name: '高压小电流扫描源屏蔽机箱制造',
+    name: 'High-Voltage Low-Current Scan Source Shielded Enclosure Manufacturing', name_zh: '高压小电流扫描源屏蔽机箱制造',
     produces: [{ item: 'plant/hv-source-500v/enclosure', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(2) }] },
@@ -300,7 +300,7 @@ export const SI3N4_METROLOGY_ROUTES: readonly Route[] = [
      * ±10–20 %。**不用注入机**：Na 会污染 Al/P 注入机。
      */
     id: 'make/sims-na-rsf-standard',
-    name: 'SIMS 的 Na RSF 标样制造',
+    name: 'SIMS Na RSF Standard Sample Manufacturing', name_zh: 'SIMS 的 Na RSF 标样制造',
     produces: [
       {
         item: 'mat/sims-na-rsf-standard',
@@ -356,7 +356,7 @@ export const SI3N4_METROLOGY_ROUTES: readonly Route[] = [
      * `measure/nh3-flow-calibration`（体积法/压力降法）。
      */
     id: 'make/mfc-nh3',
-    name: '耐腐蚀 NH₃ 质量流量控制器制造',
+    name: 'Corrosion-Resistant NH₃ Mass Flow Controller Manufacturing', name_zh: '耐腐蚀 NH₃ 质量流量控制器制造',
     produces: [
       {
         item: 'plant/mfc-nh3',

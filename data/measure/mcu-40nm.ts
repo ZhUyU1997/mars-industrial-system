@@ -27,7 +27,7 @@ export const MCU_40NM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/mcu-40nm-beol-record',
-    name: '40 nm MCU 同一片六项 BEOL 记录',
+    name: '40 nm MCU Same-Wafer Six-Item BEOL Record', name_zh: '40 nm MCU 同一片六项 BEOL 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -55,7 +55,7 @@ export const MCU_40NM_ROUTES: readonly Route[] = [
      * 的六项设计值仍是 design。
      */
     id: 'measure/mcu-40nm-same-wafer',
-    name: '40 nm MCU 同一片六项 BEOL 测量',
+    name: '40 nm MCU Same-Wafer Six-Item BEOL Measurement', name_zh: '40 nm MCU 同一片六项 BEOL 测量',
     produces: [
       {
         item: 'mat/mcu-40nm-beol-record',

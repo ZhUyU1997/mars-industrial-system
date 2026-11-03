@@ -25,7 +25,7 @@ export const ROBOT_NPU_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/robot-npu-thermal-record',
-    name: 'NPU 模块装配热参数记录',
+    name: 'NPU Module Assembly Thermal Parameter Record', name_zh: 'NPU 模块装配热参数记录',
     unit: '份',
     category: 'part',
     props: [
@@ -49,7 +49,7 @@ export const ROBOT_NPU_MEASURE_ROUTES: readonly Route[] = [
      *   ④ 记表号与读数。
      */
     id: 'measure/robot-npu-thermal',
-    name: 'NPU 模块装配热参数测量',
+    name: 'NPU Module Assembly Thermal Parameter Measurement', name_zh: 'NPU 模块装配热参数测量',
     produces: [
       {
         item: 'mat/robot-npu-thermal-record',

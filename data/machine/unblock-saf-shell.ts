@@ -338,7 +338,7 @@ export const UNBLOCK_SAF_SHELL_ROUTES: readonly Route[] = [
      * 铸铁盖 350–420 °C 压在 HT250 上限上，1–2 年；没有水冷兜底，穿衬就是漏铁。
      */
     id: 'make/saf-shell-brick',
-    name: '矿热炉炉壳制造',
+    name: 'Submerged Arc Furnace Shell Manufacturing', name_zh: '矿热炉炉壳制造',
     produces: [{ item: 'plant/submerged-arc-furnace/shell', qty: q(1) }],
     uses: [
       /**

@@ -300,7 +300,7 @@ export const UNBLOCK_AIRSEP_HX_ROUTES: readonly Route[] = [
      *                   但两侧同是空气类气体，漏是内漏，掉效率不掉安全
      */
     id: 'make/airsep-hx-coil',
-    name: '空分换热器制造',
+    name: 'Air Separation Heat Exchanger Manufacturing', name_zh: '空分换热器制造',
     produces: [{ item: 'plant/air-separator/heat-exchanger', qty: q(1) }],
     uses: [
       {

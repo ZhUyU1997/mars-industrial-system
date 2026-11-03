@@ -373,7 +373,7 @@ export const UNBLOCK_PYRO_FIL_ROUTES: readonly Route[] = [
      *     （与 unblock-pyrometer 缺口①同一个口径）。这一件只记"造一根丝"
      */
     id: 'make/pyrometer-filament-carbon',
-    name: '高温计标准灯丝制造',
+    name: 'Pyrometer Standard Filament Manufacturing', name_zh: '高温计标准灯丝制造',
     produces: [{ item: 'plant/pyrometer/filament', qty: q(1) }],
     /**
      * 进 1.315 kg，出 1 件（0.622 kg）。每一笔的用途与算式写在各条下面。

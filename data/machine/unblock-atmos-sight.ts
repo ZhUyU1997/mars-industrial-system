@@ -560,7 +560,7 @@ export const UNBLOCK_ATMOS_SIGHT_ROUTES: readonly Route[] = [
      *     谁把它当"石英片是现成料"用，就会在出成与气泡上算错（第四节）
      */
     id: 'make/atmos-sight-cast',
-    name: '气氛炉观察孔与火色判读制造',
+    name: 'Atmosphere Furnace Sight Hole and Flame Color Reading Manufacturing', name_zh: '气氛炉观察孔与火色判读制造',
     produces: [{ item: 'plant/atmosphere-furnace/sight', qty: q(1) }],
     /**
      * 进 5.24 kg，出 1 件（4.29 kg）。每一笔的用途与算式写在各条下面。

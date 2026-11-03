@@ -44,7 +44,7 @@ export const WF6_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/wf6',
-    name: '六氟化钨',
+    name: 'Tungsten Hexafluoride', name_zh: '六氟化钨',
     unit: 'kg',
     category: 'material',
     props: [
@@ -77,7 +77,7 @@ export const WF6_ROUTES: readonly Route[] = [
      * 设计目标 ≥99.9 % 不保证。e-beam/漏电测不了这一格。
      */
     id: 'make/wf6',
-    name: '六氟化钨制备',
+    name: 'Tungsten Hexafluoride Production', name_zh: '六氟化钨制备',
     produces: [
       {
         item: 'mat/wf6',

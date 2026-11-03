@@ -302,7 +302,7 @@ export const PCBPKG_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/flip-chip-microbump',
-    name: 'C4 微凸点',
+    name: 'C4 Microbump', name_zh: 'C4 微凸点',
     unit: '颗',
     category: 'material',
     props: [
@@ -333,7 +333,7 @@ export const PCBPKG_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/underfill',
-    name: '底部填充胶',
+    name: 'Underfill', name_zh: '底部填充胶',
     unit: 'kg',
     category: 'material',
     props: [
@@ -368,7 +368,7 @@ export const PCBPKG_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/build-up-substrate-8l',
-    name: '有机封装基板',
+    name: 'Organic Package Substrate', name_zh: '有机封装基板',
     unit: '件',
     category: 'part',
     props: [
@@ -396,7 +396,7 @@ export const PCBPKG_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/copper-lid-general',
-    name: '铜盖',
+    name: 'Copper Lid', name_zh: '铜盖',
     unit: '件',
     category: 'part',
     props: [
@@ -419,7 +419,7 @@ export const PCBPKG_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/thermal-interface',
-    name: '导热界面材料',
+    name: 'Thermal Interface Material', name_zh: '导热界面材料',
     unit: 'kg',
     category: 'material',
     props: [
@@ -453,7 +453,7 @@ export const PCBPKG_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/ceramic-substrate-3l',
-    name: '陶瓷基板',
+    name: 'Ceramic Substrate', name_zh: '陶瓷基板',
     unit: '件',
     category: 'part',
     props: [
@@ -485,7 +485,7 @@ export const PCBPKG_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/fcbga-package-general',
-    name: 'FCBGA 封装成品',
+    name: 'FCBGA Package', name_zh: 'FCBGA 封装成品',
     unit: '片',
     category: 'part',
     props: [
@@ -510,7 +510,7 @@ export const PCBPKG_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/qfn-package-general',
-    name: 'QFN 封装成品',
+    name: 'QFN Package', name_zh: 'QFN 封装成品',
     unit: '片',
     category: 'part',
     props: [
@@ -531,7 +531,7 @@ export const PCBPKG_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/lqfp-package-general',
-    name: 'LQFP 封装成品',
+    name: 'LQFP Package', name_zh: 'LQFP 封装成品',
     unit: '片',
     category: 'part',
     props: [
@@ -553,7 +553,7 @@ export const PCBPKG_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/lga-package-general',
-    name: 'LGA 封装成品',
+    name: 'LGA Package', name_zh: 'LGA 封装成品',
     unit: '片',
     category: 'part',
     props: [
@@ -596,7 +596,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      *              —— 这一点是本文件降级 ⑥ 的一半。
      */
     id: 'make/underfill',
-    name: '底部填充胶制备',
+    name: 'Underfill Production', name_zh: '底部填充胶制备',
     produces: [
       {
         item: 'mat/underfill',
@@ -679,7 +679,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      *   工业上靠"薄 + 盖当应力扩散层"两件事吸收，本层同样靠这两件（文件头一·④）。
      */
     id: 'make/tim-solder',
-    name: 'SnAg 焊料片 TIM 制备',
+    name: 'SnAg Solder Sheet TIM Production', name_zh: 'SnAg 焊料片 TIM 制备',
     produces: [
       {
         item: 'mat/thermal-interface',
@@ -745,7 +745,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      * 晶振（0.02 W）。主控 SoC 的 3 W 必须用 `make/tim-solder`。
      */
     id: 'make/tim-silver-epoxy',
-    name: '银填充酚醛 TIM 制备',
+    name: 'Silver-Filled Phenolic TIM Production', name_zh: '银填充酚醛 TIM 制备',
     produces: [
       {
         item: 'mat/thermal-interface',
@@ -820,7 +820,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      * 介质厚度公差从 ±8 % 掉到 **±15 %**。这是降级①。
      */
     id: 'make/build-up-substrate',
-    name: '有机封装基板制造',
+    name: 'Organic Package Substrate Manufacturing', name_zh: '有机封装基板制造',
     produces: [
       {
         item: 'std/build-up-substrate-8l',
@@ -947,7 +947,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      *   压平 22 MPa（200 t/0.09 m²）→ **±2 µm**（判据 ±5，余量 2.5 倍）
      */
     id: 'make/flip-chip-microbump',
-    name: 'C4 微凸点制备',
+    name: 'C4 Microbump Production', name_zh: 'C4 微凸点制备',
     produces: [
       {
         item: 'mat/flip-chip-microbump',
@@ -1035,7 +1035,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      * 而那正好抵消掉 TIM 的厚度均匀性。
      */
     id: 'make/copper-lid',
-    name: '铜盖制造',
+    name: 'Copper Lid Manufacturing', name_zh: '铜盖制造',
     produces: [
       {
         item: 'std/copper-lid-general',
@@ -1115,7 +1115,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      *   这一项会变成 450 µm，整个封装要重新设计。**
      */
     id: 'make/fcbga-package',
-    name: 'FCBGA 封装',
+    name: 'FCBGA Packaging', name_zh: 'FCBGA 封装',
     produces: [
       {
         item: 'std/fcbga-package-general',
@@ -1268,7 +1268,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      * 没有浇口、没有排气。所以飞边（flash）会比工业厚，要 100 % 手工去飞边。
      */
     id: 'make/qfn-package',
-    name: 'QFN 封装',
+    name: 'QFN Packaging', name_zh: 'QFN 封装',
     produces: [
       {
         item: 'std/qfn-package-general',
@@ -1381,7 +1381,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      *   主控 → FCBGA（看不出，只能电测）
      */
     id: 'make/lqfp-package',
-    name: 'LQFP 封装',
+    name: 'LQFP Packaging', name_zh: 'LQFP 封装',
     produces: [
       {
         item: 'std/lqfp-package-general',
@@ -1481,7 +1481,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      * 但陶瓷片上的薄膜光刻线没有（缺口表里没单列，因为 LGA 不需要细线）。
      */
     id: 'make/ceramic-substrate',
-    name: '陶瓷基板制造',
+    name: 'Ceramic Substrate Manufacturing', name_zh: '陶瓷基板制造',
     produces: [
       {
         item: 'std/ceramic-substrate-3l',
@@ -1591,7 +1591,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      * 所以降级⑨的升级路线很窄：一台能给 480 °C + N₂ 的炉子（比"无氧回流炉"容易得多）。
      */
     id: 'make/lga-package',
-    name: 'LGA 封装',
+    name: 'LGA Packaging', name_zh: 'LGA 封装',
     produces: [
       {
         item: 'std/lga-package-general',
@@ -1696,7 +1696,7 @@ export const PCBPKG_ROUTES: readonly Route[] = [
      * 量法只有平晶 + 塞尺（没有阴影云纹，降级⑫），所以这道筛的判据本身也只有 ±5 µm。
      */
     id: 'make/package-test',
-    name: 'FCBGA 封装成品制造',
+    name: 'FCBGA Package Manufacturing', name_zh: 'FCBGA 封装成品制造',
     produces: [
       {
         item: 'std/fcbga-package-general',

@@ -22,7 +22,7 @@ export const RANGE_FILL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/low-field-nmr-probe',
-    name: '0–6 T 低场 NMR 探头',
+    name: '0–6 T Low-Field NMR Probe', name_zh: '0–6 T 低场 NMR 探头',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：探头线圈、安瓿、振荡/锁相按整台装配，不再拆独立零件，标 monolithic。
@@ -43,7 +43,7 @@ export const RANGE_FILL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/fluxmeter-300wb',
-    name: '0–300 Wb 磁通计',
+    name: '0–300 Wb Fluxmeter', name_zh: '0–300 Wb 磁通计',
     unit: '台',
     category: 'machine',
     // 单件计量仪器：搜索线圈、积分器、补偿按整台装配，不再拆独立零件，标 monolithic。
@@ -67,7 +67,7 @@ export const RANGE_FILL_ROUTES: readonly Route[] = [
      * 本探头覆盖 0–6 T；1 T 以上无标准场，只能用 1 T 磁扇外推。
      */
     id: 'make/low-field-nmr-probe',
-    name: '0–6 T 低场 NMR 探头制造',
+    name: '0–6 T Low-Field NMR Probe Manufacturing', name_zh: '0–6 T 低场 NMR 探头制造',
     produces: [
       {
         item: 'plant/low-field-nmr-probe',
@@ -112,7 +112,7 @@ export const RANGE_FILL_ROUTES: readonly Route[] = [
      * 只能小磁通标定，300 Wb 满量程未标。
      */
     id: 'make/fluxmeter-300wb',
-    name: '0–300 Wb 磁通计制造',
+    name: '0–300 Wb Fluxmeter Manufacturing', name_zh: '0–300 Wb 磁通计制造',
     produces: [
       {
         item: 'plant/fluxmeter-300wb',

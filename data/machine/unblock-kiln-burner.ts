@@ -397,7 +397,7 @@ export const UNBLOCK_KILN_BURNER_ROUTES: readonly Route[] = [
      *  ③ 砖组是砖窑烧的高硅砖、不磁选、不是熔铸砖：寿命 4–6 个月（工业 2 年）
      */
     id: 'make/kiln-burner-cast',
-    name: '窑炉燃烧器制造',
+    name: 'Kiln Burner Manufacturing', name_zh: '窑炉燃烧器制造',
     produces: [{ item: 'plant/kiln/burner', qty: q(1) }],
     uses: [
       /**

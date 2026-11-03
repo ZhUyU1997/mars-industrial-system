@@ -166,7 +166,7 @@ export const ATOMIC_CLOCK_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hydrogen-maser',
-    name: '氢脉泽',
+    name: 'Hydrogen Maser', name_zh: '氢脉泽',
     unit: '台',
     category: 'machine',
     props: [
@@ -190,7 +190,7 @@ export const ATOMIC_CLOCK_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/absolute-gravimeter',
-    name: '绝对重力仪',
+    name: 'Absolute Gravimeter', name_zh: '绝对重力仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -215,7 +215,7 @@ export const ATOMIC_CLOCK_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/density-bench',
-    name: '密度台',
+    name: 'Density Bench', name_zh: '密度台',
     unit: '台',
     category: 'machine',
     props: [
@@ -258,7 +258,7 @@ export const ATOMIC_CLOCK_ROUTES: readonly Route[] = [
      * 实测缺口在 §五②③⑤⑥，不假装测到了。
      */
     id: 'make/hydrogen-maser',
-    name: '氢脉泽总装',
+    name: 'Hydrogen Maser Final Assembly', name_zh: '氢脉泽总装',
     rate: { hours: q(1200) },
     produces: [
       {
@@ -366,7 +366,7 @@ export const ATOMIC_CLOCK_ROUTES: readonly Route[] = [
      * 或兰姆凹陷，本层没有（见 `data/measure/g-absolute.ts` §四）。
      */
     id: 'make/absolute-gravimeter',
-    name: '绝对重力仪总装',
+    name: 'Absolute Gravimeter Final Assembly', name_zh: '绝对重力仪总装',
     rate: { hours: q(800) },
     produces: [
       {
@@ -459,7 +459,7 @@ export const ATOMIC_CLOCK_ROUTES: readonly Route[] = [
      * 1–2 ppm）与天平。见 `data/measure/g-absolute.ts` §五②。
      */
     id: 'make/density-bench',
-    name: '密度台制造',
+    name: 'Density Bench Manufacturing', name_zh: '密度台制造',
     rate: { hours: q(300) },
     produces: [
       {

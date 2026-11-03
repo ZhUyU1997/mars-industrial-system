@@ -358,7 +358,7 @@ export const UNBLOCK_ROAST_DIST_ROUTES: readonly Route[] = [
      *    装配按号就位。
      */
     id: 'make/roaster-distributor-cast',
-    name: '焙烧炉布风板制造',
+    name: 'Roaster Air Distribution Plate Manufacturing', name_zh: '焙烧炉布风板制造',
     produces: [{ item: 'plant/roaster/distributor', qty: q(1) }],
     uses: [
       // 7 块板 + 61 只帽，一体铸出。三档铸铁都到得了：make/iron-htXXX（铁 + 碳，

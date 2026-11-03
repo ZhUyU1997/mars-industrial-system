@@ -51,7 +51,7 @@ export const PROM_ITEMS: readonly Item[] = [
    * 出厂全 1（所有丝完好）；编程就是按图把该是 0 的丝烧断。
    * 一次性的 —— 所以每一片都要先算清楚，再烧。
    */
-  { id: 'std/prom-chip-general', name: '熔丝 PROM', unit: '片', category: 'part',
+  { id: 'std/prom-chip-general', name: 'Fuse PROM', name_zh: '熔丝 PROM', unit: '片', category: 'part',
     // 5 µm 世代（与 std/photomask-general 的 3–5 µm 同一档），门数 8–40。
     props: [{ param: 'node', kind: 'range', min: 5000, max: 5000, unit: 'nm', dir: 'atMost' }, { param: 'gates', kind: 'range', min: 8, max: 40, unit: '门' }], },
 ];
@@ -67,7 +67,7 @@ export const PROM_ROUTES: readonly Route[] = [
      * 编程不在晶圆上做 —— 是封装之后一片一片烧的，所以它写在最后一步。
      */
     id: 'make/prom-chip',
-    name: '熔丝 PROM 制造',
+    name: 'Fuse PROM Manufacturing', name_zh: '熔丝 PROM 制造',
     produces: [{ item: 'std/prom-chip-general', qty: q(30), gives: [{ param: 'node', kind: 'range', min: 5000, max: 5000 }, { param: 'gates', kind: 'range', min: 8, max: 40 }] }],
     uses: [
       { anyOf: [{ item: 'mat/silicon-wafer', qty: q(1) }] },
@@ -110,7 +110,7 @@ export const PROM_ROUTES: readonly Route[] = [
      * 不需要动机械、也不需要动线 —— 只要烧一片新芯片。
      */
     id: 'make/robot-controller-prom',
-    name: '机器人控制柜制造',
+    name: 'Robot Control Cabinet Manufacturing', name_zh: '机器人控制柜制造',
     produces: [{ item: 'plant/robot/controller', qty: q(1), gives: [{ param: 'dof', kind: 'range', min: 6, max: 6 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },

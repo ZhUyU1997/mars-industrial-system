@@ -14,7 +14,7 @@ import { q } from '../../src/index.ts';
 export const RF_GENERATOR_20KW_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/rf-generator-20kw-measure-record',
-    name: '20 kW RF 发生器记录',
+    name: '20 kW RF Generator Record', name_zh: '20 kW RF 发生器记录',
     unit: '份',
     category: 'part',
     props: [
@@ -31,7 +31,7 @@ export const RF_GENERATOR_20KW_MEASURE_ROUTES: readonly Route[] = [
      * **20 kW RF 发生器：水冷量热器读输出，DMM 读 DC 输入算效率。**
      */
     id: 'measure/rf-generator-20kw',
-    name: '20 kW RF 发生器测量',
+    name: '20 kW RF Generator Measurement', name_zh: '20 kW RF 发生器测量',
     produces: [
       {
         item: 'mat/rf-generator-20kw-measure-record',

@@ -74,22 +74,22 @@ export const MATERIALS: Description = {
      * 所以低温在这套体系里不缺：**缺的只是保温的容器**（干冰升腾得快，
      * 要用敞口保温箱，边用边补）。
      */
-    { id: 'mat/dry-ice', name: '干冰', unit: 'kg', category: 'material' },
+    { id: 'mat/dry-ice', name: 'Dry Ice', name_zh: '干冰', unit: 'kg', category: 'material' },
 
     /** 水。冰升华冷凝而来，一切湿法化学与电解的入口。 */
-    { id: 'mat/water', name: '水', unit: 'kg', category: 'material',
+    { id: 'mat/water', name: 'Water', name_zh: '水', unit: 'kg', category: 'material',
     props: [{ param: 'conductivity', kind: 'range', min: 0.05, max: 1000, unit: 'µS/cm' }] },
 
     /** 氢。电解水得来，是火星上唯一能大规模拿到的还原剂 —— 没有氢，氧化物还原不了。 */
-    { id: 'mat/hydrogen', name: '氢', unit: 'kg', category: 'material',
+    { id: 'mat/hydrogen', name: 'Hydrogen', name_zh: '氢', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 99, max: 99.999, unit: '%', dir: 'atLeast' }] },
 
     /** 氧。电解水的副产，量很大（每吨氢出 7.9 吨氧）。炼钢、生保、推进剂都要。 */
-    { id: 'mat/oxygen', name: '氧', unit: 'kg', category: 'material',
+    { id: 'mat/oxygen', name: 'Oxygen', name_zh: '氧', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99.5, unit: '%' }] },
 
     /** 铁精矿。风化层磁选富集，65% Fe。冶金入口 —— 钛铁矿与磁铁矿都能被磁选带走。 */
-    { id: 'mat/iron-concentrate', name: '铁精矿', unit: 'kg', category: 'material' },
+    { id: 'mat/iron-concentrate', name: 'Iron Concentrate', name_zh: '铁精矿', unit: 'kg', category: 'material' },
 
     /**
      * 海绵铁。氢直接还原的产物，多孔、含氧低，电炉炼钢的洁净原料。
@@ -98,7 +98,7 @@ export const MATERIALS: Description = {
      * 1000 kg 精矿里有 71 kg 脉石，所以海绵铁只有 90% 是铁 ——
      * 那 71 kg 必须在熔炼时造渣除掉，不能带着进钢。
      */
-    { id: 'mat/sponge-iron', name: '海绵铁', unit: 'kg', category: 'material' },
+    { id: 'mat/sponge-iron', name: 'Sponge Iron', name_zh: '海绵铁', unit: 'kg', category: 'material' },
 
     /**
      * 铁。海绵铁熔炼、除渣之后的金属铁，含碳 < 0.1%。
@@ -107,7 +107,7 @@ export const MATERIALS: Description = {
      * 在这里变成炉渣；之后加多少碳，就是什么牌号 —— 铁与碳分开计，
      * 成分才核得出来。混在一起算时，配方里写的"铁 968"其实是带渣的海绵铁。
      */
-    { id: 'mat/iron', name: '铁', unit: 'kg', category: 'material' },
+    { id: 'mat/iron', name: 'Iron', name_zh: '铁', unit: 'kg', category: 'material' },
 
     /**
      * 尾矿。磁选剩下的硅酸盐与辉石，占进料的四分之三还不止。
@@ -115,7 +115,7 @@ export const MATERIALS: Description = {
      * 不是废物：它是硅、铝、镁、钙的来源，玻璃、陶瓷、耐火材料、水泥都从这里走。
      * 但在这条链上它暂时没有下游 —— 遍历会把它报出来。
      */
-    { id: 'mat/tailings', name: '尾矿', unit: 'kg', category: 'material' },
+    { id: 'mat/tailings', name: 'Tailings', name_zh: '尾矿', unit: 'kg', category: 'material' },
 
     /**
      * 水蒸气。氢还原铁时，氢把铁从氧里夺过来，自己变成水。
@@ -124,7 +124,7 @@ export const MATERIALS: Description = {
      * 所以还原段是净耗氢，不是闭环。碳那一条（Bosch）反而是闭的 ——
      * 它产出的就是液态水，直接回电解槽。
      */
-    { id: 'mat/water-vapor', name: '水蒸气', unit: 'kg', category: 'material' },
+    { id: 'mat/water-vapor', name: 'Water Vapor', name_zh: '水蒸气', unit: 'kg', category: 'material' },
 
     /**
      * 碳。铸铁与钢的合金元素，也是还原剂。
@@ -132,14 +132,14 @@ export const MATERIALS: Description = {
      * 火星没有煤，碳只能从大气里那 95% 的二氧化碳来：
      * CO₂ + 2H₂ → C + 2H₂O（Bosch 反应）。氢从电解水来，反应又还回水 —— 这个环是闭的。
      */
-    { id: 'mat/carbon', name: '碳', unit: 'kg', category: 'material',
+    { id: 'mat/carbon', name: 'Carbon', name_zh: '碳', unit: 'kg', category: 'material',
     props: [{ param: 'ash', kind: 'range', min: 0.5, max: 20, unit: '%' }] },
 
     /** 二氧化碳。从大气里分离出来的纯 CO₂，碳的唯一来源。 */
-    { id: 'mat/co2', name: '二氧化碳', unit: 'kg', category: 'material' },
+    { id: 'mat/co2', name: 'Carbon Dioxide', name_zh: '二氧化碳', unit: 'kg', category: 'material' },
 
     /** 氮氩混合气。分离 CO₂ 剩下的部分。焊接保护、气氛退火、惰性覆盖都要它。 */
-    { id: 'mat/inert-gas', name: '氮氩混合气', unit: 'kg', category: 'material' },
+    { id: 'mat/inert-gas', name: 'Nitrogen-Argon Mixed Gas', name_zh: '氮氩混合气', unit: 'kg', category: 'material' },
 
     /**
      * 铬铁。40Cr 里那 0.9% 的铬由它带入。
@@ -147,17 +147,17 @@ export const MATERIALS: Description = {
      * 铬是合金钢那一侧真正的瓶颈：风化层 Cr₂O₃ 只有 0.3%，而进矿热炉要 42% 的
      * 铬铁矿精矿 —— 富集比 **140 : 1**。一吨铬铁要挖三百多吨土。
      */
-    { id: 'mat/ferrochrome', name: '铬铁', unit: 'kg', category: 'material' },
+    { id: 'mat/ferrochrome', name: 'Ferrochrome', name_zh: '铬铁', unit: 'kg', category: 'material' },
 
     /** 铬铁矿精矿。Cr₂O₃ 42%，从风化层里重选富集一百四十倍得来。 */
-    { id: 'mat/chromite-concentrate', name: '铬铁矿精矿', unit: 'kg', category: 'material' },
+    { id: 'mat/chromite-concentrate', name: 'Chromite Concentrate', name_zh: '铬铁矿精矿', unit: 'kg', category: 'material' },
 
     /** 一氧化碳。矿热炉与还原炉的尾气，可燃 —— 可以回炉当燃料。 */
-    { id: 'mat/co', name: '一氧化碳', unit: 'kg', category: 'material',
+    { id: 'mat/co', name: 'Carbon Monoxide', name_zh: '一氧化碳', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 30, max: 99, unit: '%', dir: 'atLeast' }] },
 
     /** 炉渣。矿热炉里没被还原的脉石，水淬后能当骨料或矿棉原料。 */
-    { id: 'mat/slag', name: '炉渣', unit: 'kg', category: 'material' },
+    { id: 'mat/slag', name: 'Slag', name_zh: '炉渣', unit: 'kg', category: 'material' },
 
     /**
      * 石灰。CaO，石膏热分解的副产（326 kg/1000 kg）。
@@ -166,14 +166,14 @@ export const MATERIALS: Description = {
      * 渣不流动，脉石就分不出去。它自己不能当"渣"记 —— 那会把熔剂和废物
      * 混成一个条目，于是"造渣到底加了什么"就再也查不出来了。
      */
-    { id: 'mat/lime', name: '石灰', unit: 'kg', category: 'material' },
+    { id: 'mat/lime', name: 'Lime', name_zh: '石灰', unit: 'kg', category: 'material' },
 
     /**
      * 耐火材料。高铝砖、莫来石、打结料 —— 从尾矿里的 Al₂O₃ 与 SiO₂ 来。
      *
      * 它是"装得住高温"的前提：没有它，熔炼炉只是一个铁壳子。
      */
-    { id: 'mat/refractory', name: '耐火材料', unit: 'kg', category: 'material',
+    { id: 'mat/refractory', name: 'Refractory Material', name_zh: '耐火材料', unit: 'kg', category: 'material',
     // 窑 1500 的火配 1300 的砖，曾在两处同时出现而没人发现。
     props: [
       { param: 'grade', kind: 'enum', values: ['clay', 'high-alumina', 'silica', 'corundum'] },
@@ -188,17 +188,17 @@ export const MATERIALS: Description = {
      * 也就是说：**一吨铜要挖三万多吨土**。数字写在下面那条路线上，
      * 它能造，但代价让"本地造铜"这件事基本不成立。
      */
-    { id: 'mat/copper', name: '铜', unit: 'kg', category: 'material',
+    { id: 'mat/copper', name: 'Copper', name_zh: '铜', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 97, max: 99.99, unit: '%' }] },
 
     /** 铜精矿。25% Cu，从风化层里浮选富集而来。 */
-    { id: 'mat/copper-concentrate', name: '铜精矿', unit: 'kg', category: 'material' },
+    { id: 'mat/copper-concentrate', name: 'Copper Concentrate', name_zh: '铜精矿', unit: 'kg', category: 'material' },
 
     /** 粗铜。98% Cu 的泡铜，火法熔炼加吹炼得来。 */
-    { id: 'mat/blister-copper', name: '粗铜', unit: 'kg', category: 'material' },
+    { id: 'mat/blister-copper', name: 'Blister Copper', name_zh: '粗铜', unit: 'kg', category: 'material' },
 
     /** 阳极泥。电解精炼的沉渣，金银铂族都在里面 —— 铜冶炼的副产品来源。 */
-    { id: 'mat/anode-sludge', name: '阳极泥', unit: 'kg', category: 'material' },
+    { id: 'mat/anode-sludge', name: 'Anode Sludge', name_zh: '阳极泥', unit: 'kg', category: 'material' },
 
     /**
      * 二氧化硫。硫酸盐焙烧与铜吹炼的含硫气体 —— 火星上所有的硫都从这里变酸。
@@ -206,13 +206,13 @@ export const MATERIALS: Description = {
      * 两个来源：石膏热分解出 372 kg/1000 kg，铜精矿吹炼出 504 kg/1000 kg。
      * 它自己只有一个下游：接触法制酸。
      */
-    { id: 'mat/so2', name: '二氧化硫', unit: 'kg', category: 'material' },
+    { id: 'mat/so2', name: 'Sulfur Dioxide', name_zh: '二氧化硫', unit: 'kg', category: 'material' },
 
     /**
      * 硫酸。电解精炼的电解液、磷肥与氢氟酸的原料。火星硫极富裕，
      * 但硫全在硫酸盐里，要先焙烧成 SO₂ 才拿得到酸。
      */
-    { id: 'mat/sulfuric-acid', name: '硫酸', unit: 'kg', category: 'material',
+    { id: 'mat/sulfuric-acid', name: 'Sulfuric Acid', name_zh: '硫酸', unit: 'kg', category: 'material',
     // 98 % 与 30–50 % 是两种酸，同一个 id。值只在路线上，条目只声明"有浓度"。
     props: [{ param: 'concentration', kind: 'range', min: 0, max: 100, unit: '%' }] },
 
@@ -221,13 +221,13 @@ export const MATERIALS: Description = {
      *
      * 风化层里镍约 400 ppm，富集到 10% 要 250 : 1 —— 比铜可行，仍是硬骨头。
      */
-    { id: 'mat/nickel', name: '镍', unit: 'kg', category: 'material' },
+    { id: 'mat/nickel', name: 'Nickel', name_zh: '镍', unit: 'kg', category: 'material' },
 
     /** 镍精矿。10% Ni，从风化层浮选富集二百五十倍。 */
-    { id: 'mat/nickel-concentrate', name: '镍精矿', unit: 'kg', category: 'material' },
+    { id: 'mat/nickel-concentrate', name: 'Nickel Concentrate', name_zh: '镍精矿', unit: 'kg', category: 'material' },
 
     /** 镍铁。25% Ni 的铁镍合金，矿热炉还原出来，再电解精炼。 */
-    { id: 'mat/ferronickel', name: '镍铁', unit: 'kg', category: 'material' },
+    { id: 'mat/ferronickel', name: 'Ferronickel', name_zh: '镍铁', unit: 'kg', category: 'material' },
 
     /**
      * 聚四氟乙烯。电解槽隔膜、管道衬里、密封、绝缘。
@@ -241,17 +241,17 @@ export const MATERIALS: Description = {
      */
     {
       id: 'mat/ptfe',
-      name: '聚四氟乙烯',
+      name: 'PTFE', name_zh: '聚四氟乙烯',
       unit: 'kg',
       category: 'material',
       props: [{ param: 'frictionCoefficient', kind: 'range', min: 0.04, max: 0.10, unit: '无量纲', dir: 'atMost' }],
     },
 
     /** 磷灰石精矿。P₂O₅ 30%，氟随它一起富集 —— 氟的唯一工业来源。 */
-    { id: 'mat/apatite-concentrate', name: '磷灰石精矿', unit: 'kg', category: 'material' },
+    { id: 'mat/apatite-concentrate', name: 'Apatite Concentrate', name_zh: '磷灰石精矿', unit: 'kg', category: 'material' },
 
     /** 氢氟酸。磷灰石加硫酸蒸出来，氟化学的总入口。 */
-    { id: 'mat/hf', name: '氢氟酸', unit: 'kg', category: 'material',
+    { id: 'mat/hf', name: 'Hydrofluoric Acid', name_zh: '氢氟酸', unit: 'kg', category: 'material',
     props: [{ param: 'concentration', kind: 'range', min: 30, max: 70, unit: '%' }] },
 
     // 电子元件不在这里 —— 半导体链已定死永久外购，它是种子，
@@ -271,7 +271,7 @@ export const MATERIALS: Description = {
      * 一吨不锈钢背后是三百多吨土。所以它在本层不是大宗材料，是"必须用它"
      * 的那几个零件才用。浓酸仍要 PTFE 衬里 —— 不锈钢到不了那一步。
      */
-    { id: 'mat/stainless-steel', name: '不锈钢', unit: 'kg', category: 'material',
+    { id: 'mat/stainless-steel', name: 'Stainless Steel', name_zh: '不锈钢', unit: 'kg', category: 'material',
     // 304 与 316L 的钼差 3 倍；以前模型分不开，只能一笔带过。
     props: [{ param: 'grade', kind: 'enum', values: ['304', '316L', '430'] }, { param: 'ni', kind: 'range', min: 0, max: 15, unit: '%' }] },
   ],
@@ -282,7 +282,7 @@ export const MATERIALS: Description = {
     {
       /** 冰 → 水。300–500 K 升华，再在冷阱上凝。这一步最简单，也最先要通。 */
       id: 'make/water',
-      name: '冰制备',
+      name: 'Ice Production', name_zh: '冰制备',
       produces: [{ item: 'mat/water', qty: q(1000), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] }],
       uses: [{ anyOf: [{ item: 'mars/water-ice', qty: q(1000) }] }],
       needs: [],
@@ -292,7 +292,7 @@ export const MATERIALS: Description = {
     {
       /** 2H₂O → 2H₂ + O₂。1000 kg 氢要 8936 kg 水，同时出 7936 kg 氧。 */
       id: 'make/hydrogen',
-      name: '氢制备',
+      name: 'Hydrogen Production', name_zh: '氢制备',
       produces: [
         { item: 'mat/hydrogen', qty: q(1000), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5, dir: 'atLeast' }] },
         { item: 'mat/oxygen', qty: q(7936), gives: [{ param: 'purity', kind: 'range', min: 90, max: 99, dir: 'atLeast' }] },
@@ -323,7 +323,7 @@ export const MATERIALS: Description = {
        * 被铜床与石灰吃掉，增重记在 unbalanced 里。
        */
       id: 'make/hydrogen-purified',
-      name: '氢纯化',
+      name: 'Hydrogen Purification', name_zh: '氢纯化',
       produces: [
         {
           item: 'mat/hydrogen',
@@ -353,7 +353,7 @@ export const MATERIALS: Description = {
     {
       /** 风化层磁选。1000 kg 精矿要 4643 kg 风化层 —— 富集比 4.6 : 1，其余是尾矿。 */
       id: 'make/iron-concentrate',
-      name: '风化层磁选制备',
+      name: 'Regolith Magnetic Separation Production', name_zh: '风化层磁选制备',
       produces: [
         { item: 'mat/iron-concentrate', qty: q(1000) },
         { item: 'mat/tailings', qty: q(3643) },
@@ -374,7 +374,7 @@ export const MATERIALS: Description = {
        * 不填 `under`：冷凝靠冷面，不是靠把某个温度维持住。
        */
       id: 'make/condensate',
-      name: '冷凝制备',
+      name: 'Condensation Production', name_zh: '冷凝制备',
       produces: [{ item: 'mat/water', qty: q(1000), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] }],
       uses: [{ anyOf: [{ item: 'mat/water-vapor', qty: q(1000) }] }],
       needs: [],
@@ -393,7 +393,7 @@ export const MATERIALS: Description = {
        * 就是这么写的 465，比化学计量多了 20 kg，而校验一声没响。
        */
       id: 'make/sponge-iron',
-      name: '海绵铁制备',
+      name: 'Sponge Iron Production', name_zh: '海绵铁制备',
       produces: [
         { item: 'mat/sponge-iron', qty: q(721) },
         { item: 'mat/water-vapor', qty: q(314) },
@@ -423,7 +423,7 @@ export const MATERIALS: Description = {
        * 1550–1650 °C：铁的熔点是 1538 °C，低于它的炉子化不开铁。
        */
       id: 'make/iron',
-      name: '海绵铁熔炼除渣制备',
+      name: 'Sponge Iron Smelting and Deslagging Production', name_zh: '海绵铁熔炼除渣制备',
       // 化铁要炉温均匀：不均匀就出白口、出气孔。要求写在设备上（A2 精度继承）。
       produces: [
         { item: 'mat/iron', qty: q(650) },
@@ -457,7 +457,7 @@ export const MATERIALS: Description = {
        * 两个刻度混在一起。
        */
       id: 'make/co2',
-      name: '大气分离',
+      name: 'Atmospheric Separation', name_zh: '大气分离',
       produces: [
         { item: 'mat/co2', qty: q(1000) },
         { item: 'mat/inert-gas', qty: q(37) },
@@ -473,7 +473,7 @@ export const MATERIALS: Description = {
        * 水回收去电解，氢就闭了环 —— 这条路上真正被消耗掉的只有大气里的碳。
        */
       id: 'make/carbon',
-      name: '碳制备',
+      name: 'Carbon Production', name_zh: '碳制备',
       produces: [
         { item: 'mat/carbon', qty: q(1000), gives: [{ param: 'ash', kind: 'range', min: 2, max: 15 }] },
         { item: 'mat/water', qty: q(3000), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -503,7 +503,7 @@ export const MATERIALS: Description = {
        * 放热（ΔH = −41 kJ/mol），那点热最后也要从辐射板走。
        */
       id: 'make/water-gas-shift',
-      name: '变换反应制备',
+      name: 'Hydrogen Production by Water-Gas Shift', name_zh: '变换反应制备',
       produces: [
         { item: 'mat/co2', qty: q(1571) },
         { item: 'mat/hydrogen', qty: q(72), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5, dir: 'atLeast' }] },
@@ -530,7 +530,7 @@ export const MATERIALS: Description = {
        * 干冰是在常温下做的，冷是膨胀产生的，不是外面给的。
        */
       id: 'make/dry-ice',
-      name: '干冰制备',
+      name: 'Dry Ice Production', name_zh: '干冰制备',
       produces: [{ item: 'mat/dry-ice', qty: q(1000) }],
       uses: [{ anyOf: [{ item: 'mat/co2', qty: q(1000) }] }],
       needs: [],
@@ -548,7 +548,7 @@ export const MATERIALS: Description = {
        * 余下 4000 kg 是选矿尾砂与烧失。
        */
       id: 'make/refractory',
-      name: '尾矿烧耐火砖制备',
+      name: 'Refractory Brick Production from Tailings', name_zh: '尾矿烧耐火砖制备',
       produces: [
         { item: 'mat/refractory', qty: q(1000), gives: [
           { param: 'grade', kind: 'enum', oneOf: ['high-alumina'] },
@@ -581,7 +581,7 @@ export const MATERIALS: Description = {
        * 配比照那一份：硅石 1000 + 石灰 21 + 水 60 → 高硅砖 1000（烧失与残渣 81）。
        */
       id: 'make/silica-brick',
-      name: '高硅砖制备',
+      name: 'High-Silica Brick Production', name_zh: '高硅砖制备',
       produces: [
         { item: 'mat/refractory', qty: q(1000), gives: [
           { param: 'grade', kind: 'enum', oneOf: ['silica'] },
@@ -627,7 +627,7 @@ export const MATERIALS: Description = {
        * 不是这档 96 % 料的服务温度，不能拿来当窗口。
        */
       id: 'make/corundum-refractory',
-      name: '刚玉质耐火料制备',
+      name: 'Corundum-Based Refractory Production', name_zh: '刚玉质耐火料制备',
       produces: [
         { item: 'mat/refractory', qty: q(1000), gives: [
           { param: 'grade', kind: 'enum', oneOf: ['corundum'] },
@@ -649,7 +649,7 @@ export const MATERIALS: Description = {
     {
       /** HT300 灰铸铁。C 3.2%：铁 968 + 碳 32。片状石墨吸振，床身的传统材料。 */
       id: 'make/iron-ht300',
-      name: 'HT300 灰铸铁制备',
+      name: 'HT300 Gray Cast Iron Production', name_zh: 'HT300 灰铸铁制备',
       produces: [{ item: 'mat/iron-ht300', qty: q(1000) }],
       uses: [
         { anyOf: [{ item: 'mat/iron', qty: q(968) }] },
@@ -662,7 +662,7 @@ export const MATERIALS: Description = {
     {
       /** HT250 灰铸铁。C 3.0%：铁 970 + 碳 30。尾座与溜板。 */
       id: 'make/iron-ht250',
-      name: 'HT250 灰铸铁制备',
+      name: 'HT250 Gray Cast Iron Production', name_zh: 'HT250 灰铸铁制备',
       produces: [{ item: 'mat/iron-ht250', qty: q(1000) }],
       uses: [
         { anyOf: [{ item: 'mat/iron', qty: q(970) }] },
@@ -675,7 +675,7 @@ export const MATERIALS: Description = {
     {
       /** HT200 灰铸铁。C 3.4%：铁 966 + 碳 34。进给箱箱体。 */
       id: 'make/iron-ht200',
-      name: 'HT200 灰铸铁制备',
+      name: 'HT200 Gray Cast Iron Production', name_zh: 'HT200 灰铸铁制备',
       produces: [{ item: 'mat/iron-ht200', qty: q(1000) }],
       uses: [
         { anyOf: [{ item: 'mat/iron', qty: q(966) }] },
@@ -688,7 +688,7 @@ export const MATERIALS: Description = {
     {
       /** 45 号钢。C 0.45%：铁 995.5 + 碳 4.5。刀架、丝杠这类要淬硬又要韧的件。 */
       id: 'make/steel-45',
-      name: '45 号优质碳素结构钢制备',
+      name: '45 High-Quality Carbon Structural Steel Production', name_zh: '45 号优质碳素结构钢制备',
       produces: [{ item: 'mat/steel-45', qty: q(1000), gives: [{ param: 'hardness', kind: 'range', min: 150, max: 300 }, { param: 'temper', kind: 'enum', oneOf: ['as-rolled', 'normalized', 'quenched', 'tempered'] }] }],
       uses: [
         { anyOf: [{ item: 'mat/iron', qty: q(1991, 2) }] },
@@ -702,7 +702,7 @@ export const MATERIALS: Description = {
     {
       /** 40Cr。C 0.40% + Cr 0.9%：铁 982 + 碳 4 + 铬铁 14（铬铁含铬 65%）。 */
       id: 'make/steel-40cr',
-      name: '40Cr 合金结构钢制备',
+      name: '40Cr Alloy Structural Steel Production', name_zh: '40Cr 合金结构钢制备',
       produces: [{ item: 'mat/steel-40cr', qty: q(1000), gives: [{ param: 'hardness', kind: 'range', min: 180, max: 350 }, { param: 'temper', kind: 'enum', oneOf: ['as-rolled', 'normalized', 'quenched', 'tempered'] }] }],
       uses: [
         { anyOf: [{ item: 'mat/iron', qty: q(982) }] },
@@ -717,7 +717,7 @@ export const MATERIALS: Description = {
     {
       /** 冷轧薄板。C 0.08%：铁 999.2 + 碳 0.8。热轧后冷轧到 1–2 mm。 */
       id: 'make/sheet-steel',
-      name: '冷轧薄板制备',
+      name: 'Cold-Rolled Sheet Production', name_zh: '冷轧薄板制备',
       produces: [{ item: 'mat/sheet-steel', qty: q(1000) }],
       uses: [
         { anyOf: [{ item: 'mat/iron', qty: q(4996, 5) }] },
@@ -739,7 +739,7 @@ export const MATERIALS: Description = {
        * 用它配料会把 19 kg 碳带进钢里，那就必须吹氧。缺口记在这里。
        */
       id: 'make/stainless-steel',
-      name: '不锈钢制备',
+      name: 'Stainless Steel Production', name_zh: '不锈钢制备',
       produces: [{ item: 'mat/stainless-steel', qty: q(1000), gives: [{ param: 'grade', kind: 'enum', oneOf: ['304', '316L', '430'] }, { param: 'ni', kind: 'range', min: 0, max: 15 }] }],
       uses: [
         { anyOf: [{ item: 'mat/iron', qty: q(643) }] },

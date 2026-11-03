@@ -27,7 +27,7 @@ export const PD_LOGGER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-logger',
-    name: '高压测试台双通道趋势记录器',
+    name: 'High-Voltage Test Bench Dual-Channel Trend Recorder', name_zh: '高压测试台双通道趋势记录器',
     unit: '件',
     category: 'part',
     props: [
@@ -49,7 +49,7 @@ export const PD_LOGGER_ROUTES: readonly Route[] = [
      * DFS 选 `std/control-board-general`，它不进证明树属预期（PLAN 监控项，不删不塞）。
      */
     id: 'make/pd-logger',
-    name: '高压测试台双通道趋势记录器制造',
+    name: 'High-Voltage Test Bench Dual-Channel Trend Recorder Manufacturing', name_zh: '高压测试台双通道趋势记录器制造',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-logger',

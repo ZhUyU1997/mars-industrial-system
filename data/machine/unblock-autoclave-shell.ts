@@ -497,7 +497,7 @@ export const UNBLOCK_AUTOCLAVE_SHELL_ROUTES: readonly Route[] = [
      *    自己也是被造的这台），写了就是 `no_machine`。压力账全部写在注释里。
      */
     id: 'make/autoclave-shell-cast',
-    name: '高压釜筒体与封头制造',
+    name: 'Autoclave Shell and Head Manufacturing', name_zh: '高压釜筒体与封头制造',
     produces: [{ item: 'plant/autoclave/shell', qty: q(1) }],
     uses: [
       /**

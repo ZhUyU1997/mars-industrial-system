@@ -132,7 +132,7 @@ export const EUV_XENON_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/xe-concentrate',
-    name: '粗氙',
+    name: 'Crude Xenon', name_zh: '粗氙',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }],
@@ -154,7 +154,7 @@ export const EUV_XENON_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/xenon',
-    name: '氙',
+    name: 'Xenon', name_zh: '氙',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }],
@@ -173,7 +173,7 @@ export const EUV_XENON_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/krypton',
-    name: '氪',
+    name: 'Krypton', name_zh: '氪',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 0, max: 100, unit: '%', dir: 'atLeast' }],
@@ -293,7 +293,7 @@ export const EUV_XENON_ROUTES: readonly Route[] = [
      *    要有 1 kg/年的产量，空分得做到 **10 t CO₂/天**（2.73 g/天 → 366 天）。
      */
     id: 'make/xe-concentrate',
-    name: '粗氙富集',
+    name: 'Crude Xenon Enrichment', name_zh: '粗氙富集',
     produces: [
       { item: 'mat/xe-concentrate', qty: q(1), gives: [{ param: 'purity', kind: 'range', min: 0.1, dir: 'atLeast' }] },
       // 蒸出去的液氮回塔 —— 它不是副产，是同一股流体的另一部分。
@@ -403,7 +403,7 @@ export const EUV_XENON_ROUTES: readonly Route[] = [
      *    热冲击是炭粉化（1.5 %/循环）的来源，也是床不能做小的原因。
      */
     id: 'make/xenon-adsorb',
-    name: '吸附分离',
+    name: 'Adsorption Separation', name_zh: '吸附分离',
     produces: [
       // 5 kg 里 1 kg 是氙 = 20 %；其余是氪 1.5 kg 与氮 2.5 kg（见精制那条的账）。
       { item: 'mat/xenon', qty: q(5), gives: [{ param: 'purity', kind: 'range', min: 20, dir: 'atLeast' }] },
@@ -517,7 +517,7 @@ export const EUV_XENON_ROUTES: readonly Route[] = [
      *    0，不是十倍。**
      */
     id: 'make/xenon-refine',
-    name: '精制',
+    name: 'Refining', name_zh: '精制',
     produces: [
       { item: 'mat/xenon', qty: q(1), gives: [{ param: 'purity', kind: 'range', min: 99.9, dir: 'atLeast' }] },
       // 氪是副产，不是废物：1.5 kg 里 1.499 kg 是氪，剩下 1 g 是氙（降级①）。

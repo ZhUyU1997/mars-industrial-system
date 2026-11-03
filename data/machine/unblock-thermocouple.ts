@@ -314,7 +314,7 @@ export const UNBLOCK_TC_ROUTES: readonly Route[] = [
      *     锡/铅/铝/锌四种定点料本层全无条目，铜与铁的定点又被铜腿自己挡住
      */
     id: 'make/thermocouple-t-cast',
-    name: '热电偶制造',
+    name: 'Thermocouple Manufacturing', name_zh: '热电偶制造',
     produces: [{ item: 'std/thermocouple-t-general', qty: q(1), gives: [{ param: 'rangeMin', kind: 'range', min: -200, max: -50 }, { param: 'rangeMax', kind: 'range', min: 350, max: 400 }] }],
     uses: [
       /**

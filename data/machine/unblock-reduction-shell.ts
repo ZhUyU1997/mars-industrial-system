@@ -209,7 +209,7 @@ export const UNBLOCK_REDUCTION_SHELL_ROUTES: readonly Route[] = [
      * 五处完整清单与缺口在文件头。
      */
     id: 'make/reduction-shell-brick',
-    name: '还原炉炉壳制造',
+    name: 'Reduction Furnace Shell Manufacturing', name_zh: '还原炉炉壳制造',
     produces: [{ item: 'plant/reduction-furnace/shell', qty: q(1) }],
     uses: [
       // 热面砖。烧成在 make/refractory-brick 里（砖窑 1300–1400），这里只管砌。

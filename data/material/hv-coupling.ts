@@ -51,7 +51,7 @@ export const HV_COUPLING_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/coupling-cap-100k',
-    name: '100 kV 耦合电容',
+    name: '100 kV Coupling Capacitor', name_zh: '100 kV 耦合电容',
     unit: '件',
     category: 'part',
     props: [
@@ -71,7 +71,7 @@ export const HV_COUPLING_ROUTES: readonly Route[] = [
      *   铝 10 + PTFE 0.5 + 氧化铝 1 + 铜 0.5 + 不锈钢 1 + SF₆ 2 → 电容 1
      */
     id: 'make/coupling-cap-100k',
-    name: '100 kV 耦合电容制造',
+    name: '100 kV Coupling Capacitor Manufacturing', name_zh: '100 kV 耦合电容制造',
     produces: [
       {
         item: 'plant/hv-test-bench/coupling-cap-100k',

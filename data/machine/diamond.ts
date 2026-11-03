@@ -196,7 +196,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hpht-press',
-    name: '六面顶压机',
+    name: '6-Anvil Cubic Press', name_zh: '六面顶压机',
     unit: '台',
     category: 'machine',
     props: [
@@ -230,7 +230,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hpht-press/frame',
-    name: '六面顶压机机架',
+    name: '6-Anvil Cubic Press Frame', name_zh: '六面顶压机机架',
     unit: '件',
     category: 'part',
     props: [{ param: 'ratedForce', kind: 'range', min: 15000, max: 30000, unit: 'kN' }],
@@ -246,7 +246,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hpht-press/cylinder',
-    name: '六面顶压机液压缸',
+    name: '6-Anvil Cubic Press Hydraulic Cylinder', name_zh: '六面顶压机液压缸',
     unit: '件',
     category: 'part',
     props: [
@@ -266,7 +266,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hpht-press/pump',
-    name: '高压水泵 / 增压器',
+    name: 'High-Pressure Water Pump / Booster', name_zh: '高压水泵 / 增压器',
     unit: '件',
     category: 'part',
     props: [
@@ -293,7 +293,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hpht-press/anvil',
-    name: '六面顶压机硬质合金顶锤',
+    name: '6-Anvil Cubic Press Cemented Carbide Anvil', name_zh: '六面顶压机硬质合金顶锤',
     unit: '件',
     category: 'part',
     props: [
@@ -317,7 +317,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hpht-press/heating-transformer',
-    name: '六面顶压机加热变压器',
+    name: '6-Anvil Cubic Press Heating Transformer', name_zh: '六面顶压机加热变压器',
     unit: '件',
     category: 'part',
     props: [
@@ -341,7 +341,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hpht-press/control',
-    name: '六面顶压机控温',
+    name: '6-Anvil Cubic Press Temperature Control', name_zh: '六面顶压机控温',
     unit: '件',
     category: 'part',
     props: [
@@ -368,7 +368,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hpht-press/cell',
-    name: '六面顶压机合成块',
+    name: '6-Anvil Cubic Press Synthesis Cell', name_zh: '六面顶压机合成块',
     unit: '件',
     category: 'consumable',
     props: [
@@ -394,7 +394,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/hpht-pressure-medium',
-    name: '传压介质块',
+    name: 'Pressure-Transmitting Medium Block', name_zh: '传压介质块',
     unit: 'kg',
     category: 'material',
     props: [
@@ -415,7 +415,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/diamond-carbon',
-    name: '低灰碳',
+    name: 'Low-Ash Carbon', name_zh: '低灰碳',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'ash', kind: 'range', min: 0.01, max: 0.5, unit: '%', dir: 'atMost' }],
@@ -432,7 +432,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/diamond',
-    name: '金刚石',
+    name: 'Diamond', name_zh: '金刚石',
     unit: 'kg',
     category: 'material',
     props: [
@@ -449,7 +449,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/diamond-powder',
-    name: '金刚石微粉',
+    name: 'Diamond Micropowder', name_zh: '金刚石微粉',
     unit: 'kg',
     category: 'material',
     props: [
@@ -467,7 +467,7 @@ export const DIAMOND_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/diamond-tip-blank',
-    name: '金刚石坯片',
+    name: 'Diamond Blank', name_zh: '金刚石坯片',
     unit: '件',
     category: 'part',
     props: [
@@ -494,7 +494,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      * 0.5 倍屈服做超声? 没有超声 —— 用煤油渗透 + 1.5 倍工作压力试压（水）。
      */
     id: 'make/hpht-frame',
-    name: '六面顶压机机架制造',
+    name: '6-Anvil Cubic Press Frame Manufacturing', name_zh: '六面顶压机机架制造',
     produces: [
       {
         item: 'plant/hpht-press/frame',
@@ -542,7 +542,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      * 由 `plant/hpht-press/pump` 补。
      */
     id: 'make/hpht-cylinder',
-    name: '六面顶压机液压缸制造',
+    name: '6-Anvil Cubic Press Hydraulic Cylinder Manufacturing', name_zh: '六面顶压机液压缸制造',
     produces: [
       {
         item: 'plant/hpht-press/cylinder',
@@ -584,7 +584,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      * 的液压系统跑合（设计值，未实测）。
      */
     id: 'make/hpht-pump',
-    name: '高压水泵 / 增压器制造',
+    name: 'High-Pressure Water Pump / Booster Manufacturing', name_zh: '高压水泵 / 增压器制造',
     produces: [
       {
         item: 'plant/hpht-press/pump',
@@ -634,7 +634,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      * 但只磨平面与倒角，够用。
      */
     id: 'make/hpht-anvil',
-    name: '六面顶压机硬质合金顶锤制造',
+    name: '6-Anvil Cubic Press Cemented Carbide Anvil Manufacturing', name_zh: '六面顶压机硬质合金顶锤制造',
     produces: [
       {
         item: 'plant/hpht-press/anvil',
@@ -690,7 +690,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      * 5–10 kA 的次级引线用铜排，不用电缆 —— 电缆在这个电流下会烧。
      */
     id: 'make/hpht-transformer',
-    name: '六面顶压机加热变压器制造',
+    name: '6-Anvil Cubic Press Heating Transformer Manufacturing', name_zh: '六面顶压机加热变压器制造',
     produces: [
       {
         item: 'plant/hpht-press/heating-transformer',
@@ -735,7 +735,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      * 当黑体，按功率-温度曲线对比高温计，误差 ±10 °C（设计值，未实测）。
      */
     id: 'make/hpht-control',
-    name: '六面顶压机控温制造',
+    name: '6-Anvil Cubic Press Temperature Control Manufacturing', name_zh: '六面顶压机控温制造',
     produces: [
       {
         item: 'plant/hpht-press/control',
@@ -782,7 +782,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      * 否则 5 GPa 下会放气、在腔体里形成气孔。
      */
     id: 'make/hpht-pressure-medium',
-    name: '传压介质块制备',
+    name: 'Pressure-Transmitting Medium Block Production', name_zh: '传压介质块制备',
     produces: [
       {
         item: 'mat/hpht-pressure-medium',
@@ -826,7 +826,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      * 32 mm 块的 φ18 腔里。合成块是消耗件，每批一只。
      */
     id: 'make/hpht-cell',
-    name: '六面顶压机合成块制造',
+    name: '6-Anvil Cubic Press Synthesis Cell Manufacturing', name_zh: '六面顶压机合成块制造',
     produces: [
       {
         item: 'plant/hpht-press/cell',
@@ -876,7 +876,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      * 记为 `plant/wet-bench` 的槽体改造，不单列零件。
      */
     id: 'make/diamond-carbon',
-    name: '低灰碳制备',
+    name: 'Low-Ash Carbon Production', name_zh: '低灰碳制备',
     produces: [
       {
         item: 'mat/diamond-carbon',
@@ -931,7 +931,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      *    5 g 够做 40 支压头坯（每支 0.12 g），瓶颈不在量。
      */
     id: 'make/diamond',
-    name: 'HPHT 合成金刚石制备',
+    name: 'HPHT Synthetic Diamond Production', name_zh: 'HPHT 合成金刚石制备',
     produces: [
       {
         item: 'mat/diamond',
@@ -976,7 +976,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      *    工艺窗口，不是每批实测。这是“能造但判不了”的一处缺口。
      */
     id: 'make/diamond-powder',
-    name: '金刚石微粉制备',
+    name: 'Diamond Micropowder Production', name_zh: '金刚石微粉制备',
     produces: [
       {
         item: 'mat/diamond-powder',
@@ -1040,7 +1040,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      *    顶锤寿命（1000–3000 次够，但一批只出一颗）。
      */
     id: 'make/diamond-tip-blank',
-    name: '金刚石坯片制造',
+    name: 'Diamond Blank Manufacturing', name_zh: '金刚石坯片制造',
     produces: [
       {
         item: 'mat/diamond-tip-blank',
@@ -1099,7 +1099,7 @@ export const DIAMOND_ROUTES: readonly Route[] = [
      *    不写测量路线。
      */
     id: 'make/nanoindenter-head',
-    name: '纳米压痕机纳米压痕压头制造',
+    name: 'Nanoindenter Indenter Head Manufacturing', name_zh: '纳米压痕机纳米压痕压头制造',
     produces: [
       {
         item: 'plant/nanoindenter/head',
@@ -1173,7 +1173,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/hpht-press',
-    name: '六面顶压机装配',
+    name: '6-Anvil Cubic Press Assembly', name_zh: '六面顶压机装配',
     produces: [{
       item: 'plant/hpht-press',
       qty: q(1),

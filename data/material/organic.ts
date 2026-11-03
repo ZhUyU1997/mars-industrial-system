@@ -69,7 +69,7 @@ export const ORGANIC_ITEMS: readonly Item[] = [
    * 它在这条链上是**中间物**，不是产品：三步反应的副产全汇到这里，
    * 再被 Deacon 法送回氯气。整个环路里它的存量只有几吨。
    */
-  { id: 'mat/hcl', name: '盐酸', unit: 'kg', category: 'material',
+  { id: 'mat/hcl', name: 'Hydrochloric Acid', name_zh: '盐酸', unit: 'kg', category: 'material',
     props: [{ param: 'concentration', kind: 'range', min: 15, max: 38, unit: '%' }] },
 
   /**
@@ -78,7 +78,7 @@ export const ORGANIC_ITEMS: readonly Item[] = [
    * 来源:Deacon 法（盐酸 + 氧，铜催化，420 °C）。第一笔氯从高氯酸盐来，
    * 之后靠回收 —— 净消耗只补给泄漏。
    */
-  { id: 'mat/chlorine', name: '氯气', unit: 'kg', category: 'material' },
+  { id: 'mat/chlorine', name: 'Chlorine', name_zh: '氯气', unit: 'kg', category: 'material' },
 
   /**
    * 甲烷。Sabatier 反应 CO₂ + 4H₂ → CH₄ + 2H₂O。
@@ -86,7 +86,7 @@ export const ORGANIC_ITEMS: readonly Item[] = [
    * **它是火星有机化学的唯一入口。** 没有石油、没有煤、没有生物质，
    * 一碳以下的碳氢化合物只能从 CO₂ 加氢来。300–400 °C，镍催化。
    */
-  { id: 'mat/methane', name: '甲烷', unit: 'kg', category: 'material' },
+  { id: 'mat/methane', name: 'Methane', name_zh: '甲烷', unit: 'kg', category: 'material' },
 
   /**
    * 三氯甲烷（氯仿）。甲烷深度氯化的产物。
@@ -94,14 +94,14 @@ export const ORGANIC_ITEMS: readonly Item[] = [
    * 它是 PTFE 路线的第一块砖，也是氯在这个环路上的第一个落点 ——
    * 三个氯原子进来，走完四步之后以盐酸的形式出去。
    */
-  { id: 'mat/chloroform', name: '三氯甲烷', unit: 'kg', category: 'material' },
+  { id: 'mat/chloroform', name: 'Chloroform', name_zh: '三氯甲烷', unit: 'kg', category: 'material' },
 
   /**
    * HCFC-22（二氟一氯甲烷，CHClF₂）。氯仿的两个氯被氟换掉。
    *
    * 它是制冷剂，也是四氟乙烯的唯一前体 —— 正是这条路。
    */
-  { id: 'mat/hcfc-22', name: '氯仿氟化', unit: 'kg', category: 'material' },
+  { id: 'mat/hcfc-22', name: 'Chloroform Fluorination', name_zh: '氯仿氟化', unit: 'kg', category: 'material' },
 
   /**
    * 四氟乙烯（C₂F₄）。HCFC-22 在 850–900 °C 裂解，两个分子缩成一个。
@@ -109,7 +109,7 @@ export const ORGANIC_ITEMS: readonly Item[] = [
    * 它自己会自聚，所以只能低温贮存、就地聚合 —— 这也是为什么聚合装置
    * 与裂解炉要挨着。
    */
-  { id: 'mat/tfe', name: '四氟乙烯', unit: 'kg', category: 'material' },
+  { id: 'mat/tfe', name: 'Tetrafluoroethylene', name_zh: '四氟乙烯', unit: 'kg', category: 'material' },
 ];
 
 export const ORGANIC_ROUTES: readonly Route[] = [
@@ -124,7 +124,7 @@ export const ORGANIC_ROUTES: readonly Route[] = [
      * "有毒、要洗掉"的东西变成氯源 —— 在它之前，高氯酸盐是麻烦，不是料。
      */
     id: 'make/hcl',
-    name: '高氯酸盐加氢还原成盐酸制备',
+    name: 'Perchlorate Hydrogenation Reduction to Hydrochloric Acid Production', name_zh: '高氯酸盐加氢还原成盐酸制备',
     produces: [
       { item: 'mat/hcl', qty: q(367), gives: [{ param: 'concentration', kind: 'range', min: 30, max: 33 }] },
       { item: 'mat/water', qty: q(724), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -151,7 +151,7 @@ export const ORGANIC_ROUTES: readonly Route[] = [
      * 也不需要钠 —— 只要有盐酸、氧和一点铜。
      */
     id: 'make/chlorine',
-    name: 'Deacon 法制备',
+    name: 'Deacon Process Production', name_zh: 'Deacon 法制备',
     produces: [
       { item: 'mat/chlorine', qty: q(972) },
       { item: 'mat/water', qty: q(247), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -177,7 +177,7 @@ export const ORGANIC_ROUTES: readonly Route[] = [
      * ⚠️ 但水要真的回去才算数 —— 见 data/material/chain.ts 的 make/condensate。
      */
     id: 'make/methane',
-    name: '甲烷制备',
+    name: 'Methane Production', name_zh: '甲烷制备',
     produces: [
       { item: 'mat/methane', qty: q(1000) },
       { item: 'mat/water', qty: q(2246), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -199,7 +199,7 @@ export const ORGANIC_ROUTES: readonly Route[] = [
      * 实际是逐级氯化，一氯到四氯化碳混在一起，靠分馏切开。这里只记总式。
      */
     id: 'make/chloroform',
-    name: '甲烷氯化制备',
+    name: 'Methane Chlorination Production', name_zh: '甲烷氯化制备',
     produces: [
       { item: 'mat/chloroform', qty: q(1000) },
       { item: 'mat/hcl', qty: q(916), gives: [{ param: 'concentration', kind: 'range', min: 30, max: 33 }] },
@@ -221,7 +221,7 @@ export const ORGANIC_ROUTES: readonly Route[] = [
      * 两个氯被氟换出来 —— 氟从这里进环，氯从这里出环（以盐酸形式）。
      */
     id: 'make/hcfc-22',
-    name: '氯仿氟化制备',
+    name: 'Chloroform Fluorination Production', name_zh: '氯仿氟化制备',
     produces: [
       { item: 'mat/hcfc-22', qty: q(1000) },
       { item: 'mat/hcl', qty: q(843), gives: [{ param: 'concentration', kind: 'range', min: 30, max: 33 }] },
@@ -244,7 +244,7 @@ export const ORGANIC_ROUTES: readonly Route[] = [
      * 温度低了转化率不够，高了会结焦，窗口只有 50 °C。
      */
     id: 'make/tfe',
-    name: 'HCFC-22 裂解',
+    name: 'HCFC-22 Cracking', name_zh: 'HCFC-22 裂解',
     produces: [
       { item: 'mat/tfe', qty: q(1000) },
       { item: 'mat/hcl', qty: q(729), gives: [{ param: 'concentration', kind: 'range', min: 30, max: 33 }] },
@@ -267,10 +267,10 @@ export const ORGANIC_ROUTES: readonly Route[] = [
  * 氧化成甲醛，去和苯酚缩聚。**甲醛是酚醛树脂的另一半**（苯酚那一半在
  * data/material/aromatics.ts）。
  */
-export const METHANOL: Item = { id: 'mat/methanol', name: '甲醇', unit: 'kg', category: 'material' };
+export const METHANOL: Item = { id: 'mat/methanol', name: 'Methanol', name_zh: '甲醇', unit: 'kg', category: 'material' };
 
 /** 甲醛（HCHO）。甲醇氧化，600–700 °C，银催化。水溶液直接进缩聚釜。 */
-export const FORMALDEHYDE: Item = { id: 'mat/formaldehyde', name: '甲醛', unit: 'kg', category: 'material' };
+export const FORMALDEHYDE: Item = { id: 'mat/formaldehyde', name: 'Formaldehyde', name_zh: '甲醛', unit: 'kg', category: 'material' };
 
 export const C1_ROUTES: readonly Route[] = [
   {
@@ -283,7 +283,7 @@ export const C1_ROUTES: readonly Route[] = [
      * 它去制甲醛，实际的甲醇经济（MTO 制烯烃）还没建。
      */
     id: 'make/methanol',
-    name: '甲醇合成',
+    name: 'Methanol Synthesis', name_zh: '甲醇合成',
     produces: [
       { item: 'mat/methanol', qty: q(1000) },
       { item: 'mat/water', qty: q(562), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -305,7 +305,7 @@ export const C1_ROUTES: readonly Route[] = [
      * 放热很强，靠废热锅炉把多余的热带走 —— 而废热最后还是要靠辐射板排掉。
      */
     id: 'make/formaldehyde',
-    name: '甲醇氧化',
+    name: 'Methanol Oxidation', name_zh: '甲醇氧化',
     produces: [
       { item: 'mat/formaldehyde', qty: q(1000) },
       { item: 'mat/water', qty: q(600), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },

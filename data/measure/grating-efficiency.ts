@@ -101,7 +101,7 @@ export const GRATING_EFFICIENCY_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/grating-efficiency-record',
-    name: 'OES 光栅 870 nm 一级衍射效率记录',
+    name: 'OES Grating 870 nm First-Order Diffraction Efficiency Record', name_zh: 'OES 光栅 870 nm 一级衍射效率记录',
     unit: '份',
     category: 'part',
     props: [
@@ -133,7 +133,7 @@ export const GRATING_EFFICIENCY_ROUTES: readonly Route[] = [
      * 记录是数据，不是把光栅吃掉。
      */
     id: 'measure/grating-efficiency',
-    name: 'OES 光栅 870 nm 一级衍射效率测量',
+    name: 'OES Grating 870 nm First-Order Diffraction Efficiency Measurement', name_zh: 'OES 光栅 870 nm 一级衍射效率测量',
     rate: { hours: q(8) },
     produces: [
       {

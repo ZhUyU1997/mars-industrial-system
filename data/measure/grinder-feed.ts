@@ -23,7 +23,7 @@ export const GRINDER_FEED_ROUTES: readonly Route[] = [
   {
     /** 进给分辨率：比较仪 + 刻度盘，单向 5 格平均，反向看回程。 */
     id: 'measure/grinder-feed-resolution',
-    name: '磨床砂轮架测量',
+    name: 'Grinder Wheel Head Measurement', name_zh: '磨床砂轮架测量',
     produces: [
       {
         item: 'plant/grinder/wheel-head',

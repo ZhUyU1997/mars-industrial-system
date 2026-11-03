@@ -28,7 +28,7 @@ export const CIS_ARRAY_CD_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cis-array-cd-record',
-    name: 'CIS 阵列关键层 CD 记录',
+    name: 'CIS Array Critical Layer CD Record', name_zh: 'CIS 阵列关键层 CD 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -56,7 +56,7 @@ export const CIS_ARRAY_CD_ROUTES: readonly Route[] = [
      * 记录是验收带，不是单次读数；真跑后收窄。
      */
     id: 'measure/cis-array-cd',
-    name: 'CIS 阵列关键层 CD 测量',
+    name: 'CIS Array Critical Layer CD Measurement', name_zh: 'CIS 阵列关键层 CD 测量',
     produces: [{
       item: 'mat/cis-array-cd-record',
       qty: q(1),

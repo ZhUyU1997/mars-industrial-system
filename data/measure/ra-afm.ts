@@ -47,7 +47,7 @@ export const RA_AFM_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ra-afm-record',
-    name: 'AFM 的 Ra 记录',
+    name: 'AFM Ra Record', name_zh: 'AFM 的 Ra 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -78,7 +78,7 @@ export const RA_AFM_ROUTES: readonly Route[] = [
      * 不把触针值当基准。
      */
     id: 'measure/ra-afm',
-    name: 'AFM 的 Ra 测量',
+    name: 'AFM Ra Measurement', name_zh: 'AFM 的 Ra 测量',
     produces: [
       {
         item: 'mat/ra-afm-record',

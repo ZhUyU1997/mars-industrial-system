@@ -1595,3 +1595,52 @@ main {
     display: none;
   }
 }
+
+/* ── 语言切换与英文标签 ─────────────────────────────────────────────── */
+
+.entity-alt {
+  margin: 2px 0 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.lang-switch {
+  display: inline-flex;
+  padding: 2px;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(8, 13, 23, 0.65);
+  flex: 0 0 auto;
+}
+
+.lang-switch button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 4px 7px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 120ms ease, background 120ms ease;
+}
+
+.lang-switch button:hover {
+  color: var(--ink);
+}
+
+.lang-switch button.active {
+  color: #d8f7ff;
+  background: rgba(56, 189, 248, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.25);
+}
+
+.label3d {
+  max-width: 210px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

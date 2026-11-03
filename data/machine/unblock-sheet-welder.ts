@@ -294,7 +294,7 @@ export const UNBLOCK_WELDER_ROUTES: readonly Route[] = [
   {
     /** HT200 铸片 → 磨平 → 发黑 → 叠夹 → 一次/二次分开绕 → 抽头 → 总装。 */
     id: 'make/welder-transformer',
-    name: '钣金与焊接工位焊机制造',
+    name: 'Sheet Metal and Welding Workstation Welder Manufacturing', name_zh: '钣金与焊接工位焊机制造',
     produces: [{ item: 'plant/sheet-shop/welder', qty: q(1) }],
     uses: [
       {

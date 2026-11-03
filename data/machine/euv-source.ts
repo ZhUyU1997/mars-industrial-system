@@ -212,7 +212,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    * 的投料表里，也不在整条线的白名单里）。代价写在文件头问题 1 的 ③：放气率高
    * 3–10 倍，于是必须烘烤。
    */
-  { id: 'plant/euv-source/vessel', name: 'EUV 光源真空室', unit: '件', category: 'part' },
+  { id: 'plant/euv-source/vessel', name: 'EUV Source Vacuum Vessel', name_zh: 'EUV 光源真空室', unit: '件', category: 'part' },
 
   /**
    * 收集镜坯。φ300 椭球，熔石英基体（CTE 0.55e-6/K）。
@@ -225,7 +225,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-source/collector',
-    name: 'EUV 收集镜坯',
+    name: 'EUV Collector Mirror Blank', name_zh: 'EUV 收集镜坯',
     unit: '件',
     category: 'part',
     props: [
@@ -242,7 +242,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-source/droplet-generator',
-    name: 'EUV 锡液滴发生器',
+    name: 'EUV Tin Droplet Generator', name_zh: 'EUV 锡液滴发生器',
     unit: '件',
     category: 'part',
     props: [
@@ -268,7 +268,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-source/nozzle',
-    name: 'EUV 喷嘴',
+    name: 'EUV Nozzle', name_zh: 'EUV 喷嘴',
     unit: '件',
     category: 'part',
     props: [{ param: 'bore', kind: 'range', min: 1, max: 500, unit: 'µm', dir: 'atMost' }],
@@ -283,7 +283,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-source/laser',
-    name: 'CO₂ 激光头',
+    name: 'CO₂ Laser Head', name_zh: 'CO₂ 激光头',
     unit: '件',
     category: 'part',
     props: [{ param: 'power', kind: 'range', min: 0, max: 100000, unit: 'W', dir: 'atLeast' }],
@@ -296,7 +296,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    * 氙气喷嘴。整机的 composedOf 选 LPP，这一件仍然写出来：它是"没有 20 kW
    * 激光时唯一能点着等离子体"的办法，代价是石墨溅射到收集镜上。
    */
-  { id: 'plant/euv-source/dpp-head', name: 'DPP 放电头', unit: '件', category: 'part' },
+  { id: 'plant/euv-source/dpp-head', name: 'DPP Discharge Head', name_zh: 'DPP 放电头', unit: '件', category: 'part' },
 
   /**
    * 碎屑抑制。铜箔百叶（0.05 mm 厚、间隔 1 mm）+ 支撑 + φ2 mm 差分孔。
@@ -307,7 +307,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-source/debris-trap',
-    name: 'EUV 碎屑抑制',
+    name: 'EUV Debris Mitigation', name_zh: 'EUV 碎屑抑制',
     unit: '件',
     category: 'part',
     props: [
@@ -323,7 +323,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    * IF 是光源与照明的交接面：光在这里会聚成 1.2 mm 的像，穿过 φ1 mm 光阑的
    * 那一部分才进后面的照明系统。光阑同时是差分抽气的第一级。
    */
-  { id: 'plant/euv-source/if-module', name: 'EUV 中间焦点组件', unit: '件', category: 'part' },
+  { id: 'plant/euv-source/if-module', name: 'EUV Intermediate Focus Module', name_zh: 'EUV 中间焦点组件', unit: '件', category: 'part' },
 
   // ───────────────────────────────────────────────────────────────────────
   // 高真空系统：零件
@@ -336,7 +336,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    * 与 `plant/evaporator/pump` 同一个原理、同一条手艺，但不能共用那条条目：
    * 那一套是蒸镀机的一部分（记成零件），这一套是独立的高真空机组的前级。
    */
-  { id: 'plant/euv-vacuum/pump/rough', name: '高真空机组粗抽机组', unit: '套', category: 'part' },
+  { id: 'plant/euv-vacuum/pump/rough', name: 'High-Vacuum Pumping System Roughing Pump Set', name_zh: '高真空机组粗抽机组', unit: '套', category: 'part' },
 
   /**
    * 涡轮分子泵。φ250、20 级、2.4 万转、叶尖 314 m/s、间隙 0.1 mm、1000 L/s。
@@ -350,7 +350,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-vacuum/pump/turbo',
-    name: '高真空机组涡轮分子泵',
+    name: 'High-Vacuum Pumping System Turbomolecular Pump', name_zh: '高真空机组涡轮分子泵',
     unit: '台',
     category: 'part',
     props: [{ param: 'pressure', kind: 'range', min: 0, max: 100000, unit: 'Pa', dir: 'atMost' }],
@@ -362,7 +362,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    * 它挡两样东西：水汽（不挡就要 10 倍抽气时间）与返流的泵油。
    * 液氮本身没有条目 —— `mat/nitrogen` 是气氮，靠节流膨胀自产（缺口 ⑦）。
    */
-  { id: 'plant/euv-vacuum/pump/cold-trap', name: '高真空机组液氮冷阱', unit: '件', category: 'part' },
+  { id: 'plant/euv-vacuum/pump/cold-trap', name: 'High-Vacuum Pumping System Liquid Nitrogen Cold Trap', name_zh: '高真空机组液氮冷阱', unit: '件', category: 'part' },
 
   /**
    * 真空计。皮拉尼（0.1–100 Pa）与热偶（1–100 Pa）各一只，铜丝 + 玻璃壳 + 铁座。
@@ -370,7 +370,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    * 这是本层**测不到工作压力**的那一处：1e-5 Pa 要电离规（钨丝 + 高压 + 微电流
    * 放大），本层三样都没有。所以"抽到 1e-5 Pa"在本层只能靠抽气时间与泵电流反推。
    */
-  { id: 'plant/euv-vacuum/pump/gauge', name: '高真空机组真空计', unit: '件', category: 'part' },
+  { id: 'plant/euv-vacuum/pump/gauge', name: 'High-Vacuum Pumping System Vacuum Gauge', name_zh: '高真空机组真空计', unit: '件', category: 'part' },
 
   // ───────────────────────────────────────────────────────────────────────
   // 设备
@@ -385,7 +385,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-source',
-    name: 'EUV 光源整机',
+    name: 'EUV Source System', name_zh: 'EUV 光源整机',
     unit: '台',
     category: 'machine',
   },
@@ -400,7 +400,7 @@ export const EUV_SOURCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/euv-vacuum',
-    name: '高真空机组',
+    name: 'High-Vacuum Pumping System', name_zh: '高真空机组',
     unit: '套',
     category: 'machine',
     holds: [{ param: 'pressure', min: 1e-8, max: 1 }],
@@ -422,7 +422,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 0.0182 m³ × 7 850 = 143 kg；法兰、接管、支腿再 37 kg。
      */
     id: 'make/euv-source-vessel',
-    name: 'EUV 光源真空室制造',
+    name: 'EUV Source Vacuum Vessel Manufacturing', name_zh: 'EUV 光源真空室制造',
     produces: [{ item: 'plant/euv-source/vessel', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(180) }] },
@@ -451,7 +451,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 最后一步是开环的 —— 没有非球面检具，"去掉了多少"只能按 Preston 公式算。
      */
     id: 'make/euv-source-collector',
-    name: 'EUV 收集镜坯制造',
+    name: 'EUV Collector Mirror Blank Manufacturing', name_zh: 'EUV 收集镜坯制造',
     produces: [
       {
         item: 'plant/euv-source/collector',
@@ -494,7 +494,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      *   标定   只能在光源上做 —— 滴频与滴径的唯一判据是等离子体亮没亮
      */
     id: 'make/euv-droplet-generator',
-    name: 'EUV 锡液滴发生器制造',
+    name: 'EUV Tin Droplet Generator Manufacturing', name_zh: 'EUV 锡液滴发生器制造',
     produces: [{
       item: 'plant/euv-source/droplet-generator',
       qty: q(1),
@@ -552,7 +552,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 交付窗口写 30 µm，不写成 13 µm：前者是这条路线真能做到的。
      */
     id: 'make/euv-nozzle',
-    name: 'EUV 喷嘴制造',
+    name: 'EUV Nozzle Manufacturing', name_zh: 'EUV 喷嘴制造',
     produces: [
       {
         item: 'plant/euv-source/nozzle',
@@ -612,7 +612,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 到 50 kHz 的压差要多给一点（发生器那条的 50–100 kPa 够）。
      */
     id: 'make/euv-nozzle-trim',
-    name: 'EUV 喷嘴制造',
+    name: 'EUV Nozzle Manufacturing', name_zh: 'EUV 喷嘴制造',
     rate: { hours: q(12) },
     produces: [
       {
@@ -673,7 +673,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 这条路线的产出**不含电源、不含红外窗口** —— 两处缺口在文件头 ②③。
      */
     id: 'make/euv-co2-laser',
-    name: 'CO₂ 激光头制造',
+    name: 'CO₂ Laser Head Manufacturing', name_zh: 'CO₂ 激光头制造',
     produces: [
       {
         item: 'plant/euv-source/laser',
@@ -711,7 +711,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 不在电学上，在镜面上。
      */
     id: 'make/euv-dpp-head',
-    name: 'DPP 放电头制造',
+    name: 'DPP Discharge Head Manufacturing', name_zh: 'DPP 放电头制造',
     produces: [{ item: 'plant/euv-source/dpp-head', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/carbon-electrode-300', qty: q(1) }] },
@@ -748,7 +748,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 得到 8.4e-4 Pa —— 文件头问题 1 的氢账就是这么算出来的。
      */
     id: 'make/euv-debris-trap',
-    name: 'EUV 碎屑抑制制造',
+    name: 'EUV Debris Mitigation Manufacturing', name_zh: 'EUV 碎屑抑制制造',
     produces: [{
       item: 'plant/euv-source/debris-trap',
       qty: q(1),
@@ -780,7 +780,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 于是它同时用到 `plant/euv-source`（那台机器）与 `plant/euv-vacuum`（真空）。
      */
     id: 'make/euv-if-module',
-    name: 'EUV 中间焦点组件制造',
+    name: 'EUV Intermediate Focus Module Manufacturing', name_zh: 'EUV 中间焦点组件制造',
     produces: [{ item: 'plant/euv-source/if-module', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(1) }] },
@@ -810,7 +810,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 差别只在它是独立机组、要跑到 1 Pa 并且给涡轮当前级。
      */
     id: 'make/euv-rough-pump',
-    name: '高真空机组粗抽机组制造',
+    name: 'High-Vacuum Pumping System Roughing Pump Set Manufacturing', name_zh: '高真空机组粗抽机组制造',
     produces: [{ item: 'plant/euv-vacuum/pump/rough', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht200', qty: q(40) }] },
@@ -839,7 +839,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 所以这条路线的工序全是真的，"装完能连续跑"那一步是假的 —— 缺口 ①。
      */
     id: 'make/euv-turbo-pump',
-    name: '高真空机组涡轮分子泵制造',
+    name: 'High-Vacuum Pumping System Turbomolecular Pump Manufacturing', name_zh: '高真空机组涡轮分子泵制造',
     produces: [
       {
         item: 'plant/euv-vacuum/pump/turbo',
@@ -870,7 +870,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 它挡水汽与返油。冷面 0.5 m²、液氮耗量 ~1 L/h —— 液氮靠气氮节流自产（缺口 ⑦）。
      */
     id: 'make/euv-cold-trap',
-    name: '高真空机组液氮冷阱制造',
+    name: 'High-Vacuum Pumping System Liquid Nitrogen Cold Trap Manufacturing', name_zh: '高真空机组液氮冷阱制造',
     produces: [{ item: 'plant/euv-vacuum/pump/cold-trap', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/copper', qty: q(6) }] },
@@ -897,7 +897,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 本层测不到自己的工作压力，这是缺口 ⑥。
      */
     id: 'make/euv-vacuum-gauge',
-    name: '高真空机组真空计制造',
+    name: 'High-Vacuum Pumping System Vacuum Gauge Manufacturing', name_zh: '高真空机组真空计制造',
     produces: [{ item: 'plant/euv-vacuum/pump/gauge', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -926,7 +926,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 再烘烤到 150 °C 看压升；没有氦检漏，漏率只能判到 1e-3 Pa·L/s 级。
      */
     id: 'make/euv-source',
-    name: 'EUV 光源整机装配',
+    name: 'EUV Source System Assembly', name_zh: 'EUV 光源整机装配',
     produces: [{ item: 'plant/euv-source', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'plant/euv-source/vessel', qty: q(1) }] },
@@ -987,7 +987,7 @@ export const EUV_SOURCE_ROUTES: readonly Route[] = [
      * 没有氦检漏，漏率只到 1e-3 Pa·L/s 级；涡轮轴承仍是缺口（无油气/陶瓷球脂）。
      */
     id: 'make/euv-vacuum',
-    name: '高真空机组装配',
+    name: 'High-Vacuum Pumping System Assembly', name_zh: '高真空机组装配',
     produces: [{ item: 'plant/euv-vacuum', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'plant/euv-vacuum/pump/rough', qty: q(1) }] },

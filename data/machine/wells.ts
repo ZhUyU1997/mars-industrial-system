@@ -54,7 +54,7 @@ export const WELL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/well-p-wafer',
-    name: 'p 阱注入片',
+    name: 'p-Well Implanted Wafer', name_zh: 'p 阱注入片',
     unit: '片',
     category: 'part',
   },
@@ -66,7 +66,7 @@ export const WELL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/well-implanted-wafer',
-    name: '双阱注入片',
+    name: 'Dual-Well Implanted Wafer', name_zh: '双阱注入片',
     unit: '片',
     category: 'part',
   },
@@ -84,7 +84,7 @@ export const WELL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/well-wafer',
-    name: '阱推进片',
+    name: 'Well Drive-In Wafer', name_zh: '阱推进片',
     unit: '片',
     category: 'part',
     props: [
@@ -113,7 +113,7 @@ export const WELL_ROUTES: readonly Route[] = [
      * 100 keV 只有 22 µA ⇒ **11.4 s**。装卸、抽真空、换片才是大头，一批 3 h。
      */
     id: 'make/implant-well-p',
-    name: 'p 阱注入片制造',
+    name: 'p-Well Implanted Wafer Manufacturing', name_zh: 'p 阱注入片制造',
     produces: [{ item: 'mat/well-p-wafer', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sti-wafer', qty: q(1) }] },
@@ -195,7 +195,7 @@ export const WELL_ROUTES: readonly Route[] = [
      * 一批 3 h 与 p 阱同。
      */
     id: 'make/implant-well-n',
-    name: 'n 阱注入',
+    name: 'n-Well Implantation', name_zh: 'n 阱注入',
     produces: [{ item: 'mat/well-implanted-wafer', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/well-p-wafer', qty: q(1) }] },
@@ -283,7 +283,7 @@ export const WELL_ROUTES: readonly Route[] = [
      * 12 nm），本路线没有切片步骤。
      */
     id: 'make/well-drive-in',
-    name: '阱推进',
+    name: 'Well Drive-In', name_zh: '阱推进',
     produces: [
       {
         item: 'mat/well-wafer',

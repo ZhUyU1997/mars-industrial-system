@@ -14,11 +14,11 @@ import type { Item, Route } from '../../src/index.ts';
 import { q } from '../../src/index.ts';
 
 export const INP_GROWER_PARTS: readonly Item[] = [
-  { id: 'plant/inp-crystal-grower/pull-head/shaft', name: '高压 LEC 单晶炉提拉头轴', unit: '件', category: 'part' },
-  { id: 'plant/inp-crystal-grower/pressure-control/feeder', name: 'B₂O₃ 螺旋加料器', unit: '件', category: 'part' },
-  { id: 'plant/inp-crystal-grower/pressure-control/relief-valve', name: '高压 LEC 单晶炉泄放阀 DN10', unit: '件', category: 'part' },
-  { id: 'plant/inp-crystal-grower/pressure-control/manifold', name: '高压 LEC 单晶炉阀组', unit: '件', category: 'part' },
-  { id: 'plant/inp-crystal-grower/pressure-control/manometer', name: '高压 LEC 单晶炉压力计模块', unit: '件', category: 'part' },
+  { id: 'plant/inp-crystal-grower/pull-head/shaft', name: 'High-Pressure LEC Crystal Grower Pull Head Shaft', name_zh: '高压 LEC 单晶炉提拉头轴', unit: '件', category: 'part' },
+  { id: 'plant/inp-crystal-grower/pressure-control/feeder', name: 'B₂O₃ Screw Feeder', name_zh: 'B₂O₃ 螺旋加料器', unit: '件', category: 'part' },
+  { id: 'plant/inp-crystal-grower/pressure-control/relief-valve', name: 'High-Pressure LEC Crystal Grower Relief Valve DN10', name_zh: '高压 LEC 单晶炉泄放阀 DN10', unit: '件', category: 'part' },
+  { id: 'plant/inp-crystal-grower/pressure-control/manifold', name: 'High-Pressure LEC Crystal Grower Valve Manifold', name_zh: '高压 LEC 单晶炉阀组', unit: '件', category: 'part' },
+  { id: 'plant/inp-crystal-grower/pressure-control/manometer', name: 'High-Pressure LEC Crystal Grower Manometer Module', name_zh: '高压 LEC 单晶炉压力计模块', unit: '件', category: 'part' },
 ];
 
 const INP_GROWER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
@@ -27,7 +27,7 @@ const INP_GROWER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 提拉头轴：45 钢 20 kg，车籽晶夹与软轴，磨轴承位 φ40 h5。 */
     id: 'make/inp-pull-head-shaft',
-    name: '高压 LEC 单晶炉提拉头轴制造',
+    name: 'High-Pressure LEC Crystal Grower Pull Head Shaft Manufacturing', name_zh: '高压 LEC 单晶炉提拉头轴制造',
     produces: [{ item: 'plant/inp-crystal-grower/pull-head/shaft', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(20) }] }],
     steps: [
@@ -38,7 +38,7 @@ const INP_GROWER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** B₂O₃ 螺旋加料器：不锈钢 2 kg，1–10 g/min。 */
     id: 'make/inp-pressure-feeder',
-    name: 'B₂O₃ 螺旋加料器制造',
+    name: 'B₂O₃ Screw Feeder Manufacturing', name_zh: 'B₂O₃ 螺旋加料器制造',
     produces: [{ item: 'plant/inp-crystal-grower/pressure-control/feeder', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(2) }] }],
     steps: [
@@ -49,7 +49,7 @@ const INP_GROWER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 泄放阀 DN10：不锈钢 2 kg，1000–5100 kPa。 */
     id: 'make/inp-pressure-relief-valve',
-    name: '高压 LEC 单晶炉泄放阀 DN10 制造',
+    name: 'High-Pressure LEC Crystal Grower Relief Valve DN10 Manufacturing', name_zh: '高压 LEC 单晶炉泄放阀 DN10 制造',
     produces: [{ item: 'plant/inp-crystal-grower/pressure-control/relief-valve', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(2) }] }],
     steps: [
@@ -64,7 +64,7 @@ const INP_GROWER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
      * 这里做的是接口与标定，所以用 uses 记录表头输入。
      */
     id: 'make/inp-pressure-manometer',
-    name: '高压 LEC 单晶炉压力计模块制造',
+    name: 'High-Pressure LEC Crystal Grower Manometer Module Manufacturing', name_zh: '高压 LEC 单晶炉压力计模块制造',
     produces: [{ item: 'plant/inp-crystal-grower/pressure-control/manometer', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'plant/lpcvd-furnace/manometer', qty: q(1) }] }],
     needs: ['plant/metrology-room'],
@@ -76,7 +76,7 @@ const INP_GROWER_PART_ROUTES_RAW: readonly (Omit<Route, 'needs'> & {
   {
     /** 阀组：不锈钢 1 kg，连接加料器、薄膜规与泄放阀。 */
     id: 'make/inp-pressure-manifold',
-    name: '高压 LEC 单晶炉阀组制造',
+    name: 'High-Pressure LEC Crystal Grower Valve Manifold Manufacturing', name_zh: '高压 LEC 单晶炉阀组制造',
     produces: [{ item: 'plant/inp-crystal-grower/pressure-control/manifold', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/stainless-steel', qty: q(1) }] }],
     performedBy: 'plant/milling-machine',

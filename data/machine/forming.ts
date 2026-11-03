@@ -46,7 +46,7 @@ export const ROLLING_MILL_PARTS: readonly Item[] = [
    * 冷轧的轧制力是几百吨级，牌坊的刚度直接决定板厚公差 —— 它是一座
    * 不会动的"门"，而门框的弹性就是产品的弹性。
    */
-  { id: 'plant/rolling-mill/stand', name: '轧机牌坊', unit: '件', category: 'part' },
+  { id: 'plant/rolling-mill/stand', name: 'Rolling Mill Housing', name_zh: '轧机牌坊', unit: '件', category: 'part' },
 
   /**
    * 轧辊。两根一对，钢坯从中间过，厚度由辊缝决定。
@@ -54,23 +54,23 @@ export const ROLLING_MILL_PARTS: readonly Item[] = [
    * 辊面要磨到镜面：冷轧板的表面就是轧辊表面的复制品。
    * ⚠️ 真轧辊是 9Cr2Mo 锻钢，本链只有 40Cr，代用后淬硬层浅、寿命短。
    */
-  { id: 'plant/rolling-mill/rolls', name: '轧机轧辊', unit: '件', category: 'part' },
+  { id: 'plant/rolling-mill/rolls', name: 'Rolling Mill Rolls', name_zh: '轧机轧辊', unit: '件', category: 'part' },
 
   /** 压下装置。丝杠加蜗轮副，一点一点把辊缝压小 —— 压下量的分辨率就是板厚分辨率。 */
-  { id: 'plant/rolling-mill/screwdown', name: '轧机压下装置', unit: '件', category: 'part' },
+  { id: 'plant/rolling-mill/screwdown', name: 'Rolling Mill Screwdown', name_zh: '轧机压下装置', unit: '件', category: 'part' },
 
   /** 齿轮机座。把电机的扭矩分给上下两根轧辊，齿轮由滚齿机切。 */
-  { id: 'plant/rolling-mill/drive', name: '轧机齿轮机座', unit: '件', category: 'part' },
+  { id: 'plant/rolling-mill/drive', name: 'Rolling Mill Gear Housing', name_zh: '轧机齿轮机座', unit: '件', category: 'part' },
 
   /** 卷取机。把轧出来的薄板卷成卷，卷不齐后面就开不了平。 */
-  { id: 'plant/rolling-mill/recoiler', name: '轧机卷取机', unit: '件', category: 'part' },
+  { id: 'plant/rolling-mill/recoiler', name: 'Rolling Mill Coiler', name_zh: '轧机卷取机', unit: '件', category: 'part' },
 ];
 
 export const ROLLING_MILL_ROUTES: readonly Route[] = [
   {
     /** 牌坊。HT300 浇 → 结合面铣 → 窗口面磨。 */
     id: 'make/rolling-stand',
-    name: '轧机牌坊制造',
+    name: 'Rolling Mill Housing Manufacturing', name_zh: '轧机牌坊制造',
     produces: [{ item: 'plant/rolling-mill/stand', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht300', qty: q(1) }] }],
     needs: ['lathe', 'plant/milling-machine', 'plant/grinder'],
@@ -85,7 +85,7 @@ export const ROLLING_MILL_ROUTES: readonly Route[] = [
      * 工作辊用圆锥滚子（径向 + 轴向定位），支承辊用圆柱滚子（只扛径向，承载更大）。
      */
     id: 'make/rolling-rolls',
-    name: '轧机轧辊制造',
+    name: 'Rolling Mill Rolls Manufacturing', name_zh: '轧机轧辊制造',
     produces: [{ item: 'plant/rolling-mill/rolls', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] },
@@ -98,7 +98,7 @@ export const ROLLING_MILL_ROUTES: readonly Route[] = [
   {
     /** 压下装置。45 钢丝杠车螺纹后淬硬磨，蜗轮由滚齿机切。 */
     id: 'make/rolling-screwdown',
-    name: '轧机压下装置制造',
+    name: 'Rolling Mill Screwdown Manufacturing', name_zh: '轧机压下装置制造',
     produces: [{ item: 'plant/rolling-mill/screwdown', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/milling-machine', 'plant/gear-hobbing', 'plant/grinder'],
@@ -107,7 +107,7 @@ export const ROLLING_MILL_ROUTES: readonly Route[] = [
   {
     /** 齿轮机座。40Cr 齿轮锻件 → 滚齿 → 淬 → 磨齿面。 */
     id: 'make/rolling-drive',
-    name: '轧机齿轮机座制造',
+    name: 'Rolling Mill Gear Housing Manufacturing', name_zh: '轧机齿轮机座制造',
     produces: [{ item: 'plant/rolling-mill/drive', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] }],
     needs: ['lathe', 'plant/grinder'],
@@ -116,7 +116,7 @@ export const ROLLING_MILL_ROUTES: readonly Route[] = [
   {
     /** 卷取机。薄板卷筒焊成 + 45 钢涨缩轴。 */
     id: 'make/rolling-recoiler',
-    name: '轧机卷取机制造',
+    name: 'Rolling Mill Coiler Manufacturing', name_zh: '轧机卷取机制造',
     produces: [{ item: 'plant/rolling-mill/recoiler', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -134,7 +134,7 @@ export const ROLLING_MILL_ROUTES: readonly Route[] = [
  */
 export const ROLLING_MILL: Item = {
   id: 'plant/rolling-mill',
-  name: '轧机',
+  name: 'Rolling Mill', name_zh: '轧机',
   unit: '套',
   category: 'machine',
   composedOf: [...ROLLING_MILL_PARTS.map((p) => ({ item: p.id, qty: q(1) })), { item: 'std/motor-7.5kw-4p', qty: q(1) }],
@@ -146,34 +146,34 @@ export const ROLLING_MILL: Item = {
 
 export const WINDER_PARTS: readonly Item[] = [
   /** 机架。HT250 浇成，承主轴与排线导轨。 */
-  { id: 'plant/winder/frame', name: '绕线机机架', unit: '件', category: 'part' },
+  { id: 'plant/winder/frame', name: 'Winder Frame', name_zh: '绕线机机架', unit: '件', category: 'part' },
 
   /** 主轴与卡盘。夹住骨架转，转速比要宽 —— 绕粗线慢、绕细线快。 */
-  { id: 'plant/winder/mandrel', name: '绕线机主轴与卡盘', unit: '件', category: 'part' },
+  { id: 'plant/winder/mandrel', name: 'Winder Spindle and Chuck', name_zh: '绕线机主轴与卡盘', unit: '件', category: 'part' },
 
   /**
    * 排线丝杠。主轴转一圈，排线走一个线径 —— 否则线会叠在一起。
    *
    * 传动比靠挂轮选，不同线径换不同的轮。它是绕线机唯一需要精度的零件。
    */
-  { id: 'plant/winder/traverse', name: '绕线机排线丝杠', unit: '件', category: 'part' },
+  { id: 'plant/winder/traverse', name: 'Winder Traverse Lead Screw', name_zh: '绕线机排线丝杠', unit: '件', category: 'part' },
 
   /**
    * 张力轮。绕线的灵魂：张力不匀，线就一半松一半紧，线圈会鼓包。
    *
    * 用摩擦盘加弹簧，靠摩擦阻力给张力 —— 比磁粉离合器土，但不需要磁粉。
    */
-  { id: 'plant/winder/tension', name: '绕线机张力轮', unit: '件', category: 'part' },
+  { id: 'plant/winder/tension', name: 'Winder Tension Wheel', name_zh: '绕线机张力轮', unit: '件', category: 'part' },
 
   /** 计数与排线控制。圈数必须准；这一段是种子里的电子元件。 */
-  { id: 'plant/winder/control', name: '绕线机计数与排线控制', unit: '件', category: 'part' },
+  { id: 'plant/winder/control', name: 'Winder Counting and Traverse Control', name_zh: '绕线机计数与排线控制', unit: '件', category: 'part' },
 ];
 
 export const WINDER_ROUTES: readonly Route[] = [
   {
     /** 机架。HT250 浇 → 结合面铣。 */
     id: 'make/winder-frame',
-    name: '绕线机机架制造',
+    name: 'Winder Frame Manufacturing', name_zh: '绕线机机架制造',
     produces: [{ item: 'plant/winder/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     // 结合面在车床花盘上装铣头做（与锻炉机身、铣床工作台同一个土办法）——
@@ -191,7 +191,7 @@ export const WINDER_ROUTES: readonly Route[] = [
      * 这是绕开铬的第一处；以后凡 40Cr 的件都要问一句：非它不可吗。
      */
     id: 'make/winder-mandrel',
-    name: '绕线机主轴与卡盘制造',
+    name: 'Winder Spindle and Chuck Manufacturing', name_zh: '绕线机主轴与卡盘制造',
     produces: [{ item: 'plant/winder/mandrel', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/grinder'],
@@ -200,7 +200,7 @@ export const WINDER_ROUTES: readonly Route[] = [
   {
     /** 排线丝杠。45 钢车螺纹 → 淬 → 磨。 */
     id: 'make/winder-traverse',
-    name: '绕线机排线丝杠制造',
+    name: 'Winder Traverse Lead Screw Manufacturing', name_zh: '绕线机排线丝杠制造',
     produces: [{ item: 'plant/winder/traverse', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/grinder'],
@@ -209,7 +209,7 @@ export const WINDER_ROUTES: readonly Route[] = [
   {
     /** 张力轮。40Cr 摩擦盘车磨 + 弹簧压紧，张力靠手感调，靠摩擦稳。 */
     id: 'make/winder-tension',
-    name: '绕线机张力轮制造',
+    name: 'Winder Tension Wheel Manufacturing', name_zh: '绕线机张力轮制造',
     produces: [{ item: 'plant/winder/tension', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     // 排线丝杠的螺旋槽与轴端：车螺纹 + 花盘装铣头 —— 不写铣镗床。
@@ -224,7 +224,7 @@ export const WINDER_ROUTES: readonly Route[] = [
      * DFS 选 `std/control-board-general`，它不进证明树属预期（PLAN 监控项，不删不塞）。
      */
     id: 'make/winder-control',
-    name: '绕线机计数与排线控制制造',
+    name: 'Winder Counting and Traverse Control Manufacturing', name_zh: '绕线机计数与排线控制制造',
     produces: [{ item: 'plant/winder/control', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/power-device-general', qty: q(1) }] },
@@ -250,7 +250,7 @@ export const WINDER_ROUTES: readonly Route[] = [
      * 功率器件与控制板两处依赖里一起解出来。
      */
     id: 'make/winder-control-relay',
-    name: '绕线机计数与排线控制制造',
+    name: 'Winder Counting and Traverse Control Manufacturing', name_zh: '绕线机计数与排线控制制造',
     produces: [{ item: 'plant/winder/control', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'std/counter-mechanical-general', qty: q(1) }] },
@@ -278,7 +278,7 @@ export const WINDER_ROUTES: readonly Route[] = [
  */
 export const WINDER: Item = {
   id: 'plant/winder',
-  name: '绕线机',
+  name: 'Winder', name_zh: '绕线机',
   unit: '台',
   category: 'machine',
   composedOf: WINDER_PARTS.map((p) => ({ item: p.id, qty: q(1) })),
@@ -290,13 +290,13 @@ export const WINDER: Item = {
 
 export const GEAR_HOBBING_PARTS: readonly Item[] = [
   /** 床身。HT300 浇，导轨面磨 —— 与车床同类，但更怕振动。 */
-  { id: 'plant/gear-hobbing/bed', name: '滚齿机床身', unit: '件', category: 'part' },
+  { id: 'plant/gear-hobbing/bed', name: 'Gear Hobbing Machine Bed', name_zh: '滚齿机床身', unit: '件', category: 'part' },
 
   /** 立柱与刀架。HT300 浇，滚刀装在上面，能轴向窜刀 —— 刀磨短了往里送。 */
-  { id: 'plant/gear-hobbing/column', name: '滚齿机立柱与刀架', unit: '件', category: 'part' },
+  { id: 'plant/gear-hobbing/column', name: 'Gear Hobbing Machine Column and Tool Post', name_zh: '滚齿机立柱与刀架', unit: '件', category: 'part' },
 
   /** 滚刀主轴。40Cr 锻 → 淬 → 磨，与工件主轴按固定传动比同步。 */
-  { id: 'plant/gear-hobbing/hob-spindle', name: '滚齿机滚刀主轴', unit: '件', category: 'part' },
+  { id: 'plant/gear-hobbing/hob-spindle', name: 'Gear Hobbing Machine Hob Spindle', name_zh: '滚齿机滚刀主轴', unit: '件', category: 'part' },
 
   /**
    * 分度盘。一圈精确等分的孔，插销定位。
@@ -304,7 +304,7 @@ export const GEAR_HOBBING_PARTS: readonly Item[] = [
    * **它是这台机器不自指的原因**：孔位在铣镗床上用分度头镗出来，而分度头
    * 是铣镗床的附件 —— 不需要滚齿。代价是分度是断续的，精度比蜗轮副低一档。
    */
-  { id: 'plant/gear-hobbing/index-plate', name: '滚齿机分度盘', unit: '件', category: 'part' },
+  { id: 'plant/gear-hobbing/index-plate', name: 'Gear Hobbing Machine Index Plate', name_zh: '滚齿机分度盘', unit: '件', category: 'part' },
 
   /**
    * 滚刀。轴向开槽的蜗杆，槽就是切削刃。
@@ -312,14 +312,14 @@ export const GEAR_HOBBING_PARTS: readonly Item[] = [
    * ⚠️ 真滚刀要高速钢或硬质合金，两者都要钨，而风化层里不到 1 ppm ——
    * 硬质合金只能从地球带。这里用 40Cr 渗碳淬火代用，切几个齿轮就钝。
    */
-  { id: 'plant/gear-hobbing/hob', name: '滚齿机滚刀', unit: '件', category: 'part' },
+  { id: 'plant/gear-hobbing/hob', name: 'Gear Hobbing Machine Hob', name_zh: '滚齿机滚刀', unit: '件', category: 'part' },
 ];
 
 export const GEAR_HOBBING_ROUTES: readonly Route[] = [
   {
     /** 床身。HT300 浇 → 时效 → 导轨面磨。 */
     id: 'make/gear-bed',
-    name: '滚齿机床身制造',
+    name: 'Gear Hobbing Machine Bed Manufacturing', name_zh: '滚齿机床身制造',
     produces: [{ item: 'plant/gear-hobbing/bed', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht300', qty: q(1) }] }],
     needs: ['lathe', 'plant/milling-machine', 'plant/grinder'],
@@ -329,7 +329,7 @@ export const GEAR_HOBBING_ROUTES: readonly Route[] = [
   {
     /** 立柱与刀架。HT300 浇 → 导轨磨 → 与床身配刮出垂直。 */
     id: 'make/gear-column',
-    name: '滚齿机立柱与刀架制造',
+    name: 'Gear Hobbing Machine Column and Tool Post Manufacturing', name_zh: '滚齿机立柱与刀架制造',
     produces: [{ item: 'plant/gear-hobbing/column', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht300', qty: q(1) }] }],
     needs: ['lathe', 'plant/milling-machine', 'plant/grinder'],
@@ -339,7 +339,7 @@ export const GEAR_HOBBING_ROUTES: readonly Route[] = [
   {
     /** 滚刀主轴。40Cr 锻 → 淬 → 磨锥面与轴颈。 */
     id: 'make/gear-hob-spindle',
-    name: '滚齿机滚刀主轴制造',
+    name: 'Gear Hobbing Machine Hob Spindle Manufacturing', name_zh: '滚齿机滚刀主轴制造',
     produces: [{ item: 'plant/gear-hobbing/hob-spindle', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] }],
     needs: ['plant/grinder'],
@@ -348,7 +348,7 @@ export const GEAR_HOBBING_ROUTES: readonly Route[] = [
   {
     /** 分度盘。45 钢淬硬，孔位用分度头在铣镗床上镗 —— 这是环的出口。 */
     id: 'make/gear-index-plate',
-    name: '滚齿机分度盘制造',
+    name: 'Gear Hobbing Machine Index Plate Manufacturing', name_zh: '滚齿机分度盘制造',
     produces: [{ item: 'plant/gear-hobbing/index-plate', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['lathe', 'plant/grinder'],
@@ -357,7 +357,7 @@ export const GEAR_HOBBING_ROUTES: readonly Route[] = [
   {
     /** 滚刀。40Cr 车蜗杆 → 铣容屑槽 → 渗碳淬火 → 铲磨齿形。 */
     id: 'make/gear-hob',
-    name: '滚齿机滚刀制造',
+    name: 'Gear Hobbing Machine Hob Manufacturing', name_zh: '滚齿机滚刀制造',
     produces: [{ item: 'plant/gear-hobbing/hob', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] }],
     needs: ['lathe', 'plant/grinder'],
@@ -372,7 +372,7 @@ export const GEAR_HOBBING_ROUTES: readonly Route[] = [
  */
 export const GEAR_HOBBING: Item = {
   id: 'plant/gear-hobbing',
-  name: '滚齿机',
+  name: 'Gear Hobbing Machine', name_zh: '滚齿机',
   unit: '台',
   category: 'machine',
   composedOf: [...GEAR_HOBBING_PARTS.map((p) => ({ item: p.id, qty: q(1) })), { item: 'std/motor-7.5kw-4p', qty: q(1) }],
@@ -390,7 +390,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/gear-hobbing',
-    name: '滚齿机装配',
+    name: 'Gear Hobbing Machine Assembly', name_zh: '滚齿机装配',
     produces: [{
       item: 'plant/gear-hobbing',
       qty: q(1),
@@ -402,7 +402,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/rolling-mill',
-    name: '轧机装配',
+    name: 'Rolling Mill Assembly', name_zh: '轧机装配',
     produces: [{
       item: 'plant/rolling-mill',
       qty: q(1),
@@ -414,7 +414,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/winder',
-    name: '绕线机装配',
+    name: 'Winder Assembly', name_zh: '绕线机装配',
     produces: [{
       item: 'plant/winder',
       qty: q(1),

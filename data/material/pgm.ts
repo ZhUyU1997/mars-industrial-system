@@ -168,7 +168,7 @@ export const PGM_MATERIAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pgm-concentrate',
-    name: '铂族精矿',
+    name: 'PGM Concentrate', name_zh: '铂族精矿',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'pgm', kind: 'range', min: 30, max: 70, unit: '%', dir: 'atLeast' }],
@@ -188,7 +188,7 @@ export const PGM_MATERIAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pgm-chloride-solution',
-    name: '氯化液',
+    name: 'Chloride Solution', name_zh: '氯化液',
     unit: 'kg',
     category: 'material',
     props: [
@@ -206,7 +206,7 @@ export const PGM_MATERIAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pgm-pd-solution',
-    name: '钯液',
+    name: 'Palladium Solution', name_zh: '钯液',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'pd', kind: 'range', min: 30, max: 80, unit: 'g/L', dir: 'atLeast' }],
@@ -224,7 +224,7 @@ export const PGM_MATERIAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/ammonium-hexachloroplatinate',
-    name: '氯铂酸铵',
+    name: 'Ammonium Hexachloroplatinate', name_zh: '氯铂酸铵',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 95, max: 100, unit: '%', dir: 'atLeast' }],
@@ -239,7 +239,7 @@ export const PGM_MATERIAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/platinum',
-    name: '铂',
+    name: 'Platinum', name_zh: '铂',
     unit: 'kg',
     category: 'material',
     props: [
@@ -256,7 +256,7 @@ export const PGM_MATERIAL_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/palladium',
-    name: '钯',
+    name: 'Palladium', name_zh: '钯',
     unit: 'kg',
     category: 'material',
     props: [
@@ -279,22 +279,22 @@ export const PGM_MATERIAL_ITEMS: readonly Item[] = [
 
 export const PGM_REFINERY_PARTS: readonly Item[] = [
   /** 浸出槽。316L 卷焊 + PTFE 衬里 + 搅拌 + 氯气分布器；80–100 °C、浓盐酸。 */
-  { id: 'plant/pgm-refinery/leach-tank', name: 'PGM 浸出槽', unit: '件', category: 'part' },
+  { id: 'plant/pgm-refinery/leach-tank', name: 'PGM Leach Tank', name_zh: 'PGM 浸出槽', unit: '件', category: 'part' },
 
   /** 蒸馏柱。100–110 °C 蒸 OsO₄/RuO₄；316L 外壳 + PTFE 填料 + 冷凝段。 */
-  { id: 'plant/pgm-refinery/distillation-column', name: 'PGM 蒸馏柱', unit: '件', category: 'part' },
+  { id: 'plant/pgm-refinery/distillation-column', name: 'PGM Distillation Column', name_zh: 'PGM 蒸馏柱', unit: '件', category: 'part' },
 
   /** 沉淀槽。20–40 °C 加 NH₄Cl，慢搅 4–8 h；316L + PTFE，带加料漏斗。 */
-  { id: 'plant/pgm-refinery/precipitator', name: 'PGM 沉淀槽', unit: '件', category: 'part' },
+  { id: 'plant/pgm-refinery/precipitator', name: 'PGM Precipitator', name_zh: 'PGM 沉淀槽', unit: '件', category: 'part' },
 
   /** 压滤机。PTFE 滤板 + 316L 框；滤饼洗涤到 Cl⁻ ≤50 ppm（AgNO₃ 检不出）。 */
-  { id: 'plant/pgm-refinery/filter-press', name: 'PGM 压滤机', unit: '件', category: 'part' },
+  { id: 'plant/pgm-refinery/filter-press', name: 'PGM Filter Press', name_zh: 'PGM 压滤机', unit: '件', category: 'part' },
 
   /** 碱洗塔。NaOH 循环吸收 Cl₂/HCl/OsO₄；PTFE 填料 + 316L 塔体。 */
-  { id: 'plant/pgm-refinery/scrubber', name: 'PGM 碱洗塔', unit: '件', category: 'part' },
+  { id: 'plant/pgm-refinery/scrubber', name: 'PGM Alkali Scrubber', name_zh: 'PGM 碱洗塔', unit: '件', category: 'part' },
 
   /** 机架与管路。型材焊接 + 法兰 + PTFE 垫；把五件连成一条线。 */
-  { id: 'plant/pgm-refinery/frame', name: 'PGM 精炼装置机架与管路', unit: '件', category: 'part' },
+  { id: 'plant/pgm-refinery/frame', name: 'PGM Refinery Frame and Piping', name_zh: 'PGM 精炼装置机架与管路', unit: '件', category: 'part' },
 ];
 
 /**
@@ -310,7 +310,7 @@ export const PGM_REFINERY_PARTS: readonly Item[] = [
  */
 export const PGM_REFINERY: Item = {
   id: 'plant/pgm-refinery',
-  name: 'PGM 精炼装置',
+  name: 'PGM Refinery', name_zh: 'PGM 精炼装置',
   unit: '套',
   category: 'machine',
   holds: [
@@ -364,7 +364,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-concentrate',
-    name: '铂族精矿制备',
+    name: 'PGM Concentrate Production', name_zh: '铂族精矿制备',
     // 一批 48 h：焙烧 24 h + 矿热炉 24 h（含升温与出料）。
     rate: { hours: q(48) },
     produces: [
@@ -441,7 +441,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-chloride-solution',
-    name: '氯化液制备',
+    name: 'Chloride Solution Production', name_zh: '氯化液制备',
     rate: { hours: q(24) },
     produces: [
       {
@@ -511,7 +511,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/ammonium-hexachloroplatinate',
-    name: '氯铂酸铵制备',
+    name: 'Ammonium Hexachloroplatinate Production', name_zh: '氯铂酸铵制备',
     rate: { hours: q(24) },
     produces: [
       {
@@ -617,7 +617,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/platinum',
-    name: '铂制备',
+    name: 'Platinum Production', name_zh: '铂制备',
     rate: { hours: q(12) },
     produces: [
       {
@@ -689,7 +689,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/palladium',
-    name: '钯制备',
+    name: 'Palladium Production', name_zh: '钯制备',
     rate: { hours: q(20) },
     produces: [
       {
@@ -815,7 +815,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-leach-tank',
-    name: 'PGM 浸出槽制造',
+    name: 'PGM Leach Tank Manufacturing', name_zh: 'PGM 浸出槽制造',
     rate: { hours: q(24) },
     produces: [{ item: 'plant/pgm-refinery/leach-tank', qty: q(1) }],
     uses: [
@@ -840,7 +840,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-distillation-column',
-    name: 'PGM 蒸馏柱制造',
+    name: 'PGM Distillation Column Manufacturing', name_zh: 'PGM 蒸馏柱制造',
     rate: { hours: q(24) },
     produces: [{ item: 'plant/pgm-refinery/distillation-column', qty: q(1) }],
     uses: [
@@ -866,7 +866,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-precipitator',
-    name: 'PGM 沉淀槽制造',
+    name: 'PGM Precipitator Manufacturing', name_zh: 'PGM 沉淀槽制造',
     rate: { hours: q(20) },
     produces: [{ item: 'plant/pgm-refinery/precipitator', qty: q(1) }],
     uses: [
@@ -892,7 +892,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-filter-press',
-    name: 'PGM 压滤机制造',
+    name: 'PGM Filter Press Manufacturing', name_zh: 'PGM 压滤机制造',
     rate: { hours: q(20) },
     produces: [{ item: 'plant/pgm-refinery/filter-press', qty: q(1) }],
     uses: [
@@ -918,7 +918,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-scrubber',
-    name: 'PGM 碱洗塔制造',
+    name: 'PGM Alkali Scrubber Manufacturing', name_zh: 'PGM 碱洗塔制造',
     rate: { hours: q(16) },
     produces: [{ item: 'plant/pgm-refinery/scrubber', qty: q(1) }],
     uses: [
@@ -942,7 +942,7 @@ export const PGM_ROUTES: readonly Route[] = [
    */
   {
     id: 'make/pgm-frame',
-    name: 'PGM 精炼装置机架与管路制造',
+    name: 'PGM Refinery Frame and Piping Manufacturing', name_zh: 'PGM 精炼装置机架与管路制造',
     rate: { hours: q(12) },
     produces: [{ item: 'plant/pgm-refinery/frame', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(200) }] }],
@@ -978,7 +978,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/pgm-refinery',
-    name: 'PGM 精炼装置装配',
+    name: 'PGM Refinery Assembly', name_zh: 'PGM 精炼装置装配',
     produces: [{
       item: 'plant/pgm-refinery',
       qty: q(1),

@@ -290,7 +290,7 @@ export const UNBLOCK_REFR_CIRCLE_ROUTES: readonly Route[] = [
      *    （0.01 mm = 26″）就白算（第四节①）
      */
     id: 'make/refractometer-circle-engraved',
-    name: '折射仪分度盘制造',
+    name: 'Refractometer Graduated Circle Manufacturing', name_zh: '折射仪分度盘制造',
     produces: [{ item: 'plant/refractometer/circle', qty: q(1) }],
     uses: [
       /**

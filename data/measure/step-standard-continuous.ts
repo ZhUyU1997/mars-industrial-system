@@ -13,7 +13,7 @@ import { q } from '../../src/index.ts';
 export const STEP_STANDARD_CONTINUOUS_ITEMS: readonly Item[] = [
   {
     id: 'std/step-standard-1-10nm-continuous',
-    name: '1–10 nm 连续台阶标准件',
+    name: '1–10 nm Continuous Step Height Standard', name_zh: '1–10 nm 连续台阶标准件',
     unit: '片',
     category: 'part',
     props: [
@@ -31,7 +31,7 @@ export const STEP_STANDARD_CONTINUOUS_ROUTES: readonly Route[] = [
      * **10 区连续台阶：每区 10n 周期 ALD，n=1..10；X 射线逐区定值。**
      */
     id: 'make/step-standard-1-10nm-continuous',
-    name: '1–10 nm 连续台阶标准件制造',
+    name: '1–10 nm Continuous Step Height Standard Manufacturing', name_zh: '1–10 nm 连续台阶标准件制造',
     produces: [{
       item: 'std/step-standard-1-10nm-continuous',
       qty: q(1),

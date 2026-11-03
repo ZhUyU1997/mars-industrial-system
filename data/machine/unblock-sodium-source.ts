@@ -426,7 +426,7 @@ import { q } from '../../src/index.ts';
  * 同一条目两个真相就是 `duplicate_id`。**定义与制造分离。**
  */
 export const UNBLOCK_SODIUM_SRC_ITEMS: readonly Item[] = [
-  { id: 'mat/sodium', name: '钠', unit: 'kg', category: 'material',
+  { id: 'mat/sodium', name: 'Sodium', name_zh: '钠', unit: 'kg', category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 95, max: 99.9, unit: '%' }] },
 ];
 
@@ -479,7 +479,7 @@ export const UNBLOCK_SODIUM_SRC_ROUTES: readonly Route[] = [
      *   ⑤ 封罐（石灰压口、钢板盖卷边、钢印打批号）
      */
     id: 'make/sodium-castner',
-    name: '单质钠制备',
+    name: 'Elemental Sodium Production', name_zh: '单质钠制备',
     produces: [{ item: 'mat/sodium', qty: q(1), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5, dir: 'atLeast' }] }],
     uses: [
       /**
@@ -646,7 +646,7 @@ export const UNBLOCK_SODIUM_SRC_ROUTES: readonly Route[] = [
      *  ③ 石英不耐钠 → 1 000 h 后窗失透：92% → 80–85% 透过率
      */
     id: 'make/interferometer-sodium-source',
-    name: '干涉仪钠光源制造',
+    name: 'Interferometer Sodium Light Source Manufacturing', name_zh: '干涉仪钠光源制造',
     produces: [{ item: 'plant/interferometer/sodium-source', qty: q(1) }],
     uses: [
       /**

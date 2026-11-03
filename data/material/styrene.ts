@@ -43,19 +43,19 @@ import { q } from '../../src/index.ts';
 
 export const STYRENE_ITEMS: readonly Item[] = [
   /** 乙烯。无色气体，沸点 −103.7 °C。塑料与乙苯的原料。 */
-  { id: 'mat/ethylene', name: '乙烯', unit: 'kg', category: 'material' },
+  { id: 'mat/ethylene', name: 'Ethylene', name_zh: '乙烯', unit: 'kg', category: 'material' },
 
   /** 三氯化铝。黄色晶体，遇水剧烈水解 —— 傅克反应的催化剂，也是本层第一个"催化剂量"的料。 */
-  { id: 'mat/aluminium-chloride', name: '三氯化铝', unit: 'kg', category: 'material' },
+  { id: 'mat/aluminium-chloride', name: 'Aluminium Chloride', name_zh: '三氯化铝', unit: 'kg', category: 'material' },
 
   /** 乙苯。苯环上一个乙基，沸点 136 °C。苯乙烯的前体。 */
-  { id: 'mat/ethylbenzene', name: '乙苯', unit: 'kg', category: 'material' },
+  { id: 'mat/ethylbenzene', name: 'Ethylbenzene', name_zh: '乙苯', unit: 'kg', category: 'material' },
 
   /** 苯乙烯。苯环上一个乙烯基，沸点 145 °C。遇热自己聚合，所以要加阻聚剂、低温存。 */
-  { id: 'mat/styrene', name: '苯乙烯', unit: 'kg', category: 'material' },
+  { id: 'mat/styrene', name: 'Styrene', name_zh: '苯乙烯', unit: 'kg', category: 'material' },
 
   /** 二乙烯苯。两个乙烯基，是交联剂 —— 它决定树脂珠的孔结构与强度。 */
-  { id: 'mat/divinylbenzene', name: '二乙烯苯', unit: 'kg', category: 'material' },
+  { id: 'mat/divinylbenzene', name: 'Divinylbenzene', name_zh: '二乙烯苯', unit: 'kg', category: 'material' },
 
   /**
    * 强酸阳离子交换树脂。磺化的苯乙烯-二乙烯苯共聚珠，5% 交联度。
@@ -63,7 +63,7 @@ export const STYRENE_ITEMS: readonly Item[] = [
    * 它的作用是**把水里的离子换掉**：磺酸基（—SO₃H）上的 H⁺ 与水里的 Na⁺、Ca²⁺ 交换。
    * 有了它，超纯水才能从 1–5 MΩ·cm 到 18 MΩ·cm。
    */
-  { id: 'mat/cation-resin', name: '强酸阳离子交换树脂', unit: 'kg', category: 'material' },
+  { id: 'mat/cation-resin', name: 'Strong-Acid Cation Exchange Resin', name_zh: '强酸阳离子交换树脂', unit: 'kg', category: 'material' },
 ];
 
 export const STYRENE_ROUTES: readonly Route[] = [
@@ -81,7 +81,7 @@ export const STYRENE_ROUTES: readonly Route[] = [
      * 冷媒是液氮（空分副产），所以这条路线要空分在场。
      */
     id: 'make/ethylene',
-    name: '乙烯制备',
+    name: 'Ethylene Production', name_zh: '乙烯制备',
     produces: [{ item: 'mat/ethylene', qty: q(700) }],
     uses: [
       { anyOf: [{ item: 'mat/acetylene', qty: q(1000) }] },
@@ -95,7 +95,7 @@ export const STYRENE_ROUTES: readonly Route[] = [
   {
     /** 三氯化铝：熔融铝与干燥氯气反应，升华收集。铝 200 + 氯 790 → AlCl₃ 980。 */
     id: 'make/aluminium-chloride',
-    name: '三氯化铝制备',
+    name: 'Aluminium Chloride Production', name_zh: '三氯化铝制备',
     produces: [
       { item: 'mat/aluminium-chloride', qty: q(980) },
       { item: 'mat/tailings', qty: q(10) },
@@ -119,7 +119,7 @@ export const STYRENE_ROUTES: readonly Route[] = [
      * 多烷基苯返回烷基化器 —— 这个循环本层写不出来（没有回流），记在注释里。
      */
     id: 'make/ethylbenzene',
-    name: '乙苯制备',
+    name: 'Ethylbenzene Production', name_zh: '乙苯制备',
     produces: [{ item: 'mat/ethylbenzene', qty: q(1000) }],
     uses: [
       { anyOf: [{ item: 'mat/benzene', qty: q(950) }] },
@@ -147,7 +147,7 @@ export const STYRENE_ROUTES: readonly Route[] = [
      * 也就是说火星的稀薄大气在这条链上帮了忙，而不是添麻烦。
      */
     id: 'make/styrene',
-    name: '苯乙烯制备',
+    name: 'Styrene Production', name_zh: '苯乙烯制备',
     produces: [
       { item: 'mat/styrene', qty: q(850) },
       { item: 'mat/ethylbenzene', qty: q(430) },
@@ -173,7 +173,7 @@ export const STYRENE_ROUTES: readonly Route[] = [
      * 它是交联剂，用量只有树脂的 5–8% —— 但它决定树脂珠能不能撑住水流的冲刷。
      */
     id: 'make/divinylbenzene',
-    name: '二乙烯苯制备',
+    name: 'Divinylbenzene Production', name_zh: '二乙烯苯制备',
     produces: [
       { item: 'mat/divinylbenzene', qty: q(600) },
       {
@@ -210,7 +210,7 @@ export const STYRENE_ROUTES: readonly Route[] = [
      * **这一步决定交换容量**（每克干树脂多少毫克当量），而模型没有容量。
      */
     id: 'make/cation-resin',
-    name: '阳离子交换树脂制备',
+    name: 'Cation Exchange Resin Production', name_zh: '阳离子交换树脂制备',
     produces: [
       { item: 'mat/cation-resin', qty: q(1000) },
       {

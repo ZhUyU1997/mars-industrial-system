@@ -52,7 +52,7 @@ export const ALUMINIUM_ITEMS: readonly Item[] = [
    * 氧化铝（Al₂O₃）。酸法从风化层提出来，纯度要求比冶金级硅低得多，
    * 但比水泥用的大得多：电解槽里的杂质会进铝。
    */
-  { id: 'mat/alumina', name: '氧化铝', unit: 'kg', category: 'material',
+  { id: 'mat/alumina', name: 'Alumina', name_zh: '氧化铝', unit: 'kg', category: 'material',
     props: [{ param: 'al2o3', kind: 'range', min: 90, max: 99.5, unit: '%' }] },
 
   /**
@@ -61,10 +61,10 @@ export const ALUMINIUM_ITEMS: readonly Item[] = [
    * 它是"铝链的隐藏前提"：没有它，Al₂O₃ 要在 2072 °C 才熔化，而那个温度
    * 没有容器撑得住。
    */
-  { id: 'mat/cryolite', name: '冰晶石', unit: 'kg', category: 'material' },
+  { id: 'mat/cryolite', name: 'Cryolite', name_zh: '冰晶石', unit: 'kg', category: 'material' },
 
   /** 铝。霍尔-埃鲁法，960 °C，碳阳极、冰晶石熔体。导电、轻、不生锈。 */
-  { id: 'mat/aluminium', name: '铝', unit: 'kg', category: 'material' },
+  { id: 'mat/aluminium', name: 'Aluminium', name_zh: '铝', unit: 'kg', category: 'material' },
 ];
 
 export const ALUMINIUM_ROUTES: readonly Route[] = [
@@ -81,7 +81,7 @@ export const ALUMINIUM_ROUTES: readonly Route[] = [
      * 数字按 100% 给，是为了让"9% 品位"这件事一眼看得见。
      */
     id: 'make/alumina',
-    name: '酸法提铝制备',
+    name: 'Acid-Process Alumina Production', name_zh: '酸法提铝制备',
     produces: [
       { item: 'mat/alumina', qty: q(1000), gives: [{ param: 'al2o3', kind: 'range', min: 95, max: 99, dir: 'atLeast' }] },
       { item: 'mat/tailings', qty: q(10111) },
@@ -107,7 +107,7 @@ export const ALUMINIUM_ROUTES: readonly Route[] = [
      * 各取一段，拼出一件新东西"的第一次。地球上也只有一个矿坑有它。
      */
     id: 'make/cryolite',
-    name: '冰晶石制备',
+    name: 'Cryolite Production', name_zh: '冰晶石制备',
     produces: [
       { item: 'mat/cryolite', qty: q(1000) },
       { item: 'mat/water', qty: q(386), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -135,7 +135,7 @@ export const ALUMINIUM_ROUTES: readonly Route[] = [
      * `mat/spent-bath`（冰晶石 60–80 %、AlF₃ 10–25 %），破碎筛分后回槽。
      */
     id: 'make/aluminium',
-    name: '霍尔-埃鲁法制备',
+    name: 'Hall-Héroult Process Production', name_zh: '霍尔-埃鲁法制备',
     produces: [
       { item: 'mat/aluminium', qty: q(1000) },
       { item: 'mat/co2', qty: q(1223) },
@@ -172,7 +172,7 @@ export const ALUMINIUM_CELL_PARTS: readonly Item[] = [
    * 它要同时承住 960 °C 的熔盐、几百千安的电流、以及铝液的重量，
    * 而外壳摸上去不能烫手 —— 四层材料各管一件事。
    */
-  { id: 'plant/aluminium-cell/shell', name: '铝电解槽槽壳', unit: '件', category: 'part' },
+  { id: 'plant/aluminium-cell/shell', name: 'Aluminium Electrolysis Cell Shell', name_zh: '铝电解槽槽壳', unit: '件', category: 'part' },
 
   /**
    * 阴极碳块。槽底铺一排碳块，钢棒从底下穿出接母线。
@@ -180,14 +180,14 @@ export const ALUMINIUM_CELL_PARTS: readonly Item[] = [
    * 材料与矿热炉电极同源（碳粉 + 酚醛树脂），但形状不同：电极是圆棒，
    * 阴极是长方形块，要开槽嵌钢棒。
    */
-  { id: 'plant/aluminium-cell/cathode', name: '铝电解槽阴极碳块', unit: '件', category: 'part' },
+  { id: 'plant/aluminium-cell/cathode', name: 'Aluminium Electrolysis Cell Cathode Carbon Block', name_zh: '铝电解槽阴极碳块', unit: '件', category: 'part' },
 
   /**
    * 阳极碳块。20–30 块一组，挂在母线上，慢慢烧掉，烧完换新的。
    *
    * **它才是这个工艺的燃料**：每吨铝 334 kg 阳极被电解出来的氧烧掉。
    */
-  { id: 'plant/aluminium-cell/anode', name: '铝电解槽阳极碳块', unit: '件', category: 'part' },
+  { id: 'plant/aluminium-cell/anode', name: 'Aluminium Electrolysis Cell Anode Carbon Block', name_zh: '铝电解槽阳极碳块', unit: '件', category: 'part' },
 
   /**
    * 母线。几千安的直流电从阳极进、阴极出。
@@ -195,7 +195,7 @@ export const ALUMINIUM_CELL_PARTS: readonly Item[] = [
    * 用铝不用铜：铜贵 8333:1，而铝现在自己就能造 —— 这是铝链补上之后
    * 立刻能兑现的第一个好处。
    */
-  { id: 'plant/aluminium-cell/busbar', name: '铝电解槽母线', unit: '件', category: 'part' },
+  { id: 'plant/aluminium-cell/busbar', name: 'Aluminium Electrolysis Cell Busbar', name_zh: '铝电解槽母线', unit: '件', category: 'part' },
 
   /**
    * 槽壳冷却。**铝电解是全表最热的一处**：每吨铝 13–15 MWh 的余热，
@@ -204,17 +204,17 @@ export const ALUMINIUM_CELL_PARTS: readonly Item[] = [
    * 铝板焊成的水套贴在槽壳外侧，工质用**氨**不是水 —— 槽边夜里到零下，
    * 水会冻裂。氨是它在这套体系里的第二个身份（第一个是纯碱与玻璃的原料）。
    */
-  { id: 'plant/aluminium-cell/shell-cooling', name: '铝电解槽槽壳冷却', unit: '件', category: 'part' },
+  { id: 'plant/aluminium-cell/shell-cooling', name: 'Aluminium Electrolysis Cell Shell Cooling', name_zh: '铝电解槽槽壳冷却', unit: '件', category: 'part' },
 
   /** 集气罩。罩住阳极气体（CO₂ 为主、少量氟化物），抽走净化。 */
-  { id: 'plant/aluminium-cell/hood', name: '铝电解槽集气罩', unit: '件', category: 'part' },
+  { id: 'plant/aluminium-cell/hood', name: 'Aluminium Electrolysis Cell Gas Collection Hood', name_zh: '铝电解槽集气罩', unit: '件', category: 'part' },
 ];
 
 export const ALUMINIUM_CELL_ROUTES: readonly Route[] = [
   {
     /** 槽壳。钢壳卷焊 → 铺保温与耐火 → 砌阴极块。 */
     id: 'make/cell-shell',
-    name: '铝电解槽槽壳制造',
+    name: 'Aluminium Electrolysis Cell Shell Manufacturing', name_zh: '铝电解槽槽壳制造',
     produces: [{ item: 'plant/aluminium-cell/shell', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -226,7 +226,7 @@ export const ALUMINIUM_CELL_ROUTES: readonly Route[] = [
   {
     /** 阴极碳块。碳粉 + 树脂混捏 → 模压成块 → 1100–1300 °C 焙烧 → 开槽嵌钢棒。 */
     id: 'make/cell-cathode',
-    name: '铝电解槽阴极碳块制造',
+    name: 'Aluminium Electrolysis Cell Cathode Carbon Block Manufacturing', name_zh: '铝电解槽阴极碳块制造',
     produces: [{ item: 'plant/aluminium-cell/cathode', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(1) }] },
@@ -239,7 +239,7 @@ export const ALUMINIUM_CELL_ROUTES: readonly Route[] = [
   {
     /** 阳极碳块。同源工艺，多一道钢爪浇铸。 */
     id: 'make/cell-anode',
-    name: '铝电解槽阳极碳块制造',
+    name: 'Aluminium Electrolysis Cell Anode Carbon Block Manufacturing', name_zh: '铝电解槽阳极碳块制造',
     produces: [{ item: 'plant/aluminium-cell/anode', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(1) }] },
@@ -257,7 +257,7 @@ export const ALUMINIUM_CELL_ROUTES: readonly Route[] = [
      * 烧损与吸氢都大。能用，但不是化铝该用的炉子（铝液炉是 700–800 °C）。
      */
     id: 'make/cell-busbar',
-    name: '铝电解槽母线制造',
+    name: 'Aluminium Electrolysis Cell Busbar Manufacturing', name_zh: '铝电解槽母线制造',
     produces: [{ item: 'plant/aluminium-cell/busbar', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/aluminium', qty: q(1) }] }],
     needs: ['plant/milling-machine'],
@@ -267,7 +267,7 @@ export const ALUMINIUM_CELL_ROUTES: readonly Route[] = [
   {
     /** 槽壳水套。铝板卷焊，氨工质，配集管与回液管。 */
     id: 'make/cell-cooling',
-    name: '铝电解槽槽壳冷却制造',
+    name: 'Aluminium Electrolysis Cell Shell Cooling Manufacturing', name_zh: '铝电解槽槽壳冷却制造',
     produces: [{ item: 'plant/aluminium-cell/shell-cooling', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/aluminium', qty: q(1) }] },
@@ -279,7 +279,7 @@ export const ALUMINIUM_CELL_ROUTES: readonly Route[] = [
   {
     /** 集气罩。薄板折弯焊成，接排烟管。 */
     id: 'make/cell-hood',
-    name: '铝电解槽集气罩制造',
+    name: 'Aluminium Electrolysis Cell Gas Collection Hood Manufacturing', name_zh: '铝电解槽集气罩制造',
     produces: [{ item: 'plant/aluminium-cell/hood', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] }],
     needs: [],
@@ -297,7 +297,7 @@ export const ALUMINIUM_CELL_ROUTES: readonly Route[] = [
  */
 export const ALUMINIUM_CELL: Item = {
   id: 'plant/aluminium-cell',
-  name: '铝电解槽',
+  name: 'Aluminium Electrolysis Cell', name_zh: '铝电解槽',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'temperature', min: 940, max: 980 }],
@@ -316,7 +316,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/aluminium-cell',
-    name: '铝电解槽装配',
+    name: 'Aluminium Electrolysis Cell Assembly', name_zh: '铝电解槽装配',
     produces: [{
       item: 'plant/aluminium-cell',
       qty: q(1),

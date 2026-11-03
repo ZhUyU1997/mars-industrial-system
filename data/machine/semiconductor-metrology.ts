@@ -121,7 +121,7 @@ const FILM_STRESS_METER_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-stress-meter/scan-head',
-    name: '膜应力仪扫描头',
+    name: 'Film Stress Meter Scan Head', name_zh: '膜应力仪扫描头',
     unit: '件',
     category: 'part',
     props: [
@@ -147,7 +147,7 @@ const FILM_STRESS_METER_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-stress-meter/chuck',
-    name: '膜应力仪卡盘',
+    name: 'Film Stress Meter Chuck', name_zh: '膜应力仪卡盘',
     unit: '件',
     category: 'part',
     props: [
@@ -170,7 +170,7 @@ const FILM_STRESS_METER_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-stress-meter/psd',
-    name: '膜应力仪位置敏感探测器',
+    name: 'Film Stress Meter Position-Sensitive Detector', name_zh: '膜应力仪位置敏感探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -192,7 +192,7 @@ const FILM_STRESS_METER_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-stress-meter/base',
-    name: '膜应力仪基座',
+    name: 'Film Stress Meter Base', name_zh: '膜应力仪基座',
     unit: '件',
     category: 'part',
     props: [
@@ -212,7 +212,7 @@ const FILM_STRESS_METER_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-stress-meter/readout',
-    name: '膜应力仪读数与扫描控制',
+    name: 'Film Stress Meter Readout and Scan Control', name_zh: '膜应力仪读数与扫描控制',
     unit: '件',
     category: 'part',
     props: [
@@ -241,7 +241,7 @@ const FILM_STRESS_METER_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-stress-meter/curvature-standard',
-    name: '膜应力仪曲率标准',
+    name: 'Film Stress Meter Curvature Standard', name_zh: '膜应力仪曲率标准',
     unit: '件',
     category: 'part',
     props: [
@@ -271,7 +271,7 @@ const FILM_STRESS_METER_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/film-stress-meter',
-    name: '膜应力仪',
+    name: 'Film Stress Meter', name_zh: '膜应力仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -290,7 +290,7 @@ const FILM_STRESS_METER_ALL_ROUTES: readonly Route[] = [
   {
     /** 扫描头：车镜筒 → 磨/抛窗口 → 装分束片与 PSD → 用平晶对光。 */
     id: 'make/film-stress-scan-head',
-    name: '膜应力仪扫描头制造',
+    name: 'Film Stress Meter Scan Head Manufacturing', name_zh: '膜应力仪扫描头制造',
     produces: [
       {
         item: 'plant/film-stress-meter/scan-head',
@@ -332,7 +332,7 @@ const FILM_STRESS_METER_ALL_ROUTES: readonly Route[] = [
   {
     /** 卡盘：浇 HT250 板 → 铣三点的窝 → 磨平面 → 装倾斜螺钉。 */
     id: 'make/film-stress-chuck',
-    name: '膜应力仪卡盘制造',
+    name: 'Film Stress Meter Chuck Manufacturing', name_zh: '膜应力仪卡盘制造',
     produces: [
       {
         item: 'plant/film-stress-meter/chuck',
@@ -372,7 +372,7 @@ const FILM_STRESS_METER_ALL_ROUTES: readonly Route[] = [
   {
     /** PSD：划两只裸管 → 夹狭缝 → 装 10 MΩ 跨阻 → 标线性。 */
     id: 'make/film-stress-psd',
-    name: '膜应力仪位置敏感探测器制造',
+    name: 'Film Stress Meter Position-Sensitive Detector Manufacturing', name_zh: '膜应力仪位置敏感探测器制造',
     produces: [
       {
         item: 'plant/film-stress-meter/psd',
@@ -410,7 +410,7 @@ const FILM_STRESS_METER_ALL_ROUTES: readonly Route[] = [
   {
     /** 基座：浇 120 kg 铸铁 → 铣/磨 → 垫矿棉 → 装三点隔振。 */
     id: 'make/film-stress-base',
-    name: '膜应力仪基座制造',
+    name: 'Film Stress Meter Base Manufacturing', name_zh: '膜应力仪基座制造',
     produces: [
       {
         item: 'plant/film-stress-meter/base',
@@ -449,7 +449,7 @@ const FILM_STRESS_METER_ALL_ROUTES: readonly Route[] = [
   {
     /** 读数：装 20 位 ADC 与四通道 → 烧二次拟合程序 → 标零点。 */
     id: 'make/film-stress-readout',
-    name: '膜应力仪读数与扫描控制制造',
+    name: 'Film Stress Meter Readout and Scan Control Manufacturing', name_zh: '膜应力仪读数与扫描控制制造',
     produces: [
       {
         item: 'plant/film-stress-meter/readout',
@@ -491,7 +491,7 @@ const FILM_STRESS_METER_ALL_ROUTES: readonly Route[] = [
   {
     /** 曲率标准：四片硅片背面磨球冠 → 干涉仪/比较仪量 R → 编号。 */
     id: 'make/film-stress-curvature-standard',
-    name: '膜应力仪曲率标准制造',
+    name: 'Film Stress Meter Curvature Standard Manufacturing', name_zh: '膜应力仪曲率标准制造',
     produces: [
       {
         item: 'plant/film-stress-meter/curvature-standard',
@@ -538,7 +538,7 @@ const FILM_STRESS_METER_ALL_ROUTES: readonly Route[] = [
      * "尺是量具，不是零件"同一条。
      */
     id: 'make/film-stress-meter',
-    name: '膜应力仪装配',
+    name: 'Film Stress Meter Assembly', name_zh: '膜应力仪装配',
     produces: [
       {
         item: 'plant/film-stress-meter',
@@ -615,7 +615,7 @@ const PARTICLE_COUNTER_UV_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter-uv/illuminator',
-    name: '紫外颗粒计数器线照明头',
+    name: 'UV Particle Counter Line Illuminator Head', name_zh: '紫外颗粒计数器线照明头',
     unit: '件',
     category: 'part',
     props: [
@@ -641,7 +641,7 @@ const PARTICLE_COUNTER_UV_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter-uv/collection',
-    name: '高 NA 收集槽',
+    name: 'High-NA Collection Trough', name_zh: '高 NA 收集槽',
     unit: '件',
     category: 'part',
     props: [
@@ -663,7 +663,7 @@ const PARTICLE_COUNTER_UV_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter-uv/detector',
-    name: '浅结 VUV 探测头',
+    name: 'Shallow-Junction VUV Detector Head', name_zh: '浅结 VUV 探测头',
     unit: '件',
     category: 'part',
     props: [
@@ -684,7 +684,7 @@ const PARTICLE_COUNTER_UV_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter-uv/stage',
-    name: '片子台',
+    name: 'Wafer Stage', name_zh: '片子台',
     unit: '件',
     category: 'part',
     props: [
@@ -704,7 +704,7 @@ const PARTICLE_COUNTER_UV_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter-uv/readout',
-    name: '光子计数读数',
+    name: 'Photon Counting Readout', name_zh: '光子计数读数',
     unit: '件',
     category: 'part',
     props: [
@@ -726,7 +726,7 @@ const PARTICLE_COUNTER_UV_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter-uv/calibration-wafer',
-    name: '0.05 µm 校准片',
+    name: '0.05 µm Calibration Wafer', name_zh: '0.05 µm 校准片',
     unit: '件',
     category: 'part',
     props: [
@@ -751,7 +751,7 @@ const PARTICLE_COUNTER_UV_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/particle-counter-uv',
-    name: '0.5 µm 紫外颗粒计数器',
+    name: '0.5 µm UV Particle Counter', name_zh: '0.5 µm 紫外颗粒计数器',
     unit: '台',
     category: 'machine',
     holds: [
@@ -775,7 +775,7 @@ const PARTICLE_COUNTER_UV_ALL_ROUTES: readonly Route[] = [
   {
     /** 照明头：车镜座 → 磨柱面 → 抛 → 镀铝 → 装挡光板/碳阱 → 打痕验线宽。 */
     id: 'make/particle-uv-illuminator',
-    name: '紫外颗粒计数器线照明头制造',
+    name: 'UV Particle Counter Line Illuminator Head Manufacturing', name_zh: '紫外颗粒计数器线照明头制造',
     produces: [
       {
         item: 'plant/particle-counter-uv/illuminator',
@@ -817,7 +817,7 @@ const PARTICLE_COUNTER_UV_ALL_ROUTES: readonly Route[] = [
   {
     /** 收集槽：铣槽 → 精车直纹面 → 抛 → 镀铝 → 沿线验均匀性。 */
     id: 'make/particle-uv-collection',
-    name: '高 NA 收集槽制造',
+    name: 'High-NA Collection Trough Manufacturing', name_zh: '高 NA 收集槽制造',
     produces: [
       {
         item: 'plant/particle-counter-uv/collection',
@@ -858,7 +858,7 @@ const PARTICLE_COUNTER_UV_ALL_ROUTES: readonly Route[] = [
   {
     /** 探测头：注入 → 退火 → 蒸铝 → 划片 → 装管座 → 测暗电流/响应度。 */
     id: 'make/particle-uv-detector',
-    name: '浅结 VUV 探测头制造',
+    name: 'Shallow-Junction VUV Detector Head Manufacturing', name_zh: '浅结 VUV 探测头制造',
     produces: [
       {
         item: 'plant/particle-counter-uv/detector',
@@ -910,7 +910,7 @@ const PARTICLE_COUNTER_UV_ALL_ROUTES: readonly Route[] = [
   {
     /** 片子台：铣滑座 → 磨导轨 → 刮研 → 装 0.5 mm/转丝杠与限位块。 */
     id: 'make/particle-uv-stage',
-    name: '片子台制造',
+    name: 'Wafer Stage Manufacturing', name_zh: '片子台制造',
     produces: [
       {
         item: 'plant/particle-counter-uv/stage',
@@ -946,7 +946,7 @@ const PARTICLE_COUNTER_UV_ALL_ROUTES: readonly Route[] = [
   {
     /** 读数：装双通道跨阻 → 20 位 ADC → 5σ 计数与参考归一化。 */
     id: 'make/particle-uv-readout',
-    name: '光子计数读数制造',
+    name: 'Photon Counting Readout Manufacturing', name_zh: '光子计数读数制造',
     produces: [
       {
         item: 'plant/particle-counter-uv/readout',
@@ -984,7 +984,7 @@ const PARTICLE_COUNTER_UV_ALL_ROUTES: readonly Route[] = [
   {
     /** 校准片：稀释硅溶胶 → 旋涂 → 干燥 → 标称密度。 */
     id: 'make/particle-uv-calibration-wafer',
-    name: '0.05 µm 校准片制造',
+    name: '0.05 µm Calibration Wafer Manufacturing', name_zh: '0.05 µm 校准片制造',
     produces: [
       {
         item: 'plant/particle-counter-uv/calibration-wafer',
@@ -1027,7 +1027,7 @@ const PARTICLE_COUNTER_UV_ALL_ROUTES: readonly Route[] = [
      * 正好是本机要的，不重复造。
      */
     id: 'make/particle-counter-uv',
-    name: '0.5 µm 紫外颗粒计数器装配',
+    name: '0.5 µm UV Particle Counter Assembly', name_zh: '0.5 µm 紫外颗粒计数器装配',
     produces: [
       {
         item: 'plant/particle-counter-uv',
@@ -1099,7 +1099,7 @@ const PARTICLE_COUNTER_UV_ALL_ROUTES: readonly Route[] = [
      * 噪声 3.2×10⁻¹⁴ A 的旧锁相；本机 10 GΩ + 1 mm² 的噪声更低）。
      */
     id: 'make/wafer-inspect-uv',
-    name: '检验后晶圆制造',
+    name: 'Inspected Wafer Manufacturing', name_zh: '检验后晶圆制造',
     produces: [
       {
         item: 'mat/wafer-inspected',
@@ -1172,7 +1172,7 @@ const FTIR_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ftir/source',
-    name: '傅里叶变换红外光谱仪红外光源',
+    name: 'FTIR Infrared Source', name_zh: '傅里叶变换红外光谱仪红外光源',
     unit: '件',
     category: 'part',
     props: [
@@ -1198,7 +1198,7 @@ const FTIR_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ftir/interferometer',
-    name: '傅里叶变换红外光谱仪干涉仪',
+    name: 'FTIR Interferometer', name_zh: '傅里叶变换红外光谱仪干涉仪',
     unit: '件',
     category: 'part',
     props: [
@@ -1227,7 +1227,7 @@ const FTIR_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ftir/detector',
-    name: '傅里叶变换红外光谱仪热释电探测头',
+    name: 'FTIR Pyroelectric Detector Head', name_zh: '傅里叶变换红外光谱仪热释电探测头',
     unit: '件',
     category: 'part',
     props: [
@@ -1248,7 +1248,7 @@ const FTIR_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ftir/sample-compartment',
-    name: '傅里叶变换红外光谱仪样品舱',
+    name: 'FTIR Sample Compartment', name_zh: '傅里叶变换红外光谱仪样品舱',
     unit: '件',
     category: 'part',
     props: [
@@ -1269,7 +1269,7 @@ const FTIR_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ftir/readout',
-    name: '傅里叶变换红外光谱仪读数与 FFT',
+    name: 'FTIR Readout and FFT', name_zh: '傅里叶变换红外光谱仪读数与 FFT',
     unit: '件',
     category: 'part',
     props: [
@@ -1290,7 +1290,7 @@ const FTIR_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ftir/wavenumber-standard',
-    name: '傅里叶变换红外光谱仪波数标准具',
+    name: 'FTIR Wavenumber Etalon', name_zh: '傅里叶变换红外光谱仪波数标准具',
     unit: '件',
     category: 'part',
     props: [
@@ -1315,7 +1315,7 @@ const FTIR_ALL_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/ftir',
-    name: '傅里叶变换红外光谱仪',
+    name: 'FTIR Spectrometer', name_zh: '傅里叶变换红外光谱仪',
     unit: '台',
     category: 'machine',
     props: [
@@ -1341,7 +1341,7 @@ const FTIR_ALL_ROUTES: readonly Route[] = [
   {
     /** 光源：切 SiC 棒 → 装氧化铝绝缘与铜电极 → 1 000 °C 老化 → 测发射。 */
     id: 'make/ftir-source',
-    name: '傅里叶变换红外光谱仪红外光源制造',
+    name: 'FTIR Infrared Source Manufacturing', name_zh: '傅里叶变换红外光谱仪红外光源制造',
     produces: [
       {
         item: 'plant/ftir/source',
@@ -1382,7 +1382,7 @@ const FTIR_ALL_ROUTES: readonly Route[] = [
   {
     /** 干涉仪：切/抛 KCl → 装 Michelson → 装 PTFE 远红外分束器 → 对光 → 测调制。 */
     id: 'make/ftir-interferometer',
-    name: '傅里叶变换红外光谱仪干涉仪制造',
+    name: 'FTIR Interferometer Manufacturing', name_zh: '傅里叶变换红外光谱仪干涉仪制造',
     produces: [
       {
         item: 'plant/ftir/interferometer',
@@ -1440,7 +1440,7 @@ const FTIR_ALL_ROUTES: readonly Route[] = [
   {
     /** 探测器：切/磨 BaTiO₃ → 蒸银电极 → 极化 → 装前置放大 → 测 D* 与 NEP。 */
     id: 'make/ftir-detector',
-    name: '傅里叶变换红外光谱仪热释电探测头制造',
+    name: 'FTIR Pyroelectric Detector Head Manufacturing', name_zh: '傅里叶变换红外光谱仪热释电探测头制造',
     produces: [
       {
         item: 'plant/ftir/detector',
@@ -1488,7 +1488,7 @@ const FTIR_ALL_ROUTES: readonly Route[] = [
   {
     /** 样品舱：折焊铝箱 → 装 KCl 窗 → 装干燥剂与氮气正压 → 湿度检。 */
     id: 'make/ftir-sample-compartment',
-    name: '傅里叶变换红外光谱仪样品舱制造',
+    name: 'FTIR Sample Compartment Manufacturing', name_zh: '傅里叶变换红外光谱仪样品舱制造',
     produces: [
       {
         item: 'plant/ftir/sample-compartment',
@@ -1525,7 +1525,7 @@ const FTIR_ALL_ROUTES: readonly Route[] = [
   {
     /** 读数：装 20 位 ADC → 装 8192 点 FFT → 丝杠编码盘触发 → 校零。 */
     id: 'make/ftir-readout',
-    name: '傅里叶变换红外光谱仪读数与 FFT 制造',
+    name: 'FTIR Readout and FFT Manufacturing', name_zh: '傅里叶变换红外光谱仪读数与 FFT 制造',
     produces: [
       {
         item: 'plant/ftir/readout',
@@ -1564,7 +1564,7 @@ const FTIR_ALL_ROUTES: readonly Route[] = [
   {
     /** 波数标准：切/抛 0.5 mm KCl → 量厚 → 算条纹间距 → 编号。 */
     id: 'make/ftir-wavenumber-standard',
-    name: '傅里叶变换红外光谱仪波数标准具制造',
+    name: 'FTIR Wavenumber Etalon Manufacturing', name_zh: '傅里叶变换红外光谱仪波数标准具制造',
     produces: [
       {
         item: 'plant/ftir/wavenumber-standard',
@@ -1600,7 +1600,7 @@ const FTIR_ALL_ROUTES: readonly Route[] = [
      * 用两片 SiN 标 H 窗口 → 验收。
      */
     id: 'make/ftir',
-    name: '傅里叶变换红外光谱仪装配',
+    name: 'FTIR Spectrometer Assembly', name_zh: '傅里叶变换红外光谱仪装配',
     produces: [
       {
         item: 'plant/ftir',

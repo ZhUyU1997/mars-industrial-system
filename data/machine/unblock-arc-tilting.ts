@@ -439,7 +439,7 @@ export const UNBLOCK_ARC_TILT_ROUTES: readonly Route[] = [
      * **一个人摇不动；齿是铸的；断电靠蜗杆自锁 —— 而自锁靠"不许加油"。**
      */
     id: 'make/arc-tilting-cast',
-    name: '电弧炉倾动机构制造',
+    name: 'Arc Furnace Tilting Mechanism Manufacturing', name_zh: '电弧炉倾动机构制造',
     produces: [{ item: 'plant/arc-furnace/tilting', qty: q(1) }],
     uses: [
       {

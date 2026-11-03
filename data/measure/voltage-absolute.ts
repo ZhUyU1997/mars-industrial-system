@@ -24,7 +24,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/voltage-absolute-record',
-    name: '绝对电压记录',
+    name: 'Absolute Voltage Record', name_zh: '绝对电压记录',
     unit: '份',
     category: 'part',
     props: [
@@ -92,7 +92,7 @@ export const DATA_ROUTES: readonly Route[] = [
      *      1 µV 量级的热电势修正（10 V 上 0.1 ppm）。
      */
     id: 'measure/voltage-absolute',
-    name: '绝对电压测量',
+    name: 'Absolute Voltage Measurement', name_zh: '绝对电压测量',
     rate: { hours: q(120) },
     produces: [
       {

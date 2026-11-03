@@ -326,7 +326,7 @@ export const UNBLOCK_COMPARATOR_MIRROR_ROUTES: readonly Route[] = [
      *    与 unblock-pyrometer-objective 第三处讲究同一句话
      */
     id: 'make/comparator-mirror-polished',
-    name: '量块比较仪自准直光管制造',
+    name: 'Gauge Block Comparator Autocollimating Tube Manufacturing', name_zh: '量块比较仪自准直光管制造',
     produces: [{ item: 'plant/comparator/mirror', qty: q(1) }],
     /**
      * 进 2.2 kg，出 1 件（净 0.53 kg）。明细与算式在文件头第七节。

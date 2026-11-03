@@ -346,7 +346,7 @@ export const AFM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/afm/scanner',
-    name: 'AFM 管式 PZT 扫描器',
+    name: 'AFM Tube PZT Scanner', name_zh: 'AFM 管式 PZT 扫描器',
     unit: '件',
     category: 'part',
     props: [
@@ -374,7 +374,7 @@ export const AFM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/afm/optical-lever',
-    name: 'AFM 光杠杆',
+    name: 'AFM Optical Lever', name_zh: 'AFM 光杠杆',
     unit: '件',
     category: 'part',
     props: [
@@ -400,7 +400,7 @@ export const AFM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/afm/feedback',
-    name: 'AFM 反馈控制器',
+    name: 'AFM Feedback Controller', name_zh: 'AFM 反馈控制器',
     unit: '件',
     category: 'part',
     props: [
@@ -422,7 +422,7 @@ export const AFM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/afm/isolation',
-    name: 'AFM 隔振',
+    name: 'AFM Vibration Isolation', name_zh: 'AFM 隔振',
     unit: '件',
     category: 'part',
     props: [
@@ -446,7 +446,7 @@ export const AFM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/afm/base',
-    name: 'AFM 基座',
+    name: 'AFM Base', name_zh: 'AFM 基座',
     unit: '件',
     category: 'part',
   },
@@ -463,7 +463,7 @@ export const AFM_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/afm-cantilever',
-    name: 'Si 探针',
+    name: 'Si Probe', name_zh: 'Si 探针',
     unit: '件',
     category: 'part',
     props: [
@@ -490,7 +490,7 @@ export const AFM_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/laser-diode-770nm',
-    name: '770 nm GaAs/AlGaAs 激光二极管',
+    name: '770 nm GaAs/AlGaAs Laser Diode', name_zh: '770 nm GaAs/AlGaAs 激光二极管',
     unit: '件',
     category: 'part',
     props: [
@@ -514,7 +514,7 @@ export const AFM_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/step-standard-1nm-10nm',
-    name: '1/10 nm 台阶标准件',
+    name: '1/10 nm Step Height Standard', name_zh: '1/10 nm 台阶标准件',
     unit: '片',
     category: 'part',
     props: [
@@ -543,7 +543,7 @@ export const AFM_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/afm',
-    name: 'AFM 整机',
+    name: 'AFM System', name_zh: 'AFM 整机',
     unit: '台',
     category: 'machine',
     props: [
@@ -597,7 +597,7 @@ export const AFM_ROUTES: readonly Route[] = [
      * 因为 50 µm 条宽的解理/焊装更难 —— 记在 D7 的代价里。
      */
     id: 'make/laser-diode-770',
-    name: '770 nm GaAs/AlGaAs 激光二极管制造',
+    name: '770 nm GaAs/AlGaAs Laser Diode Manufacturing', name_zh: '770 nm GaAs/AlGaAs 激光二极管制造',
     produces: [
       {
         item: 'std/laser-diode-770nm',
@@ -744,7 +744,7 @@ export const AFM_ROUTES: readonly Route[] = [
      * ⚠️ f0 是镀金后的值（Au 30 nm 质量负载 25 %，f0 降 12 %）。
      */
     id: 'make/afm-cantilever',
-    name: 'Si 探针制造',
+    name: 'Si Probe Manufacturing', name_zh: 'Si 探针制造',
     produces: [
       {
         item: 'std/afm-cantilever',
@@ -852,7 +852,7 @@ export const AFM_ROUTES: readonly Route[] = [
      * 再厚极化不透，再薄管子在 60 mm 长度上装夹就碎（D5）。
      */
     id: 'make/afm-scanner',
-    name: 'AFM 管式 PZT 扫描器制造',
+    name: 'AFM Tube PZT Scanner Manufacturing', name_zh: 'AFM 管式 PZT 扫描器制造',
     produces: [
       {
         item: 'plant/afm/scanner',
@@ -943,7 +943,7 @@ export const AFM_ROUTES: readonly Route[] = [
      * 光斑应走 1.0 µm；实测 950–1050 nm 收。散粒噪声按 §一 的 0.1 nm/√Hz 验。
      */
     id: 'make/afm-optical-lever',
-    name: 'AFM 光杠杆制造',
+    name: 'AFM Optical Lever Manufacturing', name_zh: 'AFM 光杠杆制造',
     produces: [
       {
         item: 'plant/afm/optical-lever',
@@ -1000,7 +1000,7 @@ export const AFM_ROUTES: readonly Route[] = [
      * （GBW 1 MHz、增益 10）；真正闭环受高压驱动 1–10 kHz 限制（D2）。
      */
     id: 'make/afm-feedback',
-    name: 'AFM 反馈控制器制造',
+    name: 'AFM Feedback Controller Manufacturing', name_zh: 'AFM 反馈控制器制造',
     produces: [
       {
         item: 'plant/afm/feedback',
@@ -1070,7 +1070,7 @@ export const AFM_ROUTES: readonly Route[] = [
      * 预压下容易失稳 —— 这是 D6，不是本机没算。
      */
     id: 'make/afm-isolation',
-    name: 'AFM 隔振制造',
+    name: 'AFM Vibration Isolation Manufacturing', name_zh: 'AFM 隔振制造',
     produces: [
       {
         item: 'plant/afm/isolation',
@@ -1129,7 +1129,7 @@ export const AFM_ROUTES: readonly Route[] = [
      * 的短路径上 —— 热漂移 0.6 µm/K 是**共模**的，差分测量把它扣掉（§三）。
      */
     id: 'make/afm-base',
-    name: 'AFM 基座制造',
+    name: 'AFM Base Manufacturing', name_zh: 'AFM 基座制造',
     produces: [{ item: 'plant/afm/base', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(30) }] },
@@ -1178,7 +1178,7 @@ export const AFM_ROUTES: readonly Route[] = [
      * 是因为 1 nm 档，不是因为 10 nm 档更容易。
      */
     id: 'make/step-standard-1nm-10nm',
-    name: '1/10 nm 台阶标准件制造',
+    name: '1/10 nm Step Height Standard Manufacturing', name_zh: '1/10 nm 台阶标准件制造',
     produces: [
       {
         item: 'std/step-standard-1nm-10nm',
@@ -1310,7 +1310,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/afm',
-    name: 'AFM 整机装配',
+    name: 'AFM System Assembly', name_zh: 'AFM 整机装配',
     produces: [{
       item: 'plant/afm',
       qty: q(1),

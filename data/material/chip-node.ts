@@ -196,7 +196,7 @@ export const CHIP_NODE_ROUTES: readonly Route[] = [
      * 3 片进、1 片出不是丢了两片硅；见 `unbalanced_zh`。
      */
     id: 'make/mcu-40nm-damascene',
-    name: '40 nm 制程的 MCU 制造',
+    name: '40 nm Process MCU Manufacturing', name_zh: '40 nm 制程的 MCU 制造',
     produces: [
       {
         item: 'std/mcu-40nm-general',
@@ -314,7 +314,7 @@ export const CHIP_NODE_ROUTES: readonly Route[] = [
      * 质量账：989 + 1 + 1 + 3 + 6 = 1000 kg，恰好平。
      */
     id: 'make/cmp-slurry-lowdishing',
-    name: '低选择性铜 CMP 浆制备',
+    name: 'Low-Selectivity Copper CMP Slurry Production', name_zh: '低选择性铜 CMP 浆制备',
     produces: [
       {
         item: 'mat/cmp-slurry',
@@ -452,7 +452,7 @@ export const CHIP_NODE_ROUTES: readonly Route[] = [
      * 数据上六格覆盖，不等于实测闭合（L0–L3）。
      */
     id: 'make/beol-40nm-8layer',
-    name: '单层铜互连片制造',
+    name: 'Single-Layer Copper Interconnect Wafer Manufacturing', name_zh: '单层铜互连片制造',
     produces: [
       {
         item: 'mat/damascene-layer',

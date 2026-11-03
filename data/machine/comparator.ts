@@ -47,14 +47,14 @@ export const COMPARATOR_PARTS: readonly Item[] = [
    * 底座与立柱。HT250 浇成，一次加工 —— 测头与工作台的相对位置要稳定，
    * 而钢的热膨胀在 1 °C 的温差下就有 10 µm/m，所以底座要厚、要大热容。
    */
-  { id: 'plant/comparator/base', name: '量块比较仪底座与立柱', unit: '件', category: 'part' },
+  { id: 'plant/comparator/base', name: 'Gauge Block Comparator Base and Column', name_zh: '量块比较仪底座与立柱', unit: '件', category: 'part' },
 
   /**
    * 升降工作台。承载量块并做粗调，微调靠斜楔。
    *
    * 台面要研过 —— 量块是"研合"在台面上的（靠分子力贴住），台面糙了就贴不住。
    */
-  { id: 'plant/comparator/table', name: '量块比较仪升降工作台', unit: '件', category: 'part' },
+  { id: 'plant/comparator/table', name: 'Gauge Block Comparator Lifting Table', name_zh: '量块比较仪升降工作台', unit: '件', category: 'part' },
 
   /**
    * 杠杆机构。刀口支承的硬钢杠杆，传动比 3–5 倍。
@@ -62,7 +62,7 @@ export const COMPARATOR_PARTS: readonly Item[] = [
    * 刀口是两根磨到刃的硬钢棱 —— 它靠**线接触**实现无间隙转动，
    * 比轴承的间隙小两个数量级。这是整台仪器最难的零件。
    */
-  { id: 'plant/comparator/lever', name: '量块比较仪杠杆机构', unit: '件', category: 'part' },
+  { id: 'plant/comparator/lever', name: 'Gauge Block Comparator Lever Mechanism', name_zh: '量块比较仪杠杆机构', unit: '件', category: 'part' },
 
   /**
    * 自准直光管。一块反射镜挂在杠杆上，光线经它反射回来成像。
@@ -70,14 +70,14 @@ export const COMPARATOR_PARTS: readonly Item[] = [
    * 镜面要平（λ/4 以内），而本层只能研磨到 λ 级 —— 够用，因为这里是
    * 比较不是干涉，波前误差只影响像的清晰度，不影响读数。
    */
-  { id: 'plant/comparator/mirror', name: '量块比较仪自准直光管', unit: '件', category: 'part' },
+  { id: 'plant/comparator/mirror', name: 'Gauge Block Comparator Autocollimating Tube', name_zh: '量块比较仪自准直光管', unit: '件', category: 'part' },
 
   /**
    * 刻度尺与目镜。玻璃上刻线，线距 0.1 mm，配一个简单放大镜读数。
    *
    * 刻线用刻线刀在涂蜡的玻璃上划，再氢氟酸轻蚀 —— 用的是已有的玻璃与氢氟酸。
    */
-  { id: 'plant/comparator/reticle', name: '量块比较仪刻度尺与目镜', unit: '件', category: 'part' },
+  { id: 'plant/comparator/reticle', name: 'Gauge Block Comparator Scale and Eyepiece', name_zh: '量块比较仪刻度尺与目镜', unit: '件', category: 'part' },
 
   /**
    * 研磨平板。铸铁盘，**三块一套**，互相研磨到平面。
@@ -89,14 +89,14 @@ export const COMPARATOR_PARTS: readonly Item[] = [
    * 惠特沃斯 1830 年代的做法，到今天仍是平面的定义方式。
    * **平面度是本层第一个不需要外部基准就能自举的量。**
    */
-  { id: 'plant/comparator/lapping-plate', name: '量块比较仪研磨平板', unit: '套', category: 'part' },
+  { id: 'plant/comparator/lapping-plate', name: 'Gauge Block Comparator Lapping Plate', name_zh: '量块比较仪研磨平板', unit: '套', category: 'part' },
 ];
 
 export const COMPARATOR_ROUTES: readonly Route[] = [
   {
     /** 底座。HT250 浇 → 时效 → 铣平面 → 磨导轨面。 */
     id: 'make/comparator-base',
-    name: '量块比较仪底座与立柱制造',
+    name: 'Gauge Block Comparator Base and Column Manufacturing', name_zh: '量块比较仪底座与立柱制造',
     produces: [{ item: 'plant/comparator/base', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/iron-ht250', qty: q(1) }] }],
     needs: ['lathe', 'plant/milling-machine', 'plant/grinder'],
@@ -106,7 +106,7 @@ export const COMPARATOR_ROUTES: readonly Route[] = [
   {
     /** 工作台。45 钢车 → 淬 → 研磨台面（用刚玉磨料对研）。 */
     id: 'make/comparator-table',
-    name: '量块比较仪升降工作台制造',
+    name: 'Gauge Block Comparator Lifting Table Manufacturing', name_zh: '量块比较仪升降工作台制造',
     produces: [{ item: 'plant/comparator/table', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -118,7 +118,7 @@ export const COMPARATOR_ROUTES: readonly Route[] = [
   {
     /** 杠杆。GCr15 淬火后磨刀口，两条刃要平行到微米级。 */
     id: 'make/comparator-lever',
-    name: '量块比较仪杠杆机构制造',
+    name: 'Gauge Block Comparator Lever Mechanism Manufacturing', name_zh: '量块比较仪杠杆机构制造',
     produces: [{ item: 'plant/comparator/lever', qty: q(1) }],
     uses: [{ anyOf: [{ item: 'mat/bearing-steel', qty: q(1) }] }],
     needs: ['lathe', 'plant/forge'],
@@ -127,7 +127,7 @@ export const COMPARATOR_ROUTES: readonly Route[] = [
   {
     /** 反射镜。玻璃研磨 → 抛光（用刚玉微粉）→ 不镀膜，靠 4% 反射。 */
     id: 'make/comparator-mirror',
-    name: '量块比较仪自准直光管制造',
+    name: 'Gauge Block Comparator Autocollimating Tube Manufacturing', name_zh: '量块比较仪自准直光管制造',
     produces: [{ item: 'plant/comparator/mirror', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -139,7 +139,7 @@ export const COMPARATOR_ROUTES: readonly Route[] = [
   {
     /** 刻度尺。玻璃涂蜡 → 刻线（车床丝杠带刀）→ 氢氟酸轻蚀 → 去蜡。 */
     id: 'make/comparator-reticle',
-    name: '量块比较仪刻度尺与目镜制造',
+    name: 'Gauge Block Comparator Scale and Eyepiece Manufacturing', name_zh: '量块比较仪刻度尺与目镜制造',
     produces: [{ item: 'plant/comparator/reticle', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -163,7 +163,7 @@ export const COMPARATOR_ROUTES: readonly Route[] = [
      * 研磨剂用刚玉微粉（W 系列，本层从熔融氧化铝筛分来）。
      */
     id: 'make/lapping-plate',
-    name: '量块比较仪研磨平板制造',
+    name: 'Gauge Block Comparator Lapping Plate Manufacturing', name_zh: '量块比较仪研磨平板制造',
     produces: [{ item: 'plant/comparator/lapping-plate', qty: q(3) }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht250', qty: q(3) }] },
@@ -182,7 +182,7 @@ export const COMPARATOR_ROUTES: readonly Route[] = [
  */
 export const COMPARATOR: Item = {
   id: 'plant/comparator',
-  name: '量块比较仪',
+  name: 'Gauge Block Comparator', name_zh: '量块比较仪',
   unit: '台',
   category: 'machine',
   composedOf: [...COMPARATOR_PARTS.map((p) => ({ item: p.id, qty: q(1) }))],
@@ -208,7 +208,7 @@ export const GAUGE_BLOCK_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/gauge-block/block',
-    name: 'K 级量块单块',
+    name: 'K-Grade Gauge Block', name_zh: 'K 级量块单块',
     unit: '件',
     category: 'part',
     // 研合性：块与块贴住之后拉开的间隙。量块的用处全在这一层膜上 ——
@@ -241,7 +241,7 @@ export const GAUGE_BLOCK_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/gauge-block-working',
-    name: '工作量块',
+    name: 'Working Gauge Block', name_zh: '工作量块',
     unit: '件',
     category: 'part',
     props: [{ param: 'deviation', kind: 'range', min: 0, max: 5, unit: 'µm', dir: 'atMost' }],
@@ -297,7 +297,7 @@ export const GAUGE_BLOCK_ROUTES: readonly Route[] = [
      *      所以"由磨床执行、在恒温间里进行"这句话是说得出来的。
      */
     id: 'make/gauge-block-working',
-    name: '工作量块的复制',
+    name: 'Working Gauge Block Replication', name_zh: '工作量块的复制',
     produces: [
       {
         item: 'std/gauge-block-working',
@@ -344,7 +344,7 @@ export const GAUGE_BLOCK_ROUTES: readonly Route[] = [
      * 只能写"两条都能走"，写不出"能走多少次"。
      */
     id: 'make/gauge-block-working-k',
-    name: '工作量块制造',
+    name: 'Working Gauge Block Manufacturing', name_zh: '工作量块制造',
     produces: [
       {
         item: 'std/gauge-block-working',
@@ -404,7 +404,7 @@ export const GAUGE_BLOCK_ROUTES: readonly Route[] = [
      * 风险不在零件种类少，而在**每一块都得单独研磨/研合/检定**（本路线 5 道工序）。
      */
     id: 'make/gauge-block-copy',
-    name: '同级复制',
+    name: 'Same-Grade Copying', name_zh: '同级复制',
     // 复制块对着母套比 —— **精度只能传递，不能提升**（A2 的唯一真闭环）。
     // 母套的 deviation ≤1.015 µm 由种子条目 `plant/gauge-block` 的 props 保证；
     // 它是给定件，不是设备，所以不另写 `needs` 的规格窗口。
@@ -465,7 +465,7 @@ export const REFERENCE_ITEMS: readonly Item[] = [
    *
    * 本层需求是千分尺 ±2 µm，1 级够用。
    */
-  { id: 'std/gauge-block-reference', name: '基准量块', unit: '件', category: 'part' },
+  { id: 'std/gauge-block-reference', name: 'Reference Gauge Block', name_zh: '基准量块', unit: '件', category: 'part' },
 ];
 
 export const REFERENCE_ROUTES: readonly Route[] = [
@@ -498,7 +498,7 @@ export const REFERENCE_ROUTES: readonly Route[] = [
      * `plant/refractometer` 的原因。
      */
     id: 'make/gauge-block-reference',
-    name: '基准量块制造',
+    name: 'Reference Gauge Block Manufacturing', name_zh: '基准量块制造',
     produces: [{ item: 'std/gauge-block-reference', qty: q(1) }],
     uses: [
       { anyOf: [{ item: 'mat/bearing-steel', qty: q(1) }] },
@@ -532,7 +532,7 @@ export const MICROMETER_ITEMS: readonly Item[] = [
    * 规格写 0–25 是因为千分尺按量程分档（0–25、25–50……），
    * 与轴承按精度分档（P0/P5）是同一个道理。
    */
-  { id: 'std/micrometer-0-25', name: '外径千分尺', unit: '把', category: 'part',
+  { id: 'std/micrometer-0-25', name: 'Outside Micrometer', name_zh: '外径千分尺', unit: '把', category: 'part',
     props: [{ param: 'range', kind: 'range', min: 0, max: 25, unit: 'mm' }, { param: 'resolution', kind: 'range', min: 0.001, max: 0.01, unit: 'mm' }] },
 ];
 
@@ -554,7 +554,7 @@ export const MICROMETER_ROUTES: readonly Route[] = [
      * 这一步是手感的活，模型写不出来。
      */
     id: 'make/micrometer',
-    name: '外径千分尺制造',
+    name: 'Outside Micrometer Manufacturing', name_zh: '外径千分尺制造',
     produces: [{ item: 'std/micrometer-0-25', qty: q(1), gives: [{ param: 'range', kind: 'range', min: 0, max: 25 }, { param: 'resolution', kind: 'range', min: 0.01, max: 0.01 }] }],
     uses: [
       { anyOf: [{ item: 'mat/steel-40cr', qty: q(1) }] },
@@ -585,7 +585,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/comparator',
-    name: '量块比较仪装配',
+    name: 'Gauge Block Comparator Assembly', name_zh: '量块比较仪装配',
     produces: [{
       item: 'plant/comparator',
       qty: q(1),
@@ -605,7 +605,7 @@ export const SEED_ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/gauge-block',
-    name: '量块装配',
+    name: 'Gauge Block Assembly', name_zh: '量块装配',
     produces: [{
       item: 'plant/gauge-block',
       qty: q(1),

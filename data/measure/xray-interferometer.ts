@@ -15,7 +15,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/xray-cal-record',
-    name: 'X 射线干涉仪自校准记录',
+    name: 'X-Ray Interferometer Self-Calibration Record', name_zh: 'X 射线干涉仪自校准记录',
     unit: '份',
     category: 'part',
     props: [
@@ -31,7 +31,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/xray-rocking-record',
-    name: '摇摆曲线记录',
+    name: 'Rocking Curve Record', name_zh: '摇摆曲线记录',
     unit: '份',
     category: 'part',
     props: [
@@ -47,7 +47,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/xray-tube-spot-record',
-    name: 'X 射线管焦斑记录',
+    name: 'X-Ray Tube Focal Spot Record', name_zh: 'X 射线管焦斑记录',
     unit: '份',
     category: 'part',
     props: [
@@ -63,7 +63,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/xray-detector-record',
-    name: 'X 射线探测器记录',
+    name: 'X-Ray Detector Record', name_zh: 'X 射线探测器记录',
     unit: '份',
     category: 'part',
     props: [
@@ -79,7 +79,7 @@ export const DATA_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/xray-hv-record',
-    name: 'X 射线高压记录',
+    name: 'X-Ray High-Voltage Record', name_zh: 'X 射线高压记录',
     unit: '份',
     category: 'part',
     props: [
@@ -103,7 +103,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * `beam 0.05–0.1 mm`、`points 10`；不是 10 pm 的实测。
      */
     id: 'measure/xray-interferometer-cal',
-    name: 'X 射线干涉仪自校准',
+    name: 'X-Ray Interferometer Self-Calibration', name_zh: 'X 射线干涉仪自校准',
     produces: [
       {
         item: 'mat/xray-cal-record',
@@ -149,7 +149,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * **晶体摇摆曲线：三片 lamellae 的 tiltError/FWHM。**
      */
     id: 'measure/xray-rocking-curve',
-    name: '摇摆曲线测量',
+    name: 'Rocking Curve Measurement', name_zh: '摇摆曲线测量',
     produces: [
       {
         item: 'mat/xray-rocking-record',
@@ -185,7 +185,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * `points 10`；不是 0.1 mm 的实测。
      */
     id: 'measure/xray-tube-spot',
-    name: 'X 射线管焦斑测量',
+    name: 'X-Ray Tube Focal Spot Measurement', name_zh: 'X 射线管焦斑测量',
     produces: [
       {
         item: 'mat/xray-tube-spot-record',
@@ -226,7 +226,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * `points 10`；不是 25 % 的已测读数。
      */
     id: 'measure/xray-detector',
-    name: 'X 射线探测器测量',
+    name: 'X-Ray Detector Measurement', name_zh: 'X 射线探测器测量',
     produces: [
       {
         item: 'mat/xray-detector-record',
@@ -267,7 +267,7 @@ export const DATA_ROUTES: readonly Route[] = [
      * `points 10`；不是 60 kV/0.1 % 的已测读数。
      */
     id: 'measure/xray-hv',
-    name: 'X 射线高压测量',
+    name: 'X-Ray High-Voltage Measurement', name_zh: 'X 射线高压测量',
     produces: [
       {
         item: 'mat/xray-hv-record',

@@ -63,7 +63,7 @@ export const SILICON_NITRIDE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/silicon-nitride',
-    name: '氮化硅硬掩模贴片',
+    name: 'Silicon Nitride Hard Mask Wafer', name_zh: '氮化硅硬掩模贴片',
     unit: '片',
     category: 'part',
     props: [
@@ -90,7 +90,7 @@ export const SILICON_NITRIDE_ROUTES: readonly Route[] = [
  * 的 FTIR 记录，本路线给 0.5–2 at%。
      */
     id: 'make/si3n4-hardmask',
-    name: '氮化硅硬掩模贴片制造',
+    name: 'Silicon Nitride Hard Mask Wafer Manufacturing', name_zh: '氮化硅硬掩模贴片制造',
     produces: [
       {
         item: 'mat/silicon-nitride',

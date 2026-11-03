@@ -266,7 +266,7 @@ export const UNBLOCK_TEMP_CTRL_ROUTES: readonly Route[] = [
      *  · **定标在裸机上做**：刻度盘要能拆下来刻，壳一盖就刻不了
      */
     id: 'make/temp-controller-bimetal',
-    name: '双金属式温控器制造',
+    name: 'Bimetallic Thermostat Manufacturing', name_zh: '双金属式温控器制造',
     produces: [{ item: 'std/temp-controller-general', qty: q(1) }],
     uses: [
       /**

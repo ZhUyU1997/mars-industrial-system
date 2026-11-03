@@ -236,7 +236,7 @@ export const UNBLOCK_RED_HEATER_ROUTES: readonly Route[] = [
      * **没有一台要新设备** —— 这是它比钢板那条路线强的地方，也是它唯一强的地方。
      */
     id: 'make/reduction-heater-gas',
-    name: '还原炉蓄热式气体加热器制造',
+    name: 'Reduction Furnace Regenerative Gas Heater Manufacturing', name_zh: '还原炉蓄热式气体加热器制造',
     produces: [{ item: 'plant/reduction-furnace/heater', qty: q(1) }],
     uses: [
       // 火道壁、格子砖、内衬、顶拱、热风道内衬、异形。上墙 8086，余 314 是切砖与对拼。

@@ -213,7 +213,7 @@ export const GOI_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/goi-pinhole-record',
-    name: '铜装饰针孔记录',
+    name: 'Copper Decoration Pinhole Record', name_zh: '铜装饰针孔记录',
     unit: '份',
     category: 'part',
     props: [
@@ -242,7 +242,7 @@ export const GOI_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/goi-vramp-record',
-    name: 'GOI 斜坡电压记录',
+    name: 'GOI Ramp Voltage Record', name_zh: 'GOI 斜坡电压记录',
     unit: '份',
     category: 'part',
     props: [
@@ -280,7 +280,7 @@ export const GOI_ROUTES: readonly Route[] = [
      * 不是每片全检（全检 40 h/片 × 每片 = 线速受不了）。
      */
     id: 'measure/goi-copper-decoration',
-    name: '铜装饰针孔测量',
+    name: 'Copper Decoration Pinhole Measurement', name_zh: '铜装饰针孔测量',
     produces: [
       {
         item: 'mat/goi-pinhole-record',
@@ -373,7 +373,7 @@ export const GOI_ROUTES: readonly Route[] = [
      * 走 500 V 那条，不硬塞进 200 V。
      */
     id: 'measure/goi-vramp',
-    name: 'GOI 斜坡电压测量',
+    name: 'GOI Ramp Voltage Measurement', name_zh: 'GOI 斜坡电压测量',
     produces: [
       {
         item: 'mat/goi-vramp-record',

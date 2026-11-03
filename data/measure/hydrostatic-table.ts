@@ -11,7 +11,7 @@ import { q } from '../../src/index.ts';
 export const HYDROSTATIC_TABLE_MEASURE_ITEMS: readonly Item[] = [
   {
     id: 'mat/hydrostatic-table-measure-record',
-    name: '静压转台记录',
+    name: 'Hydrostatic Rotary Table Record', name_zh: '静压转台记录',
     unit: '份',
     category: 'part',
     props: [
@@ -29,7 +29,7 @@ export const HYDROSTATIC_TABLE_MEASURE_ROUTES: readonly Route[] = [
      * **静压转台：比较仪/量块测轴向径向，自准直仪测角。**
      */
     id: 'measure/hydrostatic-table-measure',
-    name: '静压转台测量',
+    name: 'Hydrostatic Rotary Table Measurement', name_zh: '静压转台测量',
     produces: [
       {
         item: 'mat/hydrostatic-table-measure-record',

@@ -442,7 +442,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/laser-stage/head',
-    name: '激光位移台干涉头',
+    name: 'Laser Translation Stage Interferometer Head', name_zh: '激光位移台干涉头',
     unit: '件',
     category: 'part',
     props: [
@@ -472,7 +472,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/laser-stage/reference-arm',
-    name: '100 mm 真空参考臂',
+    name: '100 mm Vacuum Reference Arm', name_zh: '100 mm 真空参考臂',
     unit: '件',
     category: 'part',
     props: [
@@ -501,7 +501,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/laser-stage/waveplate',
-    name: 'λ/4 波片',
+    name: 'λ/4 Waveplate', name_zh: 'λ/4 波片',
     unit: '件',
     category: 'part',
     props: [
@@ -530,7 +530,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/laser-stage/polarizer',
-    name: '激光位移台偏振分光',
+    name: 'Laser Translation Stage Polarizing Beamsplitter', name_zh: '激光位移台偏振分光',
     unit: '件',
     category: 'part',
     props: [
@@ -557,7 +557,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/laser-stage/mirror',
-    name: '激光位移台移动镜与参考镜',
+    name: 'Laser Translation Stage Moving Mirror and Reference Mirror', name_zh: '激光位移台移动镜与参考镜',
     unit: '件',
     category: 'part',
     props: [
@@ -587,7 +587,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/laser-stage/carriage',
-    name: '激光位移台粗动台',
+    name: 'Laser Translation Stage Coarse Stage', name_zh: '激光位移台粗动台',
     unit: '件',
     category: 'part',
     props: [
@@ -632,7 +632,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/laser-stage/fine-stage',
-    name: '激光位移台微动台',
+    name: 'Laser Translation Stage Fine Stage', name_zh: '激光位移台微动台',
     unit: '件',
     category: 'part',
     props: [
@@ -658,7 +658,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/laser-stage/receiver',
-    name: '激光位移台正交接收器',
+    name: 'Laser Translation Stage Quadrature Receiver', name_zh: '激光位移台正交接收器',
     unit: '件',
     category: 'part',
     props: [
@@ -686,7 +686,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/laser-stage/controller',
-    name: '激光位移台闭环控制器',
+    name: 'Laser Translation Stage Closed-Loop Controller', name_zh: '激光位移台闭环控制器',
     unit: '件',
     category: 'part',
     props: [
@@ -715,7 +715,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/laser-stage/base',
-    name: '激光位移台基座与热罩',
+    name: 'Laser Translation Stage Base and Thermal Shield', name_zh: '激光位移台基座与热罩',
     unit: '件',
     category: 'part',
     props: [
@@ -761,7 +761,7 @@ const LASER_STAGE_PARTS: readonly Item[] = [
  */
 const LASER_STAGE: Item = {
   id: 'plant/laser-stage',
-  name: '激光位移台',
+  name: 'Laser Translation Stage', name_zh: '激光位移台',
   unit: '台',
   category: 'machine',
   props: [
@@ -820,7 +820,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * 这正是本层过去三轮的处境：**头早就能做，做出来没灯。**
      */
     id: 'make/laser-stage-head',
-    name: '激光位移台干涉头制造',
+    name: 'Laser Translation Stage Interferometer Head Manufacturing', name_zh: '激光位移台干涉头制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -900,7 +900,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * 而整台机器靠偏振分光（第一节②）。
      */
     id: 'make/laser-stage-reference-arm',
-    name: '100 mm 真空参考臂制造',
+    name: '100 mm Vacuum Reference Arm Manufacturing', name_zh: '100 mm 真空参考臂制造',
     rate: { hours: q(36) },
     produces: [
       {
@@ -980,7 +980,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * 加一只光电管，转 45° 读两次强度 —— 没有别的办法（没有波片测量仪）。
      */
     id: 'make/laser-stage-waveplate',
-    name: 'λ/4 波片制造',
+    name: 'λ/4 Waveplate Manufacturing', name_zh: 'λ/4 波片制造',
     rate: { hours: q(20) },
     produces: [
       {
@@ -1057,7 +1057,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * 这里是**透射**用，推出视场就是把光扔掉。
      */
     id: 'make/laser-stage-polarizer',
-    name: '激光位移台偏振分光制造',
+    name: 'Laser Translation Stage Polarizing Beamsplitter Manufacturing', name_zh: '激光位移台偏振分光制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1122,7 +1122,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * 这里一次反射，90 % 的交付是给 1 nm 氧化层留的余量）。
      */
     id: 'make/laser-stage-mirror',
-    name: '激光位移台移动镜与参考镜制造',
+    name: 'Laser Translation Stage Moving Mirror and Reference Mirror Manufacturing', name_zh: '激光位移台移动镜与参考镜制造',
     rate: { hours: q(48) },
     produces: [
       {
@@ -1190,7 +1190,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * 只是这台是 24 V / 5 A 的伺服）。**本层的电机从来不是零件，是手艺。**
      */
     id: 'make/laser-stage-carriage',
-    name: '激光位移台粗动台制造',
+    name: 'Laser Translation Stage Coarse Stage Manufacturing', name_zh: '激光位移台粗动台制造',
     rate: { hours: q(120) },
     produces: [
       {
@@ -1273,7 +1273,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * 负载由两片簧承、压电只推水平）—— **这里不再重复，因为它是零件的规格，不是工序。**
      */
     id: 'make/laser-stage-fine-stage',
-    name: '激光位移台微动台制造',
+    name: 'Laser Translation Stage Fine Stage Manufacturing', name_zh: '激光位移台微动台制造',
     rate: { hours: q(96) },
     produces: [
       {
@@ -1362,7 +1362,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * **本层的时间基准只有 100 kHz 石英，而"同步检波"要一个机械参考。**
      */
     id: 'make/laser-stage-receiver',
-    name: '激光位移台正交接收器制造',
+    name: 'Laser Translation Stage Quadrature Receiver Manufacturing', name_zh: '激光位移台正交接收器制造',
     rate: { hours: q(40) },
     produces: [
       {
@@ -1437,7 +1437,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * （`phase-shifter.ts` 的 drive 是发电机，它给电压但不给耐压试验）。
      */
     id: 'make/laser-stage-controller',
-    name: '激光位移台闭环控制器制造',
+    name: 'Laser Translation Stage Closed-Loop Controller Manufacturing', name_zh: '激光位移台闭环控制器制造',
     rate: { hours: q(80) },
     produces: [
       {
@@ -1512,7 +1512,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * （与 `make/phase-shifter-platen`、`make/metrology-isolation` 同一句）。
      */
     id: 'make/laser-stage-base',
-    name: '激光位移台基座与热罩制造',
+    name: 'Laser Translation Stage Base and Thermal Shield Manufacturing', name_zh: '激光位移台基座与热罩制造',
     rate: { hours: q(60) },
     produces: [
       {
@@ -1584,7 +1584,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * 仍然快 5 倍，但**闭环带宽还是 1 Hz（电源）**，所以更快没用（第四节）。
      */
     id: 'make/e-beam-column-stage-interferometric',
-    name: '电子束柱五轴样品台制造',
+    name: 'Electron Beam Column 5-Axis Sample Stage Manufacturing', name_zh: '电子束柱五轴样品台制造',
     rate: { hours: q(140) },
     produces: [
       {
@@ -1653,7 +1653,7 @@ export const LASER_STAGE_ROUTES: readonly Route[] = [
      * 是同一类诚实：**交付值是能在一个地方一次说清的那个，不是最好看的那个。**
      */
     id: 'make/euv-stepper-stage-interferometric',
-    name: 'EUV 扫描机双工件台干涉装调',
+    name: 'EUV Scanner Dual Wafer Stage Interferometric Alignment', name_zh: 'EUV 扫描机双工件台干涉装调',
     rate: { hours: q(200) },
     produces: [
       {
@@ -1713,7 +1713,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/laser-stage',
-    name: '激光位移台装配',
+    name: 'Laser Translation Stage Assembly', name_zh: '激光位移台装配',
     produces: [{
       item: 'plant/laser-stage',
       qty: q(1),

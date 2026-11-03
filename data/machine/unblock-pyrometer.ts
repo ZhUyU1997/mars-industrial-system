@@ -342,7 +342,7 @@ export const UNBLOCK_PYRO_ROUTES: readonly Route[] = [
      *  ③ 铜镜三个月 τ 0.85 → 0.55，1600 处读数偏低 70 K（系统、单调、可被发现）
      */
     id: 'make/pyrometer-optical',
-    name: '隐灭式光学高温计制造',
+    name: 'Disappearing-Filament Optical Pyrometer Manufacturing', name_zh: '隐灭式光学高温计制造',
     produces: [{ item: 'std/photoelectric-pyrometer-general', qty: q(1) }],
     uses: [
       /**

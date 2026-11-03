@@ -167,7 +167,7 @@ export const REFLOW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/reflow-furnace',
-    name: '回流焊炉',
+    name: 'Reflow Soldering Furnace', name_zh: '回流焊炉',
     unit: '台',
     category: 'machine',
     props: [
@@ -204,7 +204,7 @@ export const REFLOW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/solder-printer',
-    name: '丝印机 / 点胶机',
+    name: 'Screen Printer/Dispenser', name_zh: '丝印机 / 点胶机',
     unit: '台',
     category: 'machine',
     props: [
@@ -238,7 +238,7 @@ export const REFLOW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/pick-place',
-    name: '贴片机',
+    name: 'Pick-and-Place Machine', name_zh: '贴片机',
     unit: '台',
     category: 'machine',
     props: [
@@ -271,7 +271,7 @@ export const REFLOW_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/rework-station',
-    name: '返修台',
+    name: 'Rework Station', name_zh: '返修台',
     unit: '台',
     category: 'machine',
     props: [
@@ -295,7 +295,7 @@ export const REFLOW_ITEMS: readonly Item[] = [
   // ═════════════════════════════════════════════════════════════════════════
 
   /** 炉膛。双层 2 mm 钢板壳 + 高铝砖内衬 + 矿棉保温，两端焊氮气罩与挡帘。 */
-  { id: 'plant/reflow-furnace/tunnel', name: '回流焊炉炉膛', unit: '件', category: 'part',
+  { id: 'plant/reflow-furnace/tunnel', name: 'Reflow Soldering Furnace Chamber', name_zh: '回流焊炉炉膛', unit: '件', category: 'part',
     props: [{ param: 'length', kind: 'range', min: 1000, max: 3000, unit: 'mm' }] },
 
   /**
@@ -306,7 +306,7 @@ export const REFLOW_ITEMS: readonly Item[] = [
    * 的炉子来说，负温度系数是免费的稳定器。代价：电阻率 8–12 µΩ·m 比镍铬（1.1）低
    * 一个量级，所以要短而粗、电流上百安，接头只能**铜排压接**（石墨焊不了）。
    */
-  { id: 'plant/reflow-furnace/zone-heater', name: '回流焊炉加热区', unit: '件', category: 'part',
+  { id: 'plant/reflow-furnace/zone-heater', name: 'Reflow Soldering Furnace Heating Zone', name_zh: '回流焊炉加热区', unit: '件', category: 'part',
     props: [{ param: 'power', kind: 'range', min: 0.5, max: 8, unit: 'kW' }] },
 
   /**
@@ -315,11 +315,11 @@ export const REFLOW_ITEMS: readonly Item[] = [
    * 不是编织网带（要织机，本层没有）。链板带的坏处是节距台阶 1–2 mm，
    * 好处是**不会像网带那样被焊膏糊住**（网带的网孔一糊就得整条换）。
    */
-  { id: 'plant/reflow-furnace/belt', name: '回流焊炉链板带', unit: '件', category: 'part',
+  { id: 'plant/reflow-furnace/belt', name: 'Reflow Soldering Furnace Chain Belt', name_zh: '回流焊炉链板带', unit: '件', category: 'part',
     props: [{ param: 'pitch', kind: 'range', min: 5, max: 50, unit: 'mm' }] },
 
   /** 冷却风机。离心式，叶轮 φ200，风量 300 m³/h，对着冷却区吹。 */
-  { id: 'plant/reflow-furnace/blower', name: '回流焊炉冷却风机', unit: '件', category: 'part',
+  { id: 'plant/reflow-furnace/blower', name: 'Reflow Soldering Furnace Cooling Fan', name_zh: '回流焊炉冷却风机', unit: '件', category: 'part',
     props: [{ param: 'flow', kind: 'range', min: 50, max: 2000, unit: 'm³/h' }] },
 
   /**
@@ -334,11 +334,11 @@ export const REFLOW_ITEMS: readonly Item[] = [
    * 判据只能是"每支偶都偏低同样的 20–28 K"（同批标定），于是**相对温差可用、
    * 绝对温度不可用**。这就是"靠熔断指示片验峰值"的直接原因。
    */
-  { id: 'plant/reflow-furnace/sensor', name: '回流焊炉铜-铁热电偶', unit: '件', category: 'part',
+  { id: 'plant/reflow-furnace/sensor', name: 'Reflow Soldering Furnace Copper-Iron Thermocouple', name_zh: '回流焊炉铜-铁热电偶', unit: '件', category: 'part',
     props: [{ param: 'sensitivity', kind: 'range', min: 1, max: 60, unit: 'µV/K' }] },
 
   /** 印刷箱体。2 mm 钢板焊成，前面一块 6 mm 玻璃窗，左侧一个闸门（板子进出）。 */
-  { id: 'plant/solder-printer/chamber', name: '丝印机 / 点胶机印刷箱体', unit: '件', category: 'part',
+  { id: 'plant/solder-printer/chamber', name: 'Screen Printer/Dispenser Print Chamber', name_zh: '丝印机 / 点胶机印刷箱体', unit: '件', category: 'part',
     props: [{ param: 'volume', kind: 'range', min: 50, max: 2000, unit: 'L' }] },
 
   /**
@@ -347,22 +347,22 @@ export const REFLOW_ITEMS: readonly Item[] = [
    * 刃口有一道 0.2 mm 的倒角（"刮刀角度"）：不倒角的刮刀会把焊膏全刮走，
    * 倒角太大又印不满。60° 是 SAC305 焊膏的工业值（黏度高，要陡）。
    */
-  { id: 'plant/solder-printer/squeegee', name: '丝印机 / 点胶机刮刀', unit: '件', category: 'part',
+  { id: 'plant/solder-printer/squeegee', name: 'Screen Printer/Dispenser Squeegee', name_zh: '丝印机 / 点胶机刮刀', unit: '件', category: 'part',
     props: [{ param: 'angle', kind: 'range', min: 30, max: 90, unit: '°' }] },
 
   /** 钢网夹。四点螺旋压紧，张力 30–40 N/cm —— 本层没有张力计，用弹簧秤拉。 */
-  { id: 'plant/solder-printer/clamp', name: '丝印机 / 点胶机钢网夹', unit: '件', category: 'part',
+  { id: 'plant/solder-printer/clamp', name: 'Screen Printer/Dispenser Stencil Clamp', name_zh: '丝印机 / 点胶机钢网夹', unit: '件', category: 'part',
     props: [{ param: 'clampForce', kind: 'range', min: 200, max: 2000, unit: 'N' }] },
 
   /**
    * 印刷台。铸铁台面 + 三个微调螺钉（M6×1，一周 1 mm）+ 真空吸? 没有真空 ——
    * 用**四个弹簧压脚**把板子压平（薄板 1.6 mm 会翘 0.3 mm，压不平就印不匀）。
    */
-  { id: 'plant/solder-printer/table', name: '丝印机 / 点胶机印刷台', unit: '件', category: 'part',
+  { id: 'plant/solder-printer/table', name: 'Screen Printer/Dispenser Print Table', name_zh: '丝印机 / 点胶机印刷台', unit: '件', category: 'part',
     props: [{ param: 'flatness', kind: 'range', min: 0, max: 0.2, unit: 'mm', dir: 'atMost' }] },
 
   /** 贴片箱体。钢板焊成，前面两个手套口（φ200，丁腈? 没有橡胶 —— 用帆布袖套）。 */
-  { id: 'plant/pick-place/chamber', name: '贴片机贴片箱体', unit: '件', category: 'part',
+  { id: 'plant/pick-place/chamber', name: 'Pick-and-Place Machine Placement Chamber', name_zh: '贴片机贴片箱体', unit: '件', category: 'part',
     props: [{ param: 'volume', kind: 'range', min: 50, max: 2000, unit: 'L' }] },
 
   /**
@@ -374,7 +374,7 @@ export const REFLOW_ITEMS: readonly Item[] = [
    * 磨完用 `std/calibrated-scale-100` 反标（10 nm/100 mm 的尺，用它标 5 µm 的丝杠
    * 是千倍余量，属于"拿干涉仪量钢卷尺"，但没有更粗的尺了）。
    */
-  { id: 'plant/pick-place/gantry', name: 'X-Y 丝杠台', unit: '件', category: 'part',
+  { id: 'plant/pick-place/gantry', name: 'X-Y Lead Screw Stage', name_zh: 'X-Y 丝杠台', unit: '件', category: 'part',
     props: [{ param: 'repeatability', kind: 'range', min: 0, max: 500, unit: 'µm', dir: 'atMost' }] },
 
   /**
@@ -383,7 +383,7 @@ export const REFLOW_ITEMS: readonly Item[] = [
    * 夹指淬硬到 HRC 45 后磨，指尖 0.3 mm 宽；张开量 1–12 mm（靠换夹指）。
    * 没有真空吸嘴（本层没有独立真空泵条目），所以**元件不能小于 1.0 × 0.5 mm**。
    */
-  { id: 'plant/pick-place/head', name: '贴片机贴装头', unit: '件', category: 'part',
+  { id: 'plant/pick-place/head', name: 'Pick-and-Place Machine Placement Head', name_zh: '贴片机贴装头', unit: '件', category: 'part',
     props: [{ param: 'stroke', kind: 'range', min: 5, max: 100, unit: 'mm' }] },
 
   /**
@@ -393,19 +393,19 @@ export const REFLOW_ITEMS: readonly Item[] = [
    * 销孔间隙（5–20 µm）吸收，剩下的只有台子的重复定位。所以同一个板型只要
    * 一副治具，而**换板型要换治具**（这就是为什么小批量贵）。
    */
-  { id: 'plant/pick-place/jig', name: '贴片机治具板', unit: '件', category: 'part',
+  { id: 'plant/pick-place/jig', name: 'Pick-and-Place Machine Jig Plate', name_zh: '贴片机治具板', unit: '件', category: 'part',
     props: [{ param: 'positionError', kind: 'range', min: 0, max: 1, unit: 'mm', dir: 'atMost' }] },
 
   /** 返修箱体。钢板焊成 + 前面一块玻璃 + 两个手套口（返修是敞开操作）。 */
-  { id: 'plant/rework-station/chamber', name: '返修台返修箱体', unit: '件', category: 'part',
+  { id: 'plant/rework-station/chamber', name: 'Rework Station Chamber', name_zh: '返修台返修箱体', unit: '件', category: 'part',
     props: [{ param: 'volume', kind: 'range', min: 20, max: 500, unit: 'L' }] },
 
   /** 热风嘴。φ0.3 铜丝绕在瓷管上，φ8 出风口，250–300 °C，风量 5 L/min。 */
-  { id: 'plant/rework-station/hot-air', name: '返修台热风嘴', unit: '件', category: 'part',
+  { id: 'plant/rework-station/hot-air', name: 'Rework Station Hot Air Nozzle', name_zh: '返修台热风嘴', unit: '件', category: 'part',
     props: [{ param: 'power', kind: 'range', min: 0.1, max: 5, unit: 'kW' }] },
 
   /** 底部预热板。铸铁板 100 × 100 × 10，内埋铜丝，100–150 °C（减小热应力）。 */
-  { id: 'plant/rework-station/preheater', name: '返修台底部预热板', unit: '件', category: 'part',
+  { id: 'plant/rework-station/preheater', name: 'Rework Station Bottom Preheater', name_zh: '返修台底部预热板', unit: '件', category: 'part',
     props: [{ param: 'power', kind: 'range', min: 0.1, max: 5, unit: 'kW' }] },
 
   /**
@@ -415,7 +415,7 @@ export const REFLOW_ITEMS: readonly Item[] = [
    * 对位只要看得见两个焊盘圈，不需要分辨 0.1 µm。这是这一层"降级换得掉精度、
    * 换不掉功能"的一个正常例子。
    */
-  { id: 'plant/rework-station/optics', name: '返修台双目对位镜', unit: '件', category: 'part',
+  { id: 'plant/rework-station/optics', name: 'Rework Station Stereo Alignment Scope', name_zh: '返修台双目对位镜', unit: '件', category: 'part',
     props: [{ param: 'magnification', kind: 'range', min: 2, max: 100, unit: '×' }] },
 
   // ═════════════════════════════════════════════════════════════════════════
@@ -436,7 +436,7 @@ export const REFLOW_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/solder-coupon-general',
-    name: '回流试片',
+    name: 'Reflow Test Coupon', name_zh: '回流试片',
     unit: '片',
     category: 'part',
     props: [
@@ -454,7 +454,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
   {
     /** 炉膛：薄板剪折焊 → 砌高铝砖衬 → 填矿棉 → 焊氮气罩与挡帘。 */
     id: 'make/reflow-tunnel',
-    name: '回流焊炉炉膛制造',
+    name: 'Reflow Soldering Furnace Chamber Manufacturing', name_zh: '回流焊炉炉膛制造',
     produces: [{ item: 'plant/reflow-furnace/tunnel', qty: q(1), gives: [{ param: 'length', kind: 'range', min: 1600, max: 1600 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -476,7 +476,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
      * 车一刀一层黑灰，要在水盆里车（湿车）。这一条与"石墨不能干磨"是同一件事。
      */
     id: 'make/reflow-zone-heater',
-    name: '回流焊炉加热区制造',
+    name: 'Reflow Soldering Furnace Heating Zone Manufacturing', name_zh: '回流焊炉加热区制造',
     produces: [{ item: 'plant/reflow-furnace/zone-heater', qty: q(1), gives: [{ param: 'power', kind: 'range', min: 2.5, max: 3 }] }],
     uses: [
       { anyOf: [{ item: 'mat/carbon', qty: q(1) }] },
@@ -493,7 +493,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
   {
     /** 链板带：冲链板 → 车销轴 → 装配 → 张紧（1.6 m 长，约 500 节）。 */
     id: 'make/reflow-belt',
-    name: '回流焊炉链板带制造',
+    name: 'Reflow Soldering Furnace Chain Belt Manufacturing', name_zh: '回流焊炉链板带制造',
     produces: [{ item: 'plant/reflow-furnace/belt', qty: q(1), gives: [{ param: 'pitch', kind: 'range', min: 12.7, max: 12.7 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -509,7 +509,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
   {
     /** 冷却风机：车轴 → 焊叶轮与蜗壳 → 装。 */
     id: 'make/reflow-blower',
-    name: '回流焊炉冷却风机制造',
+    name: 'Reflow Soldering Furnace Cooling Fan Manufacturing', name_zh: '回流焊炉冷却风机制造',
     produces: [{ item: 'plant/reflow-furnace/blower', qty: q(1), gives: [{ param: 'flow', kind: 'range', min: 280, max: 320 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -532,7 +532,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
      * 锌（419.5 °C）三个定点。三点拟合出的曲线在 232 附近的误差 3–5 K。
      */
     id: 'make/reflow-sensor',
-    name: '回流焊炉铜-铁热电偶制造',
+    name: 'Reflow Soldering Furnace Copper-Iron Thermocouple Manufacturing', name_zh: '回流焊炉铜-铁热电偶制造',
     produces: [{ item: 'plant/reflow-furnace/sensor', qty: q(1), gives: [{ param: 'sensitivity', kind: 'range', min: 12, max: 14 }] }],
     uses: [
       { anyOf: [{ item: 'mat/copper-wire', qty: q(1) }] },
@@ -553,7 +553,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
   {
     /** 箱体：钢板焊 + 玻璃窗 + 闸门。窗用 6 mm 玻璃，压框 + 石棉? 没有石棉 —— 铜垫。 */
     id: 'make/printer-chamber',
-    name: '丝印机 / 点胶机印刷箱体制造',
+    name: 'Screen Printer/Dispenser Print Chamber Manufacturing', name_zh: '丝印机 / 点胶机印刷箱体制造',
     produces: [{ item: 'plant/solder-printer/chamber', qty: q(1), gives: [{ param: 'volume', kind: 'range', min: 120, max: 120 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -574,7 +574,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
      * 在 `plant/gauge-block` 的平板上涂红丹研合看接触点（industrially 刮研）。
      */
     id: 'make/printer-squeegee',
-    name: '丝印机 / 点胶机刮刀制造',
+    name: 'Screen Printer/Dispenser Squeegee Manufacturing', name_zh: '丝印机 / 点胶机刮刀制造',
     produces: [{ item: 'plant/solder-printer/squeegee', qty: q(1), gives: [{ param: 'angle', kind: 'range', min: 58, max: 62 }] }],
     uses: [{ anyOf: [{ item: 'mat/steel-45', qty: q(1) }] }],
     needs: ['plant/metrology-room'],
@@ -586,7 +586,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
   {
     /** 钢网夹：四点螺旋压紧 + 两根导柱。 */
     id: 'make/printer-clamp',
-    name: '丝印机 / 点胶机钢网夹制造',
+    name: 'Screen Printer/Dispenser Stencil Clamp Manufacturing', name_zh: '丝印机 / 点胶机钢网夹制造',
     produces: [{ item: 'plant/solder-printer/clamp', qty: q(1), gives: [{ param: 'clampForce', kind: 'range', min: 900, max: 1200 }] }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -602,7 +602,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
      * 台面的平面度 0.02 mm 是印刷厚度的下限：台面翘 0.05，印出来就厚薄差 10 %。
      */
     id: 'make/printer-table',
-    name: '丝印机 / 点胶机印刷台制造',
+    name: 'Screen Printer/Dispenser Print Table Manufacturing', name_zh: '丝印机 / 点胶机印刷台制造',
     produces: [{ item: 'plant/solder-printer/table', qty: q(1), gives: [{ param: 'flatness', kind: 'range', min: 0.015, max: 0.02 }] }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht200', qty: q(1) }] },
@@ -619,7 +619,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
   {
     /** 贴片箱体：钢板焊 + 两个手套口（帆布袖套 + 铜压环）。 */
     id: 'make/pp-chamber',
-    name: '贴片机贴片箱体制造',
+    name: 'Pick-and-Place Machine Placement Chamber Manufacturing', name_zh: '贴片机贴片箱体制造',
     produces: [{ item: 'plant/pick-place/chamber', qty: q(1), gives: [{ param: 'volume', kind: 'range', min: 240, max: 240 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -642,7 +642,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
      * **没有这张表，±0.05 只是重复定位，不是准确度。**
      */
     id: 'make/pp-gantry',
-    name: 'X-Y 丝杠台制造',
+    name: 'X-Y Lead Screw Stage Manufacturing', name_zh: 'X-Y 丝杠台制造',
     produces: [{ item: 'plant/pick-place/gantry', qty: q(1), gives: [{ param: 'repeatability', kind: 'range', min: 40, max: 60 }] }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -658,7 +658,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
   {
     /** 贴装头：磨夹指 → 铣凸轮 → 装弹簧与 Z 向滑板。 */
     id: 'make/pp-head',
-    name: '贴片机贴装头制造',
+    name: 'Pick-and-Place Machine Placement Head Manufacturing', name_zh: '贴片机贴装头制造',
     produces: [{ item: 'plant/pick-place/head', qty: q(1), gives: [{ param: 'stroke', kind: 'range', min: 20, max: 20 }] }],
     uses: [
       { anyOf: [{ item: 'mat/steel-45', qty: q(1) }] },
@@ -679,7 +679,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
      * 间隙 5–20 µm。这一对销孔就是整台贴片机的绝对位置基准。
      */
     id: 'make/pp-jig',
-    name: '贴片机治具板制造',
+    name: 'Pick-and-Place Machine Jig Plate Manufacturing', name_zh: '贴片机治具板制造',
     produces: [{ item: 'plant/pick-place/jig', qty: q(1), gives: [{ param: 'positionError', kind: 'range', min: 0.01, max: 0.02 }] }],
     uses: [
       { anyOf: [{ item: 'mat/aluminium', qty: q(1) }] },
@@ -699,7 +699,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
   {
     /** 返修箱体：钢板焊 + 玻璃 + 两个手套口。 */
     id: 'make/rw-chamber',
-    name: '返修台返修箱体制造',
+    name: 'Rework Station Chamber Manufacturing', name_zh: '返修台返修箱体制造',
     produces: [{ item: 'plant/rework-station/chamber', qty: q(1), gives: [{ param: 'volume', kind: 'range', min: 60, max: 60 }] }],
     uses: [
       { anyOf: [{ item: 'mat/sheet-steel', qty: q(1) }] },
@@ -712,7 +712,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
   {
     /** 热风嘴：绕铜丝 → 穿瓷管 → 烧成 → 装 φ8 喷嘴。 */
     id: 'make/rw-hot-air',
-    name: '返修台热风嘴制造',
+    name: 'Rework Station Hot Air Nozzle Manufacturing', name_zh: '返修台热风嘴制造',
     produces: [{ item: 'plant/rework-station/hot-air', qty: q(1), gives: [{ param: 'power', kind: 'range', min: 0.6, max: 1.0 }] }],
     uses: [
       { anyOf: [{ item: 'mat/copper-wire', qty: q(1) }] },
@@ -727,7 +727,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
   {
     /** 预热板：铸铁板铣槽 → 埋铜丝 → 灌耐火泥 → 磨平面。 */
     id: 'make/rw-preheater',
-    name: '返修台底部预热板制造',
+    name: 'Rework Station Bottom Preheater Manufacturing', name_zh: '返修台底部预热板制造',
     produces: [{ item: 'plant/rework-station/preheater', qty: q(1), gives: [{ param: 'power', kind: 'range', min: 0.3, max: 0.5 }] }],
     uses: [
       { anyOf: [{ item: 'mat/iron-ht200', qty: q(1) }] },
@@ -746,7 +746,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
      * 见 unblock-interferometer-flat.ts:212 —— 抛光的那一路整条走不通）。
      */
     id: 'make/rw-optics',
-    name: '返修台双目对位镜制造',
+    name: 'Rework Station Stereo Alignment Scope Manufacturing', name_zh: '返修台双目对位镜制造',
     produces: [{ item: 'plant/rework-station/optics', qty: q(1), gives: [{ param: 'magnification', kind: 'range', min: 18, max: 22 }] }],
     uses: [
       { anyOf: [{ item: 'mat/glass', qty: q(1) }] },
@@ -783,7 +783,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
      * 电导率仪），只能按工艺保证：3 次换水 + 60–70 °C + 最后一道用新的水 + 吹干。
      */
     id: 'make/solder-coupon-printed',
-    name: '回流试片制造',
+    name: 'Reflow Test Coupon Manufacturing', name_zh: '回流试片制造',
     produces: [{
       item: 'std/solder-coupon-general',
       qty: q(1),
@@ -826,7 +826,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
      * 这也是本层唯一"用冲压件而不是用精度"解决吞吐的地方。
      */
     id: 'make/solder-coupon-balled',
-    name: '回流试片制造',
+    name: 'Reflow Test Coupon Manufacturing', name_zh: '回流试片制造',
     produces: [{
       item: 'std/solder-coupon-general',
       qty: q(1),
@@ -870,7 +870,7 @@ export const REFLOW_ROUTES: readonly Route[] = [
      * 3–5 µm），所以同一块板最多返修 3 次。
      */
     id: 'make/solder-coupon-rework',
-    name: '回流试片制造',
+    name: 'Reflow Test Coupon Manufacturing', name_zh: '回流试片制造',
     produces: [{
       item: 'std/solder-coupon-general',
       qty: q(1),
@@ -909,7 +909,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/reflow-furnace',
-    name: '回流焊炉装配',
+    name: 'Reflow Soldering Furnace Assembly', name_zh: '回流焊炉装配',
     produces: [{
       item: 'plant/reflow-furnace',
       qty: q(1),
@@ -926,7 +926,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/solder-printer',
-    name: '丝印机 / 点胶机装配',
+    name: 'Screen Printer/Dispenser Assembly', name_zh: '丝印机 / 点胶机装配',
     produces: [{
       item: 'plant/solder-printer',
       qty: q(1),
@@ -942,7 +942,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/pick-place',
-    name: '贴片机装配',
+    name: 'Pick-and-Place Machine Assembly', name_zh: '贴片机装配',
     produces: [{
       item: 'plant/pick-place',
       qty: q(1),
@@ -959,7 +959,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/rework-station',
-    name: '返修台装配',
+    name: 'Rework Station Assembly', name_zh: '返修台装配',
     produces: [{
       item: 'plant/rework-station',
       qty: q(1),

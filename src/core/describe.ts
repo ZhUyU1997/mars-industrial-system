@@ -128,12 +128,19 @@ export function normUnit(u: string | undefined): string {
 export interface Item {
   readonly id: string;
   /**
-   * 中文名。只给人看，模型不用它做任何判定。
+   * 英文名。只给人看，模型不用它做任何判定。
    *
    * 名字与 id 分工：id 是身份，稳定、可引用；name 是给人读的标签，
    * 允许重名，也允许随认识加深而修改 —— 改它不影响任何引用。
    */
   readonly name: string;
+  /**
+   * 中文名。与 `name` 同义，供中文界面与检索使用。
+   *
+   * 两个名字都不是身份：引用一律用 id。`name` 必须是不含汉字的英文，
+   * `name_zh` 保留原始中文名，二者都由 `validate` 检查非空。
+   */
+  readonly name_zh: string;
   /**
    * 它在系统里的角色。缺省视为 `material`。
    *
@@ -626,11 +633,17 @@ export interface Step {
 export interface Route {
   readonly id: string;
   /**
-   * 中文名。只给人看，模型不用它做任何判定。
+   * 英文名。只给人看，模型不用它做任何判定。
    *
    * 同一条产物可以有多条路线，名字允许重复；区分靠 id。
    */
   readonly name: string;
+  /**
+   * 中文名。与 `name` 同义，供中文界面与检索使用。
+   *
+   * 路线名不参与求解；同一条产物可以有多条路线，名字允许重复。
+   */
+  readonly name_zh: string;
   readonly produces: readonly Term[];
   /**
    * **一批占用多少小时**（第 108 节）。
@@ -800,6 +813,9 @@ const fmtRange = (w: { readonly min?: number; readonly max?: number }): string =
 };
 
 
+/** 任一汉字。英文名里不应出现。 */
+const HAN = /\p{Script=Han}/u;
+
 /** 校验一份描述。只检查"写没写对"，不做任何求解。 */
 export function validate(d: Description): Validation {
   const errors: Problem[] = [];
@@ -811,6 +827,11 @@ export function validate(d: Description): Validation {
       errors.push({ code: 'duplicate_id', where: it.id, detail: 'item id 重复' });
     }
     if (typeof it.name !== 'string' || it.name.trim() === '') {
+      errors.push({ code: 'bad_name', where: it.id, detail: '条目英文名为空' });
+    } else if (HAN.test(it.name)) {
+      errors.push({ code: 'bad_name', where: it.id, detail: '条目英文名含中文' });
+    }
+    if (typeof it.name_zh !== 'string' || it.name_zh.trim() === '') {
       errors.push({ code: 'bad_name', where: it.id, detail: '条目中文名为空' });
     }
     itemIds.add(it.id);
@@ -822,6 +843,11 @@ export function validate(d: Description): Validation {
       errors.push({ code: 'duplicate_id', where: r.id, detail: 'route id 重复' });
     }
     if (typeof r.name !== 'string' || r.name.trim() === '') {
+      errors.push({ code: 'bad_name', where: r.id, detail: '路线英文名为空' });
+    } else if (HAN.test(r.name)) {
+      errors.push({ code: 'bad_name', where: r.id, detail: '路线英文名含中文' });
+    }
+    if (typeof r.name_zh !== 'string' || r.name_zh.trim() === '') {
       errors.push({ code: 'bad_name', where: r.id, detail: '路线中文名为空' });
     }
     routeIds.add(r.id);

@@ -278,7 +278,7 @@ export const UNBLOCK_INTERF_SPLIT_ROUTES: readonly Route[] = [
      *  ③ 自制玻璃的条纹 0.2–0.5 µm：会把平晶的 λ/4 误判成 λ/2（转 90° 复看分辨）
      */
     id: 'make/interferometer-splitter-wedge',
-    name: '干涉仪分光板制造',
+    name: 'Interferometer Beamsplitter Manufacturing', name_zh: '干涉仪分光板制造',
     produces: [{ item: 'plant/interferometer/splitter', qty: q(1) }],
     uses: [
       /**

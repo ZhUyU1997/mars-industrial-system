@@ -101,7 +101,7 @@ export const CMOS_ANALYZER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmos-test/parameter-analyzer/low-leak-input',
-    name: '参数分析仪低漏输入器件',
+    name: 'Parameter Analyzer Low-Leakage Input Device', name_zh: '参数分析仪低漏输入器件',
     unit: '件',
     category: 'part',
     props: [
@@ -159,7 +159,7 @@ export const CMOS_ANALYZER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmos-test/parameter-analyzer/femto-front-end',
-    name: '1 fA 低电流前端',
+    name: '1 fA Low-Current Front End', name_zh: '1 fA 低电流前端',
     unit: '件',
     category: 'part',
     props: [
@@ -222,7 +222,7 @@ export const CMOS_ANALYZER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmos-test/parameter-analyzer/adc-24bit',
-    name: '24 位 ADC',
+    name: '24-Bit ADC', name_zh: '24 位 ADC',
     unit: '件',
     category: 'part',
     props: [
@@ -273,7 +273,7 @@ export const CMOS_ANALYZER_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/cmos-test/parameter-analyzer/hv-source-200v-precision',
-    name: '±200 V 精密源',
+    name: '±200 V Precision Source', name_zh: '±200 V 精密源',
     unit: '件',
     category: 'part',
     props: [
@@ -332,7 +332,7 @@ export const CMOS_ANALYZER_ROUTES: readonly Route[] = [
      *   · 196 只报废：不是"余料"，是筛选成本，写在 `unbalanced_zh` 里。
      */
     id: 'make/low-leak-input',
-    name: '参数分析仪低漏输入器件制造',
+    name: 'Parameter Analyzer Low-Leakage Input Device Manufacturing', name_zh: '参数分析仪低漏输入器件制造',
     produces: [
       {
         item: 'plant/cmos-test/parameter-analyzer/low-leak-input',
@@ -431,7 +431,7 @@ export const CMOS_ANALYZER_ROUTES: readonly Route[] = [
      *    200 V 档的下限写 10 fA–1 pA，不写 1 fA。
      */
     id: 'make/femto-front-end',
-    name: '1 fA 低电流前端制造',
+    name: '1 fA Low-Current Front End Manufacturing', name_zh: '1 fA 低电流前端制造',
     produces: [
       {
         item: 'plant/cmos-test/parameter-analyzer/femto-front-end',
@@ -538,7 +538,7 @@ export const CMOS_ANALYZER_ROUTES: readonly Route[] = [
      *    256 次平均 = 25.6 s（10 SPS），所以 24 位档是"慢速"档。
      */
     id: 'make/adc-24bit',
-    name: '24 位 ADC 制造',
+    name: '24-Bit ADC Manufacturing', name_zh: '24 位 ADC 制造',
     produces: [
       {
         item: 'plant/cmos-test/parameter-analyzer/adc-24bit',
@@ -657,7 +657,7 @@ export const CMOS_ANALYZER_ROUTES: readonly Route[] = [
      *    0.1 %；0.01–0.02 % 是比值，不是绝对值。分辨率 ≠ 准确度。
      */
     id: 'make/hv-source-200v-precision',
-    name: '±200 V 精密源制造',
+    name: '±200 V Precision Source Manufacturing', name_zh: '±200 V 精密源制造',
     produces: [
       {
         item: 'plant/cmos-test/parameter-analyzer/hv-source-200v-precision',
@@ -786,7 +786,7 @@ export const CMOS_ANALYZER_ROUTES: readonly Route[] = [
      *    都是**分辨**。证书/校准仍缺：到货只做开箱通电与自检，没有 CNAS。
      */
     id: 'make/cmos-parameter-analyzer',
-    name: '参数分析仪装配',
+    name: 'Parameter Analyzer Assembly', name_zh: '参数分析仪装配',
     produces: [
       {
         item: 'plant/cmos-test/parameter-analyzer',

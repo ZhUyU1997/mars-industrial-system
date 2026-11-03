@@ -306,7 +306,7 @@ export const UNBLOCK_HOPPER_ITEMS: readonly Item[] = [];
 export const UNBLOCK_HOPPER_ROUTES: readonly Route[] = [
   {
     id: 'make/separator-hopper-cast',
-    name: '磁选机料斗与给料槽制造',
+    name: 'Magnetic Separator Hopper and Feed Chute Manufacturing', name_zh: '磁选机料斗与给料槽制造',
     produces: [{ item: 'plant/magnetic-separator/hopper', qty: q(1) }],
     uses: [
       {

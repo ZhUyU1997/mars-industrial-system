@@ -198,7 +198,7 @@ export const PD_SENSOR_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/hv-test-bench/pd-sensor',
-    name: '100 kV 局放传感器',
+    name: '100 kV Partial Discharge Sensor', name_zh: '100 kV 局放传感器',
     unit: '件',
     category: 'part',
     props: [
@@ -244,7 +244,7 @@ export const PD_SENSOR_ROUTES: readonly Route[] = [
      * 写进 `needs` 会触发 `redundant_need`。
      */
     id: 'make/pd-sensor',
-    name: '100 kV 局放传感器装配',
+    name: '100 kV Partial Discharge Sensor Assembly', name_zh: '100 kV 局放传感器装配',
     produces: [
       {
         item: 'plant/hv-test-bench/pd-sensor',

@@ -395,7 +395,7 @@ export const CAR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/car-resist',
-    name: '化学增幅光刻胶',
+    name: 'Chemically Amplified Photoresist', name_zh: '化学增幅光刻胶',
     unit: 'kg',
     category: 'material',
     props: [
@@ -424,7 +424,7 @@ export const CAR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/pag-triphenylsulfonium-otf',
-    name: '三苯基锍三氟甲磺酸盐',
+    name: 'Triphenylsulfonium Triflate', name_zh: '三苯基锍三氟甲磺酸盐',
     unit: 'kg',
     category: 'material',
     props: [
@@ -461,7 +461,7 @@ export const CAR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/resist-sensitized',
-    name: '增感重铬酸盐-酚醛负胶',
+    name: 'Sensitized Dichromate-Phenolic Negative Resist', name_zh: '增感重铬酸盐-酚醛负胶',
     unit: 'kg',
     category: 'material',
     props: [
@@ -493,7 +493,7 @@ export const CAR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/resist-grafted',
-    name: '光接枝负胶',
+    name: 'Photografted Negative Resist', name_zh: '光接枝负胶',
     unit: 'kg',
     category: 'material',
     props: [
@@ -524,7 +524,7 @@ export const CAR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/vinyl-acetate',
-    name: '乙酸乙烯酯',
+    name: 'Vinyl Acetate', name_zh: '乙酸乙烯酯',
     unit: 'kg',
     category: 'material',
     props: [{ param: 'purity', kind: 'range', min: 90, max: 99.99, unit: '%', dir: 'atLeast' }],
@@ -536,7 +536,7 @@ export const CAR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/acetic-acid',
-    name: '乙酸',
+    name: 'Acetic Acid', name_zh: '乙酸',
     unit: 'kg',
     category: 'material',
     props: [
@@ -562,7 +562,7 @@ export const CAR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/polyvinyl-alcohol',
-    name: '聚乙烯醇',
+    name: 'Polyvinyl Alcohol', name_zh: '聚乙烯醇',
     unit: 'kg',
     category: 'material',
     props: [
@@ -584,7 +584,7 @@ export const CAR_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/polyethylene-glycol',
-    name: '聚乙二醇 PEG-400',
+    name: 'PEG-400', name_zh: '聚乙二醇 PEG-400',
     unit: 'kg',
     category: 'material',
     props: [
@@ -637,7 +637,7 @@ export const CAR_ROUTES: readonly Route[] = [
      *   ③ 没有阻聚剂（缺口④），产物 ≤24 h 用完。
      */
     id: 'make/vinyl-acetate',
-    name: '乙酸乙烯酯制备',
+    name: 'Vinyl Acetate Production', name_zh: '乙酸乙烯酯制备',
     produces: [
       { item: 'mat/vinyl-acetate', qty: q(1000), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5 }] },
       { item: 'mat/water', qty: q(210), gives: [{ param: 'conductivity', kind: 'range', min: 50, max: 1000 }] },
@@ -693,7 +693,7 @@ export const CAR_ROUTES: readonly Route[] = [
      * `make/vinyl-acetate` 的④⑤同化学，只是乙酸来源不同。
      */
     id: 'make/vinyl-acetate-recycle',
-    name: '乙酸乙烯酯回收',
+    name: 'Vinyl Acetate Recovery', name_zh: '乙酸乙烯酯回收',
     produces: [
       { item: 'mat/vinyl-acetate', qty: q(1000), gives: [{ param: 'purity', kind: 'range', min: 99, max: 99.5 }] },
     ],
@@ -742,7 +742,7 @@ export const CAR_ROUTES: readonly Route[] = [
      * （要甲醇钠，NaOH 不在白名单，R8 ⑨）。
      */
     id: 'make/polyvinyl-alcohol',
-    name: '聚乙烯醇制备',
+    name: 'Polyvinyl Alcohol Production', name_zh: '聚乙烯醇制备',
     produces: [
       { item: 'mat/polyvinyl-alcohol', qty: q(512), gives: [{ param: 'hydrolysisDegree', kind: 'range', min: 88, max: 99 }] },
       {
@@ -799,7 +799,7 @@ export const CAR_ROUTES: readonly Route[] = [
      *    的尺度上是 0.1 wt%，本层不记。
      */
     id: 'make/polyethylene-glycol',
-    name: '聚乙二醇 PEG-400 制备',
+    name: 'PEG-400 Production', name_zh: '聚乙二醇 PEG-400 制备',
     produces: [
       {
         item: 'mat/polyethylene-glycol',
@@ -864,7 +864,7 @@ export const CAR_ROUTES: readonly Route[] = [
      *   ③ **24 h 内用完**：溶解氧的暗反应（第十节）。
      */
     id: 'make/resist-sensitized',
-    name: '增感重铬酸盐-酚醛负胶制备',
+    name: 'Sensitized Dichromate-Phenolic Negative Resist Production', name_zh: '增感重铬酸盐-酚醛负胶制备',
     produces: [
       {
         item: 'mat/resist-sensitized',
@@ -916,7 +916,7 @@ export const CAR_ROUTES: readonly Route[] = [
      * 配液同样避光、消泡、24 h 内用完（VAc 还会挥发，瓶口要封）。
      */
     id: 'make/resist-grafted',
-    name: '光接枝负胶制备',
+    name: 'Photografted Negative Resist Production', name_zh: '光接枝负胶制备',
     produces: [
       {
         item: 'mat/resist-grafted',

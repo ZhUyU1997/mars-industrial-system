@@ -143,7 +143,7 @@ export const VOLTAGE_REFERENCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/zener-reference-precision',
-    name: '低温度系数齐纳',
+    name: 'Low-Temperature-Coefficient Zener', name_zh: '低温度系数齐纳',
     unit: '件',
     category: 'part',
     props: [
@@ -178,7 +178,7 @@ export const VOLTAGE_REFERENCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/divider-10to1-precision',
-    name: '精密分压器 10:1',
+    name: 'Precision Voltage Divider 10:1', name_zh: '精密分压器 10:1',
     unit: '件',
     category: 'part',
     props: [
@@ -206,7 +206,7 @@ export const VOLTAGE_REFERENCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'std/divider-100to1-precision',
-    name: '精密分压器 100:1',
+    name: 'Precision Voltage Divider 100:1', name_zh: '精密分压器 100:1',
     unit: '件',
     category: 'part',
     props: [
@@ -240,7 +240,7 @@ export const VOLTAGE_REFERENCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mk-oven/bath',
-    name: 'mK 外层水浴',
+    name: 'mK Outer Water Bath', name_zh: 'mK 外层水浴',
     unit: '件',
     category: 'part',
     props: [
@@ -269,7 +269,7 @@ export const VOLTAGE_REFERENCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mk-oven/inner',
-    name: 'mK 内层恒温腔',
+    name: 'mK Inner Constant-Temperature Chamber', name_zh: 'mK 内层恒温腔',
     unit: '件',
     category: 'part',
     props: [
@@ -291,7 +291,7 @@ export const VOLTAGE_REFERENCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mk-oven/heater',
-    name: 'mK 内层微调加热器',
+    name: 'mK Inner Fine-Adjust Heater', name_zh: 'mK 内层微调加热器',
     unit: '件',
     category: 'part',
     props: [{ param: 'power', kind: 'range', min: 10, max: 30, unit: 'W' }],
@@ -322,7 +322,7 @@ export const VOLTAGE_REFERENCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mk-oven/thermistor',
-    name: 'NTC 热敏电阻',
+    name: 'NTC Thermistor', name_zh: 'NTC 热敏电阻',
     unit: '件',
     category: 'part',
     props: [
@@ -351,7 +351,7 @@ export const VOLTAGE_REFERENCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mk-oven/bridge',
-    name: 'mK 热敏电阻电桥',
+    name: 'mK Thermistor Bridge', name_zh: 'mK 热敏电阻电桥',
     unit: '件',
     category: 'part',
     props: [
@@ -378,7 +378,7 @@ export const VOLTAGE_REFERENCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mk-oven/controller',
-    name: '双通道模拟 PID',
+    name: 'Dual-Channel Analog PID', name_zh: '双通道模拟 PID',
     unit: '件',
     category: 'part',
     props: [
@@ -407,7 +407,7 @@ export const VOLTAGE_REFERENCE_ITEMS: readonly Item[] = [
    */
   {
     id: 'plant/mk-oven',
-    name: 'mK 恒温箱',
+    name: 'mK Constant-Temperature Enclosure', name_zh: 'mK 恒温箱',
     unit: '台',
     category: 'machine',
     holds: [
@@ -464,7 +464,7 @@ export const VOLTAGE_REFERENCE_ROUTES: readonly Route[] = [
      * 要走到埋层，缺的是外延炉（本层没有），不是筛选台。
      */
     id: 'make/zener-reference-precision',
-    name: '低温度系数齐纳制造',
+    name: 'Low-Temperature-Coefficient Zener Manufacturing', name_zh: '低温度系数齐纳制造',
     rate: { hours: q(720) },
     produces: [
       {
@@ -556,7 +556,7 @@ export const VOLTAGE_REFERENCE_ROUTES: readonly Route[] = [
      * 使用时的温度 —— 这一条把「调完再搬去别处」引入的 0.01 % 漂移直接消掉。
      */
     id: 'make/divider-precision-pair',
-    name: '精密分压器 10:1 制造',
+    name: 'Precision Voltage Divider 10:1 Manufacturing', name_zh: '精密分压器 10:1 制造',
     rate: { hours: q(96) },
     produces: [
       {
@@ -676,7 +676,7 @@ export const VOLTAGE_REFERENCE_ROUTES: readonly Route[] = [
      * 从曲线反推漏热系数（判据 ≤1.5 W/K），超了就加矿棉。
      */
     id: 'make/mk-oven-bath',
-    name: 'mK 外层水浴制造',
+    name: 'mK Outer Water Bath Manufacturing', name_zh: 'mK 外层水浴制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -739,7 +739,7 @@ export const VOLTAGE_REFERENCE_ROUTES: readonly Route[] = [
      * 放在计量间 72 h 再精铣一遍，免得装好后腔体变形把引线扯断。
      */
     id: 'make/mk-oven-inner',
-    name: 'mK 内层恒温腔制造',
+    name: 'mK Inner Constant-Temperature Chamber Manufacturing', name_zh: 'mK 内层恒温腔制造',
     rate: { hours: q(16) },
     produces: [
       {
@@ -795,7 +795,7 @@ export const VOLTAGE_REFERENCE_ROUTES: readonly Route[] = [
      * 镍铬丝在 300 °C 以下几乎不氧化，这一条主要是查绕制时的机械损伤。
      */
     id: 'make/mk-oven-heater',
-    name: 'mK 内层微调加热器制造',
+    name: 'mK Inner Fine-Adjust Heater Manufacturing', name_zh: 'mK 内层微调加热器制造',
     rate: { hours: q(8) },
     produces: [
       {
@@ -847,7 +847,7 @@ export const VOLTAGE_REFERENCE_ROUTES: readonly Route[] = [
      * 这是「用矿不用试剂」的代价，靠老化分选压到 ±0.2 %。分选率按 60 % 记。
      */
     id: 'make/mk-oven-thermistor',
-    name: 'NTC 热敏电阻制造',
+    name: 'NTC Thermistor Manufacturing', name_zh: 'NTC 热敏电阻制造',
     rate: { hours: q(48) },
     produces: [
       {
@@ -923,7 +923,7 @@ export const VOLTAGE_REFERENCE_ROUTES: readonly Route[] = [
      * 唯一不用「零漂运放」就能做到 1 µV 级直流放大的办法（没有 chopper 芯片）。
      */
     id: 'make/mk-oven-bridge',
-    name: 'mK 热敏电阻电桥制造',
+    name: 'mK Thermistor Bridge Manufacturing', name_zh: 'mK 热敏电阻电桥制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -993,7 +993,7 @@ export const VOLTAGE_REFERENCE_ROUTES: readonly Route[] = [
      * 与共模尖峰（µV 计的带宽里不能有 0.1 V 的尖峰）。
      */
     id: 'make/mk-oven-controller',
-    name: '双通道模拟 PID 制造',
+    name: 'Dual-Channel Analog PID Manufacturing', name_zh: '双通道模拟 PID 制造',
     rate: { hours: q(24) },
     produces: [
       {
@@ -1081,7 +1081,7 @@ export const VOLTAGE_REFERENCE_ROUTES: readonly Route[] = [
      * 反算设定点电位器该拧到哪。这一步只做一次，之后箱子自己保持。
      */
     id: 'make/standard-voltage-reference-pair',
-    name: '标准电压基准对装配',
+    name: 'Standard Voltage Reference Pair Assembly', name_zh: '标准电压基准对装配',
     rate: { hours: q(168) },
     produces: [
       {
@@ -1214,7 +1214,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/mk-oven',
-    name: 'mK 恒温箱装配',
+    name: 'mK Constant-Temperature Enclosure Assembly', name_zh: 'mK 恒温箱装配',
     produces: [{
       item: 'plant/mk-oven',
       qty: q(1),

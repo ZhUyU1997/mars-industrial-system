@@ -90,7 +90,7 @@ export const TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/tem/gun',
-    name: '透射电镜电子枪',
+    name: 'Transmission Electron Microscope Electron Gun', name_zh: '透射电镜电子枪',
     unit: '件',
     category: 'part',
     props: [
@@ -111,7 +111,7 @@ export const TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/tem/accelerator',
-    name: '透射电镜加速管',
+    name: 'Transmission Electron Microscope Accelerator Tube', name_zh: '透射电镜加速管',
     unit: '件',
     category: 'part',
     props: [
@@ -132,7 +132,7 @@ export const TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/tem/hv-supply',
-    name: '透射电镜高压电源',
+    name: 'Transmission Electron Microscope High-Voltage Power Supply', name_zh: '透射电镜高压电源',
     unit: '件',
     category: 'part',
     props: [
@@ -152,7 +152,7 @@ export const TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/tem/column',
-    name: '透射电镜镜筒',
+    name: 'Transmission Electron Microscope Column', name_zh: '透射电镜镜筒',
     unit: '件',
     category: 'part',
     props: [
@@ -173,7 +173,7 @@ export const TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/tem/objective-lens',
-    name: '透射电镜物镜',
+    name: 'Transmission Electron Microscope Objective Lens', name_zh: '透射电镜物镜',
     unit: '件',
     category: 'part',
     props: [
@@ -193,7 +193,7 @@ export const TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/tem/lens-stack',
-    name: '中间镜 + 投影镜组',
+    name: 'Intermediate Lens + Projection Lens Stack', name_zh: '中间镜 + 投影镜组',
     unit: '件',
     category: 'part',
     props: [
@@ -213,7 +213,7 @@ export const TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/tem/stage',
-    name: '透射电镜样品台',
+    name: 'Transmission Electron Microscope Sample Stage', name_zh: '透射电镜样品台',
     unit: '件',
     category: 'part',
     props: [
@@ -233,7 +233,7 @@ export const TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/tem/detector',
-    name: '透射电镜成像探测器',
+    name: 'Transmission Electron Microscope Imaging Detector', name_zh: '透射电镜成像探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -254,7 +254,7 @@ export const TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/tem/edx-detector',
-    name: 'EDX 探测器',
+    name: 'EDX Detector', name_zh: 'EDX 探测器',
     unit: '件',
     category: 'part',
     props: [
@@ -274,7 +274,7 @@ export const TEM_PARTS: readonly Item[] = [
    */
   {
     id: 'plant/tem/isolation',
-    name: '隔振/电磁屏蔽基座',
+    name: 'Vibration Isolation / Electromagnetic Shielding Base', name_zh: '隔振/电磁屏蔽基座',
     unit: '件',
     category: 'part',
     props: [
@@ -309,7 +309,7 @@ export const TEM_PARTS: readonly Item[] = [
  */
 export const TEM: Item = {
   id: 'plant/tem',
-  name: '透射电镜',
+  name: 'Transmission Electron Microscope', name_zh: '透射电镜',
   unit: '台',
   category: 'machine',
   holds: [{ param: 'pressure', min: 1e-7, max: 1e-5 }],
@@ -363,7 +363,7 @@ export const TEM_ROUTES: readonly Route[] = [
      * 1 900–2 000 °C 只有电弧炉到得了；产物磨到 φ1×10、尖端 R 0.5–1 µm。
      */
     id: 'make/tem-gun',
-    name: '透射电镜电子枪制造',
+    name: 'Transmission Electron Microscope Electron Gun Manufacturing', name_zh: '透射电镜电子枪制造',
     produces: [
       {
         item: 'plant/tem/gun',
@@ -417,7 +417,7 @@ export const TEM_ROUTES: readonly Route[] = [
   {
     /** **加速管：氧化铝/石英管 + 10–20 级分压电极 + 高压引线。** */
     id: 'make/tem-accelerator',
-    name: '透射电镜加速管制造',
+    name: 'Transmission Electron Microscope Accelerator Tube Manufacturing', name_zh: '透射电镜加速管制造',
     produces: [
       {
         item: 'plant/tem/accelerator',
@@ -453,7 +453,7 @@ export const TEM_ROUTES: readonly Route[] = [
   {
     /** **高压电源：变压器 + 10 只整流管倍压 + 20 只薄膜电容 + 油绝缘。** */
     id: 'make/tem-hv-supply',
-    name: '透射电镜高压电源制造',
+    name: 'Transmission Electron Microscope High-Voltage Power Supply Manufacturing', name_zh: '透射电镜高压电源制造',
     produces: [
       {
         item: 'plant/tem/hv-supply',
@@ -486,7 +486,7 @@ export const TEM_ROUTES: readonly Route[] = [
   {
     /** **镜筒：不锈钢真空壳 + 3–5 级光阑 + 观察窗 + 漏率 ≤1e-8 Pa·L/s。** */
     id: 'make/tem-column',
-    name: '透射电镜镜筒制造',
+    name: 'Transmission Electron Microscope Column Manufacturing', name_zh: '透射电镜镜筒制造',
     produces: [
       {
         item: 'plant/tem/column',
@@ -523,7 +523,7 @@ export const TEM_ROUTES: readonly Route[] = [
   {
     /** **物镜：纯铁极靴 → 车/磨 → 退火 → 绕线圈 → 测 C_s/C_c。** */
     id: 'make/tem-objective-lens',
-    name: '透射电镜物镜制造',
+    name: 'Transmission Electron Microscope Objective Lens Manufacturing', name_zh: '透射电镜物镜制造',
     produces: [
       {
         item: 'plant/tem/objective-lens',
@@ -559,7 +559,7 @@ export const TEM_ROUTES: readonly Route[] = [
   {
     /** **中间镜/投影镜组：2–3 级磁透镜 + 50k–1M 放大 + 畸变校正。** */
     id: 'make/tem-lens-stack',
-    name: '中间镜 + 投影镜组制造',
+    name: 'Intermediate Lens + Projection Lens Stack Manufacturing', name_zh: '中间镜 + 投影镜组制造',
     produces: [
       {
         item: 'plant/tem/lens-stack',
@@ -594,7 +594,7 @@ export const TEM_ROUTES: readonly Route[] = [
   {
     /** **双倾样品台：交叉滚子轴承 + 双轴蜗轮 + 热对称结构。** */
     id: 'make/tem-stage',
-    name: '透射电镜样品台制造',
+    name: 'Transmission Electron Microscope Sample Stage Manufacturing', name_zh: '透射电镜样品台制造',
     produces: [
       {
         item: 'plant/tem/stage',
@@ -631,7 +631,7 @@ export const TEM_ROUTES: readonly Route[] = [
   {
     /** **成像探测器：P43 荧光屏 + 光纤面板 + 2048² CCD。** */
     id: 'make/tem-detector',
-    name: '透射电镜成像探测器制造',
+    name: 'Transmission Electron Microscope Imaging Detector Manufacturing', name_zh: '透射电镜成像探测器制造',
     produces: [
       {
         item: 'plant/tem/detector',
@@ -674,7 +674,7 @@ export const TEM_ROUTES: readonly Route[] = [
   {
     /** **EDX：硅漂移探测器 + 薄窗 + 场效应管前放。** */
     id: 'make/tem-edx-detector',
-    name: 'EDX 探测器制造',
+    name: 'EDX Detector Manufacturing', name_zh: 'EDX 探测器制造',
     produces: [
       {
         item: 'plant/tem/edx-detector',
@@ -718,7 +718,7 @@ export const TEM_ROUTES: readonly Route[] = [
   {
     /** **隔振/屏蔽基座：100 kg 铸铁 + 矿棉 + 铜涡流阻尼 + 坡莫合金屏蔽。** */
     id: 'make/tem-isolation',
-    name: '隔振/电磁屏蔽基座制造',
+    name: 'Vibration Isolation / Electromagnetic Shielding Base Manufacturing', name_zh: '隔振/电磁屏蔽基座制造',
     produces: [
       {
         item: 'plant/tem/isolation',
@@ -768,7 +768,7 @@ export const ASSEMBLY_ROUTES: readonly Route[] = [
   {
     /** 装配：零件在条目的 `composedOf` 上（定义）；本路线只写生产。 */
     id: 'make/tem',
-    name: '透射电镜装配',
+    name: 'Transmission Electron Microscope Assembly', name_zh: '透射电镜装配',
     produces: [{
       item: 'plant/tem',
       qty: q(1),

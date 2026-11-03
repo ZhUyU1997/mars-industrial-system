@@ -144,7 +144,7 @@ export const G_ABSOLUTE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/mass-intercomparison-record',
-    name: '质量互检记录',
+    name: 'Mass Intercomparison Record', name_zh: '质量互检记录',
     unit: '份',
     category: 'part',
     props: [
@@ -170,7 +170,7 @@ export const G_ABSOLUTE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/local-g-record',
-    name: '本地 g记录',
+    name: 'Local g Record', name_zh: '本地 g记录',
     unit: '份',
     category: 'part',
     props: [
@@ -197,7 +197,7 @@ export const G_ABSOLUTE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/si-28-density-record',
-    name: '²⁸Si 密度记录',
+    name: '²⁸Si Density Record', name_zh: '²⁸Si 密度记录',
     unit: '份',
     category: 'part',
     props: [
@@ -220,7 +220,7 @@ export const G_ABSOLUTE_ROUTES: readonly Route[] = [
      * |Δm| ≤ 2·uDiff 判 consistent。它只查砝码，不把砝码升格为原级。
      */
     id: 'measure/mass-intercomparison',
-    name: '质量互检测量',
+    name: 'Mass Intercomparison Measurement', name_zh: '质量互检测量',
     rate: { hours: q(8) },
     produces: [{
       item: 'mat/mass-intercomparison-record',
@@ -267,7 +267,7 @@ export const G_ABSOLUTE_ROUTES: readonly Route[] = [
      * 不是"已经溯到 SI"。
      */
     id: 'measure/local-g',
-    name: '本地 g 测量',
+    name: 'Local g Measurement', name_zh: '本地 g 测量',
     rate: { hours: q(8) },
     produces: [
       {
@@ -349,7 +349,7 @@ export const G_ABSOLUTE_ROUTES: readonly Route[] = [
      * 3–10 ppm 是设计值 + 分项预算，不是两套方法互检（见 §四⑤）。
      */
     id: 'measure/si-28-density',
-    name: '²⁸Si 密度测量',
+    name: '²⁸Si Density Measurement', name_zh: '²⁸Si 密度测量',
     rate: { hours: q(6) },
     produces: [
       {

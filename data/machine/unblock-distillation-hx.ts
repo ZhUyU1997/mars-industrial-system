@@ -615,7 +615,7 @@ export const UNBLOCK_DIST_HX_ROUTES: readonly Route[] = [
      * 投料 2 360 kg 里 1 738 kg 去了回炉、回用、排掉三个模型没有的位置。
      */
     id: 'make/distillation-hx-cast',
-    name: '精馏塔再沸器与冷凝器制造',
+    name: 'Rectification Column Reboiler and Condenser Manufacturing', name_zh: '精馏塔再沸器与冷凝器制造',
     produces: [{ item: 'plant/distillation-tower/heat-exchanger', qty: q(1) }],
     uses: [
       {

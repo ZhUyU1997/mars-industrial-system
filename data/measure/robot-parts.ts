@@ -63,7 +63,7 @@ export const ROBOT_PARTS_MEASURE_ROUTES: readonly Route[] = [
      * 判不了孔与孔之间的位置；写在 steps 里只作过程检查。
      */
     id: 'measure/robot-mount-faces',
-    name: '机器人底座测量',
+    name: 'Robot Base Measurement', name_zh: '机器人底座测量',
     produces: [
       {
         item: 'plant/robot/base',
@@ -143,7 +143,7 @@ export const ROBOT_PARTS_MEASURE_ROUTES: readonly Route[] = [
      * 这是量具能力的边界，不是工艺的边界。
      */
     id: 'measure/robot-finger-face',
-    name: '机器人手指测量',
+    name: 'Robot Finger Measurement', name_zh: '机器人手指测量',
     produces: [
       {
         item: 'plant/robot/finger',
@@ -209,7 +209,7 @@ export const ROBOT_PARTS_MEASURE_ROUTES: readonly Route[] = [
      * 交付 0.003–0.008 是能力域：镗 + 磨套的过程能力 3–10 µm，收窄到 3–8 µm。
      */
     id: 'measure/robot-joint-bores',
-    name: '机器人臂体测量',
+    name: 'Robot Arm Body Measurement', name_zh: '机器人臂体测量',
     produces: [
       {
         item: 'plant/robot/arm',

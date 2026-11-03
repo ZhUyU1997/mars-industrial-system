@@ -41,7 +41,7 @@ export const CAR_PATTERN_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/car-patterned-wafer',
-    name: 'CAR 图形片',
+    name: 'CAR Patterned Wafer', name_zh: 'CAR 图形片',
     unit: '片',
     category: 'part',
     props: [
@@ -62,7 +62,7 @@ export const CAR_PATTERN_ROUTES: readonly Route[] = [
      *   水显影 20–30 °C / 60 s；CD-SEM 读 80–200 nm。
      */
     id: 'make/car-patterned-wafer',
-    name: 'CAR 图形片制造',
+    name: 'CAR Patterned Wafer Manufacturing', name_zh: 'CAR 图形片制造',
     produces: [
       {
         item: 'mat/car-patterned-wafer',

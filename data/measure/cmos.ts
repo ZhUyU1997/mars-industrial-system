@@ -39,7 +39,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cmos-vtc-record',
-    name: '反相器 VTC 记录',
+    name: 'Inverter VTC Record', name_zh: '反相器 VTC 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -54,7 +54,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/dishing-record',
-    name: '大马士革片 dishing/erosion 记录',
+    name: 'Damascene Wafer Dishing/Erosion Record', name_zh: '大马士革片 dishing/erosion 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -69,7 +69,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/junction-cv-record',
-    name: '结深 C-V 记录',
+    name: 'Junction Depth C-V Record', name_zh: '结深 C-V 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -91,7 +91,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/p-plus-activation-record',
-    name: 'p⁺ 激活率记录',
+    name: 'p⁺ Activation Rate Record', name_zh: 'p⁺ 激活率记录',
     unit: '份',
     category: 'part',
     props: [
@@ -107,7 +107,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/barrier-leakage-record',
-    name: '阻挡层漏电记录',
+    name: 'Barrier Layer Leakage Record', name_zh: '阻挡层漏电记录',
     unit: '份',
     category: 'part',
     props: [
@@ -126,7 +126,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/contact-resistance-record',
-    name: '接触电阻记录',
+    name: 'Contact Resistance Record', name_zh: '接触电阻记录',
     unit: '份',
     category: 'part',
     props: [
@@ -146,7 +146,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/w-plug-resistance-record',
-    name: 'W plug 四线法记录',
+    name: 'W Plug Four-Wire Record', name_zh: 'W plug 四线法记录',
     unit: '份',
     category: 'part',
     props: [
@@ -170,7 +170,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/w-cmp-dishing-record',
-    name: 'W CMP dishing/erosion 记录',
+    name: 'W CMP Dishing/Erosion Record', name_zh: 'W CMP dishing/erosion 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -191,7 +191,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/contact-hole-record',
-    name: '10 个接触孔的四线法记录',
+    name: '10 Contact Hole Four-Wire Measurement Record', name_zh: '10 个接触孔的四线法记录',
     unit: '份',
     category: 'part',
     props: [
@@ -214,7 +214,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/cmos-sheet-resistance-record',
-    name: 'CMOS 方块电阻记录',
+    name: 'CMOS Sheet Resistance Record', name_zh: 'CMOS 方块电阻记录',
     unit: '份',
     category: 'part',
     props: [
@@ -237,7 +237,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/via-resistance-record',
-    name: '通孔链四线法记录',
+    name: 'Via Chain Four-Wire Record', name_zh: '通孔链四线法记录',
     unit: '份',
     category: 'part',
     props: [
@@ -257,7 +257,7 @@ export const CMOS_MEASURE_ITEMS: readonly Item[] = [
    */
   {
     id: 'mat/overlay-record',
-    name: '套刻 vernier 记录',
+    name: 'Overlay Vernier Record', name_zh: '套刻 vernier 记录',
     unit: '份',
     category: 'part',
     props: [
@@ -293,7 +293,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * 写成实测。p⁺ 是 Al 候选、接触孔没做，实测可能仍低于设计。
      */
     id: 'measure/cmos-vtc',
-    name: '反相器 VTC 测量',
+    name: 'Inverter VTC Measurement', name_zh: '反相器 VTC 测量',
     produces: [
       {
         item: 'mat/cmos-vtc-record',
@@ -351,7 +351,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * 实测可能比设计窗口高 2–10 倍；没有变温台/TLM 曲线仪。
      */
     id: 'measure/contact-resistance',
-    name: '接触电阻测量',
+    name: 'Contact Resistance Measurement', name_zh: '接触电阻测量',
     produces: [
       {
         item: 'mat/contact-resistance-record',
@@ -400,7 +400,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * 没有 W plug、没有变温台；只有 probe-station 的四线法。
      */
     id: 'measure/contact-hole-resistance',
-    name: '10 个接触孔的四线法测量',
+    name: '10 Contact Hole Four-Wire Measurement', name_zh: '10 个接触孔的四线法测量',
     produces: [
       {
         item: 'mat/contact-hole-record',
@@ -447,7 +447,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * `viaDiameter` 1 µm 是版图值，probe-station 量不了。
      */
     id: 'measure/via-resistance',
-    name: '通孔链四线法测量',
+    name: 'Via Chain Four-Wire Measurement', name_zh: '通孔链四线法测量',
     produces: [
       {
         item: 'mat/via-resistance-record',
@@ -492,7 +492,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * optical-profiler 是 machine，执行测量；robot 只装片。
      */
     id: 'measure/damascene-dishing',
-    name: '大马士革 CMP 碟形凹陷与侵蚀测量',
+    name: 'Damascene CMP Dishing and Erosion Measurement', name_zh: '大马士革 CMP 碟形凹陷与侵蚀测量',
     produces: [
       {
         item: 'mat/dishing-record',
@@ -548,7 +548,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * 没有逐点面积测量。1 % 是进口机手册值；本地 C-V 桥 0.3–3 %，证书/校准仍缺。
      */
     id: 'measure/junction-depth-cv',
-    name: '结深 C-V 测量',
+    name: 'Junction Depth C-V Measurement', name_zh: '结深 C-V 测量',
     produces: [
       {
         item: 'mat/junction-cv-record',
@@ -606,7 +606,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * 不是“0 V 击穿”。漏电窗口 1 pA–1 µA 是设计值，证书/校准仍缺。
      */
     id: 'measure/barrier-leakage',
-    name: '阻挡层漏电测量',
+    name: 'Barrier Layer Leakage Measurement', name_zh: '阻挡层漏电测量',
     produces: [
       {
         item: 'mat/barrier-leakage-record',
@@ -652,7 +652,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * ⚠️ W CMP dishing/void 未标定；voidFraction 是估算，不是电测。
      */
     id: 'measure/w-plug-resistance',
-    name: 'W plug 四线法测量',
+    name: 'W Plug Four-Wire Measurement', name_zh: 'W plug 四线法测量',
     produces: [
       {
         item: 'mat/w-plug-resistance-record',
@@ -706,7 +706,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * W 塞 dishing 可能比 Cu 大；5 点是抽样，不是全片图；没有 TEM/电学。
      */
     id: 'measure/w-cmp-dishing',
-    name: '钨 CMP 碟形凹陷与侵蚀测量',
+    name: 'Tungsten CMP Dishing and Erosion Measurement', name_zh: '钨 CMP 碟形凹陷与侵蚀测量',
     produces: [
       {
         item: 'mat/w-cmp-dishing-record',
@@ -765,7 +765,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * ⚠️ 这是电学提取，不是 Hall/SIMS；mobility 区间让结果带 2× 不确定度。
      */
     id: 'measure/p-plus-activation',
-    name: 'p⁺ 激活率测量',
+    name: 'p⁺ Activation Rate Measurement', name_zh: 'p⁺ 激活率测量',
     produces: [
       {
         item: 'mat/p-plus-activation-record',
@@ -843,7 +843,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * 10 点、X/Y 各一组；overlayX/Y 记均值，3σ 是重复性，不是绝对套刻误差。
      */
     id: 'measure/overlay-vernier',
-    name: '套刻 vernier 测量',
+    name: 'Overlay Vernier Measurement', name_zh: '套刻 vernier 测量',
     produces: [
       {
         item: 'mat/overlay-record',
@@ -909,7 +909,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * 只能靠漏电/寿命间接看，不是直接测 Cu 浓度。rate 4 h。
      */
     id: 'measure/cu-bts-leakage',
-    name: 'Cu 离位 BTS 测量',
+    name: 'Cu Off-Line BTS Measurement', name_zh: 'Cu 离位 BTS 测量',
     produces: [
       {
         item: 'mat/cu-bts-record',
@@ -984,7 +984,7 @@ export const CMOS_MEASURE_ROUTES: readonly Route[] = [
      * （Al 固溶度/团簇）。没有霍尔/变温台，只有 probe-station。
      */
     id: 'measure/cmos-sheet-resistance',
-    name: 'CMOS 方块电阻测量',
+    name: 'CMOS Sheet Resistance Measurement', name_zh: 'CMOS 方块电阻测量',
     produces: [
       {
         item: 'mat/cmos-sheet-resistance-record',
