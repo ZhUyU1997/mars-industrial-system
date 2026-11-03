@@ -12,6 +12,8 @@ This is the English translation of [README.zh.md](README.zh.md). The Chinese ver
 
 *Browser view (`pnpm viewer`): filter nodes and links on the left; inspect items, specs, and composition on the right.*
 
+**Live viewer:** https://zhuyu1997.github.io/mars-industrial-system/
+
 ## 1. Project Definition
 
 This project is the **description layer** of the problem: it answers only "what is needed, how it comes about, and who does it". It does not solve the problem, estimate cost, or judge use. Without a clear description, any calculation lacks a reliable premise.
