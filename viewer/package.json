@@ -1,0 +1,28 @@
+{
+  "name": "mygame30-viewer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "data/ 的 3D 网状可视化：Vite + three.js + d3-force-3d，Playwright 用本机 Chrome 截图验证",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "node scripts/generate.ts --out public/graph.json && vite",
+    "build": "node scripts/generate.ts --out public/graph.json && vite build",
+    "preview": "vite preview",
+    "data": "node scripts/generate.ts --out public/graph.json",
+    "shoot": "node scripts/shoot.mjs",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "d3-force-3d": "^3.0.6",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "playwright-core": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

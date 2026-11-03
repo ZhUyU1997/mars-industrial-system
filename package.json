@@ -1,0 +1,28 @@
+{
+  "name": "mars-industry-model",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "火星工业体系的描述层：条目、路线、条件与装配。纯规则，不含数据；数据在 data/ 下",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "tsx --test test/**/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm typecheck && tsx tools/audit.ts",
+    "stats": "tsx tools/stats.ts",
+    "audit": "tsx tools/audit.ts",
+    "audit:tasks": "tsx tools/audit.ts --tasks",
+    "audit:status": "tsx tools/audit.ts --status",
+    "viewer": "pnpm --dir viewer dev",
+    "viewer:build": "pnpm --dir viewer build",
+    "viewer:shoot": "pnpm --dir viewer shoot",
+    "viewer:data": "pnpm --dir viewer data"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

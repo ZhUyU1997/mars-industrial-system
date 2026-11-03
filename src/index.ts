@@ -1,0 +1,26 @@
+export type {
+  Clause,
+  Condition,
+  Description,
+  Item,
+  ItemCategory,
+  Need,
+  Option,
+  Qty,
+  Problem,
+  ProblemCode,
+  Provenance,
+  Route,
+  Term,
+  Validation,
+} from './core/describe.ts';
+export {
+  covers,
+  formatQty,
+  needItems,
+  needOptions,
+  q,
+  resolveItemRef,
+  toNumber,
+  validate,
+} from './core/describe.ts';
